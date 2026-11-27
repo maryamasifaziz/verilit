@@ -61,9 +61,10 @@ def _attempt(action: str, text: str | None, paper_id: str, v: Verdict | None) ->
 
 class VeriLit:
     def __init__(self, config: Config | None = None, llm: LLM | None = None,
-                 search: PaperSearch | None = None, verbose: bool = True):
+                 search: PaperSearch | None = None, verbose: bool = True, log_fn=print):
         self.config = config or Config()
         self.verbose = verbose
+        self.log_fn = log_fn  # where progress messages go (print, or e.g. the demo UI)
         self.llm = llm or LLM()
         self.search = search or PaperSearch(verbose=verbose)
         c = self.config
@@ -75,7 +76,7 @@ class VeriLit:
 
     def log(self, msg: str) -> None:
         if self.verbose:
-            print(msg, flush=True)
+            self.log_fn(msg)
 
     # -- main entry point ----------------------------------------------------
 

@@ -204,6 +204,21 @@ unsupported, is rewritten by the LLM to say only what the abstract states. Claim
 accepted are listed as unverified and left out of the review. Reference numbers are assigned
 by the code, not the LLM, and the report warns if the review cites a number that doesn't exist.
 
+## Demo
+
+```bash
+streamlit run app.py
+```
+
+Opens VeriLit in your browser. **Ask a question** runs the agents live (progress shown as
+they work) and shows the review, references, evidence gaps and every claim with its verdict,
+confidence and a "How it was verified" trail (each check, re-retrieval and revision). With
+"Also show the baseline" on, a second tab shows the no-verification baseline for the same
+question; it costs about one extra LLM request, since everything else is cached. The sidebar
+sets the threshold, retries, papers and claims per sub-question, retrieval and evidence mode.
+**Browse saved runs** shows any run in `eval/runs/` or `runs/` without calling an API, which is
+handy for a presentation. Reports can be downloaded as Markdown or JSON.
+
 ## Custom test set
 
 25 research questions across AI, ML, NLP and cybersecurity (`eval/questions.csv`), run through
@@ -254,6 +269,7 @@ scripts/
   calibrate_verifier.py
   eval_retrieval.py
   run_pipeline.py     run VeriLit on one question
+app.py                the demo UI (streamlit run app.py)
   run_eval_set.py     run the custom test set and build the labeling sheets
   score_eval.py       score the custom test set from the hand labels
 eval/                 questions.csv, LABELING.md, runs/ (one record per question), labels/
@@ -262,11 +278,6 @@ data/, models/        git-ignored; re-create with the scripts above
 runs/, cache/         git-ignored; pipeline outputs and cached API responses
 ```
 
-Planned additions:
-
-| Where | What |
-|---|---|
-| `app.py` | the demo UI |
 
 ## Results
 

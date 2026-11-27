@@ -21,6 +21,7 @@ dependencies = [
     "rank-bm25",              # keyword retrieval baseline
     "openai",                 # client for Gemini / Groq (OpenAI-compatible APIs)
     "httpx",                  # Semantic Scholar and arXiv requests
+    "streamlit",              # demo UI (app.py)
 ]
 
 [tool.setuptools.packages.find]
