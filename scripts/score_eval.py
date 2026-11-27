@@ -39,6 +39,14 @@ from verilit.labels import CONTRADICTED, INSUFFICIENT, SUPPORTED
 from verilit.pipeline import ROOT
 
 EVAL = ROOT / "eval"
+
+
+def show(path: Path) -> str:
+    """Path relative to the project folder when inside it, else as given."""
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(path)
 LETTER = {"S": SUPPORTED, "C": CONTRADICTED, "I": INSUFFICIENT}
 
 
@@ -107,7 +115,7 @@ def main() -> None:
             for it in disagreements:
                 w.writerow({"item_id": it["item_id"], "agreed_label": "", a: sheets[a][it["item_id"]],
                             b: sheets[b][it["item_id"]], "claim": it["text"]})
-        print(f"Wrote {dis_path.relative_to(ROOT)} ({len(disagreements)} rows): fill in agreed_label and re-run.")
+        print(f"Wrote {show(dis_path)} ({len(disagreements)} rows): fill in agreed_label and re-run.")
 
     def human(item_id: str) -> str | None:
         it = by_id.get(item_id)
@@ -220,7 +228,7 @@ def main() -> None:
         if key.startswith("accept_vs_supported_"):
             print(f"  accept (P(SUPPORTED) >= {thr}) vs. labeled Supported, {key.rsplit('_', 1)[-1]:<9}: "
                   f"precision {fmt(m['precision'])}  recall {fmt(m['recall'])}  F1 {fmt(m['f1'])}")
-    print(f"\nSaved {(args.results / 'custom_eval.json').relative_to(ROOT)}")
+    print(f"\nSaved {show(args.results / 'custom_eval.json')}")
 
 
 if __name__ == "__main__":

@@ -34,6 +34,14 @@ from verilit.llm import LLMError
 from verilit.pipeline import ROOT, Config, VeriLit, to_markdown
 
 EVAL = ROOT / "eval"
+
+
+def show(path: Path) -> str:
+    """Path relative to the project folder when inside it, else as given."""
+    try:
+        return str(path.resolve().relative_to(ROOT))
+    except ValueError:
+        return str(path)
 SHEET_COLUMNS = ["item_id", "label", "notes", "claim", "paper_title", "paper_abstract", "paper_url", "question"]
 
 
@@ -95,7 +103,7 @@ def build_sheets(runs: dict[str, dict], questions: dict[str, str], annotators: l
                     "paper_title": paper["title"], "paper_abstract": paper["abstract"],
                     "paper_url": paper.get("url") or "", "question": questions[it["qid"]],
                 })
-        print(f"  {path.relative_to(ROOT)}: {len(mine)} rows")
+        print(f"  {show(path)}: {len(mine)} rows")
     print(f"{len(items)} claims to label ({len(shared)} shared). Labeling guide: eval/LABELING.md")
 
 
