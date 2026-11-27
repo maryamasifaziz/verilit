@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Data and model files (re-create them with the scripts)
+data/
+models/
+cache/
+
+# Per-example predictions are large; metrics.json files are kept
+results/**/predictions.jsonl
+
+# Editors / OS
+.vscode/
+.idea/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db

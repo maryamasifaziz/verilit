@@ -1,0 +1,53 @@
+{
+  "temperature": 1.9084220098908995,
+  "fitted_on": "val",
+  "pairs": 139,
+  "model": "/home/user/verilit/models/verifier",
+  "before": {
+    "nll": 0.621191143989563,
+    "ece": 0.148421252588574,
+    "accuracy": 0.8129496402877698
+  },
+  "after": {
+    "nll": 0.4864729046821594,
+    "ece": 0.09911269078151781,
+    "accuracy": 0.8129496402877698
+  },
+  "accept_supported_thresholds": [
+    {
+      "threshold": 0.5,
+      "accepted": 39,
+      "precision": 0.7692307692307693,
+      "recall": 0.6382978723404256
+    },
+    {
+      "threshold": 0.6,
+      "accepted": 36,
+      "precision": 0.8055555555555556,
+      "recall": 0.6170212765957447
+    },
+    {
+      "threshold": 0.7,
+      "accepted": 32,
+      "precision": 0.84375,
+      "recall": 0.574468085106383
+    },
+    {
+      "threshold": 0.8,
+      "accepted": 26,
+      "precision": 0.8846153846153846,
+      "recall": 0.48936170212765956
+    },
+    {
+      "threshold": 0.9,
+      "accepted": 14,
+      "precision": 1.0,
+      "recall": 0.2978723404255319
+    }
+  ],
+  "labels": [
+    "SUPPORTED",
+    "CONTRADICTED",
+    "INSUFFICIENT"
+  ]
+}

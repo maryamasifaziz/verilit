@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "verilit"
+version = "0.1.0"
+description = "VeriLit: a self-verifying multi-agent research assistant"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.3",
+    "transformers>=4.40",
+    "sentencepiece",   # DeBERTa-v3 tokenizer
+    "protobuf",        # DeBERTa-v3 tokenizer conversion
+    "numpy",
+    "scikit-learn",
+    "scipy",
+    "tqdm",
+]
+
+[tool.setuptools.packages.find]
+include = ["verilit*"]

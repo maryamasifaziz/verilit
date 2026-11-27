@@ -1,0 +1,80 @@
+{
+  "base_model": "cross-encoder/nli-deberta-v3-small",
+  "best": {
+    "lr": 2e-05,
+    "epoch": 5,
+    "train_loss": 0.15833475012332202,
+    "val_accuracy": 0.8129496402877698,
+    "val_macro_f1": 0.7910391209623947,
+    "val_ece": 0.148421252588574,
+    "seconds": 668.8
+  },
+  "history": [
+    {
+      "lr": 2e-05,
+      "epoch": 1,
+      "train_loss": 1.1942850892360395,
+      "val_accuracy": 0.7553956834532374,
+      "val_macro_f1": 0.7270531400966184,
+      "val_ece": 0.0646914022860767,
+      "seconds": 664.6
+    },
+    {
+      "lr": 2e-05,
+      "epoch": 2,
+      "train_loss": 0.5486430504383185,
+      "val_accuracy": 0.7841726618705036,
+      "val_macro_f1": 0.7543417366946779,
+      "val_ece": 0.0933060650345233,
+      "seconds": 674.1
+    },
+    {
+      "lr": 2e-05,
+      "epoch": 3,
+      "train_loss": 0.3290322970503416,
+      "val_accuracy": 0.8057553956834532,
+      "val_macro_f1": 0.7891605849621116,
+      "val_ece": 0.142823320069759,
+      "seconds": 653.7
+    },
+    {
+      "lr": 2e-05,
+      "epoch": 4,
+      "train_loss": 0.2178181257003393,
+      "val_accuracy": 0.8057553956834532,
+      "val_macro_f1": 0.7804595120490946,
+      "val_ece": 0.13492367121813106,
+      "seconds": 636.8
+    },
+    {
+      "lr": 2e-05,
+      "epoch": 5,
+      "train_loss": 0.15833475012332202,
+      "val_accuracy": 0.8129496402877698,
+      "val_macro_f1": 0.7910391209623947,
+      "val_ece": 0.148421252588574,
+      "seconds": 668.8
+    }
+  ],
+  "settings": {
+    "model": "cross-encoder/nli-deberta-v3-small",
+    "data": "/home/user/verilit/data/processed/scifact",
+    "out": "/home/user/verilit/models/verifier",
+    "lr": [
+      2e-05
+    ],
+    "epochs": 5,
+    "batch_size": 8,
+    "grad_accum": 2,
+    "eval_batch_size": 32,
+    "max_length": 512,
+    "warmup": 0.1,
+    "weight_decay": 0.01,
+    "balanced": false,
+    "fp16": false,
+    "seed": 42,
+    "limit": null
+  },
+  "train_pairs": 780,
+  "val_pairs": 139
+}
