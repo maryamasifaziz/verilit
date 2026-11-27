@@ -12,6 +12,8 @@ question → Planner → Retriever → Claim Generator → Verifier ─┬─ su
 
 Team: Maryam Asif (23k-0505), Nimra Ashraf (23k-0867)
 
+**Project report:** [docs/REPORT.md](docs/REPORT.md)
+
 ## Setup
 
 Python 3.10 or newer.
