@@ -1,0 +1,623 @@
+{
+  "question": "How does knowledge distillation compress large neural networks while preserving accuracy?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What are the primary methods and algorithms used in knowledge distillation for model compression?",
+      "search_query": "knowledge distillation neural network compression methods",
+      "paper_ids": [
+        "s2:e4178e98d6b30685c11ca439dc9a2e43e06ee87f",
+        "s2:1f471c4098b008389a43d39011ae20a46e21528a",
+        "s2:e257148c1120059bfcae3f0488cfab3dc1f4c1fc",
+        "arxiv:2009.09152",
+        "s2:35610d8dc34042a5079a3e5fde7a926b176e0c2c"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "How do teacher-student architectures affect the accuracy and performance of compressed models?",
+      "search_query": "teacher student architecture model accuracy preservation",
+      "paper_ids": [
+        "s2:f2075559cc44f84fbd56216b9cbb27225331820a",
+        "s2:3f15d1caa39a6d408669a3ea8206b84dbb11b6b7",
+        "s2:679bbdb8a121af98b91b8504a3cc3679a3e17539",
+        "arxiv:2609.23561",
+        "arxiv:2410.04140"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What benchmark datasets and evaluation metrics are commonly used to assess distilled models?",
+      "search_query": "knowledge distillation benchmarks evaluation datasets",
+      "paper_ids": [
+        "arxiv:2403.13322",
+        "arxiv:2312.16242",
+        "arxiv:2607.06796",
+        "s2:58e839d172c9f7598e33346dca05404a6242419b",
+        "s2:00b2c8c483b083eaacfaa20e4fdc191809b35a86"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations and failure modes of knowledge distillation in deep learning?",
+      "search_query": "limitations and challenges of knowledge distillation",
+      "paper_ids": [
+        "arxiv:2006.05525",
+        "arxiv:2306.10687",
+        "arxiv:2609.27551",
+        "arxiv:2607.06796",
+        "arxiv:2507.07015"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "Counterclockwise block-wise knowledge distillation (CBKD) divides both teacher and student models into multiple sub-network blocks to transfer intermediate-layer knowledge from one teacher sub-block to the corresponding student sub-block.",
+        "paper_id": "s2:e4178e98d6b30685c11ca439dc9a2e43e06ee87f"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Counterclockwise block-wise knowledge distillation (CBKD) divides both teacher and student models into multiple sub-network blocks to transfer intermediate-layer knowledge from one teacher sub-block to the corresponding student sub-block.",
+          "paper_id": "s2:e4178e98d6b30685c11ca439dc9a2e43e06ee87f",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.7675,
+          "p_supported": 0.7675,
+          "accepted": true,
+          "alt_p_supported": 0.8798
+        }
+      ],
+      "final": {
+        "text": "Counterclockwise block-wise knowledge distillation (CBKD) divides both teacher and student models into multiple sub-network blocks to transfer intermediate-layer knowledge from one teacher sub-block to the corresponding student sub-block.",
+        "paper_id": "s2:e4178e98d6b30685c11ca439dc9a2e43e06ee87f",
+        "label": "SUPPORTED",
+        "confidence": 0.7675
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "Weight distillation transfers the knowledge in large network parameters through a parameter generator for model acceleration and compression.",
+        "paper_id": "arxiv:2009.09152"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Weight distillation transfers the knowledge in large network parameters through a parameter generator for model acceleration and compression.",
+          "paper_id": "arxiv:2009.09152",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9295,
+          "p_supported": 0.9295,
+          "accepted": true,
+          "alt_p_supported": 0.9145
+        }
+      ],
+      "final": {
+        "text": "Weight distillation transfers the knowledge in large network parameters through a parameter generator for model acceleration and compression.",
+        "paper_id": "arxiv:2009.09152",
+        "label": "SUPPORTED",
+        "confidence": 0.9295
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "Using multi-layer hidden state distillation, the KD-NAS student model achieves a 7x speedup on CPU inference and a 2x speedup on GPU compared to an XLM-Roberta Base Teacher while maintaining 90% performance.",
+        "paper_id": "s2:679bbdb8a121af98b91b8504a3cc3679a3e17539"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Using multi-layer hidden state distillation, the KD-NAS student model achieves a 7x speedup on CPU inference and a 2x speedup on GPU compared to an XLM-Roberta Base Teacher while maintaining 90% performance.",
+          "paper_id": "s2:679bbdb8a121af98b91b8504a3cc3679a3e17539",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8665,
+          "p_supported": 0.8665,
+          "accepted": true,
+          "alt_p_supported": 0.8566
+        }
+      ],
+      "final": {
+        "text": "Using multi-layer hidden state distillation, the KD-NAS student model achieves a 7x speedup on CPU inference and a 2x speedup on GPU compared to an XLM-Roberta Base Teacher while maintaining 90% performance.",
+        "paper_id": "s2:679bbdb8a121af98b91b8504a3cc3679a3e17539",
+        "label": "SUPPORTED",
+        "confidence": 0.8665
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "In knowledge distillation experiments distilling a ResNet-152 teacher into a ResNet-34 student on ImageNet-1K, top-1 accuracy ranges from 71.6% to 74.0% across five configurations.",
+        "paper_id": "arxiv:2609.23561"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "In knowledge distillation experiments distilling a ResNet-152 teacher into a ResNet-34 student on ImageNet-1K, top-1 accuracy ranges from 71.6% to 74.0% across five configurations.",
+          "paper_id": "arxiv:2609.23561",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8895,
+          "p_supported": 0.8895,
+          "accepted": true,
+          "alt_p_supported": 0.845
+        }
+      ],
+      "final": {
+        "text": "In knowledge distillation experiments distilling a ResNet-152 teacher into a ResNet-34 student on ImageNet-1K, top-1 accuracy ranges from 71.6% to 74.0% across five configurations.",
+        "paper_id": "arxiv:2609.23561",
+        "label": "SUPPORTED",
+        "confidence": 0.8895
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "DD-RobustBench evaluates distilled datasets on datasets such as ImageNet-1K using adversarial attack methods like PGD and AutoAttack.",
+        "paper_id": "arxiv:2403.13322"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "DD-RobustBench evaluates distilled datasets on datasets such as ImageNet-1K using adversarial attack methods like PGD and AutoAttack.",
+          "paper_id": "arxiv:2403.13322",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9088,
+          "p_supported": 0.9088,
+          "accepted": true,
+          "alt_p_supported": 0.8739
+        }
+      ],
+      "final": {
+        "text": "DD-RobustBench evaluates distilled datasets on datasets such as ImageNet-1K using adversarial attack methods like PGD and AutoAttack.",
+        "paper_id": "arxiv:2403.13322",
+        "label": "SUPPORTED",
+        "confidence": 0.9088
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "Frugal knowledge distillation evaluates its entropy-based data selection method on benchmark datasets including CIFAR-10, MNIST, and FashionMNIST.",
+        "paper_id": "s2:00b2c8c483b083eaacfaa20e4fdc191809b35a86"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Frugal knowledge distillation evaluates its entropy-based data selection method on benchmark datasets including CIFAR-10, MNIST, and FashionMNIST.",
+          "paper_id": "s2:00b2c8c483b083eaacfaa20e4fdc191809b35a86",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9368,
+          "p_supported": 0.9368,
+          "accepted": true,
+          "alt_p_supported": 0.904
+        }
+      ],
+      "final": {
+        "text": "Frugal knowledge distillation evaluates its entropy-based data selection method on benchmark datasets including CIFAR-10, MNIST, and FashionMNIST.",
+        "paper_id": "s2:00b2c8c483b083eaacfaa20e4fdc191809b35a86",
+        "label": "SUPPORTED",
+        "confidence": 0.9368
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "In cross-modal settings, conventional knowledge distillation methods encounter significant challenges due to data and statistical heterogeneities, leading to issues such as distillation path selection and knowledge drift.",
+        "paper_id": "arxiv:2507.07015"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "In cross-modal settings, conventional knowledge distillation methods encounter significant challenges due to data and statistical heterogeneities, leading to issues such as distillation path selection and knowledge drift.",
+          "paper_id": "arxiv:2507.07015",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9222,
+          "p_supported": 0.9222,
+          "accepted": true,
+          "alt_p_supported": 0.9156
+        }
+      ],
+      "final": {
+        "text": "In cross-modal settings, conventional knowledge distillation methods encounter significant challenges due to data and statistical heterogeneities, leading to issues such as distillation path selection and knowledge drift.",
+        "paper_id": "arxiv:2507.07015",
+        "label": "SUPPORTED",
+        "confidence": 0.9222
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:e4178e98d6b30685c11ca439dc9a2e43e06ee87f",
+      "citation": "Xiao-Wei Lan, Yalin Zeng, Xiao-Xiao Wei et al. (2025). Counterclockwise block-by-block knowledge distillation for neural network compression. Scientific Reports. https://doi.org/10.1038/s41598-025-91152-3"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:2009.09152",
+      "citation": "Ye Lin, Yanyang Li, Ziyang Wang et al. (2020). Weight Distillation: Transferring the Knowledge in Neural Network Parameters. arXiv. https://arxiv.org/abs/2009.09152"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:679bbdb8a121af98b91b8504a3cc3679a3e17539",
+      "citation": "Aashka Trivedi, Takuma Udagawa, Michele Merler et al. (2023). Neural Architecture Search for Effective Teacher-Student Knowledge Transfer in Language Models. arXiv.org. https://doi.org/10.48550/arXiv.2303.09639"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2609.23561",
+      "citation": "Aleks Czufarow, Ihor Babin (2026). Transferring Visual Explanations: How Cross-Architecture Knowledge Distillation Affects Model Interpretability. arXiv. https://arxiv.org/abs/2609.23561"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2403.13322",
+      "citation": "Yifan Wu, Jiawei Du, Ping Liu et al. (2024). DD-RobustBench: An Adversarial Robustness Benchmark for Dataset Distillation. arXiv. https://arxiv.org/abs/2403.13322"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:00b2c8c483b083eaacfaa20e4fdc191809b35a86",
+      "citation": "Michail Kinnas, John Violos, Nikolaos Ioannis Karapiperis et al. (2025). Selecting Images With Entropy for Frugal Knowledge Distillation. IEEE Access. https://doi.org/10.1109/ACCESS.2025.3540384"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2507.07015",
+      "citation": "Hui Li, Pengfei Yang, Juanyang Chen et al. (2025). MST-Distill: Mixture of Specialized Teachers for Cross-Modal Knowledge Distillation. arXiv. https://arxiv.org/abs/2507.07015"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Knowledge distillation compresses large neural networks to achieve model acceleration and compression through various primary methods and algorithms [1, 2]. One prominent approach is counterclockwise block-wise knowledge distillation (CBKD), which divides both the teacher and student models into multiple sub-network blocks to transfer intermediate-layer knowledge from a teacher sub-block to the corresponding student sub-block [1]. Another technique is weight distillation, which transfers knowledge contained in large network parameters via a parameter generator [2]. \n\nTeacher-student architectures significantly impact the accuracy and performance of the compressed models [3, 4]. By utilizing multi-layer hidden state distillation, the KD-NAS student model attains a 7x speedup on CPU inference and a 2x speedup on GPU relative to an XLM-Roberta Base Teacher, while preserving 90% of the performance [3]. Furthermore, when distilling a ResNet-152 teacher into a ResNet-34 student on ImageNet-1K, the resulting top-1 accuracy spans from 71.6% to 74.0% across five distinct configurations [4]. \n\nTo assess these distilled models, various benchmark datasets and evaluation metrics are employed [5, 6]. For instance, DD-RobustBench assesses distilled datasets on ImageNet-1K using adversarial attack methods such as PGD and AutoAttack [5]. Additionally, frugal knowledge distillation tests its entropy-based data selection approach on benchmark datasets including CIFAR-10, MNIST, and FashionMNIST [6]. \n\nDespite these successes, current limitations and failure modes persist in deep learning applications [7]. Specifically, in cross-modal settings, conventional knowledge distillation methods face major challenges arising from data and statistical heterogeneities, which result in problems like distillation path selection and knowledge drift [7].",
+  "stats": {
+    "claims": 7,
+    "verified": 7,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 7,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 11,
+      "arxiv": 0
+    },
+    "seconds": 93.9
+  },
+  "papers": {
+    "s2:e4178e98d6b30685c11ca439dc9a2e43e06ee87f": {
+      "paper_id": "s2:e4178e98d6b30685c11ca439dc9a2e43e06ee87f",
+      "title": "Counterclockwise block-by-block knowledge distillation for neural network compression",
+      "abstract": "Model compression is a technique for transforming large neural network models into smaller ones. Knowledge distillation (KD) is a crucial model compression technique that involves transferring knowledge from a large teacher model to a lightweight student model. Existing knowledge distillation methods typically facilitate the knowledge transfer from teacher to student models in one or two stages. This paper introduces a novel approach called counterclockwise block-wise knowledge distillation (CBKD) to optimize the knowledge distillation process. The core idea of CBKD aims to mitigate the generation gap between teacher and student models, facilitating the transmission of intermediate-layer knowledge from the teacher model. It divides both teacher and student models into multiple sub-network blocks, and in each stage of knowledge distillation, only the knowledge from one teacher sub-block is transferred to the corresponding position of a student sub-block. Additionally, in the CBKD process, deeper teacher sub-network blocks are assigned higher compression rates. Extensive experiments on tiny-imagenet-200 and CIFAR-10 demonstrate that the proposed CBKD method can enhance the distillation performance of various mainstream knowledge distillation approaches.",
+      "year": 2025,
+      "authors": [
+        "Xiao-Wei Lan",
+        "Yalin Zeng",
+        "Xiao-Xiao Wei",
+        "Tian Zhang",
+        "Yiwen Wang",
+        "Chao Huang",
+        "Weikai He"
+      ],
+      "url": "https://doi.org/10.1038/s41598-025-91152-3",
+      "venue": "Scientific Reports",
+      "source": "semantic_scholar"
+    },
+    "s2:1f471c4098b008389a43d39011ae20a46e21528a": {
+      "paper_id": "s2:1f471c4098b008389a43d39011ae20a46e21528a",
+      "title": "Efficient Learned Image Compression Through Knowledge Distillation",
+      "abstract": "Learned image compression sits at the intersection of machine learning and image processing. With advances in deep learning, neural network-based compression methods have emerged. In this process, an encoder maps the image to a low-dimensional latent space, which is then quantized, entropy-coded into a binary bitstream, and transmitted to the receiver. At the receiver end, the bitstream is entropy-decoded, and a decoder reconstructs an approximation of the original image. Recent research suggests that these models consistently outperform conventional codecs. However, they require significant processing power, making them unsuitable for real-time use on resource-constrained platforms, which hinders their deployment in mainstream applications. This study aims to reduce the resource requirements of neural networks used for image compression by leveraging knowledge distillation, a training paradigm where smaller neural networks, partially trained on the outputs of larger, more complex models, can achieve better performance than when trained independently. Our work demonstrates that knowledge distillation can be effectively applied to image compression tasks: i) across various architecture sizes, ii) to achieve different image quality/bit rate tradeoffs, and iii) to save processing and energy resources. This approach introduces new settings and hyperparameters, and future research could explore the impact of different teacher models, as well as alternative loss functions. Knowledge distillation could also be extended to transformer-based models. The code is publicly available at: https://github.com/FABallemand/PRIM .",
+      "year": 2025,
+      "authors": [
+        "Fabien Allemand",
+        "A. Fiandrotti",
+        "Sumanta Chaudhuri",
+        "A. Mazouz"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2509.10366",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:e257148c1120059bfcae3f0488cfab3dc1f4c1fc": {
+      "paper_id": "s2:e257148c1120059bfcae3f0488cfab3dc1f4c1fc",
+      "title": "Evaluating Knowledge Distillation and Compression Techniques for Edge Class Devices",
+      "abstract": "Recent advances in Machine Learning (ML) technologies have made it possible to execute neural network models in daily devices such as smartphones and IoT. Due to these advancements, intelligent functionalities can now be integrated into devices with limited resources, enabling AI capabilities like speech recognition, and image processing. However as the AI models go deeper, hardware requirements become a substantial issue since the number of computations increases drastically. To mitigate this, researchers discovered ways to compress AI models without sacrificing a lot of performance. Some examples are quantization and knowledge distillation. These techniques aim to reduce the size, and computational complexity, of the AI models, allowing them to be deployed more efficiently on hardware with limited resources. In this research paper, we evaluate these methods and compare them in terms of efficiency and accuracy. The results showed that knowledge distillation can can be applied in real-life scenarios.",
+      "year": 2024,
+      "authors": [
+        "Fotios Paparounas",
+        "Vasileios Christofas",
+        "Petros Amanatidis",
+        "D. Karampatzakis",
+        "T. Lagkas"
+      ],
+      "url": "https://doi.org/10.1145/3716554.3716621",
+      "venue": "Panhellenic Conference on Informatics",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2009.09152": {
+      "paper_id": "arxiv:2009.09152",
+      "title": "Weight Distillation: Transferring the Knowledge in Neural Network Parameters",
+      "abstract": "Knowledge distillation has been proven to be effective in model acceleration and compression. It allows a small network to learn to generalize in the same way as a large network. Recent successes in pre-training suggest the effectiveness of transferring model parameters. Inspired by this, we investigate methods of model acceleration and compression in another line of research. We propose Weight Distillation to transfer the knowledge in the large network parameters through a parameter generator. Our experiments on WMT16 En-Ro, NIST12 Zh-En, and WMT14 En-De machine translation tasks show that weight distillation can train a small network that is 1.88~2.94x faster than the large network but with competitive performance. With the same sized small network, weight distillation can outperform knowledge distillation by 0.51~1.82 BLEU points.",
+      "year": 2020,
+      "authors": [
+        "Ye Lin",
+        "Yanyang Li",
+        "Ziyang Wang",
+        "Bei Li",
+        "Quan Du",
+        "Tong Xiao",
+        "Jingbo Zhu"
+      ],
+      "url": "https://arxiv.org/abs/2009.09152",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:35610d8dc34042a5079a3e5fde7a926b176e0c2c": {
+      "paper_id": "s2:35610d8dc34042a5079a3e5fde7a926b176e0c2c",
+      "title": "Optimizing knowledge distillation models for language models",
+      "abstract": "The problem of optimizing large neural networks is discussed using the example of language models. The size of large language models is an obstacle to their practical application in conditions of limited amounts of computing resources and memory. One of the areas of compression of large neural network models being developed is knowledge distillation, the transfer of knowledge from a large teacher model to a smaller student model without significant loss of result accuracy. Currently known methods of distilling knowledge have certain disadvantages: inaccurate knowledge transfer, long learning process, accumulation of errors in long sequences. The methods that contribute to improving the quality of knowledge distillation in relation to language models are proposed: selective teacher intervention in the student’s learning process and low-level adaptation. The first approach is based on the transfer of teacher tokens when teaching a student to neural network layers, for which an exponentially decreasing threshold of measuring the discrepancy between the probability distributions of the teacher and the student is reached. The second approach suggests reducing the number of parameters in a neural network by replacing fully connected layers with low-rank ones, which reduces the risk of overfitting and speeds up the learning process. The limitations of each method when working with long sequences are shown. It is proposed to combine methods to obtain an improved model of classical distillation of knowledge for long sequences. The use of a combined approach to distilling knowledge on long sequences made it possible to significantly compress the resulting model with a slight loss of quality as well as significantly reduce GPU memory consumption and response output time. Complementary approaches to optimizing the knowledge transfer process and model compression showed better results than selective teacher intervention in the student learning process and low-rank adaptation separately. Thus, the quality of answers of the improved classical knowledge distillation model on long sequences showed 97 % of the quality of full fine-tuning and 98 % of the quality of the low-rank adaptation method in terms of ROGUE-L and Perplexity, given that the number of trainable parameters is reduced by 99 % compared to full fine-tuning and by 49 % compared to low-rank adaptation. In addition, GPU memory usage is reduced by 75 % and 30 %, respectively, and inference time by 30 %. The proposed combination of knowledge distillation methods can find application in problems with limited computational resources.",
+      "year": 2025,
+      "authors": [
+        "T. Tatarnikova",
+        "N. S. Mokretsov"
+      ],
+      "url": "https://doi.org/10.17586/2226-1494-2025-25-4-737-743",
+      "venue": "Scientific and Technical Journal of Information Technologies, Mechanics and Optics",
+      "source": "semantic_scholar"
+    },
+    "s2:f2075559cc44f84fbd56216b9cbb27225331820a": {
+      "paper_id": "s2:f2075559cc44f84fbd56216b9cbb27225331820a",
+      "title": "DisWOT: Student Architecture Search for Distillation WithOut Training",
+      "abstract": "Knowledge distillation (KD) is an effective training strategy to improve the lightweight student models under the guidance of cumbersome teachers. However, the large architecture difference across the teacher-student pairs limits the distillation gains. In contrast to previous adaptive distillation methods to reduce the teacher-student gap, we explore a novel training-free framework to search for the best student architectures for a given teacher. Our work first empirically show that the optimal model under vanilla training cannot be the winner in distillation. Secondly, we find that the similarity of feature semantics and sample relations between random-initialized teacher-student networks have good correlations with final distillation performances. Thus, we efficiently measure similarity matrixs conditioned on the semantic activation maps to select the optimal student via an evolutionary algorithm without any training. In this way, our student architecture search for Distillation WithOut Training (DisWOT) significantly improves the performance of the model in the distillation stage with at least 180 × training acceleration. Additionally, we extend similarity metrics in DisWOT as new distillers and KD-based zero-proxies. Our experiments on CIFAR, ImageNet and NAS-Bench-201 demonstrate that our technique achieves state-of-the-art results on different search spaces. Our project and code are available at https://lilujunai.github.io/DisWot-CvpR20231.",
+      "year": 2023,
+      "authors": [
+        "Peijie Dong",
+        "Lujun Li",
+        "Zimian Wei"
+      ],
+      "url": "https://doi.org/10.1109/CVPR52729.2023.01145",
+      "venue": "Computer Vision and Pattern Recognition",
+      "source": "semantic_scholar"
+    },
+    "s2:3f15d1caa39a6d408669a3ea8206b84dbb11b6b7": {
+      "paper_id": "s2:3f15d1caa39a6d408669a3ea8206b84dbb11b6b7",
+      "title": "Simplified Knowledge Distillation for Deep Neural Networks Bridging the Performance Gap with a Novel Teacher–Student Architecture",
+      "abstract": "The rapid evolution of deep learning has led to significant achievements in computer vision, primarily driven by complex convolutional neural networks (CNNs). However, the increasing depth and parameter count of these networks often result in overfitting and elevated computational demands. Knowledge distillation (KD) has emerged as a promising technique to address these issues by transferring knowledge from a large, well-trained teacher model to a more compact student model. This paper introduces a novel knowledge distillation method that simplifies the distillation process and narrows the performance gap between teacher and student models without relying on intricate knowledge representations. Our approach leverages a unique teacher network architecture designed to enhance the efficiency and effectiveness of knowledge transfer. Additionally, we introduce a streamlined teacher network architecture that transfers knowledge effectively through a simplified distillation process, enabling the student model to achieve high accuracy with reduced computational demands. Comprehensive experiments conducted on the CIFAR-10 dataset demonstrate that our proposed model achieves superior performance compared to traditional KD methods and established architectures such as ResNet and VGG networks. The proposed method not only maintains high accuracy but also significantly reduces training and validation losses. Key findings highlight the optimal hyperparameter settings (temperature T = 15.0 and smoothing factor α = 0.7), which yield the highest validation accuracy and lowest loss values. This research contributes to the theoretical and practical advancements in knowledge distillation, providing a robust framework for future applications and research in neural network compression and optimization. The simplicity and efficiency of our approach pave the way for more accessible and scalable solutions in deep learning model deployment.",
+      "year": 2024,
+      "authors": [
+        "Sabina Umirzakova",
+        "Mirjamol Abdullaev",
+        "Sevara Mardieva",
+        "N. Latipova",
+        "Shakhnoza Muksimova"
+      ],
+      "url": "https://doi.org/10.3390/electronics13224530",
+      "venue": "Electronics",
+      "source": "semantic_scholar"
+    },
+    "s2:679bbdb8a121af98b91b8504a3cc3679a3e17539": {
+      "paper_id": "s2:679bbdb8a121af98b91b8504a3cc3679a3e17539",
+      "title": "Neural Architecture Search for Effective Teacher-Student Knowledge Transfer in Language Models",
+      "abstract": "Large pretrained language models have achieved state-of-the-art results on a variety of downstream tasks. Knowledge Distillation (KD) into a smaller student model addresses their inefficiency, allowing for deployment in resource-constrained environments. However, KD can be ineffective when the student is manually selected from a set of existing options, since it can be a sub-optimal choice within the space of all possible student architectures. We develop multilingual KD-NAS, the use of Neural Architecture Search (NAS) guided by KD to find the optimal student architecture for task agnostic distillation from a multilingual teacher. In each episode of the search process, a NAS controller predicts a reward based on the distillation loss and latency of inference. The top candidate architectures are then distilled from the teacher on a small proxy set. Finally the architecture(s) with the highest reward is selected, and distilled on the full training corpus. KD-NAS can automatically trade off efficiency and effectiveness, and recommends architectures suitable to various latency budgets. Using our multi-layer hidden state distillation process, our KD-NAS student model achieves a 7x speedup on CPU inference (2x on GPU) compared to a XLM-Roberta Base Teacher, while maintaining 90% performance, and has been deployed in 3 software offerings requiring large throughput, low latency and deployment on CPU.",
+      "year": 2023,
+      "authors": [
+        "Aashka Trivedi",
+        "Takuma Udagawa",
+        "Michele Merler",
+        "Rameswar Panda",
+        "Yousef El-Kurdi",
+        "Bishwaranjan Bhattacharjee"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2303.09639",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2609.23561": {
+      "paper_id": "arxiv:2609.23561",
+      "title": "Transferring Visual Explanations: How Cross-Architecture Knowledge Distillation Affects Model Interpretability",
+      "abstract": "Deploying efficient neural networks is essential in resource-constrained environments, yet compact models often sacrifice interpretability - a critical in safety-critical domains such as autonomous driving and medicine. This study investigates whether Knowledge Distillation transfers the spatial feature attribution of a large teacher network to a compact student. To assess the influence of the KD scheme on interpretability, we distill a ResNet-152 teacher into a ResNet-34 student on ImageNet-1K across five configurations by systematically varying the distillation temperature and soft-label loss weight. Models are evaluated on top-1 accuracy, along with two interpretability metrics: Relevance Mass Accuracy and Relevance Rank Accuracy. These metrics are computed via Grad-CAM heatmaps benchmarked against ground-truth object masks. Our results show that top-1 accuracy ranges from 71.6% to 74.0%. For Grad-CAM, RMA ranges from 7.7% to 9.7% and RRA from 7.3% to 10.1%; for Guided Grad-CAM, RMA ranges from 16.1% to 18.6% and RRA from 15.9% to 21.5%. Interpretability proves far more sensitive to the soft-label weight than to the temperature: keeping the student anchored to hard labels preserves both accuracy and coarse localization, whereas weighting the teacher heavily degrades both. Fine-grained attribution, however, fell below the undistilled baseline in every configuration tested, indicating that logit distillation transmits where a model attends more readily than the pixel-level structure of that attention. We evaluate 12 cross-architecture combinations of convolutional and transformer-based models, revealing that the inheritance of fine-grained spatial reasoning is fundamentally bottlenecked by the student's intrinsic structural biases. To our knowledge, this is the first application of this interpretability-aware evaluation framework - previously used for neural network pruning - to KD.",
+      "year": 2026,
+      "authors": [
+        "Aleks Czufarow",
+        "Ihor Babin"
+      ],
+      "url": "https://arxiv.org/abs/2609.23561",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2410.04140": {
+      "paper_id": "arxiv:2410.04140",
+      "title": "Gap Preserving Distillation by Building Bidirectional Mappings with A Dynamic Teacher",
+      "abstract": "Knowledge distillation aims to transfer knowledge from a large teacher model to a compact student counterpart, often coming with a significant performance gap between them. We find that a too-large performance gap can hamper the training process, which is also verified in recent studies. To address this, we propose a Gap Preserving Distillation (GPD) method that trains an additional dynamic teacher model from scratch along with training the student to bridge this gap. In this way, it becomes possible to maintain a reasonable performance gap between teacher and student during the whole distillation process. To further strengthen distillation from the dynamic teacher to the student, we develop a hard strategy by enforcing them to share parameters and encouraging parameter inheritance. Besides hard strategy, we also build the soft bidirectional mappings between them which are built on an Inverse Reparameterization (IR) method and a Channel-Branch Reparameterization (CBR) strategy. We highlight that our IR is able to initialize a larger dynamic teacher with an arbitrary expansion ratio, while preserving exactly the same accuracy as the given student model. In this way, it guarantees that the dynamic teacher and student start from the same point and avoid a too large gap in early stage of training. As for our CBR, with parameter-sharing, it directly extracts an effective student model from the well-learned dynamic teacher without any post-training, making our method highly flexible for model deployment. In the experiments, GPD significantly outperforms existing distillation methods on top of both CNNs and transformers architectures, achieving up to 1.58% accuracy improvement. Interestingly, GPD also generalizes well to the scenarios without a pre-trained teacher, including training from scratch and fine-tuning, yielding a large improvement of 1.80% and 0.89% on ResNet18, respectively.",
+      "year": 2024,
+      "authors": [
+        "Yong Guo",
+        "Shulian Zhang",
+        "Haolin Pan",
+        "Jing Liu",
+        "Yulun Zhang",
+        "Jian Chen"
+      ],
+      "url": "https://arxiv.org/abs/2410.04140",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2403.13322": {
+      "paper_id": "arxiv:2403.13322",
+      "title": "DD-RobustBench: An Adversarial Robustness Benchmark for Dataset Distillation",
+      "abstract": "Dataset distillation is an advanced technique aimed at compressing datasets into significantly smaller counterparts, while preserving formidable training performance. Significant efforts have been devoted to promote evaluation accuracy under limited compression ratio while overlooked the robustness of distilled dataset. In this work, we introduce a comprehensive benchmark that, to the best of our knowledge, is the most extensive to date for evaluating the adversarial robustness of distilled datasets in a unified way. Our benchmark significantly expands upon prior efforts by incorporating a wider range of dataset distillation methods, including the latest advancements such as TESLA and SRe2L, a diverse array of adversarial attack methods, and evaluations across a broader and more extensive collection of datasets such as ImageNet-1K. Moreover, we assessed the robustness of these distilled datasets against representative adversarial attack algorithms like PGD and AutoAttack, while exploring their resilience from a frequency perspective. We also discovered that incorporating distilled data into the training batches of the original dataset can yield to improvement of robustness.",
+      "year": 2024,
+      "authors": [
+        "Yifan Wu",
+        "Jiawei Du",
+        "Ping Liu",
+        "Yuewei Lin",
+        "Wei Xu",
+        "Wenqing Cheng"
+      ],
+      "url": "https://arxiv.org/abs/2403.13322",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2312.16242": {
+      "paper_id": "arxiv:2312.16242",
+      "title": "ShiftKD: Benchmarking Knowledge Distillation under Distribution Shift",
+      "abstract": "Knowledge Distillation (KD) transfers knowledge from large models to small models and has recently achieved remarkable success. However, the reliability of existing KD methods in real-world applications, especially under distribution shift, remains underexplored. Distribution shift refers to the data distribution drifts between the training and testing phases, and this can adversely affect the efficacy of KD. In this paper, we propose a unified and systematic framework \\textsc{ShiftKD} to benchmark KD against two general distributional shifts: diversity and correlation shift. The evaluation benchmark covers more than 30 methods from algorithmic, data-driven, and optimization perspectives for five benchmark datasets. Our development of \\textsc{ShiftKD} conducts extensive experiments and reveals strengths and limitations of current SOTA KD methods. More importantly, we thoroughly analyze key factors in student model training process, including data augmentation, pruning methods, optimizers, and evaluation metrics. We believe \\textsc{ShiftKD} could serve as an effective benchmark for assessing KD in real-world scenarios, thus driving the development of more robust KD methods in response to evolving demands. The code will be made available upon publication.",
+      "year": 2023,
+      "authors": [
+        "Songming Zhang",
+        "Yuxiao Luo",
+        "Ziyu Lyu",
+        "Xiaofeng Chen"
+      ],
+      "url": "https://arxiv.org/abs/2312.16242",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2607.06796": {
+      "paper_id": "arxiv:2607.06796",
+      "title": "Enhancing deep learning models for time series classification via knowledge distillation",
+      "abstract": "Deep learning has achieved remarkable success in various domains including time series analysis, computer vision and natural language processing. However, high computational and memory demands of state-of-the-art architectures pose challenges for deployment in resource-limited environments. Knowledge Distillation (KD) addresses this by transferring knowledge from a large teacher model to a smaller, more efficient student model while maintaining competitive performance. In this work, we investigate the effectiveness of KD for Time Series Classification (TSC) across three architectures: the classical Fully Convolutional Network (FCN), the convolutional Inception model and the transformer-based ConvTran model. We evaluate our approach on UCR Archive, the largest benchmark repository of time series datasets, by modifying architectural components such as convolutional filters, Inception modules and attention heads across the three architectures. Our results consistently show that KD most effectively benefits student models of intermediate complexity across all three architectures, with the distilled FCN student reducing parameters by a factor of 38, the distilled Inception student achieving nearly the same performance as the teacher with 42% fewer parameters and the distilled ConvTran student with 2 attention heads showing the most significant improvement through distillation. To encourage further research and reproducibility, we provide our implementation at https://github.com/MSD-IRIMAS/KD-4-TSC.",
+      "year": 2026,
+      "authors": [
+        "Javidan Abdullayev",
+        "Maxime Devanne",
+        "Jonathan Weber",
+        "Germain Forestier"
+      ],
+      "url": "https://arxiv.org/abs/2607.06796",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:58e839d172c9f7598e33346dca05404a6242419b": {
+      "paper_id": "s2:58e839d172c9f7598e33346dca05404a6242419b",
+      "title": "Knowledge Distillation for Object Detection: From Generic To Remote Sensing Datasets",
+      "abstract": "Knowledge distillation, a well-known model compression technique, is an active research area in both computer vision and remote sensing communities. In this paper, we evaluate in a remote sensing context various off-the-shelf object detection knowledge distillation methods which have been originally developed on generic computer vision datasets such as Pascal VOC. In particular, methods covering both logit mimicking and feature imitation approaches are applied for vehicle detection using the well-known benchmarks such as xView and VEDAI datasets. Extensive experiments are performed to compare the relative performance and interrelationships of the methods. Experimental results show high variations and confirm the importance of result aggregation and cross validation on remote sensing datasets.",
+      "year": 2023,
+      "authors": [
+        "Hoàng-Ân Lê",
+        "M. Pham"
+      ],
+      "url": "https://doi.org/10.1109/IGARSS52108.2023.10282614",
+      "venue": "IEEE International Geoscience and Remote Sensing Symposium",
+      "source": "semantic_scholar"
+    },
+    "s2:00b2c8c483b083eaacfaa20e4fdc191809b35a86": {
+      "paper_id": "s2:00b2c8c483b083eaacfaa20e4fdc191809b35a86",
+      "title": "Selecting Images With Entropy for Frugal Knowledge Distillation",
+      "abstract": "Frugal knowledge distillation is becoming increasingly important as it enables the distillation process to function effectively in resource-constrained environments. A key aspect of achieving this efficiency lies in minimizing the amount of training data required. To address this, we propose an entropy-based data selection method that identifies smaller subsets from the original dataset, focusing on images that retain the highest informational content. We explore the effectiveness of entropy-based method in combination with five different image representations to determine the subsets most effective for transferring knowledge to the student model. Our experimental evaluation on benchmark datasets, including CIFAR-10, MNIST, and FashionMNIST, shows that our approach outperforms other state-of-the-art image selection methods in most scenarios. It achieves over 3% higher accuracy compared to random selection methods while maintaining similar knowledge distillation time and energy efficiency.",
+      "year": 2025,
+      "authors": [
+        "Michail Kinnas",
+        "John Violos",
+        "Nikolaos Ioannis Karapiperis",
+        "I. Kompatsiaris"
+      ],
+      "url": "https://doi.org/10.1109/ACCESS.2025.3540384",
+      "venue": "IEEE Access",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2006.05525": {
+      "paper_id": "arxiv:2006.05525",
+      "title": "Knowledge Distillation: A Survey",
+      "abstract": "In recent years, deep neural networks have been successful in both industry and academia, especially for computer vision tasks. The great success of deep learning is mainly due to its scalability to encode large-scale data and to maneuver billions of model parameters. However, it is a challenge to deploy these cumbersome deep models on devices with limited resources, e.g., mobile phones and embedded devices, not only because of the high computational complexity but also the large storage requirements. To this end, a variety of model compression and acceleration techniques have been developed. As a representative type of model compression and acceleration, knowledge distillation effectively learns a small student model from a large teacher model. It has received rapid increasing attention from the community. This paper provides a comprehensive survey of knowledge distillation from the perspectives of knowledge categories, training schemes, teacher-student architecture, distillation algorithms, performance comparison and applications. Furthermore, challenges in knowledge distillation are briefly reviewed and comments on future research are discussed and forwarded.",
+      "year": 2020,
+      "authors": [
+        "Jianping Gou",
+        "Baosheng Yu",
+        "Stephen John Maybank",
+        "Dacheng Tao"
+      ],
+      "url": "https://arxiv.org/abs/2006.05525",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2306.10687": {
+      "paper_id": "arxiv:2306.10687",
+      "title": "Categories of Response-Based, Feature-Based, and Relation-Based Knowledge Distillation",
+      "abstract": "Deep neural networks have achieved remarkable performance for artificial intelligence tasks. The success behind intelligent systems often relies on large-scale models with high computational complexity and storage costs. The over-parameterized networks are often easy to optimize and can achieve better performance. However, it is challenging to deploy them over resource-limited edge-devices. Knowledge Distillation (KD) aims to optimize a lightweight network from the perspective of over-parameterized training. The traditional offline KD transfers knowledge from a cumbersome teacher to a small and fast student network. When a sizeable pre-trained teacher network is unavailable, online KD can improve a group of models by collaborative or mutual learning. Without needing extra models, Self-KD boosts the network itself using attached auxiliary architectures. KD mainly involves knowledge extraction and distillation strategies these two aspects. Beyond KD schemes, various KD algorithms are widely used in practical applications, such as multi-teacher KD, cross-modal KD, attention-based KD, data-free KD and adversarial KD. This paper provides a comprehensive KD survey, including knowledge categories, distillation schemes and algorithms, as well as some empirical studies on performance comparison. Finally, we discuss the open challenges of existing KD works and prospect the future directions.",
+      "year": 2023,
+      "authors": [
+        "Chuanguang Yang",
+        "Xinqiang Yu",
+        "Zhulin An",
+        "Yongjun Xu"
+      ],
+      "url": "https://arxiv.org/abs/2306.10687",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2609.27551": {
+      "paper_id": "arxiv:2609.27551",
+      "title": "Knowledge Distillation for Intelligent Softwarized Networks: Advances and Open Challenges",
+      "abstract": "The increasing adoption of software defined networking and network function virtualization, combined with rapid advances in Machine Learning (ML), is driving the evolution toward intelligent network softwarization across cloud, edge, and distributed environments. However, deploying complex learning models in such heterogeneous environments introduces challenges in latency, computation, and energy consumption. Knowledge Distillation (KD) has emerged as a promising approach to enable lightweight and efficient intelligence by transferring knowledge from high-capacity teacher models to compact student models. Despite its extensive study in general ML domains, the integration of KD into intelligent softwarized networks remains fragmented and underexplored. In this paper, we review and classify recent efforts that incorporate KD within softwarized networks, analyze current trends and limitations, and outline open challenges and future directions toward scalable, adaptive, and energy-aware distillation mechanisms.",
+      "year": 2026,
+      "authors": [
+        "Mohamed Ali Zormati",
+        "Ghada Jaber",
+        "Hicham Lakhlef"
+      ],
+      "url": "https://arxiv.org/abs/2609.27551",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2507.07015": {
+      "paper_id": "arxiv:2507.07015",
+      "title": "MST-Distill: Mixture of Specialized Teachers for Cross-Modal Knowledge Distillation",
+      "abstract": "Knowledge distillation as an efficient knowledge transfer technique, has achieved remarkable success in unimodal scenarios. However, in cross-modal settings, conventional distillation methods encounter significant challenges due to data and statistical heterogeneities, failing to leverage the complementary prior knowledge embedded in cross-modal teacher models. This paper empirically reveals two critical issues in existing approaches: distillation path selection and knowledge drift. To address these limitations, we propose MST-Distill, a novel cross-modal knowledge distillation framework featuring a mixture of specialized teachers. Our approach employs a diverse ensemble of teacher models across both cross-modal and multimodal configurations, integrated with an instance-level routing network that facilitates adaptive and dynamic distillation. This architecture effectively transcends the constraints of traditional methods that rely on monotonous and static teacher models. Additionally, we introduce a plug-in masking module, independently trained to suppress modality-specific discrepancies and reconstruct teacher representations, thereby mitigating knowledge drift and enhancing transfer effectiveness. Extensive experiments across five diverse multimodal datasets, spanning visual, audio, and text, demonstrate that our method significantly outperforms existing state-of-the-art knowledge distillation methods in cross-modal distillation tasks. The source code is available at https://github.com/Gray-OREO/MST-Distill.",
+      "year": 2025,
+      "authors": [
+        "Hui Li",
+        "Pengfei Yang",
+        "Juanyang Chen",
+        "Le Dong",
+        "Yanxin Chen",
+        "Quan Wang"
+      ],
+      "url": "https://arxiv.org/abs/2507.07015",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q05",
+  "area": "ML"
+}

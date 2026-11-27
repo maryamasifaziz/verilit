@@ -146,7 +146,7 @@ class PaperSearch:
         headers = {"x-api-key": self.s2_key} if self.s2_key else None
         # Semantic Scholar often answers 429 even well under its limit, so space requests
         # out and retry patiently; pause it only after two queries in a row fail.
-        r = self._get("s2", S2_URL, {"query": query, "limit": limit, "fields": S2_FIELDS}, headers, 1.5, 6)
+        r = self._get("s2", S2_URL, {"query": query, "limit": limit, "fields": S2_FIELDS}, headers, 1.5, 4)
         if r is None:
             self._s2_failures_in_a_row += 1
             if self._last_failure_status == 429 and self._s2_failures_in_a_row >= 2:
