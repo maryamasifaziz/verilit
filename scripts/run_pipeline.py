@@ -37,6 +37,8 @@ def main() -> None:
     parser.add_argument("--max-claims", type=int, default=3, help="claims per sub-question")
     parser.add_argument("--max-retries", type=int, default=2)
     parser.add_argument("--threshold", type=float, default=0.7, help="accept when calibrated P(SUPPORTED) >= this")
+    parser.add_argument("--evidence", default="abstract", choices=["abstract", "passages"],
+                        help="Verifier scores the full abstract (default) or the best 3-sentence passage")
     parser.add_argument("--verifier", default=str(ROOT / "models" / "verifier"))
     parser.add_argument("--out", type=Path, default=ROOT / "runs")
     args = parser.parse_args()
@@ -44,7 +46,7 @@ def main() -> None:
     config = Config(
         verify=not args.no_verify, retriever=args.retriever, papers_per_question=args.papers,
         max_claims=args.max_claims, max_retries=args.max_retries, threshold=args.threshold,
-        verifier_path=args.verifier,
+        verifier_path=args.verifier, evidence=args.evidence,
     )
     if config.verify and not Path(config.verifier_path).is_dir():
         sys.exit(f"No Verifier at {config.verifier_path}. Train it (scripts/finetune_verifier.py) or use --no-verify.")

@@ -11,9 +11,13 @@ acceptance threshold for the pipeline, the script also shows, for several
 thresholds, how many val pairs would be accepted as SUPPORTED and how many of
 those are really supported.
 
+With --evidence passages it calibrates best-passage scoring instead (the claim is
+scored against each 3-sentence window of the abstract; see NLIVerifier.predict_logits_passages).
+
 Writes:
     models/verifier/calibration.json   read by NLIVerifier.load(..., use_calibration=True)
     results/calibration_val.json       the same numbers, kept in git for the report
+    (calibration_passages.json and results/calibration_passages_val.json with --evidence passages)
 
 Usage:
     python scripts/calibrate_verifier.py
@@ -33,7 +37,8 @@ from scipy.special import log_softmax
 
 from verilit.labels import LABEL2ID, LABELS, SUPPORTED
 from verilit.metrics import expected_calibration_error
-from verilit.nli import CALIBRATION_FILE, NLIVerifier, softmax
+from verilit.nli import NLIVerifier, calibration_file, softmax
+from verilit.scifact import pair_passages
 
 ROOT = Path(__file__).resolve().parents[1]
 THRESHOLDS = [0.5, 0.6, 0.7, 0.8, 0.9]
@@ -93,6 +98,9 @@ def main() -> None:
     parser.add_argument("--results", type=Path, default=ROOT / "results")
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--max-length", type=int, default=512)
+    parser.add_argument("--evidence", default="abstract", choices=["abstract", "passages"],
+                        help="calibrate full-abstract scoring, or best-passage scoring")
+    parser.add_argument("--raw", type=Path, default=ROOT / "data" / "raw" / "scifact")
     args = parser.parse_args()
 
     if not args.model.is_dir():
@@ -104,8 +112,12 @@ def main() -> None:
         pairs = [json.loads(line) for line in fh if line.strip()]
 
     verifier = NLIVerifier.load(str(args.model), max_length=args.max_length, batch_size=args.batch_size)
-    print(f"model: {args.model}   device: {verifier.device}   val pairs: {len(pairs)}")
-    logits = verifier.predict_logits([p["evidence"] for p in pairs], [p["claim"] for p in pairs])
+    print(f"model: {args.model}   device: {verifier.device}   val pairs: {len(pairs)}   evidence: {args.evidence}")
+    claims = [p["claim"] for p in pairs]
+    if args.evidence == "passages":
+        logits = verifier.predict_logits_passages(pair_passages(pairs, args.raw), claims)
+    else:
+        logits = verifier.predict_logits([p["evidence"] for p in pairs], claims)
     y = np.array([LABEL2ID[p["label"]] for p in pairs])
 
     temperature = fit_temperature(logits, y)
@@ -114,6 +126,7 @@ def main() -> None:
 
     result = {
         "temperature": temperature,
+        "evidence": args.evidence,
         "fitted_on": "val",
         "pairs": len(pairs),
         "model": str(args.model),
@@ -122,10 +135,12 @@ def main() -> None:
         "accept_supported_thresholds": table,
         "labels": LABELS,
     }
-    with open(args.model / CALIBRATION_FILE, "w", encoding="utf-8") as fh:
+    cal_name = calibration_file(args.evidence)
+    with open(args.model / cal_name, "w", encoding="utf-8") as fh:
         json.dump(result, fh, indent=2)
     args.results.mkdir(parents=True, exist_ok=True)
-    with open(args.results / "calibration_val.json", "w", encoding="utf-8") as fh:
+    results_name = "calibration_val.json" if args.evidence == "abstract" else f"calibration_{args.evidence}_val.json"
+    with open(args.results / results_name, "w", encoding="utf-8") as fh:
         json.dump(result, fh, indent=2)
 
     print(f"\ntemperature T = {temperature:.3f}  (fitted on val)\n")
@@ -142,8 +157,9 @@ def main() -> None:
     n_sup = int((y == LABEL2ID[SUPPORTED]).sum())
     print(f"(val has only {n_sup} SUPPORTED pairs, so treat these as rough guides.)")
 
-    print(f"\nSaved {args.model / CALIBRATION_FILE} and {args.results / 'calibration_val.json'}")
-    print(f"Next: python scripts/eval_verifier.py --model {args.model} --calibrated --name calibrated")
+    print(f"\nSaved {args.model / cal_name} and {args.results / results_name}")
+    flag = "" if args.evidence == "abstract" else f" --evidence {args.evidence}"
+    print(f"Next: python scripts/eval_verifier.py --model {args.model} --calibrated{flag} --name calibrated")
 
 
 if __name__ == "__main__":

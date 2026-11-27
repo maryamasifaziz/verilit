@@ -91,6 +91,31 @@ threshold (`val` has only 47 SUPPORTED pairs, so treat these numbers as rough gu
 | precision (accepted pairs really SUPPORTED) | 0.769 | 0.806 | 0.844 | 0.885 | 1.000 |
 | recall (SUPPORTED pairs accepted) | 0.638 | 0.617 | 0.574 | 0.489 | 0.298 |
 
+### 4. Full abstract vs. best passage
+
+On a long abstract the evidence for a claim can be one sentence among many, which dilutes it.
+With `--evidence passages`, the Verifier scores the claim against every window of 3
+consecutive sentences (plus the full abstract) and keeps the window that is most sure it found
+relevant evidence (lowest INSUFFICIENT probability). It has its own calibration:
+
+```bash
+python scripts/calibrate_verifier.py --evidence passages
+python scripts/eval_verifier.py --model models/verifier --calibrated --evidence passages --name calibrated_passages
+```
+
+The choice was made on `val` before looking at dev: macro-F1 0.791 (full abstract) vs. 0.781
+(passages), so **full-abstract scoring is the default**. Dev agrees:
+
+| SciFact dev, calibrated | accuracy | macro F1 | ECE | SUPPORTED P / R |
+|---|---:|---:|---:|---:|
+| Full abstract (default) | **0.756** | **0.738** | **0.062** | 0.815 / 0.768 |
+| Best passage | 0.741 | 0.728 | 0.086 | 0.767 / 0.812 |
+
+SciFact can't show whether passages help on AI papers, where the Verifier wasn't trained (one
+early VeriLit claim, stated word for word in a long abstract, scored 0.36 on the full abstract
+and 0.89 on its best passage). So the pipeline records the passage score of every claim too,
+and `scripts/score_eval.py` compares both against the hand labels on the custom test set.
+
 ### How the SciFact pairs are built
 
 | | |
@@ -179,6 +204,34 @@ unsupported, is rewritten by the LLM to say only what the abstract states. Claim
 accepted are listed as unverified and left out of the review. Reference numbers are assigned
 by the code, not the LLM, and the report warns if the review cites a number that doesn't exist.
 
+## Custom test set
+
+25 research questions across AI, ML, NLP and cybersecurity (`eval/questions.csv`), run through
+VeriLit with 2 claims per sub-question, then labeled by hand.
+
+```bash
+python scripts/run_eval_set.py    # runs every question (resumes if stopped), then builds the labeling sheets
+python scripts/score_eval.py      # once the sheets are labeled
+```
+
+1. **Run.** `run_eval_set.py` saves `eval/runs/Q01.json` … `Q25.json` (+ `.md` reports). If the
+   free LLM quota runs out, run it again later; finished questions are skipped.
+2. **Label.** It writes `eval/labels/labels_maryam.csv` and `labels_nimra.csv`: one row per
+   claim with the abstract of the paper it cites, shuffled, *without* the Verifier's verdict.
+   Every original claim is labeled (these are also the baseline's claims), plus the final form
+   of claims the feedback loop changed and verified. 30 rows are in both sheets. Put **S**, **C**
+   or **I** in the `label` column, following `eval/LABELING.md`. Label alone, without looking at
+   the reports. The script never overwrites existing sheets.
+3. **Score.** `score_eval.py` reports annotator agreement (Cohen's kappa on the shared rows;
+   it writes `eval/labels/disagreements.csv` for you to settle by discussion), and for VeriLit
+   vs. the no-verification baseline: unsupported-claim rate, citation correctness, evidence
+   coverage; retry success rate and retries per review; and the Verifier's agreement with the
+   hand labels, with full-abstract and best-passage scoring. Results go to `results/custom_eval.json`.
+
+The baseline is the same LLM, papers and claims without the Verifier, so the baseline's claims
+are exactly VeriLit's original claims and need no separate run (`run_pipeline.py --no-verify`
+produces the baseline's written review if you want it for the report).
+
 ## Repository layout
 
 ```
@@ -201,6 +254,9 @@ scripts/
   calibrate_verifier.py
   eval_retrieval.py
   run_pipeline.py     run VeriLit on one question
+  run_eval_set.py     run the custom test set and build the labeling sheets
+  score_eval.py       score the custom test set from the hand labels
+eval/                 questions.csv, LABELING.md, runs/ (one record per question), labels/
 results/              metrics, training log, calibration, retrieval (predictions.jsonl is git-ignored)
 data/, models/        git-ignored; re-create with the scripts above
 runs/, cache/         git-ignored; pipeline outputs and cached API responses
@@ -211,7 +267,6 @@ Planned additions:
 | Where | What |
 |---|---|
 | `app.py` | the demo UI |
-| `eval/` | custom test questions, hand labels and the full-system evaluation |
 
 ## Results
 
@@ -220,6 +275,7 @@ Planned additions:
 | Off-the-shelf NLI (baseline) | 0.482 | 0.431 | 0.458 |
 | Fine-tuned (lr 2e-5, best epoch 5 of 5) | 0.756 | 0.738 | 0.161 |
 | Fine-tuned + calibrated (T = 1.908) | 0.756 | 0.738 | 0.062 |
+| Fine-tuned + calibrated, best passage (T = 2.223) | 0.741 | 0.728 | 0.086 |
 
 SciFact dev split, 340 pairs. The fine-tuned rows come from a CPU run with the default
 settings (seed 42); a GPU run gives slightly different numbers. During training, val ECE rose

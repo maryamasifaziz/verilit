@@ -24,6 +24,7 @@ from pathlib import Path
 from verilit.labels import LABELS
 from verilit.metrics import classification_metrics, format_metrics
 from verilit.nli import NLIVerifier
+from verilit.scifact import pair_passages
 
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_MODEL = "cross-encoder/nli-deberta-v3-small"
@@ -39,6 +40,9 @@ def main() -> None:
     parser.add_argument("--calibrated", action="store_true",
                         help="apply the temperature saved by calibrate_verifier.py in the model folder")
     parser.add_argument("--temperature", type=float, default=None, help="use this temperature instead (overrides)")
+    parser.add_argument("--evidence", default="abstract", choices=["abstract", "passages"],
+                        help="score the claim against the full abstract, or the best of its 3-sentence passages")
+    parser.add_argument("--raw", type=Path, default=ROOT / "data" / "raw" / "scifact")
     parser.add_argument("--batch-size", type=int, default=16)
     parser.add_argument("--max-length", type=int, default=512)
     parser.add_argument("--limit", type=int, default=None, help="only the first N pairs (quick test)")
@@ -53,23 +57,29 @@ def main() -> None:
         pairs = pairs[: args.limit]
 
     verifier = NLIVerifier.load(
-        args.model, max_length=args.max_length, batch_size=args.batch_size, use_calibration=args.calibrated
+        args.model, max_length=args.max_length, batch_size=args.batch_size,
+        use_calibration=args.calibrated, evidence=args.evidence,
     )
     if args.temperature is not None:
         verifier.temperature = args.temperature
     print(
         f"model: {args.model}   device: {verifier.device}   split: {args.split} ({len(pairs)} pairs)   "
-        f"temperature: {verifier.temperature:.3f}"
+        f"evidence: {args.evidence}   temperature: {verifier.temperature:.3f}"
     )
 
     start = time.time()
-    probs = verifier.predict_proba([p["evidence"] for p in pairs], [p["claim"] for p in pairs])
+    claims = [p["claim"] for p in pairs]
+    if args.evidence == "passages":
+        probs = verifier.predict_proba_passages(pair_passages(pairs, args.raw), claims)
+    else:
+        probs = verifier.predict_proba([p["evidence"] for p in pairs], claims)
     seconds = time.time() - start
 
     metrics = classification_metrics([p["label"] for p in pairs], probs)
     metrics.update(
         model=args.model,
         split=args.split,
+        evidence=args.evidence,
         temperature=verifier.temperature,
         max_length=args.max_length,
         seconds=round(seconds, 1),

@@ -62,18 +62,21 @@ class NLIVerifier:
         max_length: int = 512,
         batch_size: int = 16,
         use_calibration: bool = False,
+        evidence: str = "abstract",
     ):
         """Load a Hugging Face model name or a local folder (e.g. models/verifier).
 
         use_calibration=True reads the temperature that calibrate_verifier.py
         saved in the model folder, so confidence scores are calibrated. The
-        pipeline should always load the Verifier this way.
+        pipeline should always load the Verifier this way. `evidence` picks the
+        calibration fitted for full abstracts ("abstract") or passages ("passages").
         """
         temperature = 1.0
         if use_calibration:
-            path = Path(model_name_or_path) / CALIBRATION_FILE
+            path = Path(model_name_or_path) / calibration_file(evidence)
             if not path.exists():
-                raise FileNotFoundError(f"{path} not found. Run: python scripts/calibrate_verifier.py")
+                raise FileNotFoundError(
+                    f"{path} not found. Run: python scripts/calibrate_verifier.py --evidence {evidence}")
             with open(path, encoding="utf-8") as fh:
                 temperature = float(json.load(fh)["temperature"])
         tokenizer = AutoTokenizer.from_pretrained(model_name_or_path)
@@ -110,6 +113,31 @@ class NLIVerifier:
         self.model.train(was_training)
         return out
 
+    def predict_logits_passages(
+        self, passages: list[list[str]], claims: list[str], show_progress: bool = True
+    ) -> np.ndarray:
+        """Logits, shape (n, 3), when each claim has several candidate passages.
+
+        Every (passage, claim) pair is scored, and for each claim the passage
+        that is most sure it found relevant evidence (lowest INSUFFICIENT
+        probability) is kept. Long abstracts dilute the evidence; a short
+        window around the relevant sentences is easier for the model to judge.
+        """
+        flat_ev = [p for plist in passages for p in plist]
+        flat_cl = [c for plist, c in zip(passages, claims) for _ in plist]
+        logits = self.predict_logits(flat_ev, flat_cl, show_progress)
+        p_nei = softmax(logits)[:, LABELS.index("INSUFFICIENT")]
+        out = np.zeros((len(claims), len(LABELS)), dtype=np.float32)
+        start = 0
+        for i, plist in enumerate(passages):
+            end = start + len(plist)
+            out[i] = logits[start + int(p_nei[start:end].argmin())]
+            start = end
+        return out
+
+    def predict_proba_passages(self, passages: list[list[str]], claims: list[str], show_progress: bool = True):
+        return softmax(self.predict_logits_passages(passages, claims, show_progress) / self.temperature)
+
     def predict_proba(self, evidence: list[str], claims: list[str], show_progress: bool = True) -> np.ndarray:
         """Probabilities, shape (n, 3), columns in LABELS order, using self.temperature.
 
@@ -123,6 +151,29 @@ class NLIVerifier:
         probs = self.predict_proba([evidence], [claim], show_progress=False)[0]
         best = int(probs.argmax())
         return LABELS[best], float(probs[best])
+
+
+def make_passages(title: str, sentences: list[str], window: int = 3) -> list[str]:
+    """Candidate evidence passages for one paper: the full abstract plus every window of
+    `window` consecutive sentences, each prefixed with the title."""
+    title = title.strip()
+    sentences = [s.strip() for s in sentences if s.strip()]
+    full = " ".join([title, *sentences])
+    if len(sentences) <= window:
+        return [full]
+    windows = [" ".join([title, *sentences[i : i + window]]) for i in range(len(sentences) - window + 1)]
+    return [full, *windows]
+
+
+def split_sentences(text: str) -> list[str]:
+    """Simple sentence splitter for abstracts (split after . ! ? followed by a capital or digit)."""
+    import re
+
+    return [s for s in re.split(r"(?<=[.!?])\s+(?=[A-Z0-9(\[])", text.strip()) if s]
+
+
+def calibration_file(evidence: str) -> str:
+    return CALIBRATION_FILE if evidence == "abstract" else f"calibration_{evidence}.json"
 
 
 def column_order(id2label: dict) -> list[int]:

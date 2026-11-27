@@ -1,0 +1,56 @@
+{
+  "n": 340,
+  "accuracy": 0.7411764705882353,
+  "macro_precision": 0.7368074189144659,
+  "macro_recall": 0.7407317378475224,
+  "macro_f1": 0.7276142233518067,
+  "ece": 0.0857200936359518,
+  "per_label": {
+    "SUPPORTED": {
+      "precision": 0.7671232876712328,
+      "recall": 0.8115942028985508,
+      "f1": 0.7887323943661971,
+      "support": 138
+    },
+    "CONTRADICTED": {
+      "precision": 0.5463917525773195,
+      "recall": 0.7464788732394366,
+      "f1": 0.6309523809523809,
+      "support": 71
+    },
+    "INSUFFICIENT": {
+      "precision": 0.8969072164948454,
+      "recall": 0.6641221374045801,
+      "f1": 0.7631578947368421,
+      "support": 131
+    }
+  },
+  "confusion_matrix": [
+    [
+      112,
+      21,
+      5
+    ],
+    [
+      13,
+      53,
+      5
+    ],
+    [
+      21,
+      23,
+      87
+    ]
+  ],
+  "labels": [
+    "SUPPORTED",
+    "CONTRADICTED",
+    "INSUFFICIENT"
+  ],
+  "model": "models/verifier",
+  "split": "dev",
+  "evidence": "passages",
+  "temperature": 2.2229716561549986,
+  "max_length": 512,
+  "seconds": 327.3
+}

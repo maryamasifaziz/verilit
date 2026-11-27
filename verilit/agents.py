@@ -9,12 +9,15 @@ loop between the Verifier and the Retriever / Claim Generator.
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass
 from pathlib import Path
 
+import numpy as np
+
 from verilit.labels import CONTRADICTED, INSUFFICIENT, LABELS, SUPPORTED
 from verilit.llm import LLM
-from verilit.nli import CALIBRATION_FILE, NLIVerifier
+from verilit.nli import NLIVerifier, calibration_file, make_passages, softmax, split_sentences
 from verilit.retrieval import DEFAULT_EMBEDDING_MODEL, make_ranker
 from verilit.sources import Paper, PaperSearch
 
@@ -39,6 +42,7 @@ class Verdict:
     confidence: float  # calibrated probability of raw_label
     p_supported: float
     accepted: bool
+    alt_p_supported: float | None = None  # P(SUPPORTED) under the other evidence mode, for comparison
 
 
 # -- Planner -----------------------------------------------------------------
@@ -179,25 +183,57 @@ class ClaimGenerator:
 
 
 class Verifier:
-    """The fine-tuned NLI model with calibrated confidence and an acceptance threshold."""
+    """The fine-tuned NLI model with calibrated confidence and an acceptance threshold.
 
-    def __init__(self, model_path: str, threshold: float = 0.7):
-        calibrated = (Path(model_path) / CALIBRATION_FILE).exists()
-        if not calibrated:
-            print(f"  [verifier] warning: no {CALIBRATION_FILE} in {model_path}; confidence scores are uncalibrated. "
-                  "Run scripts/calibrate_verifier.py.")
-        self.nli = NLIVerifier.load(model_path, use_calibration=calibrated)
+    evidence="abstract" (default, chosen on SciFact val) scores the claim against the
+    full title + abstract; "passages" uses the best 3-sentence window. The other mode's
+    P(SUPPORTED) is also recorded (alt_p_supported) so the two can be compared against
+    human labels on the custom test set.
+    """
+
+    MODES = ("abstract", "passages")
+
+    def __init__(self, model_path: str, threshold: float = 0.7, evidence: str = "abstract",
+                 record_other_mode: bool = True):
+        if evidence not in self.MODES:
+            raise ValueError(f"evidence must be one of {self.MODES}")
+        self.nli = NLIVerifier.load(model_path)
         self.threshold = threshold
+        self.evidence = evidence
+        self.other = (set(self.MODES) - {evidence}).pop() if record_other_mode else None
+        self.temperature = {}
+        for mode in self.MODES:
+            path = Path(model_path) / calibration_file(mode)
+            if path.exists():
+                with open(path, encoding="utf-8") as fh:
+                    self.temperature[mode] = float(json.load(fh)["temperature"])
+            else:
+                self.temperature[mode] = 1.0
+                if mode == evidence:
+                    print(f"  [verifier] warning: no {path.name} in {model_path}; confidence scores are "
+                          f"uncalibrated. Run scripts/calibrate_verifier.py --evidence {mode}.")
+
+    def _probs(self, mode: str, claim: str, papers: list[Paper]) -> np.ndarray:
+        claims = [claim] * len(papers)
+        if mode == "passages":
+            passages = [make_passages(p.title, split_sentences(p.abstract)) for p in papers]
+            logits = self.nli.predict_logits_passages(passages, claims, show_progress=False)
+        else:
+            logits = self.nli.predict_logits([p.text() for p in papers], claims, show_progress=False)
+        return softmax(logits / self.temperature[mode])
 
     def run_many(self, claim: str, papers: list[Paper]) -> list[Verdict]:
-        probs = self.nli.predict_proba([p.text() for p in papers], [claim] * len(papers), show_progress=False)
+        sup = LABELS.index(SUPPORTED)
+        probs = self._probs(self.evidence, claim, papers)
+        alt = self._probs(self.other, claim, papers)[:, sup] if self.other else [None] * len(papers)
         verdicts = []
-        for row in probs:
+        for row, alt_p in zip(probs, alt):
             raw = LABELS[int(row.argmax())]
-            p_sup = float(row[LABELS.index(SUPPORTED)])
+            p_sup = float(row[sup])
             accepted = p_sup >= self.threshold
             label = SUPPORTED if accepted else (INSUFFICIENT if raw == SUPPORTED else raw)
-            verdicts.append(Verdict(label, raw, float(row.max()), p_sup, accepted))
+            verdicts.append(Verdict(label, raw, float(row.max()), p_sup, accepted,
+                                    None if alt_p is None else float(alt_p)))
         return verdicts
 
     def run(self, claim: str, paper: Paper) -> Verdict:

@@ -41,6 +41,7 @@ class Config:
     max_claims: int = 3  # per sub-question
     max_retries: int = 2  # feedback-loop attempts per claim
     threshold: float = 0.7  # accept a claim when calibrated P(SUPPORTED) >= threshold
+    evidence: str = "abstract"  # Verifier scores the full abstract, or "passages" (best 3-sentence window)
     verifier_path: str = str(ROOT / "models" / "verifier")
 
 
@@ -54,6 +55,7 @@ def _attempt(action: str, text: str | None, paper_id: str, v: Verdict | None) ->
         "confidence": round(v.confidence, 4) if v else None,
         "p_supported": round(v.p_supported, 4) if v else None,
         "accepted": v.accepted if v else False,
+        "alt_p_supported": round(v.alt_p_supported, 4) if v and v.alt_p_supported is not None else None,
     }
 
 
@@ -68,7 +70,7 @@ class VeriLit:
         self.planner = Planner(self.llm, c.max_sub_questions)
         self.retriever = Retriever(self.search, c.retriever, c.papers_per_question)
         self.generator = ClaimGenerator(self.llm, c.max_claims)
-        self.verifier = Verifier(c.verifier_path, c.threshold) if c.verify else None
+        self.verifier = Verifier(c.verifier_path, c.threshold, c.evidence) if c.verify else None
         self.synthesizer = Synthesizer(self.llm)
 
     def log(self, msg: str) -> None:

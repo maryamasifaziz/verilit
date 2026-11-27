@@ -1,0 +1,26 @@
+id,area,question
+Q01,NLP,How does retrieval-augmented generation reduce hallucination in large language models?
+Q02,NLP,What methods are used to detect hallucinations in the outputs of large language models?
+Q03,NLP,How effective is chain-of-thought prompting for multi-step reasoning in language models?
+Q04,ML,What are the trade-offs of parameter-efficient fine-tuning methods such as LoRA compared with full fine-tuning?
+Q05,ML,How does knowledge distillation compress large neural networks while preserving accuracy?
+Q06,ML,What techniques make deep neural networks robust to adversarial examples?
+Q07,ML,How is federated learning used to train models while preserving data privacy?
+Q08,AI,How do vision transformers compare with convolutional neural networks for image classification?
+Q09,AI,What are the main approaches to explaining the predictions of black-box machine learning models?
+Q10,ML,How well do graph neural networks perform on molecular property prediction?
+Q11,NLP,How are large language models evaluated for factual accuracy?
+Q12,NLP,What approaches improve neural machine translation for low-resource languages?
+Q13,NLP,How well do multilingual pretrained language models perform zero-shot cross-lingual transfer?
+Q14,NLP,What methods are used to detect machine-generated text?
+Q15,NLP,How does instruction tuning affect the zero-shot abilities of language models?
+Q16,AI,How is reinforcement learning from human feedback used to align language models and what are its limitations?
+Q17,Cybersecurity,How are machine learning models used for network intrusion detection?
+Q18,Cybersecurity,How effective are deep learning methods for malware detection?
+Q19,Cybersecurity,What are prompt injection attacks on LLM-based applications and how can they be mitigated?
+Q20,Cybersecurity,How are large language models used to find vulnerabilities in source code?
+Q21,Cybersecurity,How can machine learning detect phishing websites and emails?
+Q22,Cybersecurity,What are membership inference attacks against machine learning models and what defenses exist?
+Q23,AI,How do mixture-of-experts architectures scale language models efficiently?
+Q24,ML,What techniques such as quantization reduce the inference cost of large language models?
+Q25,NLP,How do sentiment analysis models handle sarcasm and irony?
