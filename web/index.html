@@ -1,87 +1,149 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VeriLit</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231f5f5b'/><path d='M9 16.5l4.5 4.5L23 11' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
-  <link rel="stylesheet" href="/static/app.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>VeriLit</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230e5c61'/><path d='M13.5 21.5l4 4 8-10' fill='none' stroke='white' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+<link rel="stylesheet" href="/static/app.css">
 </head>
 <body>
-  <header class="topbar">
+
+<!-- Inline icon sprite (design: Genspark) -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M6 12h12"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+  <symbol id="i-down" viewBox="0 0 24 24"><path d="M12 4v11M7 11l5 5 5-5M5 20h14"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></symbol>
+  <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2L12 3z"/><path d="M12 10v4M12 17.5h.01"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+  <symbol id="i-gap" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7.5v5M12 16h.01"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
     <div class="brand">
-      <span class="mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M9 16.5l4.5 4.5L23 11"/></svg>
-      </span>
-      <span class="wordmark">VeriLit</span>
-      <span class="tagline">literature reviews where every claim is checked</span>
+      <svg width="32" height="32" viewBox="0 0 32 32" role="img" aria-label="VeriLit logo">
+        <rect width="32" height="32" rx="8" fill="var(--accent)"/>
+        <path d="M9 8.5h9.5a2 2 0 0 1 2 2V13" fill="none" stroke="var(--on-accent)" stroke-width="1.8" stroke-linecap="round" opacity=".55"/>
+        <path d="M9 13h5M9 17.5h4" fill="none" stroke="var(--on-accent)" stroke-width="1.8" stroke-linecap="round" opacity=".55"/>
+        <path d="M13.5 21.5l4 4 8-10" fill="none" stroke="var(--on-accent)" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="brand-name">VeriLit</span>
+      <span class="brand-tag">literature reviews where every claim is checked</span>
     </div>
-    <nav class="tabs" role="tablist">
-      <button class="tab active" data-view="ask" role="tab" aria-selected="true">Ask</button>
-      <button class="tab" data-view="saved" role="tab" aria-selected="false">Saved runs</button>
+    <nav class="tabs" aria-label="Views">
+      <button type="button" class="tab" data-view="ask" aria-current="page">Ask</button>
+      <button type="button" class="tab" data-view="saved">Saved runs</button>
     </nav>
-    <div class="status" id="status"></div>
-  </header>
+    <div id="status" aria-label="System status"></div>
+  </div>
+</header>
 
-  <main>
-    <!-- Ask -->
-    <section id="view-ask" class="view">
-      <form id="ask-form" class="ask">
-        <label for="question" class="ask-label">Research question</label>
-        <div class="ask-row">
-          <input id="question" name="question" type="text" autocomplete="off" minlength="5" maxlength="500"
-                 placeholder="How does retrieval-augmented generation reduce hallucination in large language models?">
-          <button type="submit" id="run" class="primary">Run VeriLit</button>
+<main class="wrap">
+
+  <!-- Ask -->
+  <div id="view-ask" class="view">
+    <section class="card ask" aria-labelledby="ask-title">
+      <h2 id="ask-title">Ask a research question</h2>
+      <p class="lede">VeriLit plans sub-questions, retrieves papers, drafts claims and checks each one against the paper it cites.</p>
+      <form id="ask-form" autocomplete="off">
+        <label class="lbl" for="question">Research question</label>
+        <div class="qrow">
+          <input id="question" name="question" type="text" minlength="5" maxlength="500"
+                 placeholder="e.g. How does retrieval-augmented generation reduce hallucination?">
+          <button id="run" class="btn primary" type="submit">Run VeriLit <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></button>
         </div>
-        <div class="examples" id="examples"></div>
-        <details class="settings">
-          <summary>Settings</summary>
-          <div class="settings-grid">
-            <label>Accept a claim when P(supported) &ge; <output id="threshold-out">0.70</output>
-              <input type="range" id="threshold" min="0.5" max="0.95" step="0.05" value="0.7"></label>
-            <label>Retries per claim <output id="retries-out">2</output>
-              <input type="range" id="retries" min="0" max="3" step="1" value="2"></label>
-            <label>Papers per sub-question <output id="papers-out">5</output>
-              <input type="range" id="papers" min="3" max="8" step="1" value="5"></label>
-            <label>Claims per sub-question <output id="claims-out">3</output>
-              <input type="range" id="claims" min="1" max="4" step="1" value="3"></label>
-            <label>Retrieval
-              <select id="retriever"><option value="semantic">Semantic (bge-small)</option><option value="bm25">Keyword (BM25)</option></select></label>
-            <label>Verifier evidence
-              <select id="evidence"><option value="abstract">Full abstract</option><option value="passages">Best 3-sentence passage</option></select></label>
-            <label class="check"><input type="checkbox" id="compare" checked> Also run the baseline without verification (about one extra LLM request)</label>
+        <div id="examples" class="chips" role="group" aria-label="Example questions"></div>
+
+        <div class="settings">
+          <button type="button" class="disclosure" data-toggle aria-expanded="false" aria-controls="settings-panel">
+            <svg class="ic" aria-hidden="true"><use href="#i-chev"/></svg> Settings
+          </button>
+          <div id="settings-panel" class="settings-grid" hidden>
+            <div class="field">
+              <div class="field-head"><label for="threshold">Accept a claim when P(supported) &ge;</label><output id="threshold-out" for="threshold">0.70</output></div>
+              <input type="range" id="threshold" min="0.5" max="0.95" step="0.05" value="0.7">
+              <p class="help">Claims scoring below this are retried, then left Unverified.</p>
+            </div>
+            <div class="field">
+              <div class="field-head"><label for="retries">Retries per claim</label><output id="retries-out" for="retries">2</output></div>
+              <input type="range" id="retries" min="0" max="3" step="1" value="2">
+              <p class="help">Evidence searches and rewrites before giving up.</p>
+            </div>
+            <div class="field">
+              <div class="field-head"><label for="papers">Papers per sub-question</label><output id="papers-out" for="papers">5</output></div>
+              <input type="range" id="papers" min="3" max="8" step="1" value="5">
+              <p class="help">More papers widen coverage but make each request longer.</p>
+            </div>
+            <div class="field">
+              <div class="field-head"><label for="claims">Claims per sub-question</label><output id="claims-out" for="claims">3</output></div>
+              <input type="range" id="claims" min="1" max="4" step="1" value="3">
+              <p class="help">Each claim is verified separately.</p>
+            </div>
+            <div class="field">
+              <label class="lbl" for="retriever">Retrieval</label>
+              <select id="retriever"><option value="semantic" selected>Semantic (bge-small)</option><option value="bm25">Keyword (BM25)</option></select>
+            </div>
+            <div class="field">
+              <label class="lbl" for="evidence">Verifier evidence</label>
+              <select id="evidence"><option value="abstract" selected>Full abstract</option><option value="passages">Best 3-sentence passage</option></select>
+            </div>
+            <label class="check" for="compare">
+              <input type="checkbox" id="compare" checked>
+              <span>Also run the baseline without verification<small>Same question, papers and claims with no checking, for side-by-side comparison. About one extra LLM request.</small></span>
+            </label>
           </div>
-        </details>
+        </div>
       </form>
-
-      <div id="progress" class="progress" hidden>
-        <ol class="stepper" id="stepper">
-          <li data-step="planner"><span class="dot"></span>Planner</li>
-          <li data-step="retriever"><span class="dot"></span>Retriever</li>
-          <li data-step="generator"><span class="dot"></span>Claim Generator</li>
-          <li data-step="verifier"><span class="dot"></span>Verifier</li>
-          <li data-step="synthesizer"><span class="dot"></span>Synthesizer</li>
-        </ol>
-        <div class="progress-head"><span id="progress-label">Working</span><span id="progress-time"></span></div>
-        <ul class="log" id="log"></ul>
-      </div>
-      <div id="error" class="alert" role="alert" hidden></div>
     </section>
 
-    <!-- Saved runs -->
-    <section id="view-saved" class="view" hidden>
-      <div class="saved-head">
+    <section id="progress" class="card progress" aria-label="Run progress" hidden>
+      <div class="progress-head">
+        <div id="progress-label"><span class="live-dot" aria-hidden="true"></span><span id="progress-text">VeriLit is working</span></div>
+        <div id="progress-time" aria-live="off"></div>
+      </div>
+      <ol id="stepper" class="stepper">
+        <li data-step="planner"><span class="marker">1</span><span>Planner</span><span class="state">Waiting</span></li>
+        <li data-step="retriever"><span class="marker">2</span><span>Retriever</span><span class="state">Waiting</span></li>
+        <li data-step="generator"><span class="marker">3</span><span>Claim Generator</span><span class="state">Waiting</span></li>
+        <li data-step="verifier"><span class="marker">4</span><span>Verifier</span><span class="state">Waiting</span></li>
+        <li data-step="synthesizer"><span class="marker">5</span><span>Synthesizer</span><span class="state">Waiting</span></li>
+      </ol>
+      <div id="log" role="log" tabindex="0" aria-label="Run log"></div>
+    </section>
+
+    <div id="error" role="alert" hidden>
+      <svg class="ic" style="width:20px;height:20px" aria-hidden="true"><use href="#i-alert"/></svg>
+      <p><span id="error-msg"></span><span id="error-sub">Saved runs can still be opened; they do not call the API.</span></p>
+      <button type="button" class="icon-btn" id="error-dismiss" aria-label="Dismiss error"><svg class="ic" aria-hidden="true"><use href="#i-x"/></svg></button>
+    </div>
+  </div>
+
+  <!-- Saved runs -->
+  <div id="view-saved" class="view saved" hidden>
+    <div class="saved-top">
+      <div>
         <h2>Saved runs</h2>
-        <input id="filter" type="search" placeholder="Filter by question or ID">
+        <p class="hintline"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg>The test set and every question asked here. Opening a saved run calls no API.</p>
       </div>
-      <p class="hint">The 25-question test set and every question you've asked here. Opening one calls no API.</p>
-      <ul class="runlist" id="runlist"></ul>
-    </section>
+      <div class="search">
+        <label class="sr-only" for="filter">Filter saved runs</label>
+        <svg class="ic" aria-hidden="true"><use href="#i-search"/></svg>
+        <input id="filter" type="search" placeholder="Filter by question or tag">
+      </div>
+    </div>
+    <ul id="runlist"></ul>
+  </div>
 
-    <!-- Result (shared by both views) -->
-    <section id="result" class="result" hidden></section>
-  </main>
+  <!-- Result (shared by both views) -->
+  <section id="result" aria-labelledby="result-title" hidden></section>
+</main>
 
-  <script src="/static/app.js"></script>
+<script src="/static/app.js"></script>
 </body>
 </html>
