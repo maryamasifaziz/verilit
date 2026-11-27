@@ -19,6 +19,8 @@ dependencies = [
     "tqdm",
     "sentence-transformers",  # semantic retrieval
     "rank-bm25",              # keyword retrieval baseline
+    "openai",                 # client for Gemini / Groq (OpenAI-compatible APIs)
+    "httpx",                  # Semantic Scholar and arXiv requests
 ]
 
 [tool.setuptools.packages.find]

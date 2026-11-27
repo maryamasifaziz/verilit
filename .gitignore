@@ -9,6 +9,7 @@ venv/
 data/
 models/
 cache/
+runs/
 
 # Per-example predictions are large; metrics.json files are kept
 results/**/predictions.jsonl

@@ -134,6 +134,51 @@ On a 4-core CPU, BM25 takes about 3 s and semantic search about 6 minutes (almos
 embedding the 5,183 abstracts once). In the pipeline it only embeds a few dozen candidates
 per sub-question, which takes a second or two.
 
+## Running VeriLit
+
+The Planner, Claim Generator and Synthesizer use a free-tier LLM through its
+OpenAI-compatible API. Set your key first (PowerShell; `setx` keeps it for new terminals):
+
+```powershell
+$env:GEMINI_API_KEY = "your-key"      # this terminal only
+setx GEMINI_API_KEY "your-key"        # permanently (open a new terminal afterwards)
+```
+
+Then ask a question:
+
+```bash
+python scripts/run_pipeline.py "How does retrieval-augmented generation reduce hallucination in large language models?"
+python scripts/run_pipeline.py "..." --no-verify        # the no-verification baseline
+```
+
+Each run writes `runs/<time>-<question>-<mode>.md` (the report: review, references, a table
+of every claim with its verdict, confidence and retries, unverified claims, evidence gaps) and
+a `.json` with everything, including every attempt of every claim. It needs the fine-tuned
+Verifier in `models/verifier/` (with `calibration.json`), except with `--no-verify`.
+
+| Setting | What it does |
+|---|---|
+| `VERILIT_LLM=groq` + `GROQ_API_KEY` | use Groq instead of Gemini (e.g. when Gemini's daily quota runs out) |
+| `VERILIT_LLM_MODEL` | override the model (default `gemini-3.5-flash-lite`, Groq `llama-3.1-8b-instant`) |
+| `S2_API_KEY` | your Semantic Scholar key; without it Semantic Scholar often refuses (429) and VeriLit uses arXiv only for 10 minutes at a time |
+| `--retriever bm25` | keyword ranking instead of semantic |
+| `--threshold 0.7` | accept a claim when its calibrated P(SUPPORTED) is at least this |
+| `--max-retries 2`, `--papers 5`, `--max-claims 3` | feedback-loop attempts per claim, papers per sub-question, claims per sub-question |
+
+**Free-tier budget.** A question takes about 7 LLM requests (plan, one claim set per
+sub-question, the review, plus a revision per retried claim), roughly 30–60 seconds.
+Every LLM reply and search result is cached in `cache/`, so re-running a question, or running
+the baseline after VeriLit, only sends the requests that changed (the baseline needs one, for
+its review). Delete `cache/` to start fresh. The Groq preset has not been tested yet.
+
+**Feedback loop.** A claim the Verifier does not accept (calibrated P(SUPPORTED) below the
+threshold) is retried up to `--max-retries` times: if the cited abstract gives insufficient
+evidence, VeriLit first searches for the claim itself and checks it against the best new
+papers (switching papers only if one supports it better); a contradicted claim, or one still
+unsupported, is rewritten by the LLM to say only what the abstract states. Claims still not
+accepted are listed as unverified and left out of the review. Reference numbers are assigned
+by the code, not the LLM, and the report warns if the review cites a number that doesn't exist.
+
 ## Repository layout
 
 ```
@@ -143,6 +188,11 @@ verilit/              Python package
   metrics.py          accuracy, macro P/R/F1, confusion matrix, calibration error (ECE)
   retrieval.py        SemanticRanker and BM25Ranker
   scifact.py          reading the SciFact files
+  llm.py              LLM client (Gemini / Groq presets, rate limiting, retries, caching)
+  sources.py          Semantic Scholar and arXiv search
+  agents.py           Planner, Retriever, Claim Generator, Verifier, Synthesizer
+  pipeline.py         runs the agents with the feedback loop; to_markdown() renders the report
+  cache.py            on-disk cache for API responses
 scripts/
   download_scifact.py
   prepare_scifact.py
@@ -150,15 +200,16 @@ scripts/
   finetune_verifier.py
   calibrate_verifier.py
   eval_retrieval.py
+  run_pipeline.py     run VeriLit on one question
 results/              metrics, training log, calibration, retrieval (predictions.jsonl is git-ignored)
 data/, models/        git-ignored; re-create with the scripts above
+runs/, cache/         git-ignored; pipeline outputs and cached API responses
 ```
 
 Planned additions:
 
 | Where | What |
 |---|---|
-| `verilit/agents/` | Planner, Retriever, Claim Generator, Synthesizer, plus the feedback loop |
 | `app.py` | the demo UI |
 | `eval/` | custom test questions, hand labels and the full-system evaluation |
 
