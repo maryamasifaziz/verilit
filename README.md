@@ -110,6 +110,30 @@ threshold (`val` has only 47 SUPPORTED pairs, so treat these numbers as rough gu
 Each record also keeps the gold rationale sentences, which the retrieval Recall@k
 evaluation uses.
 
+## Retriever
+
+```bash
+python scripts/eval_retrieval.py
+```
+
+`verilit/retrieval.py` has two rankers with the same interface: `SemanticRanker` (embedding
+search with `BAAI/bge-small-en-v1.5`, cosine similarity) and `BM25Ranker` (keyword search,
+the baseline). The Retriever agent uses them to pick the most relevant abstracts for each
+sub-question from the candidates Semantic Scholar and arXiv return.
+
+The evaluation searches all 5,183 SciFact abstracts with each dev claim that has evidence
+(188 claims, 209 gold abstracts). Recall@k is the share of gold evidence abstracts in the top
+k; Hit@k is the share of claims with at least one in the top k.
+
+| SciFact dev | R@1 | R@3 | R@5 | R@10 | R@20 | Hit@5 | Hit@10 |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Keyword (BM25) | 0.656 | 0.785 | 0.828 | 0.909 | 0.923 | 0.883 | 0.952 |
+| Semantic (bge-small-en-v1.5) | **0.699** | **0.833** | **0.866** | **0.943** | **0.967** | **0.910** | **0.968** |
+
+On a 4-core CPU, BM25 takes about 3 s and semantic search about 6 minutes (almost all of it
+embedding the 5,183 abstracts once). In the pipeline it only embeds a few dozen candidates
+per sub-question, which takes a second or two.
+
 ## Repository layout
 
 ```
@@ -117,13 +141,16 @@ verilit/              Python package
   labels.py           the three verdict labels and their mappings (shared by everything)
   nli.py              NLIVerifier: loads any NLI model, returns probabilities in label order
   metrics.py          accuracy, macro P/R/F1, confusion matrix, calibration error (ECE)
+  retrieval.py        SemanticRanker and BM25Ranker
+  scifact.py          reading the SciFact files
 scripts/
   download_scifact.py
   prepare_scifact.py
   eval_verifier.py
   finetune_verifier.py
   calibrate_verifier.py
-results/              metrics.json per run, training log, calibration (predictions.jsonl is git-ignored)
+  eval_retrieval.py
+results/              metrics, training log, calibration, retrieval (predictions.jsonl is git-ignored)
 data/, models/        git-ignored; re-create with the scripts above
 ```
 
@@ -131,7 +158,6 @@ Planned additions:
 
 | Where | What |
 |---|---|
-| `scripts/eval_retrieval.py` | Recall@k on SciFact, semantic vs. keyword (BM25) search |
 | `verilit/agents/` | Planner, Retriever, Claim Generator, Synthesizer, plus the feedback loop |
 | `app.py` | the demo UI |
 | `eval/` | custom test questions, hand labels and the full-system evaluation |

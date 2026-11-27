@@ -17,6 +17,8 @@ dependencies = [
     "scikit-learn",
     "scipy",
     "tqdm",
+    "sentence-transformers",  # semantic retrieval
+    "rank-bm25",              # keyword retrieval baseline
 ]
 
 [tool.setuptools.packages.find]

@@ -35,23 +35,9 @@ from collections import Counter
 from pathlib import Path
 
 from verilit.labels import INSUFFICIENT, LABELS, SCIFACT_TO_LABEL
+from verilit.scifact import evidence_text, read_jsonl, write_jsonl
 
 ROOT = Path(__file__).resolve().parents[1]
-
-
-def read_jsonl(path: Path) -> list[dict]:
-    with open(path, encoding="utf-8") as fh:
-        return [json.loads(line) for line in fh if line.strip()]
-
-
-def write_jsonl(path: Path, rows: list[dict]) -> None:
-    with open(path, "w", encoding="utf-8") as fh:
-        for row in rows:
-            fh.write(json.dumps(row, ensure_ascii=False) + "\n")
-
-
-def evidence_text(doc: dict) -> str:
-    return " ".join([doc["title"].strip(), *[s.strip() for s in doc["abstract"]]])
 
 
 def make_pairs(claims: list[dict], corpus: dict[int, dict]) -> list[dict]:
