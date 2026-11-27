@@ -82,6 +82,7 @@ class PaperSearch:
         # spending a minute of retries on every query.
         self._s2_paused_until = 0.0
         self._last_failure_status: int | None = None
+        self._s2_failures_in_a_row = 0
 
     def search(self, query: str, s2_limit: int = 20, arxiv_limit: int = 10) -> list[Paper]:
         """Papers for a query from both sources, without duplicates or papers lacking an abstract."""
@@ -132,7 +133,7 @@ class PaperSearch:
                 status, detail = r.status_code, r.text[:200]
                 if status not in (429, 500, 502, 503, 504):
                     break
-            delay = min(30, 2 * 2**attempt)
+            delay = min(30, 3 * 2**attempt)
             if self.verbose:
                 print(f"  [{source}] {status or 'error'}; retrying in {delay}s ({attempt + 1}/{attempts})")
             time.sleep(delay)
@@ -143,16 +144,19 @@ class PaperSearch:
 
     def _search_s2(self, query: str, limit: int) -> list[Paper] | None:
         headers = {"x-api-key": self.s2_key} if self.s2_key else None
-        # Without a key the shared public limit is usually exhausted, so retry less.
-        attempts = 5 if self.s2_key else 3
-        r = self._get("s2", S2_URL, {"query": query, "limit": limit, "fields": S2_FIELDS}, headers, 1.1, attempts)
+        # Semantic Scholar often answers 429 even well under its limit, so space requests
+        # out and retry patiently; pause it only after two queries in a row fail.
+        r = self._get("s2", S2_URL, {"query": query, "limit": limit, "fields": S2_FIELDS}, headers, 1.5, 6)
         if r is None:
-            if self._last_failure_status == 429:
+            self._s2_failures_in_a_row += 1
+            if self._last_failure_status == 429 and self._s2_failures_in_a_row >= 2:
                 self._s2_paused_until = time.time() + 600
+                self._s2_failures_in_a_row = 0
                 if self.verbose:
-                    print("  [s2] rate-limited; skipping Semantic Scholar for 10 minutes (arXiv only)."
+                    print("  [s2] rate-limited twice in a row; skipping Semantic Scholar for 10 minutes (arXiv only)."
                           + ("" if self.s2_key else " Set S2_API_KEY to avoid this."))
             return None
+        self._s2_failures_in_a_row = 0
         papers = []
         for d in r.json().get("data") or []:
             ext = d.get("externalIds") or {}
