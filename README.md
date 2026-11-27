@@ -277,6 +277,11 @@ Planned additions:
 | Fine-tuned + calibrated (T = 1.908) | 0.756 | 0.738 | 0.062 |
 | Fine-tuned + calibrated, best passage (T = 2.223) | 0.741 | 0.728 | 0.086 |
 
+A second training run with the same code and settings on a Colab T4 GPU (about 50 s per
+epoch) gave accuracy 0.744, macro-F1 0.721, ECE 0.184 uncalibrated and 0.067 calibrated
+(T = 1.983), best epoch 5 again: run-to-run variation of about 0.02 macro-F1. The table above,
+the custom test set and the reported numbers all use the first (CPU) run's model.
+
 SciFact dev split, 340 pairs. The fine-tuned rows come from a CPU run with the default
 settings (seed 42); a GPU run gives slightly different numbers. During training, val ECE rose
 from 0.065 after epoch 1 to 0.148 after epoch 5 (the model gets more over-confident as it
