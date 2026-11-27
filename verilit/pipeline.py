@@ -74,6 +74,19 @@ class VeriLit:
         self.verifier = Verifier(c.verifier_path, c.threshold, c.evidence) if c.verify else None
         self.synthesizer = Synthesizer(self.llm)
 
+    def reconfigure(self, config: Config) -> None:
+        """Apply new per-run settings without reloading any model (used by the demo server)."""
+        if config.verify != (self.verifier is not None) or config.verifier_path != self.config.verifier_path:
+            raise ValueError("reconfigure can't switch verification on/off or change the Verifier; make a new VeriLit")
+        self.config = config
+        self.planner.max_sub_questions = config.max_sub_questions
+        self.retriever.method = config.retriever
+        self.retriever.k = config.papers_per_question
+        self.generator.max_claims = config.max_claims
+        if self.verifier is not None:
+            self.verifier.threshold = config.threshold
+            self.verifier.set_evidence(config.evidence)
+
     def log(self, msg: str) -> None:
         if self.verbose:
             self.log_fn(msg)

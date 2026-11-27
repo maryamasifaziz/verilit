@@ -89,13 +89,18 @@ class Retriever:
         self.search = search
         self.method = method
         self.k = k
-        # Load the embedding model once; BM25 is rebuilt for each candidate set.
-        self._semantic = make_ranker("semantic", model_name=embedding_model) if method == "semantic" else None
+        self.embedding_model = embedding_model
+        self._semantic = None  # the embedding model, loaded once on first use; BM25 is rebuilt per candidate set
 
     def rank(self, query: str, papers: list[Paper], k: int) -> list[Paper]:
         if not papers:
             return []
-        ranker = self._semantic if self._semantic is not None else make_ranker("bm25")
+        if self.method == "semantic":
+            if self._semantic is None:
+                self._semantic = make_ranker("semantic", model_name=self.embedding_model)
+            ranker = self._semantic
+        else:
+            ranker = make_ranker("bm25")
         ranker.fit([p.text() for p in papers])
         return [papers[i] for i, _ in ranker.search([query], k)[0]]
 
@@ -228,6 +233,14 @@ class Verifier:
                 if mode == evidence:
                     print(f"  [verifier] warning: no {path.name} in {model_path}; confidence scores are "
                           f"uncalibrated. Run scripts/calibrate_verifier.py --evidence {mode}.")
+
+    def set_evidence(self, evidence: str) -> None:
+        """Switch between full-abstract and best-passage scoring without reloading the model."""
+        if evidence not in self.MODES:
+            raise ValueError(f"evidence must be one of {self.MODES}")
+        record_other = self.other is not None
+        self.evidence = evidence
+        self.other = (set(self.MODES) - {evidence}).pop() if record_other else None
 
     def _probs(self, mode: str, claim: str, papers: list[Paper]) -> np.ndarray:
         claims = [claim] * len(papers)

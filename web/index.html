@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VeriLit</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231f5f5b'/><path d='M9 16.5l4.5 4.5L23 11' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+  <link rel="stylesheet" href="/static/app.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 32 32"><rect width="32" height="32" rx="8"/><path d="M9 16.5l4.5 4.5L23 11"/></svg>
+      </span>
+      <span class="wordmark">VeriLit</span>
+      <span class="tagline">literature reviews where every claim is checked</span>
+    </div>
+    <nav class="tabs" role="tablist">
+      <button class="tab active" data-view="ask" role="tab" aria-selected="true">Ask</button>
+      <button class="tab" data-view="saved" role="tab" aria-selected="false">Saved runs</button>
+    </nav>
+    <div class="status" id="status"></div>
+  </header>
+
+  <main>
+    <!-- Ask -->
+    <section id="view-ask" class="view">
+      <form id="ask-form" class="ask">
+        <label for="question" class="ask-label">Research question</label>
+        <div class="ask-row">
+          <input id="question" name="question" type="text" autocomplete="off" minlength="5" maxlength="500"
+                 placeholder="How does retrieval-augmented generation reduce hallucination in large language models?">
+          <button type="submit" id="run" class="primary">Run VeriLit</button>
+        </div>
+        <div class="examples" id="examples"></div>
+        <details class="settings">
+          <summary>Settings</summary>
+          <div class="settings-grid">
+            <label>Accept a claim when P(supported) &ge; <output id="threshold-out">0.70</output>
+              <input type="range" id="threshold" min="0.5" max="0.95" step="0.05" value="0.7"></label>
+            <label>Retries per claim <output id="retries-out">2</output>
+              <input type="range" id="retries" min="0" max="3" step="1" value="2"></label>
+            <label>Papers per sub-question <output id="papers-out">5</output>
+              <input type="range" id="papers" min="3" max="8" step="1" value="5"></label>
+            <label>Claims per sub-question <output id="claims-out">3</output>
+              <input type="range" id="claims" min="1" max="4" step="1" value="3"></label>
+            <label>Retrieval
+              <select id="retriever"><option value="semantic">Semantic (bge-small)</option><option value="bm25">Keyword (BM25)</option></select></label>
+            <label>Verifier evidence
+              <select id="evidence"><option value="abstract">Full abstract</option><option value="passages">Best 3-sentence passage</option></select></label>
+            <label class="check"><input type="checkbox" id="compare" checked> Also run the baseline without verification (about one extra LLM request)</label>
+          </div>
+        </details>
+      </form>
+
+      <div id="progress" class="progress" hidden>
+        <ol class="stepper" id="stepper">
+          <li data-step="planner"><span class="dot"></span>Planner</li>
+          <li data-step="retriever"><span class="dot"></span>Retriever</li>
+          <li data-step="generator"><span class="dot"></span>Claim Generator</li>
+          <li data-step="verifier"><span class="dot"></span>Verifier</li>
+          <li data-step="synthesizer"><span class="dot"></span>Synthesizer</li>
+        </ol>
+        <div class="progress-head"><span id="progress-label">Working</span><span id="progress-time"></span></div>
+        <ul class="log" id="log"></ul>
+      </div>
+      <div id="error" class="alert" role="alert" hidden></div>
+    </section>
+
+    <!-- Saved runs -->
+    <section id="view-saved" class="view" hidden>
+      <div class="saved-head">
+        <h2>Saved runs</h2>
+        <input id="filter" type="search" placeholder="Filter by question or ID">
+      </div>
+      <p class="hint">The 25-question test set and every question you've asked here. Opening one calls no API.</p>
+      <ul class="runlist" id="runlist"></ul>
+    </section>
+
+    <!-- Result (shared by both views) -->
+    <section id="result" class="result" hidden></section>
+  </main>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

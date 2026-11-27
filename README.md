@@ -207,17 +207,26 @@ by the code, not the LLM, and the report warns if the review cites a number that
 ## Demo
 
 ```bash
-streamlit run app.py
+python app.py
 ```
 
-Opens VeriLit in your browser. **Ask a question** runs the agents live (progress shown as
-they work) and shows the review, references, evidence gaps and every claim with its verdict,
-confidence and a "How it was verified" trail (each check, re-retrieval and revision). With
-"Also show the baseline" on, a second tab shows the no-verification baseline for the same
-question; it costs about one extra LLM request, since everything else is cached. The sidebar
-sets the threshold, retries, papers and claims per sub-question, retrieval and evidence mode.
-**Browse saved runs** shows any run in `eval/runs/` or `runs/` without calling an API, which is
-handy for a presentation. Reports can be downloaded as Markdown or JSON.
+Opens VeriLit in your browser at http://127.0.0.1:8000 (`--port` to change it, `--no-browser`
+to skip opening it).
+
+- **Ask** runs the agents live: a tracker shows which agent is working (Planner → Retriever →
+  Claim Generator → Verifier → Synthesizer) with the log beneath it. The result shows the review
+  set like a paper, with citation chips (hover for the reference, click to jump to it), the
+  references, evidence gaps, and a card per claim: its verdict, a confidence bar with the
+  acceptance threshold marked, and a "How it was verified" trail of every check, re-retrieval and
+  revision. With "Also run the baseline" on, a VeriLit / Baseline switch shows the
+  no-verification version of the same question (about one extra LLM request, the rest is
+  cached). Settings: threshold, retries, papers and claims per sub-question, retrieval method
+  and Verifier evidence mode. Every run is saved to `runs/`.
+- **Saved runs** lists the custom test set and everything asked so far, searchable, and opens
+  them without calling any API, which is handy for a presentation.
+- Reports download as Markdown or JSON. Light and dark mode follow the system setting.
+
+The page is plain HTML, CSS and JavaScript in `web/`, served by a small FastAPI app.
 
 ## Custom test set
 
@@ -269,7 +278,7 @@ scripts/
   calibrate_verifier.py
   eval_retrieval.py
   run_pipeline.py     run VeriLit on one question
-app.py                the demo UI (streamlit run app.py)
+app.py                the demo server (python app.py); the page itself is in web/
   run_eval_set.py     run the custom test set and build the labeling sheets
   score_eval.py       score the custom test set from the hand labels
 eval/                 questions.csv, LABELING.md, runs/ (one record per question), labels/
