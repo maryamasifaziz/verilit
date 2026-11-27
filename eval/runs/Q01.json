@@ -1,0 +1,634 @@
+{
+  "question": "How does retrieval-augmented generation reduce hallucination in large language models?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What core mechanisms and architectures are used in retrieval-augmented generation to integrate external knowledge?",
+      "search_query": "retrieval augmented generation architecture mechanisms",
+      "paper_ids": [
+        "s2:cb65f8990e502c3045039009de3d6d0340ed3a9f",
+        "arxiv:2603.07379",
+        "s2:6ad26ff4177e57d962d32fd4de2ce957600c64bb",
+        "s2:c5a71a239d364db134597496778e6878723e7c76",
+        "arxiv:2604.07590"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What specific methodologies and benchmarks are used to measure hallucination reduction in large language models?",
+      "search_query": "measuring hallucination reduction benchmarks large language models",
+      "paper_ids": [
+        "s2:bc3261790f721c84054a657a4ef0b82389bbd067",
+        "arxiv:2505.24007",
+        "s2:e33fceb7cfb825ae3c530de0bf093769169039fc",
+        "s2:12fe49b9e945bc60fdbd7a6b4fe220acc7a68070",
+        "s2:c2f3d3e847faf3a8448eabb5bd5fdb6bebbc3a05"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "How do retrieved context relevance and quality directly impact the factual accuracy of generated outputs?",
+      "search_query": "retrieved context quality factual accuracy generation",
+      "paper_ids": [
+        "s2:fd06e315159814684e224651e510af1db7482d9a",
+        "s2:37216acd9b22c14dedffebedf12a2c5e02378a25",
+        "arxiv:2608.25717",
+        "s2:4e0a7b531728d3baaceec7c96245f1badce52fd6",
+        "s2:464245df1476a3405875ee2d57097ff48ef0586c"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations, failure modes, and computational challenges of retrieval-augmented generation systems?",
+      "search_query": "limitations failure modes retrieval augmented generation",
+      "paper_ids": [
+        "s2:ba454ba8c594dfb86c25dff2e265c8a2686aa037",
+        "s2:7477bccbe3683c49a9d6c50f901569d87ca07ce5",
+        "s2:4be2d578df9c71a9daa6f34d039bc31ed5da35b5",
+        "s2:a5bd4caad976c6fe2f7f68f993a9f47711c5ade0",
+        "s2:26422d9529e00d131fbd849ec9ae6dd42faa9662"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study proposes a decentralized software architecture for retrieval-augmented generation where retrieval, augmentation, and generation components are operated independently by distributed entities through an External Retrieval Interface protocol.",
+        "paper_id": "s2:cb65f8990e502c3045039009de3d6d0340ed3a9f"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study proposes a decentralized software architecture for retrieval-augmented generation where retrieval, augmentation, and generation components are operated independently by distributed entities through an External Retrieval Interface protocol.",
+          "paper_id": "s2:cb65f8990e502c3045039009de3d6d0340ed3a9f",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8441,
+          "p_supported": 0.8441,
+          "accepted": true,
+          "alt_p_supported": 0.7947
+        }
+      ],
+      "final": {
+        "text": "One study proposes a decentralized software architecture for retrieval-augmented generation where retrieval, augmentation, and generation components are operated independently by distributed entities through an External Retrieval Interface protocol.",
+        "paper_id": "s2:cb65f8990e502c3045039009de3d6d0340ed3a9f",
+        "label": "SUPPORTED",
+        "confidence": 0.8441
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "The DCD (Domain-Collection-Document) domain-oriented design structures knowledge and controls query processing in retrieval-augmented generation systems through hierarchical decomposition, multi-stage routing, smart chunking, and hybrid retrieval.",
+        "paper_id": "arxiv:2604.07590"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The DCD (Domain-Collection-Document) domain-oriented design structures knowledge and controls query processing in retrieval-augmented generation systems through hierarchical decomposition, multi-stage routing, smart chunking, and hybrid retrieval.",
+          "paper_id": "arxiv:2604.07590",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9528,
+          "p_supported": 0.9528,
+          "accepted": true,
+          "alt_p_supported": 0.9211
+        }
+      ],
+      "final": {
+        "text": "The DCD (Domain-Collection-Document) domain-oriented design structures knowledge and controls query processing in retrieval-augmented generation systems through hierarchical decomposition, multi-stage routing, smart chunking, and hybrid retrieval.",
+        "paper_id": "arxiv:2604.07590",
+        "label": "SUPPORTED",
+        "confidence": 0.9528
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "An ensemble-based preprocessing framework achieves a 44.3% reduction in hallucination rates on the HaloQuest dataset, as measured by Natural Language Inference scores using SelfCheckGPT.",
+        "paper_id": "arxiv:2505.24007"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "An ensemble-based preprocessing framework achieves a 44.3% reduction in hallucination rates on the HaloQuest dataset, as measured by Natural Language Inference scores using SelfCheckGPT.",
+          "paper_id": "arxiv:2505.24007",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9373,
+          "p_supported": 0.9373,
+          "accepted": true,
+          "alt_p_supported": 0.9123
+        }
+      ],
+      "final": {
+        "text": "An ensemble-based preprocessing framework achieves a 44.3% reduction in hallucination rates on the HaloQuest dataset, as measured by Natural Language Inference scores using SelfCheckGPT.",
+        "paper_id": "arxiv:2505.24007",
+        "label": "SUPPORTED",
+        "confidence": 0.9373
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S3",
+      "original": {
+        "text": "Poor-quality retrieved contexts containing irrelevant or noisy information compromise the effectiveness of Retrieval-Augmented Generation in addressing large language model hallucinations.",
+        "paper_id": "s2:fd06e315159814684e224651e510af1db7482d9a"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Poor-quality retrieved contexts containing irrelevant or noisy information compromise the effectiveness of Retrieval-Augmented Generation in addressing large language model hallucinations.",
+          "paper_id": "s2:fd06e315159814684e224651e510af1db7482d9a",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.927,
+          "p_supported": 0.927,
+          "accepted": true,
+          "alt_p_supported": 0.925
+        }
+      ],
+      "final": {
+        "text": "Poor-quality retrieved contexts containing irrelevant or noisy information compromise the effectiveness of Retrieval-Augmented Generation in addressing large language model hallucinations.",
+        "paper_id": "s2:fd06e315159814684e224651e510af1db7482d9a",
+        "label": "SUPPORTED",
+        "confidence": 0.927
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "Under misleading context conditions in Retrieval-Augmented Generation, models frequently copy incorrect information, which directly impacts factual accuracy.",
+        "paper_id": "arxiv:2608.25717"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Under misleading context conditions in Retrieval-Augmented Generation, models frequently copy incorrect information, which directly impacts factual accuracy.",
+          "paper_id": "arxiv:2608.25717",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9283,
+          "p_supported": 0.9283,
+          "accepted": true,
+          "alt_p_supported": 0.8936
+        }
+      ],
+      "final": {
+        "text": "Under misleading context conditions in Retrieval-Augmented Generation, models frequently copy incorrect information, which directly impacts factual accuracy.",
+        "paper_id": "arxiv:2608.25717",
+        "label": "SUPPORTED",
+        "confidence": 0.9283
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S4",
+      "original": {
+        "text": "RAG systems suffer from limitations inherent to information retrieval systems and from reliance on LLMs, presenting 7 failure points across case studies in research, education, and biomedical domains.",
+        "paper_id": "s2:ba454ba8c594dfb86c25dff2e265c8a2686aa037"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "RAG systems suffer from limitations inherent to information retrieval systems and from reliance on LLMs, presenting 7 failure points across case studies in research, education, and biomedical domains.",
+          "paper_id": "s2:ba454ba8c594dfb86c25dff2e265c8a2686aa037",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9401,
+          "p_supported": 0.9401,
+          "accepted": true,
+          "alt_p_supported": 0.9213
+        }
+      ],
+      "final": {
+        "text": "RAG systems suffer from limitations inherent to information retrieval systems and from reliance on LLMs, presenting 7 failure points across case studies in research, education, and biomedical domains.",
+        "paper_id": "s2:ba454ba8c594dfb86c25dff2e265c8a2686aa037",
+        "label": "SUPPORTED",
+        "confidence": 0.9401
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "In Corrective Retrieval Augmented Generation (CRAG), an explainability analysis reveals key failure modes including domain transfer limitations on science questions.",
+        "paper_id": "s2:4be2d578df9c71a9daa6f34d039bc31ed5da35b5"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "In Corrective Retrieval Augmented Generation (CRAG), an explainability analysis reveals key failure modes including domain transfer limitations on science questions.",
+          "paper_id": "s2:4be2d578df9c71a9daa6f34d039bc31ed5da35b5",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9521,
+          "p_supported": 0.9521,
+          "accepted": true,
+          "alt_p_supported": 0.9094
+        }
+      ],
+      "final": {
+        "text": "In Corrective Retrieval Augmented Generation (CRAG), an explainability analysis reveals key failure modes including domain transfer limitations on science questions.",
+        "paper_id": "s2:4be2d578df9c71a9daa6f34d039bc31ed5da35b5",
+        "label": "SUPPORTED",
+        "confidence": 0.9521
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:cb65f8990e502c3045039009de3d6d0340ed3a9f",
+      "citation": "Tobias Hecking, Thorsten Sommer, M. Felderer (2025). An Architecture and Protocol for Decentralized Retrieval Augmented Generation. 2025 IEEE 22nd International Conference on Software Architecture Companion (ICSA-C). https://doi.org/10.1109/ICSA-C65153.2025.00012"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:2604.07590",
+      "citation": "Valerii Kovalskii, Nikita Belov, Nikita Miteyko et al. (2026). DCD: Domain-Oriented Design for Controlled Retrieval-Augmented Generation. arXiv. https://arxiv.org/abs/2604.07590"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2505.24007",
+      "citation": "Nokimul Hasan Arif, Shadman Rabby, Md Hefzul Hossain Papon et al. (2025). Preemptive Hallucination Reduction: An Input-Level Approach for Multimodal Language Model. arXiv. https://arxiv.org/abs/2505.24007"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:fd06e315159814684e224651e510af1db7482d9a",
+      "citation": "Jia-Le Deng, Yan-Yan Shen, Ziyuan Pei et al. (2025). Influence Guided Context Selection for Effective Retrieval-Augmented Generation. Neural Information Processing Systems. https://doi.org/10.48550/arXiv.2509.21359"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2608.25717",
+      "citation": "Abhinav Havaldar, Enrico Santus (2026). When RAG Fails to Equalize: Geo-bias in Factual Question Answering over Public Companies. arXiv. https://arxiv.org/abs/2608.25717"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:ba454ba8c594dfb86c25dff2e265c8a2686aa037",
+      "citation": "S. Barnett, Stefanus Kurniawan, Srikanth Thudumu et al. (2024). Seven Failure Points When Engineering a Retrieval Augmented Generation System. 2024 IEEE/ACM 3rd International Conference on AI Engineering – Software Engineering for AI (CAIN). https://doi.org/10.1145/3644815.3644945"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:4be2d578df9c71a9daa6f34d039bc31ed5da35b5",
+      "citation": "Surya Vardhan Yalavarthi (2026). Open-Source Reproduction and Explainability Analysis of Corrective Retrieval Augmented Generation. arXiv.org. https://doi.org/10.48550/arXiv.2603.16169"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Retrieval-augmented generation (RAG) integrates external knowledge through various mechanisms and architectures. One study proposes a decentralized software architecture where the retrieval, augmentation, and generation components are operated independently by distributed entities via an External Retrieval Interface protocol [1]. Additionally, the Domain-Collection-Document (DCD) domain-oriented design structures knowledge and controls query processing through hierarchical decomposition, multi-stage routing, smart chunking, and hybrid retrieval [2]. \n\nTo measure hallucination reduction, an ensemble-based preprocessing framework achieves a 44.3% reduction in hallucination rates on the HaloQuest dataset, which is measured by Natural Language Inference scores using SelfCheckGPT [3]. However, the factual accuracy of generated outputs is directly impacted by the relevance and quality of the retrieved context. Poor-quality retrieved contexts containing irrelevant or noisy information compromise the effectiveness of RAG in addressing large language model hallucinations [4]. Furthermore, under misleading context conditions, models frequently copy incorrect information, which directly impacts factual accuracy [5]. \n\nDespite these methods, RAG systems face several limitations, failure modes, and computational challenges. They suffer from limitations inherent to information retrieval systems and reliance on large language models, presenting seven failure points across case studies in research, education, and biomedical domains [6]. Moreover, in Corrective Retrieval Augmented Generation (CRAG), an explainability analysis reveals key failure modes, including domain transfer limitations on science questions [7].",
+  "stats": {
+    "claims": 7,
+    "verified": 7,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 7,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 0,
+      "arxiv": 0
+    },
+    "seconds": 25.7
+  },
+  "papers": {
+    "s2:cb65f8990e502c3045039009de3d6d0340ed3a9f": {
+      "paper_id": "s2:cb65f8990e502c3045039009de3d6d0340ed3a9f",
+      "title": "An Architecture and Protocol for Decentralized Retrieval Augmented Generation",
+      "abstract": "Retrieval-augmented generation (RAG) has become a widely adopted approach for the integration of knowledge bases and large language models (LLMs). This paper proposes a decentralized software architecture for RAG, where retrieval, augmentation, and generation components are operated independently by distributed entities. This approach addresses challenges like efficient usage of resources when building LLM-based software systems as well as data protection issues in centralized systems. By allowing data providers to implement their own retrieval mechanisms, they fully retain control over data access and the flexibility to use their own data infrastructure. An interaction platform implements communication between client applications, data providers, and model providers. To standardize this process, the paper introduces introduces an architecture and protocol called External Retrieval Interface (ERI), which ensures compatibility of services, enforces data restrictions, and simplifies the development of decentralized RAG systems.",
+      "year": 2025,
+      "authors": [
+        "Tobias Hecking",
+        "Thorsten Sommer",
+        "M. Felderer"
+      ],
+      "url": "https://doi.org/10.1109/ICSA-C65153.2025.00012",
+      "venue": "2025 IEEE 22nd International Conference on Software Architecture Companion (ICSA-C)",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2603.07379": {
+      "paper_id": "arxiv:2603.07379",
+      "title": "SoK: Agentic Retrieval-Augmented Generation (RAG): Taxonomy, Architectures, Evaluation, and Research Directions",
+      "abstract": "Retrieval-Augmented Generation (RAG) systems are increasingly evolving into agentic architectures where large language models autonomously coordinate multi-step reasoning, dynamic memory management, and iterative retrieval strategies. Despite rapid industrial adoption, current research lacks a systematic understanding of Agentic RAG as a sequential decision-making system, leading to highly fragmented architectures, inconsistent evaluation methodologies, and unresolved reliability risks. This Systematization of Knowledge (SoK) paper provides the first unified framework for understanding these autonomous systems. We formalize agentic retrieval-generation loops as finite-horizon partially observable Markov decision processes, explicitly modeling their control policies and state transitions. Building upon this formalization, we develop a comprehensive taxonomy and modular architectural decomposition that categorizes systems by their planning mechanisms, retrieval orchestration, memory paradigms, and tool-invocation behaviors. We further analyze the critical limitations of traditional static evaluation practices and identify severe systemic risks inherent to autonomous loops, including compounding hallucination propagation, memory poisoning, retrieval misalignment, and cascading tool-execution vulnerabilities. Finally, we outline key doctoral-scale research directions spanning stable adaptive retrieval, cost-aware orchestration, formal trajectory evaluation, and oversight mechanisms, providing a definitive roadmap for building reliable, controllable, and scalable agentic retrieval systems.",
+      "year": 2026,
+      "authors": [
+        "Saroj Mishra",
+        "Suman Niroula",
+        "Umesh Yadav",
+        "Dilip Thakur",
+        "Srijan Gyawali",
+        "Shiva Gaire"
+      ],
+      "url": "https://arxiv.org/abs/2603.07379",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:6ad26ff4177e57d962d32fd4de2ce957600c64bb": {
+      "paper_id": "s2:6ad26ff4177e57d962d32fd4de2ce957600c64bb",
+      "title": "Enhanced Search Engine Using Retrieval-Augmented Generation (RAG)",
+      "abstract": "Traditional search engines often struggle to deliver accurate, up-to-date information, particularly for rapidly evolving topics, due to their reliance on semi-structured databases that can become stale. To address these limitations, we propose an enhanced search engine architecture leveraging Retrieval-Augmented Generation (RAG) technology. Our system combines Large Language Models (LLMs) with sophisticated document retrieval mechanisms to deliver contextually relevant and current information to users. The proposed framework's key innovation lies in its dynamic document retrieval system that continuously updates through databases, web crawlers, and APIs, enabling the LLM to generate responses based on fresh data. This approach significantly reduces the likelihood of inaccuracies and hallucinations commonly associated with standalone llMs. We further enhance the model's precision through domain-specific fine-tuning across sectors like finance, healthcare, and news media, optimizing both accuracy and relevance for specialized queries. A distinctive feature of our system is its transparent approach to information delivery, presenting users with both generated answers and their supporting source documents.The framework integrates private institutional data with publicly available knowledge to enhance response generation. This dual-output mechanism builds user trust by providing verifiable context for all responses. Through extensive testing, our model is demonstrated to have superior performance in delivering domain-specific, current, and accurate search results compared to traditional search engines.",
+      "year": 2025,
+      "authors": [
+        "Nithin Konda",
+        "Y. C. A. Padmanabha Reddy",
+        "T. Rohit",
+        "Viswanath Pulabaigari"
+      ],
+      "url": "https://doi.org/10.1109/ICAIET65052.2025.11211325",
+      "venue": "2025 International Conference on Artificial intelligence and Emerging Technologies (ICAIET)",
+      "source": "semantic_scholar"
+    },
+    "s2:c5a71a239d364db134597496778e6878723e7c76": {
+      "paper_id": "s2:c5a71a239d364db134597496778e6878723e7c76",
+      "title": "Prospects of Retrieval Augmented Generation (RAG) for Academic Library Search and Retrieval",
+      "abstract": "This paper examines the integration of retrieval-augmented generation (RAG) systems within academic library environments, focusing on their potential to transform traditional search and retrieval mechanisms. RAG combines the natural language understanding capabilities of large language models with structured retrieval from verified knowledge bases, offering a novel approach to academic information discovery. The study analyzes the technical requirements for implementing RAG in library systems, including embedding pipelines, vector databases, and middleware architecture for integration with existing library infrastructure. We explore how RAG systems can enhance search precision through semantic indexing, real-time query processing, and contextual understanding while maintaining compliance with data privacy and copyright regulations. The research highlights RAG’s ability to improve user experience through personalized research assistance, conversational interfaces, and multimodal content integration. Critical considerations including ethical implications, copyright compliance, and system transparency are addressed. Our findings indicate that while RAG presents significant opportunities for advancing academic library services, successful implementation requires careful attention to technical architecture, data protection, and user trust. The study concludes that RAG integration holds promise for revolutionizing academic library services while emphasizing the need for continued research in areas of scalability, ethical compliance, and cost-effective implementation.",
+      "year": 2025,
+      "authors": [
+        "Ravi Varma Kumar Bevara",
+        "Brady D. Lund",
+        "N. R. Mannuru",
+        "Sai Pranathi Karedla",
+        "Yara Mohammed",
+        "Sai Kolapudi",
+        "Aashrith Mannuru"
+      ],
+      "url": "https://doi.org/10.5860/ital.v44i2.17361",
+      "venue": "Information Technology and Libraries",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2604.07590": {
+      "paper_id": "arxiv:2604.07590",
+      "title": "DCD: Domain-Oriented Design for Controlled Retrieval-Augmented Generation",
+      "abstract": "Retrieval-Augmented Generation (RAG) is widely used to ground large language models in external knowledge sources. However, when applied to heterogeneous corpora and multi-step queries, Naive RAG pipelines often degrade in quality due to flat knowledge representations and the absence of explicit workflows. In this work, we introduce DCD (Domain-Collection-Document), a domain-oriented design to structure knowledge and control query processing in RAG systems without modifying the underlying language model. The proposed approach relies on a hierarchical decomposition of the information space and multi-stage routing based on structured model outputs, enabling progressive restriction of both retrieval and generation scopes. The architecture is complemented by smart chunking, hybrid retrieval, and integrated validation and generation guardrail mechanisms. We describe the DCD architecture and workflow and discuss evaluation results on synthetic evaluation dataset, highlighting their impact on robustness, factual accuracy, and answer relevance in applied RAG scenarios.",
+      "year": 2026,
+      "authors": [
+        "Valerii Kovalskii",
+        "Nikita Belov",
+        "Nikita Miteyko",
+        "Igor Reshetnikov",
+        "Maksim Maksimov"
+      ],
+      "url": "https://arxiv.org/abs/2604.07590",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:bc3261790f721c84054a657a4ef0b82389bbd067": {
+      "paper_id": "s2:bc3261790f721c84054a657a4ef0b82389bbd067",
+      "title": "Measuring the Measurers: Quality Evaluation of Hallucination Benchmarks for Large Vision-Language Models",
+      "abstract": "Despite the outstanding performance in multimodal tasks, Large Vision-Language Models (LVLMs) have been plagued by the issue of hallucination, i.e., generating content that is inconsistent with the corresponding visual inputs. While previous works have proposed various benchmarks to evaluate this issue, the quality of these evaluations remains unverified. We observe that some of these benchmarks may produce inconsistent evaluation results across repeated tests or fail to align with human evaluation. To address this, we propose a Hallucination benchmark Quality Measurement framework (HQM), which leverages specific indicators to assess both reliability and validity. Our empirical analysis using HQM reveals and pinpoints potential evaluation issues in existing benchmarks, exposing a critical gap in current hallucination evaluation. To bridge this gap, we propose HQH, a High-Quality Hallucination benchmark, which demonstrates superior reliability and validity under HQM, serving as a credible evaluation tool. Our large-scale evaluation of popular LVLMs on HQH reveals severe hallucination problems, which occur not only in the models'main answer to a question but also in additional analysis. This highlights the necessity for future model improvements to effectively mitigate hallucinations and reduce the associated security risks in real-world applications. Our benchmark is publicly available at https://github.com/HQHBench/HQHBench.",
+      "year": 2024,
+      "authors": [
+        "Bei Yan",
+        "Jie Zhang",
+        "Zheng Yuan",
+        "Shiguang Shan",
+        "Xi-Lin Chen"
+      ],
+      "url": "https://www.semanticscholar.org/paper/bc3261790f721c84054a657a4ef0b82389bbd067",
+      "venue": null,
+      "source": "semantic_scholar"
+    },
+    "arxiv:2505.24007": {
+      "paper_id": "arxiv:2505.24007",
+      "title": "Preemptive Hallucination Reduction: An Input-Level Approach for Multimodal Language Model",
+      "abstract": "Visual hallucinations in Large Language Models (LLMs), where the model generates responses that are inconsistent with the visual input, pose a significant challenge to their reliability, particularly in contexts where precise and trustworthy outputs are critical. Current research largely emphasizes post-hoc correction or model-specific fine-tuning strategies, with limited exploration of preprocessing techniques to address hallucination issues at the input stage. This study presents a novel ensemble-based preprocessing framework that adaptively selects the most appropriate filtering approach -- noise reduced (NR), edge enhanced (EE), or unaltered input (org) based on the type of question posed, resulting into reduced hallucination without requiring any modifications to the underlying model architecture or training pipeline. Evaluated on the `HaloQuest' dataset -- a benchmark designed to test multimodal reasoning on visually complex inputs, our method achieves a 44.3% reduction in hallucination rates, as measured by Natural Language Inference (NLI) scores using SelfCheckGPT. This demonstrates that intelligent input conditioning alone can significantly enhance factual grounding in LLM responses. The findings highlight the importance of adaptive preprocessing techniques in mitigating hallucinations, paving the way for more reliable multimodal systems capable of addressing real-world challenges.",
+      "year": 2025,
+      "authors": [
+        "Nokimul Hasan Arif",
+        "Shadman Rabby",
+        "Md Hefzul Hossain Papon",
+        "Sabbir Ahmed"
+      ],
+      "url": "https://arxiv.org/abs/2505.24007",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:e33fceb7cfb825ae3c530de0bf093769169039fc": {
+      "paper_id": "s2:e33fceb7cfb825ae3c530de0bf093769169039fc",
+      "title": "Attention-guided Self-reflection for Zero-shot Hallucination Detection in Large Language Models",
+      "abstract": "Hallucination has emerged as a significant barrier to the effective application of Large Language Models (LLMs). In this work, we introduce a novel Attention-Guided SElf-Reflection (AGSER) approach for zero-shot hallucination detection in LLMs. The AGSER method utilizes attention contributions to categorize the input query into attentive and non-attentive queries. Each query is then processed separately through the LLMs, allowing us to compute consistency scores between the generated responses and the original answer. The difference between the two consistency scores serves as a hallucination estimator. In addition to its efficacy in detecting hallucinations, AGSER notably reduces computational overhead, requiring only three passes through the LLM and utilizing two sets of tokens. We have conducted extensive experiments with four widely-used LLMs across three different hallucination benchmarks, demonstrating that our approach significantly outperforms existing methods in zero-shot hallucination detection.",
+      "year": 2025,
+      "authors": [
+        "Q. Liu",
+        "Xinlong Chen",
+        "Yue Ding",
+        "Bo-Wen Song",
+        "Wei-Qiang Wang",
+        "Shu Wu",
+        "Liang Wang"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2501.09997",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "s2:12fe49b9e945bc60fdbd7a6b4fe220acc7a68070": {
+      "paper_id": "s2:12fe49b9e945bc60fdbd7a6b4fe220acc7a68070",
+      "title": "Poly-FEVER: A Multilingual Fact Verification Benchmark for Hallucination Detection in Large Language Models",
+      "abstract": "Hallucinations in generative AI, particularly in Large Language Models (LLMs), pose a significant challenge to the reliability of multilingual applications. Existing benchmarks for hallucination detection focus primarily on English and a few widely spoken languages, lacking the breadth to assess inconsistencies in model performance across diverse linguistic contexts. To address this gap, we introduce Poly-FEVER, a large-scale multilingual fact verification benchmark specifically designed for evaluating hallucination detection in LLMs. Poly-FEVER comprises 77,973 labeled factual claims spanning 11 languages, sourced from FEVER, Climate-FEVER, and SciFact. It provides the first large-scale dataset tailored for analyzing hallucination patterns across languages, enabling systematic evaluation of LLMs such as ChatGPT and the LLaMA series. Our analysis reveals how topic distribution and web resource availability influence hallucination frequency, uncovering language-specific biases that impact model accuracy. By offering a multilingual benchmark for fact verification, Poly-FEVER facilitates cross-linguistic comparisons of hallucination detection and contributes to the development of more reliable, language-inclusive AI systems. The dataset is publicly available to advance research in responsible AI, fact-checking methodologies, and multilingual NLP, promoting greater transparency and robustness in LLM performance. The proposed Poly-FEVER is available at: https://huggingface.co/datasets/HanzhiZhang/Poly-FEVER.",
+      "year": 2025,
+      "authors": [
+        "Han-Zhi Zhang",
+        "Sumera Anjum",
+        "Heng Fan",
+        "Wei-Jian Zheng",
+        "Yan Huang",
+        "Yun-He Feng"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2503.16541",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:c2f3d3e847faf3a8448eabb5bd5fdb6bebbc3a05": {
+      "paper_id": "s2:c2f3d3e847faf3a8448eabb5bd5fdb6bebbc3a05",
+      "title": "Hallucination of Multimodal Large Language Models: A Survey",
+      "abstract": "This survey presents a comprehensive analysis of the phenomenon of hallucination in multimodal large language models (MLLMs), also known as Large Vision-Language Models (LVLMs), which have demonstrated significant advancements and remarkable abilities in multimodal tasks. Despite these promising developments, MLLMs often generate outputs that are inconsistent with the visual content, a challenge known as hallucination, which poses substantial obstacles to their practical deployment and raises concerns regarding their reliability in real-world applications. This problem has attracted increasing attention, prompting efforts to detect and mitigate such inaccuracies. We review recent advances in identifying, evaluating, and mitigating these hallucinations, offering a detailed overview of the underlying causes, evaluation benchmarks, metrics, and strategies developed to address this issue. Additionally, we analyze the current challenges and limitations, formulating open questions that delineate potential pathways for future research. By drawing the granular classification and landscapes of hallucination causes, evaluation benchmarks, and mitigation methods, this survey aims to deepen the understanding of hallucinations in MLLMs and inspire further advancements in the field. Through our thorough and in-depth review, we contribute to the ongoing dialogue on enhancing the robustness and reliability of MLLMs, providing valuable insights and resources for researchers and practitioners alike. Resources are available at: https://github.com/showlab/Awesome-MLLM-Hallucination.",
+      "year": 2024,
+      "authors": [
+        "Ze-Chen Bai",
+        "Pi-Chao Wang",
+        "Tian-Jun Xiao",
+        "Tong He",
+        "Zongbo Han",
+        "Zheng Zhang",
+        "M. Shou"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2404.18930",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:fd06e315159814684e224651e510af1db7482d9a": {
+      "paper_id": "s2:fd06e315159814684e224651e510af1db7482d9a",
+      "title": "Influence Guided Context Selection for Effective Retrieval-Augmented Generation",
+      "abstract": "Retrieval-Augmented Generation (RAG) addresses large language model (LLM) hallucinations by grounding responses in external knowledge, but its effectiveness is compromised by poor-quality retrieved contexts containing irrelevant or noisy information. While existing approaches attempt to improve performance through context selection based on predefined context quality assessment metrics, they show limited gains over standard RAG. We attribute this limitation to their failure in holistically utilizing available information (query, context list, and generator) for comprehensive quality assessment. Inspired by recent advances in data selection, we reconceptualize context quality assessment as an inference-time data valuation problem and introduce the Contextual Influence Value (CI value). This novel metric quantifies context quality by measuring the performance degradation when removing each context from the list, effectively integrating query-aware relevance, list-aware uniqueness, and generator-aware alignment. Moreover, CI value eliminates complex selection hyperparameter tuning by simply retaining contexts with positive CI values. To address practical challenges of label dependency and computational overhead, we develop a parameterized surrogate model for CI value prediction during inference. The model employs a hierarchical architecture that captures both local query-context relevance and global inter-context interactions, trained through oracle CI value supervision and end-to-end generator feedback. Extensive experiments across 8 NLP tasks and multiple LLMs demonstrate that our context selection method significantly outperforms state-of-the-art baselines, effectively filtering poor-quality contexts while preserving critical information. Code is available at https://github.com/SJTU-DMTai/RAG-CSM.",
+      "year": 2025,
+      "authors": [
+        "Jia-Le Deng",
+        "Yan-Yan Shen",
+        "Ziyuan Pei",
+        "You-Min Chen",
+        "Lin-Peng Huang"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2509.21359",
+      "venue": "Neural Information Processing Systems",
+      "source": "semantic_scholar"
+    },
+    "s2:37216acd9b22c14dedffebedf12a2c5e02378a25": {
+      "paper_id": "s2:37216acd9b22c14dedffebedf12a2c5e02378a25",
+      "title": "Towards Dependable Retrieval-Augmented Generation Using Factual Confidence Prediction",
+      "abstract": "Incorporating specific knowledge into large language models via retrieval-augmented generation (RAG) is a widespread technique that fuels many of today's industry AI applications. A fundamental problem is to assess if the context retrieved by some similarity search provides indeed supporting facts, or instead misguides the generator with irrelevant information. It is critical to associate meaningful confidence measures about the factuality of the retrieval process with the generated answers. We present a new, two-staged approach to predict fact faithfulness of the output of retrieval-augmented generations. First, we employ conformal prediction to select only those retrieved chunks who have a high chance to come from the correct source. This approach in itself can improve answer quality by up to 6% in some of the studied datasets, however, the associated statistical guarantees do not hold generally, since the assumption of sample exchangeability depends on the retriever setup. We present diagnostic metrics to assess whether a setup is suitable. Second, we quantify confidence in the consistency of a generated final answer with a given retrieved context, using an attention-based factuality classifier. This approach can detect inconsistent answers with a chance of up to 77%. Our work helps to establish a novel type of certified RAG systems for a broad range of natural language industry applications.",
+      "year": 2026,
+      "authors": [
+        "Florian Geissler",
+        "Francesco Carella",
+        "Laura Fieback",
+        "Jakob Spiegelberg"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2605.05244",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2608.25717": {
+      "paper_id": "arxiv:2608.25717",
+      "title": "When RAG Fails to Equalize: Geo-bias in Factual Question Answering over Public Companies",
+      "abstract": "Retrieval-augmented generation (RAG) is widely assumed to mitigate factual errors in large language models (LLMs), but it remains unclear whether retrieval uniformly compensates for missing knowledge. We study this question in a controlled factual QA setting over public companies, constructing a benchmark of approximately 2,000 firms across global equity indices. We evaluate six LLMs on four atomic attributes under four conditions: no-context, perfect context, misleading context, and distraction context. We find strong geographic disparities in no-context accuracy, indicating uneven parametric knowledge. While perfect context improves performance, it does not eliminate these gaps: gains are correlated with baseline accuracy, suggesting retrieval effectiveness is coupled to internal representations. Under misleading context, models frequently copy incorrect information. Larger models improve overall performance but do not remove these structural effects. These results challenge the view of RAG as a universal corrective and highlight the interaction between model knowledge, context quality, and entity representation.",
+      "year": 2026,
+      "authors": [
+        "Abhinav Havaldar",
+        "Enrico Santus"
+      ],
+      "url": "https://arxiv.org/abs/2608.25717",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:4e0a7b531728d3baaceec7c96245f1badce52fd6": {
+      "paper_id": "s2:4e0a7b531728d3baaceec7c96245f1badce52fd6",
+      "title": "TruthfulRAG: Resolving Factual-level Conflicts in Retrieval-Augmented Generation with Knowledge Graphs",
+      "abstract": "Retrieval-Augmented Generation (RAG) has emerged as a powerful framework for enhancing the capabilities of Large Language Models (LLMs) by integrating retrieval-based methods with generative models. As external knowledge repositories continue to expand and the parametric knowledge within models becomes outdated, a critical challenge for RAG systems is resolving conflicts between retrieved external information and LLMs' internal knowledge, which can significantly compromise the accuracy and reliability of generated content. However, existing approaches to conflict resolution typically operate at the token or semantic level, often leading to fragmented and partial understanding of factual discrepancies between LLMs' knowledge and context, particularly in knowledge-intensive tasks. To address this limitation, we propose TruthfulRAG, the first framework that leverages Knowledge Graphs (KGs) to resolve factual-level knowledge conflicts in RAG systems. Specifically, TruthfulRAG constructs KGs by systematically extracting triples from retrieved content, utilizes query-based graph retrieval to identify relevant knowledge, and employs entropy-based filtering mechanisms to precisely locate conflicting elements and mitigate factual inconsistencies, thereby enabling LLMs to generate faithful and accurate responses. Extensive experiments reveal that TruthfulRAG outperforms existing methods, effectively alleviating knowledge conflicts and improving the robustness and trustworthiness of RAG systems.",
+      "year": 2025,
+      "authors": [
+        "Shuyi Liu",
+        "Yu-Ming Shang",
+        "Xi Zhang"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2511.10375",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "source": "semantic_scholar"
+    },
+    "s2:464245df1476a3405875ee2d57097ff48ef0586c": {
+      "paper_id": "s2:464245df1476a3405875ee2d57097ff48ef0586c",
+      "title": "A Retrieval-augmented Generation Framework with Retriever and Generator Modules for Enhancing Factual Consistency",
+      "abstract": "Large Language Models (LLMs) are powerful but often produce factually incorrect content (hallucinations), limiting their reliability in knowledge-intensive tasks. Retrieval-augmented generation (RAG) is a promising approach to mitigate this issue by grounding LLM outputs in external knowledge sources. The paper proposes an RAG framework integrating a retriever and generator module to improve factual consistency. The retriever first identifies relevant documents from large-scale datasets, and the generator then produces context-aware responses based on the retrieved evidence. This study evaluates the approach on open-domain question answering benchmarks, including Natural Questions, Microsoft Machine Reading Comprehension Dataset (MS MARCO), and Covid-19 Open Research Dataset (CORD-19). The RAG-augmented model significantly reduces the hallucination rate from 68% to 10% and increases the Knowledge F1 score from 17.7 to 26.0, outperforming a baseline LLM without retrieval. These results demonstrate that augmenting LLMs with retrieval substantially enhances their factual accuracy and reliability. This improvement is significant for time-sensitive and domain-specific applications, such as healthcare and legal contexts, where up-to-date and accurate information is critical.",
+      "year": 2025,
+      "authors": [
+        "Yang-Xiao Zhang"
+      ],
+      "url": "https://doi.org/10.54254/2755-2721/2025.tj24496",
+      "venue": "Applied and Computational Engineering",
+      "source": "semantic_scholar"
+    },
+    "s2:ba454ba8c594dfb86c25dff2e265c8a2686aa037": {
+      "paper_id": "s2:ba454ba8c594dfb86c25dff2e265c8a2686aa037",
+      "title": "Seven Failure Points When Engineering a Retrieval Augmented Generation System",
+      "abstract": "Software engineers are increasingly adding semantic search capabilities to applications using a strategy known as Retrieval Augmented Generation (RAG). A RAG system involves finding documents that semantically match a query and then passing the documents to a large language model (LLM) such as ChatGPT to extract the right answer using an LLM. RAG systems aim to: a) reduce the problem of hallucinated responses from LLMs, b) link sources/references to generated responses, and c) remove the need for annotating documents with meta-data. However, RAG systems suffer from limitations inherent to information retrieval systems and from reliance on LLMs. In this paper, we present an experience report on the failure points of RAG systems from three case studies from separate domains: research, education, and biomedical. We share the lessons learned and present 7 failure points to consider when designing a RAG system. The two key takeaways arising from our work are: 1) validation of a RAG system is only feasible during operation, and 2) the robustness of a RAG system evolves rather than designed in at the start. We conclude with a list of potential research directions on RAG systems for the software engineering community.CCS CONCEPTS• Software and its engineering → Empirical software validation.",
+      "year": 2024,
+      "authors": [
+        "S. Barnett",
+        "Stefanus Kurniawan",
+        "Srikanth Thudumu",
+        "Zach Brannelly",
+        "Mohamed Abdelrazek"
+      ],
+      "url": "https://doi.org/10.1145/3644815.3644945",
+      "venue": "2024 IEEE/ACM 3rd International Conference on AI Engineering – Software Engineering for AI (CAIN)",
+      "source": "semantic_scholar"
+    },
+    "s2:7477bccbe3683c49a9d6c50f901569d87ca07ce5": {
+      "paper_id": "s2:7477bccbe3683c49a9d6c50f901569d87ca07ce5",
+      "title": "A Systematic Literature Review of Retrieval-Augmented Generation: Techniques, Metrics, and Challenges",
+      "abstract": "Background: Retrieval-augmented generation (RAG) aims to reduce hallucinations and outdated knowledge by grounding LLM outputs in retrieved evidence, but empirical results are scattered across tasks, systems, and metrics, limiting cumulative insight. Objective: We aimed to synthesise empirical evidence on RAG effectiveness versus parametric-only baselines, map datasets/architectures/evaluation practices, and surface limitations and research gaps. Methods: This systematic review was conducted and reported in accordance with PRISMA 2020. We searched the ACM Digital Library, IEEE Xplore, Scopus, ScienceDirect, and DBLP; all sources were last searched on 13 May 2025. This included studies from January 2020–May 2025 that addressed RAG or similar retrieval-supported systems producing text output, met citation thresholds (≥15 for 2025; ≥30 for 2024 or earlier), and offered original contributions; excluded non-English items, irrelevant works, duplicates, and records without accessible full text. Bias was appraised with a brief checklist; screening used one reviewer with an independent check and discussion. LLM suggestions were advisory only; 2025 citation thresholds were adjusted to limit citation-lag. We used a descriptive approach to synthesise the results, organising studies by themes aligned to RQ1–RQ4 and reporting summary counts/frequencies; no meta-analysis was undertaken due to heterogeneity of designs and metrics. Results: We included 128 studies spanning knowledge-intensive tasks (35/128; 27.3%), open-domain QA (20/128; 15.6%), software engineering (13/128; 10.2%), and medical domains (11/128; 8.6%). Methods have shifted from DPR+seq2seq baselines to modular, policy-driven RAG with hybrid/structure-aware retrieval, uncertainty-triggered loops, memory, and emerging multimodality. Evaluation remains overlap-heavy (EM/F1), with increasing use of retrieval diagnostics (e.g., Recall@k, MRR@k), human judgements, and LLM-as-judge protocols. Efficiency and security (poisoning, leakage, jailbreaks) are growing concerns. Discussion: Evidence supports a shift to modular, policy-driven RAG, combining hybrid/structure-aware retrieval, uncertainty-aware control, memory, and multimodality, to improve grounding and efficiency. To advance from prototypes to dependable systems, we recommend: (i) holistic benchmarks pairing quality with cost/latency and safety, (ii) budget-aware retrieval/tool-use policies, and (iii) provenance-aware pipelines that expose uncertainty and deliver traceable evidence. We note the evidence base may be affected by citation-lag from the inclusion thresholds and by English-only, five-library coverage. Funding: Advanced Research and Engineering Centre. Registration: Not registered.",
+      "year": 2025,
+      "authors": [
+        "Andrew Brown",
+        "Muhammad Roman",
+        "Barry Devereux"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2508.06401",
+      "venue": "Big Data and Cognitive Computing",
+      "source": "semantic_scholar"
+    },
+    "s2:4be2d578df9c71a9daa6f34d039bc31ed5da35b5": {
+      "paper_id": "s2:4be2d578df9c71a9daa6f34d039bc31ed5da35b5",
+      "title": "Open-Source Reproduction and Explainability Analysis of Corrective Retrieval Augmented Generation",
+      "abstract": "Corrective Retrieval Augmented Generation (CRAG) improves the robustness of RAG systems by evaluating retrieved document quality and triggering corrective actions. However, the original implementation relies on proprietary components including the Google Search API and closed model weights, limiting reproducibility. In this work, we present a fully open-source reproduction of CRAG, replacing proprietary web search with the Wikipedia API and the original LLaMA-2 generator with Phi-3-mini-4k-instruct. We evaluate on PopQA and ARC-Challenge, demonstrating that our open-source pipeline achieves comparable performance to the original system. Furthermore, we contribute the first explainability analysis of CRAG's T5-based retrieval evaluator using SHAP, revealing that the evaluator primarily relies on named entity alignment rather than semantic similarity. Our analysis identifies key failure modes including domain transfer limitations on science questions. All code and results are available at https://github.com/suryayalavarthi/crag-reproduction.",
+      "year": 2026,
+      "authors": [
+        "Surya Vardhan Yalavarthi"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2603.16169",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:a5bd4caad976c6fe2f7f68f993a9f47711c5ade0": {
+      "paper_id": "s2:a5bd4caad976c6fe2f7f68f993a9f47711c5ade0",
+      "title": "Traditional RAG vs. Agentic RAG: A Comparative Study of Retrieval-Augmented Systems",
+      "abstract": "Retrieval-Augmented Generation (RAG) enhances large language models (LLMs) by integrating external knowledge retrieval to improve factual reliability. Traditional RAG employs a fixed, single-pass retrieval process, limiting its ability to handle multi-step reasoning, adaptive queries, and heterogeneous data sources. Agentic RAG extends this framework with autonomous agents that plan, iterate retrieval, integrate tools, and reason over intermediate results. This paper presents a comprehensive comparison of Traditional and Agentic RAG in terms of architecture, capabilities, evaluation metrics, and operational challenges. In addition to synthesizing representative systems, we provide a side-by-side analysis of comparative limitations, failure modes, and corresponding mitigations, mapping domain-specific applications across established and emerging fields. We also outline governance recommendations and propose future research directions, including graph-augmented, multimodal, human-in-the-loop, and domain-specialized Agentic RAG frameworks with standardized model cards. These insights offer both a technical and practical foundation for designing more adaptive, trustworthy, and context-aware retrieval-augmented systems.",
+      "year": 2025,
+      "authors": [
+        "Fnu Neha",
+        "Deepshikha Bhati"
+      ],
+      "url": "https://doi.org/10.1109/FMLDS67896.2025.00073",
+      "venue": "2025 IEEE International Conference on Future Machine Learning and Data Science (FMLDS)",
+      "source": "semantic_scholar"
+    },
+    "s2:26422d9529e00d131fbd849ec9ae6dd42faa9662": {
+      "paper_id": "s2:26422d9529e00d131fbd849ec9ae6dd42faa9662",
+      "title": "A Survey of Multimodal Retrieval-Augmented Generation",
+      "abstract": "Multimodal Retrieval-Augmented Generation (MRAG) enhances large language models (LLMs) by integrating multimodal data (text, images, videos) into retrieval and generation processes, overcoming the limitations of text-only Retrieval-Augmented Generation (RAG). While RAG improves response accuracy by incorporating external textual knowledge, MRAG extends this framework to include multimodal retrieval and generation, leveraging contextual information from diverse data types. This approach reduces hallucinations and enhances question-answering systems by grounding responses in factual, multimodal knowledge. Recent studies show MRAG outperforms traditional RAG, especially in scenarios requiring both visual and textual understanding. This survey reviews MRAG's essential components, datasets, evaluation methods, and limitations, providing insights into its construction and improvement. It also identifies challenges and future research directions, highlighting MRAG's potential to revolutionize multimodal information retrieval and generation. By offering a comprehensive perspective, this work encourages further exploration into this promising paradigm.",
+      "year": 2025,
+      "authors": [
+        "Lang Mei",
+        "Si-Yu Mo",
+        "Zhi-Han Yang",
+        "Chong Chen"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2504.08748",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    }
+  },
+  "question_id": "Q01",
+  "area": "NLP"
+}

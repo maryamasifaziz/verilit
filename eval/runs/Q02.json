@@ -1,0 +1,664 @@
+{
+  "question": "What methods are used to detect hallucinations in the outputs of large language models?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What algorithmic approaches and architectures are used to detect hallucinations in large language models?",
+      "search_query": "hallucination detection methods large language models",
+      "paper_ids": [
+        "arxiv:2504.17004",
+        "arxiv:2512.22416",
+        "s2:411b725522e2747e890ba5acfbf43d22f759c00a",
+        "arxiv:2310.00259",
+        "s2:e33fceb7cfb825ae3c530de0bf093769169039fc"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What are the reported performance results and effectiveness of different hallucination detection techniques?",
+      "search_query": "evaluation results hallucination detection llm",
+      "paper_ids": [
+        "s2:c87c2e6f5e984b06ef6845d3f2a1288db12ee9e0",
+        "s2:68da1f19392c7e26b78f0038198b53a6ada66ba9",
+        "s2:5122a8d8650ad9543ef4a6a6a303c93b1b221ff1",
+        "s2:e823b495d8025c7e421b859fa9aa7b6175b62809",
+        "s2:9ceb16d949e5517b2790e85ab9372b1855daba79"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What standard datasets and benchmarks are utilized to evaluate hallucination detection in language models?",
+      "search_query": "benchmarks datasets hallucination detection llm",
+      "paper_ids": [
+        "arxiv:2402.16211",
+        "arxiv:2503.07833",
+        "s2:e69e8125707470ec312088a4fe9eb5979fda759c",
+        "s2:325bbd2753be3efea25e6c7a6481b3f21a2859c0",
+        "arxiv:2610.17125"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations and challenges associated with detecting hallucinations in generated outputs?",
+      "search_query": "limitations challenges hallucination detection llm",
+      "paper_ids": [
+        "arxiv:2503.04615",
+        "arxiv:2402.16211",
+        "arxiv:2509.14254",
+        "s2:4eaa30f0b32cfb2fc711e9b618dd106a2d410e09",
+        "s2:900cdfbcfffd171c4bb0eafc4727de853211c0a8"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study integrates the Hughes Hallucination Evaluation Model (HHEM), a lightweight classification-based framework that operates independently of LLM-based judgments for hallucination detection.",
+        "paper_id": "arxiv:2512.22416"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study integrates the Hughes Hallucination Evaluation Model (HHEM), a lightweight classification-based framework that operates independently of LLM-based judgments for hallucination detection.",
+          "paper_id": "arxiv:2512.22416",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9177,
+          "p_supported": 0.9177,
+          "accepted": true,
+          "alt_p_supported": 0.8968
+        }
+      ],
+      "final": {
+        "text": "One study integrates the Hughes Hallucination Evaluation Model (HHEM), a lightweight classification-based framework that operates independently of LLM-based judgments for hallucination detection.",
+        "paper_id": "arxiv:2512.22416",
+        "label": "SUPPORTED",
+        "confidence": 0.9177
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "The MIND framework leverages the internal states of large language models for unsupervised, real-time hallucination detection without requiring manual annotations.",
+        "paper_id": "s2:411b725522e2747e890ba5acfbf43d22f759c00a"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The MIND framework leverages the internal states of large language models for unsupervised, real-time hallucination detection without requiring manual annotations.",
+          "paper_id": "s2:411b725522e2747e890ba5acfbf43d22f759c00a",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9538,
+          "p_supported": 0.9538,
+          "accepted": true,
+          "alt_p_supported": 0.924
+        }
+      ],
+      "final": {
+        "text": "The MIND framework leverages the internal states of large language models for unsupervised, real-time hallucination detection without requiring manual annotations.",
+        "paper_id": "s2:411b725522e2747e890ba5acfbf43d22f759c00a",
+        "label": "SUPPORTED",
+        "confidence": 0.9538
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "HHEM with non-fabrication checking achieves an accuracy of 82.2% and a True Positive Rate of 78.9% while reducing evaluation time from 8 hours to 10 minutes.",
+        "paper_id": "s2:68da1f19392c7e26b78f0038198b53a6ada66ba9"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "HHEM with non-fabrication checking achieves an accuracy of 82.2% and a True Positive Rate of 78.9% while reducing evaluation time from 8 hours to 10 minutes.",
+          "paper_id": "s2:68da1f19392c7e26b78f0038198b53a6ada66ba9",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8802,
+          "p_supported": 0.8802,
+          "accepted": true,
+          "alt_p_supported": 0.8822
+        }
+      ],
+      "final": {
+        "text": "HHEM with non-fabrication checking achieves an accuracy of 82.2% and a True Positive Rate of 78.9% while reducing evaluation time from 8 hours to 10 minutes.",
+        "paper_id": "s2:68da1f19392c7e26b78f0038198b53a6ada66ba9",
+        "label": "SUPPORTED",
+        "confidence": 0.8802
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "LLM-based evaluation with GPT-4 yields the best overall results for hallucination detection across 4 datasets, 37 language models, and 5 decoding methods.",
+        "paper_id": "s2:c87c2e6f5e984b06ef6845d3f2a1288db12ee9e0"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "LLM-based evaluation with GPT-4 yields the best overall results for hallucination detection across 4 datasets, 37 language models, and 5 decoding methods.",
+          "paper_id": "s2:c87c2e6f5e984b06ef6845d3f2a1288db12ee9e0",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9478,
+          "p_supported": 0.9478,
+          "accepted": true,
+          "alt_p_supported": 0.9238
+        }
+      ],
+      "final": {
+        "text": "LLM-based evaluation with GPT-4 yields the best overall results for hallucination detection across 4 datasets, 37 language models, and 5 decoding methods.",
+        "paper_id": "s2:c87c2e6f5e984b06ef6845d3f2a1288db12ee9e0",
+        "label": "SUPPORTED",
+        "confidence": 0.9478
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "One study introduces the publicly available HypoTermQA Benchmarking Dataset to benchmark hallucination tendencies and detect hallucinations in LLMs.",
+        "paper_id": "arxiv:2402.16211"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study introduces the publicly available HypoTermQA Benchmarking Dataset to benchmark hallucination tendencies and detect hallucinations in LLMs.",
+          "paper_id": "arxiv:2402.16211",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.918,
+          "p_supported": 0.918,
+          "accepted": true,
+          "alt_p_supported": 0.8801
+        }
+      ],
+      "final": {
+        "text": "One study introduces the publicly available HypoTermQA Benchmarking Dataset to benchmark hallucination tendencies and detect hallucinations in LLMs.",
+        "paper_id": "arxiv:2402.16211",
+        "label": "SUPPORTED",
+        "confidence": 0.918
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "HalluVerse25 is a multilingual LLM hallucination dataset that categorizes fine-grained hallucinations in English, Arabic, and Turkish.",
+        "paper_id": "arxiv:2503.07833"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "HalluVerse25 is a multilingual LLM hallucination dataset that categorizes fine-grained hallucinations in English, Arabic, and Turkish.",
+          "paper_id": "arxiv:2503.07833",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9299,
+          "p_supported": 0.9299,
+          "accepted": true,
+          "alt_p_supported": 0.9178
+        }
+      ],
+      "final": {
+        "text": "HalluVerse25 is a multilingual LLM hallucination dataset that categorizes fine-grained hallucinations in English, Arabic, and Turkish.",
+        "paper_id": "arxiv:2503.07833",
+        "label": "SUPPORTED",
+        "confidence": 0.9299
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Response consistency-based, reference-free hallucination detection methods often suffer from lower detection accuracy due to their inability to capture query-response alignment patterns, in addition to a lack of large-scale benchmark datasets spanning diverse domains.",
+        "paper_id": "arxiv:2503.04615"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Response consistency-based, reference-free hallucination detection methods often suffer from lower detection accuracy due to their inability to capture query-response alignment patterns, in addition to a lack of large-scale benchmark datasets spanning diverse domains.",
+          "paper_id": "arxiv:2503.04615",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8954,
+          "p_supported": 0.8954,
+          "accepted": true,
+          "alt_p_supported": 0.8882
+        }
+      ],
+      "final": {
+        "text": "Response consistency-based, reference-free hallucination detection methods often suffer from lower detection accuracy due to their inability to capture query-response alignment patterns, in addition to a lack of large-scale benchmark datasets spanning diverse domains.",
+        "paper_id": "arxiv:2503.04615",
+        "label": "SUPPORTED",
+        "confidence": 0.8954
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "The detection of hallucinations remains a formidable task, frequently requiring manual labeling or constrained evaluations.",
+        "paper_id": "arxiv:2402.16211"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The detection of hallucinations remains a formidable task, frequently requiring manual labeling or constrained evaluations.",
+          "paper_id": "arxiv:2402.16211",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9393,
+          "p_supported": 0.9393,
+          "accepted": true,
+          "alt_p_supported": 0.9164
+        }
+      ],
+      "final": {
+        "text": "The detection of hallucinations remains a formidable task, frequently requiring manual labeling or constrained evaluations.",
+        "paper_id": "arxiv:2402.16211",
+        "label": "SUPPORTED",
+        "confidence": 0.9393
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "arxiv:2512.22416",
+      "citation": "Chenggong Zhang, Haopeng Wang, Hexi Meng (2025). Hallucination Detection and Evaluation of Large Language Model. arXiv. https://arxiv.org/abs/2512.22416"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:411b725522e2747e890ba5acfbf43d22f759c00a",
+      "citation": "Wei-Hang Su, Changyue Wang, Qing-Yao Ai et al. (2024). Unsupervised Real-Time Hallucination Detection based on the Internal States of Large Language Models. Annual Meeting of the Association for Computational Linguistics. https://doi.org/10.48550/arXiv.2403.06448"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:68da1f19392c7e26b78f0038198b53a6ada66ba9",
+      "citation": "Chenggong Zhang, Haopeng Wang (2025). Hallucination Detection and Evaluation of Large Language Model. arXiv.org. https://doi.org/10.48550/arXiv.2512.22416"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:c87c2e6f5e984b06ef6845d3f2a1288db12ee9e0",
+      "citation": "Atharva Kulkarni, Yuan Zhang, Joel Ruben Antony Moniz et al. (2025). Evaluating Evaluation Metrics - The Mirage of Hallucination Detection. Conference on Empirical Methods in Natural Language Processing. https://doi.org/10.18653/v1/2025.findings-emnlp.1035"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2402.16211",
+      "citation": "Cem Uluoglakci, Tugba Taskaya Temizel (2024). HypoTermQA: Hypothetical Terms Dataset for Benchmarking Hallucination Tendency of LLMs. arXiv. https://arxiv.org/abs/2402.16211"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2503.07833",
+      "citation": "Samir Abdaljalil, Hasan Kurban, Erchin Serpedin (2025). HalluVerse25: Fine-grained Multilingual Benchmark Dataset for LLM Hallucinations. arXiv. https://arxiv.org/abs/2503.07833"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2503.04615",
+      "citation": "Ashok Urlana, Gopichand Kanumolu, Charaka Vinayak Kumar et al. (2025). HalluCounter: Reference-free LLM Hallucination Detection in the Wild!. arXiv. https://arxiv.org/abs/2503.04615"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Various algorithmic approaches and architectures have been developed to detect hallucinations in large language models. These include the Hughes Hallucination Evaluation Model (HHEM), which is a lightweight classification-based framework operating independently of LLM-based judgments [1], and the MIND framework, which leverages internal model states for unsupervised, real-time detection without manual annotations [2]. Additionally, LLM-based evaluation methods are utilized [4]. \n\nRegarding performance, HHEM combined with non-fabrication checking achieves an accuracy of 82.2% and a True Positive Rate of 78.9%, while significantly reducing evaluation time from 8 hours to 10 minutes [3]. Furthermore, LLM-based evaluation using GPT-4 yields the best overall results across 4 datasets, 37 language models, and 5 decoding methods [4]. \n\nTo evaluate these techniques, standard datasets and benchmarks are employed. The publicly available HypoTermQA Benchmarking Dataset is used to benchmark hallucination tendencies and detect hallucinations [5], and HalluVerse25 serves as a multilingual dataset that categorizes fine-grained hallucinations in English, Arabic, and Turkish [6]. \n\nDespite these advancements, several limitations and challenges persist. Detecting hallucinations remains a formidable task that frequently requires manual labeling or constrained evaluations [5]. Moreover, response consistency-based, reference-free detection methods often suffer from lower detection accuracy because they fail to capture query-response alignment patterns, compounded by a general lack of large-scale benchmark datasets across diverse domains [7].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 1,
+      "arxiv": 0
+    },
+    "seconds": 26.8
+  },
+  "papers": {
+    "arxiv:2504.17004": {
+      "paper_id": "arxiv:2504.17004",
+      "title": "(Im)possibility of Automated Hallucination Detection in Large Language Models",
+      "abstract": "Is automated hallucination detection possible? In this work, we introduce a theoretical framework to analyze the feasibility of automatically detecting hallucinations produced by large language models (LLMs). Inspired by the classical Gold-Angluin framework for language identification and its recent adaptation to language generation by Kleinberg and Mullainathan, we investigate whether an algorithm, trained on examples drawn from an unknown target language $K$ (selected from a countable collection) and given access to an LLM, can reliably determine whether the LLM's outputs are correct or constitute hallucinations. First, we establish an equivalence between hallucination detection and the classical task of language identification. We prove that any hallucination detection method can be converted into a language identification method, and conversely, algorithms solving language identification can be adapted for hallucination detection. Given the inherent difficulty of language identification, this implies that hallucination detection is fundamentally impossible for most language collections if the detector is trained using only correct examples from the target language. Second, we show that the use of expert-labeled feedback, i.e., training the detector with both positive examples (correct statements) and negative examples (explicitly labeled incorrect statements), dramatically changes this conclusion. Under this enriched training regime, automated hallucination detection becomes possible for all countable language collections. These results highlight the essential role of expert-labeled examples in training hallucination detectors and provide theoretical support for feedback-based methods, such as reinforcement learning with human feedback (RLHF), which have proven critical for reliable LLM deployment.",
+      "year": 2025,
+      "authors": [
+        "Amin Karbasi",
+        "Omar Montasser",
+        "John Sous",
+        "Grigoris Velegkas"
+      ],
+      "url": "https://arxiv.org/abs/2504.17004",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2512.22416": {
+      "paper_id": "arxiv:2512.22416",
+      "title": "Hallucination Detection and Evaluation of Large Language Model",
+      "abstract": "Hallucinations in Large Language Models (LLMs) pose a significant challenge, generating misleading or unverifiable content that undermines trust and reliability. Existing evaluation methods, such as KnowHalu, employ multi-stage verification but suffer from high computational costs. To address this, we integrate the Hughes Hallucination Evaluation Model (HHEM), a lightweight classification-based framework that operates independently of LLM-based judgments, significantly improving efficiency while maintaining high detection accuracy. We conduct a comparative analysis of hallucination detection methods across various LLMs, evaluating True Positive Rate (TPR), True Negative Rate (TNR), and Accuracy on question-answering (QA) and summarization tasks. Our results show that HHEM reduces evaluation time from 8 hours to 10 minutes, while HHEM with non-fabrication checking achieves the highest accuracy \\(82.2\\%\\) and TPR \\(78.9\\%\\). However, HHEM struggles with localized hallucinations in summarization tasks. To address this, we introduce segment-based retrieval, improving detection by verifying smaller text components. Additionally, our cumulative distribution function (CDF) analysis indicates that larger models (7B-9B parameters) generally exhibit fewer hallucinations, while intermediate-sized models show higher instability. These findings highlight the need for structured evaluation frameworks that balance computational efficiency with robust factual validation, enhancing the reliability of LLM-generated content.",
+      "year": 2025,
+      "authors": [
+        "Chenggong Zhang",
+        "Haopeng Wang",
+        "Hexi Meng"
+      ],
+      "url": "https://arxiv.org/abs/2512.22416",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:411b725522e2747e890ba5acfbf43d22f759c00a": {
+      "paper_id": "s2:411b725522e2747e890ba5acfbf43d22f759c00a",
+      "title": "Unsupervised Real-Time Hallucination Detection based on the Internal States of Large Language Models",
+      "abstract": "Hallucinations in large language models (LLMs) refer to the phenomenon of LLMs producing responses that are coherent yet factually inaccurate. This issue undermines the effectiveness of LLMs in practical applications, necessitating research into detecting and mitigating hallucinations of LLMs. Previous studies have mainly concentrated on post-processing techniques for hallucination detection, which tend to be computationally intensive and limited in effectiveness due to their separation from the LLM's inference process. To overcome these limitations, we introduce MIND, an unsupervised training framework that leverages the internal states of LLMs for real-time hallucination detection without requiring manual annotations. Additionally, we present HELM, a new benchmark for evaluating hallucination detection across multiple LLMs, featuring diverse LLM outputs and the internal states of LLMs during their inference process. Our experiments demonstrate that MIND outperforms existing state-of-the-art methods in hallucination detection.",
+      "year": 2024,
+      "authors": [
+        "Wei-Hang Su",
+        "Changyue Wang",
+        "Qing-Yao Ai",
+        "Yi-Ran Hu",
+        "Zhijing Wu",
+        "Yu-Jia Zhou",
+        "Yi-Qun Liu"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2403.06448",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2310.00259": {
+      "paper_id": "arxiv:2310.00259",
+      "title": "AutoHall: Automated Factuality Hallucination Dataset Generation for Large Language Models",
+      "abstract": "Large language models (LLMs) have gained broad applications across various domains but still struggle with hallucinations. Currently, hallucinations occur frequently in the generation of factual content and pose a great challenge to trustworthy LLMs. However, hallucination detection is hindered by the laborious and expensive manual annotation of hallucinatory content. Meanwhile, as different LLMs exhibit distinct types and rates of hallucination, the collection of hallucination datasets is inherently model-specific, which also increases the cost. To address this issue, this paper proposes a method called $\\textbf{AutoHall}$ for $\\underline{Auto}$matically constructing model-specific $\\underline{Hall}$ucination datasets based on existing fact-checking datasets. The empirical results reveal variations in hallucination proportions and types among different models. Moreover, we introduce a zero-resource and black-box hallucination detection method based on self-contradiction to recognize the hallucination in our constructed dataset, achieving superior detection performance compared to baselines. Further analysis on our dataset provides insight into factors that may contribute to LLM hallucinations. Our codes and datasets are publicly available at https://github.com/zouyingcao/AutoHall.",
+      "year": 2023,
+      "authors": [
+        "Zouying Cao",
+        "Yifei Yang",
+        "XiaoJing Li",
+        "Hai Zhao"
+      ],
+      "url": "https://arxiv.org/abs/2310.00259",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:e33fceb7cfb825ae3c530de0bf093769169039fc": {
+      "paper_id": "s2:e33fceb7cfb825ae3c530de0bf093769169039fc",
+      "title": "Attention-guided Self-reflection for Zero-shot Hallucination Detection in Large Language Models",
+      "abstract": "Hallucination has emerged as a significant barrier to the effective application of Large Language Models (LLMs). In this work, we introduce a novel Attention-Guided SElf-Reflection (AGSER) approach for zero-shot hallucination detection in LLMs. The AGSER method utilizes attention contributions to categorize the input query into attentive and non-attentive queries. Each query is then processed separately through the LLMs, allowing us to compute consistency scores between the generated responses and the original answer. The difference between the two consistency scores serves as a hallucination estimator. In addition to its efficacy in detecting hallucinations, AGSER notably reduces computational overhead, requiring only three passes through the LLM and utilizing two sets of tokens. We have conducted extensive experiments with four widely-used LLMs across three different hallucination benchmarks, demonstrating that our approach significantly outperforms existing methods in zero-shot hallucination detection.",
+      "year": 2025,
+      "authors": [
+        "Q. Liu",
+        "Xinlong Chen",
+        "Yue Ding",
+        "Bo-Wen Song",
+        "Wei-Qiang Wang",
+        "Shu Wu",
+        "Liang Wang"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2501.09997",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "s2:c87c2e6f5e984b06ef6845d3f2a1288db12ee9e0": {
+      "paper_id": "s2:c87c2e6f5e984b06ef6845d3f2a1288db12ee9e0",
+      "title": "Evaluating Evaluation Metrics - The Mirage of Hallucination Detection",
+      "abstract": "Hallucinations pose a significant obstacle to the reliability and widespread adoption of language models, yet their accurate measurement remains a persistent challenge. While many task- and domain-specific metrics have been proposed to assess faithfulness and factuality concerns, the robustness and generalization of these metrics are still untested. In this paper, we conduct a large-scale empirical evaluation of 6 diverse sets of hallucination detection metrics across 4 datasets, 37 language models from 5 families, and 5 decoding methods. Our extensive investigation reveals concerning gaps in current hallucination evaluation: metrics often fail to align with human judgments, take an overtly myopic view of the problem, and show inconsistent gains with parameter scaling. Encouragingly, LLM-based evaluation, particularly with GPT-4, yields the best overall results, and mode-seeking decoding methods seem to reduce hallucinations, especially in knowledge-grounded settings. These findings underscore the need for more robust metrics to understand and quantify hallucinations, and better strategies to mitigate them.",
+      "year": 2025,
+      "authors": [
+        "Atharva Kulkarni",
+        "Yuan Zhang",
+        "Joel Ruben Antony Moniz",
+        "Xiou Ge",
+        "Bo-Hsiang Tseng",
+        "Dhivya Piraviperumal",
+        "S. Swayamdipta",
+        "Hong Yu"
+      ],
+      "url": "https://doi.org/10.18653/v1/2025.findings-emnlp.1035",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "s2:68da1f19392c7e26b78f0038198b53a6ada66ba9": {
+      "paper_id": "s2:68da1f19392c7e26b78f0038198b53a6ada66ba9",
+      "title": "Hallucination Detection and Evaluation of Large Language Model",
+      "abstract": "Hallucinations in Large Language Models (LLMs) pose a significant challenge, generating misleading or unverifiable content that undermines trust and reliability. Existing evaluation methods, such as KnowHalu, employ multi-stage verification but suffer from high computational costs. To address this, we integrate the Hughes Hallucination Evaluation Model (HHEM), a lightweight classification-based framework that operates independently of LLM-based judgments, significantly improving efficiency while maintaining high detection accuracy. We conduct a comparative analysis of hallucination detection methods across various LLMs, evaluating True Positive Rate (TPR), True Negative Rate (TNR), and Accuracy on question-answering (QA) and summarization tasks. Our results show that HHEM reduces evaluation time from 8 hours to 10 minutes, while HHEM with non-fabrication checking achieves the highest accuracy \\(82.2\\%\\) and TPR \\(78.9\\%\\). However, HHEM struggles with localized hallucinations in summarization tasks. To address this, we introduce segment-based retrieval, improving detection by verifying smaller text components. Additionally, our cumulative distribution function (CDF) analysis indicates that larger models (7B-9B parameters) generally exhibit fewer hallucinations, while intermediate-sized models show higher instability. These findings highlight the need for structured evaluation frameworks that balance computational efficiency with robust factual validation, enhancing the reliability of LLM-generated content.",
+      "year": 2025,
+      "authors": [
+        "Chenggong Zhang",
+        "Haopeng Wang"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2512.22416",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:5122a8d8650ad9543ef4a6a6a303c93b1b221ff1": {
+      "paper_id": "s2:5122a8d8650ad9543ef4a6a6a303c93b1b221ff1",
+      "title": "Hallucination Detection in Large Language Models",
+      "abstract": "The concern over hallucination, a situation where a model generates fluent but factually inaccurate or fabricated information-has grown with the steady development of Large Language Models like GPT and Gemini. Such results have the potential to erode safety, dependability, and trust in AI driven fields such as journalism, healthcare, and education. This problem is addressed through the Hallucination Detector project, which offers an online interactive web tool based on Streamlit for analyzing and identifying hallucinated content in model-generated text. This model applies various methods for model uncertainty and reliability metrics calculation, including ensemble scoring Model(1), LLM-as-a-Judge evaluation Model (2), and Black-Box scoring Model(3), powered by the uqlm library (Uncertainty Quantification for Language Models). All these methods combined evaluate models for agreement, confidence, and factual consistency to calculate the probability of hallucinations. It allows users to interactively detect and visualize language model hallucination tendencies in a straightforward, user-friendly manner. This research contributes to a safer and more understandable usage of generative AI systems by advancing transparency, interpretability, and accountability of AI-generated content through integrating several uncertainty-based evaluation paradigms.",
+      "year": 2026,
+      "authors": [
+        "S. Kumari",
+        "P. Bagane",
+        "Uttam Waghmode",
+        "Sailatha Shetty",
+        "Aryan Unawane",
+        "A. Vidhate"
+      ],
+      "url": "https://doi.org/10.1109/ICCUBEA69821.2026.11702324",
+      "venue": "International Conference on Computing Communication Control and automation",
+      "source": "semantic_scholar"
+    },
+    "s2:e823b495d8025c7e421b859fa9aa7b6175b62809": {
+      "paper_id": "s2:e823b495d8025c7e421b859fa9aa7b6175b62809",
+      "title": "Small Updates, Big Doubts: Does Parameter-Efficient Fine-tuning Enhance Hallucination Detection ?",
+      "abstract": "Parameter-efficient fine-tuning (PEFT) methods are widely used to adapt large language models (LLMs) to downstream tasks and are often assumed to improve factual correctness. However, how the parameter-efficient fine-tuning methods affect hallucination behavior remains insufficiently understood, especially on QA datasets. In this work, we systematically investigate the impact of PEFT on hallucination detection through a comprehensive empirical study across three open-weight LLM backbones and three fact-seeking QA benchmarks. For each model, we evaluate performance using seven unsupervised hallucination detection methods spanning three complementary approaches: semantic consistency based detectors, confidence based detectors, and entropy based detectors. This multifaceted evaluation enables us to characterize how PEFT reshapes uncertainty across different detection paradigms. In conclusion, our experimental results show that PEFT consistently strengthens hallucination detection ability, substantially improving AUROC across a wide range of hallucination detectors. Besides, further analyses using linear probes and representation diagnostics indicate that PEFT methods primarily reshapes how uncertainty is encoded and surfaced, comparing with injecting new factual knowledge into the models.",
+      "year": 2026,
+      "authors": [
+        "Xuehai Hu",
+        "Yi-Fan Zhang",
+        "Song-Tao Wei",
+        "Chen Zhao",
+        "Qian-Nan Li",
+        "Bing-Zhe Li",
+        "Feng Chen"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2602.11166",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:9ceb16d949e5517b2790e85ab9372b1855daba79": {
+      "paper_id": "s2:9ceb16d949e5517b2790e85ab9372b1855daba79",
+      "title": "HalluciNot: Hallucination Detection Through Context and Common Knowledge Verification",
+      "abstract": "This paper introduces a comprehensive system for detecting hallucinations in large language model (LLM) outputs in enterprise settings. We present a novel taxonomy of LLM responses specific to hallucination in enterprise applications, categorizing them into context-based, common knowledge, enterprise-specific, and innocuous statements. Our hallucination detection model HDM-2 validates LLM responses with respect to both context and generally known facts (common knowledge). It provides both hallucination scores and word-level annotations, enabling precise identification of problematic content. To evaluate it on context-based and common-knowledge hallucinations, we introduce a new dataset HDMBench. Experimental results demonstrate that HDM-2 out-performs existing approaches across RagTruth, TruthfulQA, and HDMBench datasets. This work addresses the specific challenges of enterprise deployment, including computational efficiency, domain specialization, and fine-grained error identification. Our evaluation dataset, model weights, and inference code are publicly available.",
+      "year": 2025,
+      "authors": [
+        "Bibek Paudel",
+        "Alexander Lyzhov",
+        "Preetam Joshi",
+        "Puneet Anand"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2504.07069",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2402.16211": {
+      "paper_id": "arxiv:2402.16211",
+      "title": "HypoTermQA: Hypothetical Terms Dataset for Benchmarking Hallucination Tendency of LLMs",
+      "abstract": "Hallucinations pose a significant challenge to the reliability and alignment of Large Language Models (LLMs), limiting their widespread acceptance beyond chatbot applications. Despite ongoing efforts, hallucinations remain a prevalent challenge in LLMs. The detection of hallucinations itself is also a formidable task, frequently requiring manual labeling or constrained evaluations. This paper introduces an automated scalable framework that combines benchmarking LLMs' hallucination tendencies with efficient hallucination detection. We leverage LLMs to generate challenging tasks related to hypothetical phenomena, subsequently employing them as agents for efficient hallucination detection. The framework is domain-agnostic, allowing the use of any language model for benchmark creation or evaluation in any domain. We introduce the publicly available HypoTermQA Benchmarking Dataset, on which state-of-the-art models' performance ranged between 3% and 11%, and evaluator agents demonstrated a 6% error rate in hallucination prediction. The proposed framework provides opportunities to test and improve LLMs. Additionally, it has the potential to generate benchmarking datasets tailored to specific domains, such as law, health, and finance.",
+      "year": 2024,
+      "authors": [
+        "Cem Uluoglakci",
+        "Tugba Taskaya Temizel"
+      ],
+      "url": "https://arxiv.org/abs/2402.16211",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2503.07833": {
+      "paper_id": "arxiv:2503.07833",
+      "title": "HalluVerse25: Fine-grained Multilingual Benchmark Dataset for LLM Hallucinations",
+      "abstract": "Large Language Models (LLMs) are increasingly used in various contexts, yet remain prone to generating non-factual content, commonly referred to as \"hallucinations\". The literature categorizes hallucinations into several types, including entity-level, relation-level, and sentence-level hallucinations. However, existing hallucination datasets often fail to capture fine-grained hallucinations in multilingual settings. In this work, we introduce HalluVerse25, a multilingual LLM hallucination dataset that categorizes fine-grained hallucinations in English, Arabic, and Turkish. Our dataset construction pipeline uses an LLM to inject hallucinations into factual biographical sentences, followed by a rigorous human annotation process to ensure data quality. We evaluate several LLMs on HalluVerse25, providing valuable insights into how proprietary models perform in detecting LLM-generated hallucinations across different contexts.",
+      "year": 2025,
+      "authors": [
+        "Samir Abdaljalil",
+        "Hasan Kurban",
+        "Erchin Serpedin"
+      ],
+      "url": "https://arxiv.org/abs/2503.07833",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:e69e8125707470ec312088a4fe9eb5979fda759c": {
+      "paper_id": "s2:e69e8125707470ec312088a4fe9eb5979fda759c",
+      "title": "Decision Models as Judges for Hallucination Detection",
+      "abstract": "Large language models are widely used as judges of model outputs (LLM-as-a-Judge), but they are costly and can hallucinate or be overconfident. Decision models are a potential alternative. They return a predefined verdict with a probability for each label instead of free-form text and are much cheaper and faster. We test this promise on hallucination detection. We build binary benchmarks for five hallucination types (9,852 items from six datasets) and compare five decision models with the generative judge gpt-6-sol. Performance depends strongly on the type: the best decision model matches gpt-6-sol in balanced accuracy on context inconsistency and comes within 3 percentage points on factual errors, but trails it by 4-8 points on logical and instruction inconsistency. Decision-model probabilities are overconfident, though less so than the GPT-6 models, and separate correct from incorrect decisions only moderately. We also find that a confidence cascade of decision models improves on the best single model by 1.9-3.3 points on three types and matches or exceeds gpt-6-sol at 1-3% of its cost. Overall, decision models are a practical low-cost judge for some hallucination types but need to be validated before use.",
+      "year": 2026,
+      "authors": [
+        "Hao-Zheng Liu",
+        "Zhao-Qian Xue",
+        "Zhong-Yin Wang",
+        "Jun-Ting Mu",
+        "Zi-Hui Ma",
+        "Shu-Ya Feng",
+        "Ling-Yao Li"
+      ],
+      "url": "https://www.semanticscholar.org/paper/e69e8125707470ec312088a4fe9eb5979fda759c",
+      "venue": null,
+      "source": "semantic_scholar"
+    },
+    "s2:325bbd2753be3efea25e6c7a6481b3f21a2859c0": {
+      "paper_id": "s2:325bbd2753be3efea25e6c7a6481b3f21a2859c0",
+      "title": "Do Benchmarks Underestimate LLM Performance? Evaluating Hallucination Detection With LLM-First Human-Adjudicated Assessment",
+      "abstract": "Hallucination remains a persistent challenge in Large Language Models (LLMs), particularly in context-grounded settings such as RAG and agentic AI systems. This study focuses on contextual hallucination detection in summarization tasks. We analyze the QAGS-C and SummEval datasets by comparing original benchmark annotations with reason and span-based predictions from Gemini 2.5 Flash and GPT-5 Mini. To address systematic divergences between human labels and LLM judgments, we re-evaluated all conflicted samples through a human adjudication process involving 2 cross-cultural adjudicators. Following this re-evaluation, triple agreement (between human, GPT, and Gemini) increased by 6.38% for QAGS-C and 7.62% for SummEval. Similarly, model accuracy improved, with GPT increasing by 4.25% on QAGS-C and 2.34% on SummEval, while Gemini showed gains of 8.51% and 3.80%, respectively. Notably, adjudicators frequently sided with the models'judgments over original human annotations when LLMs provided explicit reasoning. Overall human adjudicator agreement ranged between 83% and 87%. These findings suggest that for ambiguity-prone tasks, single-pass annotations may be insufficient, and model-assisted re-evaluation yields more reliable benchmarks.",
+      "year": 2026,
+      "authors": [
+        "Ismail Furkan Atasoy",
+        "Begum Mutlu",
+        "E. Sezer",
+        "Abdelrahman Wahdan"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2605.08462",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2610.17125": {
+      "paper_id": "arxiv:2610.17125",
+      "title": "ToolHACE: A Dataset for Detecting Hallucinations in Tool-Based LLM Responses",
+      "abstract": "Tool-augmented language models ground their responses in external tool outputs, improving reliability beyond parametric knowledge alone. However, even when the correct tool is called and returns accurate information, models may still contradict such outputs, omit critical details, or generate unsupported claims. Existing hallucination benchmarks for tool-augmented dialogue primarily focus on the tool-calling stage, evaluating whether the correct tool and arguments are selected, while overlooking errors that arise during post-tool response generation. To address this gap, we introduce ToolHACE, a span-level benchmark for hallucination detection in tool-augmented LLM responses, covering five fine-grained hallucination categories. Through extensive experiments with modern hallucination detectors, we show that post-tool-call hallucinations are widespread and remain challenging to detect. Our results further demonstrate that effective detection requires training on specialized tool-augmented corpora, while transfer from tool-agnostic hallucination datasets performs poorly in this setting. These findings highlight the need for dedicated benchmarks and models for reliable hallucination detection in tool-augmented language systems.",
+      "year": 2026,
+      "authors": [
+        "Nikolay Ivanov",
+        "Sergey Pletenev",
+        "Elisei Rykov",
+        "Anatolii Frolov",
+        "Bogdan Monogov",
+        "Alexander Potekhin",
+        "Maria Marina",
+        "Daniil Moskovskiy",
+        "Viktor Moskvoretskii",
+        "Alexander Panchenko",
+        "Ilseyar Alimova"
+      ],
+      "url": "https://arxiv.org/abs/2610.17125",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2503.04615": {
+      "paper_id": "arxiv:2503.04615",
+      "title": "HalluCounter: Reference-free LLM Hallucination Detection in the Wild!",
+      "abstract": "Response consistency-based, reference-free hallucination detection (RFHD) methods do not depend on internal model states, such as generation probabilities or gradients, which Grey-box models typically rely on but are inaccessible in closed-source LLMs. However, their inability to capture query-response alignment patterns often results in lower detection accuracy. Additionally, the lack of large-scale benchmark datasets spanning diverse domains remains a challenge, as most existing datasets are limited in size and scope. To this end, we propose HalluCounter, a novel reference-free hallucination detection method that utilizes both response-response and query-response consistency and alignment patterns. This enables the training of a classifier that detects hallucinations and provides a confidence score and an optimal response for user queries. Furthermore, we introduce HalluCounterEval, a benchmark dataset comprising both synthetically generated and human-curated samples across multiple domains. Our method outperforms state-of-the-art approaches by a significant margin, achieving over 90\\% average confidence in hallucination detection across datasets.",
+      "year": 2025,
+      "authors": [
+        "Ashok Urlana",
+        "Gopichand Kanumolu",
+        "Charaka Vinayak Kumar",
+        "Bala Mallikarjunarao Garlapati",
+        "Rahul Mishra"
+      ],
+      "url": "https://arxiv.org/abs/2503.04615",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2509.14254": {
+      "paper_id": "arxiv:2509.14254",
+      "title": "Hallucination Detection with the Internal Layers of LLMs",
+      "abstract": "Large Language Models (LLMs) have succeeded in a variety of natural language processing tasks [Zha+25]. However, they have notable limitations. LLMs tend to generate hallucinations, a seemingly plausible yet factually unsupported output [Hua+24], which have serious real-world consequences [Kay23; Rum+24]. Recent work has shown that probing-based classifiers that utilize LLMs' internal representations can detect hallucinations [AM23; Bei+24; Bur+24; DYT24; Ji+24; SMZ24; Su+24]. This approach, since it does not involve model training, can enhance reliability without significantly increasing computational costs. Building upon this approach, this thesis proposed novel methods for hallucination detection using LLM internal representations and evaluated them across three benchmarks: TruthfulQA, HaluEval, and ReFact. Specifically, a new architecture that dynamically weights and combines internal LLM layers was developed to improve hallucination detection performance. Throughout extensive experiments, two key findings were obtained: First, the proposed approach was shown to achieve superior performance compared to traditional probing methods, though generalization across benchmarks and LLMs remains challenging. Second, these generalization limitations were demonstrated to be mitigated through cross-benchmark training and parameter freezing. While not consistently improving, both techniques yielded better performance on individual benchmarks and reduced performance degradation when transferred to other benchmarks. These findings open new avenues for improving LLM reliability through internal representation analysis.",
+      "year": 2025,
+      "authors": [
+        "Martin Preiß"
+      ],
+      "url": "https://arxiv.org/abs/2509.14254",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:4eaa30f0b32cfb2fc711e9b618dd106a2d410e09": {
+      "paper_id": "s2:4eaa30f0b32cfb2fc711e9b618dd106a2d410e09",
+      "title": "HuDEx: Integrating Hallucination Detection and Explainability for Enhancing the Reliability of LLM responses",
+      "abstract": "Recent advances in large language models (LLMs) have shown promising improvements, often surpassing existing methods across a wide range of downstream tasks in natural language processing. However, these models still face challenges, which may hinder their practical applicability. For example, the phenomenon of hallucination is known to compromise the reliability of LLMs, especially in fields that demand high factual precision. Current benchmarks primarily focus on hallucination detection and factuality evaluation but do not extend beyond identification. This paper proposes an explanation enhanced hallucination-detection model, coined as HuDEx, aimed at enhancing the reliability of LLM-generated responses by both detecting hallucinations and providing detailed explanations. The proposed model provides a novel approach to integrate detection with explanations, and enable both users and the LLM itself to understand and reduce errors. Our measurement results demonstrate that the proposed model surpasses larger LLMs, such as Llama3 70B and GPT-4, in hallucination detection accuracy, while maintaining reliable explanations. Furthermore, the proposed model performs well in both zero-shot and other test environments, showcasing its adaptability across diverse benchmark datasets. The proposed approach further enhances the hallucination detection research by introducing a novel approach to integrating interpretability with hallucination detection, which further enhances the performance and reliability of evaluating hallucinations in language models.",
+      "year": 2025,
+      "authors": [
+        "Sujeong Lee",
+        "Hayoung Lee",
+        "Seongsoo Heo",
+        "Wonik Choi"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2502.08109",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:900cdfbcfffd171c4bb0eafc4727de853211c0a8": {
+      "paper_id": "s2:900cdfbcfffd171c4bb0eafc4727de853211c0a8",
+      "title": "SLM Meets LLM: Balancing Latency, Interpretability and Consistency in Hallucination Detection",
+      "abstract": "Large language models (LLMs) are highly capable but face latency challenges in real-time applications, such as conducting online hallucination detection. To overcome this issue, we propose a novel framework that leverages a small language model (SLM) classifier for initial detection, followed by a LLM as constrained reasoner to generate detailed explanations for detected hallucinated content. This study optimizes the real-time interpretable hallucination detection by introducing effective prompting techniques that align LLM-generated explanations with SLM decisions. Empirical experiment results demonstrate its effectiveness, thereby enhancing the overall user experience.",
+      "year": 2024,
+      "authors": [
+        "Meng-Ya Hu",
+        "Rui Xu",
+        "Deren Lei",
+        "Yaxi Li",
+        "Ming-Yu Wang",
+        "Emily Ching",
+        "Eslam Kamal",
+        "Alex Deng"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2408.12748",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    }
+  },
+  "question_id": "Q02",
+  "area": "NLP"
+}
