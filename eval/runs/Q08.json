@@ -1,0 +1,719 @@
+{
+  "question": "How do vision transformers compare with convolutional neural networks for image classification?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What are the architectural differences and core methodologies between vision transformers and convolutional neural networks?",
+      "search_query": "vision transformers versus convolutional neural networks architecture",
+      "paper_ids": [
+        "s2:39b492db00faead70bc3f4fb4b0364d94398ffdb",
+        "s2:3aecded45a18f1f9f7e0bbf46acca10b81bc7fe7",
+        "s2:4d3df6f6fc7b591acb540adeb5c6935e68f6d4ad",
+        "s2:8d79c921a87711c43990547e02e1ab601d5209e0",
+        "s2:af127041da78a8f074999ca6f5aaa63b748ca857"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "How do vision transformers and convolutional neural networks compare in terms of image classification accuracy and reported results?",
+      "search_query": "image classification accuracy vision transformers convolutional neural networks",
+      "paper_ids": [
+        "arxiv:2507.21156",
+        "arxiv:2307.00213",
+        "arxiv:2503.02891",
+        "arxiv:2206.10552",
+        "arxiv:2112.09300"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What are the standard datasets and evaluation benchmarks used to compare vision transformers and convolutional neural networks?",
+      "search_query": "benchmarks datasets vision transformers convolutional neural networks",
+      "paper_ids": [
+        "s2:f61a0c18b7585a87e0fb6a7e0053edd306dc3c8c",
+        "s2:079c91aba64a50df78b7ba81987129a10493b08c",
+        "s2:984dedb14edeada8c6707a041431bf096a388e54",
+        "arxiv:2108.08810",
+        "arxiv:2508.02871"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the primary limitations, computational costs, and data requirements of vision transformers compared to convolutional neural networks?",
+      "search_query": "limitations computational complexity vision transformers convolutional neural networks",
+      "paper_ids": [
+        "s2:fdd3a08f422746b7ab1dd8dfa1e7e24db9550ee2",
+        "s2:76c85685207eea3e8a0557d141aca52e544f362c",
+        "s2:62cc58a2e14266a5af85b47f1517c28132679729",
+        "s2:1dbbb296202bee9100e81dc6b433c849dda7c346",
+        "arxiv:2403.07542"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "Vision Transformers feature more uniform representations across all layers compared to convolutional neural networks, driven by self-attention enabling early global information aggregation and residual connections propagating features.",
+        "paper_id": "s2:39b492db00faead70bc3f4fb4b0364d94398ffdb"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Vision Transformers feature more uniform representations across all layers compared to convolutional neural networks, driven by self-attention enabling early global information aggregation and residual connections propagating features.",
+          "paper_id": "s2:39b492db00faead70bc3f4fb4b0364d94398ffdb",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9227,
+          "p_supported": 0.9227,
+          "accepted": true,
+          "alt_p_supported": 0.8842
+        }
+      ],
+      "final": {
+        "text": "Vision Transformers feature more uniform representations across all layers compared to convolutional neural networks, driven by self-attention enabling early global information aggregation and residual connections propagating features.",
+        "paper_id": "s2:39b492db00faead70bc3f4fb4b0364d94398ffdb",
+        "label": "SUPPORTED",
+        "confidence": 0.9227
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "Convolutional neural networks suffer from small receptive fields and spatial bias, whereas Vision Transformers exploit global self-attention mechanisms to provide better contextual modeling and long-range spatial dependencies.",
+        "paper_id": "s2:af127041da78a8f074999ca6f5aaa63b748ca857"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Convolutional neural networks suffer from small receptive fields and spatial bias, whereas Vision Transformers exploit global self-attention mechanisms to provide better contextual modeling and long-range spatial dependencies.",
+          "paper_id": "s2:af127041da78a8f074999ca6f5aaa63b748ca857",
+          "label": "INSUFFICIENT",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.6486,
+          "p_supported": 0.6486,
+          "accepted": false,
+          "alt_p_supported": 0.6141
+        },
+        {
+          "action": "re-retrieve",
+          "text": "Convolutional neural networks suffer from small receptive fields and spatial bias, whereas Vision Transformers exploit global self-attention mechanisms to provide better contextual modeling and long-range spatial dependencies.",
+          "paper_id": "arxiv:2309.05674",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8636,
+          "p_supported": 0.8636,
+          "accepted": true,
+          "alt_p_supported": 0.8157
+        }
+      ],
+      "final": {
+        "text": "Convolutional neural networks suffer from small receptive fields and spatial bias, whereas Vision Transformers exploit global self-attention mechanisms to provide better contextual modeling and long-range spatial dependencies.",
+        "paper_id": "arxiv:2309.05674",
+        "label": "SUPPORTED",
+        "confidence": 0.8636
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "ResNet-50 achieved 98.37% accuracy on chest X-ray classification, DeiT-Small achieved 92.16% accuracy on brain tumor detection, and EfficientNet-B0 achieved 81.84% accuracy on skin cancer classification.",
+        "paper_id": "arxiv:2507.21156"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "ResNet-50 achieved 98.37% accuracy on chest X-ray classification, DeiT-Small achieved 92.16% accuracy on brain tumor detection, and EfficientNet-B0 achieved 81.84% accuracy on skin cancer classification.",
+          "paper_id": "arxiv:2507.21156",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8916,
+          "p_supported": 0.8916,
+          "accepted": true,
+          "alt_p_supported": 0.8819
+        }
+      ],
+      "final": {
+        "text": "ResNet-50 achieved 98.37% accuracy on chest X-ray classification, DeiT-Small achieved 92.16% accuracy on brain tumor detection, and EfficientNet-B0 achieved 81.84% accuracy on skin cancer classification.",
+        "paper_id": "arxiv:2507.21156",
+        "label": "SUPPORTED",
+        "confidence": 0.8916
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Compact Convolutional Transformers achieved a classification accuracy of 92.49% and a micro-average ROC AUC of 0.9935 on a benchmark dataset of peripheral blood cell images.",
+        "paper_id": "arxiv:2307.00213"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Compact Convolutional Transformers achieved a classification accuracy of 92.49% and a micro-average ROC AUC of 0.9935 on a benchmark dataset of peripheral blood cell images.",
+          "paper_id": "arxiv:2307.00213",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9488,
+          "p_supported": 0.9488,
+          "accepted": true,
+          "alt_p_supported": 0.9145
+        }
+      ],
+      "final": {
+        "text": "Compact Convolutional Transformers achieved a classification accuracy of 92.49% and a micro-average ROC AUC of 0.9935 on a benchmark dataset of peripheral blood cell images.",
+        "paper_id": "arxiv:2307.00213",
+        "label": "SUPPORTED",
+        "confidence": 0.9488
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "Research benchmarking Vision Transformers against Convolutional Neural Networks utilizes standard datasets including ImageNet, COCO, and Cityscapes.",
+        "paper_id": "s2:f61a0c18b7585a87e0fb6a7e0053edd306dc3c8c"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Research benchmarking Vision Transformers against Convolutional Neural Networks utilizes standard datasets including ImageNet, COCO, and Cityscapes.",
+          "paper_id": "s2:f61a0c18b7585a87e0fb6a7e0053edd306dc3c8c",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8666,
+          "p_supported": 0.8666,
+          "accepted": true,
+          "alt_p_supported": 0.9317
+        }
+      ],
+      "final": {
+        "text": "Research benchmarking Vision Transformers against Convolutional Neural Networks utilizes standard datasets including ImageNet, COCO, and Cityscapes.",
+        "paper_id": "s2:f61a0c18b7585a87e0fb6a7e0053edd306dc3c8c",
+        "label": "SUPPORTED",
+        "confidence": 0.8666
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "Comparative evaluations of CNNs, Transformers, and hybrid models for image segmentation use benchmark datasets including Cityscapes, ADE20K, and BRATS.",
+        "paper_id": "s2:079c91aba64a50df78b7ba81987129a10493b08c"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Comparative evaluations of CNNs, Transformers, and hybrid models for image segmentation use benchmark datasets including Cityscapes, ADE20K, and BRATS.",
+          "paper_id": "s2:079c91aba64a50df78b7ba81987129a10493b08c",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9387,
+          "p_supported": 0.9387,
+          "accepted": true,
+          "alt_p_supported": 0.9026
+        }
+      ],
+      "final": {
+        "text": "Comparative evaluations of CNNs, Transformers, and hybrid models for image segmentation use benchmark datasets including Cityscapes, ADE20K, and BRATS.",
+        "paper_id": "s2:079c91aba64a50df78b7ba81987129a10493b08c",
+        "label": "SUPPORTED",
+        "confidence": 0.9387
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Vision transformers require larger training datasets and more computational resources compared to convolutional neural networks due to the quadratic complexity of their self-attention mechanism.",
+        "paper_id": "s2:76c85685207eea3e8a0557d141aca52e544f362c"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Vision transformers require larger training datasets and more computational resources compared to convolutional neural networks due to the quadratic complexity of their self-attention mechanism.",
+          "paper_id": "s2:76c85685207eea3e8a0557d141aca52e544f362c",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9286,
+          "p_supported": 0.9286,
+          "accepted": true,
+          "alt_p_supported": 0.9097
+        }
+      ],
+      "final": {
+        "text": "Vision transformers require larger training datasets and more computational resources compared to convolutional neural networks due to the quadratic complexity of their self-attention mechanism.",
+        "paper_id": "s2:76c85685207eea3e8a0557d141aca52e544f362c",
+        "label": "SUPPORTED",
+        "confidence": 0.9286
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Vision transformers have significant limitations including high computational complexity, memory demands, and scaling and data challenges that pose difficulties for deployment on resource-constrained devices.",
+        "paper_id": "s2:62cc58a2e14266a5af85b47f1517c28132679729"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Vision transformers have significant limitations including high computational complexity, memory demands, and scaling and data challenges that pose difficulties for deployment on resource-constrained devices.",
+          "paper_id": "s2:62cc58a2e14266a5af85b47f1517c28132679729",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8852,
+          "p_supported": 0.8852,
+          "accepted": true,
+          "alt_p_supported": 0.072
+        }
+      ],
+      "final": {
+        "text": "Vision transformers have significant limitations including high computational complexity, memory demands, and scaling and data challenges that pose difficulties for deployment on resource-constrained devices.",
+        "paper_id": "s2:62cc58a2e14266a5af85b47f1517c28132679729",
+        "label": "SUPPORTED",
+        "confidence": 0.8852
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:39b492db00faead70bc3f4fb4b0364d94398ffdb",
+      "citation": "M. Raghu, T. Unterthiner, Simon Kornblith et al. (2021). Do Vision Transformers See Like Convolutional Neural Networks?. Neural Information Processing Systems. https://doi.org/10.48550/arXiv.2108.08810"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:2309.05674",
+      "citation": "Xian Lin, Zengqiang Yan, Xianbo Deng et al. (2023). ConvFormer: Plug-and-Play CNN-Style Transformers for Improving Medical Image Segmentation. arXiv. https://arxiv.org/abs/2309.05674"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2507.21156",
+      "citation": "Kunal Kawadkar (2025). Comparative Analysis of Vision Transformers and Convolutional Neural Networks for Medical Image Classification. arXiv. https://arxiv.org/abs/2507.21156"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2307.00213",
+      "citation": "Andrew Kean Gao (2023). More for Less: Compact Convolutional Transformers Enable Robust Medical Image Classification with Limited Data. arXiv. https://arxiv.org/abs/2307.00213"
+    },
+    {
+      "n": 5,
+      "paper_id": "s2:f61a0c18b7585a87e0fb6a7e0053edd306dc3c8c",
+      "citation": "Murali Krishna Pasupuleti (2025). Vision Transformers vs. Convolutional Neural Networks: Benchmarking Across Tasks. International Journal of Academic and Industrial Research Innovations(IJAIRI). https://doi.org/10.62311/nesx/rphcr4"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:079c91aba64a50df78b7ba81987129a10493b08c",
+      "citation": "Sankar Lavuri, Krishnanaik Vankdoth (2025). Benchmarking AI Architectures for Image Segmentation: CNNs, Transformers, and Hybrid Models. International Conference on Computational Intelligence and Communication Networks. https://doi.org/10.1109/CICN67655.2025.11368266"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:76c85685207eea3e8a0557d141aca52e544f362c",
+      "citation": "Pranav Jeevan, A. Sethi (2022). Convolutional Xformers for Vision. arXiv.org. https://doi.org/10.48550/arXiv.2201.10271"
+    },
+    {
+      "n": 8,
+      "paper_id": "s2:62cc58a2e14266a5af85b47f1517c28132679729",
+      "citation": "Shaibal Saha, Lan-Yu Xu (2025). Vision Transformers on the Edge: A Comprehensive Survey of Model Compression and Acceleration Strategies. Neurocomputing. https://doi.org/10.1016/j.neucom.2025.130417"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Vision Transformers (ViTs) and Convolutional Neural Networks (CNNs) exhibit fundamental architectural differences and methodologies for image classification. CNNs suffer from spatial bias and small receptive fields [2]. In contrast, Vision Transformers feature more uniform representations across all layers through self-attention that enables early global information aggregation alongside residual connections propagating features [1], thereby exploiting global self-attention mechanisms for better contextual modeling and long-range spatial dependencies [2].\n\nWhen comparing classification accuracy and reported results, studies highlight diverse outcomes across specific medical and general tasks. ResNet-50 achieved 98.37% accuracy on chest X-ray classification, DeiT-Small achieved 92.16% accuracy on brain tumor detection, and EfficientNet-B0 achieved 81.84% accuracy on skin cancer classification [3]. Additionally, Compact Convolutional Transformers achieved a classification accuracy of 92.49% and a micro-average ROC AUC of 0.9935 on a benchmark dataset of peripheral blood cell images [4]. \n\nResearch benchmarking Vision Transformers against Convolutional Neural Networks relies on standard datasets such as ImageNet, COCO, and Cityscapes [5], while comparative evaluations of CNNs, Transformers, and hybrid models for image segmentation use benchmark datasets including Cityscapes, ADE20K, and BRATS [6]. Despite their strengths, Vision Transformers have significant limitations, including high computational complexity, memory demands, and scaling and data challenges that pose difficulties for deployment on resource-constrained devices [8]. Specifically, vision transformers demand larger training datasets and higher computational resources than convolutional neural networks because of the quadratic complexity inherent in their self-attention mechanism [7].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 7,
+    "claims_retried": 1,
+    "retry_successes": 1,
+    "total_retries": 1,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 6,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 14,
+      "arxiv": 1
+    },
+    "seconds": 114.9
+  },
+  "papers": {
+    "s2:39b492db00faead70bc3f4fb4b0364d94398ffdb": {
+      "paper_id": "s2:39b492db00faead70bc3f4fb4b0364d94398ffdb",
+      "title": "Do Vision Transformers See Like Convolutional Neural Networks?",
+      "abstract": "Convolutional neural networks (CNNs) have so far been the de-facto model for visual data. Recent work has shown that (Vision) Transformer models (ViT) can achieve comparable or even superior performance on image classification tasks. This raises a central question: how are Vision Transformers solving these tasks? Are they acting like convolutional networks, or learning entirely different visual representations? Analyzing the internal representation structure of ViTs and CNNs on image classification benchmarks, we find striking differences between the two architectures, such as ViT having more uniform representations across all layers. We explore how these differences arise, finding crucial roles played by self-attention, which enables early aggregation of global information, and ViT residual connections, which strongly propagate features from lower to higher layers. We study the ramifications for spatial localization, demonstrating ViTs successfully preserve input spatial information, with noticeable effects from different classification methods. Finally, we study the effect of (pretraining) dataset scale on intermediate features and transfer learning, and conclude with a discussion on connections to new architectures such as the MLP-Mixer.",
+      "year": 2021,
+      "authors": [
+        "M. Raghu",
+        "T. Unterthiner",
+        "Simon Kornblith",
+        "Chiyuan Zhang",
+        "A. Dosovitskiy"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2108.08810",
+      "venue": "Neural Information Processing Systems",
+      "source": "semantic_scholar"
+    },
+    "s2:3aecded45a18f1f9f7e0bbf46acca10b81bc7fe7": {
+      "paper_id": "s2:3aecded45a18f1f9f7e0bbf46acca10b81bc7fe7",
+      "title": "Comprehensive comparison between vision transformers and convolutional neural networks for face recognition tasks",
+      "abstract": "This paper presents a comprehensive comparison between Vision Transformers and Convolutional Neural Networks for face recognition related tasks, including extensive experiments on the tasks of face identification and verification. Our study focuses on six state-of-the-art models: EfficientNet, Inception, MobileNet, ResNet, VGG, and Vision Transformers. Our evaluation of these models is based on five diverse datasets: Labeled Faces in the Wild, Real World Occluded Faces, Surveillance Cameras Face, UPM-GTI-Face, and VGG Face 2. These datasets present unique challenges regarding people diversity, distance from the camera, and face occlusions such as those produced by masks and glasses. Our contribution to the field includes a deep analysis of the experimental results, including a thorough examination of the training and evaluation process, as well as the software and hardware configurations used. Our results show that Vision Transformers outperform Convolutional Neural Networks in terms of accuracy and robustness against distance and occlusions for face recognition related tasks, while also presenting a smaller memory footprint and an impressive inference speed, rivaling even the fastest Convolutional Neural Networks. In conclusion, our study provides valuable insights into the performance of Vision Transformers for face recognition related tasks and highlights the potential of these models as a more efficient solution than Convolutional Neural Networks.",
+      "year": 2024,
+      "authors": [
+        "Marcos Rodrigo",
+        "Carlos Cuevas",
+        "Narciso García"
+      ],
+      "url": "https://doi.org/10.1038/s41598-024-72254-w",
+      "venue": "Scientific Reports",
+      "source": "semantic_scholar"
+    },
+    "s2:4d3df6f6fc7b591acb540adeb5c6935e68f6d4ad": {
+      "paper_id": "s2:4d3df6f6fc7b591acb540adeb5c6935e68f6d4ad",
+      "title": "Visualization Comparison of Vision Transformers and Convolutional Neural Networks",
+      "abstract": "Recent research has demonstrated that Vision Transformers (ViTs) are capable of comparable or even better performance than convolutional neural network (CNN) baselines. The differences in their structural designs are obvious, but our understanding of the differences in their feature representations remains limited. In this work, we propose several techniques to achieve high-quality visualization of representations in ViTs. Both qualitative and quantitative experiments show that our technical improvements can observably improve ViT visualization quality compared to previous studies. Furthermore, we conduct visualizations to explore the disparities between ViTs and CNNs pre-trained on ImageNet1K, revealing three intriguing properties of ViTs: a) ViT feature propagation retains image detail information with minimal loss, whereas CNNs discard most image details for class discrimination. b) Different from CNNs, object-related features do not show in ViT higher layers, suggesting that class-discriminative features may not be required for ViT classification. c) Our visualization-assisted texture-bias experiment reveals that both ViTs and CNNs exhibit texture bias, of which ViTs seem to be more biased towards local textures.",
+      "year": 2024,
+      "authors": [
+        "Rui Shi",
+        "Tian-Xing Li",
+        "Li-Guo Zhang",
+        "Yasushi Yamaguchi"
+      ],
+      "url": "https://doi.org/10.1109/TMM.2023.3294805",
+      "venue": "IEEE transactions on multimedia",
+      "source": "semantic_scholar"
+    },
+    "s2:8d79c921a87711c43990547e02e1ab601d5209e0": {
+      "paper_id": "s2:8d79c921a87711c43990547e02e1ab601d5209e0",
+      "title": "Comparison of Vision Transformers and Convolutional Neural Networks in Medical Image Analysis: A Systematic Review",
+      "abstract": "In the rapidly evolving field of medical image analysis utilizing artificial intelligence (AI), the selection of appropriate computational models is critical for accurate diagnosis and patient care. This literature review provides a comprehensive comparison of vision transformers (ViTs) and convolutional neural networks (CNNs), the two leading techniques in the field of deep learning in medical imaging. We conducted a survey systematically. Particular attention was given to the robustness, computational efficiency, scalability, and accuracy of these models in handling complex medical datasets. The review incorporates findings from 36 studies and indicates a collective trend that transformer-based models, particularly ViTs, exhibit significant potential in diverse medical imaging tasks, showcasing superior performance when contrasted with conventional CNN models. Additionally, it is evident that pre-training is important for transformer applications. We expect this work to help researchers and practitioners select the most appropriate model for specific medical image analysis tasks, accounting for the current state of the art and future trends in the field.",
+      "year": 2024,
+      "authors": [
+        "Satoshi Takahashi",
+        "Yusuke Sakaguchi",
+        "Nobuji Kouno",
+        "K. Takasawa",
+        "Kenichi Ishizu",
+        "Yu Akagi",
+        "R. Aoyama",
+        "N. Teraya",
+        "A. Bolatkan",
+        "Norio Shinkai",
+        "Hidenori Machino",
+        "Kazuma Kobayashi",
+        "K. Asada",
+        "M. Komatsu",
+        "S. Kaneko",
+        "Masashi Sugiyama",
+        "R. Hamamoto"
+      ],
+      "url": "https://doi.org/10.1007/s10916-024-02105-8",
+      "venue": "Journal of medical systems",
+      "source": "semantic_scholar"
+    },
+    "s2:af127041da78a8f074999ca6f5aaa63b748ca857": {
+      "paper_id": "s2:af127041da78a8f074999ca6f5aaa63b748ca857",
+      "title": "Evaluating Vision Transformers Versus Convolutional Neural Networks for Automated Building Detection in Aerial Drone Images",
+      "abstract": "Urban planning, disaster analysis and smart city involve building detection based on aerial and drone imagery. Despite the high ability of convolutional neural networks (CNNs) to extract features, they lack the ability to incorporate other types of spatial data and buildings due to their small receptive fields and spatial bias influencing performance in complex urban sites with different building scale, orientation, and textures. ViTs, which are exploiting the global self-attention mechanisms, have the advantage of providing better contextual modeling. The originality of the given study is that it introduces a comparative framework that is controlled and unified, compares CNN-based (U-Net, DeepLabV3+) and transformer-based (ViT-B/16, Swin Transformer) filters to each other under the same conditions of the experiment using high-resolution annotated drone images. It also compares models based on identical training regimes, datasets, and metrics since unlike previous research, this study does not compare models individually. The quantitative results demonstrate that the optimal CNN model (DeepLab V3+) got the highest result of 80.5% IoU and a mean CNN-IoU of 79.4% whilst the transformer-based models got a maximum of 87.1% IoU. As qualitative analysis goes on to show, rounder boundary delineation and better modeling of long-range spatial dependencies in high-density urban conditions are also achieved. The results prove the transformer architecture usefulness in the correcting of building extraction in drone cameras.",
+      "year": 2026,
+      "authors": [
+        "Y. Naveen",
+        "Paparao Nalajala",
+        "Ponmurugan Panneerselvam",
+        "J. Kumar",
+        "B. Venkatesu",
+        "Bhavana Godavarthi"
+      ],
+      "url": "https://doi.org/10.23919/INDIACom70271.2026.11525486",
+      "venue": "International Conference on Computing for Sustainable Global Development",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2507.21156": {
+      "paper_id": "arxiv:2507.21156",
+      "title": "Comparative Analysis of Vision Transformers and Convolutional Neural Networks for Medical Image Classification",
+      "abstract": "The emergence of Vision Transformers (ViTs) has revolutionized computer vision, yet their effectiveness compared to traditional Convolutional Neural Networks (CNNs) in medical imaging remains under-explored. This study presents a comprehensive comparative analysis of CNN and ViT architectures across three critical medical imaging tasks: chest X-ray pneumonia detection, brain tumor classification, and skin cancer melanoma detection. We evaluated four state-of-the-art models - ResNet-50, EfficientNet-B0, ViT-Base, and DeiT-Small - across datasets totaling 8,469 medical images. Our results demonstrate task-specific model advantages: ResNet-50 achieved 98.37% accuracy on chest X-ray classification, DeiT-Small excelled at brain tumor detection with 92.16% accuracy, and EfficientNet-B0 led skin cancer classification at 81.84% accuracy. These findings provide crucial insights for practitioners selecting architectures for medical AI applications, highlighting the importance of task-specific architecture selection in clinical decision support systems.",
+      "year": 2025,
+      "authors": [
+        "Kunal Kawadkar"
+      ],
+      "url": "https://arxiv.org/abs/2507.21156",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2307.00213": {
+      "paper_id": "arxiv:2307.00213",
+      "title": "More for Less: Compact Convolutional Transformers Enable Robust Medical Image Classification with Limited Data",
+      "abstract": "Transformers are very powerful tools for a variety of tasks across domains, from text generation to image captioning. However, transformers require substantial amounts of training data, which is often a challenge in biomedical settings, where high quality labeled data can be challenging or expensive to obtain. This study investigates the efficacy of Compact Convolutional Transformers (CCT) for robust medical image classification with limited data, addressing a key issue faced by conventional Vision Transformers - their requirement for large datasets. A hybrid of transformers and convolutional layers, CCTs demonstrate high accuracy on modestly sized datasets. We employed a benchmark dataset of peripheral blood cell images of eight distinct cell types, each represented by approximately 2,000 low-resolution (28x28x3 pixel) samples. Despite the dataset size being smaller than those typically used with Vision Transformers, we achieved a commendable classification accuracy of 92.49% and a micro-average ROC AUC of 0.9935. The CCT also learned quickly, exceeding 80% validation accuracy after five epochs. Analysis of per-class precision, recall, F1, and ROC showed that performance was strong across cell types. Our findings underscore the robustness of CCTs, indicating their potential as a solution to data scarcity issues prevalent in biomedical imaging. We substantiate the applicability of CCTs in data-constrained areas and encourage further work on CCTs.",
+      "year": 2023,
+      "authors": [
+        "Andrew Kean Gao"
+      ],
+      "url": "https://arxiv.org/abs/2307.00213",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2503.02891": {
+      "paper_id": "arxiv:2503.02891",
+      "title": "Vision Transformers on the Edge: A Comprehensive Survey of Model Compression and Acceleration Strategies",
+      "abstract": "In recent years, vision transformers (ViTs) have emerged as powerful and promising techniques for computer vision tasks such as image classification, object detection, and segmentation. Unlike convolutional neural networks (CNNs), which rely on hierarchical feature extraction, ViTs treat images as sequences of patches and leverage self-attention mechanisms. However, their high computational complexity and memory demands pose significant challenges for deployment on resource-constrained edge devices. To address these limitations, extensive research has focused on model compression techniques and hardware-aware acceleration strategies. Nonetheless, a comprehensive review that systematically categorizes these techniques and their trade-offs in accuracy, efficiency, and hardware adaptability for edge deployment remains lacking. This survey bridges this gap by providing a structured analysis of model compression techniques, software tools for inference on edge, and hardware acceleration strategies for ViTs. We discuss their impact on accuracy, efficiency, and hardware adaptability, highlighting key challenges and emerging research directions to advance ViT deployment on edge platforms, including graphics processing units (GPUs), application-specific integrated circuit (ASICs), and field-programmable gate arrays (FPGAs). The goal is to inspire further research with a contemporary guide on optimizing ViTs for efficient deployment on edge devices.",
+      "year": 2025,
+      "authors": [
+        "Shaibal Saha",
+        "Lanyu Xu"
+      ],
+      "url": "https://arxiv.org/abs/2503.02891",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2206.10552": {
+      "paper_id": "arxiv:2206.10552",
+      "title": "Vicinity Vision Transformer",
+      "abstract": "Vision transformers have shown great success on numerous computer vision tasks. However, its central component, softmax attention, prohibits vision transformers from scaling up to high-resolution images, due to both the computational complexity and memory footprint being quadratic. Although linear attention was introduced in natural language processing (NLP) tasks to mitigate a similar issue, directly applying existing linear attention to vision transformers may not lead to satisfactory results. We investigate this problem and find that computer vision tasks focus more on local information compared with NLP tasks. Based on this observation, we present a Vicinity Attention that introduces a locality bias to vision transformers with linear complexity. Specifically, for each image patch, we adjust its attention weight based on its 2D Manhattan distance measured by its neighbouring patches. In this case, the neighbouring patches will receive stronger attention than far-away patches. Moreover, since our Vicinity Attention requires the token length to be much larger than the feature dimension to show its efficiency advantages, we further propose a new Vicinity Vision Transformer (VVT) structure to reduce the feature dimension without degenerating the accuracy. We perform extensive experiments on the CIFAR100, ImageNet1K, and ADE20K datasets to validate the effectiveness of our method. Our method has a slower growth rate of GFlops than previous transformer-based and convolution-based networks when the input resolution increases. In particular, our approach achieves state-of-the-art image classification accuracy with 50% fewer parameters than previous methods.",
+      "year": 2022,
+      "authors": [
+        "Weixuan Sun",
+        "Zhen Qin",
+        "Hui Deng",
+        "Jianyuan Wang",
+        "Yi Zhang",
+        "Kaihao Zhang",
+        "Nick Barnes",
+        "Stan Birchfield",
+        "Lingpeng Kong",
+        "Yiran Zhong"
+      ],
+      "url": "https://arxiv.org/abs/2206.10552",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2112.09300": {
+      "paper_id": "arxiv:2112.09300",
+      "title": "Towards End-to-End Image Compression and Analysis with Transformers",
+      "abstract": "We propose an end-to-end image compression and analysis model with Transformers, targeting to the cloud-based image classification application. Instead of placing an existing Transformer-based image classification model directly after an image codec, we aim to redesign the Vision Transformer (ViT) model to perform image classification from the compressed features and facilitate image compression with the long-term information from the Transformer. Specifically, we first replace the patchify stem (i.e., image splitting and embedding) of the ViT model with a lightweight image encoder modelled by a convolutional neural network. The compressed features generated by the image encoder are injected convolutional inductive bias and are fed to the Transformer for image classification bypassing image reconstruction. Meanwhile, we propose a feature aggregation module to fuse the compressed features with the selected intermediate features of the Transformer, and feed the aggregated features to a deconvolutional neural network for image reconstruction. The aggregated features can obtain the long-term information from the self-attention mechanism of the Transformer and improve the compression performance. The rate-distortion-accuracy optimization problem is finally solved by a two-step training strategy. Experimental results demonstrate the effectiveness of the proposed model in both the image compression and the classification tasks.",
+      "year": 2021,
+      "authors": [
+        "Yuanchao Bai",
+        "Xu Yang",
+        "Xianming Liu",
+        "Junjun Jiang",
+        "Yaowei Wang",
+        "Xiangyang Ji",
+        "Wen Gao"
+      ],
+      "url": "https://arxiv.org/abs/2112.09300",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:f61a0c18b7585a87e0fb6a7e0053edd306dc3c8c": {
+      "paper_id": "s2:f61a0c18b7585a87e0fb6a7e0053edd306dc3c8c",
+      "title": "Vision Transformers vs. Convolutional Neural Networks: Benchmarking Across Tasks",
+      "abstract": "Abstract: Vision Transformers (ViTs) have recently emerged as a powerful alternative to traditional Convolutional Neural Networks (CNNs) for computer vision tasks. This research benchmarks ViTs against CNNs across multiple tasks including image classification, object detection, and semantic segmentation. Utilizing standard datasets (ImageNet, COCO, and Cityscapes) and deep learning frameworks (TensorFlow, PyTorch, Hugging Face), we analyze performance using metrics like accuracy, F1-score, mean Intersection over Union (mIoU), and inference speed. We also apply SHAP and LIME for model interpretability, alongside regression and predictive analyses to assess performance trends. Results reveal that while ViTs outperform CNNs in scalability and accuracy on large datasets, CNNs still dominate in computational efficiency and performance on smaller datasets. Keywords: Vision Transformers, Convolutional Neural Networks, Image Classification, Object Detection, Semantic Segmentation, TensorFlow, PyTorch, SHAP, LIME",
+      "year": 2025,
+      "authors": [
+        "Murali Krishna Pasupuleti"
+      ],
+      "url": "https://doi.org/10.62311/nesx/rphcr4",
+      "venue": "International Journal of Academic and Industrial Research Innovations(IJAIRI)",
+      "source": "semantic_scholar"
+    },
+    "s2:079c91aba64a50df78b7ba81987129a10493b08c": {
+      "paper_id": "s2:079c91aba64a50df78b7ba81987129a10493b08c",
+      "title": "Benchmarking AI Architectures for Image Segmentation: CNNs, Transformers, and Hybrid Models",
+      "abstract": "Image segmentation is a critical task in artificial intelligence (AI) and computer vision, supporting applications ranging from autonomous driving and medical imaging to video surveillance and augmented reality. Although numerous deep learning models have been proposed, comparative evaluations across major architectural families remain limited. This paper benchmarks three categories of AI-based architectures for image segmentation: convolutional neural networks (CNNs), Transformer-based models, and emerging hybrid frameworks that integrate both paradigms. Using benchmark datasets including Cityscapes, ADE20K, and BRATS, we evaluate representative models such as U-Net, DeepLabv3+, Swin Transformer, SegFormer, and UNETR. Models are assessed using standard accuracy metrics such as mean Intersection-over-Union (mIoU), Dice coefficient, and Pixel Accuracy, along with efficiency measures including inference time and parameter count. Results indicate that Transformer-based models achieve the highest accuracy (mIoU up to 83.1 %), CNN-based models remain suitable for lightweight and real-time AI applications, and hybrid models offer a promising balance between accuracy and efficiency. These findings highlight the strengths and trade-offs of modern AI segmentation architectures and provide guidance for future research in the field.",
+      "year": 2025,
+      "authors": [
+        "Sankar Lavuri",
+        "Krishnanaik Vankdoth"
+      ],
+      "url": "https://doi.org/10.1109/CICN67655.2025.11368266",
+      "venue": "International Conference on Computational Intelligence and Communication Networks",
+      "source": "semantic_scholar"
+    },
+    "s2:984dedb14edeada8c6707a041431bf096a388e54": {
+      "paper_id": "s2:984dedb14edeada8c6707a041431bf096a388e54",
+      "title": "Inductive Bias Matters: Benchmarking CNNs, Transformers, and Hybrid Architectures for Diabetic Retinopathy Grading",
+      "abstract": "Diabetic Retinopathy (DR) classification presents a unique challenge in medical imaging, requiring the detection of fine-grained lesions like microaneurysms within highly imbalanced datasets. While Vision Transformers (ViTs) excel in general computer vision, their efficacy compared to Convolutional Neural Networks (CNNs) in low-data medical regimes remains debated. This study benchmarks three architectural paradigms, selecting nine prominent models developed primarily from around 2020 onwards: pure CNNs (EfficientNetV2, HRNet, InceptionNeXt), pure Transformers (ViT, Swin, DeiT), and Hybrids (CoAtNet, MaxViT, MobileViT), to evaluate the impact of inductive bias on DR severity grading. Using the standardized EyePACS dataset, nine architectures with a consistent pipeline are trained. CNNs proved the most robust, achieving the highest average Quadratic Weighted Kappa (QWK: 0.687) and AUC (0.846), with HRNet emerging as the top model (QWK: 0.70). Statistical analysis via bootstrapping revealed that pure Transformers exhibit significantly wider 9 5% confidence intervals ($\\Delta \\approx 0.06$) compared to $\\text{CNNs}(\\Delta \\approx 0.04)$, indicating higher instability. While Hybrids achieved the highest Accuracy (75.2%), their lower QWK (0.678) implies reduced consistency in grading severe disease stages. It is demonstrated that the locality inherent to CNNs is crucial for detecting subtle retinal pathologies. While Hybrids offer a middle ground, pure Transformers demonstrate lower reliability in this domain.",
+      "year": 2026,
+      "authors": [
+        "Muhammad Omer",
+        "Sardar Jaffar Ali",
+        "D. Le",
+        "Hyunseung Choo"
+      ],
+      "url": "https://doi.org/10.1109/IMCOM69009.2026.11360971",
+      "venue": "International Conference on Ubiquitous Information Management and Communication",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2108.08810": {
+      "paper_id": "arxiv:2108.08810",
+      "title": "Do Vision Transformers See Like Convolutional Neural Networks?",
+      "abstract": "Convolutional neural networks (CNNs) have so far been the de-facto model for visual data. Recent work has shown that (Vision) Transformer models (ViT) can achieve comparable or even superior performance on image classification tasks. This raises a central question: how are Vision Transformers solving these tasks? Are they acting like convolutional networks, or learning entirely different visual representations? Analyzing the internal representation structure of ViTs and CNNs on image classification benchmarks, we find striking differences between the two architectures, such as ViT having more uniform representations across all layers. We explore how these differences arise, finding crucial roles played by self-attention, which enables early aggregation of global information, and ViT residual connections, which strongly propagate features from lower to higher layers. We study the ramifications for spatial localization, demonstrating ViTs successfully preserve input spatial information, with noticeable effects from different classification methods. Finally, we study the effect of (pretraining) dataset scale on intermediate features and transfer learning, and conclude with a discussion on connections to new architectures such as the MLP-Mixer.",
+      "year": 2021,
+      "authors": [
+        "Maithra Raghu",
+        "Thomas Unterthiner",
+        "Simon Kornblith",
+        "Chiyuan Zhang",
+        "Alexey Dosovitskiy"
+      ],
+      "url": "https://arxiv.org/abs/2108.08810",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2508.02871": {
+      "paper_id": "arxiv:2508.02871",
+      "title": "Evaluation and Analysis of Deep Neural Transformers and Convolutional Neural Networks on Modern Remote Sensing Datasets",
+      "abstract": "In 2012, AlexNet established deep convolutional neural networks (DCNNs) as the state-of-the-art in CV, as these networks soon led in visual tasks for many domains, including remote sensing. With the publication of Visual Transformers, we are witnessing the second modern leap in computational vision, and as such, it is imperative to understand how various transformer-based neural networks perform on satellite imagery. While transformers have shown high levels of performance in natural language processing and CV applications, they have yet to be compared on a large scale to modern remote sensing data. In this paper, we explore the use of transformer-based neural networks for object detection in high-resolution electro-optical satellite imagery, demonstrating state-of-the-art performance on a variety of publicly available benchmark data sets. We compare eleven distinct bounding-box detection and localization algorithms in this study, of which seven were published since 2020, and all eleven since 2015. The performance of five transformer-based architectures is compared with six convolutional networks on three state-of-the-art opensource high-resolution remote sensing imagery datasets ranging in size and complexity. Following the training and evaluation of thirty-three deep neural models, we then discuss and analyze model performance across various feature extraction methodologies and detection algorithms.",
+      "year": 2025,
+      "authors": [
+        "J. Alex Hurt",
+        "Trevor M. Bajkowski",
+        "Grant J. Scott",
+        "Curt H. Davis"
+      ],
+      "url": "https://arxiv.org/abs/2508.02871",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:fdd3a08f422746b7ab1dd8dfa1e7e24db9550ee2": {
+      "paper_id": "s2:fdd3a08f422746b7ab1dd8dfa1e7e24db9550ee2",
+      "title": "Vision Transformers (ViTs): A New Era in Computer Vision – A Review",
+      "abstract": "Vision Transformers (ViTs) have become a strong substitute to Convolutional Neural Networks (CNNs) in computer vision, providing a new method to learn global dependencies using self-attention operations. This survey paper provides an in-depth analysis of the development, application, optimization, and deployment difficulties of ViT models. We begin by reviewing the evolution of ViTs from their base architecture, and its subsequent adaptations to newly developed versions, including hybrids with CNNs and multi-scale attention. We then investigate the applications of ViTs such as image classification, object detection, segmentation, depth estimation, medical image analysis, and industry vision inspection. Methods to enhance ViT efficiency—such as model pruning/quantization, hybridization with CNNs, and dynamic adaptation—are extensively discussed. However, ViTs also have significant limitations including computational complexity, scaling and data challenges. Spatial Usage of Scratch Programming Blocks Some potential solutions and future directions are addressed, such as deploying the work on edge device and inclusion in multimodal learning systems. Synthesizing knowledge from recent literature, this paper provides a comprehensive overview of the trends that have developed and six paradigms that currently exist for ViTs in computer vision.",
+      "year": 2025,
+      "authors": [
+        "Ao Wang"
+      ],
+      "url": "https://doi.org/10.54097/41t0vx90",
+      "venue": "Journal of Computing and Electronic Information Management",
+      "source": "semantic_scholar"
+    },
+    "s2:76c85685207eea3e8a0557d141aca52e544f362c": {
+      "paper_id": "s2:76c85685207eea3e8a0557d141aca52e544f362c",
+      "title": "Convolutional Xformers for Vision",
+      "abstract": "Vision transformers (ViTs) have found only limited practical use in processing images, in spite of their state-of-the-art accuracy on certain benchmarks. The reason for their limited use include their need for larger training datasets and more computational resources compared to convolutional neural networks (CNNs), owing to the quadratic complexity of their self-attention mechanism. We propose a linear attention-convolution hybrid architecture -- Convolutional X-formers for Vision (CXV) -- to overcome these limitations. We replace the quadratic attention with linear attention mechanisms, such as Performer, Nystr\\\"omformer, and Linear Transformer, to reduce its GPU usage. Inductive prior for image data is provided by convolutional sub-layers, thereby eliminating the need for class token and positional embeddings used by the ViTs. We also propose a new training method where we use two different optimizers during different phases of training and show that it improves the top-1 image classification accuracy across different architectures. CXV outperforms other architectures, token mixers (e.g. ConvMixer, FNet and MLP Mixer), transformer models (e.g. ViT, CCT, CvT and hybrid Xformers), and ResNets for image classification in scenarios with limited data and GPU resources (cores, RAM, power).",
+      "year": 2022,
+      "authors": [
+        "Pranav Jeevan",
+        "A. Sethi"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2201.10271",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:62cc58a2e14266a5af85b47f1517c28132679729": {
+      "paper_id": "s2:62cc58a2e14266a5af85b47f1517c28132679729",
+      "title": "Vision Transformers on the Edge: A Comprehensive Survey of Model Compression and Acceleration Strategies",
+      "abstract": "In recent years, vision transformers (ViTs) have emerged as powerful and promising techniques for computer vision tasks such as image classification, object detection, and segmentation. Unlike convolutional neural networks (CNNs), which rely on hierarchical feature extraction, ViTs treat images as sequences of patches and leverage self-attention mechanisms. However, their high computational complexity and memory demands pose significant challenges for deployment on resource-constrained edge devices. To address these limitations, extensive research has focused on model compression techniques and hardware-aware acceleration strategies. Nonetheless, a comprehensive review that systematically categorizes these techniques and their trade-offs in accuracy, efficiency, and hardware adaptability for edge deployment remains lacking. This survey bridges this gap by providing a structured analysis of model compression techniques, software tools for inference on edge, and hardware acceleration strategies for ViTs. We discuss their impact on accuracy, efficiency, and hardware adaptability, highlighting key challenges and emerging research directions to advance ViT deployment on edge platforms, including graphics processing units (GPUs), application-specific integrated circuit (ASICs), and field-programmable gate arrays (FPGAs). The goal is to inspire further research with a contemporary guide on optimizing ViTs for efficient deployment on edge devices.",
+      "year": 2025,
+      "authors": [
+        "Shaibal Saha",
+        "Lan-Yu Xu"
+      ],
+      "url": "https://doi.org/10.1016/j.neucom.2025.130417",
+      "venue": "Neurocomputing",
+      "source": "semantic_scholar"
+    },
+    "s2:1dbbb296202bee9100e81dc6b433c849dda7c346": {
+      "paper_id": "s2:1dbbb296202bee9100e81dc6b433c849dda7c346",
+      "title": "THE ROLE OF DEEP LEARNING ARCHITECTURES IN COMPUTER VISION AND NATURAL LANGUAGE PROCESSING: A COMPREHENSIVE REVIEW",
+      "abstract": "The invention of powerful neural architectures has transformed the areas of computer vision and natural language processing with deep learning. This review addresses the history and use of the most well-known deep learning models, such as convolutional neural networks, recurrent neural networks, and transformers, in both CV and NLP fields. CNN-based models have proved to be incredibly powerful in image classification, object identification and segmentation in computer vision. Transformer-based models like BERT and GPT have surpassed conventional RNNs in NLP by allowing a scalable context modeling due to the self-attention mechanisms. Along with these achievements, deep learning systems have a number of limitations, namely high computational complexity, sensitivity to data, poor explainability, and susceptibility to bias and adversarial attacks. In this paper, some important benchmark datasets and evaluation measures to compare architectures will be discussed, and a critical evaluation of the existing shortcomings and future research avenues will be provided. Most of these challenges should be addressed in the future with respect to efficient architectures, explainability and multimodal learning. Through the synthesis of recent developments, comparative analysis, and implications, this review gives a thorough picture of how deep learning architectures are still defining the field of computer vision and natural language processing.",
+      "year": 2025,
+      "authors": [
+        "Nur Ilman"
+      ],
+      "url": "https://doi.org/10.12732/ijam.v38i5.784",
+      "venue": "International Journal of Applied Mathematics",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2403.07542": {
+      "paper_id": "arxiv:2403.07542",
+      "title": "A Survey of Vision Transformers in Autonomous Driving: Current Trends and Future Directions",
+      "abstract": "This survey explores the adaptation of visual transformer models in Autonomous Driving, a transition inspired by their success in Natural Language Processing. Surpassing traditional Recurrent Neural Networks in tasks like sequential image processing and outperforming Convolutional Neural Networks in global context capture, as evidenced in complex scene recognition, Transformers are gaining traction in computer vision. These capabilities are crucial in Autonomous Driving for real-time, dynamic visual scene processing. Our survey provides a comprehensive overview of Vision Transformer applications in Autonomous Driving, focusing on foundational concepts such as self-attention, multi-head attention, and encoder-decoder architecture. We cover applications in object detection, segmentation, pedestrian detection, lane detection, and more, comparing their architectural merits and limitations. The survey concludes with future research directions, highlighting the growing role of Vision Transformers in Autonomous Driving.",
+      "year": 2024,
+      "authors": [
+        "Quoc-Vinh Lai-Dang"
+      ],
+      "url": "https://arxiv.org/abs/2403.07542",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2309.05674": {
+      "paper_id": "arxiv:2309.05674",
+      "title": "ConvFormer: Plug-and-Play CNN-Style Transformers for Improving Medical Image Segmentation",
+      "abstract": "Transformers have been extensively studied in medical image segmentation to build pairwise long-range dependence. Yet, relatively limited well-annotated medical image data makes transformers struggle to extract diverse global features, resulting in attention collapse where attention maps become similar or even identical. Comparatively, convolutional neural networks (CNNs) have better convergence properties on small-scale training data but suffer from limited receptive fields. Existing works are dedicated to exploring the combinations of CNN and transformers while ignoring attention collapse, leaving the potential of transformers under-explored. In this paper, we propose to build CNN-style Transformers (ConvFormer) to promote better attention convergence and thus better segmentation performance. Specifically, ConvFormer consists of pooling, CNN-style self-attention (CSA), and convolutional feed-forward network (CFFN) corresponding to tokenization, self-attention, and feed-forward network in vanilla vision transformers. In contrast to positional embedding and tokenization, ConvFormer adopts 2D convolution and max-pooling for both position information preservation and feature size reduction. In this way, CSA takes 2D feature maps as inputs and establishes long-range dependency by constructing self-attention matrices as convolution kernels with adaptive sizes. Following CSA, 2D convolution is utilized for feature refinement through CFFN. Experimental results on multiple datasets demonstrate the effectiveness of ConvFormer working as a plug-and-play module for consistent performance improvement of transformer-based frameworks. Code is available at https://github.com/xianlin7/ConvFormer.",
+      "year": 2023,
+      "authors": [
+        "Xian Lin",
+        "Zengqiang Yan",
+        "Xianbo Deng",
+        "Chuansheng Zheng",
+        "Li Yu"
+      ],
+      "url": "https://arxiv.org/abs/2309.05674",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2006.16427": {
+      "paper_id": "arxiv:2006.16427",
+      "title": "Biologically Inspired Mechanisms for Adversarial Robustness",
+      "abstract": "A convolutional neural network strongly robust to adversarial perturbations at reasonable computational and performance cost has not yet been demonstrated. The primate visual ventral stream seems to be robust to small perturbations in visual stimuli but the underlying mechanisms that give rise to this robust perception are not understood. In this work, we investigate the role of two biologically plausible mechanisms in adversarial robustness. We demonstrate that the non-uniform sampling performed by the primate retina and the presence of multiple receptive fields with a range of receptive field sizes at each eccentricity improve the robustness of neural networks to small adversarial perturbations. We verify that these two mechanisms do not suffer from gradient obfuscation and study their contribution to adversarial robustness through ablation studies.",
+      "year": 2020,
+      "authors": [
+        "Manish V. Reddy",
+        "Andrzej Banburski",
+        "Nishka Pant",
+        "Tomaso Poggio"
+      ],
+      "url": "https://arxiv.org/abs/2006.16427",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2308.16598": {
+      "paper_id": "arxiv:2308.16598",
+      "title": "Towards Optimal Patch Size in Vision Transformers for Tumor Segmentation",
+      "abstract": "Detection of tumors in metastatic colorectal cancer (mCRC) plays an essential role in the early diagnosis and treatment of liver cancer. Deep learning models backboned by fully convolutional neural networks (FCNNs) have become the dominant model for segmenting 3D computerized tomography (CT) scans. However, since their convolution layers suffer from limited kernel size, they are not able to capture long-range dependencies and global context. To tackle this restriction, vision transformers have been introduced to solve FCNN's locality of receptive fields. Although transformers can capture long-range features, their segmentation performance decreases with various tumor sizes due to the model sensitivity to the input patch size. While finding an optimal patch size improves the performance of vision transformer-based models on segmentation tasks, it is a time-consuming and challenging procedure. This paper proposes a technique to select the vision transformer's optimal input multi-resolution image patch size based on the average volume size of metastasis lesions. We further validated our suggested framework using a transfer-learning technique, demonstrating that the highest Dice similarity coefficient (DSC) performance was obtained by pre-training on training data with a larger tumour volume using the suggested ideal patch size and then training with a smaller one. We experimentally evaluate this idea through pre-training our model on a multi-resolution public dataset. Our model showed consistent and improved results when applied to our private multi-resolution mCRC dataset with a smaller average tumor volume. This study lays the groundwork for optimizing semantic segmentation of small objects using vision transformers. The implementation source code is available at:https://github.com/Ramtin-Mojtahedi/OVTPS.",
+      "year": 2023,
+      "authors": [
+        "Ramtin Mojtahedi",
+        "Mohammad Hamghalam",
+        "Richard K. G. Do",
+        "Amber L. Simpson"
+      ],
+      "url": "https://arxiv.org/abs/2308.16598",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q08",
+  "area": "AI"
+}

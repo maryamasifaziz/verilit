@@ -1,0 +1,714 @@
+{
+  "question": "How does instruction tuning affect the zero-shot abilities of language models?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What are the primary methods and training techniques used for instruction tuning in language models?",
+      "search_query": "instruction tuning methods language models",
+      "paper_ids": [
+        "arxiv:2310.00492",
+        "arxiv:2310.19651",
+        "arxiv:2405.19744",
+        "s2:51f0c3b06861c79fbb283022df109818ce4ebe51",
+        "s2:5c118e57b5398224ca4401c902cda33da7d29ec3"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "How does instruction tuning impact the zero-shot performance and generalization capabilities on unseen tasks?",
+      "search_query": "instruction tuning zero shot generalization",
+      "paper_ids": [
+        "s2:6807fe21b2d9819563a9ad8dfa46c8c7804f1b08",
+        "s2:1265bc74328b30123530da1ba867edcaf8ca1d5d",
+        "s2:590954e15e247cc343710ee97e396ad99f52970f",
+        "s2:1b4910ea0619694a1e590584ccde4f6f0341c3c0",
+        "s2:90dd829f3d64dda19092b6e26909803bea5c37c1"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What datasets, instruction collections, and evaluation benchmarks are commonly used to assess zero-shot abilities?",
+      "search_query": "instruction tuning evaluation benchmarks datasets",
+      "paper_ids": [
+        "arxiv:2308.06595",
+        "s2:eab54bef4b479e0b06fc65c8cab2c0400fa69b8a",
+        "arxiv:2306.04751",
+        "arxiv:2402.11690",
+        "arxiv:2508.15239"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the known limitations, failure modes, or negative side effects associated with instruction tuning?",
+      "search_query": "limitations of instruction tuning language models",
+      "paper_ids": [
+        "s2:acbce5ebf3f254188d10f6ba7de1ba716db89774",
+        "s2:821f745e7ec0813775d17242177fd057ef11c85b",
+        "arxiv:2304.08109",
+        "arxiv:2311.13133",
+        "s2:4447750dd27e7a45d0b690159eb854ec0c7309a0"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study investigates instruction tuning for Chinese large language models using a dataset named DoIT, which includes over 40,000 instruction instances covering ten abilities.",
+        "paper_id": "arxiv:2310.19651"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study investigates instruction tuning for Chinese large language models using a dataset named DoIT, which includes over 40,000 instruction instances covering ten abilities.",
+          "paper_id": "arxiv:2310.19651",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9312,
+          "p_supported": 0.9312,
+          "accepted": true,
+          "alt_p_supported": 0.912
+        }
+      ],
+      "final": {
+        "text": "One study investigates instruction tuning for Chinese large language models using a dataset named DoIT, which includes over 40,000 instruction instances covering ten abilities.",
+        "paper_id": "arxiv:2310.19651",
+        "label": "SUPPORTED",
+        "confidence": 0.9312
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "The Self-refine Instruction-tuning method uses a two-stage process where reasoning abilities are first transferred via instruction-tuning on synthetic demonstrations, followed by preference optimization strategies using Direct Preference Optimization.",
+        "paper_id": "s2:5c118e57b5398224ca4401c902cda33da7d29ec3"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The Self-refine Instruction-tuning method uses a two-stage process where reasoning abilities are first transferred via instruction-tuning on synthetic demonstrations, followed by preference optimization strategies using Direct Preference Optimization.",
+          "paper_id": "s2:5c118e57b5398224ca4401c902cda33da7d29ec3",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9242,
+          "p_supported": 0.9242,
+          "accepted": true,
+          "alt_p_supported": 0.8858
+        }
+      ],
+      "final": {
+        "text": "The Self-refine Instruction-tuning method uses a two-stage process where reasoning abilities are first transferred via instruction-tuning on synthetic demonstrations, followed by preference optimization strategies using Direct Preference Optimization.",
+        "paper_id": "s2:5c118e57b5398224ca4401c902cda33da7d29ec3",
+        "label": "SUPPORTED",
+        "confidence": 0.9242
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "Instruction tuning enhances zero-shot generalization across various tasks and improves the performance of specific tasks.",
+        "paper_id": "s2:1265bc74328b30123530da1ba867edcaf8ca1d5d"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Instruction tuning enhances zero-shot generalization across various tasks and improves the performance of specific tasks.",
+          "paper_id": "s2:1265bc74328b30123530da1ba867edcaf8ca1d5d",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9579,
+          "p_supported": 0.9579,
+          "accepted": true,
+          "alt_p_supported": 0.9287
+        }
+      ],
+      "final": {
+        "text": "Instruction tuning enhances zero-shot generalization across various tasks and improves the performance of specific tasks.",
+        "paper_id": "s2:1265bc74328b30123530da1ba867edcaf8ca1d5d",
+        "label": "SUPPORTED",
+        "confidence": 0.9579
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Cross-lingual instruction tuning yields consistent improvements in zero-shot generalization, outperforming the baseline by average scores of 20.7% for English and 13.6% for Korean.",
+        "paper_id": "s2:1b4910ea0619694a1e590584ccde4f6f0341c3c0"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Cross-lingual instruction tuning yields consistent improvements in zero-shot generalization, outperforming the baseline by average scores of 20.7% for English and 13.6% for Korean.",
+          "paper_id": "s2:1b4910ea0619694a1e590584ccde4f6f0341c3c0",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9535,
+          "p_supported": 0.9535,
+          "accepted": true,
+          "alt_p_supported": 0.9192
+        }
+      ],
+      "final": {
+        "text": "Cross-lingual instruction tuning yields consistent improvements in zero-shot generalization, outperforming the baseline by average scores of 20.7% for English and 13.6% for Korean.",
+        "paper_id": "s2:1b4910ea0619694a1e590584ccde4f6f0341c3c0",
+        "label": "SUPPORTED",
+        "confidence": 0.9535
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "VisIT-Bench is a benchmark for evaluating instruction-following vision-language models, comprising 592 test queries and 70 instruction families.",
+        "paper_id": "arxiv:2308.06595"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "VisIT-Bench is a benchmark for evaluating instruction-following vision-language models, comprising 592 test queries and 70 instruction families.",
+          "paper_id": "arxiv:2308.06595",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9444,
+          "p_supported": 0.9444,
+          "accepted": true,
+          "alt_p_supported": 0.9142
+        }
+      ],
+      "final": {
+        "text": "VisIT-Bench is a benchmark for evaluating instruction-following vision-language models, comprising 592 test queries and 70 instruction families.",
+        "paper_id": "arxiv:2308.06595",
+        "label": "SUPPORTED",
+        "confidence": 0.9444
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "Vision-Flan is a visual instruction tuning dataset comprising 187 diverse tasks and 1,664,261 instances sourced from academic datasets.",
+        "paper_id": "arxiv:2402.11690"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Vision-Flan is a visual instruction tuning dataset comprising 187 diverse tasks and 1,664,261 instances sourced from academic datasets.",
+          "paper_id": "arxiv:2402.11690",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9386,
+          "p_supported": 0.9386,
+          "accepted": true,
+          "alt_p_supported": 0.9191
+        }
+      ],
+      "final": {
+        "text": "Vision-Flan is a visual instruction tuning dataset comprising 187 diverse tasks and 1,664,261 instances sourced from academic datasets.",
+        "paper_id": "arxiv:2402.11690",
+        "label": "SUPPORTED",
+        "confidence": 0.9386
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Full-parameter instruction tuning leads to knowledge degradation and increases hallucination by inaccurately borrowing tokens from conceptually similar instances.",
+        "paper_id": "s2:acbce5ebf3f254188d10f6ba7de1ba716db89774"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Full-parameter instruction tuning leads to knowledge degradation and increases hallucination by inaccurately borrowing tokens from conceptually similar instances.",
+          "paper_id": "s2:acbce5ebf3f254188d10f6ba7de1ba716db89774",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9324,
+          "p_supported": 0.9324,
+          "accepted": true,
+          "alt_p_supported": 0.8978
+        }
+      ],
+      "final": {
+        "text": "Full-parameter instruction tuning leads to knowledge degradation and increases hallucination by inaccurately borrowing tokens from conceptually similar instances.",
+        "paper_id": "s2:acbce5ebf3f254188d10f6ba7de1ba716db89774",
+        "label": "SUPPORTED",
+        "confidence": 0.9324
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Traditional instruction tuning inadvertently conditions models to fabricate answers rather than communicate their epistemic limitations when encountering queries beyond their knowledge boundaries.",
+        "paper_id": "s2:4447750dd27e7a45d0b690159eb854ec0c7309a0"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Traditional instruction tuning inadvertently conditions models to fabricate answers rather than communicate their epistemic limitations when encountering queries beyond their knowledge boundaries.",
+          "paper_id": "s2:4447750dd27e7a45d0b690159eb854ec0c7309a0",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.953,
+          "p_supported": 0.953,
+          "accepted": true,
+          "alt_p_supported": 0.9297
+        }
+      ],
+      "final": {
+        "text": "Traditional instruction tuning inadvertently conditions models to fabricate answers rather than communicate their epistemic limitations when encountering queries beyond their knowledge boundaries.",
+        "paper_id": "s2:4447750dd27e7a45d0b690159eb854ec0c7309a0",
+        "label": "SUPPORTED",
+        "confidence": 0.953
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "arxiv:2310.19651",
+      "citation": "Chiyu Song, Zhanchao Zhou, Jianhao Yan et al. (2023). Dynamics of Instruction Fine-Tuning for Chinese Large Language Models. arXiv. https://arxiv.org/abs/2310.19651"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:5c118e57b5398224ca4401c902cda33da7d29ec3",
+      "citation": "Leonardo Ranaldi, André Freitas (2024). Self-Refine Instruction-Tuning for Aligning Reasoning in Language Models. Conference on Empirical Methods in Natural Language Processing. https://doi.org/10.18653/v1/2024.emnlp-main.139"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:1265bc74328b30123530da1ba867edcaf8ca1d5d",
+      "citation": "Chang-Ho Lee, Janghoon Han, Seonghyeon Ye et al. (2024). Instruction Matters: A Simple yet Effective Task Selection for Optimized Instruction Tuning of Specific Tasks. Conference on Empirical Methods in Natural Language Processing. https://doi.org/10.18653/v1/2024.emnlp-main.1036"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:1b4910ea0619694a1e590584ccde4f6f0341c3c0",
+      "citation": "Janghoon Han, Chang-Ho Lee, Joongbo Shin et al. (2024). Deep Exploration of Cross-Lingual Zero-Shot Generalization in Instruction Tuning. Annual Meeting of the Association for Computational Linguistics. https://doi.org/10.48550/arXiv.2406.08796"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2308.06595",
+      "citation": "Yonatan Bitton, Hritik Bansal, Jack Hessel et al. (2023). VisIT-Bench: A Benchmark for Vision-Language Instruction Following Inspired by Real-World Use. arXiv. https://arxiv.org/abs/2308.06595"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2402.11690",
+      "citation": "Zhiyang Xu, Chao Feng, Rulin Shao et al. (2024). Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning. arXiv. https://arxiv.org/abs/2402.11690"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:acbce5ebf3f254188d10f6ba7de1ba716db89774",
+      "citation": "Sreyan Ghosh, Chandra Kiran Reddy Evuru, Reddy Evuru et al. (2024). A Closer Look at the Limitations of Instruction Tuning. International Conference on Machine Learning. https://doi.org/10.48550/arXiv.2402.05119"
+    },
+    {
+      "n": 8,
+      "paper_id": "s2:4447750dd27e7a45d0b690159eb854ec0c7309a0",
+      "citation": "Daphne Fu (2026). Refusal-Aware Instruction Tuning through Gradient-Guided Optimization and Knowledge-Flow Calibration for Hallucination Mitigation under Uncertain Knowledge Boundaries and Conflicting Evidence in Large Language Models. International Journal of Machine Learning and Engineering. https://doi.org/10.66238/dh1b4a56"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Instruction tuning is a prominent technique used to enhance the capabilities of language models. Primary training methods include utilizing specific datasets such as DoIT for Chinese large language models, which covers over 40,000 instruction instances across ten abilities [1]. Additionally, the Self-refine Instruction-tuning method employs a two-stage process that first transfers reasoning abilities through synthetic demonstration instruction-tuning, followed by preference optimization using Direct Preference Optimization [2]. In the multimodal domain, Vision-Flan serves as a visual instruction tuning dataset comprising 187 diverse tasks and 1,664,261 instances from academic datasets [6], while VisIT-Bench is utilized to evaluate instruction-following vision-language models with 592 test queries and 70 instruction families [5].\n\nInstruction tuning significantly impacts zero-shot capabilities. It enhances zero-shot generalization across various tasks while improving specific task performance [3]. Furthermore, cross-lingual instruction tuning consistently improves zero-shot generalization, outperforming baselines by average scores of 20.7% for English and 13.6% for Korean [4].\n\nDespite these benefits, instruction tuning has notable limitations and negative side effects. Full-parameter instruction tuning can cause knowledge degradation and increase hallucinations by inaccurately borrowing tokens from conceptually similar instances [7]. Additionally, traditional instruction tuning inadvertently conditions models to fabricate answers instead of communicating their epistemic limitations when faced with queries outside their knowledge boundaries [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 7,
+      "arxiv": 0
+    },
+    "seconds": 41.8
+  },
+  "papers": {
+    "arxiv:2310.00492": {
+      "paper_id": "arxiv:2310.00492",
+      "title": "From Language Modeling to Instruction Following: Understanding the Behavior Shift in LLMs after Instruction Tuning",
+      "abstract": "Large Language Models (LLMs) have achieved remarkable success, where instruction tuning is the critical step in aligning LLMs with user intentions. In this work, we investigate how the instruction tuning adjusts pre-trained models with a focus on intrinsic changes. Specifically, we first develop several local and global explanation methods, including a gradient-based method for input-output attribution, and techniques for interpreting patterns and concepts in self-attention and feed-forward layers. The impact of instruction tuning is then studied by comparing the explanations derived from the pre-trained and instruction-tuned models. This approach provides an internal perspective of the model shifts on a human-comprehensible level. Our findings reveal three significant impacts of instruction tuning: 1) It empowers LLMs to recognize the instruction parts of user prompts, and promotes the response generation constantly conditioned on the instructions. 2) It encourages the self-attention heads to capture more word-word relationships about instruction verbs. 3) It encourages the feed-forward networks to rotate their pre-trained knowledge toward user-oriented tasks. These insights contribute to a more comprehensive understanding of instruction tuning and lay the groundwork for future work that aims at explaining and optimizing LLMs for various applications. Our code and data are publicly available at https://github.com/JacksonWuxs/Interpret_Instruction_Tuning_LLMs.",
+      "year": 2023,
+      "authors": [
+        "Xuansheng Wu",
+        "Wenlin Yao",
+        "Jianshu Chen",
+        "Xiaoman Pan",
+        "Xiaoyang Wang",
+        "Ninghao Liu",
+        "Dong Yu"
+      ],
+      "url": "https://arxiv.org/abs/2310.00492",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2310.19651": {
+      "paper_id": "arxiv:2310.19651",
+      "title": "Dynamics of Instruction Fine-Tuning for Chinese Large Language Models",
+      "abstract": "Instruction tuning is a burgeoning method to elicit the general intelligence of Large Language Models (LLMs). While numerous studies have examined the impact of factors such as data volume and model size on English models, the scaling properties of instruction tuning in other languages remain largely unexplored. In this work, we systematically investigate the effects of data quantity, model size, and data construction methods on instruction tuning for Chinese LLMs. We utilize a newly curated dataset, DoIT, which includes over 40,000 high-quality instruction instances covering ten underlying abilities, such as creative writing, code generation, and logical reasoning. Our experiments, conducted on models ranging from 7b to 33b parameters, yield three key findings: (i) While these factors directly affect overall model performance, some abilities are more responsive to scaling, whereas others demonstrate significant resistance. (ii) The scaling sensitivity of different abilities to these factors can be explained by two features: Complexity and Transference. (iii) By tailoring training strategies to their varying sensitivities, specific abilities can be efficiently learned, enhancing performance on two public benchmarks.",
+      "year": 2023,
+      "authors": [
+        "Chiyu Song",
+        "Zhanchao Zhou",
+        "Jianhao Yan",
+        "Yuejiao Fei",
+        "Zhenzhong Lan",
+        "Yue Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2310.19651",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2405.19744": {
+      "paper_id": "arxiv:2405.19744",
+      "title": "X-Instruction: Aligning Language Model in Low-resource Languages with Self-curated Cross-lingual Instructions",
+      "abstract": "Large language models respond well in high-resource languages like English but struggle in low-resource languages. It may arise from the lack of high-quality instruction following data in these languages. Directly translating English samples into these languages can be a solution but unreliable, leading to responses with translation errors and lacking language-specific or cultural knowledge. To address this issue, we propose a novel method to construct cross-lingual instruction following samples with instruction in English and response in low-resource languages. Specifically, the language model first learns to generate appropriate English instructions according to the natural web texts in other languages as responses. The candidate cross-lingual instruction tuning samples are further refined and diversified. We have employed this method to build a large-scale cross-lingual instruction tuning dataset on 10 languages, namely X-Instruction. The instruction data built using our method incorporate more language-specific knowledge compared with the naive translation method. Experimental results have shown that the response quality of the model tuned on X-Instruction greatly exceeds the model distilled from a powerful teacher model, reaching or even surpassing the ones of ChatGPT. In addition, we find that models tuned on cross-lingual instruction following samples can follow the instruction in the output language without further tuning.",
+      "year": 2024,
+      "authors": [
+        "Chong Li",
+        "Wen Yang",
+        "Jiajun Zhang",
+        "Jinliang Lu",
+        "Shaonan Wang",
+        "Chengqing Zong"
+      ],
+      "url": "https://arxiv.org/abs/2405.19744",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:51f0c3b06861c79fbb283022df109818ce4ebe51": {
+      "paper_id": "s2:51f0c3b06861c79fbb283022df109818ce4ebe51",
+      "title": "Unleashing the Power of Data Tsunami: A Comprehensive Survey on Data Assessment and Selection for Instruction Tuning of Language Models",
+      "abstract": "Instruction tuning plays a critical role in aligning large language models (LLMs) with human preference. Despite the vast amount of open instruction datasets, naively training a LLM on all existing instructions may not be optimal and practical. To pinpoint the most beneficial datapoints, data assessment and selection methods have been proposed in the fields of natural language processing (NLP) and deep learning. However, under the context of instruction tuning, there still exists a gap in knowledge on what kind of data evaluation metrics can be employed and how they can be integrated into the selection mechanism. To bridge this gap, we present a comprehensive review on existing literature of data assessment and selection especially for instruction tuning of LLMs. We systematically categorize all applicable methods into quality-based, diversity-based, and importance-based ones where a unified, fine-grained taxonomy is structured. For each category, representative methods are elaborated to describe the landscape of relevant research. In addition, comparison between the latest methods is conducted on their officially reported results to provide in-depth discussions on their limitations. Finally, we summarize the open challenges and propose the promosing avenues for future studies. All related contents are available at https://github.com/yuleiqin/fantastic-data-engineering.",
+      "year": 2024,
+      "authors": [
+        "Yu-Lei Qin",
+        "Yun-Cheng Yang",
+        "Peng-Cheng Guo",
+        "Gang Li",
+        "Hang Shao",
+        "Yu-Cheng Shi",
+        "Zi-Han Xu",
+        "Yun Gu",
+        "Ke Li",
+        "Xing Sun"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2408.02085",
+      "venue": "Trans. Mach. Learn. Res.",
+      "source": "semantic_scholar"
+    },
+    "s2:5c118e57b5398224ca4401c902cda33da7d29ec3": {
+      "paper_id": "s2:5c118e57b5398224ca4401c902cda33da7d29ec3",
+      "title": "Self-Refine Instruction-Tuning for Aligning Reasoning in Language Models",
+      "abstract": "The alignment of reasoning abilities between smaller and larger Language Models are largely conducted via supervised fine-tuning using demonstrations generated from robust Large Language Models (LLMs). Although these approaches deliver more performant models, they do not show sufficiently strong generalization ability as the training only relies on the provided demonstrations.In this paper, we propose the Self-refine Instruction-tuning method that elicits Smaller Language Models to self-improve their abilities.Our approach is based on a two-stage process, where reasoning abilities are first transferred between LLMs and Small Language Models (SLMs) via Instruction-tuning on synthetic demonstrations provided by LLMs, and then the instructed models self-improve their abilities through preference optimization strategies.In particular, the second phase operates refinement heuristics based on Direct Preference Optimization, where the SLMs are elicited to deliver a series of reasoning paths by automatically sampling the generated responses and providing rewards using ground truths from the LLMs.Results obtained on commonsense and math reasoning tasks show that this approach consistently outperforms Instruction-tuning in both in-domain and out-domain scenarios, aligning the reasoning abilities of Smaller and Larger language models.",
+      "year": 2024,
+      "authors": [
+        "Leonardo Ranaldi",
+        "André Freitas"
+      ],
+      "url": "https://doi.org/10.18653/v1/2024.emnlp-main.139",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "s2:6807fe21b2d9819563a9ad8dfa46c8c7804f1b08": {
+      "paper_id": "s2:6807fe21b2d9819563a9ad8dfa46c8c7804f1b08",
+      "title": "The Right Time Matters: Data Arrangement Affects Zero-Shot Generalization in Instruction Tuning",
+      "abstract": "Understanding alignment techniques begins with comprehending zero-shot generalization brought by instruction tuning, but little of the mechanism has been understood. Existing work has largely been confined to the task level, without considering that tasks are artificially defined and, to LLMs, merely consist of tokens and representations. To bridge this gap, we investigate zero-shot generalization from the perspective of the data itself. We first demonstrate that zero-shot generalization happens very early during instruction tuning, with loss serving as a stable indicator. Next, we investigate training data arrangement through similarity and granularity perspectives, confirming that the timing of exposure to certain training examples may greatly facilitate generalization on unseen tasks. Finally, we propose a more grounded training data arrangement framework, Test-centric Multi-turn Arrangement, and show its effectiveness in promoting continual learning and further loss reduction. For the first time, we show that zero-shot generalization during instruction tuning is a form of similarity-based generalization between training and test data at the instance level. Our code is released at https://github.com/thunlp/Dynamics-of-Zero-Shot-Generalization.",
+      "year": 2024,
+      "authors": [
+        "Bing-Xiang He",
+        "Ning Ding",
+        "Cheng Qian",
+        "Jia Deng",
+        "Ganqu Cui",
+        "Lifan Yuan",
+        "Hai-Wen Hong",
+        "Huan-ang Gao",
+        "Long-Tao Huang",
+        "Hui Xue",
+        "Hui-Min Chen",
+        "Zhi-Yuan Liu",
+        "Mao-Song Sun"
+      ],
+      "url": "https://doi.org/10.18653/v1/2025.findings-acl.13",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "source": "semantic_scholar"
+    },
+    "s2:1265bc74328b30123530da1ba867edcaf8ca1d5d": {
+      "paper_id": "s2:1265bc74328b30123530da1ba867edcaf8ca1d5d",
+      "title": "Instruction Matters: A Simple yet Effective Task Selection for Optimized Instruction Tuning of Specific Tasks",
+      "abstract": "Instruction tuning has been proven effective in enhancing zero-shot generalization across various tasks and in improving the performance of specific tasks. For task-specific improvements, strategically selecting and training on related tasks that provide meaningful supervision is crucial, as this approach enhances efficiency and prevents performance degradation from learning irrelevant tasks. In this light, we introduce a simple yet effective task selection method that leverages instruction information alone to identify relevant tasks, optimizing instruction tuning for specific tasks. Our method is significantly more efficient than traditional approaches, which require complex measurements of pairwise transferability between tasks or the creation of data samples for the target task. Additionally, by aligning the model with the unique instructional template style of the meta-dataset, we enhance its ability to granularly discern relevant tasks, leading to improved overall performance. Experimental results demonstrate that training on a small set of tasks, chosen solely based on the instructions, results in substantial improvements in performance on benchmarks such as P3, Big-Bench, NIV2, and Big-Bench Hard. Significantly, these improvements surpass those achieved by prior task selection methods, highlighting the superiority of our approach.",
+      "year": 2024,
+      "authors": [
+        "Chang-Ho Lee",
+        "Janghoon Han",
+        "Seonghyeon Ye",
+        "Stanley Jungkyu Choi",
+        "Honglak Lee",
+        "Kyunghoon Bae"
+      ],
+      "url": "https://doi.org/10.18653/v1/2024.emnlp-main.1036",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "s2:590954e15e247cc343710ee97e396ad99f52970f": {
+      "paper_id": "s2:590954e15e247cc343710ee97e396ad99f52970f",
+      "title": "Active Instruction Tuning: Improving Cross-Task Generalization by Training on Prompt Sensitive Tasks",
+      "abstract": "Instruction tuning (IT) achieves impressive zero-shot generalization results by training large language models (LLMs) on a massive amount of diverse tasks with instructions. However, how to select new tasks to improve the performance and generalizability of IT models remains an open question. Training on all existing tasks is impractical due to prohibiting computation requirements, and randomly selecting tasks can lead to suboptimal performance. In this work, we propose active instruction tuning based on prompt uncertainty, a novel framework to identify informative tasks, and then actively tune the models on the selected tasks. We represent the informativeness of new tasks with the disagreement of the current model outputs over perturbed prompts. Our experiments on NIV2 and Self-Instruct datasets demonstrate that our method consistently outperforms other baseline strategies for task selection, achieving better out-of-distribution generalization with fewer training tasks. Additionally, we introduce a task map that categorizes and diagnoses tasks based on prompt uncertainty and prediction probability. We discover that training on ambiguous (prompt-uncertain) tasks improves generalization while training on difficult (prompt-certain and low-probability) tasks offers no benefit, underscoring the importance of task selection for instruction tuning.",
+      "year": 2023,
+      "authors": [
+        "Po-Nien Kung",
+        "Fan Yin",
+        "Di Wu",
+        "Kai-Wei Chang",
+        "Nan-Yun Peng"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2311.00288",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "s2:1b4910ea0619694a1e590584ccde4f6f0341c3c0": {
+      "paper_id": "s2:1b4910ea0619694a1e590584ccde4f6f0341c3c0",
+      "title": "Deep Exploration of Cross-Lingual Zero-Shot Generalization in Instruction Tuning",
+      "abstract": "Instruction tuning has emerged as a powerful technique, significantly boosting zero-shot performance on unseen tasks. While recent work has explored cross-lingual generalization by applying instruction tuning to multilingual models, previous studies have primarily focused on English, with a limited exploration of non-English tasks. For an in-depth exploration of cross-lingual generalization in instruction tuning, we perform instruction tuning individually for two distinct language meta-datasets. Subsequently, we assess the performance on unseen tasks in a language different from the one used for training. To facilitate this investigation, we introduce a novel non-English meta-dataset named\"KORANI\"(Korean Natural Instruction), comprising 51 Korean benchmarks. Moreover, we design cross-lingual templates to mitigate discrepancies in language and instruction-format of the template between training and inference within the cross-lingual setting. Our experiments reveal consistent improvements through cross-lingual generalization in both English and Korean, outperforming baseline by average scores of 20.7\\% and 13.6\\%, respectively. Remarkably, these enhancements are comparable to those achieved by monolingual instruction tuning and even surpass them in some tasks. The result underscores the significance of relevant data acquisition across languages over linguistic congruence with unseen tasks during instruction tuning.",
+      "year": 2024,
+      "authors": [
+        "Janghoon Han",
+        "Chang-Ho Lee",
+        "Joongbo Shin",
+        "Stanley Jungkyu Choi",
+        "Honglak Lee",
+        "Kyunghoon Bae"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2406.08796",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "source": "semantic_scholar"
+    },
+    "s2:90dd829f3d64dda19092b6e26909803bea5c37c1": {
+      "paper_id": "s2:90dd829f3d64dda19092b6e26909803bea5c37c1",
+      "title": "From Zero to Hero: Examining the Power of Symbolic Tasks in Instruction Tuning",
+      "abstract": "Fine-tuning language models on tasks with instructions has demonstrated potential in facilitating zero-shot generalization to unseen tasks. In this paper, we introduce a straightforward yet effective method for enhancing instruction tuning by employing symbolic tasks. Compared to crowdsourced human tasks or model-generated tasks, symbolic tasks present a unique advantage as they can be easily generated in vast quantities, theoretically providing an infinite supply of high-quality training instances. To explore the potential of symbolic tasks, we carry out an extensive case study on the representative symbolic task of SQL execution. Empirical results on various benchmarks validate that the integration of SQL execution leads to significant improvements in zero-shot scenarios, particularly in table reasoning. Notably, our 3B model surpasses both the 175B GPT-3 and ChatGPT in zero-shot table reasoning across four benchmarks. Furthermore, experimental results on BBH (27 tasks) and MMLU (57 tasks) reveal that language models can be enhanced through symbolic tasks without compromising their generality. We hope that our paper serves as a catalyst, inspiring increased efforts to incorporate symbolic tasks in instruction tuning.",
+      "year": 2023,
+      "authors": [
+        "Qian Liu",
+        "Fan Zhou",
+        "Zhengbao Jiang",
+        "Long-Xu Dou",
+        "Min Lin"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2304.07995",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2308.06595": {
+      "paper_id": "arxiv:2308.06595",
+      "title": "VisIT-Bench: A Benchmark for Vision-Language Instruction Following Inspired by Real-World Use",
+      "abstract": "We introduce VisIT-Bench (Visual InsTruction Benchmark), a benchmark for evaluation of instruction-following vision-language models for real-world use. Our starting point is curating 70 'instruction families' that we envision instruction tuned vision-language models should be able to address. Extending beyond evaluations like VQAv2 and COCO, tasks range from basic recognition to game playing and creative generation. Following curation, our dataset comprises 592 test queries, each with a human-authored instruction-conditioned caption. These descriptions surface instruction-specific factors, e.g., for an instruction asking about the accessibility of a storefront for wheelchair users, the instruction-conditioned caption describes ramps/potential obstacles. These descriptions enable 1) collecting human-verified reference outputs for each instance; and 2) automatic evaluation of candidate multimodal generations using a text-only LLM, aligning with human judgment. We quantify quality gaps between models and references using both human and automatic evaluations; e.g., the top-performing instruction-following model wins against the GPT-4 reference in just 27% of the comparison. VisIT-Bench is dynamic to participate, practitioners simply submit their model's response on the project website; Data, code and leaderboard is available at visit-bench.github.io.",
+      "year": 2023,
+      "authors": [
+        "Yonatan Bitton",
+        "Hritik Bansal",
+        "Jack Hessel",
+        "Rulin Shao",
+        "Wanrong Zhu",
+        "Anas Awadalla",
+        "Josh Gardner",
+        "Rohan Taori",
+        "Ludwig Schmidt"
+      ],
+      "url": "https://arxiv.org/abs/2308.06595",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:eab54bef4b479e0b06fc65c8cab2c0400fa69b8a": {
+      "paper_id": "s2:eab54bef4b479e0b06fc65c8cab2c0400fa69b8a",
+      "title": "On the Evaluation and Refinement of Vision-Language Instruction Tuning Datasets",
+      "abstract": "There is an emerging line of research on multimodal instruction tuning, and a line of benchmarks has been proposed for evaluating these models recently. Instead of evaluating the models directly, in this paper, we try to evaluate the Vision-Language Instruction-Tuning (VLIT) datasets. Also, we seek the way of building a dataset for developing an all-powerful VLIT model, which we believe could also be of utility for establishing a grounded protocol for benchmarking VLIT models. For effective evaluation of VLIT datasets that remains an open question, we propose a tune-cross-evaluation paradigm: tuning on one dataset and evaluating on the others in turn. For each single tune-evaluation experiment set, we define the Meta Quality (MQ) as the mean score obtained by a set of caption metrics including BLEU, METEOR, and ROUGE-L to quantify the quality of a certain dataset or a sample. On this basis, to evaluate the comprehensiveness of a dataset, we develop the Dataset Quality (DQ) covering all tune-evaluation sets. To lay the foundation for building a comprehensive dataset and developing an all-powerful model for practical applications, we define the Sample Quality (SQ) to quantify the all-sided quality of each sample. Extensive experiments validate the rationality of the proposed evaluation paradigm. Based on the holistic evaluation, we build a new dataset, REVO-LION (REfining VisiOn-Language InstructiOn tuNing), by collecting samples with higher SQ from each dataset. Remarkably, even with only half of the complete data, the model trained on REVO-LION can achieve the performance comparable to simply adding all VLIT datasets up. Furthermore, REVO-LION not only facilitates the development of a powerful model but also incorporates an evaluation set, which is designed to serve as a convenient benchmark for future research in the field.",
+      "year": 2023,
+      "authors": [
+        "Ning Liao",
+        "Shao-Feng Zhang",
+        "Ren-Qiu Xia",
+        "Min Cao",
+        "Yu Qiao",
+        "Jun-Chi Yan"
+      ],
+      "url": "https://www.semanticscholar.org/paper/eab54bef4b479e0b06fc65c8cab2c0400fa69b8a",
+      "venue": null,
+      "source": "semantic_scholar"
+    },
+    "arxiv:2306.04751": {
+      "paper_id": "arxiv:2306.04751",
+      "title": "How Far Can Camels Go? Exploring the State of Instruction Tuning on Open Resources",
+      "abstract": "In this work we explore recent advances in instruction-tuning language models on a range of open instruction-following datasets. Despite recent claims that open models can be on par with state-of-the-art proprietary models, these claims are often accompanied by limited evaluation, making it difficult to compare models across the board and determine the utility of various resources. We provide a large set of instruction-tuned models from 6.7B to 65B parameters in size, trained on 12 instruction datasets ranging from manually curated (e.g., OpenAssistant) to synthetic and distilled (e.g., Alpaca) and systematically evaluate them on their factual knowledge, reasoning, multilinguality, coding, and open-ended instruction following abilities through a collection of automatic, model-based, and human-based metrics. We further introduce Tülu, our best performing instruction-tuned model suite finetuned on a combination of high-quality open resources. Our experiments show that different instruction-tuning datasets can uncover or enhance specific skills, while no single dataset (or combination) provides the best performance across all evaluations. Interestingly, we find that model and human preference-based evaluations fail to reflect differences in model capabilities exposed by benchmark-based evaluations, suggesting the need for the type of systemic evaluation performed in this work. Our evaluations show that the best model in any given evaluation reaches on average 87% of ChatGPT performance, and 73% of GPT-4 performance, suggesting that further investment in building better base models and instruction-tuning data is required to close the gap. We release our instruction-tuned models, including a fully finetuned 65B Tülu, along with our code, data, and evaluation framework at https://github.com/allenai/open-instruct to facilitate future research.",
+      "year": 2023,
+      "authors": [
+        "Yizhong Wang",
+        "Hamish Ivison",
+        "Pradeep Dasigi",
+        "Jack Hessel",
+        "Tushar Khot",
+        "Khyathi Raghavi Chandu",
+        "David Wadden",
+        "Kelsey MacMillan",
+        "Noah A. Smith",
+        "Iz Beltagy",
+        "Hannaneh Hajishirzi"
+      ],
+      "url": "https://arxiv.org/abs/2306.04751",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2402.11690": {
+      "paper_id": "arxiv:2402.11690",
+      "title": "Vision-Flan: Scaling Human-Labeled Tasks in Visual Instruction Tuning",
+      "abstract": "Despite vision-language models' (VLMs) remarkable capabilities as versatile visual assistants, two substantial challenges persist within the existing VLM frameworks: (1) lacking task diversity in pretraining and visual instruction tuning, and (2) annotation error and bias in GPT-4 synthesized instruction tuning data. Both challenges lead to issues such as poor generalizability, hallucination, and catastrophic forgetting. To address these challenges, we construct Vision-Flan, the most diverse publicly available visual instruction tuning dataset to date, comprising 187 diverse tasks and 1,664,261 instances sourced from academic datasets, and each task is accompanied by an expert-written instruction. In addition, we propose a two-stage instruction tuning framework, in which VLMs are firstly finetuned on Vision-Flan and further tuned on GPT-4 synthesized data. We find this two-stage tuning framework significantly outperforms the traditional single-stage visual instruction tuning framework and achieves the state-of-the-art performance across a wide range of multi-modal evaluation benchmarks. Finally, we conduct in-depth analyses to understand visual instruction tuning and our findings reveal that: (1) GPT-4 synthesized data does not substantially enhance VLMs' capabilities but rather modulates the model's responses to human-preferred formats; (2) A minimal quantity (e.g., 1,000) of GPT-4 synthesized data can effectively align VLM responses with human-preference; (3) Visual instruction tuning mainly helps large-language models (LLMs) to understand visual features.",
+      "year": 2024,
+      "authors": [
+        "Zhiyang Xu",
+        "Chao Feng",
+        "Rulin Shao",
+        "Trevor Ashby",
+        "Ying Shen",
+        "Di Jin",
+        "Yu Cheng",
+        "Qifan Wang",
+        "Lifu Huang"
+      ],
+      "url": "https://arxiv.org/abs/2402.11690",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2508.15239": {
+      "paper_id": "arxiv:2508.15239",
+      "title": "WangchanThaiInstruct: An instruction-following Dataset for Culture-Aware, Multitask, and Multi-domain Evaluation in Thai",
+      "abstract": "Large language models excel at instruction-following in English, but their performance in low-resource languages like Thai remains underexplored. Existing benchmarks often rely on translations, missing cultural and domain-specific nuances needed for real-world use. We present WangchanThaiInstruct, a human-authored Thai dataset for evaluation and instruction tuning, covering four professional domains and seven task types. Created through a multi-stage quality control process with annotators, domain experts, and AI researchers, WangchanThaiInstruct supports two studies: (1) a zero-shot evaluation showing performance gaps on culturally and professionally specific tasks, and (2) an instruction tuning study with ablations isolating the effect of native supervision. Models fine-tuned on WangchanThaiInstruct outperform those using translated data in both in-domain and out-of-domain benchmarks. These findings underscore the need for culturally and professionally grounded instruction data to improve LLM alignment in low-resource, linguistically diverse settings.",
+      "year": 2025,
+      "authors": [
+        "Peerat Limkonchotiwat",
+        "Pume Tuchinda",
+        "Lalita Lowphansirikul",
+        "Surapon Nonesung",
+        "Panuthep Tasawong",
+        "Alham Fikri Aji",
+        "Can Udomcharoenchaikit",
+        "Sarana Nutanong"
+      ],
+      "url": "https://arxiv.org/abs/2508.15239",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:acbce5ebf3f254188d10f6ba7de1ba716db89774": {
+      "paper_id": "s2:acbce5ebf3f254188d10f6ba7de1ba716db89774",
+      "title": "A Closer Look at the Limitations of Instruction Tuning",
+      "abstract": "Instruction Tuning (IT), the process of training large language models (LLMs) using instruction-response pairs, has emerged as the predominant method for transforming base pre-trained LLMs into open-domain conversational agents. While IT has achieved notable success and widespread adoption, its limitations and shortcomings remain underexplored. In this paper, through rigorous experiments and an in-depth analysis of the changes LLMs undergo through IT, we reveal various limitations of IT. In particular, we show that (1) IT fails to enhance knowledge or skills in LLMs. LoRA fine-tuning is limited to learning response initiation and style tokens, and full-parameter fine-tuning leads to knowledge degradation. (2) Copying response patterns from IT datasets derived from knowledgeable sources leads to a decline in response quality. (3) Full-parameter fine-tuning increases hallucination by inaccurately borrowing tokens from conceptually similar instances in the IT dataset for generating responses. (4) Popular methods to improve IT do not lead to performance improvements over a simple LoRA fine-tuned model. Our findings reveal that responses generated solely from pre-trained knowledge consistently outperform responses by models that learn any form of new knowledge from IT on open-source datasets. We hope the insights and challenges revealed in this paper inspire future work in related directions.",
+      "year": 2024,
+      "authors": [
+        "Sreyan Ghosh",
+        "Chandra Kiran Reddy Evuru",
+        "Reddy Evuru",
+        "Sonal Kumar",
+        "S Ramaneswaran",
+        "Deepali Aneja",
+        "Ze-Yu Jin",
+        "R. Duraiswami",
+        "Dinesh Manocha"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2402.05119",
+      "venue": "International Conference on Machine Learning",
+      "source": "semantic_scholar"
+    },
+    "s2:821f745e7ec0813775d17242177fd057ef11c85b": {
+      "paper_id": "s2:821f745e7ec0813775d17242177fd057ef11c85b",
+      "title": "T-SHIRT: Token-Selective Hierarchical Data Selection for Instruction Tuning",
+      "abstract": "Instruction tuning is essential for Large Language Models (LLMs) to effectively follow user instructions. To improve training efficiency and reduce data redundancy, recent works use LLM-based scoring functions, e.g., Instruction-Following Difficulty (IFD), to select high-quality instruction-tuning data with scores above a threshold. While these data selection methods often lead to models that can match or even exceed the performance of models trained on the full datasets, we identify two key limitations: (i) they assess quality at the sample level, ignoring token-level informativeness; and (ii) they overlook the robustness of the scoring method, often selecting a sample due to superficial lexical features instead of its true quality. In this work, we propose Token-Selective HIeRarchical Data Selection for Instruction Tuning (T-SHIRT), a novel data selection framework that introduces a new scoring method to include only informative tokens in quality evaluation and also promotes robust and reliable samples whose neighbors also show high quality with less local inconsistencies. We demonstrate that models instruction-tuned on a curated dataset (only 5% of the original size) using T-SHIRT can outperform those trained on the entire large-scale dataset by up to 5.48 points on average across eight benchmarks. Across various LLMs and training set scales, our method consistently surpasses existing state-of-the-art data selection techniques, while also remaining both cost-effective and highly efficient. For instance, by using GPT-2 for score computation, we are able to process a dataset of 52k samples in 40 minutes on a single GPU. Our code is available at https://github.com/Dynamite321/T-SHIRT.",
+      "year": 2025,
+      "authors": [
+        "Yan-Jun Fu",
+        "Faisal Hamman",
+        "Sanghamitra Dutta"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2506.01317",
+      "venue": "Neural Information Processing Systems",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2304.08109": {
+      "paper_id": "arxiv:2304.08109",
+      "title": "A Comparative Study between Full-Parameter and LoRA-based Fine-Tuning on Chinese Instruction Data for Instruction Following Large Language Model",
+      "abstract": "Recently, the instruction-tuning of large language models is a crucial area of research in the field of natural language processing. Due to resource and cost limitations, several researchers have employed parameter-efficient tuning techniques, such as LoRA, for instruction tuning, and have obtained encouraging results In comparison to full-parameter fine-tuning, LoRA-based tuning demonstrates salient benefits in terms of training costs. In this study, we undertook experimental comparisons between full-parameter fine-tuning and LoRA-based tuning methods, utilizing LLaMA as the base model. The experimental results show that the selection of the foundational model, training dataset scale, learnable parameter quantity, and model training cost are all important factors. We hope that the experimental conclusions of this paper can provide inspiration for training large language models, especially in the field of Chinese, and help researchers find a better trade-off strategy between training cost and model performance. To facilitate the reproduction of the paper's results, the dataset, model and code will be released.",
+      "year": 2023,
+      "authors": [
+        "Xianghui Sun",
+        "Yunjie Ji",
+        "Baochang Ma",
+        "Xiangang Li"
+      ],
+      "url": "https://arxiv.org/abs/2304.08109",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2311.13133": {
+      "paper_id": "arxiv:2311.13133",
+      "title": "LIMIT: Less Is More for Instruction Tuning Across Evaluation Paradigms",
+      "abstract": "Large Language Models are traditionally finetuned on large instruction datasets. However recent studies suggest that small, high-quality datasets can suffice for general purpose instruction following. This lack of consensus surrounding finetuning best practices is in part due to rapidly diverging approaches to LLM evaluation. In this study, we ask whether a small amount of diverse finetuning samples can improve performance on both traditional perplexity-based NLP benchmarks, and on open-ended, model-based evaluation. We finetune open-source MPT-7B and MPT-30B models on instruction finetuning datasets of various sizes ranging from 1k to 60k samples. We find that subsets of 1k-6k instruction finetuning samples are sufficient to achieve good performance on both (1) traditional NLP benchmarks and (2) model-based evaluation. Finally, we show that mixing textbook-style and open-ended QA finetuning datasets optimizes performance on both evaluation paradigms.",
+      "year": 2023,
+      "authors": [
+        "Aditi Jha",
+        "Sam Havens",
+        "Jeremy Dohmann",
+        "Alex Trott",
+        "Jacob Portes"
+      ],
+      "url": "https://arxiv.org/abs/2311.13133",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:4447750dd27e7a45d0b690159eb854ec0c7309a0": {
+      "paper_id": "s2:4447750dd27e7a45d0b690159eb854ec0c7309a0",
+      "title": "Refusal-Aware Instruction Tuning through Gradient-Guided Optimization and Knowledge-Flow Calibration for Hallucination Mitigation under Uncertain Knowledge Boundaries and Conflicting Evidence in Large Language Models",
+      "abstract": "The rapid deployment of large language models across diverse domains has exposed significant vulnerabilities related to factuality and reliability, particularly manifesting as hallucinations when models encounter queries beyond their intrinsic knowledge boundaries or process conflicting evidence. Traditional instruction tuning predominantly encourages compliance and response generation, inadvertently conditioning models to fabricate answers rather than accurately assessing and communicating their epistemic limitations. This paper introduces Refusal-Aware Instruction Tuning, a novel framework designed to mitigate hallucinations by explicitly training large language models to recognize their knowledge boundaries and refuse unanswerable queries. The proposed architecture integrates Gradient-Guided Optimization, which leverages internal gradient signals to detect regions of high epistemic uncertainty, and Knowledge-Flow Calibration, a mechanism that modulates attention pathways to resolve conflicting contextual evidence. By systematically mapping the internal latent representations of uncertainty, the model learns to output calibrated refusals without degrading its performance on answerable tasks. Extensive empirical evaluations across multiple complex reasoning and factuality benchmarks demonstrate that the proposed methodology significantly reduces hallucination rates while maintaining high utility. The experimental results establish that integrating refusal-awareness into the instruction tuning pipeline constitutes a critical step toward developing safe, reliable, and trustworthy artificial intelligence systems capable of navigating uncertain informational environments.",
+      "year": 2026,
+      "authors": [
+        "Daphne Fu"
+      ],
+      "url": "https://doi.org/10.66238/dh1b4a56",
+      "venue": "International Journal of Machine Learning and Engineering",
+      "source": "semantic_scholar"
+    }
+  },
+  "question_id": "Q15",
+  "area": "NLP"
+}

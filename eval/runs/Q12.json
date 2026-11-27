@@ -1,0 +1,637 @@
+{
+  "question": "What approaches improve neural machine translation for low-resource languages?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What architectural modifications and modeling techniques are used to improve low-resource neural machine translation?",
+      "search_query": "neural machine translation low resource methods",
+      "paper_ids": [
+        "s2:21a631e8de4d2f4df8aa079dcf2abc82891cfd6d",
+        "arxiv:1708.05729",
+        "arxiv:1705.00440",
+        "s2:1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6",
+        "s2:886f04fa5cb313a10b6b8ed2da4ab16faecc2a19"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "How do data augmentation and transfer learning strategies impact translation performance in low-resource settings?",
+      "search_query": "transfer learning data augmentation low resource machine translation",
+      "paper_ids": [
+        "s2:fd8ef0646971acca0783443520ba62da0d330d81",
+        "s2:c2d746b50e1b5f6c0a84f4acb47ea8dde74a4465",
+        "s2:2b8455524a42db27ba5be648de7ba5cefef7b5a9",
+        "s2:901189d4d9cf2f5a4bd240fdc0799ee20645456c",
+        "s2:980ed20d75e1f42b7bbe7082df5c071aa0b5ff16"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What benchmark datasets and evaluation metrics are commonly utilized to assess low-resource translation models?",
+      "search_query": "datasets benchmarks low resource neural machine translation",
+      "paper_ids": [
+        "arxiv:1906.10511",
+        "arxiv:2408.11457",
+        "arxiv:2304.09919",
+        "arxiv:2509.20209",
+        "arxiv:2504.17252"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the primary limitations and challenges reported when deploying translation models for extremely low-resource languages?",
+      "search_query": "limitations challenges low resource neural machine translation",
+      "paper_ids": [
+        "s2:c2d746b50e1b5f6c0a84f4acb47ea8dde74a4465",
+        "arxiv:2311.00998",
+        "arxiv:2110.03036",
+        "arxiv:2011.02266",
+        "s2:693f9b2b2fc8fe4576dd31b4f625067845d70a41"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "Neural machine translation for low-resource languages can be adapted by introducing more local dependencies and using word alignments to learn sentence reordering during translation, producing acceptable translations with only 70000 tokens of training data.",
+        "paper_id": "arxiv:1708.05729"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Neural machine translation for low-resource languages can be adapted by introducing more local dependencies and using word alignments to learn sentence reordering during translation, producing acceptable translations with only 70000 tokens of training data.",
+          "paper_id": "arxiv:1708.05729",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9418,
+          "p_supported": 0.9418,
+          "accepted": true,
+          "alt_p_supported": 0.9082
+        }
+      ],
+      "final": {
+        "text": "Neural machine translation for low-resource languages can be adapted by introducing more local dependencies and using word alignments to learn sentence reordering during translation, producing acceptable translations with only 70000 tokens of training data.",
+        "paper_id": "arxiv:1708.05729",
+        "label": "SUPPORTED",
+        "confidence": 0.9418
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "A transfer learning method for neural machine translation trains a high-resource parent model and transfers parameters to a low-resource child model, improving baseline NMT models by an average of 5.6 Bleu on four low-resource language pairs.",
+        "paper_id": "s2:1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A transfer learning method for neural machine translation trains a high-resource parent model and transfers parameters to a low-resource child model, improving baseline NMT models by an average of 5.6 Bleu on four low-resource language pairs.",
+          "paper_id": "s2:1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9333,
+          "p_supported": 0.9333,
+          "accepted": true,
+          "alt_p_supported": 0.9159
+        }
+      ],
+      "final": {
+        "text": "A transfer learning method for neural machine translation trains a high-resource parent model and transfers parameters to a low-resource child model, improving baseline NMT models by an average of 5.6 Bleu on four low-resource language pairs.",
+        "paper_id": "s2:1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6",
+        "label": "SUPPORTED",
+        "confidence": 0.9333
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "A hybrid combination of transfer learning and data augmentation with a self-supervised objective produces the highest translation quality in extremely low-resource scenarios.",
+        "paper_id": "s2:fd8ef0646971acca0783443520ba62da0d330d81"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A hybrid combination of transfer learning and data augmentation with a self-supervised objective produces the highest translation quality in extremely low-resource scenarios.",
+          "paper_id": "s2:fd8ef0646971acca0783443520ba62da0d330d81",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9478,
+          "p_supported": 0.9478,
+          "accepted": true,
+          "alt_p_supported": 0.9216
+        }
+      ],
+      "final": {
+        "text": "A hybrid combination of transfer learning and data augmentation with a self-supervised objective produces the highest translation quality in extremely low-resource scenarios.",
+        "paper_id": "s2:fd8ef0646971acca0783443520ba62da0d330d81",
+        "label": "SUPPORTED",
+        "confidence": 0.9478
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "The joint method incorporating back-translation into parent-child and hierarchical transfer learning architectures demonstrates superiority over baselines using single methods on Uygur-Chinese and Turkish-English translation.",
+        "paper_id": "s2:2b8455524a42db27ba5be648de7ba5cefef7b5a9"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The joint method incorporating back-translation into parent-child and hierarchical transfer learning architectures demonstrates superiority over baselines using single methods on Uygur-Chinese and Turkish-English translation.",
+          "paper_id": "s2:2b8455524a42db27ba5be648de7ba5cefef7b5a9",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9495,
+          "p_supported": 0.9495,
+          "accepted": true,
+          "alt_p_supported": 0.9229
+        }
+      ],
+      "final": {
+        "text": "The joint method incorporating back-translation into parent-child and hierarchical transfer learning architectures demonstrates superiority over baselines using single methods on Uygur-Chinese and Turkish-English translation.",
+        "paper_id": "s2:2b8455524a42db27ba5be648de7ba5cefef7b5a9",
+        "label": "SUPPORTED",
+        "confidence": 0.9495
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "For a Bible translation task trained with NLLB, Austronesian and Trans-New Guinea language families achieve 35.1 and 31.6 BLEU scores respectively.",
+        "paper_id": "arxiv:2304.09919"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "For a Bible translation task trained with NLLB, Austronesian and Trans-New Guinea language families achieve 35.1 and 31.6 BLEU scores respectively.",
+          "paper_id": "arxiv:2304.09919",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8895,
+          "p_supported": 0.8895,
+          "accepted": true,
+          "alt_p_supported": 0.8449
+        }
+      ],
+      "final": {
+        "text": "For a Bible translation task trained with NLLB, Austronesian and Trans-New Guinea language families achieve 35.1 and 31.6 BLEU scores respectively.",
+        "paper_id": "arxiv:2304.09919",
+        "label": "SUPPORTED",
+        "confidence": 0.8895
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "English-Tigrinya translation evaluation gains are validated by BLEU, chrF, and qualitative human evaluation.",
+        "paper_id": "arxiv:2509.20209"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "English-Tigrinya translation evaluation gains are validated by BLEU, chrF, and qualitative human evaluation.",
+          "paper_id": "arxiv:2509.20209",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9382,
+          "p_supported": 0.9382,
+          "accepted": true,
+          "alt_p_supported": 0.9037
+        }
+      ],
+      "final": {
+        "text": "English-Tigrinya translation evaluation gains are validated by BLEU, chrF, and qualitative human evaluation.",
+        "paper_id": "arxiv:2509.20209",
+        "label": "SUPPORTED",
+        "confidence": 0.9382
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Neural machine translation for low-resource local languages in Indonesia faces significant challenges regarding the need for a representative benchmark and limited data availability.",
+        "paper_id": "arxiv:2311.00998"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Neural machine translation for low-resource local languages in Indonesia faces significant challenges regarding the need for a representative benchmark and limited data availability.",
+          "paper_id": "arxiv:2311.00998",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.924,
+          "p_supported": 0.924,
+          "accepted": true,
+          "alt_p_supported": 0.8913
+        }
+      ],
+      "final": {
+        "text": "Neural machine translation for low-resource local languages in Indonesia faces significant challenges regarding the need for a representative benchmark and limited data availability.",
+        "paper_id": "arxiv:2311.00998",
+        "label": "SUPPORTED",
+        "confidence": 0.924
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Low-resource languages like Tigrinya remain underserved due to persistent challenges including limited corpora, inadequate tokenization strategies, and the lack of standardized evaluation benchmarks.",
+        "paper_id": "s2:693f9b2b2fc8fe4576dd31b4f625067845d70a41"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Low-resource languages like Tigrinya remain underserved due to persistent challenges including limited corpora, inadequate tokenization strategies, and the lack of standardized evaluation benchmarks.",
+          "paper_id": "s2:693f9b2b2fc8fe4576dd31b4f625067845d70a41",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8818,
+          "p_supported": 0.8818,
+          "accepted": true,
+          "alt_p_supported": 0.8721
+        }
+      ],
+      "final": {
+        "text": "Low-resource languages like Tigrinya remain underserved due to persistent challenges including limited corpora, inadequate tokenization strategies, and the lack of standardized evaluation benchmarks.",
+        "paper_id": "s2:693f9b2b2fc8fe4576dd31b4f625067845d70a41",
+        "label": "SUPPORTED",
+        "confidence": 0.8818
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "arxiv:1708.05729",
+      "citation": "Robert Östling, Jörg Tiedemann (2017). Neural machine translation for low-resource languages. arXiv. https://arxiv.org/abs/1708.05729"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6",
+      "citation": "Barret Zoph, Deniz Yuret, Jonathan May et al. (2016). Transfer Learning for Low-Resource Neural Machine Translation. Conference on Empirical Methods in Natural Language Processing. https://doi.org/10.18653/v1/D16-1163"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:fd8ef0646971acca0783443520ba62da0d330d81",
+      "citation": "Nur Fikri Khuluq, Muhammad Naufal Muzhaffar, Shofwatul' Uyun (2026). A Systematic Review of Transfer Learning and Data Augmentation in Neural Machine Translation of Low-Resource Languages. Jurnal Sains, Nalar, dan Aplikasi Teknologi Informasi. https://doi.org/10.20885/snati.v5.i2.47528"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:2b8455524a42db27ba5be648de7ba5cefef7b5a9",
+      "citation": "Gong-Xu Luo, Ya-Ting Yang, Rui Dong et al. (2020). A Joint Back-Translation and Transfer Learning Method for Low-Resource Neural Machine Translation. Mathematical Problems in Engineering. https://doi.org/10.1155/2020/6140153"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2304.09919",
+      "citation": "Vesa Akerman, David Baines, Damien Daspit et al. (2023). The eBible Corpus: Data and Model Benchmarks for Bible Translation for Low-Resource Languages. arXiv. https://arxiv.org/abs/2304.09919"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2509.20209",
+      "citation": "Hailay Kidu Teklehaymanot, Gebrearegawi Gidey, Wolfgang Nejdl (2025). Low-Resource English-Tigrinya MT: Leveraging Multilingual Models, Custom Tokenizers, and Clean Evaluation Benchmarks. arXiv. https://arxiv.org/abs/2509.20209"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2311.00998",
+      "citation": "Lucky Susanto, Ryandito Diandaru, Adila Krisnadhi et al. (2023). Replicable Benchmarking of Neural Machine Translation (NMT) on Low-Resource Local Languages in Indonesia. arXiv. https://arxiv.org/abs/2311.00998"
+    },
+    {
+      "n": 8,
+      "paper_id": "s2:693f9b2b2fc8fe4576dd31b4f625067845d70a41",
+      "citation": "Hailay Kidu Teklehaymanot, Gebrearegawi Gebremariam Gidey, W. Nejdl (2025). Low-Resource English–Tigrinya MT: Leveraging Multilingual Models, Custom Tokenizers, and Clean Evaluation Benchmarks. 2025 3rd International Conference on Foundation and Large Language Models (FLLM). https://doi.org/10.1109/FLLM67465.2025.11390974"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "To improve neural machine translation (NMT) for low-resource languages, various architectural modifications and modeling techniques are employed. Specifically, NMT can be adapted by introducing more local dependencies and utilizing word alignments to learn sentence reordering, which yields acceptable translations using a training size of only 70,000 tokens [1]. \n\nData augmentation and transfer learning strategies further enhance performance in low-resource settings. Transfer learning approaches—such as training a high-resource parent model and transferring its parameters to a low-resource child model—improve baseline NMT models by an average of 5.6 BLEU points across four low-resource language pairs [2]. Furthermore, a hybrid combination of transfer learning and data augmentation featuring a self-supervised objective achieves the highest translation quality in extremely low-resource scenarios [3]. Joint methods that incorporate back-translation into parent-child and hierarchical transfer learning architectures also outperform single-method baselines on Uygur-Chinese and Turkish-English translation tasks [4]. \n\nEvaluation of these models utilizes diverse benchmark datasets and metrics. For instance, Bible translation tasks trained with NLLB achieve 35.1 and 31.6 BLEU scores for Austronesian and Trans-New Guinea language families, respectively [5], while evaluation gains for English-Tigrinya translation are validated using BLEU, chrF, and qualitative human evaluation [6]. \n\nDespite these advancements, deploying translation models for extremely low-resource languages encounters primary limitations and challenges. Languages such as Tigrinya remain underserved due to limited corpora, inadequate tokenization strategies, and the absence of standardized evaluation benchmarks [8]. Similarly, neural machine translation for low-resource local languages in Indonesia is heavily hindered by limited data availability and the pressing need for representative benchmarks [7].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 10,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 9,
+      "arxiv": 0
+    },
+    "seconds": 110.4
+  },
+  "papers": {
+    "s2:21a631e8de4d2f4df8aa079dcf2abc82891cfd6d": {
+      "paper_id": "s2:21a631e8de4d2f4df8aa079dcf2abc82891cfd6d",
+      "title": "Low-resource Neural Machine Translation: Methods and Trends",
+      "abstract": "Neural Machine Translation (NMT) brings promising improvements in translation quality, but until recently, these models rely on large-scale parallel corpora. As such corpora only exist on a handful of language pairs, the translation performance is far from the desired effect in the majority of low-resource languages. Thus, developing low-resource language translation techniques is crucial and it has become a popular research field in neural machine translation. In this article, we make an overall review of existing deep learning techniques in low-resource NMT. We first show the research status as well as some widely used low-resource datasets. Then, we categorize the existing methods and show some representative works detailedly. Finally, we summarize the common characters among them and outline the future directions in this field.",
+      "year": 2022,
+      "authors": [
+        "Shu-Min Shi",
+        "Xing Wu",
+        "Rihai Su",
+        "He-Yan Huang"
+      ],
+      "url": "https://doi.org/10.1145/3524300",
+      "venue": "ACM Trans. Asian Low Resour. Lang. Inf. Process.",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1708.05729": {
+      "paper_id": "arxiv:1708.05729",
+      "title": "Neural machine translation for low-resource languages",
+      "abstract": "Neural machine translation (NMT) approaches have improved the state of the art in many machine translation settings over the last couple of years, but they require large amounts of training data to produce sensible output. We demonstrate that NMT can be used for low-resource languages as well, by introducing more local dependencies and using word alignments to learn sentence reordering during translation. In addition to our novel model, we also present an empirical evaluation of low-resource phrase-based statistical machine translation (SMT) and NMT to investigate the lower limits of the respective technologies. We find that while SMT remains the best option for low-resource settings, our method can produce acceptable translations with only 70000 tokens of training data, a level where the baseline NMT system fails completely.",
+      "year": 2017,
+      "authors": [
+        "Robert Östling",
+        "Jörg Tiedemann"
+      ],
+      "url": "https://arxiv.org/abs/1708.05729",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1705.00440": {
+      "paper_id": "arxiv:1705.00440",
+      "title": "Data Augmentation for Low-Resource Neural Machine Translation",
+      "abstract": "The quality of a Neural Machine Translation system depends substantially on the availability of sizable parallel corpora. For low-resource language pairs this is not the case, resulting in poor translation quality. Inspired by work in computer vision, we propose a novel data augmentation approach that targets low-frequency words by generating new sentence pairs containing rare words in new, synthetically created contexts. Experimental results on simulated low-resource settings show that our method improves translation quality by up to 2.9 BLEU points over the baseline and up to 3.2 BLEU over back-translation.",
+      "year": 2017,
+      "authors": [
+        "Marzieh Fadaee",
+        "Arianna Bisazza",
+        "Christof Monz"
+      ],
+      "url": "https://arxiv.org/abs/1705.00440",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6": {
+      "paper_id": "s2:1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6",
+      "title": "Transfer Learning for Low-Resource Neural Machine Translation",
+      "abstract": "The encoder-decoder framework for neural machine translation (NMT) has been shown effective in large data scenarios, but is much less effective for low-resource languages. We present a transfer learning method that significantly improves Bleu scores across a range of low-resource languages. Our key idea is to first train a high-resource language pair (the parent model), then transfer some of the learned parameters to the low-resource pair (the child model) to initialize and constrain training. Using our transfer learning method we improve baseline NMT models by an average of 5.6 Bleu on four low-resource language pairs. Ensembling and unknown word replacement add another 2 Bleu which brings the NMT performance on low-resource machine translation close to a strong syntax based machine translation (SBMT) system, exceeding its performance on one language pair. Additionally, using the transfer learning model for re-scoring, we can improve the SBMT system by an average of 1.3 Bleu, improving the state-of-the-art on low-resource machine translation.",
+      "year": 2016,
+      "authors": [
+        "Barret Zoph",
+        "Deniz Yuret",
+        "Jonathan May",
+        "Kevin Knight"
+      ],
+      "url": "https://doi.org/10.18653/v1/D16-1163",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "s2:886f04fa5cb313a10b6b8ed2da4ab16faecc2a19": {
+      "paper_id": "s2:886f04fa5cb313a10b6b8ed2da4ab16faecc2a19",
+      "title": "Low-resource neural machine translation with morphological modeling",
+      "abstract": "Morphological modeling in neural machine translation (NMT) is a promising approach to achieving open-vocabulary machine translation for morphologically-rich languages. However, existing methods such as sub-word tokenization and character-based models are limited to the surface forms of the words. In this work, we propose a framework-solution for modeling complex morphology in low-resource settings. A two-tier transformer architecture is chosen to encode morphological information at the inputs. At the target-side output, a multi-task multi-label training scheme coupled with a beam search-based decoder are found to improve machine translation performance. An attention augmentation scheme to the transformer model is proposed in a generic form to allow integration of pre-trained language models and also facilitate modeling of word order relationships between the source and target languages. Several data augmentation techniques are evaluated and shown to increase translation performance in low-resource settings. We evaluate our proposed solution on Kinyarwanda - English translation using public-domain parallel text. Our final models achieve competitive performance in relation to large multi-lingual models. We hope that our results will motivate more use of explicit morphological information and the proposed model and data augmentations in low-resource NMT.",
+      "year": 2024,
+      "authors": [
+        "Antoine Nzeyimana"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2404.02392",
+      "venue": "NAACL-HLT",
+      "source": "semantic_scholar"
+    },
+    "s2:fd8ef0646971acca0783443520ba62da0d330d81": {
+      "paper_id": "s2:fd8ef0646971acca0783443520ba62da0d330d81",
+      "title": "A Systematic Review of Transfer Learning and Data Augmentation in Neural Machine Translation of Low-Resource Languages",
+      "abstract": "Modern Neural Machine Translation (NMT) systems have achieved state-of-the-art, performance, largely due to the availability of large-scale parallel corpora. However, the translation quality of NMT for Low-Resource Languages ​​(LRL) remains limited due to data sparsity. Numerous studies have proposed different strategies to address this challenge. Among the most widely adopted strategies are Transfer Learning (TL) and Data Augmentation (DA) strategies. This research aims to present a systematic review of how these techniques, including Back-Translation (BT), Hybrid Transfer Learning (HTL), and the utilization of self-supervised objectives such as Masked Language Modeling (MLM), Causal Language Modeling (CLM), and Denoising Autoencoder (DAE), affect the quality improvement of NMT for LRL. The findings show that a hybrid combination of TL and DA with a self-supervised objective is the most effective solution for extremely low-resource scenarios, capable of producing the highest translation quality (highest BLEU score) and outperforming baseline models and traditional methods such as Statistical Machine Translation (SMT).",
+      "year": 2026,
+      "authors": [
+        "Nur Fikri Khuluq",
+        "Muhammad Naufal Muzhaffar",
+        "Shofwatul' Uyun"
+      ],
+      "url": "https://doi.org/10.20885/snati.v5.i2.47528",
+      "venue": "Jurnal Sains, Nalar, dan Aplikasi Teknologi Informasi",
+      "source": "semantic_scholar"
+    },
+    "s2:c2d746b50e1b5f6c0a84f4acb47ea8dde74a4465": {
+      "paper_id": "s2:c2d746b50e1b5f6c0a84f4acb47ea8dde74a4465",
+      "title": "A Comparative Analysis of Machine Translation Approaches for Low-Resource Languages and Future Enhancements",
+      "abstract": "This paper provides a comparative analysis of machine translation and its evolution, with a specific focus on the challenges and advancements in translating three low-resource languages. It begins by exploring the emergence of machine translation and compares it with human translation, highlighting their respective strengths and weaknesses. The paper further discusses the evolution of various machine translation approaches, including rule-based, statistical, neural, and hybrid methods, offering a detailed contrast of these models. A comparative analysis of existing research is conducted, followed by a review of findings and an evaluation of translation quality through quantitative and qualitative metrics. The paper concludes by proposing future directions for machine translation, specifically addressing the translation of low-resource languages. Suggested solutions include the integration of data augmentation techniques, transfer learning, and hybrid approaches to enhance translation quality, mitigate resource limitations, and improve the overall effectiveness of machine translation systems for low-resource language pairs.",
+      "year": 2024,
+      "authors": [
+        "D. De Silva",
+        "D. G. P. Hansadi"
+      ],
+      "url": "https://doi.org/10.1109/ICATC64549.2024.11025357",
+      "venue": "2024 International Conference on Advances in Technology and Computing (ICATC)",
+      "source": "semantic_scholar"
+    },
+    "s2:2b8455524a42db27ba5be648de7ba5cefef7b5a9": {
+      "paper_id": "s2:2b8455524a42db27ba5be648de7ba5cefef7b5a9",
+      "title": "A Joint Back-Translation and Transfer Learning Method for Low-Resource Neural Machine Translation",
+      "abstract": "Neural machine translation (NMT) for low-resource languages has drawn great attention in recent years. In this paper, we propose a joint back-translation and transfer learning method for low-resource languages. It is widely recognized that data augmentation methods and transfer learning methods are both straight forward and effective ways for low-resource problems. However, existing methods, which utilize one of these methods alone, limit the capacity of NMT models for low-resource problems. In order to make full use of the advantages of existing methods and further improve the translation performance of low-resource languages, we propose a new method to perfectly integrate the back-translation method with mainstream transfer learning architectures, which can not only initialize the NMT model by transferring parameters of the pretrained models, but also generate synthetic parallel data by translating large-scale monolingual data of the target side to boost the fluency of translations. We conduct experiments to explore the effectiveness of the joint method by incorporating back-translation into the parent-child and the hierarchical transfer learning architecture. In addition, different preprocessing and training methods are explored to get better performance. Experimental results on Uygur-Chinese and Turkish-English translation demonstrate the superiority of the proposed method over the baselines that use single methods.",
+      "year": 2020,
+      "authors": [
+        "Gong-Xu Luo",
+        "Ya-Ting Yang",
+        "Rui Dong",
+        "Yan-Hong Chen",
+        "Wenbo Zhang"
+      ],
+      "url": "https://doi.org/10.1155/2020/6140153",
+      "venue": "Mathematical Problems in Engineering",
+      "source": "semantic_scholar"
+    },
+    "s2:901189d4d9cf2f5a4bd240fdc0799ee20645456c": {
+      "paper_id": "s2:901189d4d9cf2f5a4bd240fdc0799ee20645456c",
+      "title": "Development of a Transfer Learning-Based NMT Framework using mBART and mT5 for Indonesian and Local Languages in Low-Resource Settings",
+      "abstract": "Indonesia has more than 700 local languages, yet most remain digitally underrepresented and lack parallel corpora for Natural Language Processing, limiting the development of machine translation systems and restricting digital access for local communities. This study addresses this gap by proposing a Neural Machine Translation framework for Indonesian and low-resource regional languages using transfer learning with mBART and mT5. The workflow includes corpus construction, sentence normalization, subword tokenization, data augmentation through back-translation, and standardized fine-tuning applied to both models. Experiments were conducted on Javanese, Sundanese, and Batak Toba under identical training and evaluation settings. Results demonstrate that transfer learning significantly improves translation performance compared to a baseline Transformer model, with mT5 achieving the highest BLEU, chrF, and human evaluation scores, producing translations that are more fluent and semantically aligned. The contributions of this research include a reproducible NMT framework, an Indonesian pivot-language strategy, a systematic model comparison, and a deployable prototype. Overall, the findings confirm multilingual transfer learning as an effective and scalable solution for advancing NMT in Indonesia’s low-resource languages and supporting long-term language preservation.",
+      "year": 2025,
+      "authors": [
+        "Frans Elo Hansen Panjaitan",
+        "T. Mantoro",
+        "M. Ayu",
+        "Rahmadya Trias Handayanto"
+      ],
+      "url": "https://doi.org/10.1109/ICT4M68001.2025.11363527",
+      "venue": "2025 10th International Conference on Information and Communication Technology for the Muslim World (ICT4M)",
+      "source": "semantic_scholar"
+    },
+    "s2:980ed20d75e1f42b7bbe7082df5c071aa0b5ff16": {
+      "paper_id": "s2:980ed20d75e1f42b7bbe7082df5c071aa0b5ff16",
+      "title": "Data-adaptive Transfer Learning for Translation: A Case Study in Haitian and Jamaican",
+      "abstract": "Multilingual transfer techniques often improve low-resource machine translation (MT). Many of these techniques are applied without considering data characteristics. We show in the context of Haitian-to-English translation that transfer effectiveness is correlated with amount of training data and relationships between knowledge-sharing languages. Our experiments suggest that for some languages beyond a threshold of authentic data, back-translation augmentation methods are counterproductive, while cross-lingual transfer from a sufficiently related language is preferred. We complement this finding by contributing a rule-based French-Haitian orthographic and syntactic engine and a novel method for phonological embedding. When used with multilingual techniques, orthographic transformation makes statistically significant improvements over conventional methods. And in very low-resource Jamaican MT, code-switching with a transfer language for orthographic resemblance yields a 6.63 BLEU point advantage.",
+      "year": 2022,
+      "authors": [
+        "N. Robinson",
+        "Cameron J. Hogan",
+        "Nancy Fulda",
+        "David R. Mortensen"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2209.06295",
+      "venue": "LORESMT",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1906.10511": {
+      "paper_id": "arxiv:1906.10511",
+      "title": "Benchmarking Neural Machine Translation for Southern African Languages",
+      "abstract": "Unlike major Western languages, most African languages are very low-resourced. Furthermore, the resources that do exist are often scattered and difficult to obtain and discover. As a result, the data and code for existing research has rarely been shared. This has lead a struggle to reproduce reported results, and few publicly available benchmarks for African machine translation models exist. To start to address these problems, we trained neural machine translation models for 5 Southern African languages on publicly-available datasets. Code is provided for training the models and evaluate the models on a newly released evaluation set, with the aim of spur future research in the field for Southern African languages.",
+      "year": 2019,
+      "authors": [
+        "Laura Martinus",
+        "Jade Z. Abbott"
+      ],
+      "url": "https://arxiv.org/abs/1906.10511",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2408.11457": {
+      "paper_id": "arxiv:2408.11457",
+      "title": "Expanding FLORES+ Benchmark for more Low-Resource Settings: Portuguese-Emakhuwa Machine Translation Evaluation",
+      "abstract": "As part of the Open Language Data Initiative shared tasks, we have expanded the FLORES+ evaluation set to include Emakhuwa, a low-resource language widely spoken in Mozambique. We translated the dev and devtest sets from Portuguese into Emakhuwa, and we detail the translation process and quality assurance measures used. Our methodology involved various quality checks, including post-editing and adequacy assessments. The resulting datasets consist of multiple reference sentences for each source. We present baseline results from training a Neural Machine Translation system and fine-tuning existing multilingual translation models. Our findings suggest that spelling inconsistencies remain a challenge in Emakhuwa. Additionally, the baseline models underperformed on this evaluation set, underscoring the necessity for further research to enhance machine translation quality for Emakhuwa. The data is publicly available at https://huggingface.co/datasets/LIACC/Emakhuwa-FLORES.",
+      "year": 2024,
+      "authors": [
+        "Felermino D. M. Antonio Ali",
+        "Henrique Lopes Cardoso",
+        "Rui Sousa-Silva"
+      ],
+      "url": "https://arxiv.org/abs/2408.11457",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2304.09919": {
+      "paper_id": "arxiv:2304.09919",
+      "title": "The eBible Corpus: Data and Model Benchmarks for Bible Translation for Low-Resource Languages",
+      "abstract": "Efficiently and accurately translating a corpus into a low-resource language remains a challenge, regardless of the strategies employed, whether manual, automated, or a combination of the two. Many Christian organizations are dedicated to the task of translating the Holy Bible into languages that lack a modern translation. Bible translation (BT) work is currently underway for over 3000 extremely low resource languages. We introduce the eBible corpus: a dataset containing 1009 translations of portions of the Bible with data in 833 different languages across 75 language families. In addition to a BT benchmarking dataset, we introduce model performance benchmarks built on the No Language Left Behind (NLLB) neural machine translation (NMT) models. Finally, we describe several problems specific to the domain of BT and consider how the established data and model benchmarks might be used for future translation efforts. For a BT task trained with NLLB, Austronesian and Trans-New Guinea language families achieve 35.1 and 31.6 BLEU scores respectively, which spurs future innovations for NMT for low-resource languages in Papua New Guinea.",
+      "year": 2023,
+      "authors": [
+        "Vesa Akerman",
+        "David Baines",
+        "Damien Daspit",
+        "Ulf Hermjakob",
+        "Taeho Jang",
+        "Colin Leong",
+        "Michael Martin",
+        "Joel Mathew",
+        "Jonathan Robie",
+        "Marcus Schwarting"
+      ],
+      "url": "https://arxiv.org/abs/2304.09919",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2509.20209": {
+      "paper_id": "arxiv:2509.20209",
+      "title": "Low-Resource English-Tigrinya MT: Leveraging Multilingual Models, Custom Tokenizers, and Clean Evaluation Benchmarks",
+      "abstract": "Despite advances in Neural Machine Translation (NMT), low-resource languages like Tigrinya remain underserved due to persistent challenges, including limited corpora, inadequate tokenization strategies, and the lack of standardized evaluation benchmarks. This paper investigates transfer learning techniques using multilingual pretrained models to enhance translation quality for morphologically rich, low-resource languages. We propose a refined approach that integrates language-specific tokenization, informed embedding initialization, and domain-adaptive fine-tuning. To enable rigorous assessment, we construct a high-quality, human-aligned English-Tigrinya evaluation dataset covering diverse domains. Experimental results demonstrate that transfer learning with a custom tokenizer substantially outperforms zero-shot baselines, with gains validated by BLEU, chrF, and qualitative human evaluation. Bonferroni correction is applied to ensure statistical significance across configurations. Error analysis reveals key limitations and informs targeted refinements. This study underscores the importance of linguistically aware modeling and reproducible benchmarks in bridging the performance gap for underrepresented languages. Resources are available at https://github.com/hailaykidu/MachineT_TigEng and https://huggingface.co/Hailay/MachineT_TigEng",
+      "year": 2025,
+      "authors": [
+        "Hailay Kidu Teklehaymanot",
+        "Gebrearegawi Gidey",
+        "Wolfgang Nejdl"
+      ],
+      "url": "https://arxiv.org/abs/2509.20209",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2504.17252": {
+      "paper_id": "arxiv:2504.17252",
+      "title": "Low-Resource Neural Machine Translation Using Recurrent Neural Networks and Transfer Learning: A Case Study on English-to-Igbo",
+      "abstract": "In this study, we develop Neural Machine Translation (NMT) and Transformer-based transfer learning models for English-to-Igbo translation - a low-resource African language spoken by over 40 million people across Nigeria and West Africa. Our models are trained on a curated and benchmarked dataset compiled from Bible corpora, local news, Wikipedia articles, and Common Crawl, all verified by native language experts. We leverage Recurrent Neural Network (RNN) architectures, including Long Short-Term Memory (LSTM) and Gated Recurrent Units (GRU), enhanced with attention mechanisms to improve translation accuracy. To further enhance performance, we apply transfer learning using MarianNMT pre-trained models within the SimpleTransformers framework. Our RNN-based system achieves competitive results, closely matching existing English-Igbo benchmarks. With transfer learning, we observe a performance gain of +4.83 BLEU points, reaching an estimated translation accuracy of 70%. These findings highlight the effectiveness of combining RNNs with transfer learning to address the performance gap in low-resource language translation tasks.",
+      "year": 2025,
+      "authors": [
+        "Ocheme Anthony Ekle",
+        "Biswarup Das"
+      ],
+      "url": "https://arxiv.org/abs/2504.17252",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2311.00998": {
+      "paper_id": "arxiv:2311.00998",
+      "title": "Replicable Benchmarking of Neural Machine Translation (NMT) on Low-Resource Local Languages in Indonesia",
+      "abstract": "Neural machine translation (NMT) for low-resource local languages in Indonesia faces significant challenges, including the need for a representative benchmark and limited data availability. This work addresses these challenges by comprehensively analyzing training NMT systems for four low-resource local languages in Indonesia: Javanese, Sundanese, Minangkabau, and Balinese. Our study encompasses various training approaches, paradigms, data sizes, and a preliminary study into using large language models for synthetic low-resource languages parallel data generation. We reveal specific trends and insights into practical strategies for low-resource language translation. Our research demonstrates that despite limited computational resources and textual data, several of our NMT systems achieve competitive performances, rivaling the translation quality of zero-shot gpt-3.5-turbo. These findings significantly advance NMT for low-resource languages, offering valuable guidance for researchers in similar contexts.",
+      "year": 2023,
+      "authors": [
+        "Lucky Susanto",
+        "Ryandito Diandaru",
+        "Adila Krisnadhi",
+        "Ayu Purwarianti",
+        "Derry Wijaya"
+      ],
+      "url": "https://arxiv.org/abs/2311.00998",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2110.03036": {
+      "paper_id": "arxiv:2110.03036",
+      "title": "The Low-Resource Double Bind: An Empirical Study of Pruning for Low-Resource Machine Translation",
+      "abstract": "A \"bigger is better\" explosion in the number of parameters in deep neural networks has made it increasingly challenging to make state-of-the-art networks accessible in compute-restricted environments. Compression techniques have taken on renewed importance as a way to bridge the gap. However, evaluation of the trade-offs incurred by popular compression techniques has been centered on high-resource datasets. In this work, we instead consider the impact of compression in a data-limited regime. We introduce the term low-resource double bind to refer to the co-occurrence of data limitations and compute resource constraints. This is a common setting for NLP for low-resource languages, yet the trade-offs in performance are poorly studied. Our work offers surprising insights into the relationship between capacity and generalization in data-limited regimes for the task of machine translation. Our experiments on magnitude pruning for translations from English into Yoruba, Hausa, Igbo and German show that in low-resource regimes, sparsity preserves performance on frequent sentences but has a disparate impact on infrequent ones. However, it improves robustness to out-of-distribution shifts, especially for datasets that are very distinct from the training distribution. Our findings suggest that sparsity can play a beneficial role at curbing memorization of low frequency attributes, and therefore offers a promising solution to the low-resource double bind.",
+      "year": 2021,
+      "authors": [
+        "Orevaoghene Ahia",
+        "Julia Kreutzer",
+        "Sara Hooker"
+      ],
+      "url": "https://arxiv.org/abs/2110.03036",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2011.02266": {
+      "paper_id": "arxiv:2011.02266",
+      "title": "Optimizing Transformer for Low-Resource Neural Machine Translation",
+      "abstract": "Language pairs with limited amounts of parallel data, also known as low-resource languages, remain a challenge for neural machine translation. While the Transformer model has achieved significant improvements for many language pairs and has become the de facto mainstream architecture, its capability under low-resource conditions has not been fully investigated yet. Our experiments on different subsets of the IWSLT14 training data show that the effectiveness of Transformer under low-resource conditions is highly dependent on the hyper-parameter settings. Our experiments show that using an optimized Transformer for low-resource conditions improves the translation quality up to 7.3 BLEU points compared to using the Transformer default settings.",
+      "year": 2020,
+      "authors": [
+        "Ali Araabi",
+        "Christof Monz"
+      ],
+      "url": "https://arxiv.org/abs/2011.02266",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:693f9b2b2fc8fe4576dd31b4f625067845d70a41": {
+      "paper_id": "s2:693f9b2b2fc8fe4576dd31b4f625067845d70a41",
+      "title": "Low-Resource English–Tigrinya MT: Leveraging Multilingual Models, Custom Tokenizers, and Clean Evaluation Benchmarks",
+      "abstract": "Despite advances in Neural Machine Translation (NMT), low-resource languages like Tigrinya remain underserved due to persistent challenges, including limited corpora, inadequate tokenization strategies, and the lack of standardized evaluation benchmarks. This paper investigates transfer learning techniques using multilingual pretrained models to enhance translation quality for morphologically rich, low-resource languages. We propose a refined approach that integrates language-specific tokenization, informed embedding initialization, and domain-adaptive fine-tuning. To enable rigorous assessment, we construct a high-quality, human-aligned English–Tigrinya evaluation dataset covering diverse domains. Experimental results demonstrate that transfer learning with a custom tokenizer substantially outperforms zero-shot baselines, with gains validated by BLEU, chrF, and qualitative human evaluation. Bonferroni correction is applied to ensure statistical significance across configurations. Error analysis reveals key limitations and informs targeted refinements. This study underscores the importance of linguistically aware modeling and reproducible benchmarks in bridging the performance gap for underrepresented languages. The resources are available https://github.com/hailaykidu/MachineT_TigEng",
+      "year": 2025,
+      "authors": [
+        "Hailay Kidu Teklehaymanot",
+        "Gebrearegawi Gebremariam Gidey",
+        "W. Nejdl"
+      ],
+      "url": "https://doi.org/10.1109/FLLM67465.2025.11390974",
+      "venue": "2025 3rd International Conference on Foundation and Large Language Models (FLLM)",
+      "source": "semantic_scholar"
+    }
+  },
+  "question_id": "Q12",
+  "area": "NLP"
+}

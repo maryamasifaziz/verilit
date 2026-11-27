@@ -1,0 +1,786 @@
+{
+  "question": "How are large language models evaluated for factual accuracy?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What methods and frameworks are used to evaluate factual accuracy in large language models?",
+      "search_query": "evaluation methods factual accuracy large language models",
+      "paper_ids": [
+        "s2:f60bb389d81905a12c3bc2fe329419d11358c214",
+        "arxiv:2403.18802",
+        "arxiv:2211.08412",
+        "arxiv:2408.11832",
+        "arxiv:2305.14069"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "Which benchmark datasets are commonly utilized to measure hallucinations and factual correctness?",
+      "search_query": "benchmark datasets hallucination factual correctness llm",
+      "paper_ids": [
+        "s2:92b82b3ffe46a80c3deaedbc544d50ef2ce42730",
+        "arxiv:2402.10412",
+        "arxiv:2410.16251",
+        "s2:e18868f286c110c132179d6e673aac19e7c46185",
+        "s2:51fe85e30a4c9d66a3fa127946d1f87a6fabeac7"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What are the reported performance results and trends of current models regarding factual reliability?",
+      "search_query": "reported results factual reliability large language models",
+      "paper_ids": [
+        "arxiv:2301.11850",
+        "arxiv:2502.20560",
+        "arxiv:2411.15490",
+        "arxiv:2507.22936",
+        "arxiv:2407.05131"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations and challenges in assessing factual accuracy for language models?",
+      "search_query": "limitations challenges evaluating factual accuracy llm",
+      "paper_ids": [
+        "arxiv:2411.19655",
+        "arxiv:2508.03860",
+        "arxiv:2610.27034",
+        "arxiv:2505.16520",
+        "s2:df61f25e1f77163d82b8e52183b629404d535b88"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study proposes the Search-Augmented Factuality Evaluator (SAFE), an LLM agent framework that evaluates long-form factuality by breaking down responses into individual facts and checking them using Google Search.",
+        "paper_id": "arxiv:2403.18802"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study proposes the Search-Augmented Factuality Evaluator (SAFE), an LLM agent framework that evaluates long-form factuality by breaking down responses into individual facts and checking them using Google Search.",
+          "paper_id": "arxiv:2403.18802",
+          "label": "INSUFFICIENT",
+          "raw_label": "INSUFFICIENT",
+          "confidence": 0.8001,
+          "p_supported": 0.0956,
+          "accepted": false,
+          "alt_p_supported": 0.9003
+        },
+        {
+          "action": "re-retrieve",
+          "text": "One study proposes the Search-Augmented Factuality Evaluator (SAFE), an LLM agent framework that evaluates long-form factuality by breaking down responses into individual facts and checking them using Google Search.",
+          "paper_id": "arxiv:2605.13481",
+          "label": "INSUFFICIENT",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.5726,
+          "p_supported": 0.5726,
+          "accepted": false,
+          "alt_p_supported": 0.5448
+        },
+        {
+          "action": "revise",
+          "text": null,
+          "paper_id": "arxiv:2605.13481",
+          "label": null,
+          "raw_label": null,
+          "confidence": null,
+          "p_supported": null,
+          "accepted": false,
+          "alt_p_supported": null
+        }
+      ],
+      "final": {
+        "text": "One study proposes the Search-Augmented Factuality Evaluator (SAFE), an LLM agent framework that evaluates long-form factuality by breaking down responses into individual facts and checking them using Google Search.",
+        "paper_id": "arxiv:2605.13481",
+        "label": "INSUFFICIENT",
+        "confidence": 0.5726
+      },
+      "status": "unverified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "OpenFactCheck is a unified framework developed for factuality evaluation of LLMs, featuring modules such as RESPONSEEVAL, LLMEVAL, and CHECKEREVAL.",
+        "paper_id": "arxiv:2408.11832"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "OpenFactCheck is a unified framework developed for factuality evaluation of LLMs, featuring modules such as RESPONSEEVAL, LLMEVAL, and CHECKEREVAL.",
+          "paper_id": "arxiv:2408.11832",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9486,
+          "p_supported": 0.9486,
+          "accepted": true,
+          "alt_p_supported": 0.9216
+        }
+      ],
+      "final": {
+        "text": "OpenFactCheck is a unified framework developed for factuality evaluation of LLMs, featuring modules such as RESPONSEEVAL, LLMEVAL, and CHECKEREVAL.",
+        "paper_id": "arxiv:2408.11832",
+        "label": "SUPPORTED",
+        "confidence": 0.9486
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "One study introduces the DefAn dataset, a benchmark consisting of over 20,000 unique prompts across eight domains to evaluate LLM hallucinations.",
+        "paper_id": "s2:92b82b3ffe46a80c3deaedbc544d50ef2ce42730"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study introduces the DefAn dataset, a benchmark consisting of over 20,000 unique prompts across eight domains to evaluate LLM hallucinations.",
+          "paper_id": "s2:92b82b3ffe46a80c3deaedbc544d50ef2ce42730",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9467,
+          "p_supported": 0.9467,
+          "accepted": true,
+          "alt_p_supported": 0.9239
+        }
+      ],
+      "final": {
+        "text": "One study introduces the DefAn dataset, a benchmark consisting of over 20,000 unique prompts across eight domains to evaluate LLM hallucinations.",
+        "paper_id": "s2:92b82b3ffe46a80c3deaedbc544d50ef2ce42730",
+        "label": "SUPPORTED",
+        "confidence": 0.9467
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "The FEWL metric's effectiveness in measuring and reducing LLM hallucinations is demonstrated through experiments on the Truthful-QA, CHALE, and HaluEval datasets.",
+        "paper_id": "arxiv:2402.10412"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The FEWL metric's effectiveness in measuring and reducing LLM hallucinations is demonstrated through experiments on the Truthful-QA, CHALE, and HaluEval datasets.",
+          "paper_id": "arxiv:2402.10412",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9414,
+          "p_supported": 0.9414,
+          "accepted": true,
+          "alt_p_supported": 0.9282
+        }
+      ],
+      "final": {
+        "text": "The FEWL metric's effectiveness in measuring and reducing LLM hallucinations is demonstrated through experiments on the Truthful-QA, CHALE, and HaluEval datasets.",
+        "paper_id": "arxiv:2402.10412",
+        "label": "SUPPORTED",
+        "confidence": 0.9414
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "The ConfLVLM framework reduces the error rate of claims generated by LLaVa-1.5 for scene descriptions from 87.8% to 10.0% by filtering out erroneous claims with a 95.3% true positive rate.",
+        "paper_id": "arxiv:2502.20560"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The ConfLVLM framework reduces the error rate of claims generated by LLaVa-1.5 for scene descriptions from 87.8% to 10.0% by filtering out erroneous claims with a 95.3% true positive rate.",
+          "paper_id": "arxiv:2502.20560",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9412,
+          "p_supported": 0.9412,
+          "accepted": true,
+          "alt_p_supported": 0.9075
+        }
+      ],
+      "final": {
+        "text": "The ConfLVLM framework reduces the error rate of claims generated by LLaVa-1.5 for scene descriptions from 87.8% to 10.0% by filtering out erroneous claims with a 95.3% true positive rate.",
+        "paper_id": "arxiv:2502.20560",
+        "label": "SUPPORTED",
+        "confidence": 0.9412
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "RULE achieves an average improvement of 47.4% in factual accuracy on medical VQA and report generation tasks across three datasets.",
+        "paper_id": "arxiv:2407.05131"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "RULE achieves an average improvement of 47.4% in factual accuracy on medical VQA and report generation tasks across three datasets.",
+          "paper_id": "arxiv:2407.05131",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9489,
+          "p_supported": 0.9489,
+          "accepted": true,
+          "alt_p_supported": 0.9232
+        }
+      ],
+      "final": {
+        "text": "RULE achieves an average improvement of 47.4% in factual accuracy on medical VQA and report generation tasks across three datasets.",
+        "paper_id": "arxiv:2407.05131",
+        "label": "SUPPORTED",
+        "confidence": 0.9489
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Current factuality evaluation resources are often limited by being tailored to specific tasks or domains, being too small to train new evaluators, or being restricted to simpler verification tasks like claim verification.",
+        "paper_id": "arxiv:2411.19655"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Current factuality evaluation resources are often limited by being tailored to specific tasks or domains, being too small to train new evaluators, or being restricted to simpler verification tasks like claim verification.",
+          "paper_id": "arxiv:2411.19655",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8788,
+          "p_supported": 0.8788,
+          "accepted": true,
+          "alt_p_supported": 0.8956
+        }
+      ],
+      "final": {
+        "text": "Current factuality evaluation resources are often limited by being tailored to specific tasks or domains, being too small to train new evaluators, or being restricted to simpler verification tasks like claim verification.",
+        "paper_id": "arxiv:2411.19655",
+        "label": "SUPPORTED",
+        "confidence": 0.8788
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Large Language Models are vulnerable to hallucinations and response deviation, which raise concerns regarding reliability and trustworthiness in academic and research environments.",
+        "paper_id": "arxiv:2610.27034"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Large Language Models are vulnerable to hallucinations and response deviation, which raise concerns regarding reliability and trustworthiness in academic and research environments.",
+          "paper_id": "arxiv:2610.27034",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9248,
+          "p_supported": 0.9248,
+          "accepted": true,
+          "alt_p_supported": 0.9131
+        }
+      ],
+      "final": {
+        "text": "Large Language Models are vulnerable to hallucinations and response deviation, which raise concerns regarding reliability and trustworthiness in academic and research environments.",
+        "paper_id": "arxiv:2610.27034",
+        "label": "SUPPORTED",
+        "confidence": 0.9248
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "arxiv:2408.11832",
+      "citation": "Hasan Iqbal, Yuxia Wang, Minghan Wang et al. (2024). OpenFactCheck: A Unified Framework for Factuality Evaluation of LLMs. arXiv. https://arxiv.org/abs/2408.11832"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:92b82b3ffe46a80c3deaedbc544d50ef2ce42730",
+      "citation": "A. B. M. Ashikur Rahman, Saeed Anwar, Muhammad Usman et al. (2025). DefAn: Definitive Answer Dataset for LLM Hallucination Evaluation. Inf.. https://doi.org/10.3390/info16110937"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2402.10412",
+      "citation": "Jiaheng Wei, Yuanshun Yao, Jean-Francois Ton et al. (2024). Measuring and Reducing LLM Hallucination without Gold-Standard Answers. arXiv. https://arxiv.org/abs/2402.10412"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2502.20560",
+      "citation": "Zhuohang Li, Chao Yan, Nicholas J. Jackson et al. (2025). Towards Statistical Factuality Guarantee for Large Vision-Language Models. arXiv. https://arxiv.org/abs/2502.20560"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2407.05131",
+      "citation": "Peng Xia, Kangyu Zhu, Haoran Li et al. (2024). RULE: Reliable Multimodal RAG for Factuality in Medical Vision Language Models. arXiv. https://arxiv.org/abs/2407.05131"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2411.19655",
+      "citation": "Alessandro Scirè, Andrei Stefan Bejgu, Simone Tedeschi et al. (2024). Truth or Mirage? Towards End-to-End Factuality Evaluation with LLM-Oasis. arXiv. https://arxiv.org/abs/2411.19655"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2610.27034",
+      "citation": "Osama Shabih, Dayam Nadeem, Shahab Saquib Sohail et al. (2026). Fluent but Fallible: Benchmarking Hallucination and Factual Reliability in Large Language Models. arXiv. https://arxiv.org/abs/2610.27034"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Evaluating the factual accuracy of large language models involves diverse frameworks, benchmark datasets, and performance trends, while also encountering notable limitations.\n\nTo address evaluation methodologies, OpenFactCheck functions as a unified framework featuring RESPONSEEVAL, LLMEVAL, and CHECKEREVAL modules [1]. Additionally, the FEWL metric's effectiveness in measuring and mitigating hallucinations is demonstrated through experiments using benchmarks such as Truthful-QA, CHALE, and HaluEval [3]. Other benchmark datasets utilized to measure these issues include DefAn, which consists of over 20,000 unique prompts spanning eight domains [2]. \n\nRegarding performance results and trends, specialized frameworks have shown significant improvements in factual reliability. For instance, the ConfLVLM framework successfully reduces the error rate of generated claims for scene descriptions from LLaVa-1.5 from 87.8% down to 10.0%, achieving a 95.3% true positive rate in filtering erroneous claims [4]. Furthermore, RULE demonstrates an average improvement of 47.4% in factual accuracy across three datasets concerning medical visual question answering (VQA) and report generation tasks [5].\n\nDespite these advancements, several challenges persist in assessing factual accuracy. Large language models remain vulnerable to hallucinations and response deviation, creating concerns about their trustworthiness and reliability in academic and research settings [7]. Furthermore, current factuality evaluation resources face significant limitations: they are frequently constrained to specific tasks or domains, restricted to simpler verification tasks like claim verification, or are simply too small to facilitate the training of new evaluators [6].",
+  "stats": {
+    "claims": 8,
+    "verified": 7,
+    "unverified": 1,
+    "unchecked": 0,
+    "verified_first_try": 7,
+    "claims_retried": 1,
+    "retry_successes": 0,
+    "total_retries": 2,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 6,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 9,
+      "arxiv": 1
+    },
+    "seconds": 88.2
+  },
+  "papers": {
+    "s2:f60bb389d81905a12c3bc2fe329419d11358c214": {
+      "paper_id": "s2:f60bb389d81905a12c3bc2fe329419d11358c214",
+      "title": "Hallucination to truth: a review of fact-checking and factuality evaluation in large language models",
+      "abstract": "Large language models (LLMs) are trained on vast and diverse internet corpora that often include inaccurate or misleading content. Consequently, LLMs can generate misinformation, making robust fact-checking essential. This review systematically analyzes how LLM-generated content is evaluated for factual accuracy by exploring key challenges such as hallucinations, dataset limitations, and the reliability of evaluation metrics. The review emphasizes the need for strong fact-checking frameworks that integrate advanced prompting strategies, domain-specific fine-tuning, and retrieval-augmented generation (RAG) methods. It proposes five research questions that guide the analysis of the recent literature from 2020 to 2025, focusing on evaluation methods and mitigation techniques. Instruction tuning, multi-agent reasoning, and RAG frameworks for external knowledge access are also reviewed. The key findings demonstrate the limitations of current metrics, the importance of validated external evidence, and the improvement of factual consistency through domain-specific customization. The review underscores the importance of building more accurate, understandable, and context-aware fact-checking. These insights contribute to the advancement of research toward more trustworthy models.",
+      "year": 2025,
+      "authors": [
+        "Subhey Sadi Rahman",
+        "Md. Adnanul Islam",
+        "Md. Mahbub Alam",
+        "Musarrat Zeba",
+        "Md. Abdur Rahman",
+        "Sadia Sultana Chowa",
+        "Mohaimenul Azam Khan Raiaan",
+        "Sami Azam"
+      ],
+      "url": "https://doi.org/10.1007/s10462-025-11454-w",
+      "venue": "Artificial Intelligence Review",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2403.18802": {
+      "paper_id": "arxiv:2403.18802",
+      "title": "Long-form factuality in large language models",
+      "abstract": "Large language models (LLMs) often generate content that contains factual errors when responding to fact-seeking prompts on open-ended topics. To benchmark a model's long-form factuality in open domains, we first use GPT-4 to generate LongFact, a prompt set comprising thousands of questions spanning 38 topics. We then propose that LLM agents can be used as automated evaluators for long-form factuality through a method which we call Search-Augmented Factuality Evaluator (SAFE). SAFE utilizes an LLM to break down a long-form response into a set of individual facts and to evaluate the accuracy of each fact using a multi-step reasoning process comprising sending search queries to Google Search and determining whether a fact is supported by the search results. Furthermore, we propose extending F1 score as an aggregated metric for long-form factuality. To do so, we balance the percentage of supported facts in a response (precision) with the percentage of provided facts relative to a hyperparameter representing a user's preferred response length (recall). Empirically, we demonstrate that LLM agents can outperform crowdsourced human annotators - on a set of ~16k individual facts, SAFE agrees with crowdsourced human annotators 72% of the time, and on a random subset of 100 disagreement cases, SAFE wins 76% of the time. At the same time, SAFE is more than 20 times cheaper than human annotators. We also benchmark thirteen language models on LongFact across four model families (Gemini, GPT, Claude, and PaLM-2), finding that larger language models generally achieve better long-form factuality. LongFact, SAFE, and all experimental code are available at https://github.com/google-deepmind/long-form-factuality.",
+      "year": 2024,
+      "authors": [
+        "Jerry Wei",
+        "Chengrun Yang",
+        "Xinying Song",
+        "Yifeng Lu",
+        "Nathan Hu",
+        "Jie Huang",
+        "Dustin Tran",
+        "Daiyi Peng",
+        "Ruibo Liu",
+        "Da Huang",
+        "Cosmo Du",
+        "Quoc V. Le"
+      ],
+      "url": "https://arxiv.org/abs/2403.18802",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2211.08412": {
+      "paper_id": "arxiv:2211.08412",
+      "title": "Evaluating the Factual Consistency of Large Language Models Through News Summarization",
+      "abstract": "While large language models (LLMs) have proven to be effective on a large variety of tasks, they are also known to hallucinate information. To measure whether an LLM prefers factually consistent continuations of its input, we propose a new benchmark called FIB(Factual Inconsistency Benchmark) that focuses on the task of summarization. Specifically, our benchmark involves comparing the scores an LLM assigns to a factually consistent versus a factually inconsistent summary for an input news article. For factually consistent summaries, we use human-written reference summaries that we manually verify as factually consistent. To generate summaries that are factually inconsistent, we generate summaries from a suite of summarization models that we have manually annotated as factually inconsistent. A model's factual consistency is then measured according to its accuracy, i.e.\\ the proportion of documents where it assigns a higher score to the factually consistent summary. To validate the usefulness of FIB, we evaluate 23 large language models ranging from 1B to 176B parameters from six different model families including BLOOM and OPT. We find that existing LLMs generally assign a higher score to factually consistent summaries than to factually inconsistent summaries. However, if the factually inconsistent summaries occur verbatim in the document, then LLMs assign a higher score to these factually inconsistent summaries than factually consistent summaries. We validate design choices in our benchmark including the scoring method and source of distractor summaries. Our code and benchmark data can be found at https://github.com/r-three/fib.",
+      "year": 2022,
+      "authors": [
+        "Derek Tam",
+        "Anisha Mascarenhas",
+        "Shiyue Zhang",
+        "Sarah Kwan",
+        "Mohit Bansal",
+        "Colin Raffel"
+      ],
+      "url": "https://arxiv.org/abs/2211.08412",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2408.11832": {
+      "paper_id": "arxiv:2408.11832",
+      "title": "OpenFactCheck: A Unified Framework for Factuality Evaluation of LLMs",
+      "abstract": "The increased use of large language models (LLMs) across a variety of real-world applications calls for automatic tools to check the factual accuracy of their outputs, as LLMs often hallucinate. This is difficult as it requires assessing the factuality of free-form open-domain responses. While there has been a lot of research on this topic, different papers use different evaluation benchmarks and measures, which makes them hard to compare and hampers future progress. To mitigate these issues, we developed OpenFactCheck, a unified framework, with three modules: (i) RESPONSEEVAL, which allows users to easily customize an automatic fact-checking system and to assess the factuality of all claims in an input document using that system, (ii) LLMEVAL, which assesses the overall factuality of an LLM, and (iii) CHECKEREVAL, a module to evaluate automatic fact-checking systems. OpenFactCheck is open-sourced (https://github.com/mbzuai-nlp/openfactcheck) and publicly released as a Python library (https://pypi.org/project/openfactcheck/) and also as a web service (http://app.openfactcheck.com). A video describing the system is available at https://youtu.be/-i9VKL0HleI.",
+      "year": 2024,
+      "authors": [
+        "Hasan Iqbal",
+        "Yuxia Wang",
+        "Minghan Wang",
+        "Georgi Georgiev",
+        "Jiahui Geng",
+        "Iryna Gurevych",
+        "Preslav Nakov"
+      ],
+      "url": "https://arxiv.org/abs/2408.11832",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2305.14069": {
+      "paper_id": "arxiv:2305.14069",
+      "title": "Evaluating Factual Consistency of Summaries with Large Language Models",
+      "abstract": "Detecting factual errors in summaries has been an important and challenging subject in summarization research. Inspired by the emergent ability of large language models (LLMs), we explore evaluating factual consistency of summaries by directly prompting LLMs. We present a comprehensive empirical study to assess the ability of LLMs as factual consistency evaluators, which consists of (1) analyzing different LLMs such as the GPT model series and Flan-T5; (2) investigating a variety of prompting methods including vanilla prompting, chain-of-thought prompting, and a sentence-by-sentence prompting method to tackle long summaries; and (3) evaluating on diverse summaries generated by multiple summarization systems, ranging from pre-transformer methods to SOTA pretrained models. Our experiments demonstrate that prompting LLMs is able to outperform the previous best factuality systems in all settings, by up to 12.2 absolute points in terms of the binary classification accuracy on inconsistency detection.",
+      "year": 2023,
+      "authors": [
+        "Shiqi Chen",
+        "Siyang Gao",
+        "Junxian He"
+      ],
+      "url": "https://arxiv.org/abs/2305.14069",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:92b82b3ffe46a80c3deaedbc544d50ef2ce42730": {
+      "paper_id": "s2:92b82b3ffe46a80c3deaedbc544d50ef2ce42730",
+      "title": "DefAn: Definitive Answer Dataset for LLM Hallucination Evaluation",
+      "abstract": "Large Language Models (LLMs) represent a major step in AI development and are increasingly used in daily applications. However, they are prone to hallucinations, generating claims that contradict established facts, deviating from prompts, and producing inconsistent responses when the same prompt is presented multiple times. Addressing these issues is challenging due to the lack of comprehensive and easily assessable benchmark datasets. Most existing datasets are limited in scale and scope and rely on multiple-choice questions, which are insufficient for evaluating the generative capabilities of LLMs. To assess hallucination in LLMs, this paper introduces a comprehensive benchmark dataset consisting of over 20,000 unique prompts (more than 75,000 prompts in total) across eight domains. These prompts are designed to elicit definitive, concise, and informative answers. The dataset is divided into two segments: one publicly available for testing and assessing LLM performance, and a hidden segment for benchmarking various LLMs. In our experiments, we tested nine State-of-The-Art (SoTA) models, GPT-4o, GPT-3.5, LLama 2 7B, LLama 3 8B, Gemini 1.0 Pro, Mixtral 8x7B, Zephyr 7B, Deepseek-r1-7b, and Qwen2.5-14B, revealing that overall factual hallucination ranges from 48% to 82% on the public dataset and 31% to 76% on the hidden benchmark. Prompt Misalignment Hallucination ranges up to 95% in the public dataset and up to 94% in the hidden counterpart. Average consistency ranges from 21% to 61% and 44% to 63%, respectively. Domain-wise analysis reveals that LLM performance significantly deteriorates when asked for specific numeric information, whereas it performs moderately with queries involving persons, locations, and dates. Our dataset demonstrates its efficacy and serves as a comprehensive benchmark for evaluating LLM performance.",
+      "year": 2025,
+      "authors": [
+        "A. B. M. Ashikur Rahman",
+        "Saeed Anwar",
+        "Muhammad Usman",
+        "Irfan Ahmad",
+        "Ajmal Mian"
+      ],
+      "url": "https://doi.org/10.3390/info16110937",
+      "venue": "Inf.",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2402.10412": {
+      "paper_id": "arxiv:2402.10412",
+      "title": "Measuring and Reducing LLM Hallucination without Gold-Standard Answers",
+      "abstract": "LLM hallucination, i.e. generating factually incorrect yet seemingly convincing answers, is currently a major threat to the trustworthiness and reliability of LLMs. The first step towards solving this complicated problem is to measure it. However, existing hallucination metrics require having a benchmark dataset with gold-standard answers, i.e. \"best\" or \"correct\" answers written by humans. Such requirements make hallucination measurement costly and prone to human errors. In this work, we propose Factualness Evaluations via Weighting LLMs (FEWL), an innovative hallucination metric that is specifically designed for the scenario when gold-standard answers are absent. FEWL leverages the answers from off-the-shelf LLMs that serve as a proxy of gold-standard answers. The key challenge is how to quantify the expertise of reference LLMs resourcefully. We show FEWL has certain theoretical guarantees and demonstrate empirically it gives more accurate hallucination measures than naively using reference LLMs. We also show how to leverage FEWL to reduce hallucination through both in-context learning and supervised fine-tuning. Extensive experiment results on Truthful-QA, CHALE, and HaluEval datasets demonstrate the effectiveness of FEWL.",
+      "year": 2024,
+      "authors": [
+        "Jiaheng Wei",
+        "Yuanshun Yao",
+        "Jean-Francois Ton",
+        "Hongyi Guo",
+        "Andrew Estornell",
+        "Yang Liu"
+      ],
+      "url": "https://arxiv.org/abs/2402.10412",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2410.16251": {
+      "paper_id": "arxiv:2410.16251",
+      "title": "Can Knowledge Editing Really Correct Hallucinations?",
+      "abstract": "Large Language Models (LLMs) suffer from hallucinations, referring to the non-factual information in generated content, despite their superior capacities across tasks. Meanwhile, knowledge editing has been developed as a new popular paradigm to correct erroneous factual knowledge encoded in LLMs with the advantage of avoiding retraining from scratch. However, a common issue of existing evaluation datasets for knowledge editing is that they do not ensure that LLMs actually generate hallucinated answers to the evaluation questions before editing. When LLMs are evaluated on such datasets after being edited by different techniques, it is hard to directly adopt the performance to assess the effectiveness of different knowledge editing methods in correcting hallucinations. Thus, the fundamental question remains insufficiently validated: Can knowledge editing really correct hallucinations in LLMs? We proposed HalluEditBench to holistically benchmark knowledge editing methods in correcting real-world hallucinations. First, we rigorously construct a massive hallucination dataset with 9 domains, 26 topics and more than 6,000 hallucinations. Then, we assess the performance of knowledge editing methods in a holistic way on five dimensions including Efficacy, Generalization, Portability, Locality, and Robustness. Through HalluEditBench, we have provided new insights into the potentials and limitations of different knowledge editing methods in correcting hallucinations, which could inspire future improvements and facilitate progress in the field of knowledge editing.",
+      "year": 2024,
+      "authors": [
+        "Baixiang Huang",
+        "Canyu Chen",
+        "Xiongxiao Xu",
+        "Ali Payani",
+        "Kai Shu"
+      ],
+      "url": "https://arxiv.org/abs/2410.16251",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:e18868f286c110c132179d6e673aac19e7c46185": {
+      "paper_id": "s2:e18868f286c110c132179d6e673aac19e7c46185",
+      "title": "HalluVerse25: Fine-grained Multilingual Benchmark Dataset for LLM Hallucinations",
+      "abstract": "Large Language Models (LLMs) are increasingly used in various contexts, yet remain prone to generating non-factual content, commonly referred to as\"hallucinations\". The literature categorizes hallucinations into several types, including entity-level, relation-level, and sentence-level hallucinations. However, existing hallucination datasets often fail to capture fine-grained hallucinations in multilingual settings. In this work, we introduce HalluVerse25, a multilingual LLM hallucination dataset that categorizes fine-grained hallucinations in English, Arabic, and Turkish. Our dataset construction pipeline uses an LLM to inject hallucinations into factual biographical sentences, followed by a rigorous human annotation process to ensure data quality. We evaluate several LLMs on HalluVerse25, providing valuable insights into how proprietary models perform in detecting LLM-generated hallucinations across different contexts.",
+      "year": 2025,
+      "authors": [
+        "Samir Abdaljalil",
+        "H. Kurban",
+        "E. Serpedin"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2503.07833",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:51fe85e30a4c9d66a3fa127946d1f87a6fabeac7": {
+      "paper_id": "s2:51fe85e30a4c9d66a3fa127946d1f87a6fabeac7",
+      "title": "HalluLens: LLM Hallucination Benchmark",
+      "abstract": "Large language models (LLMs) often generate responses that deviate from user input or training data, a phenomenon known as\"hallucination.\"These hallucinations undermine user trust and hinder the adoption of generative AI systems. Addressing hallucinations is essential for the advancement of LLMs. This paper introduces a comprehensive hallucination benchmark, incorporating both new extrinsic and existing intrinsic evaluation tasks, built upon clear taxonomy of hallucination. A major challenge in benchmarking hallucinations is the lack of a unified framework due to inconsistent definitions and categorizations. We disentangle LLM hallucination from\"factuality,\"proposing a clear taxonomy that distinguishes between extrinsic and intrinsic hallucinations, to promote consistency and facilitate research. Extrinsic hallucinations, where the generated content is not consistent with the training data, are increasingly important as LLMs evolve. Our benchmark includes dynamic test set generation to mitigate data leakage and ensure robustness against such leakage. We also analyze existing benchmarks, highlighting their limitations and saturation. The work aims to: (1) establish a clear taxonomy of hallucinations, (2) introduce new extrinsic hallucination tasks, with data that can be dynamically regenerated to prevent saturation by leakage, (3) provide a comprehensive analysis of existing benchmarks, distinguishing them from factuality evaluations.",
+      "year": 2025,
+      "authors": [
+        "Yejin Bang",
+        "Ziwei Ji",
+        "Alan Schelten",
+        "Anthony Hartshorn",
+        "Tara Fowler",
+        "Cheng Zhang",
+        "Nicola Cancedda",
+        "Pascale Fung"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2504.17550",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2301.11850": {
+      "paper_id": "arxiv:2301.11850",
+      "title": "Predicting Sentence-Level Factuality of News and Bias of Media Outlets",
+      "abstract": "Automated news credibility and fact-checking at scale require accurately predicting news factuality and media bias. This paper introduces a large sentence-level dataset, titled \"FactNews\", composed of 6,191 sentences expertly annotated according to factuality and media bias definitions proposed by AllSides. We use FactNews to assess the overall reliability of news sources, by formulating two text classification problems for predicting sentence-level factuality of news reporting and bias of media outlets. Our experiments demonstrate that biased sentences present a higher number of words compared to factual sentences, besides having a predominance of emotions. Hence, the fine-grained analysis of subjectivity and impartiality of news articles provided promising results for predicting the reliability of media outlets. Finally, due to the severity of fake news and political polarization in Brazil, and the lack of research for Portuguese, both dataset and baseline were proposed for Brazilian Portuguese.",
+      "year": 2023,
+      "authors": [
+        "Francielle Vargas",
+        "Kokil Jaidka",
+        "Thiago A. S. Pardo",
+        "Fabrício Benevenuto"
+      ],
+      "url": "https://arxiv.org/abs/2301.11850",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2502.20560": {
+      "paper_id": "arxiv:2502.20560",
+      "title": "Towards Statistical Factuality Guarantee for Large Vision-Language Models",
+      "abstract": "Advancements in Large Vision-Language Models (LVLMs) have demonstrated promising performance in a variety of vision-language tasks involving image-conditioned free-form text generation. However, growing concerns about hallucinations in LVLMs, where the generated text is inconsistent with the visual context, are becoming a major impediment to deploying these models in applications that demand guaranteed reliability. In this paper, we introduce a framework to address this challenge, ConfLVLM, which is grounded on conformal prediction to achieve finite-sample distribution-free statistical guarantees on the factuality of LVLM output. This framework treats an LVLM as a hypothesis generator, where each generated text detail (or claim) is considered an individual hypothesis. It then applies a statistical hypothesis testing procedure to verify each claim using efficient heuristic uncertainty measures to filter out unreliable claims before returning any responses to users. We conduct extensive experiments covering three representative application domains, including general scene understanding, medical radiology report generation, and document understanding. Remarkably, ConfLVLM reduces the error rate of claims generated by LLaVa-1.5 for scene descriptions from 87.8\\% to 10.0\\% by filtering out erroneous claims with a 95.3\\% true positive rate. Our results further demonstrate that ConfLVLM is highly flexible, and can be applied to any black-box LVLMs paired with any uncertainty measure for any image-conditioned free-form text generation task while providing a rigorous guarantee on controlling the risk of hallucination.",
+      "year": 2025,
+      "authors": [
+        "Zhuohang Li",
+        "Chao Yan",
+        "Nicholas J. Jackson",
+        "Wendi Cui",
+        "Bo Li",
+        "Jiaxin Zhang",
+        "Bradley A. Malin"
+      ],
+      "url": "https://arxiv.org/abs/2502.20560",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2411.15490": {
+      "paper_id": "arxiv:2411.15490",
+      "title": "Improving Factuality of 3D Brain MRI Report Generation with Paired Image-domain Retrieval and Text-domain Augmentation",
+      "abstract": "Acute ischemic stroke (AIS) requires time-critical decision-making, where inaccurate interpretation of neuroimaging findings can lead to irreversible disability. Diffusion-weighted imaging (DWI) and apparent diffusion coefficient (ADC) maps from magnetic resonance imaging (MRI) are central to detecting acute infarction, yet generating factually reliable radiology reports directly from 3D MRI remains challenging due to the difficulty of learning robust cross-modal alignments between volumetric images and clinical text. We propose paired image-domain retrieval and text-domain augmentation (PIRTA), a retrieval-augmented generation framework that improves report factuality by avoiding explicit image-text alignment. PIRTA retrieves clinically similar 3D DWI/ADC volumes using a pretrained 3D vision encoder and leverages their paired clinician-authored reports to ground large language model (LLM)-based report generation. Experiments on multi-institutional in-house data, a held-out external privacy-preserving cohort, and the public ISLES benchmark demonstrate that PIRTA achieves strong image-domain retrieval performance and consistently improves ischemic-territory accuracy, a clinically grounded surrogate for report factuality, compared to direct image-to-text baselines. These results indicate that retrieval-grounded generation provides a scalable and reliable paradigm for producing factually consistent radiology reports from complex 3D brain MRI. Source code is available at https://github.com/jhlee0619/PIRTA.",
+      "year": 2024,
+      "authors": [
+        "Junhyeok Lee",
+        "Yujin Oh",
+        "Dahyoun Lee",
+        "Hyon Keun Joh",
+        "Minchul Kim",
+        "Chul-Ho Sohn",
+        "Sung Hyun Baik",
+        "Cheol Kyu Jung",
+        "Jung Hyun Park",
+        "Kyu Sung Choi",
+        "Byung-Hoon Kim",
+        "Jong Chul Ye"
+      ],
+      "url": "https://arxiv.org/abs/2411.15490",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2507.22936": {
+      "paper_id": "arxiv:2507.22936",
+      "title": "Evaluating Large Language Models (LLMs) in Financial NLP: A Comparative Study on Financial Report Analysis",
+      "abstract": "Large language models (LLMs) are increasingly used to support the analysis of complex financial disclosures, yet their reliability, behavioral consistency, and transparency remain insufficiently understood in high-stakes settings. This paper presents a controlled evaluation of five transformer-based LLMs applied to question answering over the Business sections of U.S. 10-K filings. To capture complementary aspects of model behavior, we combine human evaluation, automated similarity metrics, and behavioral diagnostics under standardized and context-controlled prompting conditions. Human assessments indicate that models differ in their average performance across qualitative dimensions such as relevance, completeness, clarity, conciseness, and factual accuracy, though inter-rater agreement is modest, reflecting the subjective nature of these criteria. Automated metrics reveal systematic differences in lexical overlap and semantic similarity across models, while behavioral diagnostics highlight variation in response stability and cross-prompt alignment. Importantly, no single model consistently dominates across all evaluation perspectives. Together, these findings suggest that apparent performance differences should be interpreted as relative tendencies under the tested conditions rather than definitive indicators of general reliability. The results underscore the need for evaluation frameworks that account for human disagreement, behavioral variability, and interpretability when deploying LLMs in financially consequential applications.",
+      "year": 2025,
+      "authors": [
+        "Md Talha Mohsin"
+      ],
+      "url": "https://arxiv.org/abs/2507.22936",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2407.05131": {
+      "paper_id": "arxiv:2407.05131",
+      "title": "RULE: Reliable Multimodal RAG for Factuality in Medical Vision Language Models",
+      "abstract": "The recent emergence of Medical Large Vision Language Models (Med-LVLMs) has enhanced medical diagnosis. However, current Med-LVLMs frequently encounter factual issues, often generating responses that do not align with established medical facts. Retrieval-Augmented Generation (RAG), which utilizes external knowledge, can improve the factual accuracy of these models but introduces two major challenges. First, limited retrieved contexts might not cover all necessary information, while excessive retrieval can introduce irrelevant and inaccurate references, interfering with the model's generation. Second, in cases where the model originally responds correctly, applying RAG can lead to an over-reliance on retrieved contexts, resulting in incorrect answers. To address these issues, we propose RULE, which consists of two components. First, we introduce a provably effective strategy for controlling factuality risk through the calibrated selection of the number of retrieved contexts. Second, based on samples where over-reliance on retrieved contexts led to errors, we curate a preference dataset to fine-tune the model, balancing its dependence on inherent knowledge and retrieved contexts for generation. We demonstrate the effectiveness of RULE on medical VQA and report generation tasks across three datasets, achieving an average improvement of 47.4% in factual accuracy. We publicly release our benchmark and code in https://github.com/richard-peng-xia/RULE.",
+      "year": 2024,
+      "authors": [
+        "Peng Xia",
+        "Kangyu Zhu",
+        "Haoran Li",
+        "Hongtu Zhu",
+        "Yun Li",
+        "Gang Li",
+        "Linjun Zhang",
+        "Huaxiu Yao"
+      ],
+      "url": "https://arxiv.org/abs/2407.05131",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2411.19655": {
+      "paper_id": "arxiv:2411.19655",
+      "title": "Truth or Mirage? Towards End-to-End Factuality Evaluation with LLM-Oasis",
+      "abstract": "After the introduction of Large Language Models (LLMs), there have been substantial improvements in the performance of Natural Language Generation (NLG) tasks, including Text Summarization and Machine Translation. However, LLMs still produce outputs containing hallucinations, that is, content not grounded in factual information. Therefore, developing methods to assess the factuality of LLMs has become urgent. Indeed, resources for factuality evaluation have recently emerged. Although challenging, these resources face one or more of the following limitations: (i) they are tailored to a specific task or domain; (ii) they are limited in size, thereby preventing the training of new factuality evaluators; (iii) they are designed for simpler verification tasks, such as claim verification. To address these issues, we introduce LLM-Oasis, to the best of our knowledge the largest resource for training end-to-end factuality evaluators. LLM-Oasis is constructed by extracting claims from Wikipedia, falsifying a subset of these claims, and generating pairs of factual and unfactual texts. We then rely on human annotators to both validate the quality of our dataset and to create a gold standard test set for benchmarking factuality evaluation systems. Our experiments demonstrate that LLM-Oasis presents a significant challenge for state-of-the-art LLMs, with GPT-4o achieving up to 60% accuracy in our proposed end-to-end factuality evaluation task, highlighting its potential to drive future research in the field.",
+      "year": 2024,
+      "authors": [
+        "Alessandro Scirè",
+        "Andrei Stefan Bejgu",
+        "Simone Tedeschi",
+        "Karim Ghonim",
+        "Federico Martelli",
+        "Roberto Navigli"
+      ],
+      "url": "https://arxiv.org/abs/2411.19655",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2508.03860": {
+      "paper_id": "arxiv:2508.03860",
+      "title": "Hallucination to Truth: A Review of Fact-Checking and Factuality Evaluation in Large Language Models",
+      "abstract": "Large Language Models (LLMs) are trained on vast and diverse internet corpora that often include inaccurate or misleading content. Consequently, LLMs can generate misinformation, making robust fact-checking essential. This review systematically analyzes how LLM-generated content is evaluated for factual accuracy by exploring key challenges such as hallucinations, dataset limitations, and the reliability of evaluation metrics. The review emphasizes the need for strong fact-checking frameworks that integrate advanced prompting strategies, domain-specific fine-tuning, and retrieval-augmented generation (RAG) methods. It proposes five research questions that guide the analysis of the recent literature from 2020 to 2025, focusing on evaluation methods and mitigation techniques. Instruction tuning, multi-agent reasoning, and RAG frameworks for external knowledge access are also reviewed. The key findings demonstrate the limitations of current metrics, the importance of validated external evidence, and the improvement of factual consistency through domain-specific customization. The review underscores the importance of building more accurate, understandable, and context-aware fact-checking. These insights contribute to the advancement of research toward more trustworthy models.",
+      "year": 2025,
+      "authors": [
+        "Subhey Sadi Rahman",
+        "Md. Adnanul Islam",
+        "Md. Mahbub Alam",
+        "Musarrat Zeba",
+        "Md. Abdur Rahman",
+        "Sadia Sultana Chowa",
+        "Mohaimenul Azam Khan Raiaan",
+        "Sami Azam"
+      ],
+      "url": "https://arxiv.org/abs/2508.03860",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2610.27034": {
+      "paper_id": "arxiv:2610.27034",
+      "title": "Fluent but Fallible: Benchmarking Hallucination and Factual Reliability in Large Language Models",
+      "abstract": "Large Language Models (LLMs) have significantly advanced natural language processing and artificial intelligence applications through their capabilities in reasoning, text generation and knowledge retrieval. However, LLMs are still vulnerable to two important challenges: hallucination, generating factually incorrect or fabricated content, and response deviation, meaning systematic deviations from ground-truth responses. These limitations raise serious concerns regarding reliability and trustworthiness in academic and research environments. This study offers a thorough comparative analysis using a variety of metrics of ten advanced LLMs ChatGPT, Gemini, Claude~3.5~Sonnet, LLaMA~3, Mistral, Grok, Perplexity, DeepSeek~V3, Falcon, and Gemma based on a benchmark consisting of 70 carefully designed academic prompts across four complexity levels: Basic, Explanation, Advanced, and Tricky, evaluated in February 2025 on specific model versions. Each response was independently evaluated by three reviewers using five metrics: Accuracy, Precision, Recall, Response Deviation Index, and Hallucination Index. Perplexity and DeepSeek~V3 achieved the highest overall accuracy, while Gemini demonstrated strong recall and a well-balanced performance profile across all five metrics. LLaMA~3 showed strong resistance against hallucinations through a conservative method of generation. Advanced-level prompts proved most challenging across all models, while Tricky prompts were handled more reliably owing to their binary true/false structure. Falcon achieved perfect precision and zero hallucinations, but at the cost of the lowest recall and the highest response deviation. The results show a fundamental trade-off between response completeness and factual reliability, intensified by prompt complexity.",
+      "year": 2026,
+      "authors": [
+        "Osama Shabih",
+        "Dayam Nadeem",
+        "Shahab Saquib Sohail",
+        "Mohammad Nadeem"
+      ],
+      "url": "https://arxiv.org/abs/2610.27034",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2505.16520": {
+      "paper_id": "arxiv:2505.16520",
+      "title": "Are the Hidden States Hiding Something? Testing the Limits of Factuality-Encoding Capabilities in LLMs",
+      "abstract": "Factual hallucinations are a major challenge for Large Language Models (LLMs). They undermine reliability and user trust by generating inaccurate or fabricated content. Recent studies suggest that when generating false statements, the internal states of LLMs encode information about truthfulness. However, these studies often rely on synthetic datasets that lack realism, which limits generalization when evaluating the factual accuracy of text generated by the model itself. In this paper, we challenge the findings of previous work by investigating truthfulness encoding capabilities, leading to the generation of a more realistic and challenging dataset. Specifically, we extend previous work by introducing: (1) a strategy for sampling plausible true-false factoid sentences from tabular data and (2) a procedure for generating realistic, LLM-dependent true-false datasets from Question Answering collections. Our analysis of two open-source LLMs reveals that while the findings from previous studies are partially validated, generalization to LLM-generated datasets remains challenging. This study lays the groundwork for future research on factuality in LLMs and offers practical guidelines for more effective evaluation.",
+      "year": 2025,
+      "authors": [
+        "Giovanni Servedio",
+        "Alessandro De Bellis",
+        "Dario Di Palma",
+        "Vito Walter Anelli",
+        "Tommaso Di Noia"
+      ],
+      "url": "https://arxiv.org/abs/2505.16520",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:df61f25e1f77163d82b8e52183b629404d535b88": {
+      "paper_id": "s2:df61f25e1f77163d82b8e52183b629404d535b88",
+      "title": "A Systematic Survey and Critical Review on Evaluating Large Language Models: Challenges, Limitations, and Recommendations",
+      "abstract": "Large Language Models (LLMs) have recently gained significant attention due to their remarkable capabilities in performing diverse tasks across various domains. However, a thorough evaluation of these models is crucial before deploying them in real-world applications to ensure they produce reliable performance. Despite the well-established importance of evaluating LLMs in the community, the complexity of the evaluation process has led to varied evaluation setups, causing inconsistencies in findings and interpretations. To address this, we systematically review the primary challenges and limitations causing these inconsistencies and unreliable evaluations in various steps of LLM evaluation. Based on our critical review, we present our perspectives and recommendations to ensure LLM evaluations are reproducible, reliable, and robust.",
+      "year": 2024,
+      "authors": [
+        "Md Tahmid Rahman Laskar",
+        "Sawsan Alqahtani",
+        "M Saiful Bari",
+        "Mizanur Rahman",
+        "Mohammad Abdullah Matin Khan",
+        "Haidar Khan",
+        "Israt Jahan",
+        "Amran Bhuiyan",
+        "Chee-Wei Tan",
+        "Md. Rizwan Parvez",
+        "Enamul Hoque",
+        "Shafiq R. Joty",
+        "J. Huang"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2407.04069",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2406.13779": {
+      "paper_id": "arxiv:2406.13779",
+      "title": "FoRAG: Factuality-optimized Retrieval Augmented Generation for Web-enhanced Long-form Question Answering",
+      "abstract": "Retrieval Augmented Generation (RAG) has become prevalent in question-answering (QA) tasks due to its ability of utilizing search engine to enhance the quality of long-form question-answering (LFQA). Despite the emergence of various open source methods and web-enhanced commercial systems such as Bing Chat, two critical problems remain unsolved, i.e., the lack of factuality and clear logic in the generated long-form answers. In this paper, we remedy these issues via a systematic study on answer generation in web-enhanced LFQA. Specifically, we first propose a novel outline-enhanced generator to achieve clear logic in the generation of multifaceted answers and construct two datasets accordingly. Then we propose a factuality optimization method based on a carefully designed doubly fine-grained RLHF framework, which contains automatic evaluation and reward modeling in different levels of granularity. Our generic framework comprises conventional fine-grained RLHF methods as special cases. Extensive experiments verify the superiority of our proposed \\textit{Factuality-optimized RAG (FoRAG)} method on both English and Chinese benchmarks. In particular, when applying our method to Llama2-7B-chat, the derived model FoRAG-L-7B outperforms WebGPT-175B in terms of three commonly used metrics (i.e., coherence, helpfulness, and factuality), while the number of parameters is much smaller (only 1/24 of that of WebGPT-175B). Our datasets and models are made publicly available for better reproducibility: https://huggingface.co/forag.",
+      "year": 2024,
+      "authors": [
+        "Tianchi Cai",
+        "Zhiwen Tan",
+        "Xierui Song",
+        "Tao Sun",
+        "Jiyan Jiang",
+        "Yunqi Xu",
+        "Yinger Zhang",
+        "Jinjie Gu"
+      ],
+      "url": "https://arxiv.org/abs/2406.13779",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2509.19209": {
+      "paper_id": "arxiv:2509.19209",
+      "title": "A Knowledge Graph and a Tripartite Evaluation Framework Make Retrieval-Augmented Generation Scalable and Transparent",
+      "abstract": "Large Language Models (LLMs) have significantly enhanced conversational Artificial Intelligence(AI) chatbots; however, domain-specific accuracy and the avoidance of factual inconsistencies remain pressing challenges, particularly for large datasets. Designing an effective chatbot with appropriate methods and evaluating its effectiveness is among the challenges in this domain. This study presents a Retrieval Augmented Generation (RAG) chatbot that harnesses a knowledge graph and vector search retrieval to deliver precise, context-rich responses in an exemplary use case from over high-volume engineering project-related emails, thereby minimising the need for document chunking. A central innovation of this work is the introduction of RAG Evaluation (RAG-Eval), a novel chain-of-thought LLM-based tripartite evaluation framework specifically developed to assess RAG applications. This framework operates in parallel with the chatbot, jointly assessing the user's query, the retrieved document, and the generated response, enabling a holistic evaluation across multiple quality metrics like query relevance, factual accuracy, coverage, coherence and fluency. The resulting scoring system is provided directly to users as a confidence score (1 to 100%), enabling quick identification of possible misaligned or incomplete answers. This proposed approach promotes transparency and rapid verification by incorporating metadata email IDs, timestamps into responses. Experimental comparisons against BERTScore and G-EVAL for summarisation evaluation tasks confirm its effectiveness, and empirical analysis also shows RAG-Eval reliably detects factual gaps and query mismatches, thereby fostering trust in high demand, data centric environments. These findings highlight a scalable path for developing accurate, user-verifiable chatbots that bridge the gap between high-level conversational fluency and factual accuracy.",
+      "year": 2025,
+      "authors": [
+        "Olalekan K. Akindele",
+        "Bhupesh Kumar Mishra",
+        "Kenneth Y. Wertheim"
+      ],
+      "url": "https://arxiv.org/abs/2509.19209",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2605.13481": {
+      "paper_id": "arxiv:2605.13481",
+      "title": "PersonalAI 2.0: Enhancing knowledge graph traversal/retrieval with planning mechanism for Personalized LLM Agents",
+      "abstract": "We introduce PersonalAI 2.0 (PAI-2), a novel framework designed to enhance LLM-based systems through integration of external knowledge graphs (KGs). The proposed approach addresses key limitations of existing Graph Retrieval-Augmented Generation (GraphRAG) methods by incorporating a dynamic, multistage pipeline. The central point of the PAI-2 design is its ability to perform adaptive, iterative information search, guided by extracted entities, matched graph vertices and generated clue-queries. Conducted evaluation on five benchmarks (Natural Questions, TriviaQA, HotpotQA, 2WikiMultihopQA and MuSiQue) demonstrates an improvement in the factual correctness of generated answers compared to baseline methods (LightRAG, RAPTOR, HippoRAG 2 and PAI-1). PAI-2 achieves a 9 percentage points (pp) average gain by LLM-as-a-Judge on 2WikiMultihopQA and MuSiQue benchmarks, and attains comparable accuracy to HippoRAG 2 on the TriviaQA and HotpotQA benchmarks with Qwen2.5 7B and multilingual-e5-large reflecting its effectiveness in reducing hallucination rates and increasing recall. We show that enabled search plan enhancement mechanism gain in average a 18 pp boost compared to disabled one by LLM-as-a-Judge across five benchmarks. In addition, an ablation study reveals that PAI-2 achieves superior result on the MINE-1 benchmark, obtaining an 89\\% information-retention score with Qwen2.5 7B and multilingual-e5-large. Collectively, these findings underscore the potential of PAI-2 to serve as a reusable component for personalized AI applications, which require context-aware knowledge-representation and reasoning capabilities. The source code of PAI-2 is available at the following link: https://github.com/Dzigen/PersonalAI.",
+      "year": 2026,
+      "authors": [
+        "Mikhail Menschikov",
+        "Matvey Iskornev",
+        "Alexander Kharitonov",
+        "Alina Bogdanova",
+        "Mikhail Belkin",
+        "Ekaterina Lisitsyna",
+        "Artyom Sosedka",
+        "Victoria Dochkina",
+        "Ruslan Kostoev",
+        "Ilia Perepechkin",
+        "Evgeny Burnaev"
+      ],
+      "url": "https://arxiv.org/abs/2605.13481",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q11",
+  "area": "NLP"
+}

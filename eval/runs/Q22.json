@@ -1,0 +1,718 @@
+{
+  "question": "What are membership inference attacks against machine learning models and what defenses exist?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What are the core mechanisms and threat models of membership inference attacks against machine learning models?",
+      "search_query": "membership inference attacks machine learning threat models",
+      "paper_ids": [
+        "s2:239591874efdf1672d227fd54e0ad030ed2dc3ed",
+        "arxiv:2212.10628",
+        "s2:75986271125b5d7db87abb063f21bb6232a92530",
+        "s2:9bb14ee43eb7607e0bf95bde3fa62882a676eb5d",
+        "arxiv:2207.13572"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What specific factors and vulnerabilities make machine learning models susceptible to membership inference?",
+      "search_query": "vulnerabilities causing membership inference attacks machine learning",
+      "paper_ids": [
+        "s2:f0dcc9aa31dc9b31b836bcac1b140c8c94a2982d",
+        "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+        "s2:62749fbe7bfb0cd3abe0a8897efd3989ef867941",
+        "arxiv:1802.04889",
+        "arxiv:2111.09679"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What defensive techniques and mitigation strategies exist to protect models against membership inference?",
+      "search_query": "defenses against membership inference attacks machine learning",
+      "paper_ids": [
+        "s2:e594cef29d90e82f681afa6bb7b0aa4e8da2ceae",
+        "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+        "s2:f58bfd8363ce3ceb21e7c1ea45665e861be39653",
+        "arxiv:2501.02182",
+        "arxiv:2103.07853"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "How do differential privacy and other mitigation strategies impact the tradeoff between privacy and model utility?",
+      "search_query": "differential privacy trade off model utility accuracy",
+      "paper_ids": [
+        "arxiv:2008.08807",
+        "s2:7f0069e877f7843837ef0ddb4a1482842b97c49c",
+        "arxiv:1612.02298",
+        "arxiv:2303.01819",
+        "s2:6bd1a4bb3db7fe0fdcca7a02bf5c28ba6af15c28"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "Membership-Doctor systematizes membership inference through the study of nine attacks and six defenses, and shows that assumptions of the threat model such as same-architecture and same-distribution between shadow and target models are unnecessary.",
+        "paper_id": "s2:239591874efdf1672d227fd54e0ad030ed2dc3ed"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Membership-Doctor systematizes membership inference through the study of nine attacks and six defenses, and shows that assumptions of the threat model such as same-architecture and same-distribution between shadow and target models are unnecessary.",
+          "paper_id": "s2:239591874efdf1672d227fd54e0ad030ed2dc3ed",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8714,
+          "p_supported": 0.8714,
+          "accepted": true,
+          "alt_p_supported": 0.9175
+        }
+      ],
+      "final": {
+        "text": "Membership-Doctor systematizes membership inference through the study of nine attacks and six defenses, and shows that assumptions of the threat model such as same-architecture and same-distribution between shadow and target models are unnecessary.",
+        "paper_id": "s2:239591874efdf1672d227fd54e0ad030ed2dc3ed",
+        "label": "SUPPORTED",
+        "confidence": 0.8714
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "ML-Doctor establishes a threat model taxonomy for four inference attacks, including membership inference, model inversion, attribute inference, and model stealing.",
+        "paper_id": "s2:9bb14ee43eb7607e0bf95bde3fa62882a676eb5d"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "ML-Doctor establishes a threat model taxonomy for four inference attacks, including membership inference, model inversion, attribute inference, and model stealing.",
+          "paper_id": "s2:9bb14ee43eb7607e0bf95bde3fa62882a676eb5d",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9425,
+          "p_supported": 0.9425,
+          "accepted": true,
+          "alt_p_supported": 0.9127
+        }
+      ],
+      "final": {
+        "text": "ML-Doctor establishes a threat model taxonomy for four inference attacks, including membership inference, model inversion, attribute inference, and model stealing.",
+        "paper_id": "s2:9bb14ee43eb7607e0bf95bde3fa62882a676eb5d",
+        "label": "SUPPORTED",
+        "confidence": 0.9425
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "One study shows that training data samples vulnerable to membership inference attacks in non-overfitted models are often outliers within their classes, such as noisy or hard to classify data.",
+        "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study shows that training data samples vulnerable to membership inference attacks in non-overfitted models are often outliers within their classes, such as noisy or hard to classify data.",
+          "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9127,
+          "p_supported": 0.9127,
+          "accepted": true,
+          "alt_p_supported": 0.9207
+        }
+      ],
+      "final": {
+        "text": "One study shows that training data samples vulnerable to membership inference attacks in non-overfitted models are often outliers within their classes, such as noisy or hard to classify data.",
+        "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+        "label": "SUPPORTED",
+        "confidence": 0.9127
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Research demonstrates that the training data of a fully trained machine learning model generally has lower prediction sensitivities compared to non-training data.",
+        "paper_id": "s2:62749fbe7bfb0cd3abe0a8897efd3989ef867941"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Research demonstrates that the training data of a fully trained machine learning model generally has lower prediction sensitivities compared to non-training data.",
+          "paper_id": "s2:62749fbe7bfb0cd3abe0a8897efd3989ef867941",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9315,
+          "p_supported": 0.9315,
+          "accepted": true,
+          "alt_p_supported": 0.895
+        }
+      ],
+      "final": {
+        "text": "Research demonstrates that the training data of a fully trained machine learning model generally has lower prediction sensitivities compared to non-training data.",
+        "paper_id": "s2:62749fbe7bfb0cd3abe0a8897efd3989ef867941",
+        "label": "SUPPORTED",
+        "confidence": 0.9315
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "Differential privacy is utilized as a defense against membership inference attacks, often resulting in high accuracy losses.",
+        "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Differential privacy is utilized as a defense against membership inference attacks, often resulting in high accuracy losses.",
+          "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9277,
+          "p_supported": 0.9277,
+          "accepted": true,
+          "alt_p_supported": 0.9309
+        }
+      ],
+      "final": {
+        "text": "Differential privacy is utilized as a defense against membership inference attacks, often resulting in high accuracy losses.",
+        "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+        "label": "SUPPORTED",
+        "confidence": 0.9277
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "AdaMixup employs adaptive mixup techniques during training to enhance model robustness and reduce the risk of membership inference attacks.",
+        "paper_id": "arxiv:2501.02182"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "AdaMixup employs adaptive mixup techniques during training to enhance model robustness and reduce the risk of membership inference attacks.",
+          "paper_id": "arxiv:2501.02182",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9427,
+          "p_supported": 0.9427,
+          "accepted": true,
+          "alt_p_supported": 0.9231
+        }
+      ],
+      "final": {
+        "text": "AdaMixup employs adaptive mixup techniques during training to enhance model robustness and reduce the risk of membership inference attacks.",
+        "paper_id": "arxiv:2501.02182",
+        "label": "SUPPORTED",
+        "confidence": 0.9427
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Under high privacy constraints, perturbing input training data trades off less utility compared to noise added later in the machine learning process.",
+        "paper_id": "arxiv:2008.08807"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Under high privacy constraints, perturbing input training data trades off less utility compared to noise added later in the machine learning process.",
+          "paper_id": "arxiv:2008.08807",
+          "label": "INSUFFICIENT",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.6973,
+          "p_supported": 0.6973,
+          "accepted": false,
+          "alt_p_supported": 0.7758
+        },
+        {
+          "action": "re-retrieve",
+          "text": "Under high privacy constraints, perturbing input training data trades off less utility compared to noise added later in the machine learning process.",
+          "paper_id": "arxiv:2206.07234",
+          "label": "INSUFFICIENT",
+          "raw_label": "INSUFFICIENT",
+          "confidence": 0.9007,
+          "p_supported": 0.0548,
+          "accepted": false,
+          "alt_p_supported": 0.0776
+        },
+        {
+          "action": "revise",
+          "text": "Under high privacy constraints, perturbing input training data does not trade off as much utility as compared to noise added later in the machine learning process.",
+          "paper_id": "arxiv:2008.08807",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9212,
+          "p_supported": 0.9212,
+          "accepted": true,
+          "alt_p_supported": 0.8934
+        }
+      ],
+      "final": {
+        "text": "Under high privacy constraints, perturbing input training data does not trade off as much utility as compared to noise added later in the machine learning process.",
+        "paper_id": "arxiv:2008.08807",
+        "label": "SUPPORTED",
+        "confidence": 0.9212
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Using Bounded RELU as activation functions improves utility in differentially private models trained with DPSGD, achieving 96.02% accuracy on MNIST, 84.76% on FashionMnist, and 44.42% on CIFAR-10.",
+        "paper_id": "arxiv:2303.01819"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Using Bounded RELU as activation functions improves utility in differentially private models trained with DPSGD, achieving 96.02% accuracy on MNIST, 84.76% on FashionMnist, and 44.42% on CIFAR-10.",
+          "paper_id": "arxiv:2303.01819",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9268,
+          "p_supported": 0.9268,
+          "accepted": true,
+          "alt_p_supported": 0.8891
+        }
+      ],
+      "final": {
+        "text": "Using Bounded RELU as activation functions improves utility in differentially private models trained with DPSGD, achieving 96.02% accuracy on MNIST, 84.76% on FashionMnist, and 44.42% on CIFAR-10.",
+        "paper_id": "arxiv:2303.01819",
+        "label": "SUPPORTED",
+        "confidence": 0.9268
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:239591874efdf1672d227fd54e0ad030ed2dc3ed",
+      "citation": "Xinlei He, Zheng Li, Wei-Lin Xu et al. (2022). Membership-Doctor: Comprehensive Assessment of Membership Inference Against Machine Learning Models. arXiv.org. https://doi.org/10.48550/arXiv.2208.10445"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:9bb14ee43eb7607e0bf95bde3fa62882a676eb5d",
+      "citation": "Yugeng Liu, Rui Wen, Xinlei He et al. (2021). ML-Doctor: Holistic Risk Assessment of Inference Attacks Against Machine Learning Models. USENIX Security Symposium. https://doi.org/10.48550/arXiv.2102.02551"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+      "citation": "M. Khalil, Alberto Blanco-Justicia, N. Jebreel et al. (2025). Membership Inference Attacks Beyond Overfitting. arXiv.org. https://doi.org/10.48550/arXiv.2511.16792"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:62749fbe7bfb0cd3abe0a8897efd3989ef867941",
+      "citation": "Lan Liu, Yi Wang, Gao-Yang Liu et al. (2023). Membership Inference Attacks Against Machine Learning Models via Prediction Sensitivity. IEEE Transactions on Dependable and Secure Computing. https://doi.org/10.1109/TDSC.2022.3180828"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2501.02182",
+      "citation": "Ying Chen, Jiajing Chen, Yijie Weng et al. (2025). AdaMixup: A Dynamic Defense Framework for Membership Inference Attack Mitigation. arXiv. https://arxiv.org/abs/2501.02182"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2008.08807",
+      "citation": "Benjamin Zi Hao Zhao, Mohamed Ali Kaafar, Nicolas Kourtellis (2020). Not one but many Tradeoffs: Privacy Vs. Utility in Differentially Private Machine Learning. arXiv. https://arxiv.org/abs/2008.08807"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2303.01819",
+      "citation": "Ayoub Arous, Amira Guesmi, Muhammad Abdullah Hanif et al. (2023). Exploring Machine Learning Privacy/Utility trade-off from a hyperparameters Lens. arXiv. https://arxiv.org/abs/2303.01819"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Membership inference attacks against machine learning models can be studied through systematic frameworks like Membership-Doctor and ML-Doctor, which establish threat model taxonomies [1, 2]. Notably, these attacks do not require strict threat model assumptions such as same-architecture or same-distribution between shadow and target models [1]. Regarding the specific vulnerabilities of models, training data samples that are susceptible to membership inference in non-overfitted models often present as class outliers, such as hard-to-classify or noisy data [3]. Furthermore, research indicates that the training data of fully trained machine learning models generally exhibits lower prediction sensitivities than non-training data [4].\n\nTo protect models against membership inference, various defenses and mitigation strategies have been developed. Differential privacy serves as a defense mechanism, though it frequently leads to high accuracy losses [3]. Additionally, techniques like AdaMixup use adaptive mixup during training to improve model robustness and decrease membership inference risks [5].\n\nMitigating membership inference involves carefully balancing privacy and model utility. Under strict privacy constraints, perturbing input training data results in a better utility tradeoff compared to adding noise later in the machine learning pipeline [6]. Moreover, employing Bounded ReLU activation functions in differentially private models trained via DPSGD helps preserve utility, enabling them to achieve accuracies such as 96.02% on MNIST, 84.76% on FashionMnist, and 44.42% on CIFAR-10 [7].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 7,
+    "claims_retried": 1,
+    "retry_successes": 1,
+    "total_retries": 2,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 6,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 11,
+      "arxiv": 2
+    },
+    "seconds": 99.0
+  },
+  "papers": {
+    "s2:239591874efdf1672d227fd54e0ad030ed2dc3ed": {
+      "paper_id": "s2:239591874efdf1672d227fd54e0ad030ed2dc3ed",
+      "title": "Membership-Doctor: Comprehensive Assessment of Membership Inference Against Machine Learning Models",
+      "abstract": "Machine learning models are prone to memorizing sensitive data, making them vulnerable to membership inference attacks in which an adversary aims to infer whether an input sample was used to train the model. Over the past few years, researchers have produced many membership inference attacks and defenses. However, these attacks and defenses employ a variety of strategies and are conducted in different models and datasets. The lack of comprehensive benchmark, however, means we do not understand the strengths and weaknesses of existing attacks and defenses. We fill this gap by presenting a large-scale measurement of different membership inference attacks and defenses. We systematize membership inference through the study of nine attacks and six defenses and measure the performance of different attacks and defenses in the holistic evaluation. We then quantify the impact of the threat model on the results of these attacks. We find that some assumptions of the threat model, such as same-architecture and same-distribution between shadow and target models, are unnecessary. We are also the first to execute attacks on the real-world data collected from the Internet, instead of laboratory datasets. We further investigate what determines the performance of membership inference attacks and reveal that the commonly believed overfitting level is not sufficient for the success of the attacks. Instead, the Jensen-Shannon distance of entropy/cross-entropy between member and non-member samples correlates with attack performance much better. This gives us a new way to accurately predict membership inference risks without running the attack. Finally, we find that data augmentation degrades the performance of existing attacks to a larger extent, and we propose an adaptive attack using augmentation to train shadow and attack models that improve attack performance.",
+      "year": 2022,
+      "authors": [
+        "Xinlei He",
+        "Zheng Li",
+        "Wei-Lin Xu",
+        "Cory Cornelius",
+        "Yang Zhang"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2208.10445",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2212.10628": {
+      "paper_id": "arxiv:2212.10628",
+      "title": "Holistic risk assessment of inference attacks in machine learning",
+      "abstract": "As machine learning expanding application, there are more and more unignorable privacy and safety issues. Especially inference attacks against Machine Learning models allow adversaries to infer sensitive information about the target model, such as training data, model parameters, etc. Inference attacks can lead to serious consequences, including violating individuals privacy, compromising the intellectual property of the owner of the machine learning model. As far as concerned, researchers have studied and analyzed in depth several types of inference attacks, albeit in isolation, but there is still a lack of a holistic rick assessment of inference attacks against machine learning models, such as their application in different scenarios, the common factors affecting the performance of these attacks and the relationship among the attacks. As a result, this paper performs a holistic risk assessment of different inference attacks against Machine Learning models. This paper focuses on three kinds of representative attacks: membership inference attack, attribute inference attack and model stealing attack. And a threat model taxonomy is established. A total of 12 target models using three model architectures, including AlexNet, ResNet18 and Simple CNN, are trained on four datasets, namely CelebA, UTKFace, STL10 and FMNIST.",
+      "year": 2022,
+      "authors": [
+        "Yang Yang"
+      ],
+      "url": "https://arxiv.org/abs/2212.10628",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:75986271125b5d7db87abb063f21bb6232a92530": {
+      "paper_id": "s2:75986271125b5d7db87abb063f21bb6232a92530",
+      "title": "Advancing membership inference attacks: The present and the future",
+      "abstract": "Machine learning (ML) has made significant strides in various tasks, largely due to the availability of large-scale datasets. However, these datasets often contain sensitive information, posing serious privacy risks. Membership inference attacks (MIAs) exploit these risks by determining whether a specific data sample was used to train an ML model, potentially leading to significant data leaks. This paper reviews the current state of MIAs, examining their principles, threat models, and methodologies. Additionally, this paper discusses the limitations and challenges in existing research and proposes future directions to improve the robustness and privacy of ML models.",
+      "year": 2024,
+      "authors": [
+        "Zheng Li",
+        "Zhang Yang"
+      ],
+      "url": "https://doi.org/10.1051/sands/2024017",
+      "venue": "Secur. Saf.",
+      "source": "semantic_scholar"
+    },
+    "s2:9bb14ee43eb7607e0bf95bde3fa62882a676eb5d": {
+      "paper_id": "s2:9bb14ee43eb7607e0bf95bde3fa62882a676eb5d",
+      "title": "ML-Doctor: Holistic Risk Assessment of Inference Attacks Against Machine Learning Models",
+      "abstract": "Inference attacks against Machine Learning (ML) models allow adversaries to learn sensitive information about training data, model parameters, etc. While researchers have studied, in depth, several kinds of attacks, they have done so in isolation. As a result, we lack a comprehensive picture of the risks caused by the attacks, e.g., the different scenarios they can be applied to, the common factors that influence their performance, the relationship among them, or the effectiveness of possible defenses. In this paper, we fill this gap by presenting a first-of-its-kind holistic risk assessment of different inference attacks against machine learning models. We concentrate on four attacks -- namely, membership inference, model inversion, attribute inference, and model stealing -- and establish a threat model taxonomy. Our extensive experimental evaluation, run on five model architectures and four image datasets, shows that the complexity of the training dataset plays an important role with respect to the attack's performance, while the effectiveness of model stealing and membership inference attacks are negatively correlated. We also show that defenses like DP-SGD and Knowledge Distillation can only mitigate some of the inference attacks. Our analysis relies on a modular re-usable software, ML-Doctor, which enables ML model owners to assess the risks of deploying their models, and equally serves as a benchmark tool for researchers and practitioners.",
+      "year": 2021,
+      "authors": [
+        "Yugeng Liu",
+        "Rui Wen",
+        "Xinlei He",
+        "A. Salem",
+        "Zhi-Kun Zhang",
+        "M. Backes",
+        "Emiliano De Cristofaro",
+        "M. Fritz",
+        "Yang Zhang"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2102.02551",
+      "venue": "USENIX Security Symposium",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2207.13572": {
+      "paper_id": "arxiv:2207.13572",
+      "title": "Membership Inference Attacks via Adversarial Examples",
+      "abstract": "The raise of machine learning and deep learning led to significant improvement in several domains. This change is supported by both the dramatic rise in computation power and the collection of large datasets. Such massive datasets often include personal data which can represent a threat to privacy. Membership inference attacks are a novel direction of research which aims at recovering training data used by a learning algorithm. In this paper, we develop a mean to measure the leakage of training data leveraging a quantity appearing as a proxy of the total variation of a trained model near its training samples. We extend our work by providing a novel defense mechanism. Our contributions are supported by empirical evidence through convincing numerical experiments.",
+      "year": 2022,
+      "authors": [
+        "Hamid Jalalzai",
+        "Elie Kadoche",
+        "Rémi Leluc",
+        "Vincent Plassier"
+      ],
+      "url": "https://arxiv.org/abs/2207.13572",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:f0dcc9aa31dc9b31b836bcac1b140c8c94a2982d": {
+      "paper_id": "s2:f0dcc9aa31dc9b31b836bcac1b140c8c94a2982d",
+      "title": "Membership Inference Attacks Against Machine Learning Models",
+      "abstract": "We quantitatively investigate how machine learning models leak information about the individual data records on which they were trained. We focus on the basic membership inference attack: given a data record and black-box access to a model, determine if the record was in the model's training dataset. To perform membership inference against a target model, we make adversarial use of machine learning and train our own inference model to recognize differences in the target model's predictions on the inputs that it trained on versus the inputs that it did not train on. We empirically evaluate our inference techniques on classification models trained by commercial \"machine learning as a service\" providers such as Google and Amazon. Using realistic datasets and classification tasks, including a hospital discharge dataset whose membership is sensitive from the privacy perspective, we show that these models can be vulnerable to membership inference attacks. We then investigate the factors that influence this leakage and evaluate mitigation strategies.",
+      "year": 2016,
+      "authors": [
+        "R. Shokri",
+        "Marco Stronati",
+        "Cong-Zheng Song",
+        "V. Shmatikov"
+      ],
+      "url": "https://doi.org/10.1109/SP.2017.41",
+      "venue": "IEEE Symposium on Security and Privacy",
+      "source": "semantic_scholar"
+    },
+    "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c": {
+      "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+      "title": "Membership Inference Attacks Beyond Overfitting",
+      "abstract": "Membership inference attacks (MIAs) against machine learning (ML) models aim to determine whether a given data point was part of the model training data. These attacks may pose significant privacy risks to individuals whose sensitive data were used for training, which motivates the use of defenses such as differential privacy, often at the cost of high accuracy losses. MIAs exploit the differences in the behavior of a model when making predictions on samples it has seen during training (members) versus those it has not seen (non-members). Several studies have pointed out that model overfitting is the major factor contributing to these differences in behavior and, consequently, to the success of MIAs. However, the literature also shows that even non-overfitted ML models can leak information about a small subset of their training data. In this paper, we investigate the root causes of membership inference vulnerabilities beyond traditional overfitting concerns and suggest targeted defenses. We empirically analyze the characteristics of the training data samples vulnerable to MIAs in models that are not overfitted (and hence able to generalize). Our findings reveal that these samples are often outliers within their classes (e.g., noisy or hard to classify). We then propose potential defensive strategies to protect these vulnerable samples and enhance the privacy-preserving capabilities of ML models. Our code is available at https://github.com/najeebjebreel/mia_analysis.",
+      "year": 2025,
+      "authors": [
+        "M. Khalil",
+        "Alberto Blanco-Justicia",
+        "N. Jebreel",
+        "J. Domingo-Ferrer"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2511.16792",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:62749fbe7bfb0cd3abe0a8897efd3989ef867941": {
+      "paper_id": "s2:62749fbe7bfb0cd3abe0a8897efd3989ef867941",
+      "title": "Membership Inference Attacks Against Machine Learning Models via Prediction Sensitivity",
+      "abstract": "Machine learning (ML) has achieved huge success in recent years, but is also vulnerable to various attacks. In this article, we concentrate on membership inference attacks and propose Aster, which merely requires the target model's black-box API and a data sample to determine whether this sample was used to train the given ML model or not. The key idea of Aster is that the training data of a fully trained ML model usually has lower prediction sensitivities compared with that of the non-training data (i.e., testing data). Less sensitivity means that when perturbing a training sample's feature value in the corresponding feature space, the prediction of the perturbed sample obtained from the target model tends to be consistent with the original prediction. In this article, we quantify the prediction sensitivity with the Jacobian matrix which could reflect the relationship between each feature's perturbation and the corresponding prediction's change. Then we regard the samples with a lower as training data. Aster can breach the membership privacy of the target model's training data with no prior knowledge about the target model or its training data. The experiment results on four datasets show that our method outperforms three state-of-the-art inference attacks.",
+      "year": 2023,
+      "authors": [
+        "Lan Liu",
+        "Yi Wang",
+        "Gao-Yang Liu",
+        "Kai Peng",
+        "Chen Wang"
+      ],
+      "url": "https://doi.org/10.1109/TDSC.2022.3180828",
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1802.04889": {
+      "paper_id": "arxiv:1802.04889",
+      "title": "Understanding Membership Inferences on Well-Generalized Learning Models",
+      "abstract": "Membership Inference Attack (MIA) determines the presence of a record in a machine learning model's training data by querying the model. Prior work has shown that the attack is feasible when the model is overfitted to its training data or when the adversary controls the training algorithm. However, when the model is not overfitted and the adversary does not control the training algorithm, the threat is not well understood. In this paper, we report a study that discovers overfitting to be a sufficient but not a necessary condition for an MIA to succeed. More specifically, we demonstrate that even a well-generalized model contains vulnerable instances subject to a new generalized MIA (GMIA). In GMIA, we use novel techniques for selecting vulnerable instances and detecting their subtle influences ignored by overfitting metrics. Specifically, we successfully identify individual records with high precision in real-world datasets by querying black-box machine learning models. Further we show that a vulnerable record can even be indirectly attacked by querying other related records and existing generalization techniques are found to be less effective in protecting the vulnerable instances. Our findings sharpen the understanding of the fundamental cause of the problem: the unique influences the training instance may have on the model.",
+      "year": 2018,
+      "authors": [
+        "Yunhui Long",
+        "Vincent Bindschaedler",
+        "Lei Wang",
+        "Diyue Bu",
+        "Xiaofeng Wang",
+        "Haixu Tang",
+        "Carl A. Gunter",
+        "Kai Chen"
+      ],
+      "url": "https://arxiv.org/abs/1802.04889",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2111.09679": {
+      "paper_id": "arxiv:2111.09679",
+      "title": "Enhanced Membership Inference Attacks against Machine Learning Models",
+      "abstract": "How much does a machine learning algorithm leak about its training data, and why? Membership inference attacks are used as an auditing tool to quantify this leakage. In this paper, we present a comprehensive \\textit{hypothesis testing framework} that enables us not only to formally express the prior work in a consistent way, but also to design new membership inference attacks that use reference models to achieve a significantly higher power (true positive rate) for any (false positive rate) error. More importantly, we explain \\textit{why} different attacks perform differently. We present a template for indistinguishability games, and provide an interpretation of attack success rate across different instances of the game. We discuss various uncertainties of attackers that arise from the formulation of the problem, and show how our approach tries to minimize the attack uncertainty to the one bit secret about the presence or absence of a data point in the training set. We perform a \\textit{differential analysis} between all types of attacks, explain the gap between them, and show what causes data points to be vulnerable to an attack (as the reasons vary due to different granularities of memorization, from overfitting to conditional memorization). Our auditing framework is openly accessible as part of the \\textit{Privacy Meter} software tool.",
+      "year": 2021,
+      "authors": [
+        "Jiayuan Ye",
+        "Aadyaa Maddi",
+        "Sasi Kumar Murakonda",
+        "Vincent Bindschaedler",
+        "Reza Shokri"
+      ],
+      "url": "https://arxiv.org/abs/2111.09679",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:e594cef29d90e82f681afa6bb7b0aa4e8da2ceae": {
+      "paper_id": "s2:e594cef29d90e82f681afa6bb7b0aa4e8da2ceae",
+      "title": "Defenses to Membership Inference Attacks: A Survey",
+      "abstract": "Machine learning (ML) has gained widespread adoption in a variety of fields, including computer vision and natural language processing. However, ML models are vulnerable to membership inference attacks (MIAs), which can infer whether access data was used in training a target model, thus compromising the privacy of training data. This has led researchers to focus on protecting the privacy of ML. To date, although there have been extensive efforts to defend against MIAs, we still lack a comprehensive understanding of the progress made in this area, which can often impede our ability to design the most effective defense strategies. In this article, we aim to fill this critical knowledge gap by providing a systematic analysis of membership inference defense. Specifically, we classify and summarize the existing membership inference defense schemes, focusing on optimization phase and objective, basic intuition, and key technology, and we discuss possible research directions of membership inference defense in the future.",
+      "year": 2023,
+      "authors": [
+        "Li Hu",
+        "Anli Yan",
+        "Hongyang Yan",
+        "Jin Li",
+        "Teng Huang",
+        "Yingying Zhang",
+        "Changyu Dong",
+        "Chun-Sheng Yang"
+      ],
+      "url": "https://doi.org/10.1145/3620667",
+      "venue": "ACM Computing Surveys",
+      "source": "semantic_scholar"
+    },
+    "s2:f58bfd8363ce3ceb21e7c1ea45665e861be39653": {
+      "paper_id": "s2:f58bfd8363ce3ceb21e7c1ea45665e861be39653",
+      "title": "Mitigating Membership Inference Attacks in Machine Learning as a Service",
+      "abstract": "The increasing use of Machine Learning as a Service (MLaaS) has raised privacy and security issues due to membership inference attacks. These attacks can extract sensitive information such as the identification of an individual's participation in a training dataset, by exploiting a binary classifier with limited access. The attacks exploit weaknesses in the decision boundaries of the model, and can lead to the disclosure of private information. However, the current defenses against such attacks, such as those based on differential privacy or regularization, have significant limitations. Therefore, further research is needed to develop effective defenses that maintain the utility of machine learning models while providing formal guarantees, even in the presence of strategic adversaries. In this paper, we focus on mitigating the risks of black-box inference attacks against machine learning models as a service. We propose a defense mechanism that brings the attacker's inference classifier into a zone of uncertainty, rendering it unable to classify a data point as a member or non-member. This mechanism takes into account the attacker's behavior by modeling the interaction between defense and attacker as a game, considering potential gains in confidentiality and costs. Our experiments on two datasets demonstrate the effectiveness of our approach in mitigating membership inference attacks. Furthermore, our defense mechanism outperforms existing defenses by offering superior privacy-utility-performance tradeoffs.",
+      "year": 2023,
+      "authors": [
+        "Myria Bouhaddi",
+        "Kamel Adi"
+      ],
+      "url": "https://doi.org/10.1109/CSR57506.2023.10224960",
+      "venue": "Computer Science Symposium in Russia",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2501.02182": {
+      "paper_id": "arxiv:2501.02182",
+      "title": "AdaMixup: A Dynamic Defense Framework for Membership Inference Attack Mitigation",
+      "abstract": "Membership inference attacks have emerged as a significant privacy concern in the training of deep learning models, where attackers can infer whether a data point was part of the training set based on the model's outputs. To address this challenge, we propose a novel defense mechanism, AdaMixup. AdaMixup employs adaptive mixup techniques to enhance the model's robustness against membership inference attacks by dynamically adjusting the mixup strategy during training. This method not only improves the model's privacy protection but also maintains high performance. Experimental results across multiple datasets demonstrate that AdaMixup significantly reduces the risk of membership inference attacks while achieving a favorable trade-off between defensive efficiency and model accuracy. This research provides an effective solution for data privacy protection and lays the groundwork for future advancements in mixup training methods.",
+      "year": 2025,
+      "authors": [
+        "Ying Chen",
+        "Jiajing Chen",
+        "Yijie Weng",
+        "ChiaHua Chang",
+        "Dezhi Yu",
+        "Guanbiao Lin"
+      ],
+      "url": "https://arxiv.org/abs/2501.02182",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2103.07853": {
+      "paper_id": "arxiv:2103.07853",
+      "title": "Membership Inference Attacks on Machine Learning: A Survey",
+      "abstract": "Machine learning (ML) models have been widely applied to various applications, including image classification, text generation, audio recognition, and graph data analysis. However, recent studies have shown that ML models are vulnerable to membership inference attacks (MIAs), which aim to infer whether a data record was used to train a target model or not. MIAs on ML models can directly lead to a privacy breach. For example, via identifying the fact that a clinical record that has been used to train a model associated with a certain disease, an attacker can infer that the owner of the clinical record has the disease with a high chance. In recent years, MIAs have been shown to be effective on various ML models, e.g., classification models and generative models. Meanwhile, many defense methods have been proposed to mitigate MIAs. Although MIAs on ML models form a newly emerging and rapidly growing research area, there has been no systematic survey on this topic yet. In this paper, we conduct the first comprehensive survey on membership inference attacks and defenses. We provide the taxonomies for both attacks and defenses, based on their characterizations, and discuss their pros and cons. Based on the limitations and gaps identified in this survey, we point out several promising future research directions to inspire the researchers who wish to follow this area. This survey not only serves as a reference for the research community but also provides a clear description for researchers outside this research domain. To further help the researchers, we have created an online resource repository, which we will keep updated with future relevant work. Interested readers can find the repository at https://github.com/HongshengHu/membership-inference-machine-learning-literature.",
+      "year": 2021,
+      "authors": [
+        "Hongsheng Hu",
+        "Zoran Salcic",
+        "Lichao Sun",
+        "Gillian Dobbie",
+        "Philip S. Yu",
+        "Xuyun Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2103.07853",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2008.08807": {
+      "paper_id": "arxiv:2008.08807",
+      "title": "Not one but many Tradeoffs: Privacy Vs. Utility in Differentially Private Machine Learning",
+      "abstract": "Data holders are increasingly seeking to protect their user's privacy, whilst still maximizing their ability to produce machine models with high quality predictions. In this work, we empirically evaluate various implementations of differential privacy (DP), and measure their ability to fend off real-world privacy attacks, in addition to measuring their core goal of providing accurate classifications. We establish an evaluation framework to ensure each of these implementations are fairly evaluated. Our selection of DP implementations add DP noise at different positions within the framework, either at the point of data collection/release, during updates while training of the model, or after training by perturbing learned model parameters. We evaluate each implementation across a range of privacy budgets, and datasets, each implementation providing the same mathematical privacy guarantees. By measuring the models' resistance to real world attacks of membership and attribute inference, and their classification accuracy. we determine which implementations provide the most desirable tradeoff between privacy and utility. We found that the number of classes of a given dataset is unlikely to influence where the privacy and utility tradeoff occurs. Additionally, in the scenario that high privacy constraints are required, perturbing input training data does not trade off as much utility, as compared to noise added later in the ML process.",
+      "year": 2020,
+      "authors": [
+        "Benjamin Zi Hao Zhao",
+        "Mohamed Ali Kaafar",
+        "Nicolas Kourtellis"
+      ],
+      "url": "https://arxiv.org/abs/2008.08807",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:7f0069e877f7843837ef0ddb4a1482842b97c49c": {
+      "paper_id": "s2:7f0069e877f7843837ef0ddb4a1482842b97c49c",
+      "title": "Investigating Trade-offs in Utility, Fairness and Differential Privacy in Neural Networks",
+      "abstract": "To enable an ethical and legal use of machine learning algorithms, they must both be fair and protect the privacy of those whose data are being used. However, implementing privacy and fairness constraints might come at the cost of utility (Jayaraman&Evans, 2019; Gong et al., 2020). This paper investigates the privacy-utility-fairness trade-off in neural networks by comparing a Simple (S-NN), a Fair (F-NN), a Differentially Private (DP-NN), and a Differentially Private and Fair Neural Network (DPF-NN) to evaluate differences in performance on metrics for privacy (epsilon, delta), fairness (risk difference), and utility (accuracy). In the scenario with the highest considered privacy guarantees (epsilon = 0.1, delta = 0.00001), the DPF-NN was found to achieve better risk difference than all the other neural networks with only a marginally lower accuracy than the S-NN and DP-NN. This model is considered fair as it achieved a risk difference below the strict (0.05) and lenient (0.1) thresholds. However, while the accuracy of the proposed model improved on previous work from Xu, Yuan and Wu (2019), the risk difference was found to be worse.",
+      "year": 2021,
+      "authors": [
+        "Marlotte Pannekoek",
+        "Giacomo Spigler"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2102.05975",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1612.02298": {
+      "paper_id": "arxiv:1612.02298",
+      "title": "Individual Differential Privacy: A Utility-Preserving Formulation of Differential Privacy Guarantees",
+      "abstract": "Differential privacy is a popular privacy model within the research community because of the strong privacy guarantee it offers, namely that the presence or absence of any individual in a data set does not significantly influence the results of analyses on the data set. However, enforcing this strict guarantee in practice significantly distorts data and/or limits data uses, thus diminishing the analytical utility of the differentially private results. In an attempt to address this shortcoming, several relaxations of differential privacy have been proposed that trade off privacy guarantees for improved data utility. In this work, we argue that the standard formalization of differential privacy is stricter than required by the intuitive privacy guarantee it seeks. In particular, the standard formalization requires indistinguishability of results between any pair of neighbor data sets, while indistinguishability between the actual data set and its neighbor data sets should be enough. This limits the data controller's ability to adjust the level of protection to the actual data, hence resulting in significant accuracy loss. In this respect, we propose individual differential privacy, an alternative differential privacy notion that offers em the same privacy guarantees as standard differential privacy to individuals (even though not to groups of individuals). This new notion allows the data controller to adjust the distortion to the actual data set, which results in less distortion and more analytical accuracy. We propose several mechanisms to attain individual differential privacy and we compare the new notion against standard differential privacy in terms of the accuracy of the analytical results.",
+      "year": 2016,
+      "authors": [
+        "Jordi Soria-Comas",
+        "Josep Domingo-Ferrer",
+        "David Sánchez",
+        "David Megías"
+      ],
+      "url": "https://arxiv.org/abs/1612.02298",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2303.01819": {
+      "paper_id": "arxiv:2303.01819",
+      "title": "Exploring Machine Learning Privacy/Utility trade-off from a hyperparameters Lens",
+      "abstract": "Machine Learning (ML) architectures have been applied to several applications that involve sensitive data, where a guarantee of users' data privacy is required. Differentially Private Stochastic Gradient Descent (DPSGD) is the state-of-the-art method to train privacy-preserving models. However, DPSGD comes at a considerable accuracy loss leading to sub-optimal privacy/utility trade-offs. Towards investigating new ground for better privacy-utility trade-off, this work questions; (i) if models' hyperparameters have any inherent impact on ML models' privacy-preserving properties, and (ii) if models' hyperparameters have any impact on the privacy/utility trade-off of differentially private models. We propose a comprehensive design space exploration of different hyperparameters such as the choice of activation functions, the learning rate and the use of batch normalization. Interestingly, we found that utility can be improved by using Bounded RELU as activation functions with the same privacy-preserving characteristics. With a drop-in replacement of the activation function, we achieve new state-of-the-art accuracy on MNIST (96.02\\%), FashionMnist (84.76\\%), and CIFAR-10 (44.42\\%) without any modification of the learning procedure fundamentals of DPSGD.",
+      "year": 2023,
+      "authors": [
+        "Ayoub Arous",
+        "Amira Guesmi",
+        "Muhammad Abdullah Hanif",
+        "Ihsen Alouani",
+        "Muhammad Shafique"
+      ],
+      "url": "https://arxiv.org/abs/2303.01819",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:6bd1a4bb3db7fe0fdcca7a02bf5c28ba6af15c28": {
+      "paper_id": "s2:6bd1a4bb3db7fe0fdcca7a02bf5c28ba6af15c28",
+      "title": "Analyzing Privacy–Utility Trade-Offs in Differentially Private Federated Learning on EMNIST",
+      "abstract": "Federated learning (FL) enables collaborative training across distributed devices without sharing raw data, yet model updates may leak sensitive information. Differentially private FL (DP-FL) mitigates this threat by adding calibrated noise, raising a privacy-utility trade-off. In this work, we empirically study this trade-off in a cross-device setting on the heterogeneous EMNIST by-writer dataset. We examine how different privacy levels and client sampling rates influence model performance when using DP-FedAvg with adaptive clipping and Rényi differential privacy accounting. Our results show that extremely strict privacy settings significantly reduce model accuracy. However, moderate budgets for privacy have over 82 % test accuracy, close to a non-private baseline. Beyond this point, relaxing privacy yields diminishing improvements. We further observe that higher client sampling rates accelerate convergence but increase privacy consumption, highlighting an additional trade-off between participation and privacy loss. These results verify that DP-FL is capable of balancing privacy assurances and utility in practical cross-device deployments and points toward moderate privacy budgets as a viable operational point.",
+      "year": 2025,
+      "authors": [
+        "Mst. Rubaiya Raktin Raha",
+        "Tasfia Tasnim",
+        "M. Hashem"
+      ],
+      "url": "https://doi.org/10.1109/ICCIT68739.2025.11491457",
+      "venue": "2025 28th International Conference on Computer and Information Technology (ICCIT)",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2206.07234": {
+      "paper_id": "arxiv:2206.07234",
+      "title": "Brownian Noise Reduction: Maximizing Privacy Subject to Accuracy Constraints",
+      "abstract": "There is a disconnect between how researchers and practitioners handle privacy-utility tradeoffs. Researchers primarily operate from a privacy first perspective, setting strict privacy requirements and minimizing risk subject to these constraints. Practitioners often desire an accuracy first perspective, possibly satisfied with the greatest privacy they can get subject to obtaining sufficiently small error. Ligett et al. have introduced a \"noise reduction\" algorithm to address the latter perspective. The authors show that by adding correlated Laplace noise and progressively reducing it on demand, it is possible to produce a sequence of increasingly accurate estimates of a private parameter while only paying a privacy cost for the least noisy iterate released. In this work, we generalize noise reduction to the setting of Gaussian noise, introducing the Brownian mechanism. The Brownian mechanism works by first adding Gaussian noise of high variance corresponding to the final point of a simulated Brownian motion. Then, at the practitioner's discretion, noise is gradually decreased by tracing back along the Brownian path to an earlier time. Our mechanism is more naturally applicable to the common setting of bounded $\\ell_2$-sensitivity, empirically outperforms existing work on common statistical tasks, and provides customizable control of privacy loss over the entire interaction with the practitioner. We complement our Brownian mechanism with ReducedAboveThreshold, a generalization of the classical AboveThreshold algorithm that provides adaptive privacy guarantees. Overall, our results demonstrate that one can meet utility constraints while still maintaining strong levels of privacy.",
+      "year": 2022,
+      "authors": [
+        "Justin Whitehouse",
+        "Zhiwei Steven Wu",
+        "Aaditya Ramdas",
+        "Ryan Rogers"
+      ],
+      "url": "https://arxiv.org/abs/2206.07234",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2502.19525": {
+      "paper_id": "arxiv:2502.19525",
+      "title": "Privacy-Aware Sequential Learning",
+      "abstract": "Sequential learning often relies on individuals reporting private information, with early reports shaping later beliefs and collective decisions. When such reports are sensitive, privacy protection creates a fundamental trade-off in the design of sequential feedback systems. We study this trade-off as a platform design problem: before reporting begins, the platform commits to a local privacy-preserving reporting protocol, seeking to improve final-decision accuracy while limiting the time required to accumulate sufficient evidence. Surprisingly, privacy protection can accelerate learning. With continuous Gaussian signals, smooth randomized response under metric differential privacy preserves asymptotic learning and yields a public log-likelihood ratio growing at rate $Θ_{\\varepsilon}(\\log n)$, faster than the nonprivate $Θ(\\sqrt{\\log n})$ benchmark, substantially reducing high-confidence stopping times. With heterogeneous privacy parameters, learning can be faster still; when privacy budgets are uniformly distributed on $[0,1]$, public belief grows at rate $Θ(n^{1/4})$. With binary signals, randomized response generates a nonmonotone relationship between privacy and decision accuracy because privacy affects both report informativeness and cascade thresholds. Stopping time can also be nonmonotone because stronger privacy reduces report informativeness while encouraging participation. Overall, privacy is not merely a constraint on information release, but a platform design lever shaping participation, stopping, and collective learning.",
+      "year": 2025,
+      "authors": [
+        "Yuxin Liu",
+        "M. Amin Rahimian"
+      ],
+      "url": "https://arxiv.org/abs/2502.19525",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1805.12024": {
+      "paper_id": "arxiv:1805.12024",
+      "title": "Privacy Aware Offloading of Deep Neural Networks",
+      "abstract": "Deep neural networks require large amounts of resources which makes them hard to use on resource constrained devices such as Internet-of-things devices. Offloading the computations to the cloud can circumvent these constraints but introduces a privacy risk since the operator of the cloud is not necessarily trustworthy. We propose a technique that obfuscates the data before sending it to the remote computation node. The obfuscated data is unintelligible for a human eavesdropper but can still be classified with a high accuracy by a neural network trained on unobfuscated images.",
+      "year": 2018,
+      "authors": [
+        "Sam Leroux",
+        "Tim Verbelen",
+        "Pieter Simoens",
+        "Bart Dhoedt"
+      ],
+      "url": "https://arxiv.org/abs/1805.12024",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q22",
+  "area": "Cybersecurity"
+}

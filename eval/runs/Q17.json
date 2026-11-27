@@ -1,0 +1,717 @@
+{
+  "question": "How are machine learning models used for network intrusion detection?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What machine learning techniques and algorithms are applied in network intrusion detection systems?",
+      "search_query": "machine learning algorithms network intrusion detection",
+      "paper_ids": [
+        "s2:117d41b26c6409a44c7caa8c4fe79420f28a5b66",
+        "s2:e251b26e3f8f46716b14a440ccec85f35118b1e7",
+        "s2:098f5ba71eee8801f9ab7c427a70c9a10739d11b",
+        "s2:3eb6d433412595c8f9ff032d86a6e61b3c873ba5",
+        "s2:3048bf0cb247aedaf432277fbae89e5573ac152e"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What are the commonly used benchmark datasets and evaluation metrics in this field?",
+      "search_query": "datasets benchmarks network intrusion detection",
+      "paper_ids": [
+        "s2:c1c02f92b47f15f9f684691a92e0b7f615ab77d5",
+        "s2:fcda078ea0c23a0ffdda861b1656ad6e158c0e9f",
+        "s2:b993de6f770b80298560001c5f357098c6b73b0b",
+        "s2:26468c398e42d29eddc2e2b0154b65aae74647dd",
+        "s2:9c4f0d030ea394bfd5be248b7bafbcad92e83080"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What are the reported performance results and detection accuracies of these models?",
+      "search_query": "performance results accuracy network intrusion detection",
+      "paper_ids": [
+        "s2:fa20329fc9e8592609f37d414d73cb4b428891d7",
+        "arxiv:1710.04843",
+        "s2:bf08630c9090410ad0ec95b1df9eddc6dceb77c9",
+        "s2:890ced7aec96e2817987de121dd0b01c55898287",
+        "s2:6b9b2c883335db3c842a56b0943e954a78438dc6"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations and challenges of deploying machine learning for intrusion detection?",
+      "search_query": "limitations challenges machine learning intrusion detection",
+      "paper_ids": [
+        "s2:b8016bc77feaa7b57f972233e471e3d8c5ef9725",
+        "s2:fcf114a5a411f7db0b6a052fc32d605ed9f25401",
+        "arxiv:2605.04407",
+        "s2:7696c2369a110d930a8c2eed5cafae7ca81a0cfd",
+        "s2:dd547610e57b1d64039213fdf50fa265399fe06f"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study evaluates intrusion detection systems using fuzzy logic and artificial neural networks on the KDD 99 benchmark dataset.",
+        "paper_id": "s2:117d41b26c6409a44c7caa8c4fe79420f28a5b66"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study evaluates intrusion detection systems using fuzzy logic and artificial neural networks on the KDD 99 benchmark dataset.",
+          "paper_id": "s2:117d41b26c6409a44c7caa8c4fe79420f28a5b66",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8687,
+          "p_supported": 0.8687,
+          "accepted": true,
+          "alt_p_supported": 0.8212
+        }
+      ],
+      "final": {
+        "text": "One study evaluates intrusion detection systems using fuzzy logic and artificial neural networks on the KDD 99 benchmark dataset.",
+        "paper_id": "s2:117d41b26c6409a44c7caa8c4fe79420f28a5b66",
+        "label": "SUPPORTED",
+        "confidence": 0.8687
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "The decision tree algorithm achieved the highest accuracy of 0.992 and the lowest false positive rate of 0.009 when evaluated on the KDD99 dataset.",
+        "paper_id": "s2:3eb6d433412595c8f9ff032d86a6e61b3c873ba5"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The decision tree algorithm achieved the highest accuracy of 0.992 and the lowest false positive rate of 0.009 when evaluated on the KDD99 dataset.",
+          "paper_id": "s2:3eb6d433412595c8f9ff032d86a6e61b3c873ba5",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.94,
+          "p_supported": 0.94,
+          "accepted": true,
+          "alt_p_supported": 0.9178
+        }
+      ],
+      "final": {
+        "text": "The decision tree algorithm achieved the highest accuracy of 0.992 and the lowest false positive rate of 0.009 when evaluated on the KDD99 dataset.",
+        "paper_id": "s2:3eb6d433412595c8f9ff032d86a6e61b3c873ba5",
+        "label": "SUPPORTED",
+        "confidence": 0.94
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "Machine learning-based Network Intrusion Detection Systems are commonly evaluated using key metrics such as accuracy and F1 score on publicly available synthetic datasets like CIC and UNSW.",
+        "paper_id": "s2:c1c02f92b47f15f9f684691a92e0b7f615ab77d5"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Machine learning-based Network Intrusion Detection Systems are commonly evaluated using key metrics such as accuracy and F1 score on publicly available synthetic datasets like CIC and UNSW.",
+          "paper_id": "s2:c1c02f92b47f15f9f684691a92e0b7f615ab77d5",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.857,
+          "p_supported": 0.857,
+          "accepted": true,
+          "alt_p_supported": 0.8083
+        }
+      ],
+      "final": {
+        "text": "Machine learning-based Network Intrusion Detection Systems are commonly evaluated using key metrics such as accuracy and F1 score on publicly available synthetic datasets like CIC and UNSW.",
+        "paper_id": "s2:c1c02f92b47f15f9f684691a92e0b7f615ab77d5",
+        "label": "SUPPORTED",
+        "confidence": 0.857
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Widely used NIDS benchmark datasets that have been converted into variants with NetFlow-based feature sets include UNSW-NB15, BoT-IoT, ToN-IoT, and CSE-CIC-IDS2018.",
+        "paper_id": "s2:26468c398e42d29eddc2e2b0154b65aae74647dd"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Widely used NIDS benchmark datasets that have been converted into variants with NetFlow-based feature sets include UNSW-NB15, BoT-IoT, ToN-IoT, and CSE-CIC-IDS2018.",
+          "paper_id": "s2:26468c398e42d29eddc2e2b0154b65aae74647dd",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9265,
+          "p_supported": 0.9265,
+          "accepted": true,
+          "alt_p_supported": 0.9063
+        }
+      ],
+      "final": {
+        "text": "Widely used NIDS benchmark datasets that have been converted into variants with NetFlow-based feature sets include UNSW-NB15, BoT-IoT, ToN-IoT, and CSE-CIC-IDS2018.",
+        "paper_id": "s2:26468c398e42d29eddc2e2b0154b65aae74647dd",
+        "label": "SUPPORTED",
+        "confidence": 0.9265
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "Experimental results show that the Bernoulli Bayesian variant has an accuracy of 69.9% test and 71% train, Multinomial has an accuracy of 31.2% test and 31.2% train, and Gaussian has an accuracy of 81.69% test and 82.84% train.",
+        "paper_id": "s2:fa20329fc9e8592609f37d414d73cb4b428891d7"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Experimental results show that the Bernoulli Bayesian variant has an accuracy of 69.9% test and 71% train, Multinomial has an accuracy of 31.2% test and 31.2% train, and Gaussian has an accuracy of 81.69% test and 82.84% train.",
+          "paper_id": "s2:fa20329fc9e8592609f37d414d73cb4b428891d7",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.71,
+          "p_supported": 0.71,
+          "accepted": true,
+          "alt_p_supported": 0.8446
+        }
+      ],
+      "final": {
+        "text": "Experimental results show that the Bernoulli Bayesian variant has an accuracy of 69.9% test and 71% train, Multinomial has an accuracy of 31.2% test and 31.2% train, and Gaussian has an accuracy of 81.69% test and 82.84% train.",
+        "paper_id": "s2:fa20329fc9e8592609f37d414d73cb4b428891d7",
+        "label": "SUPPORTED",
+        "confidence": 0.71
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "On the UNSW-NB15 dataset, GA- and PSO-optimized 1D-CNN models achieve accuracies of 99.31% and 99.28%, respectively.",
+        "paper_id": "s2:bf08630c9090410ad0ec95b1df9eddc6dceb77c9"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "On the UNSW-NB15 dataset, GA- and PSO-optimized 1D-CNN models achieve accuracies of 99.31% and 99.28%, respectively.",
+          "paper_id": "s2:bf08630c9090410ad0ec95b1df9eddc6dceb77c9",
+          "label": "INSUFFICIENT",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.6434,
+          "p_supported": 0.6434,
+          "accepted": false,
+          "alt_p_supported": 0.9019
+        },
+        {
+          "action": "re-retrieve",
+          "text": "On the UNSW-NB15 dataset, GA- and PSO-optimized 1D-CNN models achieve accuracies of 99.31% and 99.28%, respectively.",
+          "paper_id": "arxiv:2205.06177",
+          "label": "INSUFFICIENT",
+          "raw_label": "INSUFFICIENT",
+          "confidence": 0.8991,
+          "p_supported": 0.0641,
+          "accepted": false,
+          "alt_p_supported": 0.1313
+        },
+        {
+          "action": "revise",
+          "text": "On the UNSW-NB15 dataset, GA and PSO achieve accuracies of 99.31% and 99.28%, respectively.",
+          "paper_id": "s2:bf08630c9090410ad0ec95b1df9eddc6dceb77c9",
+          "label": "INSUFFICIENT",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.6833,
+          "p_supported": 0.6833,
+          "accepted": false,
+          "alt_p_supported": 0.8945
+        }
+      ],
+      "final": {
+        "text": "On the UNSW-NB15 dataset, GA and PSO achieve accuracies of 99.31% and 99.28%, respectively.",
+        "paper_id": "s2:bf08630c9090410ad0ec95b1df9eddc6dceb77c9",
+        "label": "INSUFFICIENT",
+        "confidence": 0.6833
+      },
+      "status": "unverified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Persistent challenges for machine learning-based intrusion detection in IoT include dataset quality, real-world generalizability, computational resource constraints for edge deployment, and model explainability.",
+        "paper_id": "s2:b8016bc77feaa7b57f972233e471e3d8c5ef9725"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Persistent challenges for machine learning-based intrusion detection in IoT include dataset quality, real-world generalizability, computational resource constraints for edge deployment, and model explainability.",
+          "paper_id": "s2:b8016bc77feaa7b57f972233e471e3d8c5ef9725",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.937,
+          "p_supported": 0.937,
+          "accepted": true,
+          "alt_p_supported": 0.9152
+        }
+      ],
+      "final": {
+        "text": "Persistent challenges for machine learning-based intrusion detection in IoT include dataset quality, real-world generalizability, computational resource constraints for edge deployment, and model explainability.",
+        "paper_id": "s2:b8016bc77feaa7b57f972233e471e3d8c5ef9725",
+        "label": "SUPPORTED",
+        "confidence": 0.937
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Popular intrusion detection datasets such as NSL-KDD, CICIS2017, and UNSW-NB15 suffer from limitations including imbalance and antiquated attack methods.",
+        "paper_id": "s2:fcf114a5a411f7db0b6a052fc32d605ed9f25401"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Popular intrusion detection datasets such as NSL-KDD, CICIS2017, and UNSW-NB15 suffer from limitations including imbalance and antiquated attack methods.",
+          "paper_id": "s2:fcf114a5a411f7db0b6a052fc32d605ed9f25401",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9539,
+          "p_supported": 0.9539,
+          "accepted": true,
+          "alt_p_supported": 0.9256
+        }
+      ],
+      "final": {
+        "text": "Popular intrusion detection datasets such as NSL-KDD, CICIS2017, and UNSW-NB15 suffer from limitations including imbalance and antiquated attack methods.",
+        "paper_id": "s2:fcf114a5a411f7db0b6a052fc32d605ed9f25401",
+        "label": "SUPPORTED",
+        "confidence": 0.9539
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:117d41b26c6409a44c7caa8c4fe79420f28a5b66",
+      "citation": "Jie Li, Yan-Peng Qu, Fei Chao et al. (2018). Machine Learning Algorithms for Network Intrusion Detection. AI in Cybersecurity. https://doi.org/10.1007/978-3-319-98842-9_6"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:3eb6d433412595c8f9ff032d86a6e61b3c873ba5",
+      "citation": "N. Awad (2021). Enhancing Network Intrusion Detection Model Using Machine Learning Algorithms. Computers Materials & Continua. https://doi.org/10.32604/cmc.2021.014307"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:c1c02f92b47f15f9f684691a92e0b7f615ab77d5",
+      "citation": "Siamak Layeghy, M. Gallagher, M. Portmann (2021). Benchmarking the Benchmark - Analysis of Synthetic NIDS Datasets. Journal of Information Security and Applications. https://doi.org/10.1016/j.jisa.2023.103689"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:26468c398e42d29eddc2e2b0154b65aae74647dd",
+      "citation": "Mohanad Sarhan, Siamak Layeghy, M. Portmann (2021). Towards a Standard Feature Set for Network Intrusion Detection System Datasets. Journal on spesial topics in mobile networks and applications. https://doi.org/10.1007/s11036-021-01843-0"
+    },
+    {
+      "n": 5,
+      "paper_id": "s2:fa20329fc9e8592609f37d414d73cb4b428891d7",
+      "citation": "Tosin Ige, Chris Kiekintveld (2023). Performance Comparison and Implementation of Bayesian Variants for Network Intrusion Detection. 2023 IEEE International Conference on Artificial Intelligence, Blockchain, and Internet of Things (AIBThings). https://doi.org/10.1109/AIBThings58340.2023.10292485"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:b8016bc77feaa7b57f972233e471e3d8c5ef9725",
+      "citation": "Mazzi Mohamed Salah, Mazouzi Smaine, Chikh Ramdane (2025). Intrusion Detection In IoT Using Machine Learning Techniques:Latest Trends And Current Challenges. 2025 Fourth International Conference on Theoretical and Applicative Aspects of Computer Science (ICTAACS). https://doi.org/10.1109/ICTAACS69003.2025.11399294"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:fcf114a5a411f7db0b6a052fc32d605ed9f25401",
+      "citation": "Hafiz Muhammad Raza ur Rehman, Saira Liaquat, Muhammad Junaid Gul et al. (2025). A systematic literature study of machine learning techniques based intrusion detection: datasets, models, challenges, and future directions. Journal of Big Data. https://doi.org/10.1186/s40537-025-01323-2"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Machine learning-based network intrusion detection systems (NIDS) utilize a variety of techniques and algorithms. Studies have evaluated intrusion detection systems using methods such as fuzzy logic, artificial neural networks, and decision trees [1, 2]. Specifically, the decision tree algorithm demonstrated the highest accuracy of 0.992 alongside the lowest false positive rate of 0.009 on the KDD99 dataset [2]. Other investigated models include variants of the Bayesian algorithm, where experimental results indicate test and train accuracies of 69.9% and 71% for the Bernoulli variant, 31.2% and 31.2% for the Multinomial variant, and 81.69% and 82.84% for the Gaussian variant, respectively [5].\n\nTo evaluate these models, researchers commonly use publicly available synthetic and converted benchmark datasets. Key metrics utilized in these evaluations include accuracy and F1 score [3]. Widely used benchmark datasets and variants feature NetFlow-based feature sets such as UNSW-NB15, BoT-IoT, ToN-IoT, and CSE-CIC-IDS2018 [4], alongside others like KDD 99 [1], NSL-KDD, and CICIS2017 [7].\n\nDespite these advancements, deploying machine learning for network intrusion detection faces notable limitations and challenges. Popular intrusion detection datasets—including NSL-KDD, CICIS2017, and UNSW-NB15—suffer from issues like class imbalance and antiquated attack methods [7]. Furthermore, persistent challenges in IoT environments encompass dataset quality, real-world generalizability, computational resource constraints that affect edge deployment, and a lack of model explainability [6].",
+  "stats": {
+    "claims": 8,
+    "verified": 7,
+    "unverified": 1,
+    "unchecked": 0,
+    "verified_first_try": 7,
+    "claims_retried": 1,
+    "retry_successes": 0,
+    "total_retries": 2,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 7,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 13,
+      "arxiv": 2
+    },
+    "seconds": 125.4
+  },
+  "papers": {
+    "s2:117d41b26c6409a44c7caa8c4fe79420f28a5b66": {
+      "paper_id": "s2:117d41b26c6409a44c7caa8c4fe79420f28a5b66",
+      "title": "Machine Learning Algorithms for Network Intrusion Detection",
+      "abstract": "Network intrusion is a growing threat with potentially severe impacts, which can be damaging in multiple ways to network infrastructures and digital/intellectual assets in the cyberspace. The approach most commonly employed to combat network intrusion is the development of attack detection systems via machine learning and data mining techniques. These systems can identify and disconnect malicious network traffic, thereby helping to protect networks. This chapter systematically reviews two groups of common intrusion detection systems using fuzzy logic and artificial neural networks, and evaluates them by utilizing the widely used KDD 99 benchmark dataset. Based on the findings, the key challenges and opportunities in addressing cyberattacks using artificial intelligence techniques are summarized and future work suggested.",
+      "year": 2018,
+      "authors": [
+        "Jie Li",
+        "Yan-Peng Qu",
+        "Fei Chao",
+        "Hubert P. H. Shum",
+        "Edmond S. L. Ho",
+        "Long-Zhi Yang"
+      ],
+      "url": "https://doi.org/10.1007/978-3-319-98842-9_6",
+      "venue": "AI in Cybersecurity",
+      "source": "semantic_scholar"
+    },
+    "s2:e251b26e3f8f46716b14a440ccec85f35118b1e7": {
+      "paper_id": "s2:e251b26e3f8f46716b14a440ccec85f35118b1e7",
+      "title": "Intrusion Detection System Using machine learning Algorithms",
+      "abstract": "The world has experienced a radical change due to the internet. As a matter of fact, it assists people in maintaining their social networks and links them to other members of their social networks when they require assistance. In effect sharing professional and personal data comes with several risks to individuals and organizations. Internet became a crucial element in our daily life, therefore, the security of our DATA could be threatened at any time. For this reason, IDS plays a major role in protecting internet users against any malicious network attacks. (IDS) Intrusion Detection System is a system that monitors network traffic for suspicious activity and issues alerts when such activity is discovered. In this paper, the focus will be on three different classifications; starting by machine learning, algorithms NB, SVM and KNN. These algorithms will be used to define the best accuracy by means of the USNW NB 15 DATASET in the first stage. Based on the result of the first stage, the second one is used to process our database with the most efficient algorithm. Two different datasets will be operated in our experiments to evaluate the model performance. NSL-KDD and UNSW-NB15 datasets are used to measure the performance of the proposed approach in order to guarantee its efficiency.",
+      "year": 2024,
+      "authors": [
+        "Rachid Tahri",
+        "Y. Balouki",
+        "A. Jarrar",
+        "A. Lasbahani"
+      ],
+      "url": "https://doi.org/10.1051/itmconf/20224602003",
+      "venue": "ITM Web of Conferences",
+      "source": "semantic_scholar"
+    },
+    "s2:098f5ba71eee8801f9ab7c427a70c9a10739d11b": {
+      "paper_id": "s2:098f5ba71eee8801f9ab7c427a70c9a10739d11b",
+      "title": "Comparative Evaluation of Machine Learning Algorithms for Network Intrusion Detection and Attack Classification",
+      "abstract": "With the increasing use of the internet and reliance on computer-based systems for our daily lives, any vulnerability in those systems is one of the most important issues for the community. For this reason, the need for intelligent models that detect malicious intrusions is important to keep our personal information safe. In this paper, we investigate several supervised (Artificial Neural Network, Support Vector Machine, Random Forest, Linear Discriminant Analysis, and K-Nearest Neighbors) and unsupervised (K-means, Mean-shift, and DBSCAN) machine learning algorithms, in the context of anomaly-based Intrusion Detection Systems. We are using four different IDS benchmark datasets (KDD99, NSL-KDD, UNSW-NB15, and CIC-IDS-2017) to evaluate the performance of the selected machine learning algorithms for both intrusion detection and attack classification. The results have shown that Random Forest is the most suitable algorithm regarding model accuracy and execution time.",
+      "year": 2022,
+      "authors": [
+        "M. Leon",
+        "Tijana Marković",
+        "S. Punnekkat"
+      ],
+      "url": "https://doi.org/10.1109/IJCNN55064.2022.9892293",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "source": "semantic_scholar"
+    },
+    "s2:3eb6d433412595c8f9ff032d86a6e61b3c873ba5": {
+      "paper_id": "s2:3eb6d433412595c8f9ff032d86a6e61b3c873ba5",
+      "title": "Enhancing Network Intrusion Detection Model Using Machine Learning Algorithms",
+      "abstract": "After the digital revolution, large quantities of data have been generated with time through various networks. The networks have made the process of data analysis very difficult by detecting attacks using suitable techniques. While Intrusion Detection Systems (IDSs) secure resources against threats, they still face challenges in improving detection accuracy, reducing false alarm rates, and detecting the unknown ones. This paper presents a framework to integrate data mining classification algorithms and association rules to implement network intrusion detection. Several experiments have been performed and evaluated to assess various machine learning classifiers based on the KDD99 intrusion dataset. Our study focuses on several data mining algorithms such as; naïve Bayes, decision trees, support vector machines, decision tables, k-nearest neighbor algorithms, and artificial neural networks. Moreover, this paper is concerned with the association process in creating attack rules to identify those in the network audit data, by utilizing a KDD99 dataset anomaly detection. The focus is on false negative and false positive performance metrics to enhance the detection rate of the intrusion detection system. The implemented experiments compare the results of each algorithm and demonstrate that the decision tree is the most powerful algorithm as it has the highest accuracy (0.992) and the lowest false positive rate (0.009).",
+      "year": 2021,
+      "authors": [
+        "N. Awad"
+      ],
+      "url": "https://doi.org/10.32604/cmc.2021.014307",
+      "venue": "Computers Materials & Continua",
+      "source": "semantic_scholar"
+    },
+    "s2:3048bf0cb247aedaf432277fbae89e5573ac152e": {
+      "paper_id": "s2:3048bf0cb247aedaf432277fbae89e5573ac152e",
+      "title": "A Comprehensive Analysis of Accuracies of Machine Learning Algorithms for Network Intrusion Detection",
+      "abstract": "Intrusion and anomaly detection are particularly important in the time of increased vulnerability in computer networks and communication. Therefore, this research aims to detect network intrusion with the highest accuracy and fastest time. To achieve this, nine supervised machine learning algorithms were first applied to the UNSW-NB15 dataset for network anomaly detection. In addition, different attacks are investigated with different mitigation techniques that help determine the types of attacks. Once detection was done, the feature set was reduced according to existing research work to increase the speed of the model without compromising accuracy. Furthermore, seven supervised machine learning algorithms were also applied to the newly released BoT-IoT dataset with around three million network flows. The results show that the Random Forest is the best in terms of accuracy (97.9121%) and Naive Bayes the fastest algorithm with 0.69 s for the UNSW-NB15 dataset. C4.5 is the most accurate one (87.66%), with all the features considered to identify the types of anomalies. For BoT-IoT, six of the seven algorithms have a close to 100% detection rate, except Naive Bayes.",
+      "year": 2019,
+      "authors": [
+        "Anurag Das",
+        "S. Ajila",
+        "Chung-Horng Lung"
+      ],
+      "url": "https://doi.org/10.1007/978-3-030-45778-5_4",
+      "venue": "International Conference on Machine Learning for Networking",
+      "source": "semantic_scholar"
+    },
+    "s2:c1c02f92b47f15f9f684691a92e0b7f615ab77d5": {
+      "paper_id": "s2:c1c02f92b47f15f9f684691a92e0b7f615ab77d5",
+      "title": "Benchmarking the Benchmark - Analysis of Synthetic NIDS Datasets",
+      "abstract": "Network Intrusion Detection Systems (NIDSs) are an increasingly important tool for the prevention and mitigation of cyber attacks. A number of labelled synthetic datasets generated have been generated and made publicly available by researchers, and they have become the benchmarks via which new ML-based NIDS classifiers are being evaluated. Recently published results show excellent classification performance with these datasets, increasingly approaching 100 percent performance across key evaluation metrics such as accuracy, F1 score, etc. Unfortunately, we have not yet seen these excellent academic research results translated into practical NIDS systems with such near-perfect performance. This motivated our research presented in this paper, where we analyse the statistical properties of the benign traffic in three of the more recent and relevant NIDS datasets, (CIC, UNSW, ...). As a comparison, we consider two datasets obtained from real-world production networks, one from a university network and one from a medium size Internet Service Provider (ISP). Our results show that the two real-world datasets are quite similar among themselves in regards to most of the considered statistical features. Equally, the three synthetic datasets are also relatively similar within their group. However, and most importantly, our results show a distinct difference of most of the considered statistical features between the three synthetic datasets and the two real-world datasets. Since ML relies on the basic assumption of training and test datasets being sampled from the same distribution, this raises the question of how well the performance results of ML-classifiers trained on the considered synthetic datasets can translate and generalise to real-world networks. We believe this is an interesting and relevant question which provides motivation for further research in this space.",
+      "year": 2021,
+      "authors": [
+        "Siamak Layeghy",
+        "M. Gallagher",
+        "M. Portmann"
+      ],
+      "url": "https://doi.org/10.1016/j.jisa.2023.103689",
+      "venue": "Journal of Information Security and Applications",
+      "source": "semantic_scholar"
+    },
+    "s2:fcda078ea0c23a0ffdda861b1656ad6e158c0e9f": {
+      "paper_id": "s2:fcda078ea0c23a0ffdda861b1656ad6e158c0e9f",
+      "title": "Critical Review of Network Intrusion Detection Benchmark Datasets for Practical IoT Security",
+      "abstract": "The rapid expansion of Internet of Things (IoT) devices in modern environments introduces significant security vulnerabilities, increasing the risk of cyberattacks and potential physical threats to users. While Network Intrusion Detection Systems based on Machine Learning (ML-based NIDS) hold promise for mitigating these risks, the effectiveness of such systems is heavily influenced by the quality and representativeness of the datasets used for their development and evaluation. This study provides a critical review of publicly available benchmarking datasets commonly used to train ML-based NIDS for IoT security, with a particular focus on two pivotal but often overlooked factors: testbed configurations and feature extraction methods. The study's findings reveal critical inconsistencies in dataset design and feature sets, posing challenges to model generalizability and its real-world application. To address these issues, the study proposes clear criteria for dataset assessment and practical recommendations for researchers and dataset developers. The findings demonstrate the urgent need for standardisation to enhance reproducibility, enable fair comparison of intrusion detection models, and bridge the gap between academic research and practical IoT security solutions.",
+      "year": 2025,
+      "authors": [
+        "Oluwasegun Apejoye",
+        "Nemitari Ajienka",
+        "Jun He",
+        "Xiaoqi Ma"
+      ],
+      "url": "https://doi.org/10.37256/cnc.3220257228",
+      "venue": "Computer Networks and Communications",
+      "source": "semantic_scholar"
+    },
+    "s2:b993de6f770b80298560001c5f357098c6b73b0b": {
+      "paper_id": "s2:b993de6f770b80298560001c5f357098c6b73b0b",
+      "title": "Deep Learning Classification Methods Applied to Tabular Cybersecurity Benchmarks",
+      "abstract": "This research recasts the network attack dataset from UNSW-NB15 as an intrusion detection problem in image space. Using one-hot-encodings, the resulting grayscale thumbnails provide a quarter-million examples for deep learning algorithms. Applying the MobileNetV2’s convolutional neural network architecture, the work demonstrates a 97% accuracy in distinguishing normal and attack traffic. Further class refinements to 9 individual attack families (exploits, worms, shellcodes) show an overall 54% accuracy. Using feature importance rank, a random forest solution on subsets shows the most important source-destination factors and the least important ones as mainly obscure protocols. It further extends the image classification problem to other cybersecurity benchmarks such as malware signatures extracted from binary headers, with an 80% overall accuracy to detect computer viruses as portable executable files (headers only). Both novel image datasets are available to the research community on Kaggle.",
+      "year": 2021,
+      "authors": [
+        "D. Noever",
+        "Samantha E. Miller Noever"
+      ],
+      "url": "https://doi.org/10.5121/IJNSA.2021.13301",
+      "venue": "International journal of network security and its applications",
+      "source": "semantic_scholar"
+    },
+    "s2:26468c398e42d29eddc2e2b0154b65aae74647dd": {
+      "paper_id": "s2:26468c398e42d29eddc2e2b0154b65aae74647dd",
+      "title": "Towards a Standard Feature Set for Network Intrusion Detection System Datasets",
+      "abstract": "Network Intrusion Detection Systems (NIDSs) are important tools for the protection of computer networks against increasingly frequent and sophisticated cyber attacks. Recently, a lot of research effort has been dedicated to the development of Machine Learning (ML) based NIDSs. As in any ML-based application, the availability of high-quality datasets is critical for the training and evaluation of ML-based NIDS. One of the key problems with the currently available NIDS datasets is the lack of a standard feature set. The use of a unique and proprietary set of features for each of the publicly available datasets makes it virtually impossible to compare the performance of ML-based traffic classifiers on different datasets, and hence to evaluate the ability of these systems to generalise across different network scenarios. To address that limitation, this paper proposes and evaluates standard NIDS feature sets based on the NetFlow network meta-data collection protocol and system. We evaluate and compare two NetFlow-based feature set variants, a version with 12 features, and another one with 43 features. For our evaluation, we converted four widely used NIDS datasets (UNSW-NB15, BoT-IoT, ToN-IoT, CSE-CIC-IDS2018) into new variants with our proposed NetFlow based feature sets. Based on an Extra Tree classifier, we compared the classification performance of the NetFlow-based feature sets with the proprietary feature sets provided with the original datasets. While the smaller feature set cannot match the classification performance of the proprietary feature sets, the larger set with 43 NetFlow features, surprisingly achieves a consistently higher classification performance compared to the original feature set, which was tailored to each of the considered NIDS datasets. The proposed NetFlow-based NIDS feature set, together with four benchmark datasets, made available to the research community, allow a fair comparison of ML-based network traffic classifiers across different NIDS datasets. We believe that having a standard feature set is critical for allowing a more rigorous and thorough evaluation of ML-based NIDSs and that it can help bridge the gap between academic research and the practical deployment of such systems.",
+      "year": 2021,
+      "authors": [
+        "Mohanad Sarhan",
+        "Siamak Layeghy",
+        "M. Portmann"
+      ],
+      "url": "https://doi.org/10.1007/s11036-021-01843-0",
+      "venue": "Journal on spesial topics in mobile networks and applications",
+      "source": "semantic_scholar"
+    },
+    "s2:9c4f0d030ea394bfd5be248b7bafbcad92e83080": {
+      "paper_id": "s2:9c4f0d030ea394bfd5be248b7bafbcad92e83080",
+      "title": "NetFlow Datasets for Machine Learning-based Network Intrusion Detection Systems",
+      "abstract": "Machine Learning (ML)-based Network Intrusion Detection Systems (NIDSs) have proven to become a reliable intelligence tool to protect networks against cyberattacks. Network data features has a great impact on the performances of ML-based NIDSs. However, evaluating ML models often are not reliable, as each ML-enabled NIDS is trained and validated using different data features that may do not contain security events. Therefore, a common ground feature set from multiple datasets is required to evaluate an ML model's detection accuracy and its ability to generalise across datasets. This paper presents NetFlow features from four benchmark NIDS datasets known as UNSW-NB15, BoT-IoT, ToN-IoT, and CSE-CIC-IDS2018 using their publicly available packet capture files. In a real-world scenario, NetFlow features are relatively easier to extract from network traffic compared to the complex features used in the original datasets, as they are usually extracted from packet headers. The generated Netflow datasets have been labelled for solving binary- and multiclass-based learning challenges. Preliminary results indicate that NetFlow features lead to similar binary-class results and lower multi-class classification results amongst the four datasets compared to their respective original features datasets. The NetFlow datasets are named NF-UNSW-NB15, NF-BoT-IoT, NF-ToN-IoT, NF-CSE-CIC-IDS2018 and NF-UQ-NIDS are published at this http URL for research purposes.",
+      "year": 2020,
+      "authors": [
+        "Mohanad Sarhan",
+        "Siamak Layeghy",
+        "N. Moustafa",
+        "M. Portmann"
+      ],
+      "url": "https://doi.org/10.1007/978-3-030-72802-1_9",
+      "venue": "BDTA/WiCON",
+      "source": "semantic_scholar"
+    },
+    "s2:fa20329fc9e8592609f37d414d73cb4b428891d7": {
+      "paper_id": "s2:fa20329fc9e8592609f37d414d73cb4b428891d7",
+      "title": "Performance Comparison and Implementation of Bayesian Variants for Network Intrusion Detection",
+      "abstract": "Bayesian classifiers perform well when each of the features is completely independent of the other which is not always valid in real world application. The aim of this study is to implement and compare the performances of each variant of Bayesian classifier (Multinomial, Bernoulli, and Gaussian) on anomaly detection in network intrusion, and to investigate whether there is any association between each variant’s assumption and their performance. Our investigation showed that each variant of Bayesian algorithm blindly follows its assumption regardless of feature property, and that the assumption is the single most important factor that influences their accuracy. Experimental results show that Bernoulli has accuracy of 69.9% test (71% train), Multinomial has accuracy of 31.2% test (31.2% train), while Gaussian has accuracy of 81.69% test (82.84% train). Going deeper, we investigated and found that each Naïve Bayes variants performances and accuracy is largely due to each classifier assumption, Gaussian classifier performed best on anomaly detection due to its assumption that features follow normal distributions which are continuous, while multinomial classifier have a dismal performance as it simply assumes discreet and multinomial distribution.",
+      "year": 2023,
+      "authors": [
+        "Tosin Ige",
+        "Chris Kiekintveld"
+      ],
+      "url": "https://doi.org/10.1109/AIBThings58340.2023.10292485",
+      "venue": "2023 IEEE International Conference on Artificial Intelligence, Blockchain, and Internet of Things (AIBThings)",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1710.04843": {
+      "paper_id": "arxiv:1710.04843",
+      "title": "Performance Comparison of Intrusion Detection Systems and Application of Machine Learning to Snort System",
+      "abstract": "This study investigates the performance of two open source intrusion detection systems (IDSs) namely Snort and Suricata for accurately detecting the malicious traffic on computer networks. Snort and Suricata were installed on two different but identical computers and the performance was evaluated at 10 Gbps network speed. It was noted that Suricata could process a higher speed of network traffic than Snort with lower packet drop rate but it consumed higher computational resources. Snort had higher detection accuracy and was thus selected for further experiments. It was observed that the Snort triggered a high rate of false positive alarms. To solve this problem a Snort adaptive plug-in was developed. To select the best performing algorithm for Snort adaptive plug-in, an empirical study was carried out with different learning algorithms and Support Vector Machine (SVM) was selected. A hybrid version of SVM and Fuzzy logic produced a better detection accuracy. But the best result was achieved using an optimised SVM with firefly algorithm with FPR (false positive rate) as 8.6% and FNR (false negative rate) as 2.2%, which is a good result. The novelty of this work is the performance comparison of two IDSs at 10 Gbps and the application of hybrid and optimised machine learning algorithms to Snort.",
+      "year": 2017,
+      "authors": [
+        "Syed Ali Raza Shah",
+        "Biju Issac"
+      ],
+      "url": "https://arxiv.org/abs/1710.04843",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:bf08630c9090410ad0ec95b1df9eddc6dceb77c9": {
+      "paper_id": "s2:bf08630c9090410ad0ec95b1df9eddc6dceb77c9",
+      "title": "Hyperparameter Optimization for 1D-CNN-Based Network Intrusion Detection Using GA and PSO",
+      "abstract": "This study presents a comprehensive exploration of the hyperparameter optimization in one-dimensional (1D) convolutional neural networks (CNNs) for network intrusion detection. The increasing frequency and complexity of cyberattacks have prompted an urgent need for effective intrusion-detection systems (IDSs). Herein, we focus on optimizing nine hyperparameters within a 1D-CNN model, using two well-established evolutionary computation methods—genetic algorithm (GA) and particle swarm optimization (PSO). The performances of these methods are assessed using three major datasets—UNSW-NB15, CIC-IDS2017, and NSL-KDD. The key performance metrics considered in this study include the accuracy, loss, precision, recall, and F1-score. The results demonstrate considerable improvements in all metrics across all datasets, for both GA- and PSO-optimized models, when compared to those of the original nonoptimized 1D-CNN model. For instance, on the UNSW-NB15 dataset, GA and PSO achieve accuracies of 99.31 and 99.28%, respectively. Both algorithms yield equivalent results in terms of the precision, recall, and F1-score. Similarly, the performances of GA and PSO vary on the CIC-IDS2017 and NSL-KDD datasets, indicating that the efficacy of the optimization algorithm is context-specific and dependent on the nature of the dataset. The findings of this study demonstrate the importance and effects of efficient hyperparameter optimization, greatly contributing to the field of network security. This study serves as a crucial step toward developing advanced, robust, and adaptable IDSs capable of addressing the evolving landscape of cyber threats.",
+      "year": 2023,
+      "authors": [
+        "Dusmurod Kilichev",
+        "Wooseong Kim"
+      ],
+      "url": "https://doi.org/10.3390/math11173724",
+      "venue": "Mathematics",
+      "source": "semantic_scholar"
+    },
+    "s2:890ced7aec96e2817987de121dd0b01c55898287": {
+      "paper_id": "s2:890ced7aec96e2817987de121dd0b01c55898287",
+      "title": "A Machine Learning Approach for Improving the Performance of Network Intrusion Detection Systems",
+      "abstract": "Intrusion detection systems (IDS) are used in analyzing huge data and diagnose anomaly traffic such as DDoS attack; thus, an efficient traffic classification method is necessary for the IDS. The IDS models attempt to decrease false alarm and increase true alarm rates in order to improve the performance accuracy of the system. To resolve this concern, three machine learning algorithms have been tested and evaluated in this research which are decision jungle (DJ), random forest (RF) and support vector machine (SVM). The main objective is to propose a ML-based network intrusion detection system (ML-based NIDS) model that compares the performance of the three algorithms based on their accuracy and precision of anomaly traffics. The knowledge discovery in databases (KDD) methodology and intrusion detection evaluation dataset (CIC-IDS2017) are used in the testing which both are considered as a benchmark in the evaluation of IDS. The average accuracy results of the SVM is 98.18%, RF is 96.76% and DJ is 96.50% in which the highest accuracy is achieved by the SVM. The average precision results of the SVM is 98.74, RF is 97.96 and DJ is 97.82 in which the SVM got a higher average precision compared with the other two algorithms. The average recall results of the SVM is 95.63, RF is 97.62 and DJ is 95.77 in which the RF achieves the highest average of recall than SVM and DJ. In overall, the SVM algorithm is found to be the best algorithm that can be used to detect an intrusion in the system.",
+      "year": 2021,
+      "authors": [
+        "Adnan Helmi Azizan",
+        "Salama A. Mostafa",
+        "Aida Mustapha",
+        "Cik Feresa Mohd Foozy",
+        "M. H. A. Wahab",
+        "M. Mohammed",
+        "Bashar Ahmad Khalaf"
+      ],
+      "url": "https://doi.org/10.33166/AETIC.2021.05.025",
+      "venue": "Annals of Emerging Technologies in Computing",
+      "source": "semantic_scholar"
+    },
+    "s2:6b9b2c883335db3c842a56b0943e954a78438dc6": {
+      "paper_id": "s2:6b9b2c883335db3c842a56b0943e954a78438dc6",
+      "title": "A deep learning/machine learning approach for anomaly based network intrusion detection",
+      "abstract": "Introduction The increasing complexity and frequency of cybersecurity threats necessitate the development of advanced detection systems capable of identifying both known and emerging attacks. In this study, we present a hybrid anomaly-based Network Intrusion Detection System (NIDS) that integrates multiple machine learning and deep learning algorithms, including XGBoost, Random Forest, Graph Neural Networks (GNN), Long Short-Term Memory (LSTM) networks, and Autoencoders. Methods The proposed system was trained on a large-scale dataset comprising over 5.6 million network traffic records. Comprehensive data preprocessing and feature engineering were applied, and the Synthetic Minority Over-sampling Technique (SMOTE) was employed to address class imbalance. To enhance robustness and generalization, a weighted soft-voting ensemble strategy was used to combine predictions from the individual models. Results The experimental evaluation demonstrated near-perfect performance, with accuracy, precision, recall, and F1-score values approaching 100% on the primary dataset. These results were validated through rigorous 5-fold cross-validation. Discussion Evaluation on an independent benchmark dataset confirmed the strong generalizability and robustness of the proposed model across diverse intrusion scenarios. These findings highlight the effectiveness of the hybrid ensemble framework in significantly improving intrusion detection capabilities within complex and dynamic network environments.",
+      "year": 2025,
+      "authors": [
+        "Reem Almuhanna",
+        "Samia Dardouri"
+      ],
+      "url": "https://doi.org/10.3389/frai.2025.1625891",
+      "venue": "Frontiers Artif. Intell.",
+      "source": "semantic_scholar"
+    },
+    "s2:b8016bc77feaa7b57f972233e471e3d8c5ef9725": {
+      "paper_id": "s2:b8016bc77feaa7b57f972233e471e3d8c5ef9725",
+      "title": "Intrusion Detection In IoT Using Machine Learning Techniques:Latest Trends And Current Challenges",
+      "abstract": "Nowadays, more than ever, robust and adequate intrusion detection solutions are required due to the continuous growth of security threats posed by the rapid expansion and complex architecture of IoT networks. Add to that, IoT devices are inherently vulnerable to attacks. Which are can be exploited by cyber attackers to compromise IoT systems and gain unauthorized access to sensitive data. To address this challenge, recent solutions are increasingly utilizing Machine Learning (ML) and Deep Learning (DL) approaches to improve detection accuracy and ensure adequacy under resource constraints. This paper introduces several studies that systematically analyze the inherent security problems posed by IoT, categorize and detail proposed ML/DL-based solutions, evaluate their reported performance, advantages, and limitations, and provide a comprehensive comparative analysis across various studies. Key findings indicate significant progress in detection accuracy and efficiency through hybrid models and optimized architectures. However, persistent challenges remain regarding dataset quality, real-world generalizability, computational resource constraints for edge deployment, and model explainability. This review identifies critical research gaps and proposes future directions to foster more robust, scalable, and deployable IoT security solutions.",
+      "year": 2025,
+      "authors": [
+        "Mazzi Mohamed Salah",
+        "Mazouzi Smaine",
+        "Chikh Ramdane"
+      ],
+      "url": "https://doi.org/10.1109/ICTAACS69003.2025.11399294",
+      "venue": "2025 Fourth International Conference on Theoretical and Applicative Aspects of Computer Science (ICTAACS)",
+      "source": "semantic_scholar"
+    },
+    "s2:fcf114a5a411f7db0b6a052fc32d605ed9f25401": {
+      "paper_id": "s2:fcf114a5a411f7db0b6a052fc32d605ed9f25401",
+      "title": "A systematic literature study of machine learning techniques based intrusion detection: datasets, models, challenges, and future directions",
+      "abstract": "The tremendous growth of cyberspace has magnified the risk of advanced cyber-attacks, making the conventional security system deficient. An intrusion detection system (IDS) is a crucial aspect for securing the networks, and machine learning based approaches have attained significance for detecting growing threats, which is extremely essential to address the major concern of network security. This survey paper systematically reviews the machine learning-based IDS, focusing on detection models, the most used datasets, and evaluation metrics. A systematic review methodology, including defined selection criteria and a detailed analysis framework, enables clarity and reproducibility. Furthermore, the paper presents a comparative analysis of popular IDS datasets such as NSL-KDD, CICIS2017, and UNSW-NB15 and points out their limitations, including imbalance and antiquated attack methods. The key contributions are: (a) an organized taxonomy of ML-based IDS techniques, (b) a detailed comparison of datasets and related challenges, and (c) pointing out the research gaps to guide the future directions. This survey paper aims to help scholars in developing vigorous, intelligent, and convertible intrusion detection solutions.",
+      "year": 2025,
+      "authors": [
+        "Hafiz Muhammad Raza ur Rehman",
+        "Saira Liaquat",
+        "Muhammad Junaid Gul",
+        "M. Z. Jhandir",
+        "Daniel Gavilanes",
+        "Manuel Masias Vergara",
+        "Imran Ashraf"
+      ],
+      "url": "https://doi.org/10.1186/s40537-025-01323-2",
+      "venue": "Journal of Big Data",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2605.04407": {
+      "paper_id": "arxiv:2605.04407",
+      "title": "Assessing Generalisation Capability of Machine Learning Models for Intrusion Detection",
+      "abstract": "The growth of networked and IoT systems has intensified cyber-security threats and exposed the limits of traditional signature-based intrusion detection. Although machine-learning-based intrusion detection systems often report strong benchmark performance, high ac- curacy within a single dataset does not necessarily guarantee reliable performance in unseen network environments. This study investigates the generalisation capability of supervised machine learning models for intrusion detection using UNSW-NB15 and TON_IoT. Random Forest, Logistic Regression, and Naive Bayes were evaluated under same-dataset and cross-dataset settings. Random Forest achieved the strongest same dataset performance, with 95.08% accuracy on UNSW-NB15 and 99.79% on TON_IoT, but performance dropped sharply in cross-dataset testing. When trained on UNSW-NB15 and tested on TON_IoT or vice versa, below 40% accuracy. These results reveal a significant generalisation gap in intrusion detection. We connect this challenge to affective computing and human-centric AI, where behavioural signal analysis, anomaly detection, domain shift, and context-sensitive modelling are also central. This framing highlights the need for adaptive, generalisable cyber-security models that can operate across changing network and IoT environments.",
+      "year": 2026,
+      "authors": [
+        "Md Zakir Hossain",
+        "Md Ayshik Rahman Khan",
+        "Md Rafiqul Islam",
+        "Syed Mohammed Shamsul Islam",
+        "Tom Gedeon"
+      ],
+      "url": "https://arxiv.org/abs/2605.04407",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:7696c2369a110d930a8c2eed5cafae7ca81a0cfd": {
+      "paper_id": "s2:7696c2369a110d930a8c2eed5cafae7ca81a0cfd",
+      "title": "Deep Learning vs. Machine Learning for Intrusion Detection in Computer Networks: A Comparative Study",
+      "abstract": "In response to the increasing volume of network traffic and the growing sophistication of cyber threats, this study examines the use of deep learning-based intrusion detection systems (IDSs) in large-scale network environments. Traditional IDS face challenges such as high false positive rates, complex feature engineering, and class imbalances in datasets, all of which impede accurate threat detection. To overcome these limitations, we implement various deep learning models, including multilayer perceptron (MLP), convolutional neural network (CNN), and long short-term memory (LSTM), alongside traditional machine learning algorithms such as logistic regression, naive Bayes, random forest, K-nearest neighbors, and decision trees. A significant contribution of this study is the application of the synthetic minority over-sampling technique (SMOTE) to address class imbalance, enhancing the representativeness of the learning process. Additionally, we conduct a comprehensive performance comparison of the models, incorporating correlation-based feature selection and hyperparameter tuning to maximize detection accuracy. Our results indicate that deep learning models, particularly CNN and LSTM, outperform traditional machine learning approaches in cyber threat detection, achieving accuracy rates of 98%. However, random forest achieves the highest accuracy at 99.9%, demonstrating its effectiveness in structured intrusion detection tasks. Moreover, we evaluate computational efficiency and practical deployment considerations, discussing trade-offs between accuracy and resource consumption. These findings highlight the potential of deep learning-based IDS for large-scale network security applications while addressing key challenges such as interpretability and computational overhead. The study provides actionable insights for selecting the most suitable IDS models based on specific network environments and security requirements.",
+      "year": 2025,
+      "authors": [
+        "M. Ali",
+        "Kutub Thakur",
+        "S. Schmeelk",
+        "Joan E. DeBello",
+        "Denise M. Dragos"
+      ],
+      "url": "https://doi.org/10.3390/app15041903",
+      "venue": "Applied Sciences",
+      "source": "semantic_scholar"
+    },
+    "s2:dd547610e57b1d64039213fdf50fa265399fe06f": {
+      "paper_id": "s2:dd547610e57b1d64039213fdf50fa265399fe06f",
+      "title": "Advancements in Machine Learning-Based Intrusion Detection in IoT: Research Trends and Challenges",
+      "abstract": "This paper presents a systematic literature review based on the PRISMA model on machine learning-based Distributed Denial of Service (DDoS) attacks in Internet of Things (IoT) networks. The primary objective of the review is to compare research trends on deployment options, datasets, and machine learning techniques used in the domain between 2019 and 2024. The results highlight the dominance of certain datasets (BoT-IoT and TON_IoT) in combination with Decision Tree (DT) and Random Forest (RF) models, achieving high median accuracy rates (>99%). This paper discusses various datasets that are used to train and evaluate machine learning (ML) models for detecting Distributed Denial of Service (DDoS) attacks in Internet of Things (IoT) networks and how they impact model performance. Furthermore, the findings suggest that due to hardware limitations, there is a preference for lightweight ML solutions and preprocessed datasets. Current trends indicate that larger or industry-specific datasets will continue to gain popularity alongside more complex ML models, such as deep learning. This emphasizes the need for robust and scalable deployment options, with Software-Defined Networks (SDNs) offering flexibility, edge computing being extensively explored in cloud environments, and blockchain-integrated networks emerging as a promising approach for enhancing security.",
+      "year": 2025,
+      "authors": [
+        "M. Bankó",
+        "Szymon Dyszewski",
+        "Michaela Králová",
+        "Márton Bertalan Limpek",
+        "Maria Papaioannou",
+        "Gaurav Choudhary",
+        "N. Dragoni"
+      ],
+      "url": "https://doi.org/10.3390/a18040209",
+      "venue": "Algorithms",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2101.05067": {
+      "paper_id": "arxiv:2101.05067",
+      "title": "UNSW-NB15 Computer Security Dataset: Analysis through Visualization",
+      "abstract": "This paper presents a visual analysis of the UNSW-NB25 computer network security or intrusion detection dataset in order to detect any issues inherent to this dataset which may require researchers to address before employing this dataset for data-driven model development such as a machine learning classifier. A number of data preprocessing algorithms are applied on the raw data to address common issues such as elimination of redundant features, conversion of nominal features into numerical format and scaling. PCA, t-SNE and K-means clustering algorithms are employed for developing the graphs and plots for visualization. Consequent analysis through visualization identified and illustrated two major problems as class imbalance and class overlap for this dataset. In conclusion, it is necessary to address these two problems of class imbalance and class overlap prior to employing this dataset for any classifier model development.",
+      "year": 2021,
+      "authors": [
+        "Zeinab Zoghi",
+        "Gursel Serpen"
+      ],
+      "url": "https://arxiv.org/abs/2101.05067",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1811.05372": {
+      "paper_id": "arxiv:1811.05372",
+      "title": "Benchmarking datasets for Anomaly-based Network Intrusion Detection: KDD CUP 99 alternatives",
+      "abstract": "Machine Learning has been steadily gaining traction for its use in Anomaly-based Network Intrusion Detection Systems (A-NIDS). Research into this domain is frequently performed using the KDD~CUP~99 dataset as a benchmark. Several studies question its usability while constructing a contemporary NIDS, due to the skewed response distribution, non-stationarity, and failure to incorporate modern attacks. In this paper, we compare the performance for KDD-99 alternatives when trained using classification models commonly found in literature: Neural Network, Support Vector Machine, Decision Tree, Random Forest, Naive Bayes and K-Means. Applying the SMOTE oversampling technique and random undersampling, we create a balanced version of NSL-KDD and prove that skewed target classes in KDD-99 and NSL-KDD hamper the efficacy of classifiers on minority classes (U2R and R2L), leading to possible security risks. We explore UNSW-NB15, a modern substitute to KDD-99 with greater uniformity of pattern distribution. We benchmark this dataset before and after SMOTE oversampling to observe the effect on minority performance. Our results indicate that classifiers trained on UNSW-NB15 match or better the Weighted F1-Score of those trained on NSL-KDD and KDD-99 in the binary case, thus advocating UNSW-NB15 as a modern substitute to these datasets.",
+      "year": 2018,
+      "authors": [
+        "Abhishek Divekar",
+        "Meet Parekh",
+        "Vaibhav Savla",
+        "Rudra Mishra",
+        "Mahesh Shirole"
+      ],
+      "url": "https://arxiv.org/abs/1811.05372",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2205.06177": {
+      "paper_id": "arxiv:2205.06177",
+      "title": "Ensemble Classifier Design Tuned to Dataset Characteristics for Network Intrusion Detection",
+      "abstract": "Machine Learning-based supervised approaches require highly customized and fine-tuned methodologies to deliver outstanding performance. This paper presents a dataset-driven design and performance evaluation of a machine learning classifier for the network intrusion dataset UNSW-NB15. Analysis of the dataset suggests that it suffers from class representation imbalance and class overlap in the feature space. We employed ensemble methods using Balanced Bagging (BB), eXtreme Gradient Boosting (XGBoost), and Random Forest empowered by Hellinger Distance Decision Tree (RF-HDDT). BB and XGBoost are tuned to handle the imbalanced data, and Random Forest (RF) classifier is supplemented by the Hellinger metric to address the imbalance issue. Two new algorithms are proposed to address the class overlap issue in the dataset. These two algorithms are leveraged to help improve the performance of the testing dataset by modifying the final classification decision made by three base classifiers as part of the ensemble classifier which employs a majority vote combiner. The proposed design is evaluated for both binary and multi-category classification. Comparing the proposed model to those reported on the same dataset in the literature demonstrate that the proposed model outperforms others by a significant margin for both binary and multi-category classification cases.",
+      "year": 2022,
+      "authors": [
+        "Zeinab Zoghi",
+        "Gursel Serpen"
+      ],
+      "url": "https://arxiv.org/abs/2205.06177",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q17",
+  "area": "Cybersecurity"
+}

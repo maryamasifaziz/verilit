@@ -1,0 +1,524 @@
+{
+  "question": "What techniques such as quantization reduce the inference cost of large language models?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What quantization techniques are used to reduce large language model inference costs?",
+      "search_query": "quantization techniques large language models inference",
+      "paper_ids": [
+        "arxiv:2405.00632",
+        "arxiv:2411.02530",
+        "arxiv:2402.16775",
+        "arxiv:2505.08620",
+        "arxiv:2309.05210"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What pruning and sparsity methods are applied to optimize large language models?",
+      "search_query": "pruning and sparsity large language models",
+      "paper_ids": [
+        "arxiv:2602.21652",
+        "arxiv:2610.41968",
+        "arxiv:2311.04902",
+        "arxiv:2402.16880",
+        "arxiv:2310.09499"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "How do distillation and compression methods decrease large language model inference overhead?",
+      "search_query": "knowledge distillation large language model compression",
+      "paper_ids": [
+        "arxiv:2412.19449",
+        "arxiv:2012.01266",
+        "arxiv:2009.14167",
+        "arxiv:2509.14526",
+        "arxiv:2603.13765"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "Quantization with GPTQ to 4-bit is used to compress large language models for storage efficiency and faster inference.",
+        "paper_id": "arxiv:2405.00632"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Quantization with GPTQ to 4-bit is used to compress large language models for storage efficiency and faster inference.",
+          "paper_id": "arxiv:2405.00632",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9456,
+          "p_supported": 0.9456,
+          "accepted": true,
+          "alt_p_supported": 0.9132
+        }
+      ],
+      "final": {
+        "text": "Quantization with GPTQ to 4-bit is used to compress large language models for storage efficiency and faster inference.",
+        "paper_id": "arxiv:2405.00632",
+        "label": "SUPPORTED",
+        "confidence": 0.9456
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "The 4-bit quantization techniques nf4 and fp4 are used for large language models, showing similar attributes in inference speed, memory consumption, and content quality.",
+        "paper_id": "arxiv:2309.05210"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The 4-bit quantization techniques nf4 and fp4 are used for large language models, showing similar attributes in inference speed, memory consumption, and content quality.",
+          "paper_id": "arxiv:2309.05210",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9413,
+          "p_supported": 0.9413,
+          "accepted": true,
+          "alt_p_supported": 0.9157
+        }
+      ],
+      "final": {
+        "text": "The 4-bit quantization techniques nf4 and fp4 are used for large language models, showing similar attributes in inference speed, memory consumption, and content quality.",
+        "paper_id": "arxiv:2309.05210",
+        "label": "SUPPORTED",
+        "confidence": 0.9413
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "Sparsity Induction promotes large language models toward higher sparsity before pruning using mathematically equivalent scaling transformations at the distribution level and Spectral Norm Loss at the feature level.",
+        "paper_id": "arxiv:2602.21652"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Sparsity Induction promotes large language models toward higher sparsity before pruning using mathematically equivalent scaling transformations at the distribution level and Spectral Norm Loss at the feature level.",
+          "paper_id": "arxiv:2602.21652",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9342,
+          "p_supported": 0.9342,
+          "accepted": true,
+          "alt_p_supported": 0.8633
+        }
+      ],
+      "final": {
+        "text": "Sparsity Induction promotes large language models toward higher sparsity before pruning using mathematically equivalent scaling transformations at the distribution level and Spectral Norm Loss at the feature level.",
+        "paper_id": "arxiv:2602.21652",
+        "label": "SUPPORTED",
+        "confidence": 0.9342
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "ETAPS prunes large language models gradually by tightening a global sparsity constraint in progressive stages while training a sparse delta with a small, fixed budget.",
+        "paper_id": "arxiv:2610.41968"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "ETAPS prunes large language models gradually by tightening a global sparsity constraint in progressive stages while training a sparse delta with a small, fixed budget.",
+          "paper_id": "arxiv:2610.41968",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9452,
+          "p_supported": 0.9452,
+          "accepted": true,
+          "alt_p_supported": 0.9288
+        }
+      ],
+      "final": {
+        "text": "ETAPS prunes large language models gradually by tightening a global sparsity constraint in progressive stages while training a sparse delta with a small, fixed budget.",
+        "paper_id": "arxiv:2610.41968",
+        "label": "SUPPORTED",
+        "confidence": 0.9452
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "The feature alignment-based knowledge distillation algorithm uses a multi-layer feature alignment strategy and a multi-task loss function to transfer knowledge from large pre-trained models to lightweight student models, significantly reducing computational overhead and storage requirements.",
+        "paper_id": "arxiv:2412.19449"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The feature alignment-based knowledge distillation algorithm uses a multi-layer feature alignment strategy and a multi-task loss function to transfer knowledge from large pre-trained models to lightweight student models, significantly reducing computational overhead and storage requirements.",
+          "paper_id": "arxiv:2412.19449",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9439,
+          "p_supported": 0.9439,
+          "accepted": true,
+          "alt_p_supported": 0.911
+        }
+      ],
+      "final": {
+        "text": "The feature alignment-based knowledge distillation algorithm uses a multi-layer feature alignment strategy and a multi-task loss function to transfer knowledge from large pre-trained models to lightweight student models, significantly reducing computational overhead and storage requirements.",
+        "paper_id": "arxiv:2412.19449",
+        "label": "SUPPORTED",
+        "confidence": 0.9439
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "Applying post-training 4-bit weight quantization alongside knowledge distillation further reduces memory footprint and inference latency.",
+        "paper_id": "arxiv:2603.13765"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Applying post-training 4-bit weight quantization alongside knowledge distillation further reduces memory footprint and inference latency.",
+          "paper_id": "arxiv:2603.13765",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9511,
+          "p_supported": 0.9511,
+          "accepted": true,
+          "alt_p_supported": 0.9102
+        }
+      ],
+      "final": {
+        "text": "Applying post-training 4-bit weight quantization alongside knowledge distillation further reduces memory footprint and inference latency.",
+        "paper_id": "arxiv:2603.13765",
+        "label": "SUPPORTED",
+        "confidence": 0.9511
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "arxiv:2405.00632",
+      "citation": "Irina Proskurina, Luc Brun, Guillaume Metzler et al. (2024). When Quantization Affects Confidence of Large Language Models?. arXiv. https://arxiv.org/abs/2405.00632"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:2309.05210",
+      "citation": "Somnath Roy (2023). Understanding the Impact of Post-Training Quantization on Large Language Models. arXiv. https://arxiv.org/abs/2309.05210"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2602.21652",
+      "citation": "Minhao Jiang, Zhikai Li, Xuewen Liu et al. (2026). Sparsity Induction for Accurate Post-Training Pruning of Large Language Models. arXiv. https://arxiv.org/abs/2602.21652"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2610.41968",
+      "citation": "Jean Lucien Randrianantenaina, Hung Nguyen, Nasib Ullah et al. (2026). Prune Gradually, Adapt Sparsely: Efficient Pruning of Large Language Models at Extreme Sparsity. arXiv. https://arxiv.org/abs/2610.41968"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2412.19449",
+      "citation": "Shuo Wang, Chihang Wang, Jia Gao et al. (2024). Feature Alignment-Based Knowledge Distillation for Efficient Compression of Large Language Models. arXiv. https://arxiv.org/abs/2412.19449"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2603.13765",
+      "citation": "Alejandro Paredes La Torre, Barbara Flores, Diego Rodriguez (2026). Knowledge Distillation for Large Language Models. arXiv. https://arxiv.org/abs/2603.13765"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Various techniques are employed to reduce the inference cost, memory footprint, and computational overhead of large language models. Regarding quantization, GPTQ is utilized to compress models into 4-bit representation for enhanced storage efficiency and faster inference [1]. Additionally, 4-bit quantization techniques such as nf4 and fp4 demonstrate comparable attributes concerning inference speed, memory consumption, and content quality [2]. When combining post-training 4-bit weight quantization with knowledge distillation, the memory footprint and inference latency are reduced even further [6].\n\nPruning and sparsity methods are also critical for model optimization. Sparsity Induction drives models toward increased sparsity prior to pruning by leveraging distribution-level mathematically equivalent scaling transformations and feature-level Spectral Norm Loss [3]. Furthermore, ETAPS executes gradual pruning of large language models by enforcing a tightening global sparsity constraint across progressive stages while simultaneously training a sparse delta constrained to a small, fixed budget [4].\n\nFinally, compression and distillation methods address inference overhead through structured knowledge transfer. The feature alignment-based knowledge distillation algorithm uses both a multi-layer feature alignment strategy and a multi-task loss function to transfer knowledge from large pre-trained models to lightweight student models, which significantly cuts down computational overhead and storage requirements [5].",
+  "stats": {
+    "claims": 6,
+    "verified": 6,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 6,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 3,
+    "sub_questions": 3,
+    "invalid_citations_in_review": [],
+    "llm_requests": 6,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 0,
+      "arxiv": 0
+    },
+    "seconds": 34.7
+  },
+  "papers": {
+    "arxiv:2405.00632": {
+      "paper_id": "arxiv:2405.00632",
+      "title": "When Quantization Affects Confidence of Large Language Models?",
+      "abstract": "Recent studies introduced effective compression techniques for Large Language Models (LLMs) via post-training quantization or low-bit weight representation. Although quantized weights offer storage efficiency and allow for faster inference, existing works have indicated that quantization might compromise performance and exacerbate biases in LLMs. This study investigates the confidence and calibration of quantized models, considering factors such as language model type and scale as contributors to quantization loss. Firstly, we reveal that quantization with GPTQ to 4-bit results in a decrease in confidence regarding true labels, with varying impacts observed among different language models. Secondly, we observe fluctuations in the impact on confidence across different scales. Finally, we propose an explanation for quantization loss based on confidence levels, indicating that quantization disproportionately affects samples where the full model exhibited low confidence levels in the first place.",
+      "year": 2024,
+      "authors": [
+        "Irina Proskurina",
+        "Luc Brun",
+        "Guillaume Metzler",
+        "Julien Velcin"
+      ],
+      "url": "https://arxiv.org/abs/2405.00632",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2411.02530": {
+      "paper_id": "arxiv:2411.02530",
+      "title": "A Comprehensive Study on Quantization Techniques for Large Language Models",
+      "abstract": "Large Language Models (LLMs) have been extensively researched and used in both academia and industry since the rise in popularity of the Transformer model, which demonstrates excellent performance in AI. However, the computational demands of LLMs are immense, and the energy resources required to run them are often limited. For instance, popular models like GPT-3, with 175 billion parameters and a storage requirement of 350 GB, present significant challenges for deployment on resource-constrained IoT devices and embedded systems. These systems often lack the computational capacity to handle such large models. Quantization, a technique that reduces the precision of model values to a smaller set of discrete values, offers a promising solution by reducing the size of LLMs and accelerating inference. In this research, we provide a comprehensive analysis of quantization techniques within the machine learning field, with a particular focus on their application to LLMs. We begin by exploring the mathematical theory of quantization, followed by a review of common quantization methods and how they are implemented. Furthermore, we examine several prominent quantization methods applied to LLMs, detailing their algorithms and performance outcomes.",
+      "year": 2024,
+      "authors": [
+        "Jiedong Lang",
+        "Zhehao Guo",
+        "Shuyu Huang"
+      ],
+      "url": "https://arxiv.org/abs/2411.02530",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2402.16775": {
+      "paper_id": "arxiv:2402.16775",
+      "title": "A Comprehensive Evaluation of Quantization Strategies for Large Language Models",
+      "abstract": "Increasing the number of parameters in large language models (LLMs) usually improves performance in downstream tasks but raises compute and memory costs, making deployment difficult in resource-limited settings. Quantization techniques, which reduce the bits needed for model weights or activations with minimal performance loss, have become popular due to the rise of LLMs. However, most quantization studies use pre-trained LLMs, and the impact of quantization on instruction-tuned LLMs and the relationship between perplexity and benchmark performance of quantized LLMs are not well understood. Evaluation of quantized LLMs is often limited to language modeling and a few classification tasks, leaving their performance on other benchmarks unclear. To address these gaps, we propose a structured evaluation framework consisting of three critical dimensions: (1) knowledge \\& capacity, (2) alignment, and (3) efficiency, and conduct extensive experiments across ten diverse benchmarks. Our experimental results indicate that LLMs with 4-bit quantization can retain performance comparable to their non-quantized counterparts, and perplexity can serve as a proxy metric for quantized LLMs on most benchmarks. Furthermore, quantized LLMs with larger parameter scales can outperform smaller LLMs. Despite the memory savings achieved through quantization, it can also slow down the inference speed of LLMs. Consequently, substantial engineering efforts and hardware support are imperative to achieve a balanced optimization of decoding speed and memory consumption in the context of quantized LLMs.",
+      "year": 2024,
+      "authors": [
+        "Renren Jin",
+        "Jiangcun Du",
+        "Wuwei Huang",
+        "Wei Liu",
+        "Jian Luan",
+        "Bin Wang",
+        "Deyi Xiong"
+      ],
+      "url": "https://arxiv.org/abs/2402.16775",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2505.08620": {
+      "paper_id": "arxiv:2505.08620",
+      "title": "Resource-Efficient Language Models: Quantization for Fast and Accessible Inference",
+      "abstract": "Large language models have significantly advanced natural language processing, yet their heavy resource demands pose severe challenges regarding hardware accessibility and energy consumption. This paper presents a focused and high-level review of post-training quantization (PTQ) techniques designed to optimize the inference efficiency of LLMs by the end-user, including details on various quantization schemes, granularities, and trade-offs. The aim is to provide a balanced overview between the theory and applications of post-training quantization.",
+      "year": 2025,
+      "authors": [
+        "Tollef Emil Jørgensen"
+      ],
+      "url": "https://arxiv.org/abs/2505.08620",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2309.05210": {
+      "paper_id": "arxiv:2309.05210",
+      "title": "Understanding the Impact of Post-Training Quantization on Large Language Models",
+      "abstract": "Large language models (LLMs) are rapidly increasing in size, with the number of parameters becoming a key factor in the success of many commercial models, such as ChatGPT, Claude, and Bard. Even the recently released publicly accessible models for commercial usage, such as Falcon and Llama2, come equipped with billions of parameters. This significant increase in the number of parameters makes deployment and operation very costly. The remarkable progress in the field of quantization for large neural networks in general and LLMs in particular, has made these models more accessible by enabling them to be deployed on consumer-grade GPUs. Quantized models generally demonstrate comparable performance levels to their unquantized base counterparts. Nonetheless, there exists a notable gap in our comprehensive understanding of how these quantized models respond to hyperparameters, such as temperature, max new tokens, and topk, particularly for next word prediction. The present analysis reveals that nf4 and fp4 are equally proficient 4-bit quantization techniques, characterized by similar attributes such as inference speed, memory consumption, and the quality of generated content. the study identifies nf4 as displaying greater resilience to temperature variations in the case of the llama2 series of models at lower temperature, while fp4 and fp4-dq proves to be a more suitable choice for falcon series of models. It is noteworthy that, in general, 4-bit quantized models of varying sizes exhibit higher sensitivity to temperature in the range of 0.5 to 0.8, unlike their unquantized counterparts. Additionally, int8 quantization is associated with significantly slower inference speeds, whereas unquantized bfloat16 models consistently yield the fastest inference speeds across models of all sizes.",
+      "year": 2023,
+      "authors": [
+        "Somnath Roy"
+      ],
+      "url": "https://arxiv.org/abs/2309.05210",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2602.21652": {
+      "paper_id": "arxiv:2602.21652",
+      "title": "Sparsity Induction for Accurate Post-Training Pruning of Large Language Models",
+      "abstract": "Large language models have demonstrated capabilities in text generation, while their increasing parameter scales present challenges in computational and memory efficiency. Post-training sparsity (PTS), which reduces model cost by removing weights from dense networks, is an effective approach. However, native dense matrices lack high sparsity, making existing approaches that directly remove weights disrupt model states, resulting in unsatisfactory performance recovery even with post-tuning. We propose Sparsity Induction, which promotes models toward higher sparsity at both distribution and feature levels before pruning, to push the limits of PTS. At the distribution level, we enhance distributional sparsity through mathematically equivalent scaling transformations, which are fully absorbable and incur no extra parameters or inference-time overhead. At the feature level, we introduce Spectral Norm Loss to promote feature sparsity from a low-rank perspective. Experiments across diverse model architectures and tasks demonstrate that our method further enhances sparsity-friendliness, achieving superior pruning performance over existing approaches.",
+      "year": 2026,
+      "authors": [
+        "Minhao Jiang",
+        "Zhikai Li",
+        "Xuewen Liu",
+        "Jing Zhang",
+        "Mengjuan Chen",
+        "Qingyi Gu"
+      ],
+      "url": "https://arxiv.org/abs/2602.21652",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2610.41968": {
+      "paper_id": "arxiv:2610.41968",
+      "title": "Prune Gradually, Adapt Sparsely: Efficient Pruning of Large Language Models at Extreme Sparsity",
+      "abstract": "Weight pruning can reduce the storage and inference cost of large language models (LLMs), but preserving quality at high sparsity levels remains challenging. Existing methods face a quality-cost trade-off in this regime. One-shot pruning is cheap but degrades sharply as sparsity increases, even when followed by post-pruning recovery. A growing line of work instead optimizes the mask directly from the dense model under the end-to-end objective; among these methods, [Lee et al.,2026], the recent state of the art at extreme sparsity, reaches high quality but at the cost of model-sized optimizer state and auxiliary variables. To address this gap, we propose ETAPS, which prunes gradually and adapts sparsely: it tightens a global sparsity constraint in progressive stages while training a sparse delta with a small, fixed budget. Our key observation is that gradual weight removal keeps each pruning step small enough for sparse adaptation to compensate, allowing the adapted model to provide end-to-end gradients that guide the next pruning decision without model-sized optimizer state. Across six models from 125M to 13B parameters, ETAPS achieves lower perplexity than ELSA at every evaluated sparsity from 50% to 90%, with perplexity reductions of up to 42%. ETAPS is also far cheaper: at 90% sparsity, it prunes LLaMA2-7B on a single H200, where ELSA uses four, with $5.0\\times$ smaller total persistent state and 49% fewer GPU-hours. Together, our findings point to a promising direction for achieving high quality in demanding regimes such as extreme sparsity at substantially lower cost.",
+      "year": 2026,
+      "authors": [
+        "Jean Lucien Randrianantenaina",
+        "Hung Nguyen",
+        "Nasib Ullah",
+        "Jinbin Zhang",
+        "Nilesh Gupta",
+        "Inderjit S. Dhillon",
+        "Rohit Babbar"
+      ],
+      "url": "https://arxiv.org/abs/2610.41968",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2311.04902": {
+      "paper_id": "arxiv:2311.04902",
+      "title": "Beyond Size: How Gradients Shape Pruning Decisions in Large Language Models",
+      "abstract": "Large Language Models (LLMs) with billions of parameters are prime targets for network pruning, which removes some model weights without hurting performance. Prior approaches such as magnitude pruning, SparseGPT, and Wanda either concentrated solely on weights or integrated weights with activations for sparsity. However, they overlooked the informative gradients derived from pretrained LLMs. In this paper, we present a novel sparsity-centric pruning method for pretrained LLMs, termed Gradient-based Language Model Pruner (GBLM-Pruner). GBLM-Pruner leverages the first-order term of the Taylor expansion, operating in a training-free manner by harnessing properly normalized gradients from a few calibration samples to determine the pruning metric, and substantially outperforms competitive counterparts like SparseGPT and Wanda in multiple benchmarks. Intriguingly, by incorporating gradients, unstructured pruning with our method tends to reveal some structural patterns, which mirrors the geometric interdependence inherent in the LLMs' parameter structure. Additionally, GBLM-Pruner functions without any subsequent retraining or weight updates to maintain its simplicity as other counterparts. Extensive evaluations on LLaMA-series, Qwen-Series and Deepseek models across zero-shot, STEM-Reasoning and Coding benchmarks show that GBLM-Pruner surpasses magnitude pruning and Wanda by significant margins and performs competitively against SparseGPT which involves intensive weight updates. We further extend our approach on Vision Transformer and Vision Language Models. Our code and models are available at https://github.com/VILA-Lab/GBLM-Pruner.",
+      "year": 2023,
+      "authors": [
+        "Rocktim Jyoti Das",
+        "Mukul Ranjan",
+        "Mingjie Sun",
+        "Liqun Ma",
+        "Zhiqiang Shen"
+      ],
+      "url": "https://arxiv.org/abs/2311.04902",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2402.16880": {
+      "paper_id": "arxiv:2402.16880",
+      "title": "BESA: Pruning Large Language Models with Blockwise Parameter-Efficient Sparsity Allocation",
+      "abstract": "Large language models (LLMs) have demonstrated outstanding performance in various tasks, such as text summarization, text question-answering, and etc. While their performance is impressive, the computational footprint due to their vast number of parameters can be prohibitive. Existing solutions such as SparseGPT and Wanda attempt to alleviate this issue through weight pruning. However, their layer-wise approach results in significant perturbation to the model's output and requires meticulous hyperparameter tuning, such as the pruning rate, which can adversely affect overall model performance. To address this, this paper introduces a novel LLM pruning technique dubbed blockwise parameter-efficient sparsity allocation (BESA) by applying a blockwise reconstruction loss. In contrast to the typical layer-wise pruning techniques, BESA is characterized by two distinctive attributes: i) it targets the overall pruning error with respect to individual transformer blocks, and ii) it allocates layer-specific sparsity in a differentiable manner, both of which ensure reduced performance degradation after pruning. Our experiments show that BESA achieves state-of-the-art performance, efficiently pruning LLMs like LLaMA1, and LLaMA2 with 7B to 70B parameters on a single A100 GPU in just five hours. Code is available at https://github.com/OpenGVLab/LLMPrune-BESA.",
+      "year": 2024,
+      "authors": [
+        "Peng Xu",
+        "Wenqi Shao",
+        "Mengzhao Chen",
+        "Shitao Tang",
+        "Kaipeng Zhang",
+        "Peng Gao",
+        "Fengwei An",
+        "Yu Qiao",
+        "Ping Luo"
+      ],
+      "url": "https://arxiv.org/abs/2402.16880",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2310.09499": {
+      "paper_id": "arxiv:2310.09499",
+      "title": "One-Shot Sensitivity-Aware Mixed Sparsity Pruning for Large Language Models",
+      "abstract": "Various Large Language Models~(LLMs) from the Generative Pretrained Transformer(GPT) family have achieved outstanding performances in a wide range of text generation tasks. However, the enormous model sizes have hindered their practical use in real-world applications due to high inference latency. Therefore, improving the efficiencies of LLMs through quantization, pruning, and other means has been a key issue in LLM studies. In this work, we propose a method based on Hessian sensitivity-aware mixed sparsity pruning to prune LLMs to at least 50% sparsity without the need of any retraining. It allocates sparsity adaptively based on sensitivity, allowing us to reduce pruning-induced error while maintaining the overall sparsity level. The advantages of the proposed method exhibit even more when the sparsity is extremely high. Furthermore, our method is compatible with quantization, enabling further compression of LLMs. We have released the available code.",
+      "year": 2023,
+      "authors": [
+        "Hang Shao",
+        "Bei Liu",
+        "Bo Xiao",
+        "Ke Zeng",
+        "Guanglu Wan",
+        "Yanmin Qian"
+      ],
+      "url": "https://arxiv.org/abs/2310.09499",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2412.19449": {
+      "paper_id": "arxiv:2412.19449",
+      "title": "Feature Alignment-Based Knowledge Distillation for Efficient Compression of Large Language Models",
+      "abstract": "This study proposes a knowledge distillation algorithm based on large language models and feature alignment, aiming to effectively transfer the knowledge of large pre-trained models into lightweight student models, thereby reducing computational costs while maintaining high model performance. Different from the traditional soft label distillation method, this method introduces a multi-layer feature alignment strategy to deeply align the intermediate features and attention mechanisms of the teacher model and the student model, maximally retaining the semantic expression ability and context modeling ability of the teacher model. In terms of method design, a multi-task loss function is constructed, including feature matching loss, attention alignment loss, and output distribution matching loss, to ensure multi-level information transfer through joint optimization. The experiments were comprehensively evaluated on the GLUE data set and various natural language processing tasks. The results show that the proposed model performs very close to the state-of-the-art GPT-4 model in terms of evaluation indicators such as perplexity, BLEU, ROUGE, and CER. At the same time, it far exceeds baseline models such as DeBERTa, XLNet, and GPT-3, showing significant performance improvements and computing efficiency advantages. Research results show that the feature alignment distillation strategy is an effective model compression method that can significantly reduce computational overhead and storage requirements while maintaining model capabilities. Future research can be further expanded in the directions of self-supervised learning, cross-modal feature alignment, and multi-task transfer learning to provide more flexible and efficient solutions for the deployment and optimization of deep learning models.",
+      "year": 2024,
+      "authors": [
+        "Shuo Wang",
+        "Chihang Wang",
+        "Jia Gao",
+        "Zhen Qi",
+        "Hongye Zheng",
+        "Xiaoxuan Liao"
+      ],
+      "url": "https://arxiv.org/abs/2412.19449",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2012.01266": {
+      "paper_id": "arxiv:2012.01266",
+      "title": "Meta-KD: A Meta Knowledge Distillation Framework for Language Model Compression across Domains",
+      "abstract": "Pre-trained language models have been applied to various NLP tasks with considerable performance gains. However, the large model sizes, together with the long inference time, limit the deployment of such models in real-time applications. One line of model compression approaches considers knowledge distillation to distill large teacher models into small student models. Most of these studies focus on single-domain only, which ignores the transferable knowledge from other domains. We notice that training a teacher with transferable knowledge digested across domains can achieve better generalization capability to help knowledge distillation. Hence we propose a Meta-Knowledge Distillation (Meta-KD) framework to build a meta-teacher model that captures transferable knowledge across domains and passes such knowledge to students. Specifically, we explicitly force the meta-teacher to capture transferable knowledge at both instance-level and feature-level from multiple domains, and then propose a meta-distillation algorithm to learn single-domain student models with guidance from the meta-teacher. Experiments on public multi-domain NLP tasks show the effectiveness and superiority of the proposed Meta-KD framework. Further, we also demonstrate the capability of Meta-KD in the settings where the training data is scarce.",
+      "year": 2020,
+      "authors": [
+        "Haojie Pan",
+        "Chengyu Wang",
+        "Minghui Qiu",
+        "Yichang Zhang",
+        "Yaliang Li",
+        "Jun Huang"
+      ],
+      "url": "https://arxiv.org/abs/2012.01266",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2009.14167": {
+      "paper_id": "arxiv:2009.14167",
+      "title": "Contrastive Distillation on Intermediate Representations for Language Model Compression",
+      "abstract": "Existing language model compression methods mostly use a simple L2 loss to distill knowledge in the intermediate representations of a large BERT model to a smaller one. Although widely used, this objective by design assumes that all the dimensions of hidden representations are independent, failing to capture important structural knowledge in the intermediate layers of the teacher network. To achieve better distillation efficacy, we propose Contrastive Distillation on Intermediate Representations (CoDIR), a principled knowledge distillation framework where the student is trained to distill knowledge through intermediate layers of the teacher via a contrastive objective. By learning to distinguish positive sample from a large set of negative samples, CoDIR facilitates the student's exploitation of rich information in teacher's hidden layers. CoDIR can be readily applied to compress large-scale language models in both pre-training and finetuning stages, and achieves superb performance on the GLUE benchmark, outperforming state-of-the-art compression methods.",
+      "year": 2020,
+      "authors": [
+        "Siqi Sun",
+        "Zhe Gan",
+        "Yu Cheng",
+        "Yuwei Fang",
+        "Shuohang Wang",
+        "Jingjing Liu"
+      ],
+      "url": "https://arxiv.org/abs/2009.14167",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2509.14526": {
+      "paper_id": "arxiv:2509.14526",
+      "title": "Delta Knowledge Distillation for Large Language Models",
+      "abstract": "Knowledge distillation (KD) is a widely adopted approach for compressing large neural networks by transferring knowledge from a large teacher model to a smaller student model. In the context of large language models, token level KD, typically minimizing the KL divergence between student output distribution and teacher output distribution, has shown strong empirical performance. However, prior work assumes student output distribution and teacher output distribution share the same optimal representation space, a premise that may not hold in many cases. To solve this problem, we propose Delta Knowledge Distillation (Delta-KD), a novel extension of token level KD that encourages the student to approximate an optimal representation space by explicitly preserving the distributional shift Delta introduced during the teacher's supervised finetuning (SFT). Empirical results on ROUGE metrics demonstrate that Delta KD substantially improves student performance while preserving more of the teacher's knowledge.",
+      "year": 2025,
+      "authors": [
+        "Yihan Cao",
+        "Yanbin Kang",
+        "Zhengming Xing",
+        "Ruijie Jiang"
+      ],
+      "url": "https://arxiv.org/abs/2509.14526",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2603.13765": {
+      "paper_id": "arxiv:2603.13765",
+      "title": "Knowledge Distillation for Large Language Models",
+      "abstract": "We propose a resource-efficient framework for compressing large language models through knowledge distillation, combined with guided chain-of-thought reinforcement learning. Using Qwen 3B as the teacher and Qwen 0.5B as the student, we apply knowledge distillation across English Dolly-15k, Spanish Dolly-15k, and code BugNet and PyTorrent datasets, with hyperparameters tuned in the English setting to optimize student performance. Across tasks, the distilled student retains a substantial portion of the teacher's capability while remaining significantly smaller: 70% to 91% in English, up to 95% in Spanish, and up to 93.5% Rouge-L in code. For coding tasks, integrating chain-of-thought prompting with Group Relative Policy Optimization using CoT-annotated Codeforces data improves reasoning coherence and solution correctness compared to knowledge distillation alone. Post-training 4-bit weight quantization further reduces memory footprint and inference latency. These results show that knowledge distillation combined with chain-of-thought guided reinforcement learning can produce compact, efficient models suitable for deployment in resource-constrained settings.",
+      "year": 2026,
+      "authors": [
+        "Alejandro Paredes La Torre",
+        "Barbara Flores",
+        "Diego Rodriguez"
+      ],
+      "url": "https://arxiv.org/abs/2603.13765",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q24",
+  "area": "ML"
+}

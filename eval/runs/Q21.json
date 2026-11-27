@@ -1,0 +1,631 @@
+{
+  "question": "How can machine learning detect phishing websites and emails?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What machine learning methods and algorithms are used to detect phishing websites and emails?",
+      "search_query": "machine learning algorithms phishing detection",
+      "paper_ids": [
+        "s2:f7d1a187458a6a74ed2258ae058d65851e02988a",
+        "arxiv:2201.10752",
+        "s2:4d68f5329782b78e4f3ad432b49f48c44d1d4c41",
+        "s2:8013d76db04e6c35f4cdd0a6e8ec9ed9caf1019b",
+        "s2:91fc3981a8b18775c81fe96a028719735c5c1975"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What feature engineering techniques and datasets are commonly utilized in phishing detection studies?",
+      "search_query": "feature extraction datasets phishing detection",
+      "paper_ids": [
+        "s2:992fc85ef3df0d2c82be7631197064456889cd7d",
+        "s2:81ba9726e7785238201364fba6993c175ad11bb3",
+        "s2:0095c3694e4aac16a4d7975c7f3f7804a185f5d2",
+        "arxiv:2010.12847",
+        "s2:8f87deaa2b42f856d0669e9e0e395e38ed139429"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What are the reported performance results and evaluation metrics of machine learning models for phishing detection?",
+      "search_query": "performance metrics phishing detection machine learning",
+      "paper_ids": [
+        "arxiv:2412.02084",
+        "arxiv:2201.10752",
+        "arxiv:2407.04732",
+        "arxiv:2504.17684",
+        "arxiv:2408.03441"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations, challenges, and adversarial vulnerabilities in machine learning-based phishing detection?",
+      "search_query": "limitations challenges adversarial phishing detection",
+      "paper_ids": [
+        "s2:d7d11296b3629cec50808e6962bcc9bc402a175c",
+        "arxiv:2407.20361",
+        "s2:62399e64c1e7dc7c2dbe6f43bbce4220251930c3",
+        "s2:8b987b21871c8329e4f9276a9308a1a69b5385b3",
+        "s2:2741c2de4b4dddeab040c9e73bc55b92268d3ca2"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "A comparative analysis of five machine learning algorithms for phishing detection found that Random Forest achieved superior performance compared to Decision Tree, Support Vector Machine, Naïve Bayes, and Logistic Regression.",
+        "paper_id": "s2:f7d1a187458a6a74ed2258ae058d65851e02988a"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A comparative analysis of five machine learning algorithms for phishing detection found that Random Forest achieved superior performance compared to Decision Tree, Support Vector Machine, Naïve Bayes, and Logistic Regression.",
+          "paper_id": "s2:f7d1a187458a6a74ed2258ae058d65851e02988a",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9188,
+          "p_supported": 0.9188,
+          "accepted": true,
+          "alt_p_supported": 0.8793
+        }
+      ],
+      "final": {
+        "text": "A comparative analysis of five machine learning algorithms for phishing detection found that Random Forest achieved superior performance compared to Decision Tree, Support Vector Machine, Naïve Bayes, and Logistic Regression.",
+        "paper_id": "s2:f7d1a187458a6a74ed2258ae058d65851e02988a",
+        "label": "SUPPORTED",
+        "confidence": 0.9188
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "A phishing website detection model utilizing Decision Tree, Random Forest, Extra Trees, K-Nearest Neighbors, Multilayer Perceptron, and Support Vector Machine found that the Extra Trees algorithm offered the best results for accuracy, precision, and F1-Score.",
+        "paper_id": "s2:4d68f5329782b78e4f3ad432b49f48c44d1d4c41"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A phishing website detection model utilizing Decision Tree, Random Forest, Extra Trees, K-Nearest Neighbors, Multilayer Perceptron, and Support Vector Machine found that the Extra Trees algorithm offered the best results for accuracy, precision, and F1-Score.",
+          "paper_id": "s2:4d68f5329782b78e4f3ad432b49f48c44d1d4c41",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9461,
+          "p_supported": 0.9461,
+          "accepted": true,
+          "alt_p_supported": 0.9146
+        }
+      ],
+      "final": {
+        "text": "A phishing website detection model utilizing Decision Tree, Random Forest, Extra Trees, K-Nearest Neighbors, Multilayer Perceptron, and Support Vector Machine found that the Extra Trees algorithm offered the best results for accuracy, precision, and F1-Score.",
+        "paper_id": "s2:4d68f5329782b78e4f3ad432b49f48c44d1d4c41",
+        "label": "SUPPORTED",
+        "confidence": 0.9461
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "One study uses 32 features, such as URL length, number of special characters, and domain tokens, extracted from a merged dataset of three publicly available sources for phishing detection.",
+        "paper_id": "s2:0095c3694e4aac16a4d7975c7f3f7804a185f5d2"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study uses 32 features, such as URL length, number of special characters, and domain tokens, extracted from a merged dataset of three publicly available sources for phishing detection.",
+          "paper_id": "s2:0095c3694e4aac16a4d7975c7f3f7804a185f5d2",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9212,
+          "p_supported": 0.9212,
+          "accepted": true,
+          "alt_p_supported": 0.8838
+        }
+      ],
+      "final": {
+        "text": "One study uses 32 features, such as URL length, number of special characters, and domain tokens, extracted from a merged dataset of three publicly available sources for phishing detection.",
+        "paper_id": "s2:0095c3694e4aac16a4d7975c7f3f7804a185f5d2",
+        "label": "SUPPORTED",
+        "confidence": 0.9212
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Deep learning models in a phishing detection study were evaluated on two distinct datasets, Mendeley and PhiUSIIL, using URL-based feature extraction.",
+        "paper_id": "s2:8f87deaa2b42f856d0669e9e0e395e38ed139429"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Deep learning models in a phishing detection study were evaluated on two distinct datasets, Mendeley and PhiUSIIL, using URL-based feature extraction.",
+          "paper_id": "s2:8f87deaa2b42f856d0669e9e0e395e38ed139429",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9467,
+          "p_supported": 0.9467,
+          "accepted": true,
+          "alt_p_supported": 0.9219
+        }
+      ],
+      "final": {
+        "text": "Deep learning models in a phishing detection study were evaluated on two distinct datasets, Mendeley and PhiUSIIL, using URL-based feature extraction.",
+        "paper_id": "s2:8f87deaa2b42f856d0669e9e0e395e38ed139429",
+        "label": "SUPPORTED",
+        "confidence": 0.9467
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "For performance evaluation in phishing attack detection, four metrics have been used, namely probability of detection, probability of miss-detection, probability of false alarm, and accuracy.",
+        "paper_id": "arxiv:2201.10752"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "For performance evaluation in phishing attack detection, four metrics have been used, namely probability of detection, probability of miss-detection, probability of false alarm, and accuracy.",
+          "paper_id": "arxiv:2201.10752",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9115,
+          "p_supported": 0.9115,
+          "accepted": true,
+          "alt_p_supported": 0.8893
+        }
+      ],
+      "final": {
+        "text": "For performance evaluation in phishing attack detection, four metrics have been used, namely probability of detection, probability of miss-detection, probability of false alarm, and accuracy.",
+        "paper_id": "arxiv:2201.10752",
+        "label": "SUPPORTED",
+        "confidence": 0.9115
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "Experimental metrics for analyzing black-box and white-box models in phishing detection cover 3 measurements such as predictive accuracy and explainability metrics.",
+        "paper_id": "arxiv:2412.02084"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Experimental metrics for analyzing black-box and white-box models in phishing detection cover 3 measurements such as predictive accuracy and explainability metrics.",
+          "paper_id": "arxiv:2412.02084",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9001,
+          "p_supported": 0.9001,
+          "accepted": true,
+          "alt_p_supported": 0.9207
+        }
+      ],
+      "final": {
+        "text": "Experimental metrics for analyzing black-box and white-box models in phishing detection cover 3 measurements such as predictive accuracy and explainability metrics.",
+        "paper_id": "arxiv:2412.02084",
+        "label": "SUPPORTED",
+        "confidence": 0.9001
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Machine learning and deep learning-based phishing detection models face key challenges including adversarial attacks, dataset biases, real-time adaptability issues, and computational limitations.",
+        "paper_id": "s2:d7d11296b3629cec50808e6962bcc9bc402a175c"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Machine learning and deep learning-based phishing detection models face key challenges including adversarial attacks, dataset biases, real-time adaptability issues, and computational limitations.",
+          "paper_id": "s2:d7d11296b3629cec50808e6962bcc9bc402a175c",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9446,
+          "p_supported": 0.9446,
+          "accepted": true,
+          "alt_p_supported": 0.9144
+        }
+      ],
+      "final": {
+        "text": "Machine learning and deep learning-based phishing detection models face key challenges including adversarial attacks, dataset biases, real-time adaptability issues, and computational limitations.",
+        "paper_id": "s2:d7d11296b3629cec50808e6962bcc9bc402a175c",
+        "label": "SUPPORTED",
+        "confidence": 0.9446
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Existing phishing detection models such as Stack model, VisualPhishNet, and Phishpedia experience a significant drop in detection rates when evaluated against PhishOracle-generated adversarial phishing webpages.",
+        "paper_id": "arxiv:2407.20361"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Existing phishing detection models such as Stack model, VisualPhishNet, and Phishpedia experience a significant drop in detection rates when evaluated against PhishOracle-generated adversarial phishing webpages.",
+          "paper_id": "arxiv:2407.20361",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9245,
+          "p_supported": 0.9245,
+          "accepted": true,
+          "alt_p_supported": 0.9052
+        }
+      ],
+      "final": {
+        "text": "Existing phishing detection models such as Stack model, VisualPhishNet, and Phishpedia experience a significant drop in detection rates when evaluated against PhishOracle-generated adversarial phishing webpages.",
+        "paper_id": "arxiv:2407.20361",
+        "label": "SUPPORTED",
+        "confidence": 0.9245
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:f7d1a187458a6a74ed2258ae058d65851e02988a",
+      "citation": "Emma Junior Emmanuel (2025). Comparative analysis of machine learning algorithms for phishing detection. World Journal of Advanced Research and Reviews. https://doi.org/10.30574/wjarr.2025.27.3.3216"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:4d68f5329782b78e4f3ad432b49f48c44d1d4c41",
+      "citation": "Hussein Abdel-jaber, Hussein Albazar, Mu'awya Naser (2024). A Developed Model Based on Machine Learning Algorithms for Phishing Website Detection. Recent Advances in Computer Science and Communications. https://doi.org/10.2174/0126662558323858240612064259"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:0095c3694e4aac16a4d7975c7f3f7804a185f5d2",
+      "citation": "Sandy Khaled Ali, W. Elsersy (2025). Find my phish: phishing detection browser extension using deep learning methods by merging datasets. Internet, Multimedia Systems and Applications. https://doi.org/10.1109/IMSA65733.2025.11167022"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:8f87deaa2b42f856d0669e9e0e395e38ed139429",
+      "citation": "Hung Nguyen, Thien Ho Huong (2025). Phishing Website Detection Using Deep Learning Based on URL Feature Extraction. 2025 1st International Conference on Emerging Trends in Information Systems and Informatics (ICETISI). https://doi.org/10.1109/ICETISI67983.2025.11405459"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2201.10752",
+      "citation": "Fatima Salahdine, Zakaria El Mrabet, Naima Kaabouch (2022). Phishing Attacks Detection -- A Machine Learning-Based Approach. arXiv. https://arxiv.org/abs/2201.10752"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2412.02084",
+      "citation": "Abdullah Fajar, Setiadi Yazid, Indra Budi (2024). Comparative Analysis of Black-Box and White-Box Machine Learning Model in Phishing Detection. arXiv. https://arxiv.org/abs/2412.02084"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:d7d11296b3629cec50808e6962bcc9bc402a175c",
+      "citation": "Eleni Kytidou, Theodosia Tsikriki, George Drosatos et al. (2025). Machine learning techniques for phishing detection: A review of methods, challenges, and future directions. International Journal of Intelligent Decision Technologies. https://doi.org/10.1177/18724981251366763"
+    },
+    {
+      "n": 8,
+      "paper_id": "arxiv:2407.20361",
+      "citation": "Aditya Kulkarni, Vivek Balachandran, Dinil Mon Divakaran et al. (2024). From ML to LLM: Evaluating the Robustness of Phishing Webpage Detection Models against Adversarial Attacks. arXiv. https://arxiv.org/abs/2407.20361"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Machine learning and deep learning methods are widely utilized to detect phishing websites and emails. Various algorithms have been evaluated, including Decision Tree, Support Vector Machine, Naïve Bayes, Logistic Regression, Random Forest, Extra Trees, K-Nearest Neighbors, and Multilayer Perceptron [1, 2]. Among these, comparative studies have identified both Random Forest and Extra Trees as achieving superior performance across metrics such as accuracy, precision, and F1-Score [1, 2].\n\nFeature engineering and dataset selection play a foundational role in these detection systems. Studies have utilized URL-based feature extraction [4], incorporating 32 distinct features such as URL length, domain tokens, and the number of special characters [3]. These models rely on various datasets, including merged publicly available sources as well as the Mendeley and PhiUSIIL datasets [3, 4]. To measure effectiveness, evaluations employ metrics such as predictive accuracy, probability of detection, probability of miss-detection, probability of false alarm, explainability metrics, and F1-Score [2, 5, 6].\n\nDespite high reported performance, machine learning-based phishing detection models encounter several current limitations and vulnerabilities. Key challenges include computational limitations, dataset biases, real-time adaptability issues, and adversarial attacks [7]. Specifically, models such as Phishpedia, VisualPhishNet, and the Stack model suffer a significant drop in detection rates when tested against adversarial phishing webpages generated by PhishOracle [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 13,
+      "arxiv": 0
+    },
+    "seconds": 118.6
+  },
+  "papers": {
+    "s2:f7d1a187458a6a74ed2258ae058d65851e02988a": {
+      "paper_id": "s2:f7d1a187458a6a74ed2258ae058d65851e02988a",
+      "title": "Comparative analysis of machine learning algorithms for phishing detection",
+      "abstract": "Phishing attacks have become one of the most prevalent forms of cybercrime, leading to significant financial losses and breaches of personal information. Traditional rule-based methods of detecting phishing websites and emails are increasingly insufficient due to the evolving sophistication of attackers. Machine learning (ML) provides a promising alternative by enabling automated classification of phishing and legitimate instances based on extracted features. This study presents a comparative analysis of five widely used ML algorithms, namely Decision Tree, Random Forest, Support Vector Machine (SVM), Naïve Bayes, and Logistic Regression, for phishing detection. A publicly available phishing dataset was utilized, containing both legitimate and malicious samples with relevant URL and website-based features. Preprocessing steps included feature encoding and normalization. The models were evaluated using standard performance metrics: accuracy, precision, recall, F1, score, and ROC, AUC. The results indicate that ensemble-based models, particularly Random Forest, achieved superior performance across most metrics, with higher accuracy and robustness against overfitting compared to single classifiers. While Logistic Regression and Naïve Bayes offered lightweight alternatives with faster training times, their predictive power was comparatively lower. The findings highlight the importance of algorithm selection in phishing detection systems and provide practical insights for cybersecurity practitioners. Future work will extend this analysis by incorporating larger datasets and exploring deep learning approaches for real-time phishing detection.",
+      "year": 2025,
+      "authors": [
+        "Emma Junior Emmanuel"
+      ],
+      "url": "https://doi.org/10.30574/wjarr.2025.27.3.3216",
+      "venue": "World Journal of Advanced Research and Reviews",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2201.10752": {
+      "paper_id": "arxiv:2201.10752",
+      "title": "Phishing Attacks Detection -- A Machine Learning-Based Approach",
+      "abstract": "Phishing attacks are one of the most common social engineering attacks targeting users emails to fraudulently steal confidential and sensitive information. They can be used as a part of more massive attacks launched to gain a foothold in corporate or government networks. Over the last decade, a number of anti-phishing techniques have been proposed to detect and mitigate these attacks. However, they are still inefficient and inaccurate. Thus, there is a great need for efficient and accurate detection techniques to cope with these attacks. In this paper, we proposed a phishing attack detection technique based on machine learning. We collected and analyzed more than 4000 phishing emails targeting the email service of the University of North Dakota. We modeled these attacks by selecting 10 relevant features and building a large dataset. This dataset was used to train, validate, and test the machine learning algorithms. For performance evaluation, four metrics have been used, namely probability of detection, probability of miss-detection, probability of false alarm, and accuracy. The experimental results show that better detection can be achieved using an artificial neural network.",
+      "year": 2022,
+      "authors": [
+        "Fatima Salahdine",
+        "Zakaria El Mrabet",
+        "Naima Kaabouch"
+      ],
+      "url": "https://arxiv.org/abs/2201.10752",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:4d68f5329782b78e4f3ad432b49f48c44d1d4c41": {
+      "paper_id": "s2:4d68f5329782b78e4f3ad432b49f48c44d1d4c41",
+      "title": "A Developed Model Based on Machine Learning Algorithms for Phishing Website Detection",
+      "abstract": "Users are accessing websites for many purposes, such as obtaining information about a particular topic, buying items, accessing their accounts, etc. Cybercriminals use phishing websites to attain the sensitive information of the users, like usernames and passwords, credit card details, etc. Detecting phishing websites helps in protecting the information and the money of people. Machine learning algorithms can be applied to detect phishing websites. In this paper, a model based on various machine learning algorithms is developed to detect phishing websites. The machine learning algorithms used in this model are Decision Tree, Random Forest, Extra Trees, K-Nearest Neighbors, Multilayer Perceptron and Support Vector Machine. The dataset of phishing websites is taken from the Kaggle website. The algorithms mentioned above of the developed model are compared together to identify which algorithm has better classification results. The extra trees algorithm offers the best results for accuracy, precision, and F1-Score. This paper also compares the developed model with a previous model that uses the same dataset and relies upon decision tree, random forest, and support vector machine to determine which model has better classification report results. The developed model, depending on the Decision Tree and SVM, offers better classification results than those of the previous models. The developed model is compared with another preceding model relying upon Decision Tree and Random Forest algorithms to determine which model generates better results for accuracy, precision, recall/sensitivity, and F1-Score. The developed model, depending on the Decision Tree, presents better results for accuracy, recall, and F1-Score than the results of accuracy, sensitivity, and F1-Score for the preceding model based on the Decision Tree.",
+      "year": 2024,
+      "authors": [
+        "Hussein Abdel-jaber",
+        "Hussein Albazar",
+        "Mu'awya Naser"
+      ],
+      "url": "https://doi.org/10.2174/0126662558323858240612064259",
+      "venue": "Recent Advances in Computer Science and Communications",
+      "source": "semantic_scholar"
+    },
+    "s2:8013d76db04e6c35f4cdd0a6e8ec9ed9caf1019b": {
+      "paper_id": "s2:8013d76db04e6c35f4cdd0a6e8ec9ed9caf1019b",
+      "title": "Phishing Detection Using Machine Learning: Performance Evaluation of Classification Algorithms",
+      "abstract": "Phishing attacks pose a major cybersecurity threat by exploiting human vulnerabilities through deceptive websites and emails. Detecting and classifying these phishing attacks is crucial in identifying essential patterns in the attacks. However, such effort is extensive and thus requires support from machine learning-based techniques. This study evaluates the effectiveness of seven machine learning (ML) models—Decision Tree (DT), K-Nearest Neighbors (KNN), Naïve Bayes (NB), Random Forest (RF), Support Vector Machine (SVM), Artificial Neural Network (ANN), and Logistic Regression (LR)—on two phishing datasets. The models used 10-fold cross-validation for evaluation, with the performance metrics evaluated as accuracy, precision, recall, and F1-score. RF and ANN performed the best on the Phishing Website Dataset with the highest accuracies of 96.63% and 96.54%, respectively. On the Website Phishing Dataset, DT and RF achieved the highest accuracy of 87.82%. NB exhibited the poorest performance, attributable to insufficient recollection. Confusion matrices and heatmaps validated that RF, ANN, and SVM yield the most dependable classification outcomes. The results indicate that ensemble learning (RF) and deep learning (ANN) are exceptionally effective for phishing detection. Subsequent efforts should concentrate on hyperparameter optimization, feature selection, and hybrid modeling to improve accuracy.",
+      "year": 2025,
+      "authors": [
+        "Mohd Arfian Ismail",
+        "H. Nuha",
+        "Setyorini",
+        "S. Yasin"
+      ],
+      "url": "https://doi.org/10.18517/ijaseit.15.5.13271",
+      "venue": "International Journal on Advanced Science, Engineering and Information Technology",
+      "source": "semantic_scholar"
+    },
+    "s2:91fc3981a8b18775c81fe96a028719735c5c1975": {
+      "paper_id": "s2:91fc3981a8b18775c81fe96a028719735c5c1975",
+      "title": "Enhancing Phishing Detection using Machine Learning Algorithms",
+      "abstract": "The current article introduces the application of machine learning algorithms to aid phishing, i.e., the application of these algorithms to prepare well-fitting, realistic phishing attacks. Due to the nature of ML in having attributes, including natural language comprehension and pattern recognition ability, phishing attacks have the potential to evade the current traditional security tactic and execute real-time. As per the paper, the supervised learning is being trained for phishing email crafting and the unsupervised learning training for phishing victim behavioral pattern exploitation, illustrating how ML can be effectively utilized to automate and escalate phishing attacks. The findings showcase the need for adaptive ML-based security solutions to detect and counter such emerging threats.",
+      "year": 2025,
+      "authors": [
+        "Jeswin K S",
+        "Shubhankar Gupta",
+        "Rajashree",
+        "Santhanakrishnan",
+        "J. Miriam",
+        "Nafees Muneera"
+      ],
+      "url": "https://doi.org/10.1109/ICICT64420.2025.11005375",
+      "venue": "International Congress on Information and Communication Technology",
+      "source": "semantic_scholar"
+    },
+    "s2:992fc85ef3df0d2c82be7631197064456889cd7d": {
+      "paper_id": "s2:992fc85ef3df0d2c82be7631197064456889cd7d",
+      "title": "Phishing Web Page Detection Based on Data Enhancement and Feature Engineering",
+      "abstract": "Phishing, a deceptive cyberattack technique, poses a significant threat to online users by tricking them into disclosing personal or financial information through counterfeit web pages that impersonate legitimate ones. This paper explores data enhancement and feature engineering techniques as a means to improve the performance of phishing web page detection methods. Data enhancement involves methods like data augmentation, oversampling, and undersampling, which aim to balance class distribution and enhance data diversity and quality. These techniques are essential to mitigate the data imbalance issue often encountered in phishing detection datasets. Feature engineering techniques, including feature selection, extraction, and transformation, are introduced to reduce data dimensionality and enhance the discriminative power of features. The proposed approach is experimentally validated, providing a valuable resource for improving online security in the face of evolving cyber threats. This work lays the foundation for future research in the domain of phishing detection, addressing a critical issue in cybersecurity.",
+      "year": 2024,
+      "authors": [
+        "An-Ran Zhu",
+        "Ping Wu",
+        "Xiang-Yu Hu"
+      ],
+      "url": "https://doi.org/10.1109/EEBDA60612.2024.10485824",
+      "venue": "2024 IEEE 3rd International Conference on Electrical Engineering, Big Data and Algorithms (EEBDA)",
+      "source": "semantic_scholar"
+    },
+    "s2:81ba9726e7785238201364fba6993c175ad11bb3": {
+      "paper_id": "s2:81ba9726e7785238201364fba6993c175ad11bb3",
+      "title": "A Literature Survey on Website Phishing Detection Using Data Science Models and Leveraging Various Datasets",
+      "abstract": "In the modern era of computing, driven by technological advancements, data and its attributes are fueling significant shifts in technology, particularly in operations related to data analysis, management, security, and maintenance. To protect crucial data and identify and understand security incidents, it is essential to extract patterns and insights from cybersecurity data. This literature survey highlights the growing body of research in phishing detection, emphasizes the dominance of threat detection techniques, and identifies specific datasets and algorithms that have shown promising results with high accuracy. Different phishing detection approaches, including Machine Learning, Generative models, hybrid models, List-Based Models, Visual Similarity Models, Heuristic Models, and Deep Learning-based techniques, are studied and compared. Data cleaning, data balancing, feature selection, and feature extraction were carried out during the model development process to build the most sustainable model. A study and analysis were conducted on various scientific papers published in the last two years in research journals, articles, conferences, technical workshops, technology books, and high-ranking business blogs. This study enhances readers' understanding of various phishing website detection techniques, the datasets used, and the comparative performance of the algorithms employed. Key Words: Website phishing, machine learning, deep learning, data processing, data security",
+      "year": 2025,
+      "authors": [
+        "A. Selvi",
+        "P. Pushpa"
+      ],
+      "url": "https://doi.org/10.55041/ijsrem51645",
+      "venue": "INTERNATIONAL JOURNAL OF SCIENTIFIC RESEARCH IN ENGINEERING AND MANAGEMENT",
+      "source": "semantic_scholar"
+    },
+    "s2:0095c3694e4aac16a4d7975c7f3f7804a185f5d2": {
+      "paper_id": "s2:0095c3694e4aac16a4d7975c7f3f7804a185f5d2",
+      "title": "Find my phish: phishing detection browser extension using deep learning methods by merging datasets",
+      "abstract": "Phishing remains one of the most important cybersecurity threats, with millions of phishing websites emerging every month. Despite years of research and advancements in detection techniques, phishing attacks continue to evolve, targeting various sectors such as business and healthcare. This study explores phishing detection using machine learning and deep learning by focusing on raw URL structures rather than email-based attacks. We analyze and merge three publicly available datasets to extract and evaluate key features that contribute to effective phishing detection. The datasets include URL-based phishing indicators, structural characteristics, and binary classification labels. After feature extraction and selection, we identify 32 features, such as URL length, number of special characters, and domain tokens, that significantly impact model performance. Our feature importance analysis highlights URL length as the most influential factor in differentiating phishing from legitimate websites. Using deep learning models trained on the newly merged dataset, this study aims to improve the accuracy and adaptability of phishing detection in various real-world scenarios. The findings emphasize the need for robust, automated feature extraction techniques to enhance phishing prevention efforts.",
+      "year": 2025,
+      "authors": [
+        "Sandy Khaled Ali",
+        "W. Elsersy"
+      ],
+      "url": "https://doi.org/10.1109/IMSA65733.2025.11167022",
+      "venue": "Internet, Multimedia Systems and Applications",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2010.12847": {
+      "paper_id": "arxiv:2010.12847",
+      "title": "Towards Benchmark Datasets for Machine Learning Based Website Phishing Detection: An experimental study",
+      "abstract": "In this paper, we present a general scheme for building reproducible and extensible datasets for website phishing detection. The aim is to (1) enable comparison of systems using different features, (2) overtake the short-lived nature of phishing websites, and (3) keep track of the evolution of phishing tactics. For experimenting the proposed scheme, we start by adopting a refined classification of website phishing features and we systematically select a total of 87 commonly recognized ones, we classify them, and we made them subjects for relevance and runtime analysis. We use the collected set of features to build a dataset in light of the proposed scheme. Thereafter, we use a conceptual replication approach to check the genericity of former findings for the built dataset. Specifically, we evaluate the performance of classifiers on individual classes and on combinations of classes, we investigate different combinations of models, and we explore the effects of filter and wrapper methods on the selection of discriminative features. The results show that Random Forest is the most predictive classifier. Features gathered from external services are found the most discriminative where features extracted from web page contents are found less distinguishing. Besides external service based features, some web page content features are found time consuming and not suitable for runtime detection. The use of hybrid features provided the best accuracy score of 96.61%. By investigating different feature selection methods, filter-based ranking together with incremental removal of less important features improved the performance up to 96.83% better than wrapper methods.",
+      "year": 2020,
+      "authors": [
+        "Abdelhakim Hannousse",
+        "Salima Yahiouche"
+      ],
+      "url": "https://arxiv.org/abs/2010.12847",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:8f87deaa2b42f856d0669e9e0e395e38ed139429": {
+      "paper_id": "s2:8f87deaa2b42f856d0669e9e0e395e38ed139429",
+      "title": "Phishing Website Detection Using Deep Learning Based on URL Feature Extraction",
+      "abstract": "In the rapidly evolving digital landscape of recent years, Internet users are increasingly exposed to sophisticated cybersecurity threats, particularly phishing websites. To address this challenge, this paper employs four deep learning architectures for phishing detection using URL-based feature extraction: Convolutional Neural Networks (CNN), Long Short-Term Memory (LSTM) with Attention, Bidirectional Long Short-Term Memory (BiLSTM) with Attention, and Multi-Layer Perceptron (MLP) with Attention. The models were evaluated on two distinct datasets, Mendeley and PhiUSIIL, to assess their predictive performance. Experimental results show that models trained on the PhiUSIIL achieved significantly higher performance than those trained on Mendeley, with accuracy and F1-scores reaching up to 99.9%. Among the evaluated models, BiLSTM achieved the highest predictive performance, while MLP-Attention provided competitive accuracy with lower computational cost. These results highlight the effectiveness of combining robust feature engineering with attention mechanisms for phishing detection and offer practical insights into balancing model complexity and performance in scalable, real-time security systems.",
+      "year": 2025,
+      "authors": [
+        "Hung Nguyen",
+        "Thien Ho Huong"
+      ],
+      "url": "https://doi.org/10.1109/ICETISI67983.2025.11405459",
+      "venue": "2025 1st International Conference on Emerging Trends in Information Systems and Informatics (ICETISI)",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2412.02084": {
+      "paper_id": "arxiv:2412.02084",
+      "title": "Comparative Analysis of Black-Box and White-Box Machine Learning Model in Phishing Detection",
+      "abstract": "Background: Explainability in phishing detection model can support a further solution of phishing attack mitigation by increasing trust and understanding how phishing can be detected. Objective: The aims of this study to determine and best recommendation to apply an approach which has several components with abilities to fulfil the critical needs Methods: A methodology starting with analyzing both black-box and white-box models to get the pros and cons specifically in phishing detection. The conclusion of the analysis will be validated by experiment using a set of well-known algorithms and public phishing datasets. Experimental metrics covers 3 measurements such as predictive accuracy and explainability metrics. Conclusion: Both models are comparable in terms of interpretability and consistency, with room for improvement in diverse datasets. EBM as an example of white-box model is generally better suited for applications requiring explainability and actionable insights. Finally, each model, white-box and black-box model has positive and negative aspects both for performance metric and for explainable metric. It is important to consider the objective of model usage.",
+      "year": 2024,
+      "authors": [
+        "Abdullah Fajar",
+        "Setiadi Yazid",
+        "Indra Budi"
+      ],
+      "url": "https://arxiv.org/abs/2412.02084",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2407.04732": {
+      "paper_id": "arxiv:2407.04732",
+      "title": "PhishNet: A Phishing Website Detection Tool using XGBoost",
+      "abstract": "PhisNet is a cutting-edge web application designed to detect phishing websites using advanced machine learning. It aims to help individuals and organizations identify and prevent phishing attacks through a robust AI framework. PhisNet utilizes Python to apply various machine learning algorithms and feature extraction techniques for high accuracy and efficiency. The project starts by collecting and preprocessing a comprehensive dataset of URLs, comprising both phishing and legitimate sites. Key features such as URL length, special characters, and domain age are extracted to effectively train the model. Multiple machine learning algorithms, including logistic regression, decision trees, and neural networks, are evaluated to determine the best performance in phishing detection. The model is finely tuned to optimize metrics like accuracy, precision, recall, and the F1 score, ensuring reliable detection of both common and sophisticated phishing tactics. PhisNet's web application is developed using React.js, which allows for client-side rendering and smooth integration with backend services, creating a responsive and user-friendly interface. Users can input URLs and receive immediate predictions with confidence scores, thanks to a robust backend infrastructure that processes data and provides real-time results. The model is deployed using Google Colab and AWS EC2 for their computational power and scalability, ensuring the application remains accessible and functional under varying loads. In summary, PhisNet represents a significant advancement in cybersecurity, showcasing the effective use of machine learning and web development technologies to enhance user security. It empowers users to prevent phishing attacks and highlights AI's potential in transforming cybersecurity.",
+      "year": 2024,
+      "authors": [
+        "Prashant Kumar",
+        "Kevin Antony",
+        "Deepakmoney Banga",
+        "Arshpreet Sohal"
+      ],
+      "url": "https://arxiv.org/abs/2407.04732",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2504.17684": {
+      "paper_id": "arxiv:2504.17684",
+      "title": "Evaluating the Vulnerability of ML-Based Ethereum Phishing Detectors to Single-Feature Adversarial Perturbations",
+      "abstract": "This paper explores the vulnerability of machine learning models to simple single-feature adversarial attacks in the context of Ethereum fraudulent transaction detection. Through comprehensive experimentation, we investigate the impact of various adversarial attack strategies on model performance metrics. Our findings, highlighting how prone those techniques are to simple attacks, are alarming, and the inconsistency in the attacks' effect on different algorithms promises ways for attack mitigation. We examine the effectiveness of different mitigation strategies, including adversarial training and enhanced feature selection, in enhancing model robustness and show their effectiveness.",
+      "year": 2025,
+      "authors": [
+        "Ahod Alghuried",
+        "Ali Alkinoon",
+        "Abdulaziz Alghamdi",
+        "Soohyeon Choi",
+        "Manar Mohaisen",
+        "David Mohaisen"
+      ],
+      "url": "https://arxiv.org/abs/2504.17684",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2408.03441": {
+      "paper_id": "arxiv:2408.03441",
+      "title": "Simple Perturbations Subvert Ethereum Phishing Transactions Detection: An Empirical Analysis",
+      "abstract": "This paper explores the vulnerability of machine learning models, specifically Random Forest, Decision Tree, and K-Nearest Neighbors, to very simple single-feature adversarial attacks in the context of Ethereum fraudulent transaction detection. Through comprehensive experimentation, we investigate the impact of various adversarial attack strategies on model performance metrics, such as accuracy, precision, recall, and F1-score. Our findings, highlighting how prone those techniques are to simple attacks, are alarming, and the inconsistency in the attacks' effect on different algorithms promises ways for attack mitigation. We examine the effectiveness of different mitigation strategies, including adversarial training and enhanced feature selection, in enhancing model robustness.",
+      "year": 2024,
+      "authors": [
+        "Ahod Alghureid",
+        "David Mohaisen"
+      ],
+      "url": "https://arxiv.org/abs/2408.03441",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:d7d11296b3629cec50808e6962bcc9bc402a175c": {
+      "paper_id": "s2:d7d11296b3629cec50808e6962bcc9bc402a175c",
+      "title": "Machine learning techniques for phishing detection: A review of methods, challenges, and future directions",
+      "abstract": "Phishing remains a persistent and evolving cybersecurity challenge, leveraging deception to manipulate users into disclosing confidential information. Traditional detection techniques, such as blacklists and heuristic-based methods, struggle to keep pace with sophisticated phishing attacks that continuously adapt to evade detection. In response, machine learning (ML) and deep learning (DL) have emerged as effective solutions, utilizing structured data such as URL composition, webpage content, and domain characteristics to enhance phishing detection accuracy. This paper presents a broad narrative review of ML-driven phishing detection approaches, covering supervised learning, deep learning architectures, large language models (LLMs), ensemble models, and hybrid frameworks. It also reviews feature engineering methods and publicly available datasets, noting common limitations in representational coverage, class balance, and reproducibility. We identify key challenges in phishing detection, including adversarial attacks, dataset biases, real-time adaptability issues, and computational limitations. Finally, we outline actionable future research directions, including the development of adaptive detection systems, continual learning benchmarks, LLM-based hybrid models, and cross-platform intelligence sharing. By addressing these challenges and promoting ML-based methodologies, this review aims to provide insights that will lead to future innovations in phishing detection approaches.",
+      "year": 2025,
+      "authors": [
+        "Eleni Kytidou",
+        "Theodosia Tsikriki",
+        "George Drosatos",
+        "Konstantinos Rantos"
+      ],
+      "url": "https://doi.org/10.1177/18724981251366763",
+      "venue": "International Journal of Intelligent Decision Technologies",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2407.20361": {
+      "paper_id": "arxiv:2407.20361",
+      "title": "From ML to LLM: Evaluating the Robustness of Phishing Webpage Detection Models against Adversarial Attacks",
+      "abstract": "Phishing attacks attempt to deceive users into stealing sensitive information, posing a significant cybersecurity threat. Advances in machine learning (ML) and deep learning (DL) have led to the development of numerous phishing webpage detection solutions, but these models remain vulnerable to adversarial attacks. Evaluating their robustness against adversarial phishing webpages is essential. Existing tools contain datasets of pre-designed phishing webpages for a limited number of brands, and lack diversity in phishing features. To address these challenges, we develop PhishOracle, a tool that generates adversarial phishing webpages by embedding diverse phishing features into legitimate webpages. We evaluate the robustness of three existing task-specific models - Stack model, VisualPhishNet, and Phishpedia - against PhishOracle-generated adversarial phishing webpages and observe a significant drop in their detection rates. In contrast, a multimodal large language model (MLLM)-based phishing detector demonstrates stronger robustness against these adversarial attacks but still is prone to evasion. Our findings highlight the vulnerability of phishing detection models to adversarial attacks, emphasizing the need for more robust detection approaches. Furthermore, we conduct a user study to evaluate whether PhishOracle-generated adversarial phishing webpages can deceive users. The results show that many of these phishing webpages evade not only existing detection models but also users.",
+      "year": 2024,
+      "authors": [
+        "Aditya Kulkarni",
+        "Vivek Balachandran",
+        "Dinil Mon Divakaran",
+        "Tamal Das"
+      ],
+      "url": "https://arxiv.org/abs/2407.20361",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:62399e64c1e7dc7c2dbe6f43bbce4220251930c3": {
+      "paper_id": "s2:62399e64c1e7dc7c2dbe6f43bbce4220251930c3",
+      "title": "Phishing URL Detection with Deep Learning: Trends, Challenges, and Future Directions",
+      "abstract": "Phishing is a growing cybersecurity threat, with attackers continuously evolving their tactics to traditional detection mechanisms. We are observing a sharp increase in phishing attacks, particularly with an increase in smishing incidents and the manipulation of social media platforms for malicious activities. This paper first discusses traditional phishing URL detection methods and their limitations. The study then focuses on different deep learning approaches, including convolutional neural networks (CNNs), recurrent neural networks (RNNs), and transformer-based models, showcasing their accuracy in detecting phishing URLs. Despite considerable advancements in deep learning based detection, the paper also highlights several challenges that exist in such systems, like imbalanced datasets, adversarial attacks, scalability issues, and real-time detection constraints. In addition, we discuss the necessity of advanced solutions such as federated learning, adversarial training, and the integration of real-time threat intelligence to improve phishing detection capabilities.",
+      "year": 2025,
+      "authors": [
+        "Sangeetha T.S",
+        "Piyoosh Purushothaman Nair"
+      ],
+      "url": "https://doi.org/10.1109/PICC67314.2025.11291322",
+      "venue": "2025 International Conference on Power, Instrumentation, Control, and Computing (PICC)",
+      "source": "semantic_scholar"
+    },
+    "s2:8b987b21871c8329e4f9276a9308a1a69b5385b3": {
+      "paper_id": "s2:8b987b21871c8329e4f9276a9308a1a69b5385b3",
+      "title": "A Comprehensive Review on an Advanced Machine Learning Approach for Enhancing Phishing Website Detection",
+      "abstract": "Abstract: Phishing attacks continue to pose a significant threat to online security, exploiting user trust to steal sensitive information. This paper presents a comprehensive review of advanced machine learning techniques for enhancing phishing website detection. We analyze recent developments in feature engineering, focusing on content-based, URL-based, and networkbased attributes. Various machine learning algorithms, including supervised and unsupervised learning, are examined, highlighting their strengths and limitations in this domain. Furthermore, we investigate the potential of ensemble methods and deep learning models to improve detection accuracy. Additionally, we address challenges such as concept drift and adversarial attacks, discussing potential mitigation strategies. Finally, we outline future research directions, emphasizing the need for adaptable and real-time detection systems to counter evolving phishing tactics. This review serves as a valuable resource for researchers and practitioners seeking to develop more robust and effective phishing website detection solutions.",
+      "year": 2024,
+      "authors": [
+        "Gulshan Kumar",
+        "K. S."
+      ],
+      "url": "https://doi.org/10.22214/ijraset.2024.63091",
+      "venue": "International Journal for Research in Applied Science and Engineering Technology",
+      "source": "semantic_scholar"
+    },
+    "s2:2741c2de4b4dddeab040c9e73bc55b92268d3ca2": {
+      "paper_id": "s2:2741c2de4b4dddeab040c9e73bc55b92268d3ca2",
+      "title": "Deep Learning-Based Intrusion Detection Systems for Phishing Email Detection: A Short Survey",
+      "abstract": "Phishing remains a prevalent and evolving threat within the cybersecurity landscape, exploiting human vulnerabilities through deceptive email content. This survey presents a focused review of deep learning-based intrusion detection systems (IDSs) tailored to phishing email detection. It emphasizes recent innovations in neural architectures, including CNNs, RNNs, Transformer-based models, and hybrid or multi-modal systems, highlighting their design principles and comparative performance. We analyze a wide range of public and private phishing-related email datasets.assessing their scope, representativeness, and limitations in supporting generalizable detection models. Furthermore, we examine how these models cope with real-world deployment challenges, including adversarial manipulation, data imbalance, and the integration of multi-modal cues like URLs and headers. This work aims to guide future research by identifying critical gaps in robustness, scalability, and dataset diversity.",
+      "year": 2025,
+      "authors": [
+        "Axel De Nardin",
+        "Silvia Zottin",
+        "C. Piciarelli",
+        "G. Foresti"
+      ],
+      "url": "https://doi.org/10.1109/ICCVW69036.2025.00784",
+      "venue": "2025 IEEE/CVF International Conference on Computer Vision Workshops (ICCVW)",
+      "source": "semantic_scholar"
+    }
+  },
+  "question_id": "Q21",
+  "area": "Cybersecurity"
+}

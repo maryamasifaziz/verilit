@@ -1,0 +1,649 @@
+{
+  "question": "How do sentiment analysis models handle sarcasm and irony?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What techniques and model architectures are used to detect sarcasm and irony in text?",
+      "search_query": "deep learning sarcasm detection models",
+      "paper_ids": [
+        "arxiv:2202.02516",
+        "arxiv:2510.10729",
+        "arxiv:2106.05752",
+        "arxiv:2106.12488",
+        "arxiv:2412.13008"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What benchmark datasets and corpora are utilized for evaluating sentiment analysis on sarcastic content?",
+      "search_query": "datasets for sarcasm and irony detection",
+      "paper_ids": [
+        "arxiv:1904.04019",
+        "arxiv:2107.02276",
+        "arxiv:2607.14131",
+        "arxiv:2308.08156",
+        "arxiv:1809.09795"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What are the reported performance metrics and challenges in identifying subtle irony compared to explicit sarcasm?",
+      "search_query": "performance sentiment analysis sarcasm irony",
+      "paper_ids": [
+        "arxiv:2107.02276",
+        "arxiv:1911.10401",
+        "arxiv:1805.11869",
+        "arxiv:2409.02370",
+        "arxiv:2107.04372"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations of sentiment models when processing figurative language and context?",
+      "search_query": "limitations sentiment analysis sarcasm context",
+      "paper_ids": [
+        "arxiv:2508.07959",
+        "arxiv:2508.03654",
+        "arxiv:2307.10234",
+        "arxiv:2410.20170",
+        "arxiv:2509.20953"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "A modular deep learning framework uses Deep Convolutional Neural Networks (DCNNs) and BERT to analyze linguistic, emotional, and contextual cues for sarcasm detection.",
+        "paper_id": "arxiv:2510.10729"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A modular deep learning framework uses Deep Convolutional Neural Networks (DCNNs) and BERT to analyze linguistic, emotional, and contextual cues for sarcasm detection.",
+          "paper_id": "arxiv:2510.10729",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9537,
+          "p_supported": 0.9537,
+          "accepted": true,
+          "alt_p_supported": 0.9252
+        }
+      ],
+      "final": {
+        "text": "A modular deep learning framework uses Deep Convolutional Neural Networks (DCNNs) and BERT to analyze linguistic, emotional, and contextual cues for sarcasm detection.",
+        "paper_id": "arxiv:2510.10729",
+        "label": "SUPPORTED",
+        "confidence": 0.9537
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "An amalgamation of four parallel deep long-short term networks (pLSTM) achieves a training accuracy of 98.95% for sarcasm detection.",
+        "paper_id": "arxiv:2106.05752"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "An amalgamation of four parallel deep long-short term networks (pLSTM) achieves a training accuracy of 98.95% for sarcasm detection.",
+          "paper_id": "arxiv:2106.05752",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9561,
+          "p_supported": 0.9561,
+          "accepted": true,
+          "alt_p_supported": 0.9327
+        }
+      ],
+      "final": {
+        "text": "An amalgamation of four parallel deep long-short term networks (pLSTM) achieves a training accuracy of 98.95% for sarcasm detection.",
+        "paper_id": "arxiv:2106.05752",
+        "label": "SUPPORTED",
+        "confidence": 0.9561
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "One study evaluates sarcasm detection across TweetEval Irony and Sarcasm Corpus V2.",
+        "paper_id": "arxiv:2607.14131"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study evaluates sarcasm detection across TweetEval Irony and Sarcasm Corpus V2.",
+          "paper_id": "arxiv:2607.14131",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8492,
+          "p_supported": 0.8492,
+          "accepted": true,
+          "alt_p_supported": 0.8593
+        }
+      ],
+      "final": {
+        "text": "One study evaluates sarcasm detection across TweetEval Irony and Sarcasm Corpus V2.",
+        "paper_id": "arxiv:2607.14131",
+        "label": "SUPPORTED",
+        "confidence": 0.8492
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "The HurricaneSARC dataset consists of 15,000 tweets annotated for intended sarcasm in a disaster context.",
+        "paper_id": "arxiv:2308.08156"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The HurricaneSARC dataset consists of 15,000 tweets annotated for intended sarcasm in a disaster context.",
+          "paper_id": "arxiv:2308.08156",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9525,
+          "p_supported": 0.9525,
+          "accepted": true,
+          "alt_p_supported": 0.924
+        }
+      ],
+      "final": {
+        "text": "The HurricaneSARC dataset consists of 15,000 tweets annotated for intended sarcasm in a disaster context.",
+        "paper_id": "arxiv:2308.08156",
+        "label": "SUPPORTED",
+        "confidence": 0.9525
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "One study notes that the figurative and creative nature of sarcasm poses a great challenge for affective computing systems performing sentiment analysis.",
+        "paper_id": "arxiv:2107.02276"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study notes that the figurative and creative nature of sarcasm poses a great challenge for affective computing systems performing sentiment analysis.",
+          "paper_id": "arxiv:2107.02276",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9051,
+          "p_supported": 0.9051,
+          "accepted": true,
+          "alt_p_supported": 0.8632
+        }
+      ],
+      "final": {
+        "text": "One study notes that the figurative and creative nature of sarcasm poses a great challenge for affective computing systems performing sentiment analysis.",
+        "paper_id": "arxiv:2107.02276",
+        "label": "SUPPORTED",
+        "confidence": 0.9051
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "Research indicates that large language models may fail to recognize sarcasm or irony in text, highlighting the complexity of sentiment analysis.",
+        "paper_id": "arxiv:2409.02370"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Research indicates that large language models may fail to recognize sarcasm or irony in text, highlighting the complexity of sentiment analysis.",
+          "paper_id": "arxiv:2409.02370",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9503,
+          "p_supported": 0.9503,
+          "accepted": true,
+          "alt_p_supported": 0.9195
+        }
+      ],
+      "final": {
+        "text": "Research indicates that large language models may fail to recognize sarcasm or irony in text, highlighting the complexity of sentiment analysis.",
+        "paper_id": "arxiv:2409.02370",
+        "label": "SUPPORTED",
+        "confidence": 0.9503
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Traditional NLP techniques such as lexicon-based methods and classical machine learning classifiers struggle to interpret contextual nuances, domain-specific terminology, and subtle linguistic features like sarcasm.",
+        "paper_id": "arxiv:2509.20953"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Traditional NLP techniques such as lexicon-based methods and classical machine learning classifiers struggle to interpret contextual nuances, domain-specific terminology, and subtle linguistic features like sarcasm.",
+          "paper_id": "arxiv:2509.20953",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9338,
+          "p_supported": 0.9338,
+          "accepted": true,
+          "alt_p_supported": 0.9023
+        }
+      ],
+      "final": {
+        "text": "Traditional NLP techniques such as lexicon-based methods and classical machine learning classifiers struggle to interpret contextual nuances, domain-specific terminology, and subtle linguistic features like sarcasm.",
+        "paper_id": "arxiv:2509.20953",
+        "label": "SUPPORTED",
+        "confidence": 0.9338
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Evaluations of Large Visual Language Models in Multimodal Sarcasm Analysis reveal key limitations, including insufficient visual understanding and a lack of conceptual knowledge.",
+        "paper_id": "arxiv:2508.03654"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Evaluations of Large Visual Language Models in Multimodal Sarcasm Analysis reveal key limitations, including insufficient visual understanding and a lack of conceptual knowledge.",
+          "paper_id": "arxiv:2508.03654",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9486,
+          "p_supported": 0.9486,
+          "accepted": true,
+          "alt_p_supported": 0.9174
+        }
+      ],
+      "final": {
+        "text": "Evaluations of Large Visual Language Models in Multimodal Sarcasm Analysis reveal key limitations, including insufficient visual understanding and a lack of conceptual knowledge.",
+        "paper_id": "arxiv:2508.03654",
+        "label": "SUPPORTED",
+        "confidence": 0.9486
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "arxiv:2510.10729",
+      "citation": "Manas Zambre, Sarika Bobade (2025). Sarcasm Detection Using Deep Convolutional Neural Networks: A Modular Deep Learning Framework. arXiv. https://arxiv.org/abs/2510.10729"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:2106.05752",
+      "citation": "Sourav Das, Anup Kumar Kolya (2021). Parallel Deep Learning-Driven Sarcasm Detection from Pop Culture Text and English Humor Literature. arXiv. https://arxiv.org/abs/2106.05752"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2607.14131",
+      "citation": "Muhammad Abdullah Haroon (2026). When Benchmarks Mislead: Shortcut Learning, Length Confounds, and the Limits of Cross-Dataset Generalization in Multilingual Fake News and Sarcasm Detection. arXiv. https://arxiv.org/abs/2607.14131"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2308.08156",
+      "citation": "Tiberiu Sosea, Junyi Jessy Li, Cornelia Caragea (2023). Sarcasm Detection in a Disaster Context. arXiv. https://arxiv.org/abs/2308.08156"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2107.02276",
+      "citation": "Hamed Yaghoobian, Hamid R. Arabnia, Khaled Rasheed (2021). Sarcasm Detection: A Comparative Study. arXiv. https://arxiv.org/abs/2107.02276"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2409.02370",
+      "citation": "Yang Liu, Xichou Zhu, Zhou Shen et al. (2024). Do Large Language Models Possess Sensitive to Sentiment?. arXiv. https://arxiv.org/abs/2409.02370"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2509.20953",
+      "citation": "Najla Zuhir, Amna Mohammad Salim, Parvathy Premkumar et al. (2025). Beyond Stars: Bridging the Gap Between Ratings and Review Sentiment with LLM. arXiv. https://arxiv.org/abs/2509.20953"
+    },
+    {
+      "n": 8,
+      "paper_id": "arxiv:2508.03654",
+      "citation": "Xinyu Wang, Yue Zhang, Liqiang Jing (2025). Can Large Vision-Language Models Understand Multimodal Sarcasm?. arXiv. https://arxiv.org/abs/2508.03654"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Sentiment analysis models utilize various advanced techniques and architectures to handle sarcasm and irony. A modular deep learning framework combines Deep Convolutional Neural Networks (DCNNs) and BERT to analyze linguistic, emotional, and contextual cues [1]. Additionally, an amalgamation of four parallel deep long-short term networks (pLSTM) achieves a training accuracy of 98.95% for sarcasm detection [2]. To evaluate sentiment analysis on such content, researchers utilize benchmark datasets and corpora including the TweetEval Irony and Sarcasm Corpus V2 [3], as well as the HurricaneSARC dataset, which consists of 15,000 tweets annotated for intended sarcasm in a disaster context [4].\n\nRegarding performance and challenges, the figurative and creative nature of sarcasm poses a great challenge for affective computing systems performing sentiment analysis [5]. Furthermore, research indicates that large language models may fail to recognize sarcasm or irony in text, which highlights the complexity of sentiment analysis [6]. \n\nDespite these architectures, current sentiment models face notable limitations when processing figurative language and context. Traditional NLP techniques, such as lexicon-based methods and classical machine learning classifiers, struggle to interpret contextual nuances, domain-specific terminology, and subtle linguistic features like sarcasm [7]. Moreover, evaluations of Large Visual Language Models in Multimodal Sarcasm Analysis reveal key limitations, including insufficient visual understanding and a lack of conceptual knowledge [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 0,
+      "arxiv": 0
+    },
+    "seconds": 28.1
+  },
+  "papers": {
+    "arxiv:2202.02516": {
+      "paper_id": "arxiv:2202.02516",
+      "title": "A Survey on Automated Sarcasm Detection on Twitter",
+      "abstract": "Automatic sarcasm detection is a growing field in computer science. Short text messages are increasingly used for communication, especially over social media platforms such as Twitter. Due to insufficient or missing context, unidentified sarcasm in these messages can invert the meaning of a statement, leading to confusion and communication failures. This paper covers a variety of current methods used for sarcasm detection, including detection by context, posting history and machine learning models. Additionally, a shift towards deep learning methods is observable, likely due to the benefit of using a model with induced instead of discrete features combined with the innovation of transformers.",
+      "year": 2022,
+      "authors": [
+        "Bleau Moores",
+        "Vijay Mago"
+      ],
+      "url": "https://arxiv.org/abs/2202.02516",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2510.10729": {
+      "paper_id": "arxiv:2510.10729",
+      "title": "Sarcasm Detection Using Deep Convolutional Neural Networks: A Modular Deep Learning Framework",
+      "abstract": "Sarcasm is a nuanced and often misinterpreted form of communication, especially in text, where tone and body language are absent. This paper proposes a modular deep learning framework for sarcasm detection, leveraging Deep Convolutional Neural Networks (DCNNs) and contextual models such as BERT to analyze linguistic, emotional, and contextual cues. The system integrates sentiment analysis, contextual embeddings, linguistic feature extraction, and emotion detection through a multi-layer architecture. While the model is in the conceptual stage, it demonstrates feasibility for real-world applications such as chatbots and social media analysis.",
+      "year": 2025,
+      "authors": [
+        "Manas Zambre",
+        "Sarika Bobade"
+      ],
+      "url": "https://arxiv.org/abs/2510.10729",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2106.05752": {
+      "paper_id": "arxiv:2106.05752",
+      "title": "Parallel Deep Learning-Driven Sarcasm Detection from Pop Culture Text and English Humor Literature",
+      "abstract": "Sarcasm is a sophisticated way of wrapping any immanent truth, mes-sage, or even mockery within a hilarious manner. The advent of communications using social networks has mass-produced new avenues of socialization. It can be further said that humor, irony, sarcasm, and wit are the four chariots of being socially funny in the modern days. In this paper, we manually extract the sarcastic word distribution features of a benchmark pop culture sarcasm corpus, containing sarcastic dialogues and monologues. We generate input sequences formed of the weighted vectors from such words. We further propose an amalgamation of four parallel deep long-short term networks (pLSTM), each with distinctive activation classifier. These modules are primarily aimed at successfully detecting sarcasm from the text corpus. Our proposed model for detecting sarcasm peaks a training accuracy of 98.95% when trained with the discussed dataset. Consecutively, it obtains the highest of 98.31% overall validation accuracy on two handpicked Project Gutenberg English humor literature among all the test cases. Our approach transcends previous state-of-the-art works on several sarcasm corpora and results in a new gold standard performance for sarcasm detection.",
+      "year": 2021,
+      "authors": [
+        "Sourav Das",
+        "Anup Kumar Kolya"
+      ],
+      "url": "https://arxiv.org/abs/2106.05752",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2106.12488": {
+      "paper_id": "arxiv:2106.12488",
+      "title": "Deep Multi-Task Model for Sarcasm Detection and Sentiment Analysis in Arabic Language",
+      "abstract": "The prominence of figurative language devices, such as sarcasm and irony, poses serious challenges for Arabic Sentiment Analysis (SA). While previous research works tackle SA and sarcasm detection separately, this paper introduces an end-to-end deep Multi-Task Learning (MTL) model, allowing knowledge interaction between the two tasks. Our MTL model's architecture consists of a Bidirectional Encoder Representation from Transformers (BERT) model, a multi-task attention interaction module, and two task classifiers. The overall obtained results show that our proposed model outperforms its single-task counterparts on both SA and sarcasm detection sub-tasks.",
+      "year": 2021,
+      "authors": [
+        "Abdelkader El Mahdaouy",
+        "Abdellah El Mekki",
+        "Kabil Essefar",
+        "Nabil El Mamoun",
+        "Ismail Berrada",
+        "Ahmed Khoumsi"
+      ],
+      "url": "https://arxiv.org/abs/2106.12488",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2412.13008": {
+      "paper_id": "arxiv:2412.13008",
+      "title": "RCLMuFN: Relational Context Learning and Multiplex Fusion Network for Multimodal Sarcasm Detection",
+      "abstract": "Sarcasm typically conveys emotions of contempt or criticism by expressing a meaning that is contrary to the speaker's true intent. Accurate detection of sarcasm aids in identifying and filtering undesirable information on the Internet, thereby reducing malicious defamation and rumor-mongering. Nonetheless, the task of automatic sarcasm detection remains highly challenging for machines, as it critically depends on intricate factors such as relational context. Most existing multimodal sarcasm detection methods focus on introducing graph structures to establish entity relationships between text and images while neglecting to learn the relational context between text and images, which is crucial evidence for understanding the meaning of sarcasm. In addition, the meaning of sarcasm changes with the evolution of different contexts, but existing methods may not be accurate in modeling such dynamic changes, limiting the generalization ability of the models. To address the above issues, we propose a relational context learning and multiplex fusion network (RCLMuFN) for multimodal sarcasm detection. Firstly, we employ four feature extractors to comprehensively extract features from raw text and images, aiming to excavate potential features that may have been previously overlooked. Secondly, we utilize the relational context learning module to learn the contextual information of text and images and capture the dynamic properties through shallow and deep interactions. Finally, we employ a multiplex feature fusion module to enhance the generalization of the model by penetratingly integrating multimodal features derived from various interaction contexts. Extensive experiments on two multimodal sarcasm detection datasets show that our proposed method achieves state-of-the-art performance.",
+      "year": 2024,
+      "authors": [
+        "Tongguan Wang",
+        "Junkai Li",
+        "Guixin Su",
+        "Yongcheng Zhang",
+        "Dongyu Su",
+        "Yuxue Hu",
+        "Ying Sha"
+      ],
+      "url": "https://arxiv.org/abs/2412.13008",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1904.04019": {
+      "paper_id": "arxiv:1904.04019",
+      "title": "Effectiveness of Data-Driven Induction of Semantic Spaces and Traditional Classifiers for Sarcasm Detection",
+      "abstract": "Irony and sarcasm are two complex linguistic phenomena that are widely used in everyday language and especially over the social media, but they represent two serious issues for automated text understanding. Many labeled corpora have been extracted from several sources to accomplish this task, and it seems that sarcasm is conveyed in different ways for different domains. Nonetheless, very little work has been done for comparing different methods among the available corpora. Furthermore, usually, each author collects and uses their own datasets to evaluate his own method. In this paper, we show that sarcasm detection can be tackled by applying classical machine learning algorithms to input texts sub-symbolically represented in a Latent Semantic space. The main consequence is that our studies establish both reference datasets and baselines for the sarcasm detection problem that could serve the scientific community to test newly proposed methods.",
+      "year": 2019,
+      "authors": [
+        "Mattia Antonino Di Gangi",
+        "Giosué Lo Bosco",
+        "Giovanni Pilato"
+      ],
+      "url": "https://arxiv.org/abs/1904.04019",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2107.02276": {
+      "paper_id": "arxiv:2107.02276",
+      "title": "Sarcasm Detection: A Comparative Study",
+      "abstract": "Sarcasm detection is the task of identifying irony containing utterances in sentiment-bearing text. However, the figurative and creative nature of sarcasm poses a great challenge for affective computing systems performing sentiment analysis. This article compiles and reviews the salient work in the literature of automatic sarcasm detection. Thus far, three main paradigm shifts have occurred in the way researchers have approached this task: 1) semi-supervised pattern extraction to identify implicit sentiment, 2) use of hashtag-based supervision, and 3) incorporation of context beyond target text. In this article, we provide a comprehensive review of the datasets, approaches, trends, and issues in sarcasm and irony detection.",
+      "year": 2021,
+      "authors": [
+        "Hamed Yaghoobian",
+        "Hamid R. Arabnia",
+        "Khaled Rasheed"
+      ],
+      "url": "https://arxiv.org/abs/2107.02276",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2607.14131": {
+      "paper_id": "arxiv:2607.14131",
+      "title": "When Benchmarks Mislead: Shortcut Learning, Length Confounds, and the Limits of Cross-Dataset Generalization in Multilingual Fake News and Sarcasm Detection",
+      "abstract": "Cross-dataset generalisation is a fundamental requirement for deploying text classifiers in real-world settings, yet systematic evaluation across corpora from different sources remains uncommon in fake news detection and virtually absent in sarcasm detection research. This paper presents a unified empirical study of zero-shot cross-dataset transfer in three domains: Urdu fake news detection (FND), English FND, and sarcasm detection. For each domain, we fine-tune xlm-roberta-base on one corpus and evaluate it on a second corpus from a different source, comparing against TF-IDF baselines with Logistic Regression (LR) and Support Vector Machines (SVM). In Urdu FND (Ax-to-Grind vs. Notri-Fact), we identify a severe length confound in the Ax-to-Grind dataset, fake articles average 3.4 times more words than real articles, causing catastrophic A to B transfer collapse (macro F1 = 0.005) while B to A achieves F1 = 0.771. Extension to English FND (WELFake vs. ISOT) and sarcasm detection (TweetEval Irony vs. Sarcasm Corpus V2) reveals that such failure modes extend beyond Urdu, confirming that shortcut learning from distributional artefacts is a cross-lingual, cross-domain challenge in binary text classification. We provide a reusable diagnostic methodology, combining class-conditional length analysis, bidirectional transfer asymmetry, and predicted label collapse inspection, applicable across any binary text classification setting.",
+      "year": 2026,
+      "authors": [
+        "Muhammad Abdullah Haroon"
+      ],
+      "url": "https://arxiv.org/abs/2607.14131",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2308.08156": {
+      "paper_id": "arxiv:2308.08156",
+      "title": "Sarcasm Detection in a Disaster Context",
+      "abstract": "During natural disasters, people often use social media platforms such as Twitter to ask for help, to provide information about the disaster situation, or to express contempt about the unfolding event or public policies and guidelines. This contempt is in some cases expressed as sarcasm or irony. Understanding this form of speech in a disaster-centric context is essential to improving natural language understanding of disaster-related tweets. In this paper, we introduce HurricaneSARC, a dataset of 15,000 tweets annotated for intended sarcasm, and provide a comprehensive investigation of sarcasm detection using pre-trained language models. Our best model is able to obtain as much as 0.70 F1 on our dataset. We also demonstrate that the performance on HurricaneSARC can be improved by leveraging intermediate task transfer learning. We release our data and code at https://github.com/tsosea2/HurricaneSarc.",
+      "year": 2023,
+      "authors": [
+        "Tiberiu Sosea",
+        "Junyi Jessy Li",
+        "Cornelia Caragea"
+      ],
+      "url": "https://arxiv.org/abs/2308.08156",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1809.09795": {
+      "paper_id": "arxiv:1809.09795",
+      "title": "Deep contextualized word representations for detecting sarcasm and irony",
+      "abstract": "Predicting context-dependent and non-literal utterances like sarcastic and ironic expressions still remains a challenging task in NLP, as it goes beyond linguistic patterns, encompassing common sense and shared knowledge as crucial components. To capture complex morpho-syntactic features that can usually serve as indicators for irony or sarcasm across dynamic contexts, we propose a model that uses character-level vector representations of words, based on ELMo. We test our model on 7 different datasets derived from 3 different data sources, providing state-of-the-art performance in 6 of them, and otherwise offering competitive results.",
+      "year": 2018,
+      "authors": [
+        "Suzana Ilić",
+        "Edison Marrese-Taylor",
+        "Jorge A. Balazs",
+        "Yutaka Matsuo"
+      ],
+      "url": "https://arxiv.org/abs/1809.09795",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1911.10401": {
+      "paper_id": "arxiv:1911.10401",
+      "title": "A Transformer-based approach to Irony and Sarcasm detection",
+      "abstract": "Figurative Language (FL) seems ubiquitous in all social-media discussion forums and chats, posing extra challenges to sentiment analysis endeavors. Identification of FL schemas in short texts remains largely an unresolved issue in the broader field of Natural Language Processing (NLP), mainly due to their contradictory and metaphorical meaning content. The main FL expression forms are sarcasm, irony and metaphor. In the present paper we employ advanced Deep Learning (DL) methodologies to tackle the problem of identifying the aforementioned FL forms. Significantly extending our previous work [71], we propose a neural network methodology that builds on a recently proposed pre-trained transformer-based network architecture which, is further enhanced with the employment and devise of a recurrent convolutional neural network (RCNN). With this set-up, data preprocessing is kept in minimum. The performance of the devised hybrid neural architecture is tested on four benchmark datasets, and contrasted with other relevant state of the art methodologies and systems. Results demonstrate that the proposed methodology achieves state of the art performance under all benchmark datasets, outperforming, even by a large margin, all other methodologies and published studies.",
+      "year": 2019,
+      "authors": [
+        "Rolandos Alexandros Potamias",
+        "Georgios Siolas",
+        "Andreas - Georgios Stafylopatis"
+      ],
+      "url": "https://arxiv.org/abs/1911.10401",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1805.11869": {
+      "paper_id": "arxiv:1805.11869",
+      "title": "A Corpus of English-Hindi Code-Mixed Tweets for Sarcasm Detection",
+      "abstract": "Social media platforms like twitter and facebook have be- come two of the largest mediums used by people to express their views to- wards different topics. Generation of such large user data has made NLP tasks like sentiment analysis and opinion mining much more important. Using sarcasm in texts on social media has become a popular trend lately. Using sarcasm reverses the meaning and polarity of what is implied by the text which poses challenge for many NLP tasks. The task of sarcasm detection in text is gaining more and more importance for both commer- cial and security services. We present the first English-Hindi code-mixed dataset of tweets marked for presence of sarcasm and irony where each token is also annotated with a language tag. We present a baseline su- pervised classification system developed using the same dataset which achieves an average F-score of 78.4 after using random forest classifier and performing 10-fold cross validation.",
+      "year": 2018,
+      "authors": [
+        "Sahil Swami",
+        "Ankush Khandelwal",
+        "Vinay Singh",
+        "Syed Sarfaraz Akhtar",
+        "Manish Shrivastava"
+      ],
+      "url": "https://arxiv.org/abs/1805.11869",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2409.02370": {
+      "paper_id": "arxiv:2409.02370",
+      "title": "Do Large Language Models Possess Sensitive to Sentiment?",
+      "abstract": "Large Language Models (LLMs) have recently displayed their extraordinary capabilities in language understanding. However, how to comprehensively assess the sentiment capabilities of LLMs continues to be a challenge. This paper investigates the ability of LLMs to detect and react to sentiment in text modal. As the integration of LLMs into diverse applications is on the rise, it becomes highly critical to comprehend their sensitivity to emotional tone, as it can influence the user experience and the efficacy of sentiment-driven tasks. We conduct a series of experiments to evaluate the performance of several prominent LLMs in identifying and responding appropriately to sentiments like positive, negative, and neutral emotions. The models' outputs are analyzed across various sentiment benchmarks, and their responses are compared with human evaluations. Our discoveries indicate that although LLMs show a basic sensitivity to sentiment, there are substantial variations in their accuracy and consistency, emphasizing the requirement for further enhancements in their training processes to better capture subtle emotional cues. Take an example in our findings, in some cases, the models might wrongly classify a strongly positive sentiment as neutral, or fail to recognize sarcasm or irony in the text. Such misclassifications highlight the complexity of sentiment analysis and the areas where the models need to be refined. Another aspect is that different LLMs might perform differently on the same set of data, depending on their architecture and training datasets. This variance calls for a more in-depth study of the factors that contribute to the performance differences and how they can be optimized.",
+      "year": 2024,
+      "authors": [
+        "Yang Liu",
+        "Xichou Zhu",
+        "Zhou Shen",
+        "Yi Liu",
+        "Min Li",
+        "Yujun Chen",
+        "Benzi John",
+        "Zhenzhen Ma",
+        "Tao Hu",
+        "Zhi Li",
+        "Zhiyang Xu",
+        "Wei Luo",
+        "Junhui Wang"
+      ],
+      "url": "https://arxiv.org/abs/2409.02370",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2107.04372": {
+      "paper_id": "arxiv:2107.04372",
+      "title": "A Robust Deep Ensemble Classifier for Figurative Language Detection",
+      "abstract": "Recognition and classification of Figurative Language (FL) is an open problem of Sentiment Analysis in the broader field of Natural Language Processing (NLP) due to the contradictory meaning contained in phrases with metaphorical content. The problem itself contains three interrelated FL recognition tasks: sarcasm, irony and metaphor which, in the present paper, are dealt with advanced Deep Learning (DL) techniques. First, we introduce a data prepossessing framework towards efficient data representation formats so that to optimize the respective inputs to the DL models. In addition, special features are extracted in order to characterize the syntactic, expressive, emotional and temper content reflected in the respective social media text references. These features aim to capture aspects of the social network user's writing method. Finally, features are fed to a robust, Deep Ensemble Soft Classifier (DESC) which is based on the combination of different DL techniques. Using three different benchmark datasets (one of them containing various FL forms) we conclude that the DESC model achieves a very good performance, worthy of comparison with relevant methodologies and state-of-the-art technologies in the challenging field of FL recognition.",
+      "year": 2021,
+      "authors": [
+        "Rolandos Alexandros Potamias",
+        "Georgios Siolas",
+        "Andreas - Georgios Stafylopatis"
+      ],
+      "url": "https://arxiv.org/abs/2107.04372",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2508.07959": {
+      "paper_id": "arxiv:2508.07959",
+      "title": "Large Language Models for Subjective Language Understanding: A Survey",
+      "abstract": "Subjective language understanding refers to a broad set of natural language processing tasks where the goal is to interpret or generate content that conveys personal feelings, opinions, or figurative meanings rather than objective facts. With the advent of large language models (LLMs) such as ChatGPT, LLaMA, and others, there has been a paradigm shift in how we approach these inherently nuanced tasks. In this survey, we provide a comprehensive review of recent advances in applying LLMs to subjective language tasks, including sentiment analysis, emotion recognition, sarcasm detection, humor understanding, stance detection, metaphor interpretation, intent detection, and aesthetics assessment. We begin by clarifying the definition of subjective language from linguistic and cognitive perspectives, and we outline the unique challenges posed by subjective language (e.g. ambiguity, figurativeness, context dependence). We then survey the evolution of LLM architectures and techniques that particularly benefit subjectivity tasks, highlighting why LLMs are well-suited to model subtle human-like judgments. For each of the eight tasks, we summarize task definitions, key datasets, state-of-the-art LLM-based methods, and remaining challenges. We provide comparative insights, discussing commonalities and differences among tasks and how multi-task LLM approaches might yield unified models of subjectivity. Finally, we identify open issues such as data limitations, model bias, and ethical considerations, and suggest future research directions. We hope this survey will serve as a valuable resource for researchers and practitioners interested in the intersection of affective computing, figurative language processing, and large-scale language models.",
+      "year": 2025,
+      "authors": [
+        "Changhao Song",
+        "Yazhou Zhang",
+        "Hui Gao",
+        "Ben Yao",
+        "Peng Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2508.07959",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2508.03654": {
+      "paper_id": "arxiv:2508.03654",
+      "title": "Can Large Vision-Language Models Understand Multimodal Sarcasm?",
+      "abstract": "Sarcasm is a complex linguistic phenomenon that involves a disparity between literal and intended meanings, making it challenging for sentiment analysis and other emotion-sensitive tasks. While traditional sarcasm detection methods primarily focus on text, recent approaches have incorporated multimodal information. However, the application of Large Visual Language Models (LVLMs) in Multimodal Sarcasm Analysis (MSA) remains underexplored. In this paper, we evaluate LVLMs in MSA tasks, specifically focusing on Multimodal Sarcasm Detection and Multimodal Sarcasm Explanation. Through comprehensive experiments, we identify key limitations, such as insufficient visual understanding and a lack of conceptual knowledge. To address these issues, we propose a training-free framework that integrates in-depth object extraction and external conceptual knowledge to improve the model's ability to interpret and explain sarcasm in multimodal contexts. The experimental results on multiple models show the effectiveness of our proposed framework. The code is available at https://github.com/cp-cp/LVLM-MSA.",
+      "year": 2025,
+      "authors": [
+        "Xinyu Wang",
+        "Yue Zhang",
+        "Liqiang Jing"
+      ],
+      "url": "https://arxiv.org/abs/2508.03654",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2307.10234": {
+      "paper_id": "arxiv:2307.10234",
+      "title": "SentimentGPT: Exploiting GPT for Advanced Sentiment Analysis and its Departure from Current Machine Learning",
+      "abstract": "This study presents a thorough examination of various Generative Pretrained Transformer (GPT) methodologies in sentiment analysis, specifically in the context of Task 4 on the SemEval 2017 dataset. Three primary strategies are employed: 1) prompt engineering using the advanced GPT-3.5 Turbo, 2) fine-tuning GPT models, and 3) an inventive approach to embedding classification. The research yields detailed comparative insights among these strategies and individual GPT models, revealing their unique strengths and potential limitations. Additionally, the study compares these GPT-based methodologies with other current, high-performing models previously used with the same dataset. The results illustrate the significant superiority of the GPT approaches in terms of predictive performance, more than 22\\% in F1-score compared to the state-of-the-art. Further, the paper sheds light on common challenges in sentiment analysis tasks, such as understanding context and detecting sarcasm. It underscores the enhanced capabilities of the GPT models to effectively handle these complexities. Taken together, these findings highlight the promising potential of GPT models in sentiment analysis, setting the stage for future research in this field. The code can be found at https://github.com/DSAatUSU/SentimentGPT",
+      "year": 2023,
+      "authors": [
+        "Kiana Kheiri",
+        "Hamid Karimi"
+      ],
+      "url": "https://arxiv.org/abs/2307.10234",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2410.20170": {
+      "paper_id": "arxiv:2410.20170",
+      "title": "Cyberbullying or just Sarcasm? Unmasking Coordinated Networks on Reddit",
+      "abstract": "With the rapid growth of social media usage, a common trend has emerged where users often make sarcastic comments on posts. While sarcasm can sometimes be harmless, it can blur the line with cyberbullying, especially when used in negative or harmful contexts. This growing issue has been exacerbated by the anonymity and vast reach of the internet, making cyberbullying a significant concern on platforms like Reddit. Our research focuses on distinguishing cyberbullying from sarcasm, particularly where online language nuances make it difficult to discern harmful intent. This study proposes a framework using natural language processing (NLP) and machine learning to differentiate between the two, addressing the limitations of traditional sentiment analysis in detecting nuanced behaviors. By analyzing a custom dataset scraped from Reddit, we achieved a 95.15% accuracy in distinguishing harmful content from sarcasm. Our findings also reveal that teenagers and minority groups are particularly vulnerable to cyberbullying. Additionally, our research uncovers coordinated graphs of groups involved in cyberbullying, identifying common patterns in their behavior. This research contributes to improving detection capabilities for safer online communities.",
+      "year": 2024,
+      "authors": [
+        "Pinky Pamecha",
+        "Chaitya Shah",
+        "Divyam Jain",
+        "Kashish Gandhi",
+        "Kiran Bhowmick",
+        "Meera Narvekar"
+      ],
+      "url": "https://arxiv.org/abs/2410.20170",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2509.20953": {
+      "paper_id": "arxiv:2509.20953",
+      "title": "Beyond Stars: Bridging the Gap Between Ratings and Review Sentiment with LLM",
+      "abstract": "We present an advanced approach to mobile app review analysis aimed at addressing limitations inherent in traditional star-rating systems. Star ratings, although intuitive and popular among users, often fail to capture the nuanced feedback present in detailed review texts. Traditional NLP techniques -- such as lexicon-based methods and classical machine learning classifiers -- struggle to interpret contextual nuances, domain-specific terminology, and subtle linguistic features like sarcasm. To overcome these limitations, we propose a modular framework leveraging large language models (LLMs) enhanced by structured prompting techniques. Our method quantifies discrepancies between numerical ratings and textual sentiment, extracts detailed, feature-level insights, and supports interactive exploration of reviews through retrieval-augmented conversational question answering (RAG-QA). Comprehensive experiments conducted on three diverse datasets (AWARE, Google Play, and Spotify) demonstrate that our LLM-driven approach significantly surpasses baseline methods, yielding improved accuracy, robustness, and actionable insights in challenging and context-rich review scenarios.",
+      "year": 2025,
+      "authors": [
+        "Najla Zuhir",
+        "Amna Mohammad Salim",
+        "Parvathy Premkumar",
+        "Moshiur Farazi"
+      ],
+      "url": "https://arxiv.org/abs/2509.20953",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q25",
+  "area": "NLP"
+}

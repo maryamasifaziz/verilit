@@ -1,0 +1,673 @@
+{
+  "question": "How well do multilingual pretrained language models perform zero-shot cross-lingual transfer?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What core techniques and architectures enable zero-shot cross-lingual transfer in multilingual pretrained language models?",
+      "search_query": "multilingual pretrained language models zero shot cross lingual transfer methods",
+      "paper_ids": [
+        "s2:4936a03cc72f0e712c8a16560e01889f4c1a1c5b",
+        "arxiv:2107.00676",
+        "s2:165b0d779d4d99f644e7e0d11bb4cf2ee9d4b8c7",
+        "s2:add0dd0ab2a408354fa2d89cc492b4d2ab26845d",
+        "s2:ad9330c7cb31adb2197dae8f7f9998142e071857"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What performance levels and results are reported for multilingual models across various downstream NLP tasks?",
+      "search_query": "zero shot cross lingual transfer performance evaluation results",
+      "paper_ids": [
+        "s2:62bfc24eb408438114f4a49466339776130b8e18",
+        "s2:c4a24f0a480b15254b84b1f5620a6c1fc34f4c72",
+        "s2:aa9cda8e13dc60bde7531245c3d878bec8fdccad",
+        "s2:ec28a6517c411d30ba78f95373308e3a718ded15",
+        "arxiv:2005.00633"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "Which benchmark datasets and evaluation suites are commonly used to assess cross-lingual transfer capabilities?",
+      "search_query": "cross lingual transfer benchmark datasets evaluation suites",
+      "paper_ids": [
+        "s2:62bfc24eb408438114f4a49466339776130b8e18",
+        "s2:20e6b4ad254ad577fd703a16730f4065ab582df0",
+        "s2:b9b79c0b3096eae665d11a26288ceb1b37123a3e",
+        "s2:87baa96f57a70b69c6a6cde8a28f40194bb38b23",
+        "s2:c1c98ef93fb6474837961ef300cf3d8e7d3a0cd0"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the primary limitations, failure modes, and biases associated with cross-lingual transfer in low-resource languages?",
+      "search_query": "limitations and challenges of zero shot cross lingual transfer",
+      "paper_ids": [
+        "s2:24e3a6d735dd4eb76e5d05184e00e10049f83ab1",
+        "s2:2ea80e07c187ab6f3b73b4d52d40143811a618c8",
+        "s2:8210f513eeb0da3100b8a7f249b24f4da9ff2bc5",
+        "arxiv:2508.10369",
+        "s2:555f62cfc558621f3daee15fa3d8417dae9a7882"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "SixT leverages a multilingual pretrained encoder with a two-stage training schedule, a position disentangled encoder, and a capacity-enhanced decoder to achieve zero-shot cross-lingual transfer in neural machine translation.",
+        "paper_id": "s2:4936a03cc72f0e712c8a16560e01889f4c1a1c5b"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "SixT leverages a multilingual pretrained encoder with a two-stage training schedule, a position disentangled encoder, and a capacity-enhanced decoder to achieve zero-shot cross-lingual transfer in neural machine translation.",
+          "paper_id": "s2:4936a03cc72f0e712c8a16560e01889f4c1a1c5b",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9374,
+          "p_supported": 0.9374,
+          "accepted": true,
+          "alt_p_supported": 0.9072
+        }
+      ],
+      "final": {
+        "text": "SixT leverages a multilingual pretrained encoder with a two-stage training schedule, a position disentangled encoder, and a capacity-enhanced decoder to achieve zero-shot cross-lingual transfer in neural machine translation.",
+        "paper_id": "s2:4936a03cc72f0e712c8a16560e01889f4c1a1c5b",
+        "label": "SUPPORTED",
+        "confidence": 0.9374
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "Model adaptation via continued pretraining improves XLM-R's zero-shot cross-lingual performance on 10 Indigenous languages of the Americas, raising average accuracy from 38.48% to 43.85%.",
+        "paper_id": "s2:add0dd0ab2a408354fa2d89cc492b4d2ab26845d"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Model adaptation via continued pretraining improves XLM-R's zero-shot cross-lingual performance on 10 Indigenous languages of the Americas, raising average accuracy from 38.48% to 43.85%.",
+          "paper_id": "s2:add0dd0ab2a408354fa2d89cc492b4d2ab26845d",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9043,
+          "p_supported": 0.9043,
+          "accepted": true,
+          "alt_p_supported": 0.8626
+        }
+      ],
+      "final": {
+        "text": "Model adaptation via continued pretraining improves XLM-R's zero-shot cross-lingual performance on 10 Indigenous languages of the Americas, raising average accuracy from 38.48% to 43.85%.",
+        "paper_id": "s2:add0dd0ab2a408354fa2d89cc492b4d2ab26845d",
+        "label": "SUPPORTED",
+        "confidence": 0.9043
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "The XLM-RoBERTa family of models consistently exhibits the best performance in transferring discourse-level knowledge across languages while degrading relatively little in zero-shot settings.",
+        "paper_id": "s2:c4a24f0a480b15254b84b1f5620a6c1fc34f4c72"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The XLM-RoBERTa family of models consistently exhibits the best performance in transferring discourse-level knowledge across languages while degrading relatively little in zero-shot settings.",
+          "paper_id": "s2:c4a24f0a480b15254b84b1f5620a6c1fc34f4c72",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9502,
+          "p_supported": 0.9502,
+          "accepted": true,
+          "alt_p_supported": 0.9193
+        }
+      ],
+      "final": {
+        "text": "The XLM-RoBERTa family of models consistently exhibits the best performance in transferring discourse-level knowledge across languages while degrading relatively little in zero-shot settings.",
+        "paper_id": "s2:c4a24f0a480b15254b84b1f5620a6c1fc34f4c72",
+        "label": "SUPPORTED",
+        "confidence": 0.9502
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Prompt-tuning achieves much better cross-lingual transfer than fine-tuning across natural language understanding datasets, using only 0.1% to 0.3% tuned parameters.",
+        "paper_id": "s2:aa9cda8e13dc60bde7531245c3d878bec8fdccad"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Prompt-tuning achieves much better cross-lingual transfer than fine-tuning across natural language understanding datasets, using only 0.1% to 0.3% tuned parameters.",
+          "paper_id": "s2:aa9cda8e13dc60bde7531245c3d878bec8fdccad",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9422,
+          "p_supported": 0.9422,
+          "accepted": true,
+          "alt_p_supported": 0.9246
+        }
+      ],
+      "final": {
+        "text": "Prompt-tuning achieves much better cross-lingual transfer than fine-tuning across natural language understanding datasets, using only 0.1% to 0.3% tuned parameters.",
+        "paper_id": "s2:aa9cda8e13dc60bde7531245c3d878bec8fdccad",
+        "label": "SUPPORTED",
+        "confidence": 0.9422
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "ECLeKTic is a multilingual closed-book QA dataset created to evaluate cross-lingual knowledge transfer using Wikipedia articles across 12 languages.",
+        "paper_id": "s2:b9b79c0b3096eae665d11a26288ceb1b37123a3e"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "ECLeKTic is a multilingual closed-book QA dataset created to evaluate cross-lingual knowledge transfer using Wikipedia articles across 12 languages.",
+          "paper_id": "s2:b9b79c0b3096eae665d11a26288ceb1b37123a3e",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9209,
+          "p_supported": 0.9209,
+          "accepted": true,
+          "alt_p_supported": 0.85
+        }
+      ],
+      "final": {
+        "text": "ECLeKTic is a multilingual closed-book QA dataset created to evaluate cross-lingual knowledge transfer using Wikipedia articles across 12 languages.",
+        "paper_id": "s2:b9b79c0b3096eae665d11a26288ceb1b37123a3e",
+        "label": "SUPPORTED",
+        "confidence": 0.9209
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "BUFFET is a benchmark that unifies 15 diverse tasks across 54 languages in a sequence-to-sequence format to evaluate few-shot cross-lingual transfer.",
+        "paper_id": "s2:c1c98ef93fb6474837961ef300cf3d8e7d3a0cd0"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "BUFFET is a benchmark that unifies 15 diverse tasks across 54 languages in a sequence-to-sequence format to evaluate few-shot cross-lingual transfer.",
+          "paper_id": "s2:c1c98ef93fb6474837961ef300cf3d8e7d3a0cd0",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9429,
+          "p_supported": 0.9429,
+          "accepted": true,
+          "alt_p_supported": 0.9198
+        }
+      ],
+      "final": {
+        "text": "BUFFET is a benchmark that unifies 15 diverse tasks across 54 languages in a sequence-to-sequence format to evaluate few-shot cross-lingual transfer.",
+        "paper_id": "s2:c1c98ef93fb6474837961ef300cf3d8e7d3a0cd0",
+        "label": "SUPPORTED",
+        "confidence": 0.9429
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Cross-lingual and unsupervised methods face challenges in preserving sentiment-specific information under zero-shot conditions for the low-resource language Oromo.",
+        "paper_id": "s2:24e3a6d735dd4eb76e5d05184e00e10049f83ab1"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Cross-lingual and unsupervised methods face challenges in preserving sentiment-specific information under zero-shot conditions for the low-resource language Oromo.",
+          "paper_id": "s2:24e3a6d735dd4eb76e5d05184e00e10049f83ab1",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9451,
+          "p_supported": 0.9451,
+          "accepted": true,
+          "alt_p_supported": 0.9175
+        }
+      ],
+      "final": {
+        "text": "Cross-lingual and unsupervised methods face challenges in preserving sentiment-specific information under zero-shot conditions for the low-resource language Oromo.",
+        "paper_id": "s2:24e3a6d735dd4eb76e5d05184e00e10049f83ab1",
+        "label": "SUPPORTED",
+        "confidence": 0.9451
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Evaluations of large language models like CodeLLaMa and CodeGemma reveal significant disparities in code quality for non-English prompts during zero-shot cross-lingual transfer.",
+        "paper_id": "s2:2ea80e07c187ab6f3b73b4d52d40143811a618c8"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Evaluations of large language models like CodeLLaMa and CodeGemma reveal significant disparities in code quality for non-English prompts during zero-shot cross-lingual transfer.",
+          "paper_id": "s2:2ea80e07c187ab6f3b73b4d52d40143811a618c8",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9405,
+          "p_supported": 0.9405,
+          "accepted": true,
+          "alt_p_supported": 0.9217
+        }
+      ],
+      "final": {
+        "text": "Evaluations of large language models like CodeLLaMa and CodeGemma reveal significant disparities in code quality for non-English prompts during zero-shot cross-lingual transfer.",
+        "paper_id": "s2:2ea80e07c187ab6f3b73b4d52d40143811a618c8",
+        "label": "SUPPORTED",
+        "confidence": 0.9405
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:4936a03cc72f0e712c8a16560e01889f4c1a1c5b",
+      "citation": "Guanhua Chen, Shu-Ming Ma, Yun Chen et al. (2021). Zero-Shot Cross-Lingual Transfer of Neural Machine Translation with Multilingual Pretrained Encoders. Conference on Empirical Methods in Natural Language Processing. https://doi.org/10.18653/v1/2021.emnlp-main.2"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:add0dd0ab2a408354fa2d89cc492b4d2ab26845d",
+      "citation": "Abteen Ebrahimi, Manuel Mager, Arturo Oncevay et al. (2021). AmericasNLI: Evaluating Zero-shot Natural Language Understanding of Pretrained Multilingual Models in Truly Low-resource Languages. Annual Meeting of the Association for Computational Linguistics. https://doi.org/10.48550/arXiv.2104.08726"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:c4a24f0a480b15254b84b1f5620a6c1fc34f4c72",
+      "citation": "Murathan Kurfali, Robert Östling (2021). Probing Multilingual Language Models for Discourse. Workshop on Representation Learning for NLP. https://doi.org/10.48550/arXiv.2106.04832"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:aa9cda8e13dc60bde7531245c3d878bec8fdccad",
+      "citation": "Lifu Tu, Cai-Ming Xiong, Ying-Bo Zhou (2022). Prompt-Tuning Can Be Much Better Than Fine-Tuning on Cross-lingual Understanding With Multilingual Language Models. Conference on Empirical Methods in Natural Language Processing. https://doi.org/10.48550/arXiv.2210.12360"
+    },
+    {
+      "n": 5,
+      "paper_id": "s2:b9b79c0b3096eae665d11a26288ceb1b37123a3e",
+      "citation": "Omer Goldman, Uri Shaham, D. Malkin et al. (2025). ECLeKTic: a Novel Challenge Set for Evaluation of Cross-Lingual Knowledge Transfer. arXiv.org. https://doi.org/10.48550/arXiv.2502.21228"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:c1c98ef93fb6474837961ef300cf3d8e7d3a0cd0",
+      "citation": "Akari Asai, Sneha Kudugunta, Xinyan Velocity Yu et al. (2023). BUFFET: Benchmarking Large Language Models for Few-shot Cross-lingual Transfer. North American Chapter of the Association for Computational Linguistics. https://doi.org/10.48550/arXiv.2305.14857"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:24e3a6d735dd4eb76e5d05184e00e10049f83ab1",
+      "citation": "Linrui Zhang, Qi-Xiang Pang, Belinda Copus (2026). Comparative Study of Different Learning Paradigms for Zero-Shot Sentiment Analysis of the Low-Resource African Language Oromo. The Florida AI Research Society. https://doi.org/10.32473/flairs.39.1.141417"
+    },
+    {
+      "n": 8,
+      "paper_id": "s2:2ea80e07c187ab6f3b73b4d52d40143811a618c8",
+      "citation": "Ming-Da Li, Abhijit Mishra, Utkarsh Mujumdar (2024). Bridging the Language Gap: Enhancing Multilingual Prompt-Based Code Generation in LLMs via Zero-Shot Cross-Lingual Transfer. IEEE International Joint Conference on Neural Network. https://doi.org/10.1109/IJCNN64981.2025.11227991"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Multilingual pretrained language models demonstrate varying degrees of capability in zero-shot cross-lingual transfer, supported by specific architectural designs and training techniques. For neural machine translation, SixT utilizes a multilingual pretrained encoder featuring a two-stage training schedule, a position disentangled encoder, and a capacity-enhanced decoder [1]. Furthermore, model adaptation through continued pretraining enhances XLM-R's zero-shot cross-lingual performance on 10 Indigenous languages of the Americas, increasing average accuracy from 38.48% to 43.85% [2].\n\nAcross downstream natural language processing tasks, performance levels differ based on the model family and adaptation strategy. The XLM-RoBERTa model family consistently demonstrates superior performance in transferring discourse-level knowledge across languages with relatively minor degradation in zero-shot settings [3]. Additionally, prompt-tuning yields substantially better cross-lingual transfer than fine-tuning across natural language understanding datasets while utilizing only 0.1% to 0.3% tuned parameters [4]. Assessment of these capabilities relies on specific evaluation suites; for instance, ECLeKTic serves as a multilingual closed-book QA dataset to assess cross-lingual knowledge transfer using Wikipedia articles across 12 languages [5], and BUFFET unifies 15 diverse tasks across 54 languages in a sequence-to-sequence format for evaluating cross-lingual transfer [6].\n\nDespite these advancements, low-resource languages and non-English contexts encounter notable limitations and failure modes. Cross-lingual and unsupervised methods struggle to preserve sentiment-specific information under zero-shot conditions for the low-resource language Oromo [7]. Moreover, evaluations of large language models such as CodeLLaMa and CodeGemma show significant disparities in code quality when processing non-English prompts during zero-shot cross-lingual transfer [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 9,
+      "arxiv": 0
+    },
+    "seconds": 51.7
+  },
+  "papers": {
+    "s2:4936a03cc72f0e712c8a16560e01889f4c1a1c5b": {
+      "paper_id": "s2:4936a03cc72f0e712c8a16560e01889f4c1a1c5b",
+      "title": "Zero-Shot Cross-Lingual Transfer of Neural Machine Translation with Multilingual Pretrained Encoders",
+      "abstract": "Previous work mainly focuses on improving cross-lingual transfer for NLU tasks with a multilingual pretrained encoder (MPE), or improving the performance on supervised machine translation with BERT. However, it is under-explored that whether the MPE can help to facilitate the cross-lingual transferability of NMT model. In this paper, we focus on a zero-shot cross-lingual transfer task in NMT. In this task, the NMT model is trained with parallel dataset of only one language pair and an off-the-shelf MPE, then it is directly tested on zero-shot language pairs. We propose SixT, a simple yet effective model for this task. SixT leverages the MPE with a two-stage training schedule and gets further improvement with a position disentangled encoder and a capacity-enhanced decoder. Using this method, SixT significantly outperforms mBART, a pretrained multilingual encoder-decoder model explicitly designed for NMT, with an average improvement of 7.1 BLEU on zero-shot any-to-English test sets across 14 source languages. Furthermore, with much less training computation cost and training data, our model achieves better performance on 15 any-to-English test sets than CRISS and m2m-100, two strong multilingual NMT baselines.",
+      "year": 2021,
+      "authors": [
+        "Guanhua Chen",
+        "Shu-Ming Ma",
+        "Yun Chen",
+        "Li Dong",
+        "Dong-Dong Zhang",
+        "Jianxiong Pan",
+        "Wenping Wang",
+        "Furu Wei"
+      ],
+      "url": "https://doi.org/10.18653/v1/2021.emnlp-main.2",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2107.00676": {
+      "paper_id": "arxiv:2107.00676",
+      "title": "A Primer on Pretrained Multilingual Language Models",
+      "abstract": "Multilingual Language Models (\\MLLMs) such as mBERT, XLM, XLM-R, \\textit{etc.} have emerged as a viable option for bringing the power of pretraining to a large number of languages. Given their success in zero-shot transfer learning, there has emerged a large body of work in (i) building bigger \\MLLMs~covering a large number of languages (ii) creating exhaustive benchmarks covering a wider variety of tasks and languages for evaluating \\MLLMs~ (iii) analysing the performance of \\MLLMs~on monolingual, zero-shot cross-lingual and bilingual tasks (iv) understanding the universal language patterns (if any) learnt by \\MLLMs~ and (v) augmenting the (often) limited capacity of \\MLLMs~ to improve their performance on seen or even unseen languages. In this survey, we review the existing literature covering the above broad areas of research pertaining to \\MLLMs. Based on our survey, we recommend some promising directions of future research.",
+      "year": 2021,
+      "authors": [
+        "Sumanth Doddapaneni",
+        "Gowtham Ramesh",
+        "Mitesh M. Khapra",
+        "Anoop Kunchukuttan",
+        "Pratyush Kumar"
+      ],
+      "url": "https://arxiv.org/abs/2107.00676",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:165b0d779d4d99f644e7e0d11bb4cf2ee9d4b8c7": {
+      "paper_id": "s2:165b0d779d4d99f644e7e0d11bb4cf2ee9d4b8c7",
+      "title": "Empirical study of pretrained multilingual language models for zero-shot cross-lingual knowledge transfer in generation",
+      "abstract": "Zero-shot cross-lingual knowledge transfer enables the multilingual pretrained language model (mPLM), finetuned on a task in one language, make predictions for this task in other languages. While being broadly studied for natural language understanding tasks, the described setting is understudied for generation. Previous works notice a frequent problem of generation in a wrong language and propose approaches to address it, usually using mT5 as a backbone model. In this work, we test alternative mPLMs, such as mBART and NLLB-200, considering full finetuning and parameter-efficient finetuning with adapters. We find that mBART with adapters performs similarly to mT5 of the same size, and NLLB-200 can be competitive in some cases. We also underline the importance of tuning learning rate used for finetuning, which helps to alleviate the problem of generation in the wrong language.",
+      "year": 2023,
+      "authors": [
+        "Nadezhda Chirkova",
+        "Sheng Liang",
+        "Vassilina Nikoulina"
+      ],
+      "url": "https://www.semanticscholar.org/paper/165b0d779d4d99f644e7e0d11bb4cf2ee9d4b8c7",
+      "venue": null,
+      "source": "semantic_scholar"
+    },
+    "s2:add0dd0ab2a408354fa2d89cc492b4d2ab26845d": {
+      "paper_id": "s2:add0dd0ab2a408354fa2d89cc492b4d2ab26845d",
+      "title": "AmericasNLI: Evaluating Zero-shot Natural Language Understanding of Pretrained Multilingual Models in Truly Low-resource Languages",
+      "abstract": "Pretrained multilingual models are able to perform cross-lingual transfer in a zero-shot setting, even for languages unseen during pretraining. However, prior work evaluating performance on unseen languages has largely been limited to low-level, syntactic tasks, and it remains unclear if zero-shot learning of high-level, semantic tasks is possible for unseen languages. To explore this question, we present AmericasNLI, an extension of XNLI (Conneau et al., 2018) to 10 Indigenous languages of the Americas. We conduct experiments with XLM-R, testing multiple zero-shot and translation-based approaches. Additionally, we explore model adaptation via continued pretraining and provide an analysis of the dataset by considering hypothesis-only models. We find that XLM-R’s zero-shot performance is poor for all 10 languages, with an average performance of 38.48%. Continued pretraining offers improvements, with an average accuracy of 43.85%. Surprisingly, training on poorly translated data by far outperforms all other methods with an accuracy of 49.12%.",
+      "year": 2021,
+      "authors": [
+        "Abteen Ebrahimi",
+        "Manuel Mager",
+        "Arturo Oncevay",
+        "Vishrav Chaudhary",
+        "Luis Chiruzzo",
+        "Angela Fan",
+        "John E. Ortega",
+        "Ricardo Ramos",
+        "Annette Rios Gonzales",
+        "Ivan Vladimir Meza Ruiz",
+        "G. Giménez-Lugo",
+        "Elisabeth Mager",
+        "Graham Neubig",
+        "Alexis Palmer",
+        "Rolando Coto-Solano",
+        "Thang Vu",
+        "Katharina Kann"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2104.08726",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "source": "semantic_scholar"
+    },
+    "s2:ad9330c7cb31adb2197dae8f7f9998142e071857": {
+      "paper_id": "s2:ad9330c7cb31adb2197dae8f7f9998142e071857",
+      "title": "Zero-shot cross-lingual transfer in instruction tuning of large language models",
+      "abstract": "Instruction tuning (IT) is widely used to teach pretrained large language models (LLMs) to follow arbitrary instructions, but is under-studied in multilingual settings. In this work, we conduct a systematic study of zero-shot cross-lingual transfer in IT, when an LLM is instruction-tuned on English-only data and then tested on user prompts in other languages. We advocate for the importance of evaluating various aspects of model responses in multilingual instruction following and investigate the influence of different model configuration choices. We find that cross-lingual transfer does happen successfully in IT even if all stages of model training are English-centric, but only if multiliguality is taken into account in hyperparameter tuning and with large enough IT data. English-trained LLMs are capable of generating correct-language, comprehensive and helpful responses in other languages, but suffer from low factuality and may occasionally have fluency errors.",
+      "year": 2024,
+      "authors": [
+        "Nadezhda Chirkova",
+        "Vassilina Nikoulina"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2402.14778",
+      "venue": "International Conference on Natural Language Generation",
+      "source": "semantic_scholar"
+    },
+    "s2:62bfc24eb408438114f4a49466339776130b8e18": {
+      "paper_id": "s2:62bfc24eb408438114f4a49466339776130b8e18",
+      "title": "Analyzing the Evaluation of Cross-Lingual Knowledge Transfer in Multilingual Language Models",
+      "abstract": "Recent advances in training multilingual language models on large datasets seem to have shown promising results in knowledge transfer across languages and achieve high performance on downstream tasks. However, we question to what extent the current evaluation benchmarks and setups accurately measure zero-shot cross-lingual knowledge transfer. In this work, we challenge the assumption that high zero-shot performance on target tasks reflects high cross-lingual ability by introducing more challenging setups involving instances with multiple languages. Through extensive experiments and analysis, we show that the observed high performance of multilingual models can be largely attributed to factors not requiring the transfer of actual linguistic knowledge, such as task- and surface-level knowledge. More specifically, we observe what has been transferred across languages is mostly data artifacts and biases, especially for low-resource languages. Our findings highlight the overlooked drawbacks of existing cross-lingual test data and evaluation setups, calling for a more nuanced understanding of the cross-lingual capabilities of multilingual models.",
+      "year": 2024,
+      "authors": [
+        "Sara Rajaee",
+        "Christof Monz"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2402.02099",
+      "venue": "Conference of the European Chapter of the Association for Computational Linguistics",
+      "source": "semantic_scholar"
+    },
+    "s2:c4a24f0a480b15254b84b1f5620a6c1fc34f4c72": {
+      "paper_id": "s2:c4a24f0a480b15254b84b1f5620a6c1fc34f4c72",
+      "title": "Probing Multilingual Language Models for Discourse",
+      "abstract": "Pre-trained multilingual language models have become an important building block in multilingual Natural Language Processing. In the present paper, we investigate a range of such models to find out how well they transfer discourse-level knowledge across languages. This is done with a systematic evaluation on a broader set of discourse-level tasks than has been previously been assembled. We find that the XLM-RoBERTa family of models consistently show the best performance, by simultaneously being good monolingual models and degrading relatively little in a zero-shot setting. Our results also indicate that model distillation may hurt the ability of cross-lingual transfer of sentence representations, while language dissimilarity at most has a modest effect. We hope that our test suite, covering 5 tasks with a total of 22 languages in 10 distinct families, will serve as a useful evaluation platform for multilingual performance at and beyond the sentence level.",
+      "year": 2021,
+      "authors": [
+        "Murathan Kurfali",
+        "Robert Östling"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2106.04832",
+      "venue": "Workshop on Representation Learning for NLP",
+      "source": "semantic_scholar"
+    },
+    "s2:aa9cda8e13dc60bde7531245c3d878bec8fdccad": {
+      "paper_id": "s2:aa9cda8e13dc60bde7531245c3d878bec8fdccad",
+      "title": "Prompt-Tuning Can Be Much Better Than Fine-Tuning on Cross-lingual Understanding With Multilingual Language Models",
+      "abstract": "Pre-trained multilingual language models show significant performance gains for zero-shot cross-lingual model transfer on a wide range of natural language understanding (NLU) tasks. Previously, for zero-shot cross-lingual evaluation, pre-trained models are only fine-tuned on English data and tested on a variety of target languages. In this paper, we do cross-lingual evaluation on various NLU tasks (sentence classification, sequence labeling, question answering) using prompt-tuning and compare it with fine-tuning. The results show that prompt tuning achieves much better cross-lingual transfer than fine-tuning across datasets, with only 0.1% to 0.3% tuned parameters. Additionally, we demonstrate through the analysis that prompt tuning can have better cross-lingual transferability of representations on downstream tasks with better aligned decision boundaries.",
+      "year": 2022,
+      "authors": [
+        "Lifu Tu",
+        "Cai-Ming Xiong",
+        "Ying-Bo Zhou"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2210.12360",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "s2:ec28a6517c411d30ba78f95373308e3a718ded15": {
+      "paper_id": "s2:ec28a6517c411d30ba78f95373308e3a718ded15",
+      "title": "One For All & All For One: Bypassing Hyperparameter Tuning with Model Averaging For Cross-Lingual Transfer",
+      "abstract": "Multilingual language models enable zero-shot cross-lingual transfer (ZS-XLT): fine-tuned on sizable source-language task data, they perform the task in target languages without labeled instances. The effectiveness of ZS-XLT hinges on the linguistic proximity between languages and the amount of pretraining data for a language. Because of this, model selection based on source-language validation is unreliable: it picks model snapshots with suboptimal target-language performance. As a remedy, some work optimizes ZS-XLT by extensively tuning hyperparameters: the follow-up work then routinely struggles to replicate the original results. Other work searches over narrower hyperparameter grids, reporting substantially lower performance. In this work, we therefore propose an unsupervised evaluation protocol for ZS-XLT that decouples performance maximization from hyperparameter tuning. As a robust and more transparent alternative to extensive hyperparameter tuning, we propose to accumulatively average snapshots from different runs into a single model. We run broad ZS-XLT experiments on both higher-level semantic tasks (NLI, extractive QA) and a lower-level token classification task (NER) and find that conventional model selection based on source-language validation quickly plateaus to suboptimal ZS-XLT performance. On the other hand, our accumulative run-by-run averaging of models trained with different hyperparameters boosts ZS-XLT performance and closely correlates with\"oracle\"ZS-XLT, i.e., model selection based on target-language validation performance.",
+      "year": 2023,
+      "authors": [
+        "Fabian David Schmidt",
+        "Ivan Vulic",
+        "Goran Glavaš"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2310.10532",
+      "venue": "Conference on Empirical Methods in Natural Language Processing",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2005.00633": {
+      "paper_id": "arxiv:2005.00633",
+      "title": "From Zero to Hero: On the Limitations of Zero-Shot Cross-Lingual Transfer with Multilingual Transformers",
+      "abstract": "Massively multilingual transformers pretrained with language modeling objectives (e.g., mBERT, XLM-R) have become a de facto default transfer paradigm for zero-shot cross-lingual transfer in NLP, offering unmatched transfer performance. Current downstream evaluations, however, verify their efficacy predominantly in transfer settings involving languages with sufficient amounts of pretraining data, and with lexically and typologically close languages. In this work, we analyze their limitations and show that cross-lingual transfer via massively multilingual transformers, much like transfer via cross-lingual word embeddings, is substantially less effective in resource-lean scenarios and for distant languages. Our experiments, encompassing three lower-level tasks (POS tagging, dependency parsing, NER), as well as two high-level semantic tasks (NLI, QA), empirically correlate transfer performance with linguistic similarity between the source and target languages, but also with the size of pretraining corpora of target languages. We also demonstrate a surprising effectiveness of inexpensive few-shot transfer (i.e., fine-tuning on a few target-language instances after fine-tuning in the source) across the board. This suggests that additional research efforts should be invested to reach beyond the limiting zero-shot conditions.",
+      "year": 2020,
+      "authors": [
+        "Anne Lauscher",
+        "Vinit Ravishankar",
+        "Ivan Vulić",
+        "Goran Glavaš"
+      ],
+      "url": "https://arxiv.org/abs/2005.00633",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:20e6b4ad254ad577fd703a16730f4065ab582df0": {
+      "paper_id": "s2:20e6b4ad254ad577fd703a16730f4065ab582df0",
+      "title": "Cross-Lingual Transfer Robustness to Lower-Resource Languages on Adversarial Datasets",
+      "abstract": "Multilingual Language Models (MLLMs) exhibit robust cross-lingual transfer capabilities, or the ability to leverage information acquired in a source language and apply it to a target language. These capabilities find practical applications in well-established Natural Language Processing (NLP) tasks such as Named Entity Recognition (NER). This study aims to investigate the effectiveness of a source language when applied to a target language, particularly in the context of perturbing the input test set. We evaluate on 13 pairs of languages, each including one high-resource language (HRL) and one low-resource language (LRL) with a geographic, genetic, or borrowing relationship. We evaluate two well-known MLLMs—MBERT and XLM-R—on these pairs, in native LRL and cross-lingual transfer settings, in two tasks, under a set of different perturbations. Our findings indicate that NER cross-lingual transfer depends largely on the overlap of entity chunks. If a source and target language have more entities in common, the transfer ability is stronger. Models using cross-lingual transfer also appear to be somewhat more robust to certain perturbations of the input, perhaps indicating an ability to leverage stronger representations derived from the HRL. Our research provides valuable insights into cross-lingual transfer and its implications for NLP applications, and underscores the need to consider linguistic nuances and potential limitations when employing MLLMs across distinct languages.",
+      "year": 2024,
+      "authors": [
+        "Shadi Manafi",
+        "N. Krishnaswamy"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2403.20056",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "source": "semantic_scholar"
+    },
+    "s2:b9b79c0b3096eae665d11a26288ceb1b37123a3e": {
+      "paper_id": "s2:b9b79c0b3096eae665d11a26288ceb1b37123a3e",
+      "title": "ECLeKTic: a Novel Challenge Set for Evaluation of Cross-Lingual Knowledge Transfer",
+      "abstract": "To achieve equitable performance across languages, large language models (LLMs) must be able to abstract knowledge beyond the language in which it was learnt. However, the current literature lacks reliable ways to measure LLMs'capability of such cross-lingual knowledge transfer. To that end, we present ECLeKTic, a multilingual closed-book QA dataset that Evaluates Cross-Lingual Knowledge Transfer in a simple, black-box manner. Concretely, we used the presence and absence of Wikipedia articles in 12 languages to detect pieces of information that were likely available during pre-training in one of the languages but not in the others. We curate ECLeKTic as a set of fact-seeking questions over this kind of information, in all the different languages. Therefore, in order to solve ECLeKTic the model is required to transfer knowledge between languages. We evaluated 8 LLMs and showed that current SOTA models struggle to effectively share knowledge across languages, even if they can predict the answer for questions in the language in which the knowledge was acquired.",
+      "year": 2025,
+      "authors": [
+        "Omer Goldman",
+        "Uri Shaham",
+        "D. Malkin",
+        "Sivan Eiger",
+        "A. Hassidim",
+        "Y. Matias",
+        "Joshua Maynez",
+        "Adi Mayrav Gilady",
+        "Jason Riesa",
+        "Shruti Rijhwani",
+        "L. Rimell",
+        "I. Szpektor",
+        "Reut Tsarfaty",
+        "Matan Eyal"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2502.21228",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:87baa96f57a70b69c6a6cde8a28f40194bb38b23": {
+      "paper_id": "s2:87baa96f57a70b69c6a6cde8a28f40194bb38b23",
+      "title": "CORI: CJKV Benchmark with Romanization Integration - a Step towards Cross-lingual Transfer beyond Textual Scripts",
+      "abstract": "Naively assuming English as a source language may hinder cross-lingual transfer for many languages by failing to consider the importance of language contact. Some languages are more well-connected than others, and target languages can benefit from transferring from closely related languages; for many languages, the set of closely related languages does not include English. In this work, we study the impact of source language for cross-lingual transfer, demonstrating the importance of selecting source languages that have high contact with the target language. We also construct a novel benchmark dataset for close contact Chinese-Japanese-Korean-Vietnamese (CJKV) languages to further encourage in-depth studies of language contact. To comprehensively capture contact between these languages, we propose to integrate Romanized transcription beyond textual scripts via Contrastive Learning objectives, leading to enhanced cross-lingual representations and effective zero-shot cross-lingual transfer.",
+      "year": 2024,
+      "authors": [
+        "Hoang Nguyen",
+        "Chenwei Zhang",
+        "Ye Liu",
+        "Natalie Parde",
+        "Eugene Rohrbaugh",
+        "Philip S. Yu"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2404.12618",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "source": "semantic_scholar"
+    },
+    "s2:c1c98ef93fb6474837961ef300cf3d8e7d3a0cd0": {
+      "paper_id": "s2:c1c98ef93fb6474837961ef300cf3d8e7d3a0cd0",
+      "title": "BUFFET: Benchmarking Large Language Models for Few-shot Cross-lingual Transfer",
+      "abstract": "Despite remarkable advancements in few-shot generalization in natural language processing, most models are developed and evaluated primarily in English. To establish a rigorous and equitable evaluation framework for few-shot cross-lingual transfer, we introduce a new benchmark, called BUFFET, which unifies 15 diverse tasks across 54 languages in a sequence-to-sequence format and provides a fixed set of few-shot examples and instructions. Using BUFFET, we perform thorough evaluations of ten state-of-the-art multilingual large language models with different transfer methods, namely in-context learning and fine-tuning. Our findings reveal significant room for improvement in few-shot in-context cross-lingual transfer. Strong multilingual pre-trained or instruction-tuned models such as BLOOM or ChatGPT often lag behind much smaller mT5-base models given the same number of few-shot samples, particularly in low-resource languages. Our analysis suggests avenues for future research in few-shot cross-lingual transfer.",
+      "year": 2023,
+      "authors": [
+        "Akari Asai",
+        "Sneha Kudugunta",
+        "Xinyan Velocity Yu",
+        "Terra Blevins",
+        "Hila Gonen",
+        "Machel Reid",
+        "Yulia Tsvetkov",
+        "Sebastian Ruder",
+        "Hannaneh Hajishirzi"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2305.14857",
+      "venue": "North American Chapter of the Association for Computational Linguistics",
+      "source": "semantic_scholar"
+    },
+    "s2:24e3a6d735dd4eb76e5d05184e00e10049f83ab1": {
+      "paper_id": "s2:24e3a6d735dd4eb76e5d05184e00e10049f83ab1",
+      "title": "Comparative Study of Different Learning Paradigms for Zero-Shot Sentiment Analysis of the Low-Resource African Language Oromo",
+      "abstract": "In this paper, we address zero-shot sentiment analysis for Oromo, a low-resource language spoken in East Africa, as part of SemEval-2023 Task 12 (Zero-Shot on Oromo). Leveraging large-scale language models, including BERT and its multilingual variants, we investigate four learning paradigms: zero-shot transfer, translation-based, cross-lingual, and unsupervised approaches. We conduct a comprehensive evaluation of these approaches on the SemEval-2023 benchmark and analyze their respective strengths and limitations. The results highlight the effectiveness of zero-shot transfer and translation-based methods while revealing the challenges faced by cross-lingual and unsupervised methods in preserving sentiment-specific information under zero-shot conditions. Additionally, we discuss the potential implications of our findings and outline directions for future research.",
+      "year": 2026,
+      "authors": [
+        "Linrui Zhang",
+        "Qi-Xiang Pang",
+        "Belinda Copus"
+      ],
+      "url": "https://doi.org/10.32473/flairs.39.1.141417",
+      "venue": "The Florida AI Research Society",
+      "source": "semantic_scholar"
+    },
+    "s2:2ea80e07c187ab6f3b73b4d52d40143811a618c8": {
+      "paper_id": "s2:2ea80e07c187ab6f3b73b4d52d40143811a618c8",
+      "title": "Bridging the Language Gap: Enhancing Multilingual Prompt-Based Code Generation in LLMs via Zero-Shot Cross-Lingual Transfer",
+      "abstract": "The use of Large Language Models (LLMs) for program code generation has gained substantial attention, but their biases and limitations with non-English prompts challenge global inclusivity. This paper investigates the complexities of multilingual prompt-based code generation. Our evaluations of LLMs, including CodeLLaMa and CodeGemma, reveal significant disparities in code quality for non-English prompts; we also demonstrate the inadequacy of simple approaches like prompt translation, bootstrapped data augmentation, and finetuning. To address this, we propose a zero-shot cross-lingual approach using a neural projection technique, integrating a cross-lingual encoder like LASER to map multilingual embeddings from it into the LLM’s token space. This method requires training only on English data and scales effectively to other languages. Results on a translated and quality-checked MBPP dataset show substantial improvements in code quality. This research promotes a more inclusive code generation landscape by empowering LLMs with multilingual capabilities to support the diverse linguistic spectrum in programming.",
+      "year": 2024,
+      "authors": [
+        "Ming-Da Li",
+        "Abhijit Mishra",
+        "Utkarsh Mujumdar"
+      ],
+      "url": "https://doi.org/10.1109/IJCNN64981.2025.11227991",
+      "venue": "IEEE International Joint Conference on Neural Network",
+      "source": "semantic_scholar"
+    },
+    "s2:8210f513eeb0da3100b8a7f249b24f4da9ff2bc5": {
+      "paper_id": "s2:8210f513eeb0da3100b8a7f249b24f4da9ff2bc5",
+      "title": "A Systematic Review of Few-Shot and Zero-Shot Learning for NLP in Low-Resource Languages: Insights and Challenges",
+      "abstract": "Low-resource languages face critical challenges in developing Natural Language Processing (NLP) tools due to limited annotated data, structural complexity, and underrepresentation in multilingual resources. Few-Shot Learning (FSL) and Zero-Shot Learning (ZSL) have emerged as promising approaches to address these issues by reducing reliance on large annotated corpora. This paper presents a systematic review of 21 studies published between 2020 and 2025, examining the application of FSL and ZSL across various NLP tasks in low-resource language settings. The review provides key insights: (1) FSL generally outperforms ZSL in tasks such as classification and structured prediction; (2) techniques like prompt-based learning and cross-lingual transfer, especially when combined with large language models (LLMs) such as GPT and mT5, show strong potential; and (3) persistent challenges remain, including annotation scarcity, typological variation, and representational bias in multilingual models. These findings highlight both the opportunities and limitations of FSL/ZSL, underscoring the need for future research on integrating active learning, developing culturally inclusive benchmarks, and deploying efficient models for underrepresented languages. Across 21 studies, FSL yields an average 4–6 F1-point gain over ZSL in classification/structured tasks and ~+1.0–1.3 ROUGE in generation.",
+      "year": 2025,
+      "authors": [
+        "Andi Djalal Latief",
+        "Asril Jarin",
+        "Yuyun",
+        "Nuraisa Novia Hidayati",
+        "Dian Isnaeni Nurul Afra",
+        "Hammam Riza"
+      ],
+      "url": "https://doi.org/10.1109/IC3INA68387.2025.11325582",
+      "venue": "International Conference on Computer, Control, Informatics and its Applications",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2508.10369": {
+      "paper_id": "arxiv:2508.10369",
+      "title": "Improving Generative Cross-lingual Aspect-Based Sentiment Analysis with Constrained Decoding",
+      "abstract": "While aspect-based sentiment analysis (ABSA) has made substantial progress, challenges remain for low-resource languages, which are often overlooked in favour of English. Current cross-lingual ABSA approaches focus on limited, less complex tasks and often rely on external translation tools. This paper introduces a novel approach using constrained decoding with sequence-to-sequence models, eliminating the need for unreliable translation tools and improving cross-lingual performance by 5\\% on average for the most complex task. The proposed method also supports multi-tasking, which enables solving multiple ABSA tasks with a single model, with constrained decoding boosting results by more than 10\\%. We evaluate our approach across seven languages and six ABSA tasks, surpassing state-of-the-art methods and setting new benchmarks for previously unexplored tasks. Additionally, we assess large language models (LLMs) in zero-shot, few-shot, and fine-tuning scenarios. While LLMs perform poorly in zero-shot and few-shot settings, fine-tuning achieves competitive results compared to smaller multilingual models, albeit at the cost of longer training and inference times. We provide practical recommendations for real-world applications, enhancing the understanding of cross-lingual ABSA methodologies. This study offers valuable insights into the strengths and limitations of cross-lingual ABSA approaches, advancing the state-of-the-art in this challenging research domain.",
+      "year": 2025,
+      "authors": [
+        "Jakub Šmíd",
+        "Pavel Přibáň",
+        "Pavel Král"
+      ],
+      "url": "https://arxiv.org/abs/2508.10369",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:555f62cfc558621f3daee15fa3d8417dae9a7882": {
+      "paper_id": "s2:555f62cfc558621f3daee15fa3d8417dae9a7882",
+      "title": "Comparative Study of Zero-Shot Cross-Lingual Transfer for Bodo POS and NER Tagging Using Gemini 2.0 Flash Thinking Experimental Model",
+      "abstract": "Named Entity Recognition (NER) and Part-of-Speech (POS) tagging are critical tasks for Natural Language Processing (NLP), yet their availability for low-resource languages (LRLs) like Bodo remains limited. This article presents a comparative empirical study investigating the effectiveness of Google's Gemini 2.0 Flash Thinking Experiment model for zero-shot cross-lingual transfer of POS and NER tagging to Bodo. We explore two distinct methodologies: (1) direct translation of English sentences to Bodo followed by tag transfer, and (2) prompt-based tag transfer on parallel English-Bodo sentence pairs. Both methods leverage the machine translation and cross-lingual understanding capabilities of Gemini 2.0 Flash Thinking Experiment to project English POS and NER annotations onto Bodo text in CONLL-2003 format. Our findings reveal the capabilities and limitations of each approach, demonstrating that while both methods show promise for bootstrapping Bodo NLP, prompt-based transfer exhibits superior performance, particularly for NER. We provide a detailed analysis of the results, highlighting the impact of translation quality, grammatical divergences, and the inherent challenges of zero-shot cross-lingual transfer. The article concludes by discussing future research directions, emphasizing the need for hybrid approaches, few-shot fine-tuning, and the development of dedicated Bodo NLP resources to achieve high-accuracy POS and NER tagging for this low-resource language.",
+      "year": 2025,
+      "authors": [
+        "Sanjib Narzary",
+        "Bihung Brahma",
+        "Haradip Kumar Mahilary",
+        "Mahananda Brahma",
+        "Bidisha Som",
+        "Sukumar Nandi"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2503.04405",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    }
+  },
+  "question_id": "Q13",
+  "area": "NLP"
+}

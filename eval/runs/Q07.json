@@ -1,0 +1,711 @@
+{
+  "question": "How is federated learning used to train models while preserving data privacy?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What core cryptographic and anonymization techniques are used to ensure data privacy in federated learning?",
+      "search_query": "federated learning data privacy techniques",
+      "paper_ids": [
+        "s2:9995c263c3d524f1ca7f498e37b3be8ba156256e",
+        "s2:1d35788aa08dac16678a87599eed145da4b94e6b",
+        "arxiv:2605.02372",
+        "arxiv:2408.08904",
+        "s2:86078a05817e3fdce4eac331ff1489a046b9c518"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "How do distributed machine learning algorithms maintain model accuracy while decentralized training occurs?",
+      "search_query": "federated learning model training methods",
+      "paper_ids": [
+        "arxiv:2206.02535",
+        "arxiv:2012.01791",
+        "arxiv:2008.06767",
+        "arxiv:2509.04107",
+        "arxiv:2206.00686"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What benchmark datasets and simulation frameworks are commonly used to evaluate privacy-preserving federated learning?",
+      "search_query": "federated learning benchmarks datasets evaluation",
+      "paper_ids": [
+        "arxiv:2008.07257",
+        "s2:f1c5917509badfc80190aa141931df386ecc1c69",
+        "s2:edcba5c25bbc7b4eea76f7fdbd92c368c51f3835",
+        "s2:a8b9d55478be7316de3736d2a36333081f452d25",
+        "s2:3dddc61e1a6a208676684d058d5139e4c082600d"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the primary limitations, security vulnerabilities, and trade-offs of privacy mechanisms in federated learning?",
+      "search_query": "federated learning privacy limitations vulnerabilities",
+      "paper_ids": [
+        "arxiv:2608.12962",
+        "arxiv:2401.10375",
+        "arxiv:2111.03363",
+        "arxiv:2308.07805",
+        "s2:b7d1675c645131391b40fe3cf280b95bf5348a0b"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "Federated learning explores sophisticated privacy-preserving techniques such as differential privacy and homomorphic encryption to handle adversarial threats.",
+        "paper_id": "s2:9995c263c3d524f1ca7f498e37b3be8ba156256e"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Federated learning explores sophisticated privacy-preserving techniques such as differential privacy and homomorphic encryption to handle adversarial threats.",
+          "paper_id": "s2:9995c263c3d524f1ca7f498e37b3be8ba156256e",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9542,
+          "p_supported": 0.9542,
+          "accepted": true,
+          "alt_p_supported": 0.9254
+        }
+      ],
+      "final": {
+        "text": "Federated learning explores sophisticated privacy-preserving techniques such as differential privacy and homomorphic encryption to handle adversarial threats.",
+        "paper_id": "s2:9995c263c3d524f1ca7f498e37b3be8ba156256e",
+        "label": "SUPPORTED",
+        "confidence": 0.9542
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "Privacy protection in federated learning covers secure computational techniques including multi-party computation, homomorphic encryption, and trusted execution environments, alongside differential privacy models.",
+        "paper_id": "s2:1d35788aa08dac16678a87599eed145da4b94e6b"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Privacy protection in federated learning covers secure computational techniques including multi-party computation, homomorphic encryption, and trusted execution environments, alongside differential privacy models.",
+          "paper_id": "s2:1d35788aa08dac16678a87599eed145da4b94e6b",
+          "label": "INSUFFICIENT",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.6698,
+          "p_supported": 0.6698,
+          "accepted": false,
+          "alt_p_supported": 0.6279
+        },
+        {
+          "action": "re-retrieve",
+          "text": "Privacy protection in federated learning covers secure computational techniques including multi-party computation, homomorphic encryption, and trusted execution environments, alongside differential privacy models.",
+          "paper_id": "s2:0f9c8c7e99fc203e3163ea3e81ecc9c4da32945d",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9569,
+          "p_supported": 0.9569,
+          "accepted": true,
+          "alt_p_supported": 0.9279
+        }
+      ],
+      "final": {
+        "text": "Privacy protection in federated learning covers secure computational techniques including multi-party computation, homomorphic encryption, and trusted execution environments, alongside differential privacy models.",
+        "paper_id": "s2:0f9c8c7e99fc203e3163ea3e81ecc9c4da32945d",
+        "label": "SUPPORTED",
+        "confidence": 0.9569
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "One study finds that the simple federated averaging technique builds more accurate models compared to training solely on local data.",
+        "paper_id": "arxiv:2206.02535"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study finds that the simple federated averaging technique builds more accurate models compared to training solely on local data.",
+          "paper_id": "arxiv:2206.02535",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9155,
+          "p_supported": 0.9155,
+          "accepted": true,
+          "alt_p_supported": 0.9185
+        }
+      ],
+      "final": {
+        "text": "One study finds that the simple federated averaging technique builds more accurate models compared to training solely on local data.",
+        "paper_id": "arxiv:2206.02535",
+        "label": "SUPPORTED",
+        "confidence": 0.9155
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "The FedQuad method optimizes smaller intra-class variance and larger inter-class variance across clients to mitigate data heterogeneity and maintain model performance in decentralized training.",
+        "paper_id": "arxiv:2509.04107"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The FedQuad method optimizes smaller intra-class variance and larger inter-class variance across clients to mitigate data heterogeneity and maintain model performance in decentralized training.",
+          "paper_id": "arxiv:2509.04107",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9379,
+          "p_supported": 0.9379,
+          "accepted": true,
+          "alt_p_supported": 0.9032
+        }
+      ],
+      "final": {
+        "text": "The FedQuad method optimizes smaller intra-class variance and larger inter-class variance across clients to mitigate data heterogeneity and maintain model performance in decentralized training.",
+        "paper_id": "arxiv:2509.04107",
+        "label": "SUPPORTED",
+        "confidence": 0.9379
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "The MC-DQE FL framework was evaluated using the CIFAR-10 and FMNIST datasets.",
+        "paper_id": "s2:f1c5917509badfc80190aa141931df386ecc1c69"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The MC-DQE FL framework was evaluated using the CIFAR-10 and FMNIST datasets.",
+          "paper_id": "s2:f1c5917509badfc80190aa141931df386ecc1c69",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9397,
+          "p_supported": 0.9397,
+          "accepted": true,
+          "alt_p_supported": 0.9055
+        }
+      ],
+      "final": {
+        "text": "The MC-DQE FL framework was evaluated using the CIFAR-10 and FMNIST datasets.",
+        "paper_id": "s2:f1c5917509badfc80190aa141931df386ecc1c69",
+        "label": "SUPPORTED",
+        "confidence": 0.9397
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "The federated Random Forest framework leverages PySyft for secure, privacy-aware computation and was evaluated on two real-world healthcare benchmarks.",
+        "paper_id": "s2:a8b9d55478be7316de3736d2a36333081f452d25"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The federated Random Forest framework leverages PySyft for secure, privacy-aware computation and was evaluated on two real-world healthcare benchmarks.",
+          "paper_id": "s2:a8b9d55478be7316de3736d2a36333081f452d25",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9395,
+          "p_supported": 0.9395,
+          "accepted": true,
+          "alt_p_supported": 0.9075
+        }
+      ],
+      "final": {
+        "text": "The federated Random Forest framework leverages PySyft for secure, privacy-aware computation and was evaluated on two real-world healthcare benchmarks.",
+        "paper_id": "s2:a8b9d55478be7316de3736d2a36333081f452d25",
+        "label": "SUPPORTED",
+        "confidence": 0.9395
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Federated learning faces limitations such as increased computational complexity and communication overhead.",
+        "paper_id": "s2:b7d1675c645131391b40fe3cf280b95bf5348a0b"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Federated learning faces limitations such as increased computational complexity and communication overhead.",
+          "paper_id": "s2:b7d1675c645131391b40fe3cf280b95bf5348a0b",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9532,
+          "p_supported": 0.9532,
+          "accepted": true,
+          "alt_p_supported": 0.9277
+        }
+      ],
+      "final": {
+        "text": "Federated learning faces limitations such as increased computational complexity and communication overhead.",
+        "paper_id": "s2:b7d1675c645131391b40fe3cf280b95bf5348a0b",
+        "label": "SUPPORTED",
+        "confidence": 0.9532
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Three main challenges to federated learning include non-iid node data, high communication overhead between peers, and client heterogeneity regarding dataset bias and size.",
+        "paper_id": "arxiv:2308.07805"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Three main challenges to federated learning include non-iid node data, high communication overhead between peers, and client heterogeneity regarding dataset bias and size.",
+          "paper_id": "arxiv:2308.07805",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9275,
+          "p_supported": 0.9275,
+          "accepted": true,
+          "alt_p_supported": 0.9098
+        }
+      ],
+      "final": {
+        "text": "Three main challenges to federated learning include non-iid node data, high communication overhead between peers, and client heterogeneity regarding dataset bias and size.",
+        "paper_id": "arxiv:2308.07805",
+        "label": "SUPPORTED",
+        "confidence": 0.9275
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:9995c263c3d524f1ca7f498e37b3be8ba156256e",
+      "citation": "Nazik Saber Rashid, Hajar Maseeh Yasin (2025). Privacy-preserving machine learning: a review of federated learning techniques and ‎applications. International Journal of Scientific World. https://doi.org/10.14419/af03y111"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:0f9c8c7e99fc203e3163ea3e81ecc9c4da32945d",
+      "citation": "A. Abouelmagd, Amr Hilal (2025). Emerging Paradigms for Securing Federated Learning Systems. Global Conference on Artificial Intelligence and Internet of Things. https://doi.org/10.1109/GCAIoT68269.2025.11275564"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2206.02535",
+      "citation": "Motasem Alfarra, Juan C. Pérez, Egor Shulgin et al. (2022). Certified Robustness in Federated Learning. arXiv. https://arxiv.org/abs/2206.02535"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2509.04107",
+      "citation": "Ozgu Goksu, Nicolas Pugeault (2025). FedQuad: Federated Stochastic Quadruplet Learning to Mitigate Data Heterogeneity. arXiv. https://arxiv.org/abs/2509.04107"
+    },
+    {
+      "n": 5,
+      "paper_id": "s2:f1c5917509badfc80190aa141931df386ecc1c69",
+      "citation": "Ze-Qi Ruan, Xiao-Lei Dong, Jia-Chen Shen et al. (2025). MC-DQE FL: Robust Federated Learning Framework Based on Multi-Criteria Data Quality Evaluation. 2025 IEEE 6th International Seminar on Artificial Intelligence, Networking and Information Technology (AINIT). https://doi.org/10.1109/AINIT65432.2025.11035735"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:a8b9d55478be7316de3736d2a36333081f452d25",
+      "citation": "Alexandre Cotorobai, J. M. Silva, José Luís Oliveira (2025). A Federated Random Forest Solution for Secure Distributed Machine Learning. 2025 IEEE 38th International Symposium on Computer-Based Medical Systems (CBMS). https://doi.org/10.1109/CBMS65348.2025.00159"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:b7d1675c645131391b40fe3cf280b95bf5348a0b",
+      "citation": "Xin Gao (2024). Federated Learning in Customer-Centric Applications: Balancing Privacy, Personalization and Performance. Proceedings of the 2nd International Conference on Data Analysis and Machine Learning. https://doi.org/10.5220/0013527900004619"
+    },
+    {
+      "n": 8,
+      "paper_id": "arxiv:2308.07805",
+      "citation": "Navya Annapareddy, Jade Preston, Judy Fox (2023). Fairness and Privacy in Federated Learning and Their Implications in Healthcare. arXiv. https://arxiv.org/abs/2308.07805"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Federated learning utilizes several core cryptographic and anonymization techniques to safeguard data privacy against adversarial threats. These mechanisms include differential privacy, homomorphic encryption, multi-party computation, and trusted execution environments [1, 2]. \n\nTo maintain model accuracy during decentralized training, approaches such as the simple federated averaging technique have been shown to build more accurate models than training exclusively on local data [3]. Additionally, the FedQuad method addresses data heterogeneity and maintains model performance by optimizing smaller intra-class variance and larger inter-class variance across clients [4]. \n\nEvaluation of privacy-preserving federated learning relies on diverse benchmark datasets and simulation frameworks. For example, the MC-DQE FL framework was evaluated using the CIFAR-10 and FMNIST datasets [5], while a federated Random Forest framework utilized PySyft for secure computation and was assessed on two real-world healthcare benchmarks [6]. \n\nDespite these advancements, privacy mechanisms and decentralized training in federated learning present notable limitations, security vulnerabilities, and trade-offs. The paradigm faces challenges such as increased computational complexity, high communication overhead between peers, non-iid node data, and client heterogeneity driven by dataset size and bias [7, 8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 7,
+    "claims_retried": 1,
+    "retry_successes": 1,
+    "total_retries": 1,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 7,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 15,
+      "arxiv": 1
+    },
+    "seconds": 123.7
+  },
+  "papers": {
+    "s2:9995c263c3d524f1ca7f498e37b3be8ba156256e": {
+      "paper_id": "s2:9995c263c3d524f1ca7f498e37b3be8ba156256e",
+      "title": "Privacy-preserving machine learning: a review of federated learning techniques and ‎applications",
+      "abstract": "Federated Learning (FL), which permits decentralized model training without sharing raw data, guarantees ‎adherence to privacy laws like GDPR and HIPAA. This study offers a thorough analysis of FL with an ‎emphasis on its exceptional capacity to strike a balance between data value and privacy in industries ‎including healthcare, the Internet of Things, and finance. In contrast to previous evaluations, this study ‎explores sophisticated privacy-preserving techniques, such as differential privacy and homomorphic ‎encryption, and assesses how well they work to handle issues like adversarial threats, non-IID data ‎distributions, and communication overhead. The study also discusses the practical uses of optimization ‎techniques like Federated Proximal (FedProx) and Federated Averaging (FedAvg). This paper provides ‎practical insights and future approaches to promote the use of FL in privacy-sensitive AI applications by ‎comparing and contrasting current methods and pointing out research gaps. FL is positioned as a ‎revolutionary method for privacy-conscious machine learning because to this fresh viewpoint. This update highlights the paper's distinctive features that set it apart from prior reviews, including the ‎thorough examination of privacy mechanisms, assessment of optimization techniques, and identification ‎of research needs‎.",
+      "year": 2025,
+      "authors": [
+        "Nazik Saber Rashid",
+        "Hajar Maseeh Yasin"
+      ],
+      "url": "https://doi.org/10.14419/af03y111",
+      "venue": "International Journal of Scientific World",
+      "source": "semantic_scholar"
+    },
+    "s2:1d35788aa08dac16678a87599eed145da4b94e6b": {
+      "paper_id": "s2:1d35788aa08dac16678a87599eed145da4b94e6b",
+      "title": "PPFL: Privacy-Preserving Techniques in Federated Learning",
+      "abstract": "Federated Learning is a distributed machine learning paradigm designed to preserve user privacy on decentralized devices without transferring raw data to a central server. Protecting data privacy in FL involves determining permissible operations and how they can be executed. This review provides an in-depth exploration of privacy threat models within FL, distinguishing between scenarios where the central server is either trusted or untrusted, and identifying appropriate defensive tools and technologies for these settings. The review covers secure computational techniques, including MPC, HE, and TEEs, as well as privacy-preserving mechanisms such as DP, LDP, and DDP models. It also examines hybrid approaches that combine multiple privacy models to enhance efficiency and robustness. The effectiveness of these methods is analysed across different scenarios involving both honest and potentially malicious servers and users. The findings reveal that while privacy-preserving methods mitigate risks, challenges persist in trade off privacy, communication efficiency, and model accuracy. This review highlights open research directions and serves as a comprehensive reference for researchers and practitioners seeking to implement robust privacy measures in federated learning systems.",
+      "year": 2024,
+      "authors": [
+        "Khalil Jahani",
+        "Behzad Moshiri",
+        "Babak Hossein Khalaj"
+      ],
+      "url": "https://doi.org/10.61838/jaiai.1.3.6",
+      "venue": "Journal of Artificial Intelligence, Applications, and Innovations",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2605.02372": {
+      "paper_id": "arxiv:2605.02372",
+      "title": "Privacy Preserving Machine Learning Workflow: from Anonymization to Personalized Differential Privacy Budgets in Federated Learning",
+      "abstract": "The growing development of artificial intelligence based solutions, together with privacy legislation, has driven the rise of the so-called privacy preserving machine learning architectures, such as federated learning. While federated learning enables model training on decentralized data preventing their sharing and centralization, it still faces several challenges related to data integrity and privacy. This paper presents a comprehensive privacy preserving federated learning workflow for sensitive tabular data, including anonymization and differential privacy techniques. We also introduce a formal definition for the concept of client drift, together with ways of detecting it to mitigate poisoning attacks. Then, we detail a complete methodology for assigning personalized privacy budgets for global differential privacy to the different clients participating in the network, based on a re-identification risk metric. The proposed methodology is presented and tested on an openly available dataset of medical records. Within the experimental setup we show that the approach based on personalized budgets, compared to the architecture including global differential privacy with fixed privacy budget, achieves a better model performance in terms of two error metrics.",
+      "year": 2026,
+      "authors": [
+        "Judith Sáinz-Pardo Díaz",
+        "Álvaro López García"
+      ],
+      "url": "https://arxiv.org/abs/2605.02372",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2408.08904": {
+      "paper_id": "arxiv:2408.08904",
+      "title": "Privacy in Federated Learning",
+      "abstract": "Federated Learning (FL) represents a significant advancement in distributed machine learning, enabling multiple participants to collaboratively train models without sharing raw data. This decentralized approach enhances privacy by keeping data on local devices. However, FL introduces new privacy challenges, as model updates shared during training can inadvertently leak sensitive information. This chapter delves into the core privacy concerns within FL, including the risks of data reconstruction, model inversion attacks, and membership inference. It explores various privacy-preserving techniques, such as Differential Privacy (DP) and Secure Multi-Party Computation (SMPC), which are designed to mitigate these risks. The chapter also examines the trade-offs between model accuracy and privacy, emphasizing the importance of balancing these factors in practical implementations. Furthermore, it discusses the role of regulatory frameworks, such as GDPR, in shaping the privacy standards for FL. By providing a comprehensive overview of the current state of privacy in FL, this chapter aims to equip researchers and practitioners with the knowledge necessary to navigate the complexities of secure federated learning environments. The discussion highlights both the potential and limitations of existing privacy-enhancing techniques, offering insights into future research directions and the development of more robust solutions.",
+      "year": 2024,
+      "authors": [
+        "Jaydip Sen",
+        "Hetvi Waghela",
+        "Sneha Rakshit"
+      ],
+      "url": "https://arxiv.org/abs/2408.08904",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:86078a05817e3fdce4eac331ff1489a046b9c518": {
+      "paper_id": "s2:86078a05817e3fdce4eac331ff1489a046b9c518",
+      "title": "A Comparative Study of Privacy-Preserving Techniques in Federated Learning: A Performance and Security Analysis",
+      "abstract": "Federated learning (FL) is a machine learning technique where clients exchange only local model updates with a central server that combines them to create a global model after local training. While FL offers privacy benefits through local training, privacy-preserving strategies are needed since model updates can leak training data information due to various attacks. To enhance privacy and attack robustness, techniques like homomorphic encryption (HE), Secure Multi-Party Computation (SMPC), and the Private Aggregation of Teacher Ensembles (PATE) can be combined with FL. Currently, no study has combined more than two privacy-preserving techniques with FL or comparatively analyzed their combinations. We conducted a comparative study of privacy-preserving techniques in FL, analyzing performance and security. We implemented FL using an artificial neural network (ANN) with a Malware Dataset from Kaggle for malware detection. To enhance privacy, we proposed models combining FL with the PATE, SMPC, and HE. All models were evaluated against poisoning attacks (targeted and untargeted), a backdoor attack, a model inversion attack, and a man in the middle attack. The combined models maintained performance while improving attack robustness. FL_SMPC, FL_CKKS, and FL_CKKS_SMPC improved both their performance and attack resistance. All the combined models outperformed the base FL model against the evaluated attacks. FL_PATE_CKKS_SMPC achieved the lowest backdoor attack success rate (0.0920). FL_CKKS_SMPC best resisted untargeted poisoning attacks (0.0010 success rate). FL_CKKS and FL_CKKS_SMPC best defended against targeted poisoning attacks (0.0020 success rate). FL_PATE_SMPC best resisted model inversion attacks (19.267 MSE). FL_PATE_CKKS_SMPC best defended against man in the middle attacks with the lowest degradation in accuracy (1.68%), precision (1.94%), recall (1.68%), and the F1-score (1.64%).",
+      "year": 2025,
+      "authors": [
+        "Eman Shalabi",
+        "W. Khedr",
+        "Ehab Rushdy",
+        "Ahmad Salah"
+      ],
+      "url": "https://doi.org/10.3390/info16030244",
+      "venue": "Inf.",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2206.02535": {
+      "paper_id": "arxiv:2206.02535",
+      "title": "Certified Robustness in Federated Learning",
+      "abstract": "Federated learning has recently gained significant attention and popularity due to its effectiveness in training machine learning models on distributed data privately. However, as in the single-node supervised learning setup, models trained in federated learning suffer from vulnerability to imperceptible input transformations known as adversarial attacks, questioning their deployment in security-related applications. In this work, we study the interplay between federated training, personalization, and certified robustness. In particular, we deploy randomized smoothing, a widely-used and scalable certification method, to certify deep networks trained on a federated setup against input perturbations and transformations. We find that the simple federated averaging technique is effective in building not only more accurate, but also more certifiably-robust models, compared to training solely on local data. We further analyze personalization, a popular technique in federated training that increases the model's bias towards local data, on robustness. We show several advantages of personalization over both~(that is, only training on local data and federated training) in building more robust models with faster training. Finally, we explore the robustness of mixtures of global and local~(i.e. personalized) models, and find that the robustness of local models degrades as they diverge from the global model",
+      "year": 2022,
+      "authors": [
+        "Motasem Alfarra",
+        "Juan C. Pérez",
+        "Egor Shulgin",
+        "Peter Richtárik",
+        "Bernard Ghanem"
+      ],
+      "url": "https://arxiv.org/abs/2206.02535",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2012.01791": {
+      "paper_id": "arxiv:2012.01791",
+      "title": "FAT: Federated Adversarial Training",
+      "abstract": "Federated learning (FL) is one of the most important paradigms addressing privacy and data governance issues in machine learning (ML). Adversarial training has emerged, so far, as the most promising approach against evasion threats on ML models. In this paper, we take the first known steps towards federated adversarial training (FAT) combining both methods to reduce the threat of evasion during inference while preserving the data privacy during training. We investigate the effectiveness of the FAT protocol for idealised federated settings using MNIST, Fashion-MNIST, and CIFAR10, and provide first insights on stabilising the training on the LEAF benchmark dataset which specifically emulates a federated learning environment. We identify challenges with this natural extension of adversarial training with regards to achieved adversarial robustness and further examine the idealised settings in the presence of clients undermining model convergence. We find that Trimmed Mean and Bulyan defences can be compromised and we were able to subvert Krum with a novel distillation based attack which presents an apparently \"robust\" model to the defender while in fact the model fails to provide robustness against simple attack modifications.",
+      "year": 2020,
+      "authors": [
+        "Giulio Zizzo",
+        "Ambrish Rawat",
+        "Mathieu Sinn",
+        "Beat Buesser"
+      ],
+      "url": "https://arxiv.org/abs/2012.01791",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2008.06767": {
+      "paper_id": "arxiv:2008.06767",
+      "title": "Heterogeneous Federated Learning",
+      "abstract": "Federated learning learns from scattered data by fusing collaborative models from local nodes. However, due to chaotic information distribution, the model fusion may suffer from structural misalignment with regard to unmatched parameters. In this work, we propose a novel federated learning framework to resolve this issue by establishing a firm structure-information alignment across collaborative models. Specifically, we design a feature-oriented regulation method ({$Ψ$-Net}) to ensure explicit feature information allocation in different neural network structures. Applying this regulating method to collaborative models, matchable structures with similar feature information can be initialized at the very early training stage. During the federated learning process under either IID or non-IID scenarios, dedicated collaboration schemes further guarantee ordered information distribution with definite structure matching, so as the comprehensive model alignment. Eventually, this framework effectively enhances the federated learning applicability to extensive heterogeneous settings, while providing excellent convergence speed, accuracy, and computation/communication efficiency.",
+      "year": 2020,
+      "authors": [
+        "Fuxun Yu",
+        "Weishan Zhang",
+        "Zhuwei Qin",
+        "Zirui Xu",
+        "Di Wang",
+        "Chenchen Liu",
+        "Zhi Tian",
+        "Xiang Chen"
+      ],
+      "url": "https://arxiv.org/abs/2008.06767",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2509.04107": {
+      "paper_id": "arxiv:2509.04107",
+      "title": "FedQuad: Federated Stochastic Quadruplet Learning to Mitigate Data Heterogeneity",
+      "abstract": "Federated Learning (FL) provides decentralised model training, which effectively tackles problems such as distributed data and privacy preservation. However, the generalisation of global models frequently faces challenges from data heterogeneity among clients. This challenge becomes even more pronounced when datasets are limited in size and class imbalance. To address data heterogeneity, we propose a novel method, \\textit{FedQuad}, that explicitly optimises smaller intra-class variance and larger inter-class variance across clients, thereby decreasing the negative impact of model aggregation on the global model over client representations. Our approach minimises the distance between similar pairs while maximising the distance between negative pairs, effectively disentangling client data in the shared feature space. We evaluate our method on the CIFAR-10 and CIFAR-100 datasets under various data distributions and with many clients, demonstrating superior performance compared to existing approaches. Furthermore, we provide a detailed analysis of metric learning-based strategies within both supervised and federated learning paradigms, highlighting their efficacy in addressing representational learning challenges in federated settings.",
+      "year": 2025,
+      "authors": [
+        "Ozgu Goksu",
+        "Nicolas Pugeault"
+      ],
+      "url": "https://arxiv.org/abs/2509.04107",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2206.00686": {
+      "paper_id": "arxiv:2206.00686",
+      "title": "Federated Learning in Non-IID Settings Aided by Differentially Private Synthetic Data",
+      "abstract": "Federated learning (FL) is a privacy-promoting framework that enables potentially large number of clients to collaboratively train machine learning models. In a FL system, a server coordinates the collaboration by collecting and aggregating clients' model updates while the clients' data remains local and private. A major challenge in federated learning arises when the local data is heterogeneous -- the setting in which performance of the learned global model may deteriorate significantly compared to the scenario where the data is identically distributed across the clients. In this paper we propose FedDPMS (Federated Differentially Private Means Sharing), an FL algorithm in which clients deploy variational auto-encoders to augment local datasets with data synthesized using differentially private means of latent data representations communicated by a trusted server. Such augmentation ameliorates effects of data heterogeneity across the clients without compromising privacy. Our experiments on deep image classification tasks demonstrate that FedDPMS outperforms competing state-of-the-art FL methods specifically designed for heterogeneous data settings.",
+      "year": 2022,
+      "authors": [
+        "Huancheng Chen",
+        "Haris Vikalo"
+      ],
+      "url": "https://arxiv.org/abs/2206.00686",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2008.07257": {
+      "paper_id": "arxiv:2008.07257",
+      "title": "FLBench: A Benchmark Suite for Federated Learning",
+      "abstract": "Federated learning is a new machine learning paradigm. The goal is to build a machine learning model from the data sets distributed on multiple devices so-called an isolated data island, while keeping their data secure and private. Most existing federated learning benchmarks work manually splits commonly used public datasets into partitions to simulate real world isolated data island scenarios. Still, this simulation fails to capture real world isolated data island intrinsic characteristics. This paper presents a federated learning (FL) benchmark suite named FLBench. FLBench contains three domains: medical, financial, and AIoT. By configuring various domains, FLBench is qualified to evaluate federated learning systems and algorithms essential aspects, like communication, scenario transformation, privacy-preserving, data distribution heterogeneity, and cooperation strategy. Hence, it becomes a promising platform for developing novel federated learning algorithms. Currently, FLBench is open sourced and in fast evolution. We package it as an automated deployment tool. The benchmark suite is available from https://www.benchcouncil.org/flbench.html.",
+      "year": 2020,
+      "authors": [
+        "Yuan Liang",
+        "Yange Guo",
+        "Yanxia Gong",
+        "Chunjie Luo",
+        "Jianfeng Zhan",
+        "Yunyou Huang"
+      ],
+      "url": "https://arxiv.org/abs/2008.07257",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:f1c5917509badfc80190aa141931df386ecc1c69": {
+      "paper_id": "s2:f1c5917509badfc80190aa141931df386ecc1c69",
+      "title": "MC-DQE FL: Robust Federated Learning Framework Based on Multi-Criteria Data Quality Evaluation",
+      "abstract": "In the rapid development of artificial intelligence, data silos and strict privacy policies hinder cross-institutional data sharing. Federated Learning (FL) offers a solution by keeping data local while transmitting model parameters. However, evaluating the quality of non-IID and potentially malicious data remains challenging. This paper proposes a Federated Learning aggregation framework based on multi-criteria data quality evaluation (MC-DQE FL), which integrates similarity metrics such as Euclidean, cosine, and Manhattan distances to assess data quality. An adaptive benchmark update strategy further enhances evaluation robustness. In terms of privacy protection, MC-DQE FL incorporates differential privacy techniques by adding relatively small noise to the intermediate parameters, thereby protecting data privacy to some extent. Experiments on CIFAR-10 and FMNIST datasets show that MC-DQE FL outperforms existing methods in accuracy and attack resilience.",
+      "year": 2025,
+      "authors": [
+        "Ze-Qi Ruan",
+        "Xiao-Lei Dong",
+        "Jia-Chen Shen",
+        "Zhen-Fu Cao"
+      ],
+      "url": "https://doi.org/10.1109/AINIT65432.2025.11035735",
+      "venue": "2025 IEEE 6th International Seminar on Artificial Intelligence, Networking and Information Technology (AINIT)",
+      "source": "semantic_scholar"
+    },
+    "s2:edcba5c25bbc7b4eea76f7fdbd92c368c51f3835": {
+      "paper_id": "s2:edcba5c25bbc7b4eea76f7fdbd92c368c51f3835",
+      "title": "MARS-VFL: A Unified Benchmark for Vertical Federated Learning with Realistic Evaluation",
+      "abstract": "Vertical Federated Learning (VFL) has emerged as a critical privacy-preserving learning paradigm, enabling collaborative model training by leveraging distributed features across clients. However, due to privacy concerns, there are few publicly available real-world datasets for evaluating VFL methods, which poses significant challenges to related research. To bridge this gap, we propose MARS-VFL, a unified benchmark for realistic VFL evaluation. It integrates data from practical applications involving collaboration across different features, maintaining compatibility with the VFL setting. Based on this, we standardize the evaluation of VFL methods from the mainstream aspects of efficiency, robustness, and security. We conduct comprehensive experiments to assess different VFL approaches, providing references for unified evaluation. Furthermore, we are the first to unify the evaluation of robustness challenges in VFL and introduce a new method for addressing robustness challenges, establishing standard baselines for future research.",
+      "year": 2025,
+      "authors": [
+        "Wei Shen",
+        "Wei-Qi Liu",
+        "Mingde Chen",
+        "Wen-Ke Huang",
+        "Mang Ye"
+      ],
+      "url": "https://doi.org/10.52202/085713-4272",
+      "venue": "Neural Information Processing Systems",
+      "source": "semantic_scholar"
+    },
+    "s2:a8b9d55478be7316de3736d2a36333081f452d25": {
+      "paper_id": "s2:a8b9d55478be7316de3736d2a36333081f452d25",
+      "title": "A Federated Random Forest Solution for Secure Distributed Machine Learning",
+      "abstract": "Privacy and regulatory barriers often hinder centralized machine learning solutions, particularly in sectors like healthcare where data cannot be freely shared. Federated learning has emerged as a powerful paradigm to address these concerns; however, existing frameworks primarily support gradientbased models, leaving a gap for more interpretable, tree-based approaches. This paper introduces a federated learning framework for Random Forest classifiers that preserves data privacy and provides robust performance in distributed settings. By leveraging PySyft for secure, privacy-aware computation, our method enables multiple institutions to collaboratively train Random Forest models on locally stored data without exposing sensitive information. The framework supports weighted model averaging to account for varying data distributions, incremental learning to progressively refine models, and local evaluation to assess performance across heterogeneous datasets. Experiments on two realworld healthcare benchmarks demonstrate that the federated approach maintains competitive predictive accuracy—within a maximum 9% margin of centralized methods—while satisfying stringent privacy requirements. These findings underscore the viability of tree-based federated learning for scenarios where data cannot be centralized due to regulatory, competitive, or technical constraints. The proposed solution addresses a notable gap in existing federated learning libraries, offering an adaptable tool for secure distributed machine learning tasks that demand both transparency and reliable performance. The tool is available at https://github.com/ieeta-pt/fed_rf",
+      "year": 2025,
+      "authors": [
+        "Alexandre Cotorobai",
+        "J. M. Silva",
+        "José Luís Oliveira"
+      ],
+      "url": "https://doi.org/10.1109/CBMS65348.2025.00159",
+      "venue": "2025 IEEE 38th International Symposium on Computer-Based Medical Systems (CBMS)",
+      "source": "semantic_scholar"
+    },
+    "s2:3dddc61e1a6a208676684d058d5139e4c082600d": {
+      "paper_id": "s2:3dddc61e1a6a208676684d058d5139e4c082600d",
+      "title": "Federated Dataset Simulation: Inducing Label-Free Heterogeneity Across Tasks",
+      "abstract": "Federated Learning enables collaborative model training across decentralized clients without sharing raw data. While the field has seen rapid growth, the datasets underpinning FL evaluation have not kept pace: real federated datasets remain scarce, and most studies rely on small-scale centralized classification datasets partitioned via Dirichlet label skew, a one-dimensional proxy for the multi-dimensional heterogeneity present in real federations. Moreover, label-based partitioning is by construction inapplicable to non-classification tasks such as segmentation and detection, for which no principled simulation method exists. We cast the conversion of centralized datasets into federated benchmarks as the task of Federated Dataset Simulation (FDS), and decompose it into a representation function $\\Phi$ and an assignment mechanism $\\pi$. We provide two label-free instantiations -- geometric partitioning via pretrained model embeddings and semantic partitioning via vision-language model-derived criteria -- applicable to classification and dense prediction tasks alike. We evaluate across four datasets spanning classification, segmentation, and detection, and show that both methods induce heterogeneity that matches or exceeds that of label-skew partitioning, with measurable impact on downstream FL performance. We release fds, a modular open-source package for end-to-end federated dataset simulation, heterogeneity measurement, and FL training, at https://github.com/siomvas/fds.",
+      "year": 2026,
+      "authors": [
+        "Vasilis Siomos",
+        "Lam Ngo",
+        "J. Passerat-Palmbach",
+        "G. Tarroni"
+      ],
+      "url": "https://www.semanticscholar.org/paper/3dddc61e1a6a208676684d058d5139e4c082600d",
+      "venue": null,
+      "source": "semantic_scholar"
+    },
+    "arxiv:2608.12962": {
+      "paper_id": "arxiv:2608.12962",
+      "title": "Understanding Backdoor Vulnerabilities in Vertical Federated Learning: The Gap Between Research and Practice",
+      "abstract": "Vertical Federated Learning (VFL) enables organizations holding complementary features of shared entities to collaborate and train models. In this setting, the initiator can withhold information about the learning task, while other contributors participate without exposing their local datasets, creating an asymmetric information structure aligned with growing privacy demands. However, this asymmetry is a double-edged sword. Among various threats, backdoor attacks are particularly concerning because VFL not only enables malicious contributors to poison the model during training, but also allows them to activate the backdoor at inference time to manipulate predictions. Although prior work has reported near-perfect attack success rates and proposed effective defenses, we find that most findings fail to hold under realistic conditions, exposing a fundamental gap between research and practice. In this paper, we present a systematic, practice-oriented study of backdoor vulnerabilities in VFL, revealing this gap in both methodological design and evaluation practices. We show that existing approaches overlook key practical constraints and therefore rely on unrealistic prior knowledge. Furthermore, these limitations have remained hidden due to poorly designed evaluation practices in the literature. To bridge this gap, we redefine threat models under realistic constraints, propose practical backdoor workflows, and introduce BVBench, a backdoor-centric benchmark that enables fair, practical, and comprehensive evaluation, preloaded with state-of-the-art baselines. BVBench provides strong evidence of the fragility of the current understanding of VFL backdoor risks and establishes a foundation for steering research toward uncovering practical vulnerabilities and developing more meaningful defenses.",
+      "year": 2026,
+      "authors": [
+        "Ziqi Zhao",
+        "Jialin Lu",
+        "Junjie Shan",
+        "Junyuan Zhang",
+        "Shuya Yang",
+        "Ka-Ho Chow"
+      ],
+      "url": "https://arxiv.org/abs/2608.12962",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2401.10375": {
+      "paper_id": "arxiv:2401.10375",
+      "title": "Foundation Models in Federated Learning: Assessing Backdoor Vulnerabilities",
+      "abstract": "Federated Learning (FL), a privacy-preserving machine learning framework, faces significant data-related challenges. For example, the lack of suitable public datasets leads to ineffective information exchange, especially in heterogeneous environments with uneven data distribution. Foundation Models (FMs) offer a promising solution by generating synthetic datasets that mimic client data distributions, aiding model initialization and knowledge sharing among clients. However, the interaction between FMs and FL introduces new attack vectors that remain largely unexplored. This work therefore assesses the backdoor vulnerabilities exploiting FMs, where attackers exploit safety issues in FMs and poison synthetic datasets to compromise the entire system. Unlike traditional attacks, these new threats are characterized by their one-time, external nature, requiring minimal involvement in FL training. Given these uniqueness, current FL defense strategies provide limited robustness against this novel attack approach. Extensive experiments across image and text domains reveal the high susceptibility of FL to these novel threats, emphasizing the urgent need for enhanced security measures in FL in the era of FMs.",
+      "year": 2024,
+      "authors": [
+        "Xi Li",
+        "Chen Wu",
+        "Jiaqi Wang"
+      ],
+      "url": "https://arxiv.org/abs/2401.10375",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2111.03363": {
+      "paper_id": "arxiv:2111.03363",
+      "title": "Federated Learning Attacks Revisited: A Critical Discussion of Gaps, Assumptions, and Evaluation Setups",
+      "abstract": "Federated learning (FL) enables a set of entities to collaboratively train a machine learning model without sharing their sensitive data, thus, mitigating some privacy concerns. However, an increasing number of works in the literature propose attacks that can manipulate the model and disclose information about the training data in FL. As a result, there has been a growing belief in the research community that FL is highly vulnerable to a variety of severe attacks. Although these attacks do indeed highlight security and privacy risks in FL, some of them may not be as effective in production deployment because they are feasible only under special -- sometimes impractical -- assumptions. Furthermore, some attacks are evaluated under limited setups that may not match real-world scenarios. In this paper, we investigate this issue by conducting a systematic mapping study of attacks against FL, covering 48 relevant papers from 2016 to the third quarter of 2021. On the basis of this study, we provide a quantitative analysis of the proposed attacks and their evaluation settings. This analysis reveals several research gaps with regard to the type of target ML models and their architectures. Additionally, we highlight unrealistic assumptions in the problem settings of some attacks, related to the hyper-parameters of the ML model and data distribution among clients. Furthermore, we identify and discuss several fallacies in the evaluation of attacks, which open up questions on the generalizability of the conclusions. As a remedy, we propose a set of recommendations to avoid these fallacies and to promote adequate evaluations.",
+      "year": 2021,
+      "authors": [
+        "Aidmar Wainakh",
+        "Ephraim Zimmer",
+        "Sandeep Subedi",
+        "Jens Keim",
+        "Tim Grube",
+        "Shankar Karuppayah",
+        "Alejandro Sanchez Guinea",
+        "Max Mühlhäuser"
+      ],
+      "url": "https://arxiv.org/abs/2111.03363",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2308.07805": {
+      "paper_id": "arxiv:2308.07805",
+      "title": "Fairness and Privacy in Federated Learning and Their Implications in Healthcare",
+      "abstract": "Currently, many contexts exist where distributed learning is difficult or otherwise constrained by security and communication limitations. One common domain where this is a consideration is in Healthcare where data is often governed by data-use-ordinances like HIPAA. On the other hand, larger sample sizes and shared data models are necessary to allow models to better generalize on account of the potential for more variability and balancing underrepresented classes. Federated learning is a type of distributed learning model that allows data to be trained in a decentralized manner. This, in turn, addresses data security, privacy, and vulnerability considerations as data itself is not shared across a given learning network nodes. Three main challenges to federated learning include node data is not independent and identically distributed (iid), clients requiring high levels of communication overhead between peers, and there is the heterogeneity of different clients within a network with respect to dataset bias and size. As the field has grown, the notion of fairness in federated learning has also been introduced through novel implementations. Fairness approaches differ from the standard form of federated learning and also have distinct challenges and considerations for the healthcare domain. This paper endeavors to outline the typical lifecycle of fair federated learning in research as well as provide an updated taxonomy to account for the current state of fairness in implementations. Lastly, this paper provides added insight into the implications and challenges of implementing and supporting fairness in federated learning in the healthcare domain.",
+      "year": 2023,
+      "authors": [
+        "Navya Annapareddy",
+        "Jade Preston",
+        "Judy Fox"
+      ],
+      "url": "https://arxiv.org/abs/2308.07805",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:b7d1675c645131391b40fe3cf280b95bf5348a0b": {
+      "paper_id": "s2:b7d1675c645131391b40fe3cf280b95bf5348a0b",
+      "title": "Federated Learning in Customer-Centric Applications: Balancing Privacy, Personalization and Performance",
+      "abstract": ": Federated Learning (FL) offers a practical way to meet the growing need for privacy-preserving machine learning, especially in customer-focused areas like finance, retail, and business collaboration. It allows models to be trained securely and in a decentralized way, without collecting sensitive data in one place. This paper examines how FL facilitates secure and decentralized model training while avoiding the centralization of sensitive data. It addresses key challenges such as data heterogeneity, model convergence, and privacy concerns, proposing methods like clustered FL, asynchronous updates, and attention-based mechanisms for improving model performance. The paper also discusses privacy vulnerabilities, such as gradient leakage, and explores solutions like differential privacy and secure aggregation. Although federated learning enhances data privacy and service personalization, it faces limitations, including increased computational complexity and communication overhead. Future research needs to prioritize enhancing privacy safeguards while ensuring model accuracy and scalability. This review can serve as a valuable reference for researchers looking to understand the advancements in this field.",
+      "year": 2024,
+      "authors": [
+        "Xin Gao"
+      ],
+      "url": "https://doi.org/10.5220/0013527900004619",
+      "venue": "Proceedings of the 2nd International Conference on Data Analysis and Machine Learning",
+      "source": "semantic_scholar"
+    },
+    "s2:0d70a8cf09489ea3e4770771ed4c0b2277770185": {
+      "paper_id": "s2:0d70a8cf09489ea3e4770771ed4c0b2277770185",
+      "title": "Privacy-Preserving Techniques in Federated Learning: A Comprehensive Survey and Critical Review",
+      "abstract": "Federated Learning (FL) is a distributed machine learning paradigm in which multiple clients collaboratively train a model while their raw data remains local. Despite this design, FL is exposed to privacy risks such as inference attacks, model inversion, membership inference, and gradient leakage, which threaten sensitive user data. Privacy-preserving techniques have therefore been studied extensively. This paper reviews four main families: differential privacy (DP), secure multi-party computation (SMPC), homomorphic encryption (HE), and trusted execution environments (TEE). DP adds controlled noise to model updates so that individual records cannot be identified, but excessive noise degrades model performance. SMPC lets several parties jointly compute a function over their inputs without revealing them, but its resource demands make large-scale FL deployments difficult. HE allows computation directly on encrypted data and offers strong confidentiality, but its computational cost makes real-time use impractical. TEEs rely on hardware-based isolation to protect sensitive computation from untrusted parts of the system, but they require dedicated hardware, which has limited adoption. We evaluate each technique in terms of privacy protection, effect on model performance, and communication overhead, and we outline emerging trends. Hybrid privacy-preserving approaches are identified as a promising research direction.",
+      "year": 2026,
+      "authors": [
+        "M. Bhuvaneswari",
+        "B. Pavani"
+      ],
+      "url": "https://doi.org/10.1109/ICUIS70669.2026.11791299",
+      "venue": "2026 6th International Conference on Ubiquitous Computing and Intelligent Information Systems (ICUIS)",
+      "source": "semantic_scholar"
+    },
+    "s2:b4fffad301f48574266c73858796ae4a1fa59d08": {
+      "paper_id": "s2:b4fffad301f48574266c73858796ae4a1fa59d08",
+      "title": "Data Privacy in Machine Learning: Challenges and Federated Learning Solutions",
+      "abstract": "Federated Learning (FL) enables collaborative model training across distributed devices while preserving data locality, making it a promising paradigm for privacy-sensitive applications. This paper presents a structured and comprehensive survey of FL studies with a focus on confidentiality and privacy-preserving mechanisms. This paper first reviews major FL architectures including centralized, decentralized, FedAvg, clustered, asynchronous, and heterogeneous approaches and provides a comparative discussion of their performance, scalability, and implementation complexity. Recent survey literature (2023-2025) is analyzed to highlight evolving challenges related to fairness, heterogeneity, and system-level security. Subsequently, key confidentiality methods are comparatively reviewed, including Differential Privacy (DP), Homomorphic Encryption (HE), Trusted Execution Environments (TEE), Secure Aggregation (SA), and Secure Multi-Party Computation (SMPC). Their relative trade-offs in computation cost, scalability, and protection strength are examined across diverse application domains, such as healthcare, finance, and IoT. The findings indicate that no single mechanism offers complete protection, and effective privacy assurance in FL requires hybrid approaches that balance efficiency with confidentiality. Finally, open research gaps and future directions are identified, emphasizing the need for adaptive, resource-aware, and trust-anchored FL frameworks capable of maintaining privacy guarantees under real-world heterogeneity and dynamic participation.",
+      "year": 2026,
+      "authors": [
+        "G. Özen",
+        "Y. Özen"
+      ],
+      "url": "https://doi.org/10.35193/bseufbd.1756289",
+      "venue": "Bilecik şeyh edebali üniversİtesi fen bilimleri dergisi",
+      "source": "semantic_scholar"
+    },
+    "s2:0f9c8c7e99fc203e3163ea3e81ecc9c4da32945d": {
+      "paper_id": "s2:0f9c8c7e99fc203e3163ea3e81ecc9c4da32945d",
+      "title": "Emerging Paradigms for Securing Federated Learning Systems",
+      "abstract": "Federated Learning (FL) facilitates collaborative model training while keeping raw data decentralized, making it a conduit for leveraging the power of IoT devices while maintaining privacy of the locally collected data. However, existing privacypreserving techniques present notable hurdles. Methods such as Multi-Party Computation (MPC), Homomorphic Encryption (HE), and Differential Privacy (DP) often incur high computational costs and suffer from limited scalability. This survey examines emerging approaches that hold promise for enhancing both privacy and efficiency in FL, including Trusted Execution Environments (TEEs), Physical Unclonable Functions (PUFs), Quantum Computing (QC), Chaos-Based Encryption (CBE), Neuromorphic Computing (NC), and Swarm Intelligence (SI). For each paradigm, we assess its relevance to the FL pipeline, outlining its strengths, limitations, and practical considerations. We conclude by highlighting open challenges and prospective research avenues, offering a detailed roadmap for advancing secure and scalable FL systems.",
+      "year": 2025,
+      "authors": [
+        "A. Abouelmagd",
+        "Amr Hilal"
+      ],
+      "url": "https://doi.org/10.1109/GCAIoT68269.2025.11275564",
+      "venue": "Global Conference on Artificial Intelligence and Internet of Things",
+      "source": "semantic_scholar"
+    }
+  },
+  "question_id": "Q07",
+  "area": "ML"
+}

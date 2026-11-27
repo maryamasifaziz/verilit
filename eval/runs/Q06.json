@@ -1,0 +1,677 @@
+{
+  "question": "What techniques make deep neural networks robust to adversarial examples?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What are the primary algorithmic and training methods used to improve adversarial robustness?",
+      "search_query": "adversarial training defense deep neural networks",
+      "paper_ids": [
+        "s2:20ded8bb7bd6d74bc594756cc15c0b3fbd511123",
+        "s2:d1431f7f749cd132d9faeddf802107d5baeab6ff",
+        "arxiv:1810.03739",
+        "s2:b71309c93d3eb845d770150cab0eac5397af1c29",
+        "s2:41fbbe6faa247a7f3465c0bccd09e6591928bc13"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What datasets and benchmarking suites are standard for evaluating neural network robustness?",
+      "search_query": "adversarial robustness benchmarks image classification datasets",
+      "paper_ids": [
+        "arxiv:2302.14301",
+        "arxiv:2010.09670",
+        "arxiv:2310.18626",
+        "arxiv:2306.12111",
+        "arxiv:2212.08130"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What are the reported performance trade-offs and empirical results of robustness techniques?",
+      "search_query": "robustness accuracy trade off deep learning results",
+      "paper_ids": [
+        "s2:13b0444d079bea1c8c57a6082200b67ab5f4616e",
+        "s2:1d60585c26c37e121ed6ffd22cff91c6bf449cac",
+        "arxiv:2007.08428",
+        "s2:5244fff51c60d457e57f678eab40202b7ed6f651",
+        "arxiv:2007.15359"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations and vulnerabilities of existing adversarial defense mechanisms?",
+      "search_query": "limitations adaptive attacks adversarial machine learning",
+      "paper_ids": [
+        "arxiv:2102.11860",
+        "arxiv:2506.01267",
+        "arxiv:2503.20844",
+        "arxiv:1906.12061",
+        "arxiv:2306.03600"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "A two-stage training procedure maps input samples into a feature embedding space with high separability in the first stage and learns parameters only for the last classification layer in the second stage to enhance adversarial robustness.",
+        "paper_id": "s2:20ded8bb7bd6d74bc594756cc15c0b3fbd511123"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A two-stage training procedure maps input samples into a feature embedding space with high separability in the first stage and learns parameters only for the last classification layer in the second stage to enhance adversarial robustness.",
+          "paper_id": "s2:20ded8bb7bd6d74bc594756cc15c0b3fbd511123",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9322,
+          "p_supported": 0.9322,
+          "accepted": true,
+          "alt_p_supported": 0.8999
+        }
+      ],
+      "final": {
+        "text": "A two-stage training procedure maps input samples into a feature embedding space with high separability in the first stage and learns parameters only for the last classification layer in the second stage to enhance adversarial robustness.",
+        "paper_id": "s2:20ded8bb7bd6d74bc594756cc15c0b3fbd511123",
+        "label": "SUPPORTED",
+        "confidence": 0.9322
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "The Adversarial Noise Propagation (ANP) training algorithm injects noise into hidden layers in a layer-wise manner to improve the adversarial robustness of deep models.",
+        "paper_id": "s2:41fbbe6faa247a7f3465c0bccd09e6591928bc13"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The Adversarial Noise Propagation (ANP) training algorithm injects noise into hidden layers in a layer-wise manner to improve the adversarial robustness of deep models.",
+          "paper_id": "s2:41fbbe6faa247a7f3465c0bccd09e6591928bc13",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9499,
+          "p_supported": 0.9499,
+          "accepted": true,
+          "alt_p_supported": 0.9261
+        }
+      ],
+      "final": {
+        "text": "The Adversarial Noise Propagation (ANP) training algorithm injects noise into hidden layers in a layer-wise manner to improve the adversarial robustness of deep models.",
+        "paper_id": "s2:41fbbe6faa247a7f3465c0bccd09e6591928bc13",
+        "label": "SUPPORTED",
+        "confidence": 0.9499
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "ARES-Bench is a comprehensive robustness benchmark established for image classification tasks on ImageNet using 55 typical deep learning models.",
+        "paper_id": "arxiv:2302.14301"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "ARES-Bench is a comprehensive robustness benchmark established for image classification tasks on ImageNet using 55 typical deep learning models.",
+          "paper_id": "arxiv:2302.14301",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9445,
+          "p_supported": 0.9445,
+          "accepted": true,
+          "alt_p_supported": 0.9241
+        }
+      ],
+      "final": {
+        "text": "ARES-Bench is a comprehensive robustness benchmark established for image classification tasks on ImageNet using 55 typical deep learning models.",
+        "paper_id": "arxiv:2302.14301",
+        "label": "SUPPORTED",
+        "confidence": 0.9445
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "RobustBench is a standardized benchmark that evaluates adversarial robustness for image classification models on l_infinity- and l_2-threat models and common corruptions.",
+        "paper_id": "arxiv:2010.09670"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "RobustBench is a standardized benchmark that evaluates adversarial robustness for image classification models on l_infinity- and l_2-threat models and common corruptions.",
+          "paper_id": "arxiv:2010.09670",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9242,
+          "p_supported": 0.9242,
+          "accepted": true,
+          "alt_p_supported": 0.9056
+        }
+      ],
+      "final": {
+        "text": "RobustBench is a standardized benchmark that evaluates adversarial robustness for image classification models on l_infinity- and l_2-threat models and common corruptions.",
+        "paper_id": "arxiv:2010.09670",
+        "label": "SUPPORTED",
+        "confidence": 0.9242
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "Random sampling in the search space of DARTS with simple ensembling improves robustness to PGD attack by nearly 12%.",
+        "paper_id": "arxiv:2007.08428"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Random sampling in the search space of DARTS with simple ensembling improves robustness to PGD attack by nearly 12%.",
+          "paper_id": "arxiv:2007.08428",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9017,
+          "p_supported": 0.9017,
+          "accepted": true,
+          "alt_p_supported": 0.9313
+        }
+      ],
+      "final": {
+        "text": "Random sampling in the search space of DARTS with simple ensembling improves robustness to PGD attack by nearly 12%.",
+        "paper_id": "arxiv:2007.08428",
+        "label": "SUPPORTED",
+        "confidence": 0.9017
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "Post-training quantization is prone to substantial accuracy loss in noisy environments, whereas quantization-aware training preserves model accuracy while maintaining low inference latency.",
+        "paper_id": "s2:5244fff51c60d457e57f678eab40202b7ed6f651"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Post-training quantization is prone to substantial accuracy loss in noisy environments, whereas quantization-aware training preserves model accuracy while maintaining low inference latency.",
+          "paper_id": "s2:5244fff51c60d457e57f678eab40202b7ed6f651",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9204,
+          "p_supported": 0.9204,
+          "accepted": true,
+          "alt_p_supported": 0.8817
+        }
+      ],
+      "final": {
+        "text": "Post-training quantization is prone to substantial accuracy loss in noisy environments, whereas quantization-aware training preserves model accuracy while maintaining low inference latency.",
+        "paper_id": "s2:5244fff51c60d457e57f678eab40202b7ed6f651",
+        "label": "SUPPORTED",
+        "confidence": 0.9204
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Reliable evaluation of adversarial defenses is often limited to manual expert crafting or fixed attack ensembles that may not be effective for a specific defense.",
+        "paper_id": "arxiv:2102.11860"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Reliable evaluation of adversarial defenses is often limited to manual expert crafting or fixed attack ensembles that may not be effective for a specific defense.",
+          "paper_id": "arxiv:2102.11860",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8981,
+          "p_supported": 0.8981,
+          "accepted": true,
+          "alt_p_supported": 0.8545
+        }
+      ],
+      "final": {
+        "text": "Reliable evaluation of adversarial defenses is often limited to manual expert crafting or fixed attack ensembles that may not be effective for a specific defense.",
+        "paper_id": "arxiv:2102.11860",
+        "label": "SUPPORTED",
+        "confidence": 0.8981
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Existing defense methods in federated learning can be easily circumvented when faced with strong adaptive adversaries capable of adapting to multiple objectives simultaneously, and have limited effectiveness when no assumptions are made about underlying data distributions.",
+        "paper_id": "arxiv:2306.03600"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Existing defense methods in federated learning can be easily circumvented when faced with strong adaptive adversaries capable of adapting to multiple objectives simultaneously, and have limited effectiveness when no assumptions are made about underlying data distributions.",
+          "paper_id": "arxiv:2306.03600",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9184,
+          "p_supported": 0.9184,
+          "accepted": true,
+          "alt_p_supported": 0.9025
+        }
+      ],
+      "final": {
+        "text": "Existing defense methods in federated learning can be easily circumvented when faced with strong adaptive adversaries capable of adapting to multiple objectives simultaneously, and have limited effectiveness when no assumptions are made about underlying data distributions.",
+        "paper_id": "arxiv:2306.03600",
+        "label": "SUPPORTED",
+        "confidence": 0.9184
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:20ded8bb7bd6d74bc594756cc15c0b3fbd511123",
+      "citation": "Ran Wang, Jingyu Xiong, Haopeng Ke et al. (2023). Improving the Adversarial Robustness of Deep Neural Networks via Efficient Two-Stage Training. International Conference on Machine Learning and Computing. https://doi.org/10.1109/ICMLC58545.2023.10327974"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:41fbbe6faa247a7f3465c0bccd09e6591928bc13",
+      "citation": "Ai-Shan Liu, Xiang-Long Liu, Hang Yu et al. (2019). Training Robust Deep Neural Networks via Adversarial Noise Propagation. IEEE Transactions on Image Processing. https://doi.org/10.1109/TIP.2021.3082317"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2302.14301",
+      "citation": "Chang Liu, Yinpeng Dong, Wenzhao Xiang et al. (2023). A Comprehensive Study on Robustness of Image Classification Models: Benchmarking and Rethinking. arXiv. https://arxiv.org/abs/2302.14301"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2010.09670",
+      "citation": "Francesco Croce, Maksym Andriushchenko, Vikash Sehwag et al. (2020). RobustBench: a standardized adversarial robustness benchmark. arXiv. https://arxiv.org/abs/2010.09670"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2007.08428",
+      "citation": "Chaitanya Devaguptapu, Devansh Agarwal, Gaurav Mittal et al. (2020). On Adversarial Robustness: A Neural Architecture Search perspective. arXiv. https://arxiv.org/abs/2007.08428"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:5244fff51c60d457e57f678eab40202b7ed6f651",
+      "citation": "Qutaiba Azqiba, Yanne LaCuen (2025). Enhancing Efficiency and Robustness of Compressed Deep Learning Models on Edge Devices for IoT Sensor Data. Universal Journal of Future Intelligence: Innovations and Artificial Intelligence. https://doi.org/10.70568/ujfiiai.2.2.3"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2102.11860",
+      "citation": "Chengyuan Yao, Pavol Bielik, Petar Tsankov et al. (2021). Automated Discovery of Adaptive Attacks on Adversarial Defenses. arXiv. https://arxiv.org/abs/2102.11860"
+    },
+    {
+      "n": 8,
+      "paper_id": "arxiv:2306.03600",
+      "citation": "Torsten Krauß, Alexandra Dmitrienko (2023). Avoid Adversarial Adaption in Federated Learning by Multi-Metric Investigations. arXiv. https://arxiv.org/abs/2306.03600"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Improving the adversarial robustness of deep neural networks involves several primary algorithmic and training methods. One such approach is a two-stage training procedure that maps input samples into a feature embedding space with high separability initially, and then learns parameters exclusively for the final classification layer [1]. Additionally, the Adversarial Noise Propagation (ANP) training algorithm enhances robustness by injecting noise into hidden layers in a layer-wise manner [2]. \n\nStandard datasets and benchmarking suites are essential for evaluating these capabilities. RobustBench serves as a standardized benchmark evaluating image classification models across $l_\\infty$- and $l_2$-threat models as well as common corruptions [4]. Furthermore, ARES-Bench provides a comprehensive robustness benchmark for image classification on ImageNet utilizing 55 typical deep learning models [3]. \n\nRegarding performance trade-offs and empirical results, random sampling in the DARTS search space combined with simple ensembling improves robustness to PGD attacks by nearly 12% [5]. In the context of quantization, post-training quantization suffers from substantial accuracy loss in noisy environments, whereas quantization-aware training successfully preserves model accuracy while keeping inference latency low [6]. \n\nDespite these advancements, existing defense mechanisms face notable limitations and vulnerabilities. Reliable evaluation of defenses is frequently constrained to manual expert crafting or fixed attack ensembles that might lack effectiveness against a given defense [7]. Moreover, defense methods in federated learning are easily circumvented by strong adaptive adversaries that simultaneously target multiple objectives, and these defenses demonstrate limited effectiveness when operating without assumptions regarding underlying data distributions [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 7,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 10,
+      "arxiv": 0
+    },
+    "seconds": 132.4
+  },
+  "papers": {
+    "s2:20ded8bb7bd6d74bc594756cc15c0b3fbd511123": {
+      "paper_id": "s2:20ded8bb7bd6d74bc594756cc15c0b3fbd511123",
+      "title": "Improving the Adversarial Robustness of Deep Neural Networks via Efficient Two-Stage Training",
+      "abstract": "Despite the widespread applications of deep neural networks (DNNs), the potential threats of adversarial examples remain considerable concerns. In this paper, we propose a new proactive defense method based on a two-stage training procedure in order to enhance the adversarial robustness of DNNs. The first stage intends to map the input samples into a feature embedding space with high separability, while the second stage fixes the feature generator and learns the parameters only for the last layer for classification. Different from most of the existing state-of-the-art methods, our method neither spends extensive costs to generate adversarial information, nor constructs a complex penalty function to force the model satisfying specific restrictions under subjective assumptions. Instead, our method cuts off the interactions between the parameter updating for the deep feature generator and the classifier, discovers the relationship between adversarial robustness and separability in embedding space, results in a better interpretability. Substantial experiments on various network structures deployed on benchmark data sets including MNIST, FASHION MNIST and CIFAR10 and their adversary from different attacks demonstrate the rationality of our method.",
+      "year": 2023,
+      "authors": [
+        "Ran Wang",
+        "Jingyu Xiong",
+        "Haopeng Ke",
+        "Yu-Heng Jia",
+        "D. D. Wang"
+      ],
+      "url": "https://doi.org/10.1109/ICMLC58545.2023.10327974",
+      "venue": "International Conference on Machine Learning and Computing",
+      "source": "semantic_scholar"
+    },
+    "s2:d1431f7f749cd132d9faeddf802107d5baeab6ff": {
+      "paper_id": "s2:d1431f7f749cd132d9faeddf802107d5baeab6ff",
+      "title": "Towards lifting the trade-off between accuracy and adversarial robustness of deep neural networks with application on COVID 19 CT image classification and medical image segmentation",
+      "abstract": "Deep neural networks (DNNs) are vulnerable to adversarial noise. Adversarial training is a general strategy to improve DNN robustness. But training a DNN model with adversarial noises may result in a much lower accuracy on clean data. Towards lifting this trade-off, we propose an adversarial training method that generates optimal adversarial training samples. Our method is evaluated on four public medical datasets, with popular deep learning models on image classification and segmentation tasks. The results show that our method has the best robustness against adversarial noises and has a minimal accuracy degradation compared to the other defense methods.",
+      "year": 2023,
+      "authors": [
+        "Lin-Hai Ma",
+        "Liang Liang"
+      ],
+      "url": "https://doi.org/10.1117/12.2653392",
+      "venue": "Medical Imaging",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1810.03739": {
+      "paper_id": "arxiv:1810.03739",
+      "title": "Efficient Two-Step Adversarial Defense for Deep Neural Networks",
+      "abstract": "In recent years, deep neural networks have demonstrated outstanding performance in many machine learning tasks. However, researchers have discovered that these state-of-the-art models are vulnerable to adversarial examples: legitimate examples added by small perturbations which are unnoticeable to human eyes. Adversarial training, which augments the training data with adversarial examples during the training process, is a well known defense to improve the robustness of the model against adversarial attacks. However, this robustness is only effective to the same attack method used for adversarial training. Madry et al.(2017) suggest that effectiveness of iterative multi-step adversarial attacks and particularly that projected gradient descent (PGD) may be considered the universal first order adversary and applying the adversarial training with PGD implies resistance against many other first order attacks. However, the computational cost of the adversarial training with PGD and other multi-step adversarial examples is much higher than that of the adversarial training with other simpler attack techniques. In this paper, we show how strong adversarial examples can be generated only at a cost similar to that of two runs of the fast gradient sign method (FGSM), allowing defense against adversarial attacks with a robustness level comparable to that of the adversarial training with multi-step adversarial examples. We empirically demonstrate the effectiveness of the proposed two-step defense approach against different attack methods and its improvements over existing defense strategies.",
+      "year": 2018,
+      "authors": [
+        "Ting-Jui Chang",
+        "Yukun He",
+        "Peng Li"
+      ],
+      "url": "https://arxiv.org/abs/1810.03739",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:b71309c93d3eb845d770150cab0eac5397af1c29": {
+      "paper_id": "s2:b71309c93d3eb845d770150cab0eac5397af1c29",
+      "title": "Not So Robust After All: Evaluating the Robustness of Deep Neural Networks to Unseen Adversarial Attacks",
+      "abstract": "Deep neural networks (DNNs) have gained prominence in various applications, but remain vulnerable to adversarial attacks that manipulate data to mislead a DNN. This paper aims to challenge the efficacy and transferability of two contemporary defense mechanisms against adversarial attacks: (a) robust training and (b) adversarial training. The former suggests that training a DNN on a data set consisting solely of robust features should produce a model resistant to adversarial attacks. The latter creates an adversarially trained model that learns to minimise an expected training loss over a distribution of bounded adversarial perturbations. We reveal a significant lack in the transferability of these defense mechanisms and provide insight into the potential dangers posed by L∞-norm attacks previously underestimated by the research community. Such conclusions are based on extensive experiments involving (1) different model architectures, (2) the use of canonical correlation analysis, (3) visual and quantitative analysis of the neural network’s latent representations, (4) an analysis of networks’ decision boundaries and (5) the use of equivalence of L2 and L∞ perturbation norm theories.",
+      "year": 2023,
+      "authors": [
+        "R. Garaev",
+        "B. Rasheed",
+        "A. Khan"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2308.06467",
+      "venue": "Algorithms",
+      "source": "semantic_scholar"
+    },
+    "s2:41fbbe6faa247a7f3465c0bccd09e6591928bc13": {
+      "paper_id": "s2:41fbbe6faa247a7f3465c0bccd09e6591928bc13",
+      "title": "Training Robust Deep Neural Networks via Adversarial Noise Propagation",
+      "abstract": "In practice, deep neural networks have been found to be vulnerable to various types of noise, such as adversarial examples and corruption. Various adversarial defense methods have accordingly been developed to improve adversarial robustness for deep models. However, simply training on data mixed with adversarial examples, most of these models still fail to defend against the generalized types of noise. Motivated by the fact that hidden layers play a highly important role in maintaining a robust model, this paper proposes a simple yet powerful training algorithm, named Adversarial Noise Propagation (ANP), which injects noise into the hidden layers in a layer-wise manner. ANP can be implemented efficiently by exploiting the nature of the backward-forward training style. Through thorough investigations, we determine that different hidden layers make different contributions to model robustness and clean accuracy, while shallow layers are comparatively more critical than deep layers. Moreover, our framework can be easily combined with other adversarial training methods to further improve model robustness by exploiting the potential of hidden layers. Extensive experiments on MNIST, CIFAR-10, CIFAR-10-C, CIFAR-10-P, and ImageNet demonstrate that ANP enables the strong robustness for deep models against both adversarial and corrupted ones, and also significantly outperforms various adversarial defense methods.",
+      "year": 2019,
+      "authors": [
+        "Ai-Shan Liu",
+        "Xiang-Long Liu",
+        "Hang Yu",
+        "Chongzhi Zhang",
+        "Qiang Liu",
+        "Da-Cheng Tao"
+      ],
+      "url": "https://doi.org/10.1109/TIP.2021.3082317",
+      "venue": "IEEE Transactions on Image Processing",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2302.14301": {
+      "paper_id": "arxiv:2302.14301",
+      "title": "A Comprehensive Study on Robustness of Image Classification Models: Benchmarking and Rethinking",
+      "abstract": "The robustness of deep neural networks is usually lacking under adversarial examples, common corruptions, and distribution shifts, which becomes an important research problem in the development of deep learning. Although new deep learning methods and robustness improvement techniques have been constantly proposed, the robustness evaluations of existing methods are often inadequate due to their rapid development, diverse noise patterns, and simple evaluation metrics. Without thorough robustness evaluations, it is hard to understand the advances in the field and identify the effective methods. In this paper, we establish a comprehensive robustness benchmark called \\textbf{ARES-Bench} on the image classification task. In our benchmark, we evaluate the robustness of 55 typical deep learning models on ImageNet with diverse architectures (e.g., CNNs, Transformers) and learning algorithms (e.g., normal supervised training, pre-training, adversarial training) under numerous adversarial attacks and out-of-distribution (OOD) datasets. Using robustness curves as the major evaluation criteria, we conduct large-scale experiments and draw several important findings, including: 1) there is an inherent trade-off between adversarial and natural robustness for the same model architecture; 2) adversarial training effectively improves adversarial robustness, especially when performed on Transformer architectures; 3) pre-training significantly improves natural robustness based on more training data or self-supervised learning. Based on ARES-Bench, we further analyze the training tricks in large-scale adversarial training on ImageNet. By designing the training settings accordingly, we achieve the new state-of-the-art adversarial robustness. We have made the benchmarking results and code platform publicly available.",
+      "year": 2023,
+      "authors": [
+        "Chang Liu",
+        "Yinpeng Dong",
+        "Wenzhao Xiang",
+        "Xiao Yang",
+        "Hang Su",
+        "Jun Zhu",
+        "Yuefeng Chen",
+        "Yuan He",
+        "Hui Xue",
+        "Shibao Zheng"
+      ],
+      "url": "https://arxiv.org/abs/2302.14301",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2010.09670": {
+      "paper_id": "arxiv:2010.09670",
+      "title": "RobustBench: a standardized adversarial robustness benchmark",
+      "abstract": "As a research community, we are still lacking a systematic understanding of the progress on adversarial robustness which often makes it hard to identify the most promising ideas in training robust models. A key challenge in benchmarking robustness is that its evaluation is often error-prone leading to robustness overestimation. Our goal is to establish a standardized benchmark of adversarial robustness, which as accurately as possible reflects the robustness of the considered models within a reasonable computational budget. To this end, we start by considering the image classification task and introduce restrictions (possibly loosened in the future) on the allowed models. We evaluate adversarial robustness with AutoAttack, an ensemble of white- and black-box attacks, which was recently shown in a large-scale study to improve almost all robustness evaluations compared to the original publications. To prevent overadaptation of new defenses to AutoAttack, we welcome external evaluations based on adaptive attacks, especially where AutoAttack flags a potential overestimation of robustness. Our leaderboard, hosted at https://robustbench.github.io/, contains evaluations of 120+ models and aims at reflecting the current state of the art in image classification on a set of well-defined tasks in $\\ell_\\infty$- and $\\ell_2$-threat models and on common corruptions, with possible extensions in the future. Additionally, we open-source the library https://github.com/RobustBench/robustbench that provides unified access to 80+ robust models to facilitate their downstream applications. Finally, based on the collected models, we analyze the impact of robustness on the performance on distribution shifts, calibration, out-of-distribution detection, fairness, privacy leakage, smoothness, and transferability.",
+      "year": 2020,
+      "authors": [
+        "Francesco Croce",
+        "Maksym Andriushchenko",
+        "Vikash Sehwag",
+        "Edoardo Debenedetti",
+        "Nicolas Flammarion",
+        "Mung Chiang",
+        "Prateek Mittal",
+        "Matthias Hein"
+      ],
+      "url": "https://arxiv.org/abs/2010.09670",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2310.18626": {
+      "paper_id": "arxiv:2310.18626",
+      "title": "Benchmark Generation Framework with Customizable Distortions for Image Classifier Robustness",
+      "abstract": "We present a novel framework for generating adversarial benchmarks to evaluate the robustness of image classification models. Our framework allows users to customize the types of distortions to be optimally applied to images, which helps address the specific distortions relevant to their deployment. The benchmark can generate datasets at various distortion levels to assess the robustness of different image classifiers. Our results show that the adversarial samples generated by our framework with any of the image classification models, like ResNet-50, Inception-V3, and VGG-16, are effective and transferable to other models causing them to fail. These failures happen even when these models are adversarially retrained using state-of-the-art techniques, demonstrating the generalizability of our adversarial samples. We achieve competitive performance in terms of net $L_2$ distortion compared to state-of-the-art benchmark techniques on CIFAR-10 and ImageNet; however, we demonstrate our framework achieves such results with simple distortions like Gaussian noise without introducing unnatural artifacts or color bleeds. This is made possible by a model-based reinforcement learning (RL) agent and a technique that reduces a deep tree search of the image for model sensitivity to perturbations, to a one-level analysis and action. The flexibility of choosing distortions and setting classification probability thresholds for multiple classes makes our framework suitable for algorithmic audits.",
+      "year": 2023,
+      "authors": [
+        "Soumyendu Sarkar",
+        "Ashwin Ramesh Babu",
+        "Sajad Mousavi",
+        "Zachariah Carmichael",
+        "Vineet Gundecha",
+        "Sahand Ghorbanpour",
+        "Ricardo Luna",
+        "Gutierrez Antonio Guillen",
+        "Avisek Naug"
+      ],
+      "url": "https://arxiv.org/abs/2310.18626",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2306.12111": {
+      "paper_id": "arxiv:2306.12111",
+      "title": "A Comprehensive Study on the Robustness of Image Classification and Object Detection in Remote Sensing: Surveying and Benchmarking",
+      "abstract": "Deep neural networks (DNNs) have found widespread applications in interpreting remote sensing (RS) imagery. However, it has been demonstrated in previous works that DNNs are vulnerable to different types of noises, particularly adversarial noises. Surprisingly, there has been a lack of comprehensive studies on the robustness of RS tasks, prompting us to undertake a thorough survey and benchmark on the robustness of image classification and object detection in RS. To our best knowledge, this study represents the first comprehensive examination of both natural robustness and adversarial robustness in RS tasks. Specifically, we have curated and made publicly available datasets that contain natural and adversarial noises. These datasets serve as valuable resources for evaluating the robustness of DNNs-based models. To provide a comprehensive assessment of model robustness, we conducted meticulous experiments with numerous different classifiers and detectors, encompassing a wide range of mainstream methods. Through rigorous evaluation, we have uncovered insightful and intriguing findings, which shed light on the relationship between adversarial noise crafting and model training, yielding a deeper understanding of the susceptibility and limitations of various models, and providing guidance for the development of more resilient and robust models",
+      "year": 2023,
+      "authors": [
+        "Shaohui Mei",
+        "Jiawei Lian",
+        "Xiaofei Wang",
+        "Yuru Su",
+        "Mingyang Ma",
+        "Lap-Pui Chau"
+      ],
+      "url": "https://arxiv.org/abs/2306.12111",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2212.08130": {
+      "paper_id": "arxiv:2212.08130",
+      "title": "On Evaluating Adversarial Robustness of Chest X-ray Classification: Pitfalls and Best Practices",
+      "abstract": "Vulnerability to adversarial attacks is a well-known weakness of Deep Neural Networks. While most of the studies focus on natural images with standardized benchmarks like ImageNet and CIFAR, little research has considered real world applications, in particular in the medical domain. Our research shows that, contrary to previous claims, robustness of chest x-ray classification is much harder to evaluate and leads to very different assessments based on the dataset, the architecture and robustness metric. We argue that previous studies did not take into account the peculiarity of medical diagnosis, like the co-occurrence of diseases, the disagreement of labellers (domain experts), the threat model of the attacks and the risk implications for each successful attack. In this paper, we discuss the methodological foundations, review the pitfalls and best practices, and suggest new methodological considerations for evaluating the robustness of chest xray classification models. Our evaluation on 3 datasets, 7 models, and 18 diseases is the largest evaluation of robustness of chest x-ray classification models.",
+      "year": 2022,
+      "authors": [
+        "Salah Ghamizi",
+        "Maxime Cordy",
+        "Michail Papadakis",
+        "Yves Le Traon"
+      ],
+      "url": "https://arxiv.org/abs/2212.08130",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:13b0444d079bea1c8c57a6082200b67ab5f4616e": {
+      "paper_id": "s2:13b0444d079bea1c8c57a6082200b67ab5f4616e",
+      "title": "Triangular Trade-off between Robustness, Accuracy, and Fairness in Deep Neural Networks: A Survey",
+      "abstract": "With the rapid development of deep learning, AI systems are being used more in complex and important domains and necessitates the simultaneous fulfillment of multiple constraints: accurate, robust, and fair. Accuracy measures how well a DNN can generalize to new data. Robustness demonstrates how well the network can withstand minor perturbations without changing the results. Fairness focuses on treating different groups equally. This survey provides an overview of the triangular trade-off among robustness, accuracy, and fairness in neural networks. This trade-off makes it difficult for AI systems to achieve true intelligence and is connected to generalization, robustness, and fairness in deep learning. The survey explores these trade-offs and their relationships to adversarial examples, adversarial training, and fair machine learning. The trade-offs between accuracy and robustness, accuracy and fairness, and robustness and fairness have been studied to different extents. However, there is a lack of taxonomy and analysis of these trade-offs. The accuracy-robustness trade-off is inherent in Gaussian models, but it varies when classes are not closely distributed. The accuracy-fairness and robustness-fairness trade-offs have been assessed empirically, but their theoretical nature needs more investigation. This survey aims to explore the origins, evolution, influencing factors, and future research directions of these trade-offs.",
+      "year": 2024,
+      "authors": [
+        "Jing-Yang Li",
+        "Guo-Qiang Li"
+      ],
+      "url": "https://doi.org/10.1145/3645088",
+      "venue": "ACM Computing Surveys",
+      "source": "semantic_scholar"
+    },
+    "s2:1d60585c26c37e121ed6ffd22cff91c6bf449cac": {
+      "paper_id": "s2:1d60585c26c37e121ed6ffd22cff91c6bf449cac",
+      "title": "Mixing Classifiers to Alleviate the Accuracy-Robustness Trade-Off",
+      "abstract": "Deep neural classifiers have recently found tremendous success in data-driven control systems. However, existing models suffer from a trade-off between accuracy and adversarial robustness. This limitation must be overcome in the control of safety-critical systems that require both high performance and rigorous robustness guarantees. In this work, we develop classifiers that simultaneously inherit high robustness from robust models and high accuracy from standard models. Specifically, we propose a theoretically motivated formulation that mixes the output probabilities of a standard neural network and a robust neural network. Both base classifiers are pre-trained, and thus our method does not require additional training. Our numerical experiments verify that the mixed classifier noticeably improves the accuracy-robustness trade-off and identify the confidence property of the robust base classifier as the key leverage of this more benign trade-off. Our theoretical results prove that under mild assumptions, when the robustness of the robust base model is certifiable, no alteration or attack within a closed-form $\\ell_p$ radius on an input can result in the misclassification of the mixed classifier.",
+      "year": 2023,
+      "authors": [
+        "Yatong Bai",
+        "B. Anderson",
+        "Somayeh Sojoudi"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2311.15165",
+      "venue": "Conference on Learning for Dynamics & Control",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2007.08428": {
+      "paper_id": "arxiv:2007.08428",
+      "title": "On Adversarial Robustness: A Neural Architecture Search perspective",
+      "abstract": "Adversarial robustness of deep learning models has gained much traction in the last few years. Various attacks and defenses are proposed to improve the adversarial robustness of modern-day deep learning architectures. While all these approaches help improve the robustness, one promising direction for improving adversarial robustness is unexplored, i.e., the complex topology of the neural network architecture. In this work, we address the following question: Can the complex topology of a neural network give adversarial robustness without any form of adversarial training?. We answer this empirically by experimenting with different hand-crafted and NAS-based architectures. Our findings show that, for small-scale attacks, NAS-based architectures are more robust for small-scale datasets and simple tasks than hand-crafted architectures. However, as the size of the dataset or the complexity of task increases, hand-crafted architectures are more robust than NAS-based architectures. Our work is the first large-scale study to understand adversarial robustness purely from an architectural perspective. Our study shows that random sampling in the search space of DARTS (a popular NAS method) with simple ensembling can improve the robustness to PGD attack by nearly~12\\%. We show that NAS, which is popular for achieving SoTA accuracy, can provide adversarial accuracy as a free add-on without any form of adversarial training. Our results show that leveraging the search space of NAS methods with methods like ensembles can be an excellent way to achieve adversarial robustness without any form of adversarial training. We also introduce a metric that can be used to calculate the trade-off between clean accuracy and adversarial robustness. Code and pre-trained models will be made available at \\url{https://github.com/tdchaitanya/nas-robustness}",
+      "year": 2020,
+      "authors": [
+        "Chaitanya Devaguptapu",
+        "Devansh Agarwal",
+        "Gaurav Mittal",
+        "Pulkit Gopalani",
+        "Vineeth N Balasubramanian"
+      ],
+      "url": "https://arxiv.org/abs/2007.08428",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:5244fff51c60d457e57f678eab40202b7ed6f651": {
+      "paper_id": "s2:5244fff51c60d457e57f678eab40202b7ed6f651",
+      "title": "Enhancing Efficiency and Robustness of Compressed Deep Learning Models on Edge Devices for IoT Sensor Data",
+      "abstract": "The proliferation of Internet of Things devices has amplified the need for efficient and reliable edge-based intelligence. Compressed deep learning models, particularly those using post-training quantization and quantization-aware training, offer promising solutions for resource-constrained edge deployments. However, real-world IoT sensor data are often noisy, incomplete, or subject to drift, which can significantly degrade model performance. This study systematically investigates the trade-offs between computational efficiency and robustness of compressed models under realistic sensor noise conditions. Through controlled experiments, we demonstrate that PTQ, while highly efficient in terms of latency, is prone to substantial accuracy loss in noisy environments. In contrast, QAT preserves model accuracy while maintaining low inference latency, providing a more reliable solution for practical edge deployments. The results highlight the necessity of robustness-aware compression and underscore the limitations of evaluating models solely on clean datasets. This work offers a deployment-centric framework for assessing model trustworthiness and provides guidance for developing lightweight, robust deep learning models for safety-critical IoT applications, including industrial monitoring and healthcare.",
+      "year": 2025,
+      "authors": [
+        "Qutaiba Azqiba",
+        "Yanne LaCuen"
+      ],
+      "url": "https://doi.org/10.70568/ujfiiai.2.2.3",
+      "venue": "Universal Journal of Future Intelligence: Innovations and Artificial Intelligence",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2007.15359": {
+      "paper_id": "arxiv:2007.15359",
+      "title": "Trade-offs in Top-k Classification Accuracies on Losses for Deep Learning",
+      "abstract": "This paper presents an experimental analysis about trade-offs in top-k classification accuracies on losses for deep leaning and proposal of a novel top-k loss. Commonly-used cross entropy (CE) is not guaranteed to optimize top-k prediction without infinite training data and model complexities. The objective is to clarify when CE sacrifices top-k accuracies to optimize top-1 prediction, and to design loss that improve top-k accuracy under such conditions. Our novel loss is basically CE modified by grouping temporal top-k classes as a single class. To obtain a robust decision boundary, we introduce an adaptive transition from normal CE to our loss, and thus call it top-k transition loss. It is demonstrated that CE is not always the best choice to learn top-k prediction in our experiments. First, we explore trade-offs between top-1 and top-k (=2) accuracies on synthetic datasets, and find a failure of CE in optimizing top-k prediction when we have complex data distribution for a given model to represent optimal top-1 prediction. Second, we compare top-k accuracies on CIFAR-100 dataset targeting top-5 prediction in deep learning. While CE performs the best in top-1 accuracy, in top-5 accuracy our loss performs better than CE except using one experimental setup. Moreover, our loss has been found to provide better top-k accuracies compared to CE at k larger than 10. As a result, a ResNet18 model trained with our loss reaches 99 % accuracy with k=25 candidates, which is a smaller candidate number than that of CE by 8.",
+      "year": 2020,
+      "authors": [
+        "Azusa Sawada",
+        "Eiji Kaneko",
+        "Kazutoshi Sagi"
+      ],
+      "url": "https://arxiv.org/abs/2007.15359",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2102.11860": {
+      "paper_id": "arxiv:2102.11860",
+      "title": "Automated Discovery of Adaptive Attacks on Adversarial Defenses",
+      "abstract": "Reliable evaluation of adversarial defenses is a challenging task, currently limited to an expert who manually crafts attacks that exploit the defense's inner workings or approaches based on an ensemble of fixed attacks, none of which may be effective for the specific defense at hand. Our key observation is that adaptive attacks are composed of reusable building blocks that can be formalized in a search space and used to automatically discover attacks for unknown defenses. We evaluated our approach on 24 adversarial defenses and show that it outperforms AutoAttack, the current state-of-the-art tool for reliable evaluation of adversarial defenses: our tool discovered significantly stronger attacks by producing 3.0\\%-50.8\\% additional adversarial examples for 10 models, while obtaining attacks with slightly stronger or similar strength for the remaining models.",
+      "year": 2021,
+      "authors": [
+        "Chengyuan Yao",
+        "Pavol Bielik",
+        "Petar Tsankov",
+        "Martin Vechev"
+      ],
+      "url": "https://arxiv.org/abs/2102.11860",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2506.01267": {
+      "paper_id": "arxiv:2506.01267",
+      "title": "Adversarial learning for nonparametric regression: Minimax rate and adaptive estimation",
+      "abstract": "Despite tremendous advancements of machine learning models and algorithms in various application domains, they are known to be vulnerable to subtle, natural or intentionally crafted perturbations in future input data, known as adversarial attacks. While numerous adversarial learning methods have been proposed, fundamental questions about their statistical optimality in robust loss remain largely unanswered. In particular, the minimax rate of convergence and the construction of rate-optimal estimators under future $X$-attacks are yet to be worked out. In this paper, we address this issue in the context of nonparametric regression, under suitable assumptions on the smoothness of the regression function and the geometric structure of the input perturbation set. We first establish the minimax rate of convergence under adversarial $L_q$-risks with $1 \\leq q \\leq \\infty$ and propose a piecewise local polynomial estimator that achieves the minimax optimality. The established minimax rate elucidates how the smoothness level and perturbation magnitude affect the fundamental limit of adversarial learning under future $X$-attacks. Furthermore, we construct a data-driven adaptive estimator that is shown to achieve, within a logarithmic factor, the optimal rate across a broad scale of nonparametric and adversarial classes.",
+      "year": 2025,
+      "authors": [
+        "Jingfu Peng",
+        "Yuhong Yang"
+      ],
+      "url": "https://arxiv.org/abs/2506.01267",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2503.20844": {
+      "paper_id": "arxiv:2503.20844",
+      "title": "Robust Deep Reinforcement Learning in Robotics via Adaptive Gradient-Masked Adversarial Attacks",
+      "abstract": "Deep reinforcement learning (DRL) has emerged as a promising approach for robotic control, but its realworld deployment remains challenging due to its vulnerability to environmental perturbations. Existing white-box adversarial attack methods, adapted from supervised learning, fail to effectively target DRL agents as they overlook temporal dynamics and indiscriminately perturb all state dimensions, limiting their impact on long-term rewards. To address these challenges, we propose the Adaptive Gradient-Masked Reinforcement (AGMR) Attack, a white-box attack method that combines DRL with a gradient-based soft masking mechanism to dynamically identify critical state dimensions and optimize adversarial policies. AGMR selectively allocates perturbations to the most impactful state features and incorporates a dynamic adjustment mechanism to balance exploration and exploitation during training. Extensive experiments demonstrate that AGMR outperforms state-of-the-art adversarial attack methods in degrading the performance of the victim agent and enhances the victim agent's robustness through adversarial defense mechanisms.",
+      "year": 2025,
+      "authors": [
+        "Zongyuan Zhang",
+        "Tianyang Duan",
+        "Zheng Lin",
+        "Dong Huang",
+        "Zihan Fang",
+        "Zekai Sun",
+        "Ling Xiong",
+        "Hongbin Liang",
+        "Heming Cui",
+        "Yong Cui",
+        "Yue Gao"
+      ],
+      "url": "https://arxiv.org/abs/2503.20844",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1906.12061": {
+      "paper_id": "arxiv:1906.12061",
+      "title": "Learning to Cope with Adversarial Attacks",
+      "abstract": "The security of Deep Reinforcement Learning (Deep RL) algorithms deployed in real life applications are of a primary concern. In particular, the robustness of RL agents in cyber-physical systems against adversarial attacks are especially vital since the cost of a malevolent intrusions can be extremely high. Studies have shown Deep Neural Networks (DNN), which forms the core decision-making unit in most modern RL algorithms, are easily subjected to adversarial attacks. Hence, it is imperative that RL agents deployed in real-life applications have the capability to detect and mitigate adversarial attacks in an online fashion. An example of such a framework is the Meta-Learned Advantage Hierarchy (MLAH) agent that utilizes a meta-learning framework to learn policies robustly online. Since the mechanism of this framework are still not fully explored, we conducted multiple experiments to better understand the framework's capabilities and limitations. Our results shows that the MLAH agent exhibits interesting coping behaviors when subjected to different adversarial attacks to maintain a nominal reward. Additionally, the framework exhibits a hierarchical coping capability, based on the adaptability of the Master policy and sub-policies themselves. From empirical results, we also observed that as the interval of adversarial attacks increase, the MLAH agent can maintain a higher distribution of rewards, though at the cost of higher instabilities.",
+      "year": 2019,
+      "authors": [
+        "Xian Yeow Lee",
+        "Aaron Havens",
+        "Girish Chowdhary",
+        "Soumik Sarkar"
+      ],
+      "url": "https://arxiv.org/abs/1906.12061",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2306.03600": {
+      "paper_id": "arxiv:2306.03600",
+      "title": "Avoid Adversarial Adaption in Federated Learning by Multi-Metric Investigations",
+      "abstract": "Federated Learning (FL) facilitates decentralized machine learning model training, preserving data privacy, lowering communication costs, and boosting model performance through diversified data sources. Yet, FL faces vulnerabilities such as poisoning attacks, undermining model integrity with both untargeted performance degradation and targeted backdoor attacks. Preventing backdoors proves especially challenging due to their stealthy nature. Prominent mitigation techniques against poisoning attacks rely on monitoring certain metrics and filtering malicious model updates. While shown effective in evaluations, we argue that previous works didn't consider realistic real-world adversaries and data distributions. We define a new notion of strong adaptive adversaries, capable of adapting to multiple objectives simultaneously. Through extensive empirical tests, we show that existing defense methods can be easily circumvented in this adversary model. We also demonstrate, that existing defenses have limited effectiveness when no assumptions are made about underlying data distributions. We introduce Metric-Cascades (MESAS), a novel defense method for more realistic scenarios and adversary models. MESAS employs multiple detection metrics simultaneously to identify poisoned model updates, creating a complex multi-objective optimization problem for adaptive attackers. In our extensive evaluation featuring nine backdoors and three datasets, MESAS consistently detects even strong adaptive attackers. Furthermore, MESAS outperforms existing defenses in distinguishing backdoors from data distribution-related distortions within and across clients. MESAS is the first defense robust against strong adaptive adversaries, effective in real-world data scenarios, with an average overhead of just 24.37 seconds.",
+      "year": 2023,
+      "authors": [
+        "Torsten Krauß",
+        "Alexandra Dmitrienko"
+      ],
+      "url": "https://arxiv.org/abs/2306.03600",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q06",
+  "area": "ML"
+}

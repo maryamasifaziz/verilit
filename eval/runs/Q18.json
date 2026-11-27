@@ -1,0 +1,632 @@
+{
+  "question": "How effective are deep learning methods for malware detection?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What deep learning architectures and techniques are commonly used for malware detection?",
+      "search_query": "deep learning architectures for malware detection",
+      "paper_ids": [
+        "s2:086f1c7e40eba423b0f7fc685c25b7618d996407",
+        "arxiv:1809.05888",
+        "s2:1f4c0634d1e3dcf28f8a9a1364171eb21007489a",
+        "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2",
+        "s2:29741df11d6120438e761b434d1dfb3d8f0b92d0"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What are the reported performance results and evaluation metrics of deep learning malware detectors?",
+      "search_query": "performance evaluation of deep learning malware detection",
+      "paper_ids": [
+        "s2:74055e09cfe817248124f8aeaba8f6780958cd09",
+        "s2:b1ff16366d0899c0381b638c0b30bec75c4d324c",
+        "s2:1f4c0634d1e3dcf28f8a9a1364171eb21007489a",
+        "arxiv:2310.06841",
+        "s2:0fe5959cfbf81e08e15d25e1e20973f4cedc614f"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What standard datasets and benchmark environments are utilized in deep learning malware research?",
+      "search_query": "datasets and benchmarks for malware detection",
+      "paper_ids": [
+        "arxiv:2407.19153",
+        "s2:b1f83b3e7a63de22acf7d1b0888f08bb696738a0",
+        "arxiv:2111.15205",
+        "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2",
+        "arxiv:2502.15041"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations, vulnerabilities, and adversarial evasion risks of these methods?",
+      "search_query": "limitations and adversarial attacks malware deep learning",
+      "paper_ids": [
+        "s2:8faccf4480bcc4e54e58d4c48072d0444021f4b7",
+        "arxiv:2007.02407",
+        "s2:fd53c48bc9180908eee19891852fd914a932dcaf",
+        "arxiv:2604.21310",
+        "s2:70c121af9818efd7d3e1d2894f744392506adb88"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "Hybrid models such as CNN-LSTM achieve a detection rate of up to 98.7% on malware datasets including Malimg, Microsoft BIG2015, Drebin, and CICAndMal2017.",
+        "paper_id": "s2:086f1c7e40eba423b0f7fc685c25b7618d996407"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Hybrid models such as CNN-LSTM achieve a detection rate of up to 98.7% on malware datasets including Malimg, Microsoft BIG2015, Drebin, and CICAndMal2017.",
+          "paper_id": "s2:086f1c7e40eba423b0f7fc685c25b7618d996407",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9405,
+          "p_supported": 0.9405,
+          "accepted": true,
+          "alt_p_supported": 0.9183
+        }
+      ],
+      "final": {
+        "text": "Hybrid models such as CNN-LSTM achieve a detection rate of up to 98.7% on malware datasets including Malimg, Microsoft BIG2015, Drebin, and CICAndMal2017.",
+        "paper_id": "s2:086f1c7e40eba423b0f7fc685c25b7618d996407",
+        "label": "SUPPORTED",
+        "confidence": 0.9405
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "A deep learning-based malware detection system utilizing Auto-Encoders and Deep Neural Networks over the Malicia dataset achieved an accuracy of 99.21% and a False Positive Rate of 0.19%.",
+        "paper_id": "arxiv:1809.05888"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A deep learning-based malware detection system utilizing Auto-Encoders and Deep Neural Networks over the Malicia dataset achieved an accuracy of 99.21% and a False Positive Rate of 0.19%.",
+          "paper_id": "arxiv:1809.05888",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.948,
+          "p_supported": 0.948,
+          "accepted": true,
+          "alt_p_supported": 0.9138
+        }
+      ],
+      "final": {
+        "text": "A deep learning-based malware detection system utilizing Auto-Encoders and Deep Neural Networks over the Malicia dataset achieved an accuracy of 99.21% and a False Positive Rate of 0.19%.",
+        "paper_id": "arxiv:1809.05888",
+        "label": "SUPPORTED",
+        "confidence": 0.948
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "The deep learning model combining Inception v3 feature extraction with SVM classification achieves superior performance with 99.89% accuracy on a dataset of 138,047 samples.",
+        "paper_id": "s2:74055e09cfe817248124f8aeaba8f6780958cd09"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The deep learning model combining Inception v3 feature extraction with SVM classification achieves superior performance with 99.89% accuracy on a dataset of 138,047 samples.",
+          "paper_id": "s2:74055e09cfe817248124f8aeaba8f6780958cd09",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8857,
+          "p_supported": 0.8857,
+          "accepted": true,
+          "alt_p_supported": 0.8402
+        }
+      ],
+      "final": {
+        "text": "The deep learning model combining Inception v3 feature extraction with SVM classification achieves superior performance with 99.89% accuracy on a dataset of 138,047 samples.",
+        "paper_id": "s2:74055e09cfe817248124f8aeaba8f6780958cd09",
+        "label": "SUPPORTED",
+        "confidence": 0.8857
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "The RNN model achieved the best accuracy of 99.19% in detecting fresh IoT malware samples on a dataset comprising 500 malware and 500 goodware samples.",
+        "paper_id": "s2:0fe5959cfbf81e08e15d25e1e20973f4cedc614f"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The RNN model achieved the best accuracy of 99.19% in detecting fresh IoT malware samples on a dataset comprising 500 malware and 500 goodware samples.",
+          "paper_id": "s2:0fe5959cfbf81e08e15d25e1e20973f4cedc614f",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9425,
+          "p_supported": 0.9425,
+          "accepted": true,
+          "alt_p_supported": 0.9091
+        }
+      ],
+      "final": {
+        "text": "The RNN model achieved the best accuracy of 99.19% in detecting fresh IoT malware samples on a dataset comprising 500 malware and 500 goodware samples.",
+        "paper_id": "s2:0fe5959cfbf81e08e15d25e1e20973f4cedc614f",
+        "label": "SUPPORTED",
+        "confidence": 0.9425
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "One study evaluates machine learning models using the CIC-MalMem-2022 dataset to examine dataset quality and performance metrics.",
+        "paper_id": "s2:b1f83b3e7a63de22acf7d1b0888f08bb696738a0"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study evaluates machine learning models using the CIC-MalMem-2022 dataset to examine dataset quality and performance metrics.",
+          "paper_id": "s2:b1f83b3e7a63de22acf7d1b0888f08bb696738a0",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8994,
+          "p_supported": 0.8994,
+          "accepted": true,
+          "alt_p_supported": 0.856
+        }
+      ],
+      "final": {
+        "text": "One study evaluates machine learning models using the CIC-MalMem-2022 dataset to examine dataset quality and performance metrics.",
+        "paper_id": "s2:b1f83b3e7a63de22acf7d1b0888f08bb696738a0",
+        "label": "SUPPORTED",
+        "confidence": 0.8994
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "A systematic review analyzes models trained on public datasets including Malimg, CIC-MalMem-2022, and the Windows PE Malware Dataset.",
+        "paper_id": "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A systematic review analyzes models trained on public datasets including Malimg, CIC-MalMem-2022, and the Windows PE Malware Dataset.",
+          "paper_id": "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.948,
+          "p_supported": 0.948,
+          "accepted": true,
+          "alt_p_supported": 0.9123
+        }
+      ],
+      "final": {
+        "text": "A systematic review analyzes models trained on public datasets including Malimg, CIC-MalMem-2022, and the Windows PE Malware Dataset.",
+        "paper_id": "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2",
+        "label": "SUPPORTED",
+        "confidence": 0.948
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Adversarial and data poisoning attacks compromise the reliability and accuracy of learning algorithms in cybersecurity applications such as malware detection, intrusion detection, and spam filtering.",
+        "paper_id": "s2:8faccf4480bcc4e54e58d4c48072d0444021f4b7"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Adversarial and data poisoning attacks compromise the reliability and accuracy of learning algorithms in cybersecurity applications such as malware detection, intrusion detection, and spam filtering.",
+          "paper_id": "s2:8faccf4480bcc4e54e58d4c48072d0444021f4b7",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9359,
+          "p_supported": 0.9359,
+          "accepted": true,
+          "alt_p_supported": 0.9054
+        }
+      ],
+      "final": {
+        "text": "Adversarial and data poisoning attacks compromise the reliability and accuracy of learning algorithms in cybersecurity applications such as malware detection, intrusion detection, and spam filtering.",
+        "paper_id": "s2:8faccf4480bcc4e54e58d4c48072d0444021f4b7",
+        "label": "SUPPORTED",
+        "confidence": 0.9359
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Gradient-based and optimization-driven attacks against hybrid CNN-LSTM classifiers reveal significant susceptibility under adversarial pressure in malware detection.",
+        "paper_id": "s2:fd53c48bc9180908eee19891852fd914a932dcaf"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Gradient-based and optimization-driven attacks against hybrid CNN-LSTM classifiers reveal significant susceptibility under adversarial pressure in malware detection.",
+          "paper_id": "s2:fd53c48bc9180908eee19891852fd914a932dcaf",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9308,
+          "p_supported": 0.9308,
+          "accepted": true,
+          "alt_p_supported": 0.9081
+        }
+      ],
+      "final": {
+        "text": "Gradient-based and optimization-driven attacks against hybrid CNN-LSTM classifiers reveal significant susceptibility under adversarial pressure in malware detection.",
+        "paper_id": "s2:fd53c48bc9180908eee19891852fd914a932dcaf",
+        "label": "SUPPORTED",
+        "confidence": 0.9308
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:086f1c7e40eba423b0f7fc685c25b7618d996407",
+      "citation": "Vinita Nagda, Manju Mandot (2026). Adaptive Deep Learning Architectures for Next-Generation Malware Detection: Bridging Accuracy, Robustness, and Explainability. 2026 International Conference on Intelligent Computing and Sustainable Innovations in Technology (IC-SIT). https://doi.org/10.1109/IC-SIT69723.2026.11735795"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:1809.05888",
+      "citation": "Mohit Sewak, Sanjay K. Sahay, Hemant Rathore (2018). An investigation of a deep learning based malware detection system. arXiv. https://arxiv.org/abs/1809.05888"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:74055e09cfe817248124f8aeaba8f6780958cd09",
+      "citation": "Bartholomew Idoko, J. Idoko, M. M. Kontagora (2025). Comparative Analysis of Machine Learning and Deep Learning Models for Malware Detection. 2025 IEEE Connecting the Unconnected Europe, Middle East, and Africa Regional Summit (CTUS-EMEA). https://doi.org/10.1109/CTUS-EMEA68989.2025.11592262"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:0fe5959cfbf81e08e15d25e1e20973f4cedc614f",
+      "citation": "Ayat T. Salim, B. M. Khammas (2023). Performance Evaluation of Deep Learning Techniques in The Detection of IOT Malware. Iraqi Journal of Information and Communication Technology. https://doi.org/10.31987/ijict.6.3.233"
+    },
+    {
+      "n": 5,
+      "paper_id": "s2:b1f83b3e7a63de22acf7d1b0888f08bb696738a0",
+      "citation": "Noura Mohammed, E. Emary, Mahmoud AttaAllah (2026). Improving Cyber Threat Intelligence Analysis Using Supervised Machine Learning Models: A Comprehensive Statistical Evaluation. Internet, Multimedia Systems and Applications. https://doi.org/10.1109/IMSA70415.2026.11700279"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2",
+      "citation": "Syamsu Hidayat, Kusrini, E. Utami et al. (2025). Advancements in Machine Learning and Deep Learning for Malware Detection Challenges Breakthroughs. International Conference on Communications and Information Technology. https://doi.org/10.1109/ICCIT65724.2025.11167593"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:8faccf4480bcc4e54e58d4c48072d0444021f4b7",
+      "citation": "Saad Rustam, Usama Arshad, M. Ahmad et al. (2024). Mitigating Adversarial and Data Poisoning Attacks in Cybersecurity Applications. International Conference on Emerging Technologies. https://doi.org/10.1109/ICET63392.2024.10935233"
+    },
+    {
+      "n": 8,
+      "paper_id": "s2:fd53c48bc9180908eee19891852fd914a932dcaf",
+      "citation": "Eslam A. Amer, Gelayol Golcarenarenji, Alaa Mohasseb et al. (2025). Beyond Accuracy: Robustness and Explainability in Adversarial Malware Detection. 2025 International Mobile, Intelligent, and Ubiquitous Computing Conference (MIUCC). https://doi.org/10.1109/MIUCC66482.2025.11196809"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Deep learning methods have demonstrated high effectiveness for malware detection across various architectures and techniques. Commonly used models include hybrid architectures like CNN-LSTM [1, 8], Auto-Encoders combined with Deep Neural Networks [2], Inception v3 feature extraction coupled with Support Vector Machines (SVM) [3], and Recurrent Neural Networks (RNN) [4]. These techniques frequently utilize public and standard datasets such as Malimg, Microsoft BIG2015, Drebin, CICAndMal2017, Malicia, CIC-MalMem-2022, and the Windows PE Malware Dataset [1, 2, 5, 6]. Additionally, specific studies have evaluated detectors on a dataset of 138,047 samples [3] as well as balanced IoT datasets comprising 500 malware and 500 goodware samples [4].\n\nReported performance results indicate that deep learning malware detectors achieve exceptional metrics. A system using Auto-Encoders and Deep Neural Networks over the Malicia dataset achieved an accuracy of 99.21% and a False Positive Rate of 0.19% [2]. Furthermore, hybrid CNN-LSTM models achieve detection rates of up to 98.7% [1], an RNN model achieved an accuracy of 99.19% on fresh IoT malware samples [4], and a model combining Inception v3 feature extraction with SVM classification reached an accuracy of 99.89% [3].\n\nDespite their high accuracy, these methods face notable limitations, vulnerabilities, and adversarial risks. Adversarial and data poisoning attacks compromise the reliability and accuracy of learning algorithms in cybersecurity applications including malware detection, intrusion detection, and spam filtering [7]. Specifically, gradient-based and optimization-driven attacks against hybrid CNN-LSTM classifiers reveal significant susceptibility under adversarial pressure [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 6,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 5,
+      "arxiv": 0
+    },
+    "seconds": 37.5
+  },
+  "papers": {
+    "s2:086f1c7e40eba423b0f7fc685c25b7618d996407": {
+      "paper_id": "s2:086f1c7e40eba423b0f7fc685c25b7618d996407",
+      "title": "Adaptive Deep Learning Architectures for Next-Generation Malware Detection: Bridging Accuracy, Robustness, and Explainability",
+      "abstract": "This paper examines the impact that recent deep learning methods have had on the way malware is detected, particularly because malware is constantly morphing and evolving and is becoming harder to identify. Recent deep learning methods, including convolutional neural networks (CNNs), recurrent neural networks (RNNs) and a range of hybrid and ensemble models, are studied here on the widely used malware datasets Malimg, Microsoft BIG2015, Drebin and CICAndMal2017. The review shows that deep learning significantly outperforms rule-based and classical machine learning systems, and that hybrid models such as CNN-LSTM achieve a detection rate of up to 98.7%. These models not only spot more threats, including zero-day and heavily cloaked malware, but also deliver repeatable performance across malware types. The training results indicate that such models converge rapidly and reach high accuracy without being unduly prone to overfitting. Several challenges remain, however, including improving computational efficiency, building more balanced datasets and increasing the transparency of model decisions. The incorporation of explainable artificial intelligence and smarter feature selection can help mitigate these limitations. Overall, deep learning is a clearly superior basis for next-generation intelligent malware detection systems and offers a realistic opportunity to keep pace with today's rapidly evolving cybersecurity challenges.",
+      "year": 2026,
+      "authors": [
+        "Vinita Nagda",
+        "Manju Mandot"
+      ],
+      "url": "https://doi.org/10.1109/IC-SIT69723.2026.11735795",
+      "venue": "2026 International Conference on Intelligent Computing and Sustainable Innovations in Technology (IC-SIT)",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1809.05888": {
+      "paper_id": "arxiv:1809.05888",
+      "title": "An investigation of a deep learning based malware detection system",
+      "abstract": "We investigate a Deep Learning based system for malware detection. In the investigation, we experiment with different combination of Deep Learning architectures including Auto-Encoders, and Deep Neural Networks with varying layers over Malicia malware dataset on which earlier studies have obtained an accuracy of (98%) with an acceptable False Positive Rates (1.07%). But these results were done using extensive man-made custom domain features and investing corresponding feature engineering and design efforts. In our proposed approach, besides improving the previous best results (99.21% accuracy and a False Positive Rate of 0.19%) indicates that Deep Learning based systems could deliver an effective defense against malware. Since it is good in automatically extracting higher conceptual features from the data, Deep Learning based systems could provide an effective, general and scalable mechanism for detection of existing and unknown malware.",
+      "year": 2018,
+      "authors": [
+        "Mohit Sewak",
+        "Sanjay K. Sahay",
+        "Hemant Rathore"
+      ],
+      "url": "https://arxiv.org/abs/1809.05888",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:1f4c0634d1e3dcf28f8a9a1364171eb21007489a": {
+      "paper_id": "s2:1f4c0634d1e3dcf28f8a9a1364171eb21007489a",
+      "title": "Deep Learning Approaches for Malware Detection: A Comprehensive Review of Techniques, Challenges, and Future Directions",
+      "abstract": "Malware remains a persistent and evolving cybersecurity threat, necessitating advanced detection techniques to counter increasingly sophisticated attacks. This survey provides a comprehensive review of deep learning-based approaches for malware detection, synthesizing 109 publications published between 2011 and 2024. We analyze models based on Convolutional Neural Networks (CNNs), Recurrent Neural Networks (RNNs), and hybrid CNN-RNN architectures, evaluating their performance across publicly available datasets, including BIG2015, Malimg, Drebin, Malicia, and IoT-23. Reported detection accuracies range from 93% to 98.7%, with false positive rates as low as 1.1% in hybrid models. This survey contributes a structured taxonomy diagram categorizing models by architecture and analysis type, an ablation study summarizing individual and combined contributions of CNN and RNN components, and a comparative evaluation of key performance metrics. We further discuss current challenges, such as adversarial robustness and computational complexity, and propose future research directions to guide ongoing advancements in deep learning-based malware detection.",
+      "year": 2025,
+      "authors": [
+        "Mohammad AlShoulie",
+        "Abid Mehmood"
+      ],
+      "url": "https://doi.org/10.1109/ACCESS.2025.3582875",
+      "venue": "IEEE Access",
+      "source": "semantic_scholar"
+    },
+    "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2": {
+      "paper_id": "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2",
+      "title": "Advancements in Machine Learning and Deep Learning for Malware Detection Challenges Breakthroughs",
+      "abstract": "Malware detection remains a critical concern in cybersecurity, exacerbated by the increasing sophistication of cyber threats and the inadequacies of conventional signature-based approaches. This study aims to investigate recent advancements in Machine Learning (ML) and Deep Learning (DL) techniques that address the evolving challenges in malware detection. Focusing on hybrid architectures, ensemble methods, and the integration of Explainable Artificial Intelligence (XAI), this systematic review analyzes the effectiveness of state-of-the-art models trained on widely used public datasets, including Malimg, CIC-MalMem-2022, and the Windows PE Malware Dataset. The review identifies key limitations such as adversarial susceptibility, dataset dependency, and limited real-time applicability, which hinder deployment in practical environments. By critically examining the influence of dataset diversity on model robustness and generalization, the study highlights that while many models demonstrate high accuracy in controlled settings, their performance often deteriorates in dynamic, real-world scenarios. The findings underscore the necessity of advancing toward more resilient and interpretable detection frameworks. As a contribution to the field, the review proposes a future research agenda centered on the development of adaptive hybrid models, adversarial defense mechanisms, and standardized real-world benchmark datasets. These directions are essential for enhancing the reliability, scalability, and transparency of next-generation malware detection systems.",
+      "year": 2025,
+      "authors": [
+        "Syamsu Hidayat",
+        "Kusrini",
+        "E. Utami",
+        "A. Setyanto",
+        "A. Karim"
+      ],
+      "url": "https://doi.org/10.1109/ICCIT65724.2025.11167593",
+      "venue": "International Conference on Communications and Information Technology",
+      "source": "semantic_scholar"
+    },
+    "s2:29741df11d6120438e761b434d1dfb3d8f0b92d0": {
+      "paper_id": "s2:29741df11d6120438e761b434d1dfb3d8f0b92d0",
+      "title": "Advanced Malware Detection Using Deep Learning in EDR System",
+      "abstract": ": Malware detection plays a crucial role in cybersecurity by identifying and mitigating threats posed by malicious software. Traditional detection methods rely heavily on signature-based approaches, which are often ineffective against new, evolving malware. This paper presents a deep learning-based model for malware detection, leveraging advanced neural network architectures to classify files as either benign or malicious based on their characteristics. By training the model on a comprehensive dataset, it learns to identify subtle patterns that distinguish harmful files from legitimate ones. Enhancing the accessibility and usability of the detection system, the model is integrated into a web-based interface where users can upload files and receive real-time analysis results. Experimental results demonstrate the effectiveness of the deep learning approach in achieving high accuracy and detection speed, showcasing its potential as a proactive tool for modern cybersecurity defence.",
+      "year": 2025,
+      "authors": [
+        "O. T. Gopi",
+        "D. Sai",
+        "V. M. Naidu",
+        "L. Deepthi",
+        "Sai Archana",
+        "B. R. Babu"
+      ],
+      "url": "https://doi.org/10.17148/ijarcce.2025.14264",
+      "venue": "IJARCCE",
+      "source": "semantic_scholar"
+    },
+    "s2:74055e09cfe817248124f8aeaba8f6780958cd09": {
+      "paper_id": "s2:74055e09cfe817248124f8aeaba8f6780958cd09",
+      "title": "Comparative Analysis of Machine Learning and Deep Learning Models for Malware Detection",
+      "abstract": "The exponential growth and spread of sophisticated malware variants necessitates the development of robust, accurate, and computationally efficient detection mechanisms. While numerous Machine Learning (ML) and Deep Learning (DL) approaches have been proposed for malware detection, comprehensive comparative analyses evaluating their relative performance, computational requirements, and practical deployment considerations remain limited. This research presents an extensive study comparing the effectiveness of multiple ML paradigms for malware detection, including traditional ML algorithms and novel hybrid deep learning architecture approaches. Four distinct model categories were systematically evaluated: Support Vector Machine (SVM), Multi-layer Perceptron (MLP), Convolutional Neural Network (CNN) and a novel deep learning (Inception v3+SVM) combining Inception v3 feature extraction with SVM classification. The comprehensive evaluation utilizes a large-scale dataset of $\\mathbf{1 3 8, 0 4 7}$ samples (96,724 malware and 41,323 benign files) incorporating both static and dynamic analysis features. Through rigorous experimental methodology employing multiple validation techniques, statistical significance testing, and computational performance analysis, we demonstrate that the deep learning model achieves superior performance with 99.89% accuracy, significantly outperforming CNN (98.52%), SVM (97.23%), and MLP (96.84%) approaches. The analysis reveals that deep learning architecture effectively leverages the complementary strengths of different machine learning paradigms, providing both high accuracy and computational efficiency. Additionally, we present detailed ablation studies, error analysis, and practical deployment considerations that provide actionable insights for cybersecurity practitioners. The findings contribute to the theoretical understanding of machine learning model selection for cybersecurity applications and offer practical guidance for implementing effective malware detection systems in operational environments.",
+      "year": 2025,
+      "authors": [
+        "Bartholomew Idoko",
+        "J. Idoko",
+        "M. M. Kontagora"
+      ],
+      "url": "https://doi.org/10.1109/CTUS-EMEA68989.2025.11592262",
+      "venue": "2025 IEEE Connecting the Unconnected Europe, Middle East, and Africa Regional Summit (CTUS-EMEA)",
+      "source": "semantic_scholar"
+    },
+    "s2:b1ff16366d0899c0381b638c0b30bec75c4d324c": {
+      "paper_id": "s2:b1ff16366d0899c0381b638c0b30bec75c4d324c",
+      "title": "Performance evaluation of deep neural network on malware detection: visual feature approach",
+      "abstract": "Nowadays, several malicious applications target computers and mobile users. So, malware detection plays a vital role on the internet so that the device is secure without any malicious activity affecting or gathering the useful content of the user. Researches indicate that the vulnerability of adversarial attacks is more in deep neural networks. When there is a malicious sample in a family, there will not be many changes in the variants, but there will be more signatures. So, a deep learning model, DenseNet was used for detection. The adversarial samples are created by other types of noise, including the Gaussian noise. We added this noise to a subset of malware samples and observed that for Malimg, the modified samples were precisely identified by the DenseNet, and the attack cannot be done. But for BIG2015, we found that there was some marginal decrease in the performance of the classifier, which shows that the model performs well. Further, experiments on the Fast Gradient Sign Method (FGSM) were conducted, and it was observed that a significant decrease in classification accuracy was detected for both datasets. We understand that deep learning models should be robust to adversarial attacks.",
+      "year": 2022,
+      "authors": [
+        "V. Anandhi",
+        "P. Vinod",
+        "Varun G. Menon",
+        "Korankotte Manoj Aditya"
+      ],
+      "url": "https://doi.org/10.1007/s10586-022-03702-3",
+      "venue": "Cluster Computing",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2310.06841": {
+      "paper_id": "arxiv:2310.06841",
+      "title": "Malware Classification using Deep Neural Networks: Performance Evaluation and Applications in Edge Devices",
+      "abstract": "With the increasing extent of malware attacks in the present day along with the difficulty in detecting modern malware, it is necessary to evaluate the effectiveness and performance of Deep Neural Networks (DNNs) for malware classification. Multiple DNN architectures can be designed and trained to detect and classify malware binaries. Results demonstrate the potential of DNNs in accurately classifying malware with high accuracy rates observed across different malware types. Additionally, the feasibility of deploying these DNN models on edge devices to enable real-time classification, particularly in resource-constrained scenarios proves to be integral to large IoT systems. By optimizing model architectures and leveraging edge computing capabilities, the proposed methodologies achieve efficient performance even with limited resources. This study contributes to advancing malware detection techniques and emphasizes the significance of integrating cybersecurity measures for the early detection of malware and further preventing the adverse effects caused by such attacks. Optimal considerations regarding the distribution of security tasks to edge devices are addressed to ensure that the integrity and availability of large scale IoT systems are not compromised due to malware attacks, advocating for a more resilient and secure digital ecosystem.",
+      "year": 2023,
+      "authors": [
+        "Akhil M R",
+        "Adithya Krishna V Sharma",
+        "Harivardhan Swamy",
+        "Pavan A",
+        "Ashray Shetty",
+        "Anirudh B Sathyanarayana"
+      ],
+      "url": "https://arxiv.org/abs/2310.06841",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:0fe5959cfbf81e08e15d25e1e20973f4cedc614f": {
+      "paper_id": "s2:0fe5959cfbf81e08e15d25e1e20973f4cedc614f",
+      "title": "Performance Evaluation of Deep Learning Techniques in The Detection of IOT Malware",
+      "abstract": "Internet of Things (IoT) equipment is rapidly being used in a variety of businesses and for a variety of reasons (for example, sensing and collecting data from the environment in both public and military settings). Because of their expanding involvement in a wide range of applications and their rising computational and processing capabilities, they are a viable attack target for malware tailored to infect specific IoT devices. This study investigates the potential of detecting IoT malware using different deep learning techniques: the classic feedforward neural network (FNN), convolutional neural networks (CNN), long short-term memory (LSTM), and recurrent neural networks (RNN). The proposed method analyses the execution operation codes of IOT app sequences using modern NLP (natural language processing) methods. The current work utilized an IoT application dataset with 500 malware (collected from the IOTPOT dataset) and 500 goodware samples to train the proposed algorithms. The trained model is tested against 2971 fresh IoT malware and goodware samples. The samples were input into deep learning models, and performance metrics were obtained. The results demonstrate that the RNN model had the best accuracy (99.19%) in detecting fresh malware samples. On the other hand, the results were compared by the time required for training; the CNN model shows that it could achieve high accuracy (98.05%) with less training time. A comparison with various deep learning classifiers demonstrates that the RNN and CNN techniques produce the best results.",
+      "year": 2023,
+      "authors": [
+        "Ayat T. Salim",
+        "B. M. Khammas"
+      ],
+      "url": "https://doi.org/10.31987/ijict.6.3.233",
+      "venue": "Iraqi Journal of Information and Communication Technology",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2407.19153": {
+      "paper_id": "arxiv:2407.19153",
+      "title": "A Survey of Malware Detection Using Deep Learning",
+      "abstract": "The problem of malicious software (malware) detection and classification is a complex task, and there is no perfect approach. There is still a lot of work to be done. Unlike most other research areas, standard benchmarks are difficult to find for malware detection. This paper aims to investigate recent advances in malware detection on MacOS, Windows, iOS, Android, and Linux using deep learning (DL) by investigating DL in text and image classification, the use of pre-trained and multi-task learning models for malware detection approaches to obtain high accuracy and which the best approach if we have a standard benchmark dataset. We discuss the issues and the challenges in malware detection using DL classifiers by reviewing the effectiveness of these DL classifiers and their inability to explain their decisions and actions to DL developers presenting the need to use Explainable Machine Learning (XAI) or Interpretable Machine Learning (IML) programs. Additionally, we discuss the impact of adversarial attacks on deep learning models, negatively affecting their generalization capabilities and resulting in poor performance on unseen data. We believe there is a need to train and test the effectiveness and efficiency of the current state-of-the-art deep learning models on different malware datasets. We examine eight popular DL approaches on various datasets. This survey will help researchers develop a general understanding of malware recognition using deep learning.",
+      "year": 2024,
+      "authors": [
+        "Ahmed Bensaoud",
+        "Jugal Kalita",
+        "Mahmoud Bensaoud"
+      ],
+      "url": "https://arxiv.org/abs/2407.19153",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:b1f83b3e7a63de22acf7d1b0888f08bb696738a0": {
+      "paper_id": "s2:b1f83b3e7a63de22acf7d1b0888f08bb696738a0",
+      "title": "Improving Cyber Threat Intelligence Analysis Using Supervised Machine Learning Models: A Comprehensive Statistical Evaluation",
+      "abstract": "Malware detection benchmarks have reported nearperfect accuracy on datasets like CIC-MalMem-2022, creating an illusion of a solved problem. This paper critically examines this narrative by introducing two novel quantitative metrics for dataset quality assessment: the Feature Redundancy Index (FRI) and the Learning Efficiency Score (LES). Through rigorous evaluation of four supervised learning models-XGBoost, Random Forest, Support Vector Machine, and Dense Neural Network-using stratified 10-fold cross-validation on the real MalMem2022 dataset, our analysis reveals that the benchmark's high performance is attributable to its inherent simplicity rather than algorithmic sophistication. Our variance analysis suggests that dataset selection may exert substantially greater influence on reported performance than model selection within the evaluated experimental setting. Furthermore, a LES of 1.001 indicates that 30% of training data is sufficient to achieve maximum accuracy, confirming the dataset lacks sufficient complexity. These findings fundamentally shift the research focus from incremental model improvements to the development of more challenging and representative benchmarks.",
+      "year": 2026,
+      "authors": [
+        "Noura Mohammed",
+        "E. Emary",
+        "Mahmoud AttaAllah"
+      ],
+      "url": "https://doi.org/10.1109/IMSA70415.2026.11700279",
+      "venue": "Internet, Multimedia Systems and Applications",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2111.15205": {
+      "paper_id": "arxiv:2111.15205",
+      "title": "Benchmark Static API Call Datasets for Malware Family Classification",
+      "abstract": "Nowadays, malware and malware incidents are increasing daily, even with various antivirus systems and malware detection or classification methodologies. Machine learning techniques have been the main focus of the security experts to detect malware and determine their families. Many static, dynamic, and hybrid techniques have been presented for that purpose. In this study, the static analysis technique has been applied to malware samples to extract API calls, which is one of the most used features in machine/deep learning models as it represents the behavior of malware samples. Since the rapid increase and continuous evolution of malware affect the detection capacity of antivirus scanners, recent and updated datasets of malicious software became necessary to overcome this drawback. This paper introduces two new datasets: One with 14,616 samples obtained and compiled from VirusShare and one with 9,795 samples from VirusSample. In addition, benchmark results based on static API calls of malware samples are presented using several machine and deep learning models on these datasets. We believe that these two datasets and benchmark results enable researchers to test and validate their methods and approaches in this field.",
+      "year": 2021,
+      "authors": [
+        "Berkant Düzgün",
+        "Aykut Çayır",
+        "Ferhat Demirkıran",
+        "Ceyda Nur Kahya",
+        "Buket Gençaydın",
+        "Hasan Dağ"
+      ],
+      "url": "https://arxiv.org/abs/2111.15205",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2502.15041": {
+      "paper_id": "arxiv:2502.15041",
+      "title": "Benchmarking Android Malware Detection: Traditional vs. Deep Learning Models",
+      "abstract": "Android malware detection has been extensively studied using both traditional machine learning (ML) and deep learning (DL) approaches. While many state-of-the-art detection models, particularly those based on DL, claim superior performance, they often rely on limited comparisons, lacking comprehensive benchmarking against traditional ML models across diverse datasets. This raises concerns about the robustness of DL-based approaches' performance and the potential oversight of simpler, more efficient ML models. In this paper, we conduct a systematic evaluation of Android malware detection models across four datasets: three recently published, publicly available datasets and a large-scale dataset we systematically collected. We implement a range of traditional ML models, including Random Forests (RF) and CatBoost, alongside advanced DL models such as Capsule Graph Neural Networks (CapsGNN), BERT-based models, and ExcelFormer based models. Our results reveal that in many cases simpler and more computationally efficient ML models achieve comparable or even superior performance compared with DL models. These findings highlight the need for rigorous benchmarking in Android malware detection research. We encourage future studies to conduct more comprehensive benchmarking comparisons between traditional and advanced models to ensure a more accurate assessment of detection capabilities. To facilitate further research, we provide access to our dataset, including app IDs, hash values, and labels.",
+      "year": 2025,
+      "authors": [
+        "Guojun Liu",
+        "Doina Caragea",
+        "Xinming Ou",
+        "Sankardas Roy"
+      ],
+      "url": "https://arxiv.org/abs/2502.15041",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:8faccf4480bcc4e54e58d4c48072d0444021f4b7": {
+      "paper_id": "s2:8faccf4480bcc4e54e58d4c48072d0444021f4b7",
+      "title": "Mitigating Adversarial and Data Poisoning Attacks in Cybersecurity Applications",
+      "abstract": "The integration of deep learning models in cybersecurity applications, such as malware detection, intrusion detection, and spam filtering, has introduced significant vulner-abilities to security threats. Among these, adversarial and data poisoning attacks pose particularly severe risks, compromising the reliability and accuracy of learning algorithms. Adversarial attacks involve the manipulation of inputs to deceive models into making incorrect predictions, while data poisoning attacks aim to corrupt training datasets, thereby degrading model performance. This paper provides an in-depth analysis of these vulnerabilities, offering a comprehensive explanation of the different types of adversarial and data poisoning attacks. We also explore existing defense mechanisms, including effective model training techniques, anomaly detection, and secure data processing. Our study critically evaluates the practical efficacy of these defenses against common cyber threats, highlighting both their strengths and limitations. By addressing these critical challenges, our research contributes to enhancing the security and robustness of machine learning models in combating today's sophisticated cyber threats. The findings and recommendations presented in this paper will be of significant interest to researchers and practitioners striving to bolster machine learning's resilience against adversarial attacks and ensure data authenticity.",
+      "year": 2024,
+      "authors": [
+        "Saad Rustam",
+        "Usama Arshad",
+        "M. Ahmad",
+        "Najam Sawera",
+        "Hammad Ali"
+      ],
+      "url": "https://doi.org/10.1109/ICET63392.2024.10935233",
+      "venue": "International Conference on Emerging Technologies",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2007.02407": {
+      "paper_id": "arxiv:2007.02407",
+      "title": "Adversarial Machine Learning Attacks and Defense Methods in the Cyber Security Domain",
+      "abstract": "In recent years machine learning algorithms, and more specifically deep learning algorithms, have been widely used in many fields, including cyber security. However, machine learning systems are vulnerable to adversarial attacks, and this limits the application of machine learning, especially in non-stationary, adversarial environments, such as the cyber security domain, where actual adversaries (e.g., malware developers) exist. This paper comprehensively summarizes the latest research on adversarial attacks against security solutions based on machine learning techniques and illuminates the risks they pose. First, the adversarial attack methods are characterized based on their stage of occurrence, and the attacker's goals and capabilities. Then, we categorize the applications of adversarial attack and defense methods in the cyber security domain. Finally, we highlight some characteristics identified in recent research and discuss the impact of recent advancements in other adversarial learning domains on future research directions in the cyber security domain. This paper is the first to discuss the unique challenges of implementing end-to-end adversarial attacks in the cyber security domain, map them in a unified taxonomy, and use the taxonomy to highlight future research directions.",
+      "year": 2020,
+      "authors": [
+        "Ihai Rosenberg",
+        "Asaf Shabtai",
+        "Yuval Elovici",
+        "Lior Rokach"
+      ],
+      "url": "https://arxiv.org/abs/2007.02407",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:fd53c48bc9180908eee19891852fd914a932dcaf": {
+      "paper_id": "s2:fd53c48bc9180908eee19891852fd914a932dcaf",
+      "title": "Beyond Accuracy: Robustness and Explainability in Adversarial Malware Detection",
+      "abstract": "The increasing sophistication of adversarial malware attacks highlights the urgent need for robust detection systems capable of resisting evasion strategies. This paper presents a comprehensive evaluation of vulnerabilities in machine learning-based malware detectors, focusing on adversarial effectiveness across diverse attack paradigms. We systematically assess gradient-based and optimization-driven attacks against hybrid CNN-LSTM classifiers, revealing significant susceptibility under adversarial pressure. Using explainable AI techniques-SHAP and LIME-we uncover critical decision-making vulnerabilities tied to semantically meaningful malware features. Our findings expose structural limitations in current deep learning approaches, demonstrating that hybrid models exhibit unexpected robustness at higher perturbation levels, while standalone CNN and LSTM models remain highly vulnerable. The study provides actionable insights for developing more resilient detection systems, bridging gaps between adversarial robustness research and practical deployment.",
+      "year": 2025,
+      "authors": [
+        "Eslam A. Amer",
+        "Gelayol Golcarenarenji",
+        "Alaa Mohasseb",
+        "Tamer El-boghdadly"
+      ],
+      "url": "https://doi.org/10.1109/MIUCC66482.2025.11196809",
+      "venue": "2025 International Mobile, Intelligent, and Ubiquitous Computing Conference (MIUCC)",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2604.21310": {
+      "paper_id": "arxiv:2604.21310",
+      "title": "Adversarial Evasion in Non-Stationary Malware Detection: Minimizing Drift Signals through Similarity-Constrained Perturbations",
+      "abstract": "Deep learning has emerged as a powerful approach for malware detection, demonstrating impressive accuracy across various data representations. However, these models face critical limitations in real-world, non-stationary environments where both malware characteristics and detection systems continuously evolve. Our research investigates a fundamental security question: Can an attacker generate adversarial malware samples that simultaneously evade classification and remain inconspicuous to drift monitoring mechanisms? We propose a novel approach that generates targeted adversarial examples in the classifier's standardized feature space, augmented with sophisticated similarity regularizers. By carefully constraining perturbations to maintain distributional similarity with clean malware, we create an optimization objective that balances targeted misclassification with drift signal minimization. We quantify the effectiveness of this approach by comprehensively comparing classifier output probabilities using multiple drift metrics. Our experiments demonstrate that similarity constraints can reduce output drift signals, with $\\ell_2$ regularization showing the most promising results. We observe that perturbation budget significantly influences the evasion-detectability trade-off, with increased budget leading to higher attack success rates and more substantial drift indicators.",
+      "year": 2026,
+      "authors": [
+        "Pawan Acharya",
+        "Lan Zhang"
+      ],
+      "url": "https://arxiv.org/abs/2604.21310",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:70c121af9818efd7d3e1d2894f744392506adb88": {
+      "paper_id": "s2:70c121af9818efd7d3e1d2894f744392506adb88",
+      "title": "Adversarial Robustness of Deep Neural Networks: A Survey from a Formal Verification Perspective",
+      "abstract": "Neural networks have been widely applied in security applications such as spam and phishing detection, intrusion prevention, and malware detection. This black-box method, however, often has uncertainty and poor explainability in applications. Furthermore, neural networks themselves are often vulnerable to adversarial attacks. For those reasons, there is a high demand for trustworthy and rigorous methods to verify the robustness of neural network models. Adversarial robustness, which concerns the reliability of a neural network when dealing with maliciously manipulated inputs, is one of the hottest topics in security and machine learning. In this work, we survey existing literature in adversarial robustness verification for neural networks and collect 39 diversified research works across machine learning, security, and software engineering domains. We systematically analyze their approaches, including how robustness is formulated, what verification techniques are used, and the strengths and limitations of each technique. We provide a taxonomy from a formal verification perspective for a comprehensive understanding of this topic. We classify the existing techniques based on property specification, problem reduction, and reasoning strategies. We also demonstrate representative techniques that have been applied in existing studies with a sample model. Finally, we discuss open questions for future research.",
+      "year": 2022,
+      "authors": [
+        "M. Meng",
+        "Guang-Dong Bai",
+        "Sin G. Teo",
+        "Zhe Hou",
+        "Yan Xiao",
+        "Yun Lin",
+        "Jin-Song Dong"
+      ],
+      "url": "https://doi.org/10.1109/TDSC.2022.3179131",
+      "venue": "IEEE Transactions on Dependable and Secure Computing",
+      "source": "semantic_scholar"
+    }
+  },
+  "question_id": "Q18",
+  "area": "Cybersecurity"
+}

@@ -1,0 +1,668 @@
+{
+  "question": "What methods are used to detect machine-generated text?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What are the primary linguistic and statistical methods used for machine-generated text detection?",
+      "search_query": "linguistic statistical machine generated text detection",
+      "paper_ids": [
+        "s2:b0267ce561e856ce40092ffce719ecd129c849cb",
+        "s2:4f35af04862e411c2c6bb935b96f153a6f3024c5",
+        "s2:d250665e25d30555d74cf6b023d807cdb5308eea",
+        "s2:0fc67befe9a047bc1a075e99860651f7e895c5c6",
+        "s2:90b0d29395d45c849065b9ac6efdeaf85d270446"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "How are machine learning and deep learning classifiers applied to identify AI-written text?",
+      "search_query": "deep learning classifiers ai text detection",
+      "paper_ids": [
+        "arxiv:2404.10032",
+        "arxiv:2501.03203",
+        "arxiv:2410.14875",
+        "arxiv:2601.03812",
+        "arxiv:2406.06558"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What watermark-based and provenance tracking techniques are used to trace synthetic text?",
+      "search_query": "watermarking provenance machine generated text",
+      "paper_ids": [
+        "s2:dbfae6a9f6cc8380ca06c4c8bf9f1b077a3bd3ba",
+        "s2:9b79eb8d21c8a832daedbfc6d8c31bebe0da3ed5",
+        "arxiv:2605.12456",
+        "arxiv:2009.03015",
+        "s2:ffcc462dfa5bd932beefc1947afdb811af6e4bfe"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the limitations and robustness issues of current machine-generated text detection methods against adversarial attacks?",
+      "search_query": "adversarial robustness limits text detectors",
+      "paper_ids": [
+        "s2:f15662437b0cf9eaa1d9838d35143a7e127a1df5",
+        "s2:156fd915fbf6b89424284312572db02d18a317c8",
+        "s2:8edded25aeb530609057c88fd525dfc66db64775",
+        "s2:b573b82eb83c8da7be21674d2826869ca38c11e9",
+        "arxiv:2510.02319"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study employed a classification-based approach using a Support Vector Machine model alongside a statistical method that analyzes linguistic aspects to distinguish between AI-generated and human-written text.",
+        "paper_id": "s2:b0267ce561e856ce40092ffce719ecd129c849cb"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study employed a classification-based approach using a Support Vector Machine model alongside a statistical method that analyzes linguistic aspects to distinguish between AI-generated and human-written text.",
+          "paper_id": "s2:b0267ce561e856ce40092ffce719ecd129c849cb",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9226,
+          "p_supported": 0.9226,
+          "accepted": true,
+          "alt_p_supported": 0.8886
+        }
+      ],
+      "final": {
+        "text": "One study employed a classification-based approach using a Support Vector Machine model alongside a statistical method that analyzes linguistic aspects to distinguish between AI-generated and human-written text.",
+        "paper_id": "s2:b0267ce561e856ce40092ffce719ecd129c849cb",
+        "label": "SUPPORTED",
+        "confidence": 0.9226
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "The LISA framework extracts linguistically and statistically grounded features such as lexical richness metrics, entropy measures, repetition frequency, part-of-speech tag distributions, syntactic parse tree depth, semantic topic drift indicators, and sentence-level coherence scores to detect AI-generated text.",
+        "paper_id": "s2:0fc67befe9a047bc1a075e99860651f7e895c5c6"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The LISA framework extracts linguistically and statistically grounded features such as lexical richness metrics, entropy measures, repetition frequency, part-of-speech tag distributions, syntactic parse tree depth, semantic topic drift indicators, and sentence-level coherence scores to detect AI-generated text.",
+          "paper_id": "s2:0fc67befe9a047bc1a075e99860651f7e895c5c6",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9404,
+          "p_supported": 0.9404,
+          "accepted": true,
+          "alt_p_supported": 0.9129
+        }
+      ],
+      "final": {
+        "text": "The LISA framework extracts linguistically and statistically grounded features such as lexical richness metrics, entropy measures, repetition frequency, part-of-speech tag distributions, syntactic parse tree depth, semantic topic drift indicators, and sentence-level coherence scores to detect AI-generated text.",
+        "paper_id": "s2:0fc67befe9a047bc1a075e99860651f7e895c5c6",
+        "label": "SUPPORTED",
+        "confidence": 0.9404
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "Machine learning and deep learning approaches such as the XGB Classifier, SVM, and BERT architecture are applied to differentiate between electronically produced text and human-written text.",
+        "paper_id": "arxiv:2404.10032"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Machine learning and deep learning approaches such as the XGB Classifier, SVM, and BERT architecture are applied to differentiate between electronically produced text and human-written text.",
+          "paper_id": "arxiv:2404.10032",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9441,
+          "p_supported": 0.9441,
+          "accepted": true,
+          "alt_p_supported": 0.9302
+        }
+      ],
+      "final": {
+        "text": "Machine learning and deep learning approaches such as the XGB Classifier, SVM, and BERT architecture are applied to differentiate between electronically produced text and human-written text.",
+        "paper_id": "arxiv:2404.10032",
+        "label": "SUPPORTED",
+        "confidence": 0.9441
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Traditional machine learning algorithms including XGBoost and Random Forest achieve high performance with 83% and 81% accuracies respectively when evaluated on the CyberHumanAI dataset.",
+        "paper_id": "arxiv:2501.03203"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Traditional machine learning algorithms including XGBoost and Random Forest achieve high performance with 83% and 81% accuracies respectively when evaluated on the CyberHumanAI dataset.",
+          "paper_id": "arxiv:2501.03203",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9256,
+          "p_supported": 0.9256,
+          "accepted": true,
+          "alt_p_supported": 0.9291
+        }
+      ],
+      "final": {
+        "text": "Traditional machine learning algorithms including XGBoost and Random Forest achieve high performance with 83% and 81% accuracies respectively when evaluated on the CyberHumanAI dataset.",
+        "paper_id": "arxiv:2501.03203",
+        "label": "SUPPORTED",
+        "confidence": 0.9256
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "Watermarking of Experts (WoE) is a black-box text provenance method that biases the vocabulary of a few secret experts in sparse Mixture-of-Experts models to attribute text generated by stolen weights.",
+        "paper_id": "s2:dbfae6a9f6cc8380ca06c4c8bf9f1b077a3bd3ba"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Watermarking of Experts (WoE) is a black-box text provenance method that biases the vocabulary of a few secret experts in sparse Mixture-of-Experts models to attribute text generated by stolen weights.",
+          "paper_id": "s2:dbfae6a9f6cc8380ca06c4c8bf9f1b077a3bd3ba",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9044,
+          "p_supported": 0.9044,
+          "accepted": true,
+          "alt_p_supported": 0.9063
+        }
+      ],
+      "final": {
+        "text": "Watermarking of Experts (WoE) is a black-box text provenance method that biases the vocabulary of a few secret experts in sparse Mixture-of-Experts models to attribute text generated by stolen weights.",
+        "paper_id": "s2:dbfae6a9f6cc8380ca06c4c8bf9f1b077a3bd3ba",
+        "label": "SUPPORTED",
+        "confidence": 0.9044
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "TextSeal is a LLM watermark that uses dual-key generation based on Gumbel-max sampling along with entropy-weighted scoring and multi-region localization for provenance detection.",
+        "paper_id": "arxiv:2605.12456"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "TextSeal is a LLM watermark that uses dual-key generation based on Gumbel-max sampling along with entropy-weighted scoring and multi-region localization for provenance detection.",
+          "paper_id": "arxiv:2605.12456",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9447,
+          "p_supported": 0.9447,
+          "accepted": true,
+          "alt_p_supported": 0.9326
+        }
+      ],
+      "final": {
+        "text": "TextSeal is a LLM watermark that uses dual-key generation based on Gumbel-max sampling along with entropy-weighted scoring and multi-region localization for provenance detection.",
+        "paper_id": "arxiv:2605.12456",
+        "label": "SUPPORTED",
+        "confidence": 0.9447
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Empirical results show that current machine-generated text detectors can be compromised in as little as 10 seconds through adversarial attacks that misclassify AI text as human-written content.",
+        "paper_id": "s2:f15662437b0cf9eaa1d9838d35143a7e127a1df5"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Empirical results show that current machine-generated text detectors can be compromised in as little as 10 seconds through adversarial attacks that misclassify AI text as human-written content.",
+          "paper_id": "s2:f15662437b0cf9eaa1d9838d35143a7e127a1df5",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.949,
+          "p_supported": 0.949,
+          "accepted": true,
+          "alt_p_supported": 0.9325
+        }
+      ],
+      "final": {
+        "text": "Empirical results show that current machine-generated text detectors can be compromised in as little as 10 seconds through adversarial attacks that misclassify AI text as human-written content.",
+        "paper_id": "s2:f15662437b0cf9eaa1d9838d35143a7e127a1df5",
+        "label": "SUPPORTED",
+        "confidence": 0.949
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "Conventional adversarial training fails against semantic attacks, resulting in a True Positive Rate that plummets to 48.8% at a strict 1% False Positive Rate due to a semantic evasion threshold.",
+        "paper_id": "arxiv:2510.02319"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Conventional adversarial training fails against semantic attacks, resulting in a True Positive Rate that plummets to 48.8% at a strict 1% False Positive Rate due to a semantic evasion threshold.",
+          "paper_id": "arxiv:2510.02319",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.932,
+          "p_supported": 0.932,
+          "accepted": true,
+          "alt_p_supported": 0.9135
+        }
+      ],
+      "final": {
+        "text": "Conventional adversarial training fails against semantic attacks, resulting in a True Positive Rate that plummets to 48.8% at a strict 1% False Positive Rate due to a semantic evasion threshold.",
+        "paper_id": "arxiv:2510.02319",
+        "label": "SUPPORTED",
+        "confidence": 0.932
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:b0267ce561e856ce40092ffce719ecd129c849cb",
+      "citation": "Mehar Prateek Kalra, Ansh Mathur, C. Patvardhan (2024). Detection of AI-generated Text: An Experimental Study. International Workshop on Artificial Intelligence and Cognition. https://doi.org/10.1109/AIC61668.2024.10731116"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:0fc67befe9a047bc1a075e99860651f7e895c5c6",
+      "citation": "Vaishnavi Sen, Rashida Hasan (2025). A Feature-based Linguistic and Statistical Framework for AI-Generated Text Detection. International Conference on Machine Learning and Applications. https://doi.org/10.1109/ICMLA66185.2025.00030"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2404.10032",
+      "citation": "Nuzhat Prova (2024). Detecting AI Generated Text Based on NLP and Machine Learning Approaches. arXiv. https://arxiv.org/abs/2404.10032"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2501.03203",
+      "citation": "Ayat A. Najjar, Huthaifa I. Ashqar, Omar A. Darwish et al. (2025). Detecting AI-Generated Text in Educational Content: Leveraging Machine Learning and Explainable AI for Academic Integrity. arXiv. https://arxiv.org/abs/2501.03203"
+    },
+    {
+      "n": 5,
+      "paper_id": "s2:dbfae6a9f6cc8380ca06c4c8bf9f1b077a3bd3ba",
+      "citation": "Jona Te Lintelo, Li-Chao Wu, S. Picek (2026). WoE Wrote It? Watermarking Mixture-of-Experts LLMs for Black-Box Text Provenance. arXiv.org. https://doi.org/10.48550/arXiv.2608.29151"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2605.12456",
+      "citation": "Tom Sander, Hongyan Chang, Tomáš Souček et al. (2026). TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection. arXiv. https://arxiv.org/abs/2605.12456"
+    },
+    {
+      "n": 7,
+      "paper_id": "s2:f15662437b0cf9eaa1d9838d35143a7e127a1df5",
+      "citation": "Ying Zhou, Ben He, Le Sun (2024). Humanizing Machine-Generated Content: Evading AI-Text Detection through Adversarial Attack. International Conference on Language Resources and Evaluation. https://doi.org/10.48550/arXiv.2404.01907"
+    },
+    {
+      "n": 8,
+      "paper_id": "arxiv:2510.02319",
+      "citation": "Lekkala Sai Teja, Annepaka Yadagiri, Sangam Sai Anish et al. (2025). Modeling the Attack: Detecting AI-Generated Text by Quantifying Adversarial Perturbations. arXiv. https://arxiv.org/abs/2510.02319"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Detecting machine-generated text involves a combination of linguistic, statistical, machine learning, deep learning, and provenance tracking methods.\n\nFor primary linguistic and statistical analysis, research employs classification approaches using Support Vector Machines (SVM) combined with statistical methods that analyze linguistic aspects [1]. A prominent example is the LISA framework, which extracts linguistically and statistically grounded features including lexical richness metrics, entropy measures, repetition frequency, part-of-speech tag distributions, syntactic parse tree depth, semantic topic drift indicators, and sentence-level coherence scores [2]. \n\nMachine learning and deep learning classifiers are widely applied to differentiate between electronically produced and human-written text. Algorithms and architectures such as the XGB Classifier, SVM, and BERT are utilized for this purpose [3]. Furthermore, traditional machine learning algorithms like XGBoost and Random Forest achieve strong performance, recording 83% and 81% accuracies respectively when evaluated on the CyberHumanAI dataset [4].\n\nIn addition to classification and feature-based techniques, watermark-based and provenance tracking methods are used to trace synthetic text. The Watermarking of Experts (WoE) method is a black-box text provenance technique that biases the vocabulary of a few secret experts in sparse Mixture-of-Experts models to attribute text generated by stolen weights [5]. Another approach, TextSeal, utilizes a dual-key generation mechanism based on Gumbel-max sampling alongside entropy-weighted scoring and multi-region localization for provenance detection [6].\n\nDespite these advancements, current detection methods face notable limitations and robustness issues regarding adversarial attacks. Empirical results demonstrate that existing machine-generated text detectors can be compromised in as little as 10 seconds through adversarial attacks that successfully misclassify AI text as human-written content [7]. Additionally, conventional adversarial training fails against semantic attacks, causing the True Positive Rate to drop significantly to 48.8% at a strict 1% False Positive Rate due to a semantic evasion threshold [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 6,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 13,
+      "arxiv": 0
+    },
+    "seconds": 112.1
+  },
+  "papers": {
+    "s2:b0267ce561e856ce40092ffce719ecd129c849cb": {
+      "paper_id": "s2:b0267ce561e856ce40092ffce719ecd129c849cb",
+      "title": "Detection of AI-generated Text: An Experimental Study",
+      "abstract": "Artificial Intelligence is an important area in the computer science domain with a wide range of capabilities. With many people saying that they have encountered AI-generated content in the past years very few respondents feel confident in their ability to distinguish between real and fake content. This work aims to explore methods that effectively detect the content generated by AI. The investigation of the available online tools led to the determination of their limitations. Consequently, two separate algorithms were employed for detection and proper analysis: one is a classification-based approach that uses the Support Vector Machine (SVM) model for binary text classification, and the other is a statistical method that analyzes linguistic aspects to distinguish between writing generated by AI and humans. Both normal data, as well as rephrased data, were employed during the stress testing of these algorithms. The accuracy obtained on the raw dataset was very promising. The detection was 99.87% accurate. The accuracy rate of detecting rephrased texts reached 87.58% for the classification model and 84.91% for the statistical model. Additional analysis and observations were made regarding the ability of AI to generate text similar to humans.",
+      "year": 2024,
+      "authors": [
+        "Mehar Prateek Kalra",
+        "Ansh Mathur",
+        "C. Patvardhan"
+      ],
+      "url": "https://doi.org/10.1109/AIC61668.2024.10731116",
+      "venue": "International Workshop on Artificial Intelligence and Cognition",
+      "source": "semantic_scholar"
+    },
+    "s2:4f35af04862e411c2c6bb935b96f153a6f3024c5": {
+      "paper_id": "s2:4f35af04862e411c2c6bb935b96f153a6f3024c5",
+      "title": "Human or Machine? A Survey on Machine-Generated Text Detection",
+      "abstract": "As generative AI advances rapidly across education, research, medicine, and journalism, machine-generated text (MGT) raises questions about authenticity, ethics, and social impact. To ground this discussion, we conducted a linguistic analysis, covering phonology, morphology, syntax, semantics, lexicon, and pragmatics, which uncovers robust MGT signatures, such as lower perplexity and simpler morphology. We then consolidate the state-of-the-art by reviewing 30 benchmark corpora, totaling over 4 million text samples, and 44 empirical studies, including outcomes from six major shared tasks. Detection approaches are grouped into five broad classes: classical machine learning, deep learning, transformer-based architectures, commercial AI detectors, and statistical tools. Transformer models achieve near-perfect accuracy (<inline-formula> <tex-math notation=\"LaTeX\">$\\approx 100$ </tex-math></inline-formula>%), while human evaluators peak at <inline-formula> <tex-math notation=\"LaTeX\">$\\approx 77$ </tex-math></inline-formula>% accuracy. This survey also highlights common evaluation setups and the core performance measures used to assess model effectiveness. Future MGT detectors can become truly fair, scalable, and effective across languages and domains by expanding corpus diversity and innovating resource-efficient, adversarially robust methods.",
+      "year": 2026,
+      "authors": [
+        "Zainab Ahmad",
+        "M. Torres-Ruiz",
+        "Ahmad Mahmood",
+        "Rolando Quintero",
+        "I. Ameer",
+        "Necva Bölücü"
+      ],
+      "url": "https://doi.org/10.1109/ACCESS.2026.3666781",
+      "venue": "IEEE Access",
+      "source": "semantic_scholar"
+    },
+    "s2:d250665e25d30555d74cf6b023d807cdb5308eea": {
+      "paper_id": "s2:d250665e25d30555d74cf6b023d807cdb5308eea",
+      "title": "METHODS FOR RECOGNIZING THE PROBABILITY OF APPLICATION OF ARTIFICIAL INTELLIGENCE SYSTEMS IN TEXT DOCUMENTS",
+      "abstract": "The aim of this study is to systematize and analyze existing methods for recognizing the probability of application of artificial intelligence (AI) systems in text documents. The objectives included studying linguistic, stylometric, statistical, and machine learning-based approaches to AI-generated content detection; identifying their advantages, disadvantages, and areas of application; and identifying key challenges and prospects for the field. The results demonstrate that despite significant progress, there is no universal and absolutely reliable detection method; the effectiveness of each approach depends on the complexity of the AI model, the amount of training data, and the specifics of the text being analyzed. The scientific novelty consists in a comprehensive review and comparative analysis of heterogeneous techniques, and the practical significance consists in the possibility of using the presented methods to combat misinformation, academic dishonesty and unfair use of AI technologies in the textual environment.",
+      "year": 2025,
+      "authors": [
+        "L. K. Khadzhieva",
+        "Ahmed K. Chadaev"
+      ],
+      "url": "https://doi.org/10.36871/ek.up.p.r.2025.05.07.022",
+      "venue": "EKONOMIKA I UPRAVLENIE: PROBLEMY, RESHENIYA",
+      "source": "semantic_scholar"
+    },
+    "s2:0fc67befe9a047bc1a075e99860651f7e895c5c6": {
+      "paper_id": "s2:0fc67befe9a047bc1a075e99860651f7e895c5c6",
+      "title": "A Feature-based Linguistic and Statistical Framework for AI-Generated Text Detection",
+      "abstract": "The growing fluency, coherence, and semantic plausibility of text generated by large language models (LLMs) pose significant challenges for reliably distinguishing AI-generated text (AGT) from human-written text (HWT). These challenges stem from the absence of identifiable stylistic artifacts, limited generalization across domains, and performance degradation under class imbalance. Accurate AGT detection is essential for upholding academic integrity, limiting the spread of misinformation, and ensuring transparent authorship attribution. This work introduces LISA (Linguistic and Statistical Analysis), a detection framework that extracts a comprehensive set of linguistically and statistically grounded features, including lexical richness metrics, entropy measures, repetition frequency, part-of-speech tag distributions, syntactic parse tree depth, semantic topic drift indicators, and sentence-level coherence scores. These features are systematically encoded into fixed-length feature vectors that capture both shallow and deep textual patterns. We use the resulting feature vectors to train four classical models, including Random Forest, XGBoost, Multilayer Perceptron, and Support Vector Machine to evaluate AGT vs. HWT classification on two benchmark datasets, XSum and HC3, across different class distributions. Experimental results demonstrate that LISA achieves performance comparable to, and in several settings surpassing, state-of-the-art AGT detection methods, including DetectGPT, GPTZero, and RoBERTa.",
+      "year": 2025,
+      "authors": [
+        "Vaishnavi Sen",
+        "Rashida Hasan"
+      ],
+      "url": "https://doi.org/10.1109/ICMLA66185.2025.00030",
+      "venue": "International Conference on Machine Learning and Applications",
+      "source": "semantic_scholar"
+    },
+    "s2:90b0d29395d45c849065b9ac6efdeaf85d270446": {
+      "paper_id": "s2:90b0d29395d45c849065b9ac6efdeaf85d270446",
+      "title": "Software detection of Ukrainian-language texts generated by AI: methods, estimations, challenges",
+      "abstract": "Purpose. To evaluate the effectiveness of existing AI-generated text detection tools in identifying machine-generated content within students’ qualifying papers. The research aims to analyze the accuracy, reliability, and limitations of these detection methods, particularly for texts written in Ukrainian, and to explore potential improvements in AI content recognition. Methodology. The study employs a combination of statistical analysis and experimental evaluation of AI-detection tools. A dataset of AI-generated and human-written academic texts is used to assess detection accuracy, with additional experiments conducted to analyze the influence of linguistic structures, translation effects, and text formalization. The research also incorporates computational techniques to examine error rates and determine patterns in AI-generated content recognition. Findings. The study results provide insights into the performance of current AI-detection systems, highlighting their strengths and weaknesses. The analysis reveals significant challenges in detecting AI-generated text, particularly in non-English languages such as Ukrainian. Additionally, the study identifies the impact of translation on detection accuracy and discusses the effectiveness of different linguistic and statistical approaches. Originality. This research contributes to the ongoing discourse on academic integrity by addressing the limitations of AI-detection tools for non-English academic texts. Unlike previous studies focusing primarily on English-language AI-generated content, this study provides a unique perspective on the challenges of detecting AI-generated text in Ukrainian, offering novel insights into the adaptation of detection models for diverse linguistic contexts. Practical value. The findings of this study are valuable for educators, researchers, and policymakers concerned with maintaining academic integrity in the era of generative AI. By identifying weaknesses in current detection systems and suggesting possible improvements, the research provides a foundation for developing more robust AI-detection methodologies that can effectively apply to academic texts in multiple languages.",
+      "year": 2025,
+      "authors": [
+        "S. Prykhodchenko",
+        "O. Prykhodchenko",
+        "O. S. Shevtsova",
+        "I. H. Olishevskiy"
+      ],
+      "url": "https://doi.org/10.33271/nvngu/2025-4/150",
+      "venue": "Naukovyi Visnyk Natsionalnoho Hirnychoho Universytetu",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2404.10032": {
+      "paper_id": "arxiv:2404.10032",
+      "title": "Detecting AI Generated Text Based on NLP and Machine Learning Approaches",
+      "abstract": "Recent advances in natural language processing (NLP) may enable artificial intelligence (AI) models to generate writing that is identical to human written form in the future. This might have profound ethical, legal, and social repercussions. This study aims to address this problem by offering an accurate AI detector model that can differentiate between electronically produced text and human-written text. Our approach includes machine learning methods such as XGB Classifier, SVM, BERT architecture deep learning models. Furthermore, our results show that the BERT performs better than previous models in identifying information generated by AI from information provided by humans. Provide a comprehensive analysis of the current state of AI-generated text identification in our assessment of pertinent studies. Our testing yielded positive findings, showing that our strategy is successful, with the BERT emerging as the most probable answer. We analyze the research's societal implications, highlighting the possible advantages for various industries while addressing sustainability issues pertaining to morality and the environment. The XGB classifier and SVM give 0.84 and 0.81 accuracy in this article, respectively. The greatest accuracy in this research is provided by the BERT model, which provides 0.93% accuracy.",
+      "year": 2024,
+      "authors": [
+        "Nuzhat Prova"
+      ],
+      "url": "https://arxiv.org/abs/2404.10032",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2501.03203": {
+      "paper_id": "arxiv:2501.03203",
+      "title": "Detecting AI-Generated Text in Educational Content: Leveraging Machine Learning and Explainable AI for Academic Integrity",
+      "abstract": "This study seeks to enhance academic integrity by providing tools to detect AI-generated content in student work using advanced technologies. The findings promote transparency and accountability, helping educators maintain ethical standards and supporting the responsible integration of AI in education. A key contribution of this work is the generation of the CyberHumanAI dataset, which has 1000 observations, 500 of which are written by humans and the other 500 produced by ChatGPT. We evaluate various machine learning (ML) and deep learning (DL) algorithms on the CyberHumanAI dataset comparing human-written and AI-generated content from Large Language Models (LLMs) (i.e., ChatGPT). Results demonstrate that traditional ML algorithms, specifically XGBoost and Random Forest, achieve high performance (83% and 81% accuracies respectively). Results also show that classifying shorter content seems to be more challenging than classifying longer content. Further, using Explainable Artificial Intelligence (XAI) we identify discriminative features influencing the ML model's predictions, where human-written content tends to use a practical language (e.g., use and allow). Meanwhile AI-generated text is characterized by more abstract and formal terms (e.g., realm and employ). Finally, a comparative analysis with GPTZero show that our narrowly focused, simple, and fine-tuned model can outperform generalized systems like GPTZero. The proposed model achieved approximately 77.5% accuracy compared to GPTZero's 48.5% accuracy when tasked to classify Pure AI, Pure Human, and mixed class. GPTZero showed a tendency to classify challenging and small-content cases as either mixed or unrecognized while our proposed model showed a more balanced performance across the three classes.",
+      "year": 2025,
+      "authors": [
+        "Ayat A. Najjar",
+        "Huthaifa I. Ashqar",
+        "Omar A. Darwish",
+        "Eman Hammad"
+      ],
+      "url": "https://arxiv.org/abs/2501.03203",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2410.14875": {
+      "paper_id": "arxiv:2410.14875",
+      "title": "Which LLMs are Difficult to Detect? A Detailed Analysis of Potential Factors Contributing to Difficulties in LLM Text Detection",
+      "abstract": "As LLMs increase in accessibility, LLM-generated texts have proliferated across several fields, such as scientific, academic, and creative writing. However, LLMs are not created equally; they may have different architectures and training datasets. Thus, some LLMs may be more challenging to detect than others. Using two datasets spanning four total writing domains, we train AI-generated (AIG) text classifiers using the LibAUC library - a deep learning library for training classifiers with imbalanced datasets. Our results in the Deepfake Text dataset show that AIG-text detection varies across domains, with scientific writing being relatively challenging. In the Rewritten Ivy Panda (RIP) dataset focusing on student essays, we find that the OpenAI family of LLMs was substantially difficult for our classifiers to distinguish from human texts. Additionally, we explore possible factors that could explain the difficulties in detecting OpenAI-generated texts.",
+      "year": 2024,
+      "authors": [
+        "Shantanu Thorat",
+        "Tianbao Yang"
+      ],
+      "url": "https://arxiv.org/abs/2410.14875",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2601.03812": {
+      "paper_id": "arxiv:2601.03812",
+      "title": "AI Generated Text Detection",
+      "abstract": "The rapid development of large language models has led to an increase in AI-generated text, with students increasingly using LLM-generated content as their own work, which violates academic integrity. This paper presents an evaluation of AI text detection methods, including both traditional machine learning models and transformer-based architectures. We utilize two datasets, HC3 and DAIGT v2, to build a unified benchmark and apply a topic-based data split to prevent information leakage. This approach ensures robust generalization across unseen domains. Our experiments show that TF-IDF logistic regression achieves a reasonable baseline accuracy of 82.87%. However, deep learning models outperform it. The BiLSTM classifier achieves an accuracy of 88.86%, while DistilBERT achieves a similar accuracy of 88.11% with the highest ROC-AUC score of 0.96, demonstrating the strongest overall performance. The results indicate that contextual semantic modeling is significantly superior to lexical features and highlight the importance of mitigating topic memorization through appropriate evaluation protocols. The limitations of this work are primarily related to dataset diversity and computational constraints. In future work, we plan to expand dataset diversity and utilize parameter-efficient fine-tuning methods such as LoRA. We also plan to explore smaller or distilled models and employ more efficient batching strategies and hardware-aware optimization.",
+      "year": 2026,
+      "authors": [
+        "Adilkhan Alikhanov",
+        "Aidar Amangeldi",
+        "Diar Demeubay",
+        "Dilnaz Akhmetzhan",
+        "Nurbek Moldakhmetov",
+        "Omar Polat",
+        "Galymzhan Zharas"
+      ],
+      "url": "https://arxiv.org/abs/2601.03812",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2406.06558": {
+      "paper_id": "arxiv:2406.06558",
+      "title": "Enhancing Text Authenticity: A Novel Hybrid Approach for AI-Generated Text Detection",
+      "abstract": "The rapid advancement of Large Language Models (LLMs) has ushered in an era where AI-generated text is increasingly indistinguishable from human-generated content. Detecting AI-generated text has become imperative to combat misinformation, ensure content authenticity, and safeguard against malicious uses of AI. In this paper, we propose a novel hybrid approach that combines traditional TF-IDF techniques with advanced machine learning models, including Bayesian classifiers, Stochastic Gradient Descent (SGD), Categorical Gradient Boosting (CatBoost), and 12 instances of Deberta-v3-large models. Our approach aims to address the challenges associated with detecting AI-generated text by leveraging the strengths of both traditional feature extraction methods and state-of-the-art deep learning models. Through extensive experiments on a comprehensive dataset, we demonstrate the effectiveness of our proposed method in accurately distinguishing between human and AI-generated text. Our approach achieves superior performance compared to existing methods. This research contributes to the advancement of AI-generated text detection techniques and lays the foundation for developing robust solutions to mitigate the challenges posed by AI-generated content.",
+      "year": 2024,
+      "authors": [
+        "Ye Zhang",
+        "Qian Leng",
+        "Mengran Zhu",
+        "Rui Ding",
+        "Yue Wu",
+        "Jintong Song",
+        "Yulu Gong"
+      ],
+      "url": "https://arxiv.org/abs/2406.06558",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:dbfae6a9f6cc8380ca06c4c8bf9f1b077a3bd3ba": {
+      "paper_id": "s2:dbfae6a9f6cc8380ca06c4c8bf9f1b077a3bd3ba",
+      "title": "WoE Wrote It? Watermarking Mixture-of-Experts LLMs for Black-Box Text Provenance",
+      "abstract": "Large Language Model (LLM) watermarks provide a mechanism for text provenance, enabling model owners to identify machine-generated content and attribute it to a specific watermarked model. However, current LLM watermarking approaches predominantly rely on inference-time sampler methods and focus their analysis on dense models. Inference-time methods are only effective when the text is explicitly generated via the model owner's controlled API; they fail in a post-theft scenario. An adversary who steals or leaks the model weights gains complete control over inference and can simply run an unmodified sampler, bypassing the watermark and preventing post-theft attribution. In this work, we introduce Watermarking of Experts (WoE), a novel black-box text provenance method that leverages the unique structural properties of sparse Mixture-of-Experts (MoE) models. WoE biases the vocabulary of a few secret experts, and defenders detect it by replaying suspect text through their own checkpoint to recover where these experts acted. This approach ensures the watermark remains intrinsic to the model parameters, enabling defenders to attribute text generated by stolen weights, leaked checkpoints, and secondary dense models distilled from the stolen model without needing access to the adversary's deployment or weights. We evaluate WoE across eight MoE models, demonstrating successful watermark detection from suspect text, achieving an average true positive rate of 92.5% at a 1% false positive rate, reaching up to 95.3%, while reducing benchmark accuracy by only 0.4% on average. Unlike prior MoE watermarks, WoE survives distillation into a dense student model and remains detectable under adversarial fine-tuning, forcing malicious actors into a trade-off in which weakening the attribution signal requires additional model adaptation or compromises model utility.",
+      "year": 2026,
+      "authors": [
+        "Jona Te Lintelo",
+        "Li-Chao Wu",
+        "S. Picek"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2608.29151",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:9b79eb8d21c8a832daedbfc6d8c31bebe0da3ed5": {
+      "paper_id": "s2:9b79eb8d21c8a832daedbfc6d8c31bebe0da3ed5",
+      "title": "Tracing Text Provenance via Context-Aware Lexical Substitution",
+      "abstract": "Text content created by humans or language models is often stolen or misused by adversaries. Tracing text provenance can help claim the ownership of text content or identify the malicious users who distribute misleading content like machine-generated fake news. There have been some attempts to achieve this, mainly based on watermarking techniques. Specifically, traditional text watermarking methods embed watermarks by slightly altering text format like line spacing and font, which, however, are fragile to cross-media transmissions like OCR. Considering this, natural language watermarking methods represent watermarks by replacing words in original sentences with synonyms from handcrafted lexical resources (e.g., WordNet), but they do not consider the substitution’s impact on the overall sentence's meaning. Recently, a transformer-based network was proposed to embed watermarks by modifying the unobtrusive words (e.g., function words), which also impair the sentence's logical and semantic coherence. Besides, one well-trained network fails on other different types of text content. To address the limitations mentioned above, we propose a natural language watermarking scheme based on context-aware lexical substitution (LS). Specifically, we employ BERT to suggest LS candidates by inferring the semantic relatedness between the candidates and the original sentence. Based on this, a selection strategy in terms of synchronicity and substitutability is further designed to test whether a word is exactly suitable for carrying the watermark signal. Extensive experiments demonstrate that, under both objective and subjective metrics, our watermarking scheme can well preserve the semantic integrity of original sentences and has a better transferability than existing methods. Besides, the proposed LS approach outperforms the state-of-the-art approach on the Stanford Word Substitution Benchmark.",
+      "year": 2021,
+      "authors": [
+        "Xi Yang",
+        "Jie Zhang",
+        "Ke-Jiang Chen",
+        "Wei-Ming Zhang",
+        "Ze-Hua Ma",
+        "Feng Wang",
+        "Neng-Hai Yu"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2112.07873",
+      "venue": "AAAI Conference on Artificial Intelligence",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2605.12456": {
+      "paper_id": "arxiv:2605.12456",
+      "title": "TextSeal: A Localized LLM Watermark for Provenance & Distillation Protection",
+      "abstract": "We introduce TextSeal, a state-of-the-art watermark for large language models. Building on Gumbel-max sampling, TextSeal introduces dual-key generation to restore output diversity, along with entropy-weighted scoring and multi-region localization for improved detection. It supports serving optimizations such as speculative decoding and multi-token prediction, and does not add any inference overhead. TextSeal strictly dominates baselines like SynthID-text in detection strength and is robust to dilution, maintaining confident localized detection even in heavily mixed human/AI documents. The scheme is theoretically distortion-free, and evaluation across reasoning benchmarks confirms that it preserves downstream performance; while a multilingual human evaluation (6000 A/B comparisons, 5 languages) shows no perceptible quality difference. Beyond its use for provenance detection, TextSeal is also ``radioactive'': its watermark signal transfers through model distillation, enabling detection of unauthorized use.",
+      "year": 2026,
+      "authors": [
+        "Tom Sander",
+        "Hongyan Chang",
+        "Tomáš Souček",
+        "Tuan Tran",
+        "Valeriu Lacatusu",
+        "Sylvestre-Alvise Rebuffi",
+        "Alexandre Mourachko",
+        "Surya Parimi",
+        "Christophe Ropers",
+        "Rashel Moritz",
+        "Vanessa Stark",
+        "Hady Elsahar",
+        "Pierre Fernandez"
+      ],
+      "url": "https://arxiv.org/abs/2605.12456",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2009.03015": {
+      "paper_id": "arxiv:2009.03015",
+      "title": "Adversarial Watermarking Transformer: Towards Tracing Text Provenance with Data Hiding",
+      "abstract": "Recent advances in natural language generation have introduced powerful language models with high-quality output text. However, this raises concerns about the potential misuse of such models for malicious purposes. In this paper, we study natural language watermarking as a defense to help better mark and trace the provenance of text. We introduce the Adversarial Watermarking Transformer (AWT) with a jointly trained encoder-decoder and adversarial training that, given an input text and a binary message, generates an output text that is unobtrusively encoded with the given message. We further study different training and inference strategies to achieve minimal changes to the semantics and correctness of the input text. AWT is the first end-to-end model to hide data in text by automatically learning -- without ground truth -- word substitutions along with their locations in order to encode the message. We empirically show that our model is effective in largely preserving text utility and decoding the watermark while hiding its presence against adversaries. Additionally, we demonstrate that our method is robust against a range of attacks.",
+      "year": 2020,
+      "authors": [
+        "Sahar Abdelnabi",
+        "Mario Fritz"
+      ],
+      "url": "https://arxiv.org/abs/2009.03015",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:ffcc462dfa5bd932beefc1947afdb811af6e4bfe": {
+      "paper_id": "s2:ffcc462dfa5bd932beefc1947afdb811af6e4bfe",
+      "title": "I Know You Did Not Write That! A Sampling Based Watermarking Method for Identifying Machine Generated Text",
+      "abstract": "Potential harms of Large Language Models such as mass misinformation and plagiarism can be partially mitigated if there exists a reliable way to detect machine generated text. In this paper, we propose a new watermarking method to detect machine-generated texts. Our method embeds a unique pattern within the generated text, ensuring that while the content remains coherent and natural to human readers, it carries distinct markers that can be identified algorithmically. Specifically, we intervene with the token sampling process in a way which enables us to trace back our token choices during the detection phase. We show how watermarking affects textual quality and compare our proposed method with a state-of-the-art watermarking method in terms of robustness and detectability. Through extensive experiments, we demonstrate the effectiveness of our watermarking scheme in distinguishing between watermarked and non-watermarked text, achieving high detection rates while maintaining textual quality.",
+      "year": 2023,
+      "authors": [
+        "Kaan Efe Keles",
+        "Ö. Gürbüz",
+        "Mucahid Kutlu"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2311.18054",
+      "venue": "COLING Workshops",
+      "source": "semantic_scholar"
+    },
+    "s2:f15662437b0cf9eaa1d9838d35143a7e127a1df5": {
+      "paper_id": "s2:f15662437b0cf9eaa1d9838d35143a7e127a1df5",
+      "title": "Humanizing Machine-Generated Content: Evading AI-Text Detection through Adversarial Attack",
+      "abstract": "With the development of large language models (LLMs), detecting whether text is generated by a machine becomes increasingly challenging in the face of malicious use cases like the spread of false information, protection of intellectual property, and prevention of academic plagiarism. While well-trained text detectors have demonstrated promising performance on unseen test data, recent research suggests that these detectors have vulnerabilities when dealing with adversarial attacks, such as paraphrasing. In this paper, we propose a framework for a broader class of adversarial attacks, designed to perform minor perturbations in machine-generated content to evade detection. We consider two attack settings: white-box and black-box, and employ adversarial learning in dynamic scenarios to assess the potential enhancement of the current detection model’s robustness against such attacks. The empirical results reveal that the current detection model can be compromised in as little as 10 seconds, leading to the misclassification of machine-generated text as human-written content. Furthermore, we explore the prospect of improving the model’s robustness over iterative adversarial learning. Although some improvements in model robustness are observed, practical applications still face significant challenges. These findings shed light on the future development of AI-text detectors, emphasizing the need for more accurate and robust detection methods.",
+      "year": 2024,
+      "authors": [
+        "Ying Zhou",
+        "Ben He",
+        "Le Sun"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2404.01907",
+      "venue": "International Conference on Language Resources and Evaluation",
+      "source": "semantic_scholar"
+    },
+    "s2:156fd915fbf6b89424284312572db02d18a317c8": {
+      "paper_id": "s2:156fd915fbf6b89424284312572db02d18a317c8",
+      "title": "Robustness of generative AI detection: adversarial attacks on black-box neural text detectors",
+      "abstract": "The increased quality and human-likeness of AI generated texts has resulted in a rising demand for neural text detectors, i.e. software that is able to detect whether a text was written by a human or generated by an AI. Such tools are often used in contexts where the use of AI is restricted or completely prohibited, e.g. in educational contexts. It is, therefore, important for the effectiveness of such tools that they are robust towards deliberate attempts to hide the fact that a text was generated by an AI. In this article, we investigate a broad range of adversarial attacks in English texts with six different neural text detectors, including commercial and research tools. While the results show that no detector is completely invulnerable to adversarial attacks, the latest generation of commercial detectors proved to be very robust and not significantly influenced by most of the evaluated attack strategies.",
+      "year": 2024,
+      "authors": [
+        "Vitalii Fishchuk",
+        "Daniel Braun"
+      ],
+      "url": "https://doi.org/10.1007/s10772-024-10144-2",
+      "venue": "International Journal of Speech Technology",
+      "source": "semantic_scholar"
+    },
+    "s2:8edded25aeb530609057c88fd525dfc66db64775": {
+      "paper_id": "s2:8edded25aeb530609057c88fd525dfc66db64775",
+      "title": "Sentences Based Adversarial Attack on AI-Generated Text Detectors",
+      "abstract": "The widespread use of AI-generated text has introduced significant security concerns, driving the need for reliable detection systems. However, recent studies reveal that neural network-based detectors are vulnerable to adversarial examples. To improve the robustness of such classifiers, a number of adversarial attack strategies have been developed, particularly in the context of text sentiment classification. Most existing adversarial attack methods focus on the semantics of individual words or sentences, often neglecting the broader contextual semantics of the entire text—particularly in the case of long AI-generated text. This limitation frequently results in adversarial examples that lack fluency and coherence. In this paper, we propose a novel method called Sentence-based Adversarial attack on AI-Generated Text detectors (SAGT), which generates linguistically fluent adversarial examples by inserting model-generated sentences into the original text. To ensure contextual semantic consistency, we extract important keywords from the original text—selected based on changes in the detector's confidence score—and incorporate them into the generated sentences. Extensive experimental results demonstrate that adversarial examples crafted by SAGT can effectively evade AI-generated text detectors.",
+      "year": 2026,
+      "authors": [
+        "Rong-Xin Tu",
+        "Xiangui Kang",
+        "Chee-Wei Tan",
+        "Chi-Hung Chi",
+        "Kwok-Yan Lam"
+      ],
+      "url": "https://doi.org/10.1109/TBDATA.2025.3600034",
+      "venue": "IEEE Transactions on Big Data",
+      "source": "semantic_scholar"
+    },
+    "s2:b573b82eb83c8da7be21674d2826869ca38c11e9": {
+      "paper_id": "s2:b573b82eb83c8da7be21674d2826869ca38c11e9",
+      "title": "Adversarial Attacks on AI-Generated Text Detection Models: A Token Probability-Based Approach Using Embeddings",
+      "abstract": "In recent years, text generation tools utilizing Artificial Intelligence (AI) have occasionally been misused across various domains, such as generating student reports or creative writings. This issue prompts plagiarism detection services to enhance their capabilities in identifying AI-generated content. Adversarial attacks are often used to test the robustness of AI-text generated detectors. This work proposes a novel textual adversarial attack on the detection models such as Fast-DetectGPT. The method employs embedding models for data perturbation, aiming at reconstructing the AI generated texts to reduce the likelihood of detection of the true origin of the texts. Specifically, we employ different embedding techniques, including the Tsetlin Machine (TM), an interpretable approach in machine learning for this purpose. By combining synonyms and embedding similarity vectors, we demonstrates the state-of-the-art reduction in detection scores against Fast-DetectGPT. Particularly, in the XSum dataset, the detection score decreased from 0.4431 to 0.2744 AUROC, and in the SQuAD dataset, it dropped from 0.5068 to 0.3532 AUROC.",
+      "year": 2025,
+      "authors": [
+        "Ahmed K. Kadhim",
+        "Lei Jiao",
+        "R. Shafik",
+        "Ole-Christoffer Granmo"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2501.18998",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2510.02319": {
+      "paper_id": "arxiv:2510.02319",
+      "title": "Modeling the Attack: Detecting AI-Generated Text by Quantifying Adversarial Perturbations",
+      "abstract": "The growth of highly advanced Large Language Models (LLMs) constitutes a huge dual-use problem, making it necessary to create dependable AI-generated text detection systems. Modern detectors are notoriously vulnerable to adversarial attacks, with paraphrasing standing out as an effective evasion technique that foils statistical detection. This paper presents a comparative study of adversarial robustness, first by quantifying the limitations of standard adversarial training and then by introducing a novel, significantly more resilient detection framework: Perturbation-Invariant Feature Engineering (PIFE), a framework that enhances detection by first transforming input text into a standardized form using a multi-stage normalization pipeline, it then quantifies the transformation's magnitude using metrics like Levenshtein distance and semantic similarity, feeding these signals directly to the classifier. We evaluate both a conventionally hardened Transformer and our PIFE-augmented model against a hierarchical taxonomy of character-, word-, and sentence-level attacks. Our findings first confirm that conventional adversarial training, while resilient to syntactic noise, fails against semantic attacks, an effect we term \"semantic evasion threshold\", where its True Positive Rate at a strict 1% False Positive Rate plummets to 48.8%. In stark contrast, our PIFE model, which explicitly engineers features from the discrepancy between a text and its canonical form, overcomes this limitation. It maintains a remarkable 82.6% TPR under the same conditions, effectively neutralizing the most sophisticated semantic attacks. This superior performance demonstrates that explicitly modeling perturbation artifacts, rather than merely training on them, is a more promising path toward achieving genuine robustness in the adversarial arms race.",
+      "year": 2025,
+      "authors": [
+        "Lekkala Sai Teja",
+        "Annepaka Yadagiri",
+        "Sangam Sai Anish",
+        "Siva Gopala Krishna Nuthakki",
+        "Partha Pakray"
+      ],
+      "url": "https://arxiv.org/abs/2510.02319",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q14",
+  "area": "NLP"
+}

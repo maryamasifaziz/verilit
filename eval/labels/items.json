@@ -1,0 +1,2185 @@
+{
+  "annotators": [
+    "maryam",
+    "nimra"
+  ],
+  "overlap": 30,
+  "seed": 13,
+  "items": [
+    {
+      "item_id": "Q23-C2-o",
+      "qid": "Q23",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "Research analyzes MoE models to show that multilingual processing is structured such that routing aligns with linguistic families and expert utilization follows a layerwise pattern.",
+      "paper_id": "arxiv:2601.14050",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q06-C3-o",
+      "qid": "Q06",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "ARES-Bench is a comprehensive robustness benchmark established for image classification tasks on ImageNet using 55 typical deep learning models.",
+      "paper_id": "arxiv:2302.14301",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q06-C4-o",
+      "qid": "Q06",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "RobustBench is a standardized benchmark that evaluates adversarial robustness for image classification models on l_infinity- and l_2-threat models and common corruptions.",
+      "paper_id": "arxiv:2010.09670",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q11-C6-o",
+      "qid": "Q11",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "RULE achieves an average improvement of 47.4% in factual accuracy on medical VQA and report generation tasks across three datasets.",
+      "paper_id": "arxiv:2407.05131",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q04-C6-o",
+      "qid": "Q04",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Orthogonal fine-tuning preserves semantic linkages in weight space but has limitations in its expressive powers.",
+      "paper_id": "s2:f161d62536253f16592be30227f5a338e15c42d1",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q17-C8-o",
+      "qid": "Q17",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Popular intrusion detection datasets such as NSL-KDD, CICIS2017, and UNSW-NB15 suffer from limitations including imbalance and antiquated attack methods.",
+      "paper_id": "s2:fcf114a5a411f7db0b6a052fc32d605ed9f25401",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q13-C4-o",
+      "qid": "Q13",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Prompt-tuning achieves much better cross-lingual transfer than fine-tuning across natural language understanding datasets, using only 0.1% to 0.3% tuned parameters.",
+      "paper_id": "s2:aa9cda8e13dc60bde7531245c3d878bec8fdccad",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q01-C2-o",
+      "qid": "Q01",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "The DCD (Domain-Collection-Document) domain-oriented design structures knowledge and controls query processing in retrieval-augmented generation systems through hierarchical decomposition, multi-stage routing, smart chunking, and hybrid retrieval.",
+      "paper_id": "arxiv:2604.07590",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q22-C3-o",
+      "qid": "Q22",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "One study shows that training data samples vulnerable to membership inference attacks in non-overfitted models are often outliers within their classes, such as noisy or hard to classify data.",
+      "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q02-C6-o",
+      "qid": "Q02",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "HalluVerse25 is a multilingual LLM hallucination dataset that categorizes fine-grained hallucinations in English, Arabic, and Turkish.",
+      "paper_id": "arxiv:2503.07833",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q03-C1-f",
+      "qid": "Q03",
+      "claim_id": "C1",
+      "kind": "final",
+      "text": "Chain-of-thought prompting is a technique that encourages a large language model to think step by step to improve performance on reasoning tasks.",
+      "paper_id": "arxiv:2412.14405",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q07-C2-o",
+      "qid": "Q07",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "Privacy protection in federated learning covers secure computational techniques including multi-party computation, homomorphic encryption, and trusted execution environments, alongside differential privacy models.",
+      "paper_id": "s2:1d35788aa08dac16678a87599eed145da4b94e6b",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q03-C1-o",
+      "qid": "Q03",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Chain-of-thought prompting is a technique that encourages a large language model to think step by step to improve performance on reasoning tasks.",
+      "paper_id": "arxiv:2506.07142",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q16-C2-o",
+      "qid": "Q16",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "RRHF uses a logarithm of conditional probabilities to score sampled responses and aligns these probabilities with human preferences through ranking loss.",
+      "paper_id": "arxiv:2304.05302",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q06-C6-o",
+      "qid": "Q06",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Post-training quantization is prone to substantial accuracy loss in noisy environments, whereas quantization-aware training preserves model accuracy while maintaining low inference latency.",
+      "paper_id": "s2:5244fff51c60d457e57f678eab40202b7ed6f651",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q13-C6-o",
+      "qid": "Q13",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "BUFFET is a benchmark that unifies 15 diverse tasks across 54 languages in a sequence-to-sequence format to evaluate few-shot cross-lingual transfer.",
+      "paper_id": "s2:c1c98ef93fb6474837961ef300cf3d8e7d3a0cd0",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q07-C8-o",
+      "qid": "Q07",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Three main challenges to federated learning include non-iid node data, high communication overhead between peers, and client heterogeneity regarding dataset bias and size.",
+      "paper_id": "arxiv:2308.07805",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q18-C7-o",
+      "qid": "Q18",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Adversarial and data poisoning attacks compromise the reliability and accuracy of learning algorithms in cybersecurity applications such as malware detection, intrusion detection, and spam filtering.",
+      "paper_id": "s2:8faccf4480bcc4e54e58d4c48072d0444021f4b7",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q03-C7-o",
+      "qid": "Q03",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Chain-of-Thought reasoning writes steps as text and follows one reasoning path at a time, which limits model capabilities.",
+      "paper_id": "arxiv:2606.27378",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q24-C5-o",
+      "qid": "Q24",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "The feature alignment-based knowledge distillation algorithm uses a multi-layer feature alignment strategy and a multi-task loss function to transfer knowledge from large pre-trained models to lightweight student models, significantly reducing computational overhead and storage requirements.",
+      "paper_id": "arxiv:2412.19449",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q12-C3-o",
+      "qid": "Q12",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "A hybrid combination of transfer learning and data augmentation with a self-supervised objective produces the highest translation quality in extremely low-resource scenarios.",
+      "paper_id": "s2:fd8ef0646971acca0783443520ba62da0d330d81",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q08-C4-o",
+      "qid": "Q08",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Compact Convolutional Transformers achieved a classification accuracy of 92.49% and a micro-average ROC AUC of 0.9935 on a benchmark dataset of peripheral blood cell images.",
+      "paper_id": "arxiv:2307.00213",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q06-C5-o",
+      "qid": "Q06",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Random sampling in the search space of DARTS with simple ensembling improves robustness to PGD attack by nearly 12%.",
+      "paper_id": "arxiv:2007.08428",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q12-C2-o",
+      "qid": "Q12",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "A transfer learning method for neural machine translation trains a high-resource parent model and transfers parameters to a low-resource child model, improving baseline NMT models by an average of 5.6 Bleu on four low-resource language pairs.",
+      "paper_id": "s2:1cd7f2c74bd7ffb3a8b1527bec8795d0876a40b6",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q23-C1-o",
+      "qid": "Q23",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study introduces routing signatures, a vector representation summarizing expert activation patterns across layers for a given prompt, and tests them using OLMoE-1B-7B-0125-Instruct.",
+      "paper_id": "arxiv:2603.11114",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q01-C7-o",
+      "qid": "Q01",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "In Corrective Retrieval Augmented Generation (CRAG), an explainability analysis reveals key failure modes including domain transfer limitations on science questions.",
+      "paper_id": "s2:4be2d578df9c71a9daa6f34d039bc31ed5da35b5",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q15-C8-o",
+      "qid": "Q15",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Traditional instruction tuning inadvertently conditions models to fabricate answers rather than communicate their epistemic limitations when encountering queries beyond their knowledge boundaries.",
+      "paper_id": "s2:4447750dd27e7a45d0b690159eb854ec0c7309a0",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q23-C8-o",
+      "qid": "Q23",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Expert parallelism relies heavily on all-to-all communication across devices, and this communication overhead typically constitutes a significant portion of the total runtime, hampering the scalability of distributed training and inference for modern MoE models.",
+      "paper_id": "arxiv:2505.13345",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q17-C6-o",
+      "qid": "Q17",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "On the UNSW-NB15 dataset, GA- and PSO-optimized 1D-CNN models achieve accuracies of 99.31% and 99.28%, respectively.",
+      "paper_id": "s2:bf08630c9090410ad0ec95b1df9eddc6dceb77c9",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q19-C3-o",
+      "qid": "Q19",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Vigil was found optimal for cases requiring a minimal false positive rate, whereas Rebuff was determined to be the most optimal for average needs when comparing early prompt leak detection solutions.",
+      "paper_id": "arxiv:2506.19109",
+      "annotators": [
+        "maryam",
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q07-C3-o",
+      "qid": "Q07",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "One study finds that the simple federated averaging technique builds more accurate models compared to training solely on local data.",
+      "paper_id": "arxiv:2206.02535",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q02-C4-o",
+      "qid": "Q02",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "LLM-based evaluation with GPT-4 yields the best overall results for hallucination detection across 4 datasets, 37 language models, and 5 decoding methods.",
+      "paper_id": "s2:c87c2e6f5e984b06ef6845d3f2a1288db12ee9e0",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q18-C2-o",
+      "qid": "Q18",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "A deep learning-based malware detection system utilizing Auto-Encoders and Deep Neural Networks over the Malicia dataset achieved an accuracy of 99.21% and a False Positive Rate of 0.19%.",
+      "paper_id": "arxiv:1809.05888",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q12-C1-o",
+      "qid": "Q12",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Neural machine translation for low-resource languages can be adapted by introducing more local dependencies and using word alignments to learn sentence reordering during translation, producing acceptable translations with only 70000 tokens of training data.",
+      "paper_id": "arxiv:1708.05729",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q18-C6-o",
+      "qid": "Q18",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "A systematic review analyzes models trained on public datasets including Malimg, CIC-MalMem-2022, and the Windows PE Malware Dataset.",
+      "paper_id": "s2:227d5a08e80f7de06ec76e33c3ff61be0b6aeae2",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q20-C1-o",
+      "qid": "Q20",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "In source code vulnerability detection, large language models utilize prompt design, parameter fine-tuning, and program-context information to judge whether code contains vulnerabilities and provide suspicious locations.",
+      "paper_id": "s2:df710b69e6143d5d57a1fcb4870f6fe2317a53f1",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q02-C7-o",
+      "qid": "Q02",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Response consistency-based, reference-free hallucination detection methods often suffer from lower detection accuracy due to their inability to capture query-response alignment patterns, in addition to a lack of large-scale benchmark datasets spanning diverse domains.",
+      "paper_id": "arxiv:2503.04615",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q11-C2-o",
+      "qid": "Q11",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "OpenFactCheck is a unified framework developed for factuality evaluation of LLMs, featuring modules such as RESPONSEEVAL, LLMEVAL, and CHECKEREVAL.",
+      "paper_id": "arxiv:2408.11832",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q07-C5-o",
+      "qid": "Q07",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "The MC-DQE FL framework was evaluated using the CIFAR-10 and FMNIST datasets.",
+      "paper_id": "s2:f1c5917509badfc80190aa141931df386ecc1c69",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q16-C4-o",
+      "qid": "Q16",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Skywork-Reward-V2 introduces a large-scale preference dataset named SynPref-40M comprising 40 million preference pairs and a suite of eight reward models trained on a subset of 26 million preference pairs.",
+      "paper_id": "arxiv:2507.01352",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q20-C3-o",
+      "qid": "Q20",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "One study utilizes the MegaVul benchmark to evaluate an LLM-powered framework for constructing reliable vulnerability datasets.",
+      "paper_id": "arxiv:2506.03651",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q25-C3-o",
+      "qid": "Q25",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "One study evaluates sarcasm detection across TweetEval Irony and Sarcasm Corpus V2.",
+      "paper_id": "arxiv:2607.14131",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q05-C2-o",
+      "qid": "Q05",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "Weight distillation transfers the knowledge in large network parameters through a parameter generator for model acceleration and compression.",
+      "paper_id": "arxiv:2009.09152",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q17-C2-o",
+      "qid": "Q17",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "The decision tree algorithm achieved the highest accuracy of 0.992 and the lowest false positive rate of 0.009 when evaluated on the KDD99 dataset.",
+      "paper_id": "s2:3eb6d433412595c8f9ff032d86a6e61b3c873ba5",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q09-C7-o",
+      "qid": "Q09",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Post-hoc explanations based on perturbations, such as LIME, exhibit large instability, which poses challenges to their effectiveness and harms user trust.",
+      "paper_id": "arxiv:2203.17081",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q14-C5-o",
+      "qid": "Q14",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Watermarking of Experts (WoE) is a black-box text provenance method that biases the vocabulary of a few secret experts in sparse Mixture-of-Experts models to attribute text generated by stolen weights.",
+      "paper_id": "s2:dbfae6a9f6cc8380ca06c4c8bf9f1b077a3bd3ba",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q08-C7-o",
+      "qid": "Q08",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Vision transformers require larger training datasets and more computational resources compared to convolutional neural networks due to the quadratic complexity of their self-attention mechanism.",
+      "paper_id": "s2:76c85685207eea3e8a0557d141aca52e544f362c",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q01-C3-o",
+      "qid": "Q01",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "An ensemble-based preprocessing framework achieves a 44.3% reduction in hallucination rates on the HaloQuest dataset, as measured by Natural Language Inference scores using SelfCheckGPT.",
+      "paper_id": "arxiv:2505.24007",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q10-C6-o",
+      "qid": "Q10",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "The current performance of graph neural networks in predicting chemical properties of molecules is limited by the \"curse of depth.\"",
+      "paper_id": "arxiv:2006.06909",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q08-C8-o",
+      "qid": "Q08",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Vision transformers have significant limitations including high computational complexity, memory demands, and scaling and data challenges that pose difficulties for deployment on resource-constrained devices.",
+      "paper_id": "s2:62cc58a2e14266a5af85b47f1517c28132679729",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q20-C8-o",
+      "qid": "Q20",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "ChatGPT exhibits a constrained ability to process long code contexts in security-related tasks.",
+      "paper_id": "arxiv:2312.05275",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q14-C2-o",
+      "qid": "Q14",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "The LISA framework extracts linguistically and statistically grounded features such as lexical richness metrics, entropy measures, repetition frequency, part-of-speech tag distributions, syntactic parse tree depth, semantic topic drift indicators, and sentence-level coherence scores to detect AI-generated text.",
+      "paper_id": "s2:0fc67befe9a047bc1a075e99860651f7e895c5c6",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q13-C7-o",
+      "qid": "Q13",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Cross-lingual and unsupervised methods face challenges in preserving sentiment-specific information under zero-shot conditions for the low-resource language Oromo.",
+      "paper_id": "s2:24e3a6d735dd4eb76e5d05184e00e10049f83ab1",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q06-C2-o",
+      "qid": "Q06",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "The Adversarial Noise Propagation (ANP) training algorithm injects noise into hidden layers in a layer-wise manner to improve the adversarial robustness of deep models.",
+      "paper_id": "s2:41fbbe6faa247a7f3465c0bccd09e6591928bc13",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q05-C7-o",
+      "qid": "Q05",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "In cross-modal settings, conventional knowledge distillation methods encounter significant challenges due to data and statistical heterogeneities, leading to issues such as distillation path selection and knowledge drift.",
+      "paper_id": "arxiv:2507.07015",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q14-C4-o",
+      "qid": "Q14",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Traditional machine learning algorithms including XGBoost and Random Forest achieve high performance with 83% and 81% accuracies respectively when evaluated on the CyberHumanAI dataset.",
+      "paper_id": "arxiv:2501.03203",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q16-C5-o",
+      "qid": "Q16",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Reward models trained on filtered data using the Preference Difference (PD) metric achieve higher calibrated accuracy and better RLHF alignment performance across three open-source models.",
+      "paper_id": "s2:135f9ad1a294168a23da50cab731461a2b63365a",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q04-C3-o",
+      "qid": "Q04",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Low-Rank Adaptation (LoRA) achieves performance close to, and in some regimes even outperforms, full fine-tuned models.",
+      "paper_id": "s2:b0eeedc957938f0385777ff1f47ff338bc32d3ac",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q23-C6-o",
+      "qid": "Q23",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Another study evaluates image classification performance using four benchmark datasets: MNIST, FashionMNIST, CIFAR10, and CIFAR100.",
+      "paper_id": "arxiv:2603.26734",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q03-C4-o",
+      "qid": "Q03",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Self-consistency decoding boosts the performance of chain-of-thought prompting on arithmetic and commonsense reasoning benchmarks, including GSM8K (+17.9%), SVAMP (+11.0%), AQuA (+12.2%), StrategyQA (+6.4%), and ARC-challenge (+3.9%).",
+      "paper_id": "s2:5f19ae1135a9500940978104ec15a5b8751bc7d2",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q09-C6-o",
+      "qid": "Q09",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "The Consistency-Aware Explainable AI framework tests explanation consistency using the UCI Heart Disease dataset with Logistic Regression, Random Forest, and XGBoost classifiers.",
+      "paper_id": "s2:35cee910ff02ab006e085e8ea8ce9f08f9b6c847",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q16-C3-o",
+      "qid": "Q16",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Multimodal RewardBench is an expert-annotated benchmark comprising 5,211 annotated triplets across six domains: general correctness, preference, knowledge, reasoning, safety, and visual question-answering.",
+      "paper_id": "s2:c44b60bc8671cc783256035c3f41b3fa84083379",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q17-C3-o",
+      "qid": "Q17",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Machine learning-based Network Intrusion Detection Systems are commonly evaluated using key metrics such as accuracy and F1 score on publicly available synthetic datasets like CIC and UNSW.",
+      "paper_id": "s2:c1c02f92b47f15f9f684691a92e0b7f615ab77d5",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q02-C5-o",
+      "qid": "Q02",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "One study introduces the publicly available HypoTermQA Benchmarking Dataset to benchmark hallucination tendencies and detect hallucinations in LLMs.",
+      "paper_id": "arxiv:2402.16211",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q21-C3-o",
+      "qid": "Q21",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "One study uses 32 features, such as URL length, number of special characters, and domain tokens, extracted from a merged dataset of three publicly available sources for phishing detection.",
+      "paper_id": "s2:0095c3694e4aac16a4d7975c7f3f7804a185f5d2",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q14-C8-o",
+      "qid": "Q14",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Conventional adversarial training fails against semantic attacks, resulting in a True Positive Rate that plummets to 48.8% at a strict 1% False Positive Rate due to a semantic evasion threshold.",
+      "paper_id": "arxiv:2510.02319",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q21-C5-o",
+      "qid": "Q21",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "For performance evaluation in phishing attack detection, four metrics have been used, namely probability of detection, probability of miss-detection, probability of false alarm, and accuracy.",
+      "paper_id": "arxiv:2201.10752",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q19-C6-o",
+      "qid": "Q19",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "GenTel-Safe introduces GenTel-Bench, an evaluation benchmark comprising 84,812 prompt injection attacks across 3 major categories and 28 security scenarios.",
+      "paper_id": "arxiv:2409.19521",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q02-C2-o",
+      "qid": "Q02",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "The MIND framework leverages the internal states of large language models for unsupervised, real-time hallucination detection without requiring manual annotations.",
+      "paper_id": "s2:411b725522e2747e890ba5acfbf43d22f759c00a",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q10-C3-o",
+      "qid": "Q10",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Attention and Edge Memory schemes benchmarked against eight physical–chemical and bioactivity datasets perform on-par with state-of-the-art machine learning approaches and set a new standard on sparse multi-task virtual screening targets.",
+      "paper_id": "s2:73bc990757d54f2161eceacd330e0aeb189393bf",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q20-C5-o",
+      "qid": "Q20",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "One study found a significant performance gap between LLMs and popular static analysis tools in detecting software vulnerabilities, primarily due to the high false positive rates of LLMs.",
+      "paper_id": "s2:7e8f442a1a8e7969bf943036c4870c4a1bdb9632",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q02-C8-o",
+      "qid": "Q02",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "The detection of hallucinations remains a formidable task, frequently requiring manual labeling or constrained evaluations.",
+      "paper_id": "arxiv:2402.16211",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q18-C3-o",
+      "qid": "Q18",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "The deep learning model combining Inception v3 feature extraction with SVM classification achieves superior performance with 99.89% accuracy on a dataset of 138,047 samples.",
+      "paper_id": "s2:74055e09cfe817248124f8aeaba8f6780958cd09",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q25-C1-o",
+      "qid": "Q25",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "A modular deep learning framework uses Deep Convolutional Neural Networks (DCNNs) and BERT to analyze linguistic, emotional, and contextual cues for sarcasm detection.",
+      "paper_id": "arxiv:2510.10729",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q04-C1-o",
+      "qid": "Q04",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "LoRA and QLoRA use approximately 35.0% less peak GPU memory than full fine tuning but require longer training times.",
+      "paper_id": "s2:48f120a6a910f4b2c4d5209a8a41d3ad311f3fde",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q22-C8-o",
+      "qid": "Q22",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Using Bounded RELU as activation functions improves utility in differentially private models trained with DPSGD, achieving 96.02% accuracy on MNIST, 84.76% on FashionMnist, and 44.42% on CIFAR-10.",
+      "paper_id": "arxiv:2303.01819",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q03-C8-o",
+      "qid": "Q03",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "In Multimodal Large Language Models, Chain-of-Thought prompting exhibits failure modes including premature answer commitment and limited direct visual-token access during rationale generation.",
+      "paper_id": "arxiv:2606.01558",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q06-C7-o",
+      "qid": "Q06",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Reliable evaluation of adversarial defenses is often limited to manual expert crafting or fixed attack ensembles that may not be effective for a specific defense.",
+      "paper_id": "arxiv:2102.11860",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q10-C2-o",
+      "qid": "Q10",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "Gated Graph Recursive Neural Networks model molecules as directed complete graphs where atoms have spatial positions, and use a recursive neural network with a simple gating function along with skip connections.",
+      "paper_id": "arxiv:1909.00259",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q21-C8-o",
+      "qid": "Q21",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Existing phishing detection models such as Stack model, VisualPhishNet, and Phishpedia experience a significant drop in detection rates when evaluated against PhishOracle-generated adversarial phishing webpages.",
+      "paper_id": "arxiv:2407.20361",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q19-C2-o",
+      "qid": "Q19",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "The goal-guided generative prompt injection strategy (G2PIA) maximizes the KL divergence between conditional probabilities of clean and adversarial text, which is equivalent to maximizing the Mahalanobis distance between their embedded representations.",
+      "paper_id": "arxiv:2404.07234",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q01-C5-o",
+      "qid": "Q01",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Under misleading context conditions in Retrieval-Augmented Generation, models frequently copy incorrect information, which directly impacts factual accuracy.",
+      "paper_id": "arxiv:2608.25717",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q21-C6-o",
+      "qid": "Q21",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Experimental metrics for analyzing black-box and white-box models in phishing detection cover 3 measurements such as predictive accuracy and explainability metrics.",
+      "paper_id": "arxiv:2412.02084",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q25-C7-o",
+      "qid": "Q25",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Traditional NLP techniques such as lexicon-based methods and classical machine learning classifiers struggle to interpret contextual nuances, domain-specific terminology, and subtle linguistic features like sarcasm.",
+      "paper_id": "arxiv:2509.20953",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q22-C6-o",
+      "qid": "Q22",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "AdaMixup employs adaptive mixup techniques during training to enhance model robustness and reduce the risk of membership inference attacks.",
+      "paper_id": "arxiv:2501.02182",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q11-C3-o",
+      "qid": "Q11",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "One study introduces the DefAn dataset, a benchmark consisting of over 20,000 unique prompts across eight domains to evaluate LLM hallucinations.",
+      "paper_id": "s2:92b82b3ffe46a80c3deaedbc544d50ef2ce42730",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q04-C4-o",
+      "qid": "Q04",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "When applied to Hungarian PULI large language models across six benchmarks, LoRA consistently matches or surpasses full-parameter fine-tuning on most tasks.",
+      "paper_id": "s2:2c14ac459441fae5f61094bf8e749a3c3486f4ca",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q20-C2-o",
+      "qid": "Q20",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "Context enhancement, program-analysis guidance, retrieval augmentation, specification-guided reasoning, and collaborative decision-making yield stable improvements in recall, F1 score, and explanatory utility for software vulnerability detection using large language models.",
+      "paper_id": "s2:dc05563faf1897e4b91d2c50147542209dec0596",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q23-C3-o",
+      "qid": "Q23",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Mixture-of-Experts architectures decouple total parameters from computational cost to enable efficient scaling of Large Language Models.",
+      "paper_id": "arxiv:2507.17702",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q11-C1-o",
+      "qid": "Q11",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study proposes the Search-Augmented Factuality Evaluator (SAFE), an LLM agent framework that evaluates long-form factuality by breaking down responses into individual facts and checking them using Google Search.",
+      "paper_id": "arxiv:2403.18802",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q13-C8-o",
+      "qid": "Q13",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Evaluations of large language models like CodeLLaMa and CodeGemma reveal significant disparities in code quality for non-English prompts during zero-shot cross-lingual transfer.",
+      "paper_id": "s2:2ea80e07c187ab6f3b73b4d52d40143811a618c8",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q03-C2-o",
+      "qid": "Q03",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "Synthetic prompting is a method that leverages a few handcrafted examples to prompt the model to generate more chain-of-thought demonstrations by itself using alternating backward and forward processes.",
+      "paper_id": "arxiv:2302.00618",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q11-C8-o",
+      "qid": "Q11",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Large Language Models are vulnerable to hallucinations and response deviation, which raise concerns regarding reliability and trustworthiness in academic and research environments.",
+      "paper_id": "arxiv:2610.27034",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q21-C7-o",
+      "qid": "Q21",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Machine learning and deep learning-based phishing detection models face key challenges including adversarial attacks, dataset biases, real-time adaptability issues, and computational limitations.",
+      "paper_id": "s2:d7d11296b3629cec50808e6962bcc9bc402a175c",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q25-C8-o",
+      "qid": "Q25",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Evaluations of Large Visual Language Models in Multimodal Sarcasm Analysis reveal key limitations, including insufficient visual understanding and a lack of conceptual knowledge.",
+      "paper_id": "arxiv:2508.03654",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q24-C3-o",
+      "qid": "Q24",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Sparsity Induction promotes large language models toward higher sparsity before pruning using mathematically equivalent scaling transformations at the distribution level and Spectral Norm Loss at the feature level.",
+      "paper_id": "arxiv:2602.21652",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q16-C7-o",
+      "qid": "Q16",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "One study highlights limitations of reinforcement learning from human feedback including incorrect generalization, model misspecification, and sparse feedback.",
+      "paper_id": "s2:8a8dc735939f75d0329926fe3de817203a47cb2f",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q12-C6-o",
+      "qid": "Q12",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "English-Tigrinya translation evaluation gains are validated by BLEU, chrF, and qualitative human evaluation.",
+      "paper_id": "arxiv:2509.20209",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q04-C2-o",
+      "qid": "Q04",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "LoRA with r=16 recovers within 11.6 percentage points of full fine-tuning accuracy while training fewer than 1% of parameters and consuming 31% less peak GPU memory.",
+      "paper_id": "s2:205c5e48ce4b4d93459c4a37abf3e9eaa785c842",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q06-C8-o",
+      "qid": "Q06",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Existing defense methods in federated learning can be easily circumvented when faced with strong adaptive adversaries capable of adapting to multiple objectives simultaneously, and have limited effectiveness when no assumptions are made about underlying data distributions.",
+      "paper_id": "arxiv:2306.03600",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q13-C5-o",
+      "qid": "Q13",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "ECLeKTic is a multilingual closed-book QA dataset created to evaluate cross-lingual knowledge transfer using Wikipedia articles across 12 languages.",
+      "paper_id": "s2:b9b79c0b3096eae665d11a26288ceb1b37123a3e",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q14-C6-o",
+      "qid": "Q14",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "TextSeal is a LLM watermark that uses dual-key generation based on Gumbel-max sampling along with entropy-weighted scoring and multi-region localization for provenance detection.",
+      "paper_id": "arxiv:2605.12456",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q13-C2-o",
+      "qid": "Q13",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "Model adaptation via continued pretraining improves XLM-R's zero-shot cross-lingual performance on 10 Indigenous languages of the Americas, raising average accuracy from 38.48% to 43.85%.",
+      "paper_id": "s2:add0dd0ab2a408354fa2d89cc492b4d2ab26845d",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q07-C7-o",
+      "qid": "Q07",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Federated learning faces limitations such as increased computational complexity and communication overhead.",
+      "paper_id": "s2:b7d1675c645131391b40fe3cf280b95bf5348a0b",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q17-C4-o",
+      "qid": "Q17",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Widely used NIDS benchmark datasets that have been converted into variants with NetFlow-based feature sets include UNSW-NB15, BoT-IoT, ToN-IoT, and CSE-CIC-IDS2018.",
+      "paper_id": "s2:26468c398e42d29eddc2e2b0154b65aae74647dd",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q03-C5-o",
+      "qid": "Q03",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "For non-reasoning models, Chain-of-Thought prompting generally improves average performance by a small amount, while for models with explicit reasoning capabilities, it often results in only marginal, if any, gains in answer accuracy.",
+      "paper_id": "arxiv:2506.07142",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q25-C5-o",
+      "qid": "Q25",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "One study notes that the figurative and creative nature of sarcasm poses a great challenge for affective computing systems performing sentiment analysis.",
+      "paper_id": "arxiv:2107.02276",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q11-C5-o",
+      "qid": "Q11",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "The ConfLVLM framework reduces the error rate of claims generated by LLaVa-1.5 for scene descriptions from 87.8% to 10.0% by filtering out erroneous claims with a 95.3% true positive rate.",
+      "paper_id": "arxiv:2502.20560",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q08-C2-f",
+      "qid": "Q08",
+      "claim_id": "C2",
+      "kind": "final",
+      "text": "Convolutional neural networks suffer from small receptive fields and spatial bias, whereas Vision Transformers exploit global self-attention mechanisms to provide better contextual modeling and long-range spatial dependencies.",
+      "paper_id": "arxiv:2309.05674",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q14-C7-o",
+      "qid": "Q14",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Empirical results show that current machine-generated text detectors can be compromised in as little as 10 seconds through adversarial attacks that misclassify AI text as human-written content.",
+      "paper_id": "s2:f15662437b0cf9eaa1d9838d35143a7e127a1df5",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q12-C5-o",
+      "qid": "Q12",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "For a Bible translation task trained with NLLB, Austronesian and Trans-New Guinea language families achieve 35.1 and 31.6 BLEU scores respectively.",
+      "paper_id": "arxiv:2304.09919",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q14-C3-o",
+      "qid": "Q14",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Machine learning and deep learning approaches such as the XGB Classifier, SVM, and BERT architecture are applied to differentiate between electronically produced text and human-written text.",
+      "paper_id": "arxiv:2404.10032",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q09-C1-o",
+      "qid": "Q09",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Post-hoc explanation methods for deep neural networks are often categorized into prototype-based methods, concept-based methods, and other interpretability approaches.",
+      "paper_id": "s2:8db2ee0e3efc99f8bbe9533254896fe8ff427986",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q24-C1-o",
+      "qid": "Q24",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Quantization with GPTQ to 4-bit is used to compress large language models for storage efficiency and faster inference.",
+      "paper_id": "arxiv:2405.00632",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q04-C5-o",
+      "qid": "Q04",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Orthogonal Fine-tuning (OFT) still suffers low parameter efficiency at $\\mathcal{O}(d^2)$ and limited capability of downstream adaptation.",
+      "paper_id": "arxiv:2404.04316",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q01-C6-o",
+      "qid": "Q01",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "RAG systems suffer from limitations inherent to information retrieval systems and from reliance on LLMs, presenting 7 failure points across case studies in research, education, and biomedical domains.",
+      "paper_id": "s2:ba454ba8c594dfb86c25dff2e265c8a2686aa037",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q22-C5-o",
+      "qid": "Q22",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Differential privacy is utilized as a defense against membership inference attacks, often resulting in high accuracy losses.",
+      "paper_id": "s2:e3b0746a22eaca2dac10e1b3474af2fe84fe083c",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q23-C7-o",
+      "qid": "Q23",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Mixture-of-Experts models are hindered by high communication overhead from all-to-all operations, low GPU utilization due to synchronous communication constraints, and complications from heterogeneous GPU environments.",
+      "paper_id": "arxiv:2410.17043",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q12-C8-o",
+      "qid": "Q12",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Low-resource languages like Tigrinya remain underserved due to persistent challenges including limited corpora, inadequate tokenization strategies, and the lack of standardized evaluation benchmarks.",
+      "paper_id": "s2:693f9b2b2fc8fe4576dd31b4f625067845d70a41",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q01-C1-o",
+      "qid": "Q01",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study proposes a decentralized software architecture for retrieval-augmented generation where retrieval, augmentation, and generation components are operated independently by distributed entities through an External Retrieval Interface protocol.",
+      "paper_id": "s2:cb65f8990e502c3045039009de3d6d0340ed3a9f",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q17-C5-o",
+      "qid": "Q17",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Experimental results show that the Bernoulli Bayesian variant has an accuracy of 69.9% test and 71% train, Multinomial has an accuracy of 31.2% test and 31.2% train, and Gaussian has an accuracy of 81.69% test and 82.84% train.",
+      "paper_id": "s2:fa20329fc9e8592609f37d414d73cb4b428891d7",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q22-C1-o",
+      "qid": "Q22",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Membership-Doctor systematizes membership inference through the study of nine attacks and six defenses, and shows that assumptions of the threat model such as same-architecture and same-distribution between shadow and target models are unnecessary.",
+      "paper_id": "s2:239591874efdf1672d227fd54e0ad030ed2dc3ed",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q16-C6-o",
+      "qid": "Q16",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "The proposed Value-based Calibration (VCB) method surpasses existing alignment methods on AI assistant and summarization datasets, providing impressive generalizability, robustness, and diversity.",
+      "paper_id": "s2:95f1eda3d241c9bfbd05e52fe508a224c819e083",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q21-C2-o",
+      "qid": "Q21",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "A phishing website detection model utilizing Decision Tree, Random Forest, Extra Trees, K-Nearest Neighbors, Multilayer Perceptron, and Support Vector Machine found that the Extra Trees algorithm offered the best results for accuracy, precision, and F1-Score.",
+      "paper_id": "s2:4d68f5329782b78e4f3ad432b49f48c44d1d4c41",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q11-C7-o",
+      "qid": "Q11",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Current factuality evaluation resources are often limited by being tailored to specific tasks or domains, being too small to train new evaluators, or being restricted to simpler verification tasks like claim verification.",
+      "paper_id": "arxiv:2411.19655",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q08-C2-o",
+      "qid": "Q08",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "Convolutional neural networks suffer from small receptive fields and spatial bias, whereas Vision Transformers exploit global self-attention mechanisms to provide better contextual modeling and long-range spatial dependencies.",
+      "paper_id": "s2:af127041da78a8f074999ca6f5aaa63b748ca857",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q02-C3-o",
+      "qid": "Q02",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "HHEM with non-fabrication checking achieves an accuracy of 82.2% and a True Positive Rate of 78.9% while reducing evaluation time from 8 hours to 10 minutes.",
+      "paper_id": "s2:68da1f19392c7e26b78f0038198b53a6ada66ba9",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q20-C4-o",
+      "qid": "Q20",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "One study evaluates source code vulnerability identification models using the Software Assurance Reference Dataset (SARD) and the National Vulnerability Database (NVD) with metrics including accuracy, precision, recall, and F1-score.",
+      "paper_id": "s2:76bc9d9f938788a035a10c97516b4c37ff9f4e5e",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q21-C4-o",
+      "qid": "Q21",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Deep learning models in a phishing detection study were evaluated on two distinct datasets, Mendeley and PhiUSIIL, using URL-based feature extraction.",
+      "paper_id": "s2:8f87deaa2b42f856d0669e9e0e395e38ed139429",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q07-C4-o",
+      "qid": "Q07",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "The FedQuad method optimizes smaller intra-class variance and larger inter-class variance across clients to mitigate data heterogeneity and maintain model performance in decentralized training.",
+      "paper_id": "arxiv:2509.04107",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q17-C7-o",
+      "qid": "Q17",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Persistent challenges for machine learning-based intrusion detection in IoT include dataset quality, real-world generalizability, computational resource constraints for edge deployment, and model explainability.",
+      "paper_id": "s2:b8016bc77feaa7b57f972233e471e3d8c5ef9725",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q08-C6-o",
+      "qid": "Q08",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Comparative evaluations of CNNs, Transformers, and hybrid models for image segmentation use benchmark datasets including Cityscapes, ADE20K, and BRATS.",
+      "paper_id": "s2:079c91aba64a50df78b7ba81987129a10493b08c",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q17-C1-o",
+      "qid": "Q17",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study evaluates intrusion detection systems using fuzzy logic and artificial neural networks on the KDD 99 benchmark dataset.",
+      "paper_id": "s2:117d41b26c6409a44c7caa8c4fe79420f28a5b66",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q24-C2-o",
+      "qid": "Q24",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "The 4-bit quantization techniques nf4 and fp4 are used for large language models, showing similar attributes in inference speed, memory consumption, and content quality.",
+      "paper_id": "arxiv:2309.05210",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q14-C1-o",
+      "qid": "Q14",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study employed a classification-based approach using a Support Vector Machine model alongside a statistical method that analyzes linguistic aspects to distinguish between AI-generated and human-written text.",
+      "paper_id": "s2:b0267ce561e856ce40092ffce719ecd129c849cb",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q10-C1-o",
+      "qid": "Q10",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study develops a neural architecture search approach to automate the design and development of message-passing neural networks (MPNNs) for molecular property prediction.",
+      "paper_id": "arxiv:2008.12187",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q20-C7-o",
+      "qid": "Q20",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Current approaches using LLMs to automate vulnerability analysis rely heavily on online API-based services, requiring users to disclose source code during development.",
+      "paper_id": "arxiv:2512.20062",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q16-C1-o",
+      "qid": "Q16",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Off-Policy Corrected Reward Modeling (OCRM) iteratively off-policy corrects the reward model using importance weighting to address overoptimization in reinforcement learning from human feedback.",
+      "paper_id": "arxiv:2507.15507",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q13-C3-o",
+      "qid": "Q13",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "The XLM-RoBERTa family of models consistently exhibits the best performance in transferring discourse-level knowledge across languages while degrading relatively little in zero-shot settings.",
+      "paper_id": "s2:c4a24f0a480b15254b84b1f5620a6c1fc34f4c72",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q09-C2-o",
+      "qid": "Q09",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "One study proposes an extended framework of Bayesian networks to generate post-hoc interpretations of black-box predictive models by extracting a Bayesian network as an approximation for a specific prediction.",
+      "paper_id": "arxiv:2007.10668",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q24-C4-o",
+      "qid": "Q24",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "ETAPS prunes large language models gradually by tightening a global sparsity constraint in progressive stages while training a sparse delta with a small, fixed budget.",
+      "paper_id": "arxiv:2610.41968",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q18-C1-o",
+      "qid": "Q18",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Hybrid models such as CNN-LSTM achieve a detection rate of up to 98.7% on malware datasets including Malimg, Microsoft BIG2015, Drebin, and CICAndMal2017.",
+      "paper_id": "s2:086f1c7e40eba423b0f7fc685c25b7618d996407",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q19-C5-o",
+      "qid": "Q19",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Gate AI evaluates prompt-injection and jailbreak detectors across 16 public benchmarks containing 12,111 samples using 5-fold cross-validation.",
+      "paper_id": "s2:3b644053f3b794316738f8c1e24f3474043e72fc",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q07-C6-o",
+      "qid": "Q07",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "The federated Random Forest framework leverages PySyft for secure, privacy-aware computation and was evaluated on two real-world healthcare benchmarks.",
+      "paper_id": "s2:a8b9d55478be7316de3736d2a36333081f452d25",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q23-C6-f",
+      "qid": "Q23",
+      "claim_id": "C6",
+      "kind": "final",
+      "text": "The SNNL-augmented Mixture-of-Experts approach is evaluated across four benchmark image classification datasets: MNIST, FashionMNIST, CIFAR10, and CIFAR100.",
+      "paper_id": "arxiv:2603.26734",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q07-C1-o",
+      "qid": "Q07",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Federated learning explores sophisticated privacy-preserving techniques such as differential privacy and homomorphic encryption to handle adversarial threats.",
+      "paper_id": "s2:9995c263c3d524f1ca7f498e37b3be8ba156256e",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q18-C5-o",
+      "qid": "Q18",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "One study evaluates machine learning models using the CIC-MalMem-2022 dataset to examine dataset quality and performance metrics.",
+      "paper_id": "s2:b1f83b3e7a63de22acf7d1b0888f08bb696738a0",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q15-C5-o",
+      "qid": "Q15",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "VisIT-Bench is a benchmark for evaluating instruction-following vision-language models, comprising 592 test queries and 70 instruction families.",
+      "paper_id": "arxiv:2308.06595",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q15-C4-o",
+      "qid": "Q15",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Cross-lingual instruction tuning yields consistent improvements in zero-shot generalization, outperforming the baseline by average scores of 20.7% for English and 13.6% for Korean.",
+      "paper_id": "s2:1b4910ea0619694a1e590584ccde4f6f0341c3c0",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q05-C5-o",
+      "qid": "Q05",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "DD-RobustBench evaluates distilled datasets on datasets such as ImageNet-1K using adversarial attack methods like PGD and AutoAttack.",
+      "paper_id": "arxiv:2403.13322",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q19-C1-o",
+      "qid": "Q19",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study presents an early categorization of prompt injection attacks on large language models to serve as a checklist of vulnerabilities in LLM interface development.",
+      "paper_id": "arxiv:2402.00898",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q15-C6-o",
+      "qid": "Q15",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Vision-Flan is a visual instruction tuning dataset comprising 187 diverse tasks and 1,664,261 instances sourced from academic datasets.",
+      "paper_id": "arxiv:2402.11690",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q22-C7-o",
+      "qid": "Q22",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Under high privacy constraints, perturbing input training data trades off less utility compared to noise added later in the machine learning process.",
+      "paper_id": "arxiv:2008.08807",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q20-C6-o",
+      "qid": "Q20",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "The proposed LLM-VDM model attained 91.2% accuracy, 90.0% F1-score, and 0.94 AUC, demonstrating superiority over baseline and deep learning competitors including SonarQube, Devign, CodeBERT, and CodeT5.",
+      "paper_id": "s2:e535bd62e0d1f9739fd4f1da6f0b7acc9633b715",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q12-C4-o",
+      "qid": "Q12",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "The joint method incorporating back-translation into parent-child and hierarchical transfer learning architectures demonstrates superiority over baselines using single methods on Uygur-Chinese and Turkish-English translation.",
+      "paper_id": "s2:2b8455524a42db27ba5be648de7ba5cefef7b5a9",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q05-C1-o",
+      "qid": "Q05",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Counterclockwise block-wise knowledge distillation (CBKD) divides both teacher and student models into multiple sub-network blocks to transfer intermediate-layer knowledge from one teacher sub-block to the corresponding student sub-block.",
+      "paper_id": "s2:e4178e98d6b30685c11ca439dc9a2e43e06ee87f",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q11-C4-o",
+      "qid": "Q11",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "The FEWL metric's effectiveness in measuring and reducing LLM hallucinations is demonstrated through experiments on the Truthful-QA, CHALE, and HaluEval datasets.",
+      "paper_id": "arxiv:2402.10412",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q23-C5-o",
+      "qid": "Q23",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "One study evaluates a Mixtral 8x7B MoE model using WikiText2, PTB, and C4 datasets for language modelling benchmarks.",
+      "paper_id": "arxiv:2407.14417",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q13-C1-o",
+      "qid": "Q13",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "SixT leverages a multilingual pretrained encoder with a two-stage training schedule, a position disentangled encoder, and a capacity-enhanced decoder to achieve zero-shot cross-lingual transfer in neural machine translation.",
+      "paper_id": "s2:4936a03cc72f0e712c8a16560e01889f4c1a1c5b",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q15-C1-o",
+      "qid": "Q15",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study investigates instruction tuning for Chinese large language models using a dataset named DoIT, which includes over 40,000 instruction instances covering ten abilities.",
+      "paper_id": "arxiv:2310.19651",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q19-C4-o",
+      "qid": "Q19",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Universal tool-based defenses, namely Attacker Tool Filtering and Normal Tool Recalling, along with prompt-based defenses like Chain-of-Thought prompting, self-reflection, and task paraphrasing, significantly reduce Attack Success Rates.",
+      "paper_id": "arxiv:2609.16098",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q18-C8-o",
+      "qid": "Q18",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Gradient-based and optimization-driven attacks against hybrid CNN-LSTM classifiers reveal significant susceptibility under adversarial pressure in malware detection.",
+      "paper_id": "s2:fd53c48bc9180908eee19891852fd914a932dcaf",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q16-C8-o",
+      "qid": "Q16",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "Research proves that when human feedback in reinforcement learning from human feedback is based only on partial observations, it can result in failure cases such as deceptive inflation and overjustification.",
+      "paper_id": "s2:428db0ea0df9d0cbc9505831fe6d4dcb9a86679d",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q25-C2-o",
+      "qid": "Q25",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "An amalgamation of four parallel deep long-short term networks (pLSTM) achieves a training accuracy of 98.95% for sarcasm detection.",
+      "paper_id": "arxiv:2106.05752",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q12-C7-o",
+      "qid": "Q12",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Neural machine translation for low-resource local languages in Indonesia faces significant challenges regarding the need for a representative benchmark and limited data availability.",
+      "paper_id": "arxiv:2311.00998",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q09-C3-o",
+      "qid": "Q09",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "A meta-analysis of 67 studies in medical imaging demonstrates a consistent 5 to 7 percent AUC performance penalty for interpretable models.",
+      "paper_id": "s2:633904060d8e26724e17c4917a7e4cc49a643c8a",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q05-C6-o",
+      "qid": "Q05",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Frugal knowledge distillation evaluates its entropy-based data selection method on benchmark datasets including CIFAR-10, MNIST, and FashionMNIST.",
+      "paper_id": "s2:00b2c8c483b083eaacfaa20e4fdc191809b35a86",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q15-C3-o",
+      "qid": "Q15",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Instruction tuning enhances zero-shot generalization across various tasks and improves the performance of specific tasks.",
+      "paper_id": "s2:1265bc74328b30123530da1ba867edcaf8ca1d5d",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q15-C7-o",
+      "qid": "Q15",
+      "claim_id": "C7",
+      "kind": "original",
+      "text": "Full-parameter instruction tuning leads to knowledge degradation and increases hallucination by inaccurately borrowing tokens from conceptually similar instances.",
+      "paper_id": "s2:acbce5ebf3f254188d10f6ba7de1ba716db89774",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q09-C5-o",
+      "qid": "Q09",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "One study evaluates explanation quality of video DeepFake classifiers using the DFDC and DFD datasets.",
+      "paper_id": "arxiv:2210.03683",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q03-C6-o",
+      "qid": "Q03",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "On MMLU, directly generating the answer without Chain-of-Thought leads to almost identical accuracy compared to using Chain-of-Thought unless the question or model's response contains an equals sign.",
+      "paper_id": "s2:7362b81b808ebafd403eaec6f60a124340d68d71",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q24-C6-o",
+      "qid": "Q24",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Applying post-training 4-bit weight quantization alongside knowledge distillation further reduces memory footprint and inference latency.",
+      "paper_id": "arxiv:2603.13765",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q09-C8-o",
+      "qid": "Q09",
+      "claim_id": "C8",
+      "kind": "original",
+      "text": "LIME relies on local perturbation strategies that are prone to data structure distortion in high-dimensional sparse data, resulting in distribution shifts that reduce explanation stability.",
+      "paper_id": "s2:d25c99d5c7eb7e2b16bf7717b197ca9f27b50497",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q01-C4-o",
+      "qid": "Q01",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Poor-quality retrieved contexts containing irrelevant or noisy information compromise the effectiveness of Retrieval-Augmented Generation in addressing large language model hallucinations.",
+      "paper_id": "s2:fd06e315159814684e224651e510af1db7482d9a",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q21-C1-o",
+      "qid": "Q21",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "A comparative analysis of five machine learning algorithms for phishing detection found that Random Forest achieved superior performance compared to Decision Tree, Support Vector Machine, Naïve Bayes, and Logistic Regression.",
+      "paper_id": "s2:f7d1a187458a6a74ed2258ae058d65851e02988a",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q05-C3-o",
+      "qid": "Q05",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Using multi-layer hidden state distillation, the KD-NAS student model achieves a 7x speedup on CPU inference and a 2x speedup on GPU compared to an XLM-Roberta Base Teacher while maintaining 90% performance.",
+      "paper_id": "s2:679bbdb8a121af98b91b8504a3cc3679a3e17539",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q15-C2-o",
+      "qid": "Q15",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "The Self-refine Instruction-tuning method uses a two-stage process where reasoning abilities are first transferred via instruction-tuning on synthetic demonstrations, followed by preference optimization strategies using Direct Preference Optimization.",
+      "paper_id": "s2:5c118e57b5398224ca4401c902cda33da7d29ec3",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q02-C1-o",
+      "qid": "Q02",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "One study integrates the Hughes Hallucination Evaluation Model (HHEM), a lightweight classification-based framework that operates independently of LLM-based judgments for hallucination detection.",
+      "paper_id": "arxiv:2512.22416",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q10-C5-o",
+      "qid": "Q10",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Two main limitations of graph neural networks in compound property and activity prediction are compound representation and model interpretability.",
+      "paper_id": "arxiv:2304.06253",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q08-C1-o",
+      "qid": "Q08",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "Vision Transformers feature more uniform representations across all layers compared to convolutional neural networks, driven by self-attention enabling early global information aggregation and residual connections propagating features.",
+      "paper_id": "s2:39b492db00faead70bc3f4fb4b0364d94398ffdb",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q18-C4-o",
+      "qid": "Q18",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "The RNN model achieved the best accuracy of 99.19% in detecting fresh IoT malware samples on a dataset comprising 500 malware and 500 goodware samples.",
+      "paper_id": "s2:0fe5959cfbf81e08e15d25e1e20973f4cedc614f",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q03-C3-o",
+      "qid": "Q03",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "Prompting a 540B-parameter language model with eight chain of thought exemplars achieves state-of-the-art accuracy on the GSM8K benchmark of math word problems.",
+      "paper_id": "s2:1b6e810ce0afd0dd093f789d2b2742d047e316d5",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q05-C4-o",
+      "qid": "Q05",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "In knowledge distillation experiments distilling a ResNet-152 teacher into a ResNet-34 student on ImageNet-1K, top-1 accuracy ranges from 71.6% to 74.0% across five configurations.",
+      "paper_id": "arxiv:2609.23561",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q25-C4-o",
+      "qid": "Q25",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "The HurricaneSARC dataset consists of 15,000 tweets annotated for intended sarcasm in a disaster context.",
+      "paper_id": "arxiv:2308.08156",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q22-C2-o",
+      "qid": "Q22",
+      "claim_id": "C2",
+      "kind": "original",
+      "text": "ML-Doctor establishes a threat model taxonomy for four inference attacks, including membership inference, model inversion, attribute inference, and model stealing.",
+      "paper_id": "s2:9bb14ee43eb7607e0bf95bde3fa62882a676eb5d",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q08-C3-o",
+      "qid": "Q08",
+      "claim_id": "C3",
+      "kind": "original",
+      "text": "ResNet-50 achieved 98.37% accuracy on chest X-ray classification, DeiT-Small achieved 92.16% accuracy on brain tumor detection, and EfficientNet-B0 achieved 81.84% accuracy on skin cancer classification.",
+      "paper_id": "arxiv:2507.21156",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q06-C1-o",
+      "qid": "Q06",
+      "claim_id": "C1",
+      "kind": "original",
+      "text": "A two-stage training procedure maps input samples into a feature embedding space with high separability in the first stage and learns parameters only for the last classification layer in the second stage to enhance adversarial robustness.",
+      "paper_id": "s2:20ded8bb7bd6d74bc594756cc15c0b3fbd511123",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q22-C7-f",
+      "qid": "Q22",
+      "claim_id": "C7",
+      "kind": "final",
+      "text": "Under high privacy constraints, perturbing input training data does not trade off as much utility as compared to noise added later in the machine learning process.",
+      "paper_id": "arxiv:2008.08807",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q08-C5-o",
+      "qid": "Q08",
+      "claim_id": "C5",
+      "kind": "original",
+      "text": "Research benchmarking Vision Transformers against Convolutional Neural Networks utilizes standard datasets including ImageNet, COCO, and Cityscapes.",
+      "paper_id": "s2:f61a0c18b7585a87e0fb6a7e0053edd306dc3c8c",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q22-C4-o",
+      "qid": "Q22",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Research demonstrates that the training data of a fully trained machine learning model generally has lower prediction sensitivities compared to non-training data.",
+      "paper_id": "s2:62749fbe7bfb0cd3abe0a8897efd3989ef867941",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q07-C2-f",
+      "qid": "Q07",
+      "claim_id": "C2",
+      "kind": "final",
+      "text": "Privacy protection in federated learning covers secure computational techniques including multi-party computation, homomorphic encryption, and trusted execution environments, alongside differential privacy models.",
+      "paper_id": "s2:0f9c8c7e99fc203e3163ea3e81ecc9c4da32945d",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q25-C6-o",
+      "qid": "Q25",
+      "claim_id": "C6",
+      "kind": "original",
+      "text": "Research indicates that large language models may fail to recognize sarcasm or irony in text, highlighting the complexity of sentiment analysis.",
+      "paper_id": "arxiv:2409.02370",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q23-C4-o",
+      "qid": "Q23",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Autoregressive Mixture of Experts language models can match the performance of dense models using approximately 4 times less compute at more modest training budgets.",
+      "paper_id": "arxiv:2112.10684",
+      "annotators": [
+        "maryam"
+      ]
+    },
+    {
+      "item_id": "Q10-C4-o",
+      "qid": "Q10",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "Multi-View Graph Neural Network (MV-GNN) models achieve superior performance over state-of-the-art models on a variety of challenging molecular property prediction benchmarks.",
+      "paper_id": "arxiv:2005.13607",
+      "annotators": [
+        "nimra"
+      ]
+    },
+    {
+      "item_id": "Q09-C4-o",
+      "qid": "Q09",
+      "claim_id": "C4",
+      "kind": "original",
+      "text": "SmoothGrad and Occlusion were found to have a statistically bigger overlap with the intrinsically interpretable ProtoPNet, while Deconvolution and LIME had the least, using the PatchCamelyon dataset.",
+      "paper_id": "s2:ae04321196eda0d38934eb8434eb6933a45ea59d",
+      "annotators": [
+        "maryam"
+      ]
+    }
+  ]
+}

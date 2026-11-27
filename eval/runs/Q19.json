@@ -1,0 +1,508 @@
+{
+  "question": "What are prompt injection attacks on LLM-based applications and how can they be mitigated?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What are the core mechanisms and taxonomies of prompt injection attacks in large language models?",
+      "search_query": "prompt injection attacks large language models",
+      "paper_ids": [
+        "arxiv:2402.00898",
+        "arxiv:2403.04957",
+        "arxiv:2403.09832",
+        "arxiv:2404.07234",
+        "arxiv:2502.13141"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What defense mechanisms and mitigation techniques have been proposed to secure LLM applications?",
+      "search_query": "mitigation techniques prompt injection LLM defense",
+      "paper_ids": [
+        "arxiv:2506.19109",
+        "s2:95be2ab522131b725b79062db7ceb849c924562e",
+        "arxiv:2609.16098",
+        "s2:f851714285c7a6bfb963da98d67f04df0eafbac9",
+        "s2:f74726bf146835dc48ba4d8ab2dcfd0ed762af8e"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What datasets, benchmarks, and evaluation frameworks are used to test prompt injection vulnerabilities?",
+      "search_query": "benchmarks evaluation prompt injection LLM security",
+      "paper_ids": [
+        "arxiv:2310.12815",
+        "s2:3b644053f3b794316738f8c1e24f3474043e72fc",
+        "arxiv:2611.07640",
+        "s2:30384cd6fbc2ec54702b2093e6fcae25e7262c17",
+        "arxiv:2409.19521"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study presents an early categorization of prompt injection attacks on large language models to serve as a checklist of vulnerabilities in LLM interface development.",
+        "paper_id": "arxiv:2402.00898"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study presents an early categorization of prompt injection attacks on large language models to serve as a checklist of vulnerabilities in LLM interface development.",
+          "paper_id": "arxiv:2402.00898",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9227,
+          "p_supported": 0.9227,
+          "accepted": true,
+          "alt_p_supported": 0.8844
+        }
+      ],
+      "final": {
+        "text": "One study presents an early categorization of prompt injection attacks on large language models to serve as a checklist of vulnerabilities in LLM interface development.",
+        "paper_id": "arxiv:2402.00898",
+        "label": "SUPPORTED",
+        "confidence": 0.9227
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "The goal-guided generative prompt injection strategy (G2PIA) maximizes the KL divergence between conditional probabilities of clean and adversarial text, which is equivalent to maximizing the Mahalanobis distance between their embedded representations.",
+        "paper_id": "arxiv:2404.07234"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The goal-guided generative prompt injection strategy (G2PIA) maximizes the KL divergence between conditional probabilities of clean and adversarial text, which is equivalent to maximizing the Mahalanobis distance between their embedded representations.",
+          "paper_id": "arxiv:2404.07234",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.932,
+          "p_supported": 0.932,
+          "accepted": true,
+          "alt_p_supported": 0.9113
+        }
+      ],
+      "final": {
+        "text": "The goal-guided generative prompt injection strategy (G2PIA) maximizes the KL divergence between conditional probabilities of clean and adversarial text, which is equivalent to maximizing the Mahalanobis distance between their embedded representations.",
+        "paper_id": "arxiv:2404.07234",
+        "label": "SUPPORTED",
+        "confidence": 0.932
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "Vigil was found optimal for cases requiring a minimal false positive rate, whereas Rebuff was determined to be the most optimal for average needs when comparing early prompt leak detection solutions.",
+        "paper_id": "arxiv:2506.19109"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Vigil was found optimal for cases requiring a minimal false positive rate, whereas Rebuff was determined to be the most optimal for average needs when comparing early prompt leak detection solutions.",
+          "paper_id": "arxiv:2506.19109",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9059,
+          "p_supported": 0.9059,
+          "accepted": true,
+          "alt_p_supported": 0.8731
+        }
+      ],
+      "final": {
+        "text": "Vigil was found optimal for cases requiring a minimal false positive rate, whereas Rebuff was determined to be the most optimal for average needs when comparing early prompt leak detection solutions.",
+        "paper_id": "arxiv:2506.19109",
+        "label": "SUPPORTED",
+        "confidence": 0.9059
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Universal tool-based defenses, namely Attacker Tool Filtering and Normal Tool Recalling, along with prompt-based defenses like Chain-of-Thought prompting, self-reflection, and task paraphrasing, significantly reduce Attack Success Rates.",
+        "paper_id": "arxiv:2609.16098"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Universal tool-based defenses, namely Attacker Tool Filtering and Normal Tool Recalling, along with prompt-based defenses like Chain-of-Thought prompting, self-reflection, and task paraphrasing, significantly reduce Attack Success Rates.",
+          "paper_id": "arxiv:2609.16098",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9358,
+          "p_supported": 0.9358,
+          "accepted": true,
+          "alt_p_supported": 0.9009
+        }
+      ],
+      "final": {
+        "text": "Universal tool-based defenses, namely Attacker Tool Filtering and Normal Tool Recalling, along with prompt-based defenses like Chain-of-Thought prompting, self-reflection, and task paraphrasing, significantly reduce Attack Success Rates.",
+        "paper_id": "arxiv:2609.16098",
+        "label": "SUPPORTED",
+        "confidence": 0.9358
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "Gate AI evaluates prompt-injection and jailbreak detectors across 16 public benchmarks containing 12,111 samples using 5-fold cross-validation.",
+        "paper_id": "s2:3b644053f3b794316738f8c1e24f3474043e72fc"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Gate AI evaluates prompt-injection and jailbreak detectors across 16 public benchmarks containing 12,111 samples using 5-fold cross-validation.",
+          "paper_id": "s2:3b644053f3b794316738f8c1e24f3474043e72fc",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9308,
+          "p_supported": 0.9308,
+          "accepted": true,
+          "alt_p_supported": 0.908
+        }
+      ],
+      "final": {
+        "text": "Gate AI evaluates prompt-injection and jailbreak detectors across 16 public benchmarks containing 12,111 samples using 5-fold cross-validation.",
+        "paper_id": "s2:3b644053f3b794316738f8c1e24f3474043e72fc",
+        "label": "SUPPORTED",
+        "confidence": 0.9308
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "GenTel-Safe introduces GenTel-Bench, an evaluation benchmark comprising 84,812 prompt injection attacks across 3 major categories and 28 security scenarios.",
+        "paper_id": "arxiv:2409.19521"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "GenTel-Safe introduces GenTel-Bench, an evaluation benchmark comprising 84,812 prompt injection attacks across 3 major categories and 28 security scenarios.",
+          "paper_id": "arxiv:2409.19521",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8163,
+          "p_supported": 0.8163,
+          "accepted": true,
+          "alt_p_supported": 0.7186
+        }
+      ],
+      "final": {
+        "text": "GenTel-Safe introduces GenTel-Bench, an evaluation benchmark comprising 84,812 prompt injection attacks across 3 major categories and 28 security scenarios.",
+        "paper_id": "arxiv:2409.19521",
+        "label": "SUPPORTED",
+        "confidence": 0.8163
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "arxiv:2402.00898",
+      "citation": "Sippo Rossi, Alisia Marianne Michel, Raghava Rao Mukkamala et al. (2024). An Early Categorization of Prompt Injection Attacks on Large Language Models. arXiv. https://arxiv.org/abs/2402.00898"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:2404.07234",
+      "citation": "Chong Zhang, Mingyu Jin, Qinkai Yu et al. (2024). Goal-guided Generative Prompt Injection Attack on Large Language Models. arXiv. https://arxiv.org/abs/2404.07234"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2506.19109",
+      "citation": "Valerii Gakh, Hayretdin Bahsi (2025). Enhancing Security in LLM Applications: A Performance Evaluation of Early Detection Systems. arXiv. https://arxiv.org/abs/2506.19109"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2609.16098",
+      "citation": "Xiaoyan Li, Yunli Wang (2026). Universal Defenses for Tool-Integrated LLM Agents Against Adversarial Attacks. arXiv. https://arxiv.org/abs/2609.16098"
+    },
+    {
+      "n": 5,
+      "paper_id": "s2:3b644053f3b794316738f8c1e24f3474043e72fc",
+      "citation": "Ryle Goehausen, M. Sousa (2026). Gate AI: LLM Security Benchmark Evaluation Methodology and Results. arXiv.org. https://doi.org/10.48550/arXiv.2606.02959"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2409.19521",
+      "citation": "Rongchang Li, Minjie Chen, Chang Hu et al. (2024). GenTel-Safe: A Unified Benchmark and Shielding Framework for Defending Against Prompt Injection Attacks. arXiv. https://arxiv.org/abs/2409.19521"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Prompt injection attacks represent a significant security concern in large language models (LLMs). Research into their core mechanisms includes early categorizations designed to serve as vulnerability checklists during LLM interface development [1], as well as specific strategies such as the goal-guided generative prompt injection strategy (G2PIA), which maximizes the Kullback-Leibler (KL) divergence between the conditional probabilities of clean and adversarial text, equivalently maximizing the Mahalanobis distance between their embedded representations [2].\n\nTo secure LLM applications, various defense and mitigation techniques have been proposed [3, 4]. Among early prompt leak detection solutions, Vigil is optimal for applications requiring a minimal false positive rate, while Rebuff is most optimal for average needs [3]. Furthermore, universal tool-based defenses—specifically Attacker Tool Filtering and Normal Tool Recalling—alongside prompt-based defenses like Chain-of-Thought prompting, self-reflection, and task paraphrasing, have been shown to significantly reduce Attack Success Rates [4].\n\nTesting these vulnerabilities relies on specialized datasets, benchmarks, and evaluation frameworks [5, 6]. For instance, Gate AI evaluates prompt-injection and jailbreak detectors utilizing 16 public benchmarks comprising 12,111 samples with 5-fold cross-validation [5]. Additionally, GenTel-Safe introduces GenTel-Bench, which is an evaluation benchmark containing 84,812 prompt injection attacks categorized into 3 major categories spanning 28 security scenarios [6].",
+  "stats": {
+    "claims": 6,
+    "verified": 6,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 6,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 3,
+    "sub_questions": 3,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 8,
+      "arxiv": 0
+    },
+    "seconds": 79.0
+  },
+  "papers": {
+    "arxiv:2402.00898": {
+      "paper_id": "arxiv:2402.00898",
+      "title": "An Early Categorization of Prompt Injection Attacks on Large Language Models",
+      "abstract": "Large language models and AI chatbots have been at the forefront of democratizing artificial intelligence. However, the releases of ChatGPT and other similar tools have been followed by growing concerns regarding the difficulty of controlling large language models and their outputs. Currently, we are witnessing a cat-and-mouse game where users attempt to misuse the models with a novel attack called prompt injections. In contrast, the developers attempt to discover the vulnerabilities and block the attacks simultaneously. In this paper, we provide an overview of these emergent threats and present a categorization of prompt injections, which can guide future research on prompt injections and act as a checklist of vulnerabilities in the development of LLM interfaces. Moreover, based on previous literature and our own empirical research, we discuss the implications of prompt injections to LLM end users, developers, and researchers.",
+      "year": 2024,
+      "authors": [
+        "Sippo Rossi",
+        "Alisia Marianne Michel",
+        "Raghava Rao Mukkamala",
+        "Jason Bennett Thatcher"
+      ],
+      "url": "https://arxiv.org/abs/2402.00898",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2403.04957": {
+      "paper_id": "arxiv:2403.04957",
+      "title": "Automatic and Universal Prompt Injection Attacks against Large Language Models",
+      "abstract": "Large Language Models (LLMs) excel in processing and generating human language, powered by their ability to interpret and follow instructions. However, their capabilities can be exploited through prompt injection attacks. These attacks manipulate LLM-integrated applications into producing responses aligned with the attacker's injected content, deviating from the user's actual requests. The substantial risks posed by these attacks underscore the need for a thorough understanding of the threats. Yet, research in this area faces challenges due to the lack of a unified goal for such attacks and their reliance on manually crafted prompts, complicating comprehensive assessments of prompt injection robustness. We introduce a unified framework for understanding the objectives of prompt injection attacks and present an automated gradient-based method for generating highly effective and universal prompt injection data, even in the face of defensive measures. With only five training samples (0.3% relative to the test data), our attack can achieve superior performance compared with baselines. Our findings emphasize the importance of gradient-based testing, which can avoid overestimation of robustness, especially for defense mechanisms.",
+      "year": 2024,
+      "authors": [
+        "Xiaogeng Liu",
+        "Zhiyuan Yu",
+        "Yizhe Zhang",
+        "Ning Zhang",
+        "Chaowei Xiao"
+      ],
+      "url": "https://arxiv.org/abs/2403.04957",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2403.09832": {
+      "paper_id": "arxiv:2403.09832",
+      "title": "Scaling Behavior of Machine Translation with Large Language Models under Prompt Injection Attacks",
+      "abstract": "Large Language Models (LLMs) are increasingly becoming the preferred foundation platforms for many Natural Language Processing tasks such as Machine Translation, owing to their quality often comparable to or better than task-specific models, and the simplicity of specifying the task through natural language instructions or in-context examples. Their generality, however, opens them up to subversion by end users who may embed into their requests instructions that cause the model to behave in unauthorized and possibly unsafe ways. In this work we study these Prompt Injection Attacks (PIAs) on multiple families of LLMs on a Machine Translation task, focusing on the effects of model size on the attack success rates. We introduce a new benchmark data set and we discover that on multiple language pairs and injected prompts written in English, larger models under certain conditions may become more susceptible to successful attacks, an instance of the Inverse Scaling phenomenon (McKenzie et al., 2023). To our knowledge, this is the first work to study non-trivial LLM scaling behaviour in a multi-lingual setting.",
+      "year": 2024,
+      "authors": [
+        "Zhifan Sun",
+        "Antonio Valerio Miceli-Barone"
+      ],
+      "url": "https://arxiv.org/abs/2403.09832",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2404.07234": {
+      "paper_id": "arxiv:2404.07234",
+      "title": "Goal-guided Generative Prompt Injection Attack on Large Language Models",
+      "abstract": "Current large language models (LLMs) provide a strong foundation for large-scale user-oriented natural language tasks. A large number of users can easily inject adversarial text or instructions through the user interface, thus causing LLMs model security challenges. Although there is currently a large amount of research on prompt injection attacks, most of these black-box attacks use heuristic strategies. It is unclear how these heuristic strategies relate to the success rate of attacks and thus effectively improve model robustness. To solve this problem, we redefine the goal of the attack: to maximize the KL divergence between the conditional probabilities of the clean text and the adversarial text. Furthermore, we prove that maximizing the KL divergence is equivalent to maximizing the Mahalanobis distance between the embedded representation $x$ and $x'$ of the clean text and the adversarial text when the conditional probability is a Gaussian distribution and gives a quantitative relationship on $x$ and $x'$. Then we designed a simple and effective goal-guided generative prompt injection strategy (G2PIA) to find an injection text that satisfies specific constraints to achieve the optimal attack effect approximately. It is particularly noteworthy that our attack method is a query-free black-box attack method with low computational cost. Experimental results on seven LLM models and four datasets show the effectiveness of our attack method.",
+      "year": 2024,
+      "authors": [
+        "Chong Zhang",
+        "Mingyu Jin",
+        "Qinkai Yu",
+        "Chengzhi Liu",
+        "Haochen Xue",
+        "Xiaobo Jin"
+      ],
+      "url": "https://arxiv.org/abs/2404.07234",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2502.13141": {
+      "paper_id": "arxiv:2502.13141",
+      "title": "UniGuardian: A Unified Defense for Detecting Prompt Injection, Backdoor Attacks and Adversarial Attacks in Large Language Models",
+      "abstract": "Large Language Models (LLMs) are vulnerable to attacks like prompt injection, backdoor attacks, and adversarial attacks, which manipulate prompts or models to generate harmful outputs. In this paper, departing from traditional deep learning attack paradigms, we explore their intrinsic relationship and collectively term them Prompt Trigger Attacks (PTA). This raises a key question: Given a prompt, can we tell whether a hidden trigger is steering the model's behavior? We propose UniGuardian, to the best of our knowledge the first training-free LLM detector to jointly detect successfully activated prompt injection, backdoor, and adversarial attacks without knowing the attack type. Its shared mechanism measures how structured prompt perturbations shift the model's output distribution. Additionally, we introduce a single-forward strategy to optimize the detection pipeline, enabling simultaneous attack detection and text generation within a shared batched forward pass at each decoding step. Our experiments confirm that UniGuardian accurately and efficiently identifies trigger-activated prompts in LLMs.",
+      "year": 2025,
+      "authors": [
+        "Huawei Lin",
+        "Yingjie Lao",
+        "Tony Geng",
+        "Tan Yu",
+        "Weijie Zhao"
+      ],
+      "url": "https://arxiv.org/abs/2502.13141",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2506.19109": {
+      "paper_id": "arxiv:2506.19109",
+      "title": "Enhancing Security in LLM Applications: A Performance Evaluation of Early Detection Systems",
+      "abstract": "Prompt injection threatens novel applications that emerge from adapting LLMs for various user tasks. The newly developed LLM-based software applications become more ubiquitous and diverse. However, the threat of prompt injection attacks undermines the security of these systems as the mitigation and defenses against them, proposed so far, are insufficient. We investigated the capabilities of early prompt injection detection systems, focusing specifically on the detection performance of techniques implemented in various open-source solutions. These solutions are supposed to detect certain types of prompt injection attacks, including the prompt leak. In prompt leakage attacks, an attacker maliciously manipulates the LLM into outputting its system instructions, violating the system's confidentiality. Our study presents analyzes of distinct prompt leakage detection techniques, and a comparative analysis of several detection solutions, which implement those techniques. We identify the strengths and weaknesses of these techniques and elaborate on their optimal configuration and usage in high-stake deployments. In one of the first studies on existing prompt leak detection solutions, we compared the performances of LLM Guard, Vigil, and Rebuff. We concluded that the implementations of canary word checks in Vigil and Rebuff were not effective at detecting prompt leak attacks, and we proposed improvements for them. We also found an evasion weakness in Rebuff's secondary model-based technique and proposed a mitigation. Then, the result of the comparison of LLM Guard, Vigil, and Rebuff at their peak performance revealed that Vigil is optimal for cases when minimal false positive rate is required, and Rebuff is the most optimal for average needs.",
+      "year": 2025,
+      "authors": [
+        "Valerii Gakh",
+        "Hayretdin Bahsi"
+      ],
+      "url": "https://arxiv.org/abs/2506.19109",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:95be2ab522131b725b79062db7ceb849c924562e": {
+      "paper_id": "s2:95be2ab522131b725b79062db7ceb849c924562e",
+      "title": "Enhancing System Security: LLM-Driven Defense Against Prompt Injection Vulnerabilities",
+      "abstract": "This article examines cybersecurity vulnerabilities in systems utilizing Language Model Interfaces, focusing on the challenges of building secure systems. It provides an overview of current interfaces and their associated risks. A key contribution is the design of a prompt analysis and injection detection subsystem, which assesses input relevance and security. The integration of an additional Filter level in the system safeguards against prompt injection attacks by pre-processing user requests and post-processing responses. This level includes a Prompt Analyzer for input wrapping, and an Attack Validator module using the LLM to classify prompts. The study evaluates various prompt injection attacks across different system setups, including core GPT -3 and GPT-4 models without additional security layers, a Fuzzy Search method, and systems using an Attack Validator based on GPT-3 and GPT -4 models.",
+      "year": 2024,
+      "authors": [
+        "O. Muliarevych"
+      ],
+      "url": "https://doi.org/10.1109/TCSET64720.2024.10755823",
+      "venue": "International Conference on Modern Problems of Radio Engineering, Telecommunications and Computer Science",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2609.16098": {
+      "paper_id": "arxiv:2609.16098",
+      "title": "Universal Defenses for Tool-Integrated LLM Agents Against Adversarial Attacks",
+      "abstract": "Large Language Model (LLM) agents have demonstrated impressive capabilities across a variety of domains, particularly when integrated with external tools for multi-step task completion. However, they are increasingly vulnerable to adversarial attacks, including direct prompt injection, indirect prompt injection, memory poisoning, and backdoor attacks, which exploit the model's openness to prompt injection and tool manipulation. In this work, we explore practical and generalizable defense strategies within a unified framework across these four attack types. We introduce two universal tool-based defenses: Attacker Tool Filtering, which uses anomaly detection (e.g., Isolation Forest) to identify and remove suspicious tools, and Normal Tool Recalling, a white-box method that restores the agent's original toolset prior to planning. Additionally, we incorporate prompt-based defenses: Chain-of-Thought prompting and self-reflection techniques to enhance reasoning and task paraphrasing to mitigate attacks. Experimental results across both four open-source LLMs (Gemma2-9B, Qwen2-7B, LLaMA3-8B, and LLaMA3.1-8B) and three proprietary LLMs (GPT-3.5, GPT-4, and GPT-5) show that our methods significantly reduce the Attack Success Rates (ASR), achieving 0% ASR in many settings, while preserving or even improving the original task success rate. These findings highlight the promise of simple, modular, multi-layered defenses for strengthening the security and robustness of tool-integrated LLM agents. The code is available at https://github.com/Xiaoyan-Lisa/Defenses-for-Tool-Integrated-LLM-Agents-Against-Adversarial-Attacks.",
+      "year": 2026,
+      "authors": [
+        "Xiaoyan Li",
+        "Yunli Wang"
+      ],
+      "url": "https://arxiv.org/abs/2609.16098",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:f851714285c7a6bfb963da98d67f04df0eafbac9": {
+      "paper_id": "s2:f851714285c7a6bfb963da98d67f04df0eafbac9",
+      "title": "A Multi-Agent LLM Defense Pipeline Against Prompt Injection Attacks",
+      "abstract": "Prompt injection attacks represent a major vulnerability in Large Language Model (LLM) deployments, where malicious instructions embedded in user inputs can override system prompts and induce unintended behaviors. This paper presents a novel multi-agent defense framework that employs specialized LLM agents in coordinated pipelines to detect and neutralize prompt injection attacks in real-time. We evaluate our approach using two distinct architectures: a sequential chain-ofagents pipeline and a hierarchical coordinator-based system. Our comprehensive evaluation on 55 unique prompt injection attacks, grouped into 8 categories and totaling 400 attack instances across two LLM platforms (ChatGLM and Llama2), demonstrates significant security improvements. Without defense mechanisms, baseline Attack Success Rates (ASR) reached $\\mathbf{3 0 \\%}$ for ChatGLM and 20 % for Llama2. Our multi-agent pipeline achieved 100 % mitigation, reducing ASR to 0 % across all tested scenarios. The framework demonstrates robustness across multiple attack categories including direct overrides, code execution attempts, data exfiltration, and obfuscation techniques, while maintaining system functionality for legitimate queries.",
+      "year": 2025,
+      "authors": [
+        "S. M. Asif Hossain",
+        "Ruksat Khan Shayoni",
+        "Mohd Ruhul Ameen",
+        "Akif Islam",
+        "M. F. Mridha",
+        "Jungpil Shin"
+      ],
+      "url": "https://doi.org/10.1109/WIECON-ECE69386.2025.11526251",
+      "venue": "IEEE International WIE Conference on Electrical and Computer Engineering",
+      "source": "semantic_scholar"
+    },
+    "s2:f74726bf146835dc48ba4d8ab2dcfd0ed762af8e": {
+      "paper_id": "s2:f74726bf146835dc48ba4d8ab2dcfd0ed762af8e",
+      "title": "Bypassing LLM Guardrails: An Empirical Analysis of Evasion Attacks against Prompt Injection and Jailbreak Detection Systems",
+      "abstract": "Large Language Models (LLMs) guardrail systems are designed to protect against prompt injection and jailbreak attacks. However, they remain vulnerable to evasion techniques. We demonstrate two approaches for bypassing LLM prompt injection and jailbreak detection systems via traditional character injection methods and algorithmic Adversarial Machine Learning (AML) evasion techniques. Through testing against six prominent protection systems, including Microsoft's Azure Prompt Shield and Meta's Prompt Guard, we show that both methods can be used to evade detection while maintaining adversarial utility achieving in some instances up to 100% evasion success. Furthermore, we demonstrate that adversaries can enhance Attack Success Rates (ASR) against black-box targets by leveraging word importance ranking computed by offline white-box models. Our findings reveal vulnerabilities within current LLM protection mechanisms and highlight the need for more robust guardrail systems.",
+      "year": 2025,
+      "authors": [
+        "William Hackett",
+        "Lewis Birch",
+        "Stefan Trawicki",
+        "Neeraj Suri",
+        "Peter Garraghan"
+      ],
+      "url": "https://www.semanticscholar.org/paper/f74726bf146835dc48ba4d8ab2dcfd0ed762af8e",
+      "venue": null,
+      "source": "semantic_scholar"
+    },
+    "arxiv:2310.12815": {
+      "paper_id": "arxiv:2310.12815",
+      "title": "Formalizing and Benchmarking Prompt Injection Attacks and Defenses",
+      "abstract": "A prompt injection attack aims to inject malicious instruction/data into the input of an LLM-Integrated Application such that it produces results as an attacker desires. Existing works are limited to case studies. As a result, the literature lacks a systematic understanding of prompt injection attacks and their defenses. We aim to bridge the gap in this work. In particular, we propose a framework to formalize prompt injection attacks. Existing attacks are special cases in our framework. Moreover, based on our framework, we design a new attack by combining existing ones. Using our framework, we conduct a systematic evaluation on 5 prompt injection attacks and 10 defenses with 10 LLMs and 7 tasks. Our work provides a common benchmark for quantitatively evaluating future prompt injection attacks and defenses. To facilitate research on this topic, we make our platform public at https://github.com/liu00222/Open-Prompt-Injection.",
+      "year": 2023,
+      "authors": [
+        "Yupei Liu",
+        "Yuqi Jia",
+        "Runpeng Geng",
+        "Jinyuan Jia",
+        "Neil Zhenqiang Gong"
+      ],
+      "url": "https://arxiv.org/abs/2310.12815",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:3b644053f3b794316738f8c1e24f3474043e72fc": {
+      "paper_id": "s2:3b644053f3b794316738f8c1e24f3474043e72fc",
+      "title": "Gate AI: LLM Security Benchmark Evaluation Methodology and Results",
+      "abstract": "Published evaluations of prompt-injection and jailbreak detectors for Large Language Models often suffer from two systematic weaknesses: per-dataset threshold tuning and undisclosed operating points. We describe an evaluation harness that addresses both. The detector under evaluation is scored across 16 public benchmarks (12,111 samples) using 5-fold cross-validation. StratifiedKFold (by row) is the headline pass; a parallel StratifiedGroupKFold pass over a composite key (parent-prompt id plus MinHash + LSH near-duplicate clusters at Jaccard $\\gtrsim 0.8$) runs alongside it as a leakage-premium diagnostic. A single global operating point is selected on the held-out folds (max F1 subject to FPR $\\leq 1\\%$) and applied uniformly to every dataset, so per-dataset results reflect one threshold rather than per-benchmark optimisation. Generalisation is examined through a battery of diagnostics (leave-one-dataset-out cross-validation, a random-label control, adversarial validation, permutation feature importance, length-bias correlation, classifier-head agreement, cross-source near-duplicate detection, threshold transferability, train-vs-OOF agreement, and a paraphrase-invariance probe), most with a quantitative pass threshold and the remainder with a stated failure mode. For every external comparison, the detector's threshold is re-tuned to the competitor's published false-positive rate so head-to-head values are evaluated at matched operating points.",
+      "year": 2026,
+      "authors": [
+        "Ryle Goehausen",
+        "M. Sousa"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2606.02959",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2611.07640": {
+      "paper_id": "arxiv:2611.07640",
+      "title": "Beyond Instruction Override: Benchmarking Indirect Prompt Injection with Task-Tampering Attacks",
+      "abstract": "Indirect prompt-injection (IPI) benchmarks predominantly test planted instructions that redirect a tool-using agent toward an attacker-chosen task. Yet attacker-controlled content can instead tamper with the outcome of the task already in progress. A buyer's dispute evidence can cite a false refund policy to inflate a refund without changing the task. We define IPI by authority rather than instruction-like wording: planted content constitutes an attack when it attempts to influence a decision that its source is not authorized to determine. We introduce a benchmark that makes this boundary explicit: in each of 90 validated cases across three tool-use environments, the user request specifies the source that resolves the targeted decision. Every attack tampers with a decision required by the benign task rather than replacing that task. Each case has attacks with the same harmful outcome that target up to six parts of the agent's decision making: its objective, decision rules, available actions, expected consequences, reading of observations, or beliefs about the current state. Without a defense, attacks on three of the five other targets (decision rules, available actions, and state) have higher mean success than objective attacks across five LLMs. A detection-and-removal defense reduces objective-targeting attacks to 2.4% success but leaves observation- and state-targeting attacks at 9.5% and 12.1%; this gap persists under detection-optimized rewrites. A tool-policy defense still allows 15.4% attack success, close to 17.0% without a defense, because these attacks generally retain expected tools and manipulate values obtained during execution. Evaluations whose attacks redirect the task or target only the agent's objective can therefore overestimate the coverage of these defenses. Code and data are available at https://github.com/amazon-science/task-tampering-prompt-injection.",
+      "year": 2026,
+      "authors": [
+        "Rongting Zhang",
+        "Martin Bertran",
+        "Sandeep Avula",
+        "Chia-Jung Lee",
+        "Vanessa Murdock"
+      ],
+      "url": "https://arxiv.org/abs/2611.07640",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:30384cd6fbc2ec54702b2093e6fcae25e7262c17": {
+      "paper_id": "s2:30384cd6fbc2ec54702b2093e6fcae25e7262c17",
+      "title": "BPI-Guard: A Bilingual Prompt Injection Detector for Turkish and English",
+      "abstract": "Prompt injection attacks have emerged as a major security threat for LLM-based systems, while existing detection approaches are predominantly developed and evaluated in English. This creates a substantial performance gap in low-resource languages such as Turkish, where publicly available prompt injection datasets are scarce and robust detection remains challenging. In this work, we address multilingual prompt injection detection by constructing a bilingual Turkish-English dataset and iteratively refining it through benchmark-driven error analysis and targeted data augmentation. The resulting dataset contains over 23,000 labeled samples covering a diverse range of prompt injection and benign scenarios. Using this dataset, we fine-tune XLM-RoBERTa for binary prompt injection classification and release the resulting model as BPI-Guard (Bilingual Prompt Injection Guard). We evaluate BPI-Guard on both our held-out test set and publicly released external benchmarks. Experimental evaluation demonstrates that BPI-Guard achieves balanced detection performance across Turkish and English while reducing the cross-lingual performance gap. Our results show that the proposed data-centric training strategy outperforms several evaluated open-source detectors on the evaluated benchmarks and provides lower inference cost than LLM-based detection methods. These results suggest that high-quality multilingual training data and iterative dataset refinement play a significant role in building accurate and efficient multilingual prompt injection detectors for practical deployment.",
+      "year": 2026,
+      "authors": [
+        "Melike Nur Erdoğan",
+        "Ali Bugra Kanburoglu"
+      ],
+      "url": "https://doi.org/10.1109/UBMK71847.2026.11745123",
+      "venue": "2026 11th International Conference on Computer Science and Engineering (UBMK)",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2409.19521": {
+      "paper_id": "arxiv:2409.19521",
+      "title": "GenTel-Safe: A Unified Benchmark and Shielding Framework for Defending Against Prompt Injection Attacks",
+      "abstract": "Large Language Models (LLMs) like GPT-4, LLaMA, and Qwen have demonstrated remarkable success across a wide range of applications. However, these models remain inherently vulnerable to prompt injection attacks, which can bypass existing safety mechanisms, highlighting the urgent need for more robust attack detection methods and comprehensive evaluation benchmarks. To address these challenges, we introduce GenTel-Safe, a unified framework that includes a novel prompt injection attack detection method, GenTel-Shield, along with a comprehensive evaluation benchmark, GenTel-Bench, which compromises 84812 prompt injection attacks, spanning 3 major categories and 28 security scenarios. To prove the effectiveness of GenTel-Shield, we evaluate it together with vanilla safety guardrails against the GenTel-Bench dataset. Empirically, GenTel-Shield can achieve state-of-the-art attack detection success rates, which reveals the critical weakness of existing safeguarding techniques against harmful prompts. For reproducibility, we have made the code and benchmarking dataset available on the project page at https://gentellab.github.io/gentel-safe.github.io/.",
+      "year": 2024,
+      "authors": [
+        "Rongchang Li",
+        "Minjie Chen",
+        "Chang Hu",
+        "Han Chen",
+        "Wenpeng Xing",
+        "Meng Han"
+      ],
+      "url": "https://arxiv.org/abs/2409.19521",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q19",
+  "area": "Cybersecurity"
+}

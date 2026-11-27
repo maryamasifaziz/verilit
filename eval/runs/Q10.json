@@ -1,0 +1,508 @@
+{
+  "question": "How well do graph neural networks perform on molecular property prediction?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What architectural methods and techniques of graph neural networks are used for molecular property prediction?",
+      "search_query": "graph neural networks molecular property prediction methods",
+      "paper_ids": [
+        "s2:a50f37cdd0614567ef52ffa63c70285d97630ce4",
+        "arxiv:2008.12187",
+        "s2:3a9dcb0e38413611301358648ffe39c7f831a632",
+        "arxiv:2208.04852",
+        "arxiv:1909.00259"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "What are the reported predictive performance results and benchmarks of graph neural networks in chemistry?",
+      "search_query": "benchmark results graph neural networks molecular datasets",
+      "paper_ids": [
+        "s2:aac94fe0805f92dbd7825da82a90d0a745b18a78",
+        "s2:73bc990757d54f2161eceacd330e0aeb189393bf",
+        "s2:751f05b8b619374936ac47e227c7a2464b67e56f",
+        "s2:e24cdf73b3e7e590c2fe5ecac9ae8aa983801367",
+        "arxiv:2005.13607"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What are the limitations, bottlenecks, and challenges of applying graph neural networks to molecular data?",
+      "search_query": "limitations graph neural networks molecular property prediction",
+      "paper_ids": [
+        "arxiv:2304.06253",
+        "arxiv:2006.06909",
+        "arxiv:2107.04119",
+        "arxiv:2102.07916",
+        "arxiv:2009.12710"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study develops a neural architecture search approach to automate the design and development of message-passing neural networks (MPNNs) for molecular property prediction.",
+        "paper_id": "arxiv:2008.12187"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study develops a neural architecture search approach to automate the design and development of message-passing neural networks (MPNNs) for molecular property prediction.",
+          "paper_id": "arxiv:2008.12187",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9036,
+          "p_supported": 0.9036,
+          "accepted": true,
+          "alt_p_supported": 0.861
+        }
+      ],
+      "final": {
+        "text": "One study develops a neural architecture search approach to automate the design and development of message-passing neural networks (MPNNs) for molecular property prediction.",
+        "paper_id": "arxiv:2008.12187",
+        "label": "SUPPORTED",
+        "confidence": 0.9036
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "Gated Graph Recursive Neural Networks model molecules as directed complete graphs where atoms have spatial positions, and use a recursive neural network with a simple gating function along with skip connections.",
+        "paper_id": "arxiv:1909.00259"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Gated Graph Recursive Neural Networks model molecules as directed complete graphs where atoms have spatial positions, and use a recursive neural network with a simple gating function along with skip connections.",
+          "paper_id": "arxiv:1909.00259",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9324,
+          "p_supported": 0.9324,
+          "accepted": true,
+          "alt_p_supported": 0.8976
+        }
+      ],
+      "final": {
+        "text": "Gated Graph Recursive Neural Networks model molecules as directed complete graphs where atoms have spatial positions, and use a recursive neural network with a simple gating function along with skip connections.",
+        "paper_id": "arxiv:1909.00259",
+        "label": "SUPPORTED",
+        "confidence": 0.9324
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "Attention and Edge Memory schemes benchmarked against eight physical–chemical and bioactivity datasets perform on-par with state-of-the-art machine learning approaches and set a new standard on sparse multi-task virtual screening targets.",
+        "paper_id": "s2:73bc990757d54f2161eceacd330e0aeb189393bf"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Attention and Edge Memory schemes benchmarked against eight physical–chemical and bioactivity datasets perform on-par with state-of-the-art machine learning approaches and set a new standard on sparse multi-task virtual screening targets.",
+          "paper_id": "s2:73bc990757d54f2161eceacd330e0aeb189393bf",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.936,
+          "p_supported": 0.936,
+          "accepted": true,
+          "alt_p_supported": 0.904
+        }
+      ],
+      "final": {
+        "text": "Attention and Edge Memory schemes benchmarked against eight physical–chemical and bioactivity datasets perform on-par with state-of-the-art machine learning approaches and set a new standard on sparse multi-task virtual screening targets.",
+        "paper_id": "s2:73bc990757d54f2161eceacd330e0aeb189393bf",
+        "label": "SUPPORTED",
+        "confidence": 0.936
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "Multi-View Graph Neural Network (MV-GNN) models achieve superior performance over state-of-the-art models on a variety of challenging molecular property prediction benchmarks.",
+        "paper_id": "arxiv:2005.13607"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Multi-View Graph Neural Network (MV-GNN) models achieve superior performance over state-of-the-art models on a variety of challenging molecular property prediction benchmarks.",
+          "paper_id": "arxiv:2005.13607",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9466,
+          "p_supported": 0.9466,
+          "accepted": true,
+          "alt_p_supported": 0.9303
+        }
+      ],
+      "final": {
+        "text": "Multi-View Graph Neural Network (MV-GNN) models achieve superior performance over state-of-the-art models on a variety of challenging molecular property prediction benchmarks.",
+        "paper_id": "arxiv:2005.13607",
+        "label": "SUPPORTED",
+        "confidence": 0.9466
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "Two main limitations of graph neural networks in compound property and activity prediction are compound representation and model interpretability.",
+        "paper_id": "arxiv:2304.06253"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Two main limitations of graph neural networks in compound property and activity prediction are compound representation and model interpretability.",
+          "paper_id": "arxiv:2304.06253",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9314,
+          "p_supported": 0.9314,
+          "accepted": true,
+          "alt_p_supported": 0.8947
+        }
+      ],
+      "final": {
+        "text": "Two main limitations of graph neural networks in compound property and activity prediction are compound representation and model interpretability.",
+        "paper_id": "arxiv:2304.06253",
+        "label": "SUPPORTED",
+        "confidence": 0.9314
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "The current performance of graph neural networks in predicting chemical properties of molecules is limited by the \"curse of depth.\"",
+        "paper_id": "arxiv:2006.06909"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The current performance of graph neural networks in predicting chemical properties of molecules is limited by the \"curse of depth.\"",
+          "paper_id": "arxiv:2006.06909",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8465,
+          "p_supported": 0.8465,
+          "accepted": true,
+          "alt_p_supported": 0.8496
+        }
+      ],
+      "final": {
+        "text": "The current performance of graph neural networks in predicting chemical properties of molecules is limited by the \"curse of depth.\"",
+        "paper_id": "arxiv:2006.06909",
+        "label": "SUPPORTED",
+        "confidence": 0.8465
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "arxiv:2008.12187",
+      "citation": "Shengli Jiang, Prasanna Balaprakash (2020). Graph Neural Network Architecture Search for Molecular Property Prediction. arXiv. https://arxiv.org/abs/2008.12187"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:1909.00259",
+      "citation": "Hiroyuki Shindo, Yuji Matsumoto (2019). Gated Graph Recursive Neural Networks for Molecular Property Prediction. arXiv. https://arxiv.org/abs/1909.00259"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:73bc990757d54f2161eceacd330e0aeb189393bf",
+      "citation": "M. Withnall, Edvard Lindelöf, O. Engkvist et al. (2020). Building attention and edge message passing neural networks for bioactivity and physical–chemical property prediction. Journal of Cheminformatics. https://doi.org/10.1186/s13321-019-0407-y"
+    },
+    {
+      "n": 4,
+      "paper_id": "arxiv:2005.13607",
+      "citation": "Hehuan Ma, Yatao Bian, Yu Rong et al. (2020). Multi-View Graph Neural Networks for Molecular Property Prediction. arXiv. https://arxiv.org/abs/2005.13607"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2304.06253",
+      "citation": "Apakorn Kengkanna, Masahito Ohue (2023). Enhancing Model Learning and Interpretation Using Multiple Molecular Graph Representations for Compound Property and Activity Prediction. arXiv. https://arxiv.org/abs/2304.06253"
+    },
+    {
+      "n": 6,
+      "paper_id": "arxiv:2006.06909",
+      "citation": "Katsuhiko Ishiguro, Kenta Oono, Kohei Hayashi (2020). Weisfeiler-Lehman Embedding for Molecular Graph Neural Networks. arXiv. https://arxiv.org/abs/2006.06909"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Graph neural networks (GNNs) utilize a variety of architectural methods and techniques for molecular property prediction. These include developing a neural architecture search approach to automate the design of message-passing neural networks (MPNNs) [1] and employing Gated Graph Recursive Neural Networks, which model molecules as directed complete graphs with spatial atom positions using a recursive neural network equipped with a simple gating function and skip connections [2].\n\nIn terms of predictive performance and benchmarks, specific GNN configurations demonstrate competitive or superior results in chemistry. Attention and Edge Memory schemes benchmarked across eight physical-chemical and bioactivity datasets perform on par with state-of-the-art machine learning methods while setting a new standard on sparse multi-task virtual screening targets [3]. Additionally, Multi-View Graph Neural Network (MV-GNN) models achieve superior performance compared to existing state-of-the-art models across a variety of challenging molecular property prediction benchmarks [4].\n\nDespite these successes, applying graph neural networks to molecular data faces notable limitations, bottlenecks, and challenges. Two primary challenges in compound property and activity prediction are compound representation and model interpretability [5]. Furthermore, the predictive performance of graph neural networks for chemical properties is restricted by the \"curse of depth\" [6].",
+  "stats": {
+    "claims": 6,
+    "verified": 6,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 6,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 3,
+    "sub_questions": 3,
+    "invalid_citations_in_review": [],
+    "llm_requests": 4,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 8,
+      "arxiv": 0
+    },
+    "seconds": 73.6
+  },
+  "papers": {
+    "s2:a50f37cdd0614567ef52ffa63c70285d97630ce4": {
+      "paper_id": "s2:a50f37cdd0614567ef52ffa63c70285d97630ce4",
+      "title": "A compact review of molecular property prediction with graph neural networks.",
+      "abstract": "As graph neural networks are becoming more and more powerful and useful in the field of drug discovery, many pharmaceutical companies are getting interested in utilizing these methods for their own in-house frameworks. This is especially compelling for tasks such as the prediction of molecular properties which is often one of the most crucial tasks in computer-aided drug discovery workflows. The immense hype surrounding these kinds of algorithms has led to the development of many different types of promising architectures and in this review we try to structure this highly dynamic field of AI-research by collecting and classifying 80 GNNs that have been used to predict more than 20 molecular properties using 48 different datasets.",
+      "year": 2020,
+      "authors": [
+        "Oliver Wieder",
+        "S. Kohlbacher",
+        "M. Kuenemann",
+        "A. Garon",
+        "Pierre Ducrot",
+        "T. Seidel",
+        "T. Langer"
+      ],
+      "url": "https://doi.org/10.1016/j.ddtec.2020.11.009",
+      "venue": "Drug Discovery Today : Technologies",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2008.12187": {
+      "paper_id": "arxiv:2008.12187",
+      "title": "Graph Neural Network Architecture Search for Molecular Property Prediction",
+      "abstract": "Predicting the properties of a molecule from its structure is a challenging task. Recently, deep learning methods have improved the state of the art for this task because of their ability to learn useful features from the given data. By treating molecule structure as graphs, where atoms and bonds are modeled as nodes and edges, graph neural networks (GNNs) have been widely used to predict molecular properties. However, the design and development of GNNs for a given data set rely on labor-intensive design and tuning of the network architectures. Neural architecture search (NAS) is a promising approach to discover high-performing neural network architectures automatically. To that end, we develop an NAS approach to automate the design and development of GNNs for molecular property prediction. Specifically, we focus on automated development of message-passing neural networks (MPNNs) to predict the molecular properties of small molecules in quantum mechanics and physical chemistry data sets from the MoleculeNet benchmark. We demonstrate the superiority of the automatically discovered MPNNs by comparing them with manually designed GNNs from the MoleculeNet benchmark. We study the relative importance of the choices in the MPNN search space, demonstrating that customizing the architecture is critical to enhancing performance in molecular property prediction and that the proposed approach can perform customization automatically with minimal manual effort.",
+      "year": 2020,
+      "authors": [
+        "Shengli Jiang",
+        "Prasanna Balaprakash"
+      ],
+      "url": "https://arxiv.org/abs/2008.12187",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:3a9dcb0e38413611301358648ffe39c7f831a632": {
+      "paper_id": "s2:3a9dcb0e38413611301358648ffe39c7f831a632",
+      "title": "Application of message passing neural networks for molecular property prediction.",
+      "abstract": "Accurate molecular property prediction, as one of the classical cheminformatics topics, plays a prominent role in the fields of computer-aided drug design. For instance, property prediction models can be used to quickly screen large molecular libraries to find lead compounds. Message-passing neural networks (MPNNs), a sub-class of Graph neural networks (GNNs), have recently been demonstrated to outperform other deep learning methods on a variety of tasks, including the prediction of molecular characteristics. In this survey, we provide a brief review of the MPNN models and their applications on molecular property prediction.",
+      "year": 2023,
+      "authors": [
+        "Mi-Ru Tang",
+        "Baiqing Li",
+        "Hongming Chen"
+      ],
+      "url": "https://doi.org/10.1016/j.sbi.2023.102616",
+      "venue": "Current Opinion in Structural Biology",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2208.04852": {
+      "paper_id": "arxiv:2208.04852",
+      "title": "Graph neural networks for the prediction of molecular structure-property relationships",
+      "abstract": "Molecular property prediction is of crucial importance in many disciplines such as drug discovery, molecular biology, or material and process design. The frequently employed quantitative structure-property/activity relationships (QSPRs/QSARs) characterize molecules by descriptors which are then mapped to the properties of interest via a linear or nonlinear model. In contrast, graph neural networks, a novel machine learning method, directly work on the molecular graph, i.e., a graph representation where atoms correspond to nodes and bonds correspond to edges. GNNs allow to learn properties in an end-to-end fashion, thereby avoiding the need for informative descriptors as in QSPRs/QSARs. GNNs have been shown to achieve state-of-the-art prediction performance on various property predictions tasks and represent an active field of research. We describe the fundamentals of GNNs and demonstrate the application of GNNs via two examples for molecular property prediction.",
+      "year": 2022,
+      "authors": [
+        "Jan G. Rittig",
+        "Qinghe Gao",
+        "Manuel Dahmen",
+        "Alexander Mitsos",
+        "Artur M. Schweidtmann"
+      ],
+      "url": "https://arxiv.org/abs/2208.04852",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1909.00259": {
+      "paper_id": "arxiv:1909.00259",
+      "title": "Gated Graph Recursive Neural Networks for Molecular Property Prediction",
+      "abstract": "Molecule property prediction is a fundamental problem for computer-aided drug discovery and materials science. Quantum-chemical simulations such as density functional theory (DFT) have been widely used for calculating the molecule properties, however, because of the heavy computational cost, it is difficult to search a huge number of potential chemical compounds. Machine learning methods for molecular modeling are attractive alternatives, however, the development of expressive, accurate, and scalable graph neural networks for learning molecular representations is still challenging. In this work, we propose a simple and powerful graph neural networks for molecular property prediction. We model a molecular as a directed complete graph in which each atom has a spatial position, and introduce a recursive neural network with simple gating function. We also feed input embeddings for every layers as skip connections to accelerate the training. Experimental results show that our model achieves the state-of-the-art performance on the standard benchmark dataset for molecular property prediction.",
+      "year": 2019,
+      "authors": [
+        "Hiroyuki Shindo",
+        "Yuji Matsumoto"
+      ],
+      "url": "https://arxiv.org/abs/1909.00259",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:aac94fe0805f92dbd7825da82a90d0a745b18a78": {
+      "paper_id": "s2:aac94fe0805f92dbd7825da82a90d0a745b18a78",
+      "title": "Application of Parallelized Graph Neural Networks in Predicting Molecular Properties from Large-Scale Chemical Databases",
+      "abstract": "A parallel GNN architecture is proposed to solve the problems of large computation and poor scalability in molecular property prediction of large-scale chemical databases. This study uses data-level and model-level parallel methods, distributed training and memory optimization methods to learn graph-structured molecular data. To make GNN training as efficient as possible on heterogeneous datasets on multi-node GPU clusters, we optimize graph batching, adaptive sampling, workload balancing, and communication-efficient synchronization. According to the results of the standard chemical benchmark experiment, the parallelized GNN obtained a great acceleration ratio, a small peak memory usage, and still had a high prediction accuracy compared with the basic method. The comprehensive analysis analyzes how using better partitioning and sampling techniques affects how many conversations and what is needed. In computational chemistry and materials science, these distributed and parallel GNN methods seem to have good large-scale molecular prediction capabilities.",
+      "year": 2025,
+      "authors": [
+        "Piotr Tomaszewski",
+        "Adam Wojcik"
+      ],
+      "url": "https://doi.org/10.64972/dea.2025.v3i1.68",
+      "venue": "Data Engineering and Applications",
+      "source": "semantic_scholar"
+    },
+    "s2:73bc990757d54f2161eceacd330e0aeb189393bf": {
+      "paper_id": "s2:73bc990757d54f2161eceacd330e0aeb189393bf",
+      "title": "Building attention and edge message passing neural networks for bioactivity and physical–chemical property prediction",
+      "abstract": "Neural Message Passing for graphs is a promising and relatively recent approach for applying Machine Learning to networked data. As molecules can be described intrinsically as a molecular graph, it makes sense to apply these techniques to improve molecular property prediction in the field of cheminformatics. We introduce Attention and Edge Memory schemes to the existing message passing neural network framework, and benchmark our approaches against eight different physical–chemical and bioactivity datasets from the literature. We remove the need to introduce a priori knowledge of the task and chemical descriptor calculation by using only fundamental graph-derived properties. Our results consistently perform on-par with other state-of-the-art machine learning approaches, and set a new standard on sparse multi-task virtual screening targets. We also investigate model performance as a function of dataset preprocessing, and make some suggestions regarding hyperparameter selection.",
+      "year": 2020,
+      "authors": [
+        "M. Withnall",
+        "Edvard Lindelöf",
+        "O. Engkvist",
+        "Hong-Ming Chen"
+      ],
+      "url": "https://doi.org/10.1186/s13321-019-0407-y",
+      "venue": "Journal of Cheminformatics",
+      "source": "semantic_scholar"
+    },
+    "s2:751f05b8b619374936ac47e227c7a2464b67e56f": {
+      "paper_id": "s2:751f05b8b619374936ac47e227c7a2464b67e56f",
+      "title": "A comprehensive analysis of optimizers in message passing neural networks for molecular property prediction task",
+      "abstract": "Molecular property prediction is fundamental to cheminformatics, particularly in drug discovery and materials science. While Graph Neural Networks (GNNs) have emerged as powerful tools for molecular classification, the choice of optimizer significantly influences model performance. However, there is a lack of systematic studies evaluating the impact of different optimizers on molecular GNNs. To address this gap, this research investigates the effects of eight widely used optimizers on the performance of a message-passing neural network (MPNN) for binary molecular classification. Using benchmark datasets, we analyze training stability, convergence behavior, and classification accuracy. Our results reveal that adaptive gradient-based optimizers outperform traditional methods in terms of convergence stability and predictive accuracy. These findings highlight the critical role of optimizer selection in molecular classification and provide insights into optimization strategies that enhance model reliability and performance.",
+      "year": 2025,
+      "authors": [
+        "Jamshaid Ul Rahman",
+        "H. Ali",
+        "Areen Rassol"
+      ],
+      "url": "https://doi.org/10.1016/j.compbiolchem.2025.108556",
+      "venue": "Comput. Biol. Chem.",
+      "source": "semantic_scholar"
+    },
+    "s2:e24cdf73b3e7e590c2fe5ecac9ae8aa983801367": {
+      "paper_id": "s2:e24cdf73b3e7e590c2fe5ecac9ae8aa983801367",
+      "title": "Neural Message Passing for Quantum Chemistry",
+      "abstract": "Supervised learning on molecules has incredible potential to be useful in chemistry, drug discovery, and materials science. Luckily, several promising and closely related neural network models invariant to molecular symmetries have already been described in the literature. These models learn a message passing algorithm and aggregation procedure to compute a function of their entire input graph. At this point, the next step is to find a particularly effective variant of this general approach and apply it to chemical prediction benchmarks until we either solve them or reach the limits of the approach. In this paper, we reformulate existing models into a single common framework we call Message Passing Neural Networks (MPNNs) and explore additional novel variations within this framework. Using MPNNs we demonstrate state of the art results on an important molecular property prediction benchmark; these results are strong enough that we believe future work should focus on datasets with larger molecules or more accurate ground truth labels.",
+      "year": 2017,
+      "authors": [
+        "J. Gilmer",
+        "S. Schoenholz",
+        "Patrick F. Riley",
+        "O. Vinyals",
+        "G. Dahl"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.1704.01212",
+      "venue": "International Conference on Machine Learning",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2005.13607": {
+      "paper_id": "arxiv:2005.13607",
+      "title": "Multi-View Graph Neural Networks for Molecular Property Prediction",
+      "abstract": "The crux of molecular property prediction is to generate meaningful representations of the molecules. One promising route is to exploit the molecular graph structure through Graph Neural Networks (GNNs). It is well known that both atoms and bonds significantly affect the chemical properties of a molecule, so an expressive model shall be able to exploit both node (atom) and edge (bond) information simultaneously. Guided by this observation, we present Multi-View Graph Neural Network (MV-GNN), a multi-view message passing architecture to enable more accurate predictions of molecular properties. In MV-GNN, we introduce a shared self-attentive readout component and disagreement loss to stabilize the training process. This readout component also renders the whole architecture interpretable. We further boost the expressive power of MV-GNN by proposing a cross-dependent message passing scheme that enhances information communication of the two views, which results in the MV-GNN^cross variant. Lastly, we theoretically justify the expressiveness of the two proposed models in terms of distinguishing non-isomorphism graphs. Extensive experiments demonstrate that MV-GNN models achieve remarkably superior performance over the state-of-the-art models on a variety of challenging benchmarks. Meanwhile, visualization results of the node importance are consistent with prior knowledge, which confirms the interpretability power of MV-GNN models.",
+      "year": 2020,
+      "authors": [
+        "Hehuan Ma",
+        "Yatao Bian",
+        "Yu Rong",
+        "Wenbing Huang",
+        "Tingyang Xu",
+        "Weiyang Xie",
+        "Geyan Ye",
+        "Junzhou Huang"
+      ],
+      "url": "https://arxiv.org/abs/2005.13607",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2304.06253": {
+      "paper_id": "arxiv:2304.06253",
+      "title": "Enhancing Model Learning and Interpretation Using Multiple Molecular Graph Representations for Compound Property and Activity Prediction",
+      "abstract": "Graph neural networks (GNNs) demonstrate great performance in compound property and activity prediction due to their capability to efficiently learn complex molecular graph structures. However, two main limitations persist including compound representation and model interpretability. While atom-level molecular graph representations are commonly used because of their ability to capture natural topology, they may not fully express important substructures or functional groups which significantly influence molecular properties. Consequently, recent research proposes alternative representations employing reduction techniques to integrate higher-level information and leverages both representations for model learning. However, there is still a lack of study about different molecular graph representations on model learning and interpretation. Interpretability is also crucial for drug discovery as it can offer chemical insights and inspiration for optimization. Numerous studies attempt to include model interpretation to explain the rationale behind predictions, but most of them focus solely on individual prediction with little analysis of the interpretation on different molecular graph representations. This research introduces multiple molecular graph representations that incorporate higher-level information and investigates their effects on model learning and interpretation from diverse perspectives. The results indicate that combining atom graph representation with reduced molecular graph representation can yield promising model performance. Furthermore, the interpretation results can provide significant features and potential substructures consistently aligning with background knowledge. These multiple molecular graph representations and interpretation analysis can bolster model comprehension and facilitate relevant applications in drug discovery.",
+      "year": 2023,
+      "authors": [
+        "Apakorn Kengkanna",
+        "Masahito Ohue"
+      ],
+      "url": "https://arxiv.org/abs/2304.06253",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2006.06909": {
+      "paper_id": "arxiv:2006.06909",
+      "title": "Weisfeiler-Lehman Embedding for Molecular Graph Neural Networks",
+      "abstract": "A graph neural network (GNN) is a good choice for predicting the chemical properties of molecules. Compared with other deep networks, however, the current performance of a GNN is limited owing to the \"curse of depth.\" Inspired by long-established feature engineering in the field of chemistry, we expanded an atom representation using Weisfeiler-Lehman (WL) embedding, which is designed to capture local atomic patterns dominating the chemical properties of a molecule. In terms of representability, we show WL embedding can replace the first two layers of ReLU GNN -- a normal embedding and a hidden GNN layer -- with a smaller weight norm. We then demonstrate that WL embedding consistently improves the empirical performance over multiple GNN architectures and several molecular graph datasets.",
+      "year": 2020,
+      "authors": [
+        "Katsuhiko Ishiguro",
+        "Kenta Oono",
+        "Kohei Hayashi"
+      ],
+      "url": "https://arxiv.org/abs/2006.06909",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2107.04119": {
+      "paper_id": "arxiv:2107.04119",
+      "title": "Quantitative Evaluation of Explainable Graph Neural Networks for Molecular Property Prediction",
+      "abstract": "Advances in machine learning have led to graph neural network-based methods for drug discovery, yielding promising results in molecular design, chemical synthesis planning, and molecular property prediction. However, current graph neural networks (GNNs) remain of limited acceptance in drug discovery is limited due to their lack of interpretability. Although this major weakness has been mitigated by the development of explainable artificial intelligence (XAI) techniques, the \"ground truth\" assignment in most explainable tasks ultimately rests with subjective judgments by humans so that the quality of model interpretation is hard to evaluate in quantity. In this work, we first build three levels of benchmark datasets to quantitatively assess the interpretability of the state-of-the-art GNN models. Then we implemented recent XAI methods in combination with different GNN algorithms to highlight the benefits, limitations, and future opportunities for drug discovery. As a result, GradInput and IG generally provide the best model interpretability for GNNs, especially when combined with GraphNet and CMPNN. The integrated and developed XAI package is fully open-sourced and can be used by practitioners to train new models on other drug discovery tasks.",
+      "year": 2021,
+      "authors": [
+        "Jiahua Rao",
+        "Shuangjia Zheng",
+        "Yuedong Yang"
+      ],
+      "url": "https://arxiv.org/abs/2107.04119",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2102.07916": {
+      "paper_id": "arxiv:2102.07916",
+      "title": "Few-Shot Graph Learning for Molecular Property Prediction",
+      "abstract": "The recent success of graph neural networks has significantly boosted molecular property prediction, advancing activities such as drug discovery. The existing deep neural network methods usually require large training dataset for each property, impairing their performances in cases (especially for new molecular properties) with a limited amount of experimental data, which are common in real situations. To this end, we propose Meta-MGNN, a novel model for few-shot molecular property prediction. Meta-MGNN applies molecular graph neural network to learn molecular representation and builds a meta-learning framework for model optimization. To exploit unlabeled molecular information and address task heterogeneity of different molecular properties, Meta-MGNN further incorporates molecular structure, attribute based self-supervised modules and self-attentive task weights into the former framework, strengthening the whole learning model. Extensive experiments on two public multi-property datasets demonstrate that Meta-MGNN outperforms a variety of state-of-the-art methods.",
+      "year": 2021,
+      "authors": [
+        "Zhichun Guo",
+        "Chuxu Zhang",
+        "Wenhao Yu",
+        "John Herr",
+        "Olaf Wiest",
+        "Meng Jiang",
+        "Nitesh V. Chawla"
+      ],
+      "url": "https://arxiv.org/abs/2102.07916",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2009.12710": {
+      "paper_id": "arxiv:2009.12710",
+      "title": "Heterogeneous Molecular Graph Neural Networks for Predicting Molecule Properties",
+      "abstract": "As they carry great potential for modeling complex interactions, graph neural network (GNN)-based methods have been widely used to predict quantum mechanical properties of molecules. Most of the existing methods treat molecules as molecular graphs in which atoms are modeled as nodes. They characterize each atom's chemical environment by modeling its pairwise interactions with other atoms in the molecule. Although these methods achieve a great success, limited amount of works explicitly take many-body interactions, i.e., interactions between three and more atoms, into consideration. In this paper, we introduce a novel graph representation of molecules, heterogeneous molecular graph (HMG) in which nodes and edges are of various types, to model many-body interactions. HMGs have the potential to carry complex geometric information. To leverage the rich information stored in HMGs for chemical prediction problems, we build heterogeneous molecular graph neural networks (HMGNN) on the basis of a neural message passing scheme. HMGNN incorporates global molecule representations and an attention mechanism into the prediction process. The predictions of HMGNN are invariant to translation and rotation of atom coordinates, and permutation of atom indices. Our model achieves state-of-the-art performance in 9 out of 12 tasks on the QM9 dataset.",
+      "year": 2020,
+      "authors": [
+        "Zeren Shui",
+        "George Karypis"
+      ],
+      "url": "https://arxiv.org/abs/2009.12710",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q10",
+  "area": "ML"
+}

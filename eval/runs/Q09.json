@@ -1,0 +1,669 @@
+{
+  "question": "What are the main approaches to explaining the predictions of black-box machine learning models?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What are the primary post-hoc interpretability techniques for explaining complex machine learning models?",
+      "search_query": "post hoc interpretability black box models",
+      "paper_ids": [
+        "s2:8db2ee0e3efc99f8bbe9533254896fe8ff427986",
+        "s2:2b9fc544602c4793b1d95b77e3c38deea467b41f",
+        "arxiv:2007.10668",
+        "s2:7e605b9d32d9a248810b7802ffe55ce1ea273ba0",
+        "arxiv:1906.01431"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "How do intrinsic white-box modeling approaches compare in accuracy and transparency to post-hoc explanations?",
+      "search_query": "intrinsic interpretability vs post hoc explanations",
+      "paper_ids": [
+        "s2:2769575e731bb34c04ad0d6183aa9def78bfad23",
+        "s2:ffa7f6cea8024795b79e2ecdb7010f8a1dc792a9",
+        "s2:633904060d8e26724e17c4917a7e4cc49a643c8a",
+        "s2:ae04321196eda0d38934eb8434eb6933a45ea59d",
+        "s2:b83fa8012575ebe2e1b687f2c108ab025041fe11"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What standard benchmarks and evaluation metrics are used to assess the quality of model explanations?",
+      "search_query": "evaluation metrics for model explanations",
+      "paper_ids": [
+        "arxiv:2601.08703",
+        "arxiv:2210.03683",
+        "s2:35cee910ff02ab006e085e8ea8ce9f08f9b6c847",
+        "arxiv:2507.15162",
+        "s2:32901424e88a11361fa223f59b7a97b7aa04212a"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the current limitations and security vulnerabilities associated with black-box explanation methods?",
+      "search_query": "limitations of black box explanation methods",
+      "paper_ids": [
+        "arxiv:1805.10820",
+        "arxiv:2203.17081",
+        "arxiv:1704.03296",
+        "s2:d25c99d5c7eb7e2b16bf7717b197ca9f27b50497",
+        "arxiv:2308.09381"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "Post-hoc explanation methods for deep neural networks are often categorized into prototype-based methods, concept-based methods, and other interpretability approaches.",
+        "paper_id": "s2:8db2ee0e3efc99f8bbe9533254896fe8ff427986"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Post-hoc explanation methods for deep neural networks are often categorized into prototype-based methods, concept-based methods, and other interpretability approaches.",
+          "paper_id": "s2:8db2ee0e3efc99f8bbe9533254896fe8ff427986",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.951,
+          "p_supported": 0.951,
+          "accepted": true,
+          "alt_p_supported": 0.9205
+        }
+      ],
+      "final": {
+        "text": "Post-hoc explanation methods for deep neural networks are often categorized into prototype-based methods, concept-based methods, and other interpretability approaches.",
+        "paper_id": "s2:8db2ee0e3efc99f8bbe9533254896fe8ff427986",
+        "label": "SUPPORTED",
+        "confidence": 0.951
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "One study proposes an extended framework of Bayesian networks to generate post-hoc interpretations of black-box predictive models by extracting a Bayesian network as an approximation for a specific prediction.",
+        "paper_id": "arxiv:2007.10668"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study proposes an extended framework of Bayesian networks to generate post-hoc interpretations of black-box predictive models by extracting a Bayesian network as an approximation for a specific prediction.",
+          "paper_id": "arxiv:2007.10668",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9009,
+          "p_supported": 0.9009,
+          "accepted": true,
+          "alt_p_supported": 0.8677
+        }
+      ],
+      "final": {
+        "text": "One study proposes an extended framework of Bayesian networks to generate post-hoc interpretations of black-box predictive models by extracting a Bayesian network as an approximation for a specific prediction.",
+        "paper_id": "arxiv:2007.10668",
+        "label": "SUPPORTED",
+        "confidence": 0.9009
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "A meta-analysis of 67 studies in medical imaging demonstrates a consistent 5 to 7 percent AUC performance penalty for interpretable models.",
+        "paper_id": "s2:633904060d8e26724e17c4917a7e4cc49a643c8a"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "A meta-analysis of 67 studies in medical imaging demonstrates a consistent 5 to 7 percent AUC performance penalty for interpretable models.",
+          "paper_id": "s2:633904060d8e26724e17c4917a7e4cc49a643c8a",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9334,
+          "p_supported": 0.9334,
+          "accepted": true,
+          "alt_p_supported": 0.8974
+        }
+      ],
+      "final": {
+        "text": "A meta-analysis of 67 studies in medical imaging demonstrates a consistent 5 to 7 percent AUC performance penalty for interpretable models.",
+        "paper_id": "s2:633904060d8e26724e17c4917a7e4cc49a643c8a",
+        "label": "SUPPORTED",
+        "confidence": 0.9334
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "SmoothGrad and Occlusion were found to have a statistically bigger overlap with the intrinsically interpretable ProtoPNet, while Deconvolution and LIME had the least, using the PatchCamelyon dataset.",
+        "paper_id": "s2:ae04321196eda0d38934eb8434eb6933a45ea59d"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "SmoothGrad and Occlusion were found to have a statistically bigger overlap with the intrinsically interpretable ProtoPNet, while Deconvolution and LIME had the least, using the PatchCamelyon dataset.",
+          "paper_id": "s2:ae04321196eda0d38934eb8434eb6933a45ea59d",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9263,
+          "p_supported": 0.9263,
+          "accepted": true,
+          "alt_p_supported": 0.9017
+        }
+      ],
+      "final": {
+        "text": "SmoothGrad and Occlusion were found to have a statistically bigger overlap with the intrinsically interpretable ProtoPNet, while Deconvolution and LIME had the least, using the PatchCamelyon dataset.",
+        "paper_id": "s2:ae04321196eda0d38934eb8434eb6933a45ea59d",
+        "label": "SUPPORTED",
+        "confidence": 0.9263
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "One study evaluates explanation quality of video DeepFake classifiers using the DFDC and DFD datasets.",
+        "paper_id": "arxiv:2210.03683"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study evaluates explanation quality of video DeepFake classifiers using the DFDC and DFD datasets.",
+          "paper_id": "arxiv:2210.03683",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.7779,
+          "p_supported": 0.7779,
+          "accepted": true,
+          "alt_p_supported": 0.7267
+        }
+      ],
+      "final": {
+        "text": "One study evaluates explanation quality of video DeepFake classifiers using the DFDC and DFD datasets.",
+        "paper_id": "arxiv:2210.03683",
+        "label": "SUPPORTED",
+        "confidence": 0.7779
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "The Consistency-Aware Explainable AI framework tests explanation consistency using the UCI Heart Disease dataset with Logistic Regression, Random Forest, and XGBoost classifiers.",
+        "paper_id": "s2:35cee910ff02ab006e085e8ea8ce9f08f9b6c847"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The Consistency-Aware Explainable AI framework tests explanation consistency using the UCI Heart Disease dataset with Logistic Regression, Random Forest, and XGBoost classifiers.",
+          "paper_id": "s2:35cee910ff02ab006e085e8ea8ce9f08f9b6c847",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.937,
+          "p_supported": 0.937,
+          "accepted": true,
+          "alt_p_supported": 0.9237
+        }
+      ],
+      "final": {
+        "text": "The Consistency-Aware Explainable AI framework tests explanation consistency using the UCI Heart Disease dataset with Logistic Regression, Random Forest, and XGBoost classifiers.",
+        "paper_id": "s2:35cee910ff02ab006e085e8ea8ce9f08f9b6c847",
+        "label": "SUPPORTED",
+        "confidence": 0.937
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Post-hoc explanations based on perturbations, such as LIME, exhibit large instability, which poses challenges to their effectiveness and harms user trust.",
+        "paper_id": "arxiv:2203.17081"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Post-hoc explanations based on perturbations, such as LIME, exhibit large instability, which poses challenges to their effectiveness and harms user trust.",
+          "paper_id": "arxiv:2203.17081",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9461,
+          "p_supported": 0.9461,
+          "accepted": true,
+          "alt_p_supported": 0.928
+        }
+      ],
+      "final": {
+        "text": "Post-hoc explanations based on perturbations, such as LIME, exhibit large instability, which poses challenges to their effectiveness and harms user trust.",
+        "paper_id": "arxiv:2203.17081",
+        "label": "SUPPORTED",
+        "confidence": 0.9461
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "LIME relies on local perturbation strategies that are prone to data structure distortion in high-dimensional sparse data, resulting in distribution shifts that reduce explanation stability.",
+        "paper_id": "s2:d25c99d5c7eb7e2b16bf7717b197ca9f27b50497"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "LIME relies on local perturbation strategies that are prone to data structure distortion in high-dimensional sparse data, resulting in distribution shifts that reduce explanation stability.",
+          "paper_id": "s2:d25c99d5c7eb7e2b16bf7717b197ca9f27b50497",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9329,
+          "p_supported": 0.9329,
+          "accepted": true,
+          "alt_p_supported": 0.9259
+        }
+      ],
+      "final": {
+        "text": "LIME relies on local perturbation strategies that are prone to data structure distortion in high-dimensional sparse data, resulting in distribution shifts that reduce explanation stability.",
+        "paper_id": "s2:d25c99d5c7eb7e2b16bf7717b197ca9f27b50497",
+        "label": "SUPPORTED",
+        "confidence": 0.9329
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:8db2ee0e3efc99f8bbe9533254896fe8ff427986",
+      "citation": "Antonio Di Marino, Vincenzo Bevilacqua, A. Ciaramella et al. (2025). Ante-Hoc Methods for Interpretable Deep Models: A Survey. ACM Computing Surveys. https://doi.org/10.1145/3728637"
+    },
+    {
+      "n": 2,
+      "paper_id": "arxiv:2007.10668",
+      "citation": "Catarina Moreira, Yu-Liang Chou, Mythreyi Velmurugan et al. (2020). An Interpretable Probabilistic Approach for Demystifying Black-box Predictive Models. arXiv. https://arxiv.org/abs/2007.10668"
+    },
+    {
+      "n": 3,
+      "paper_id": "s2:633904060d8e26724e17c4917a7e4cc49a643c8a",
+      "citation": "Yashbir Singh, Q. Hathaway, Varekan Keishing et al. (2025). Beyond Post hoc Explanations: A Comprehensive Framework for Accountable AI in Medical Imaging Through Transparency, Interpretability, and Explainability. Bioengineering. https://doi.org/10.3390/bioengineering12080879"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:ae04321196eda0d38934eb8434eb6933a45ea59d",
+      "citation": "J. P. Amorim, P. Abreu, João A. M. Santos et al. (2023). Evaluating Post-hoc Interpretability with Intrinsic Interpretability. arXiv.org. https://doi.org/10.48550/arXiv.2305.03002"
+    },
+    {
+      "n": 5,
+      "paper_id": "arxiv:2210.03683",
+      "citation": "Federico Baldassarre, Quentin Debard, Gonzalo Fiz Pontiveros et al. (2022). Quantitative Metrics for Evaluating Explanations of Video DeepFake Detectors. arXiv. https://arxiv.org/abs/2210.03683"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:35cee910ff02ab006e085e8ea8ce9f08f9b6c847",
+      "citation": "Anushka Arora, Hirdaypal Singh, Avaneesh Kumar (2026). Consistency-Aware Evaluation of LIME and SHAP Explanations Using a Hybrid Similarity Metric. International Journal for Research in Applied Science and Engineering Technology. https://doi.org/10.22214/ijraset.2026.83585"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2203.17081",
+      "citation": "Shivani Choudhary, Niladri Chatterjee, Subir Kumar Saha (2022). Interpretation of Black Box NLP Models: A Survey. arXiv. https://arxiv.org/abs/2203.17081"
+    },
+    {
+      "n": 8,
+      "paper_id": "s2:d25c99d5c7eb7e2b16bf7717b197ca9f27b50497",
+      "citation": "Rui-Qi He, Yong Li, Chi Sun (2025). Software Defect Prediction Based on the Dynamic Attention Rule Explanation Method. IEEE International Conference on Software Quality, Reliability and Security Companion. https://doi.org/10.1109/QRS-C65679.2025.00058"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Explaining the predictions of black-box machine learning models involves a variety of post-hoc techniques, intrinsic approaches, evaluation frameworks, and security considerations. Regarding primary post-hoc interpretability techniques, methods for deep neural networks are often categorized into prototype-based methods, concept-based methods, and other approaches [1]. Additionally, an extended framework of Bayesian networks can generate post-hoc interpretations of black-box predictive models by extracting a Bayesian network as an approximation for a specific prediction [2]. \n\nWhen comparing intrinsic white-box modeling approaches to post-hoc explanations, a meta-analysis of 67 studies in medical imaging demonstrates a consistent 5 to 7 percent AUC performance penalty for interpretable models [3]. Furthermore, evaluation on the PatchCamelyon dataset showed that SmoothGrad and Occlusion have a statistically bigger overlap with the intrinsically interpretable ProtoPNet, whereas Deconvolution and LIME have the least overlap [4]. \n\nTo assess explanation quality, standard benchmarks and evaluation metrics are utilized across different domains. One study evaluates the explanation quality of video DeepFake classifiers using the DFDC and DFD datasets [5], while the Consistency-Aware Explainable AI framework tests explanation consistency using the UCI Heart Disease dataset with Logistic Regression, Random Forest, and XGBoost classifiers [6]. \n\nDespite these advancements, current explanation methods face significant limitations and vulnerabilities. Post-hoc explanations based on perturbations, such as LIME, exhibit large instability, posing challenges to their effectiveness and harming user trust [7]. Specifically, LIME relies on local perturbation strategies that are prone to data structure distortion in high-dimensional sparse data, resulting in distribution shifts that reduce explanation stability [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 7,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 12,
+      "arxiv": 0
+    },
+    "seconds": 74.0
+  },
+  "papers": {
+    "s2:8db2ee0e3efc99f8bbe9533254896fe8ff427986": {
+      "paper_id": "s2:8db2ee0e3efc99f8bbe9533254896fe8ff427986",
+      "title": "Ante-Hoc Methods for Interpretable Deep Models: A Survey",
+      "abstract": "The increasing use of black-box networks in high-risk contexts has led researchers to propose explainable methods to make these networks transparent. Most methods that allow us to understand the behavior of Deep Neural Networks (DNNs) are post-hoc approaches, implying that the explainability is questionable, as these methods do not clarify the internal behavior of a model. Thus, this demonstrates the difficulty of interpreting the internal behavior of deep models. This systematic literature review collects the ante-hoc methods that provide an understanding of the internal mechanisms of deep models and which can be helpful to researchers who need to use interpretability methods to clarify DNNs. This work provides the definitions of strong interpretability and weak interpretability, which will be used to describe the interpretability of the methods discussed in this article. The results of this work are divided mainly into prototype-based methods, concept-based methods, and other interpretability methods for deep models.",
+      "year": 2025,
+      "authors": [
+        "Antonio Di Marino",
+        "Vincenzo Bevilacqua",
+        "A. Ciaramella",
+        "I. De Falco",
+        "G. Sannino"
+      ],
+      "url": "https://doi.org/10.1145/3728637",
+      "venue": "ACM Computing Surveys",
+      "source": "semantic_scholar"
+    },
+    "s2:2b9fc544602c4793b1d95b77e3c38deea467b41f": {
+      "paper_id": "s2:2b9fc544602c4793b1d95b77e3c38deea467b41f",
+      "title": "Regularizing Black-box Models for Improved Interpretability",
+      "abstract": "Most of the work on interpretable machine learning has focused on designing either inherently interpretable models, which typically trade-off accuracy for interpretability, or post-hoc explanation systems, whose explanation quality can be unpredictable. Our method, ExpO, is a hybridization of these approaches that regularizes a model for explanation quality at training time. Importantly, these regularizers are differentiable, model agnostic, and require no domain knowledge to define. We demonstrate that post-hoc explanations for ExpO-regularized models have better explanation quality, as measured by the common fidelity and stability metrics. We verify that improving these metrics leads to significantly more useful explanations with a user study on a realistic task.",
+      "year": 2019,
+      "authors": [
+        "Gregory Plumb",
+        "Maruan Al-Shedivat",
+        "Ángel Alexander Cabrera",
+        "E. Xing",
+        "Ameet Talwalkar"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.1902.06787",
+      "venue": "Neural Information Processing Systems",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2007.10668": {
+      "paper_id": "arxiv:2007.10668",
+      "title": "An Interpretable Probabilistic Approach for Demystifying Black-box Predictive Models",
+      "abstract": "The use of sophisticated machine learning models for critical decision making is faced with a challenge that these models are often applied as a \"black-box\". This has led to an increased interest in interpretable machine learning, where post hoc interpretation presents a useful mechanism for generating interpretations of complex learning models. In this paper, we propose a novel approach underpinned by an extended framework of Bayesian networks for generating post hoc interpretations of a black-box predictive model. The framework supports extracting a Bayesian network as an approximation of the black-box model for a specific prediction. Compared to the existing post hoc interpretation methods, the contribution of our approach is three-fold. Firstly, the extracted Bayesian network, as a probabilistic graphical model, can provide interpretations about not only what input features but also why these features contributed to a prediction. Secondly, for complex decision problems with many features, a Markov blanket can be generated from the extracted Bayesian network to provide interpretations with a focused view on those input features that directly contributed to a prediction. Thirdly, the extracted Bayesian network enables the identification of four different rules which can inform the decision-maker about the confidence level in a prediction, thus helping the decision-maker assess the reliability of predictions learned by a black-box model. We implemented the proposed approach, applied it in the context of two well-known public datasets and analysed the results, which are made available in an open-source repository.",
+      "year": 2020,
+      "authors": [
+        "Catarina Moreira",
+        "Yu-Liang Chou",
+        "Mythreyi Velmurugan",
+        "Chun Ouyang",
+        "Renuka Sindhgatta",
+        "Peter Bruza"
+      ],
+      "url": "https://arxiv.org/abs/2007.10668",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:7e605b9d32d9a248810b7802ffe55ce1ea273ba0": {
+      "paper_id": "s2:7e605b9d32d9a248810b7802ffe55ce1ea273ba0",
+      "title": "Discriminative Feature Attributions: Bridging Post Hoc Explainability and Inherent Interpretability",
+      "abstract": "With the increased deployment of machine learning models in various real-world applications, researchers and practitioners alike have emphasized the need for explanations of model behaviour. To this end, two broad strategies have been outlined in prior literature to explain models. Post hoc explanation methods explain the behaviour of complex black-box models by identifying features critical to model predictions; however, prior work has shown that these explanations may not be faithful, in that they incorrectly attribute high importance to features that are unimportant or non-discriminative for the underlying task. Inherently interpretable models, on the other hand, circumvent these issues by explicitly encoding explanations into model architecture, meaning their explanations are naturally faithful, but they often exhibit poor predictive performance due to their limited expressive power. In this work, we identify a key reason for the lack of faithfulness of feature attributions: the lack of robustness of the underlying black-box models, especially to the erasure of unimportant distractor features in the input. To address this issue, we propose Distractor Erasure Tuning (DiET), a method that adapts black-box models to be robust to distractor erasure, thus providing discriminative and faithful attributions. This strategy naturally combines the ease of use of post hoc explanations with the faithfulness of inherently interpretable models. We perform extensive experiments on semi-synthetic and real-world datasets and show that DiET produces models that (1) closely approximate the original black-box models they are intended to explain, and (2) yield explanations that match approximate ground truths available by construction. Our code is made public at https://github.com/AI4LIFE-GROUP/DiET.",
+      "year": 2023,
+      "authors": [
+        "Usha Bhalla",
+        "Suraj Srinivas",
+        "Himabindu Lakkaraju"
+      ],
+      "url": "https://doi.org/10.52202/075280-1914",
+      "venue": "Neural Information Processing Systems",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1906.01431": {
+      "paper_id": "arxiv:1906.01431",
+      "title": "Regularizing Black-box Models for Improved Interpretability (HILL 2019 Version)",
+      "abstract": "Most of the work on interpretable machine learning has focused on designing either inherently interpretable models, which typically trade-off accuracy for interpretability, or post-hoc explanation systems, which lack guarantees about their explanation quality. We propose an alternative to these approaches by directly regularizing a black-box model for interpretability at training time. Our approach explicitly connects three key aspects of interpretable machine learning: (i) the model's innate explainability, (ii) the explanation system used at test time, and (iii) the metrics that measure explanation quality. Our regularization results in substantial improvement in terms of the explanation fidelity and stability metrics across a range of datasets and black-box explanation systems while slightly improving accuracy. Further, if the resulting model is still not sufficiently interpretable, the weight of the regularization term can be adjusted to achieve the desired trade-off between accuracy and interpretability. Finally, we justify theoretically that the benefits of explanation-based regularization generalize to unseen points.",
+      "year": 2019,
+      "authors": [
+        "Gregory Plumb",
+        "Maruan Al-Shedivat",
+        "Eric Xing",
+        "Ameet Talwalkar"
+      ],
+      "url": "https://arxiv.org/abs/1906.01431",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:2769575e731bb34c04ad0d6183aa9def78bfad23": {
+      "paper_id": "s2:2769575e731bb34c04ad0d6183aa9def78bfad23",
+      "title": "Through the looking glass: evaluating post hoc explanations using transparent models",
+      "abstract": "Modern machine learning methods allow for complex and in-depth analytics, but the predictive models generated by these methods are often highly complex and lack transparency. Explainable Artificial Intelligence (XAI) methods are used to improve the interpretability of these complex “black box” models, thereby increasing transparency and enabling informed decision-making. However, the inherent fitness of these explainable methods, particularly the faithfulness of explanations to the decision-making processes of the model, can be hard to evaluate. In this work, we examine and evaluate the explanations provided by four XAI methods, using fully transparent “glass box” models trained on tabular data. Our results suggest that the fidelity of explanations is determined by the types of variables used, as well as the linearity of the relationship between variables and model prediction. We find that each XAI method evaluated has its own strengths and weaknesses, determined by the assumptions inherent in the explanation mechanism. Thus, though such methods are model-agnostic, we find significant differences in explanation quality across different technical setups. Given the numerous factors that determine the quality of explanations, including the specific explanation-generation procedures implemented by XAI methods, we suggest that model-agnostic XAI methods may still require expert guidance for implementation.",
+      "year": 2023,
+      "authors": [
+        "Mythreyi Velmurugan",
+        "Chun Ouyang",
+        "R. Sindhgatta",
+        "C. Moreira"
+      ],
+      "url": "https://doi.org/10.1007/s41060-023-00445-1",
+      "venue": "International Journal of Data Science and Analysis",
+      "source": "semantic_scholar"
+    },
+    "s2:ffa7f6cea8024795b79e2ecdb7010f8a1dc792a9": {
+      "paper_id": "s2:ffa7f6cea8024795b79e2ecdb7010f8a1dc792a9",
+      "title": "How to Probe: Simple Yet Effective Techniques for Improving Post-hoc Explanations",
+      "abstract": "Post-hoc importance attribution methods are a popular tool for\"explaining\"Deep Neural Networks (DNNs) and are inherently based on the assumption that the explanations can be applied independently of how the models were trained. Contrarily, in this work we bring forward empirical evidence that challenges this very notion. Surprisingly, we discover a strong dependency on and demonstrate that the training details of a pre-trained model's classification layer (less than 10 percent of model parameters) play a crucial role, much more than the pre-training scheme itself. This is of high practical relevance: (1) as techniques for pre-training models are becoming increasingly diverse, understanding the interplay between these techniques and attribution methods is critical; (2) it sheds light on an important yet overlooked assumption of post-hoc attribution methods which can drastically impact model explanations and how they are interpreted eventually. With this finding we also present simple yet effective adjustments to the classification layers, that can significantly enhance the quality of model explanations. We validate our findings across several visual pre-training frameworks (fully-supervised, self-supervised, contrastive vision-language training) and analyse how they impact explanations for a wide range of attribution methods on a diverse set of evaluation metrics.",
+      "year": 2025,
+      "authors": [
+        "Siddhartha Gairola",
+        "Moritz D Boehle",
+        "Francesco Locatello",
+        "B. Schiele"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2503.00641",
+      "venue": "International Conference on Learning Representations",
+      "source": "semantic_scholar"
+    },
+    "s2:633904060d8e26724e17c4917a7e4cc49a643c8a": {
+      "paper_id": "s2:633904060d8e26724e17c4917a7e4cc49a643c8a",
+      "title": "Beyond Post hoc Explanations: A Comprehensive Framework for Accountable AI in Medical Imaging Through Transparency, Interpretability, and Explainability",
+      "abstract": "The integration of artificial intelligence (AI) in medical imaging has revolutionized diagnostic capabilities, yet the black-box nature of deep learning models poses significant challenges for clinical adoption. Current explainable AI (XAI) approaches, including SHAP, LIME, and Grad-CAM, predominantly focus on post hoc explanations that may inadvertently undermine clinical decision-making by providing misleading confidence in AI outputs. This paper presents a systematic review and meta-analysis of 67 studies (covering 23 radiology, 19 pathology, and 25 ophthalmology applications) evaluating XAI fidelity, stability, and performance trade-offs across medical imaging modalities. Our meta-analysis of 847 initially identified studies reveals that LIME achieves superior fidelity (0.81, 95% CI: 0.78–0.84) compared to SHAP (0.38, 95% CI: 0.35–0.41) and Grad-CAM (0.54, 95% CI: 0.51–0.57) across all modalities. Post hoc explanations demonstrated poor stability under noise perturbation, with SHAP showing 53% degradation in ophthalmology applications (ρ = 0.42 at 10% noise) compared to 11% in radiology (ρ = 0.89). We demonstrate a consistent 5–7% AUC performance penalty for interpretable models but identify modality-specific stability patterns suggesting that tailored XAI approaches are necessary. Based on these empirical findings, we propose a comprehensive three-pillar accountability framework that prioritizes transparency in model development, interpretability in architecture design, and a cautious deployment of post hoc explanations with explicit uncertainty quantification. This approach offers a pathway toward genuinely accountable AI systems that enhance rather than compromise clinical decision-making quality and patient safety.",
+      "year": 2025,
+      "authors": [
+        "Yashbir Singh",
+        "Q. Hathaway",
+        "Varekan Keishing",
+        "Sara Salehi",
+        "Yu-Jia Wei",
+        "N. Horvat",
+        "D. V. Vera-Garcia",
+        "Ashok Choudhary",
+        "Almurtadha Mula Kh",
+        "E. Quaia",
+        "J. B. Andersen"
+      ],
+      "url": "https://doi.org/10.3390/bioengineering12080879",
+      "venue": "Bioengineering",
+      "source": "semantic_scholar"
+    },
+    "s2:ae04321196eda0d38934eb8434eb6933a45ea59d": {
+      "paper_id": "s2:ae04321196eda0d38934eb8434eb6933a45ea59d",
+      "title": "Evaluating Post-hoc Interpretability with Intrinsic Interpretability",
+      "abstract": "Despite Convolutional Neural Networks having reached human-level performance in some medical tasks, their clinical use has been hindered by their lack of interpretability. Two major interpretability strategies have been proposed to tackle this problem: post-hoc methods and intrinsic methods. Although there are several post-hoc methods to interpret DL models, there is significant variation between the explanations provided by each method, and it a difficult to validate them due to the lack of ground-truth. To address this challenge, we adapted the intrinsical interpretable ProtoPNet for the context of histopathology imaging and compared the attribution maps produced by it and the saliency maps made by post-hoc methods. To evaluate the similarity between saliency map methods and attribution maps we adapted 10 saliency metrics from the saliency model literature, and used the breast cancer metastases detection dataset PatchCamelyon with 327,680 patches of histopathological images of sentinel lymph node sections to validate the proposed approach. Overall, SmoothGrad and Occlusion were found to have a statistically bigger overlap with ProtoPNet while Deconvolution and Lime have been found to have the least.",
+      "year": 2023,
+      "authors": [
+        "J. P. Amorim",
+        "P. Abreu",
+        "João A. M. Santos",
+        "H. Müller"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2305.03002",
+      "venue": "arXiv.org",
+      "source": "semantic_scholar"
+    },
+    "s2:b83fa8012575ebe2e1b687f2c108ab025041fe11": {
+      "paper_id": "s2:b83fa8012575ebe2e1b687f2c108ab025041fe11",
+      "title": "Understanding Satellite Image Processing and Black Box Models with Ante-Hoc and Post-Hoc Explanations in Deep Learning",
+      "abstract": "This research aims to investigate the challenges of using black box models in deep learning and analyzing satellite images through a thorough meta-analysis. The main goal of the study is to improve transparency and interpretability, with a focus on providing explanations both before and after model training. Transparency elements are integrated into models during the initial stages to enhance their clarity. Following the completion of training for complex models, explanations are utilized to comprehend how decisions are made. The research focuses on using both of these approaches to tackle the issues linked with deep learning models in satellite image processing. Through the use of design-time and post-modeling methods, AI can be used for analyzing satellite images in a way that is easier to understand and accountable.",
+      "year": 2024,
+      "authors": [
+        "Sai Bhargav Kasetty",
+        "K. Rajakumar"
+      ],
+      "url": "https://doi.org/10.1109/ICCSP60870.2024.10544196",
+      "venue": "International Conference on Cryptography, Security and Privacy",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2601.08703": {
+      "paper_id": "arxiv:2601.08703",
+      "title": "Evaluating the Ability of Explanations to Disambiguate Models in a Rashomon Set",
+      "abstract": "Explainable artificial intelligence (XAI) is concerned with producing explanations indicating the inner workings of models. For a Rashomon set of similarly performing models, explanations provide a way of disambiguating the behavior of individual models, helping select models for deployment. However explanations themselves can vary depending on the explainer used, and need to be evaluated. In the paper \"Evaluating Model Explanations without Ground Truth\", we proposed three principles of explanation evaluation and a new method \"AXE\" to evaluate the quality of feature-importance explanations. We go on to illustrate how evaluation metrics that rely on comparing model explanations against ideal ground truth explanations obscure behavioral differences within a Rashomon set. Explanation evaluation aligned with our proposed principles would highlight these differences instead, helping select models from the Rashomon set. The selection of alternate models from the Rashomon set can maintain identical predictions but mislead explainers into generating false explanations, and mislead evaluation methods into considering the false explanations to be of high quality. AXE, our proposed explanation evaluation method, can detect this adversarial fairwashing of explanations with a 100% success rate. Unlike prior explanation evaluation strategies such as those based on model sensitivity or ground truth comparison, AXE can determine when protected attributes are used to make predictions.",
+      "year": 2026,
+      "authors": [
+        "Kaivalya Rawal",
+        "Eoin Delaney",
+        "Zihao Fu",
+        "Sandra Wachter",
+        "Chris Russell"
+      ],
+      "url": "https://arxiv.org/abs/2601.08703",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2210.03683": {
+      "paper_id": "arxiv:2210.03683",
+      "title": "Quantitative Metrics for Evaluating Explanations of Video DeepFake Detectors",
+      "abstract": "The proliferation of DeepFake technology is a rising challenge in today's society, owing to more powerful and accessible generation methods. To counter this, the research community has developed detectors of ever-increasing accuracy. However, the ability to explain the decisions of such models to users is lacking behind and is considered an accessory in large-scale benchmarks, despite being a crucial requirement for the correct deployment of automated tools for content moderation. We attribute the issue to the reliance on qualitative comparisons and the lack of established metrics. We describe a simple set of metrics to evaluate the visual quality and informativeness of explanations of video DeepFake classifiers from a human-centric perspective. With these metrics, we compare common approaches to improve explanation quality and discuss their effect on both classification and explanation performance on the recent DFDC and DFD datasets.",
+      "year": 2022,
+      "authors": [
+        "Federico Baldassarre",
+        "Quentin Debard",
+        "Gonzalo Fiz Pontiveros",
+        "Tri Kurniawan Wijaya"
+      ],
+      "url": "https://arxiv.org/abs/2210.03683",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:35cee910ff02ab006e085e8ea8ce9f08f9b6c847": {
+      "paper_id": "s2:35cee910ff02ab006e085e8ea8ce9f08f9b6c847",
+      "title": "Consistency-Aware Evaluation of LIME and SHAP Explanations Using a Hybrid Similarity Metric",
+      "abstract": "Explainable Artificial Intelligence methods like LIME and SHAP are used a lot to understand what machine learning models predict.. Most research focuses on generating explanations not checking if they are consistent across different methods. This paper presents a framework called Consistency-Aware Explainable AI that checks how well different explanation meth-ods agree. It uses a score called Explanation Consistency Score, which combines two metrics. WetestedthisframeworkontheUCIHeartDiseasedatasetus-ingLogisticRegression,RandomForestandXGBoostclassifiers. Weevaluatedexplanationconsistencyacross50testinstancesfor each model. Theresultsshowthatbeinggoodatpredictingdoesnot mean an explanation is consistent. Logistic Regression got the Explanation Consistency Score while Random Forest got the lowest even though it was best at classifying. TheExplanationConsistencyScoreprovidesanreliablewaytocheckexplanationconsistencyacrossmachinelearningmodels. TheproposedECSframeworkprovidesancomputationally lightweightapproach,forevaluatingexplanationconsistency Across machinelearningmodels.",
+      "year": 2026,
+      "authors": [
+        "Anushka Arora",
+        "Hirdaypal Singh",
+        "Avaneesh Kumar"
+      ],
+      "url": "https://doi.org/10.22214/ijraset.2026.83585",
+      "venue": "International Journal for Research in Applied Science and Engineering Technology",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2507.15162": {
+      "paper_id": "arxiv:2507.15162",
+      "title": "Designing User-Centric Metrics for Evaluation of Counterfactual Explanations",
+      "abstract": "Counterfactual Explanations (CFEs) have grown in popularity as a means of offering actionable guidance by identifying the minimum changes in feature values required to flip an ML model's prediction to something more desirable. Unfortunately, most prior research on CFEs relies on artificial evaluation metrics, such as proximity, which may overlook end-user preferences and constraints, e.g., the user's perception of effort needed to make certain feature changes may differ from that of the model designer. To address this research gap, this paper makes three novel contributions. First, we conduct a pilot study with 20 crowd-workers on Amazon MTurk to experimentally validate the alignment of existing CF evaluation metrics with real-world user preferences. Results show that user-preferred CFEs matched those based on proximity in only 63.81% of cases, highlighting the limited applicability of these metrics in real-world settings. Second, inspired by the need to design a user-informed evaluation metric for CFEs, we conduct a more detailed two-day user study with 41 participants facing realistic credit application scenarios to find experimental support for or against three intuitive hypotheses that may explain how end users evaluate CFEs. Third, based on the findings of this second study, we propose the AWP model, a novel user-centric, two-stage model that describes one possible mechanism by which users evaluate and select CFEs. Our results show that AWP predicts user-preferred CFEs with 84.37% accuracy. Our study provides the first human-centered validation for personalized cost models in CFE generation and highlights the need for adaptive, user-centered evaluation metrics.",
+      "year": 2025,
+      "authors": [
+        "Firdaus Ahmed Choudhury",
+        "Ethan Leicht",
+        "Jude Ethan Bislig",
+        "Hangzhi Guo",
+        "Amulya Yadav"
+      ],
+      "url": "https://arxiv.org/abs/2507.15162",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:32901424e88a11361fa223f59b7a97b7aa04212a": {
+      "paper_id": "s2:32901424e88a11361fa223f59b7a97b7aa04212a",
+      "title": "ConSim: Measuring Concept-Based Explanations' Effectiveness with Automated Simulatability",
+      "abstract": "Concept-based explanations work by mapping complex model computations to human-understandable concepts. Evaluating such explanations is very difficult, as it includes not only the quality of the induced space of possible concepts but also how effectively the chosen concepts are communicated to users. Existing evaluation metrics often focus solely on the former, neglecting the latter. We introduce an evaluation framework for measuring concept explanations via automated simulatability: a simulator's ability to predict the explained model's outputs based on the provided explanations. This approach accounts for both the concept space and its interpretation in an end-to-end evaluation. Human studies for simulatability are notoriously difficult to enact, particularly at the scale of a wide, comprehensive empirical evaluation (which is the subject of this work). We propose using large language models (LLMs) as simulators to approximate the evaluation and report various analyses to make such approximations reliable. Our method allows for scalable and consistent evaluation across various models and datasets. We report a comprehensive empirical evaluation using this framework and show that LLMs provide consistent rankings of explanation methods. Code available at https://github.com/AnonymousConSim/ConSim.",
+      "year": 2025,
+      "authors": [
+        "Antonin Poché",
+        "Alon Jacovi",
+        "A. Picard",
+        "Victor Boutin",
+        "Fanny Jourdan"
+      ],
+      "url": "https://doi.org/10.48550/arXiv.2501.05855",
+      "venue": "Annual Meeting of the Association for Computational Linguistics",
+      "source": "semantic_scholar"
+    },
+    "arxiv:1805.10820": {
+      "paper_id": "arxiv:1805.10820",
+      "title": "Local Rule-Based Explanations of Black Box Decision Systems",
+      "abstract": "The recent years have witnessed the rise of accurate but obscure decision systems which hide the logic of their internal decision processes to the users. The lack of explanations for the decisions of black box systems is a key ethical issue, and a limitation to the adoption of machine learning components in socially sensitive and safety-critical contexts. %Therefore, we need explanations that reveals the reasons why a predictor takes a certain decision. In this paper we focus on the problem of black box outcome explanation, i.e., explaining the reasons of the decision taken on a specific instance. We propose LORE, an agnostic method able to provide interpretable and faithful explanations. LORE first leans a local interpretable predictor on a synthetic neighborhood generated by a genetic algorithm. Then it derives from the logic of the local interpretable predictor a meaningful explanation consisting of: a decision rule, which explains the reasons of the decision; and a set of counterfactual rules, suggesting the changes in the instance's features that lead to a different outcome. Wide experiments show that LORE outperforms existing methods and baselines both in the quality of explanations and in the accuracy in mimicking the black box.",
+      "year": 2018,
+      "authors": [
+        "Riccardo Guidotti",
+        "Anna Monreale",
+        "Salvatore Ruggieri",
+        "Dino Pedreschi",
+        "Franco Turini",
+        "Fosca Giannotti"
+      ],
+      "url": "https://arxiv.org/abs/1805.10820",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2203.17081": {
+      "paper_id": "arxiv:2203.17081",
+      "title": "Interpretation of Black Box NLP Models: A Survey",
+      "abstract": "An increasing number of machine learning models have been deployed in domains with high stakes such as finance and healthcare. Despite their superior performances, many models are black boxes in nature which are hard to explain. There are growing efforts for researchers to develop methods to interpret these black-box models. Post hoc explanations based on perturbations, such as LIME, are widely used approaches to interpret a machine learning model after it has been built. This class of methods has been shown to exhibit large instability, posing serious challenges to the effectiveness of the method itself and harming user trust. In this paper, we propose S-LIME, which utilizes a hypothesis testing framework based on central limit theorem for determining the number of perturbation points needed to guarantee stability of the resulting explanation. Experiments on both simulated and real world data sets are provided to demonstrate the effectiveness of our method.",
+      "year": 2022,
+      "authors": [
+        "Shivani Choudhary",
+        "Niladri Chatterjee",
+        "Subir Kumar Saha"
+      ],
+      "url": "https://arxiv.org/abs/2203.17081",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:1704.03296": {
+      "paper_id": "arxiv:1704.03296",
+      "title": "Interpretable Explanations of Black Boxes by Meaningful Perturbation",
+      "abstract": "As machine learning algorithms are increasingly applied to high impact yet high risk tasks, such as medical diagnosis or autonomous driving, it is critical that researchers can explain how such algorithms arrived at their predictions. In recent years, a number of image saliency methods have been developed to summarize where highly complex neural networks \"look\" in an image for evidence for their predictions. However, these techniques are limited by their heuristic nature and architectural constraints. In this paper, we make two main contributions: First, we propose a general framework for learning different kinds of explanations for any black box algorithm. Second, we specialise the framework to find the part of an image most responsible for a classifier decision. Unlike previous works, our method is model-agnostic and testable because it is grounded in explicit and interpretable image perturbations.",
+      "year": 2017,
+      "authors": [
+        "Ruth Fong",
+        "Andrea Vedaldi"
+      ],
+      "url": "https://arxiv.org/abs/1704.03296",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:d25c99d5c7eb7e2b16bf7717b197ca9f27b50497": {
+      "paper_id": "s2:d25c99d5c7eb7e2b16bf7717b197ca9f27b50497",
+      "title": "Software Defect Prediction Based on the Dynamic Attention Rule Explanation Method",
+      "abstract": "With the widespread application of deep learning and ensemble models in software defect prediction tasks, their \"black-box\" nature renders the decision-making process untraceable, significantly limiting developers’ trust in predictions and operational efficiency. Existing research predominantly employs post-hoc explainability methods, such as LIME and SHAP, but these methods exhibit notable limitations. LIME, which relies on local perturbation strategies, is prone to data structure distortion in high-dimensional sparse data, leading to distribution shifts that reduce the stability of explanations. Similarly, the ANCHOR method, which extracts decision rules through greedy search, often generates complex and unintuitive rules, impairing readability. Moreover, these methods fail to effectively capture complex nonlinear feature interactions present in software code change data, resulting in insufficient explanation accuracy and limited adaptability. To address these challenges, this chapter proposes a software defect prediction model explainability approach based on the Dynamic Attention Rule (DynAR). This approach aims to enhance explainability in software defect prediction tasks while ensuring stability and readability of explanations. Extensive experiments on multiple software project datasets are conducted to evaluate the explanation quality of the proposed method. Comparisons with LIME, SHAP, and ANCHOR, as mainstream post-hoc explainability methods, further validate the superiority of the proposed approach.",
+      "year": 2025,
+      "authors": [
+        "Rui-Qi He",
+        "Yong Li",
+        "Chi Sun"
+      ],
+      "url": "https://doi.org/10.1109/QRS-C65679.2025.00058",
+      "venue": "IEEE International Conference on Software Quality, Reliability and Security Companion",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2308.09381": {
+      "paper_id": "arxiv:2308.09381",
+      "title": "On Gradient-like Explanation under a Black-box Setting: When Black-box Explanations Become as Good as White-box",
+      "abstract": "Attribution methods shed light on the explainability of data-driven approaches such as deep learning models by uncovering the most influential features in a to-be-explained decision. While determining feature attributions via gradients delivers promising results, the internal access required for acquiring gradients can be impractical under safety concerns, thus limiting the applicability of gradient-based approaches. In response to such limited flexibility, this paper presents \\methodAbr~(gradient-estimation-based explanation), an approach that produces gradient-like explanations through only query-level access. The proposed approach holds a set of fundamental properties for attribution methods, which are mathematically rigorously proved, ensuring the quality of its explanations. In addition to the theoretical analysis, with a focus on image data, the experimental results empirically demonstrate the superiority of the proposed method over state-of-the-art black-box methods and its competitive performance compared to methods with full access.",
+      "year": 2023,
+      "authors": [
+        "Yi Cai",
+        "Gerhard Wunder"
+      ],
+      "url": "https://arxiv.org/abs/2308.09381",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q09",
+  "area": "AI"
+}

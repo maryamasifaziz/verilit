@@ -1,0 +1,672 @@
+{
+  "question": "How are large language models used to find vulnerabilities in source code?",
+  "mode": "verilit",
+  "config": {
+    "verify": true,
+    "retriever": "semantic",
+    "papers_per_question": 5,
+    "max_sub_questions": 4,
+    "max_claims": 2,
+    "max_retries": 2,
+    "threshold": 0.7,
+    "evidence": "abstract",
+    "verifier_path": "/home/user/verilit/models/verifier"
+  },
+  "llm": {
+    "provider": "gemini",
+    "model": "gemini-3.5-flash-lite"
+  },
+  "sub_questions": [
+    {
+      "sq_id": "S1",
+      "question": "What techniques and methods do large language models use for automated vulnerability detection in source code?",
+      "search_query": "large language models vulnerability detection methods",
+      "paper_ids": [
+        "s2:df710b69e6143d5d57a1fcb4870f6fe2317a53f1",
+        "s2:5b241b0f9d70b84dbd2ae77cb6e405c245504814",
+        "s2:dc05563faf1897e4b91d2c50147542209dec0596",
+        "s2:03df9ea5e3768b749fea5b42a3e56d691294ca7c",
+        "arxiv:2401.15468"
+      ]
+    },
+    {
+      "sq_id": "S2",
+      "question": "Which benchmark datasets and evaluation metrics are commonly used to assess LLM-based vulnerability finders?",
+      "search_query": "source code vulnerability datasets benchmarks",
+      "paper_ids": [
+        "s2:b9596c8dd6a1a3be56df2fec9d4bbdce895ddb69",
+        "arxiv:2506.03651",
+        "s2:8404296da27a0a83ebb0ca07ea87ea7ec5777092",
+        "s2:76bc9d9f938788a035a10c97516b4c37ff9f4e5e",
+        "s2:68bc2da992a093ad5023b3c781554ff889cd007d"
+      ]
+    },
+    {
+      "sq_id": "S3",
+      "question": "What are the reported results, accuracy levels, and effectiveness of LLMs compared to traditional static analysis tools?",
+      "search_query": "llm vulnerability detection performance results",
+      "paper_ids": [
+        "arxiv:2606.21397",
+        "s2:7e8f442a1a8e7969bf943036c4870c4a1bdb9632",
+        "s2:e535bd62e0d1f9739fd4f1da6f0b7acc9633b715",
+        "s2:14b8597f9297d9a4bc50fb8eddcf4f3bc76e50f0",
+        "arxiv:2408.16400"
+      ]
+    },
+    {
+      "sq_id": "S4",
+      "question": "What are the primary limitations, challenges, and security risks associated with applying LLMs to software vulnerability discovery?",
+      "search_query": "limitations of llms in software security",
+      "paper_ids": [
+        "arxiv:2512.20062",
+        "arxiv:2312.05275",
+        "arxiv:2604.20211",
+        "arxiv:2603.10969",
+        "arxiv:2503.05012"
+      ]
+    }
+  ],
+  "claims": [
+    {
+      "id": "C1",
+      "sub_question": "S1",
+      "original": {
+        "text": "In source code vulnerability detection, large language models utilize prompt design, parameter fine-tuning, and program-context information to judge whether code contains vulnerabilities and provide suspicious locations.",
+        "paper_id": "s2:df710b69e6143d5d57a1fcb4870f6fe2317a53f1"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "In source code vulnerability detection, large language models utilize prompt design, parameter fine-tuning, and program-context information to judge whether code contains vulnerabilities and provide suspicious locations.",
+          "paper_id": "s2:df710b69e6143d5d57a1fcb4870f6fe2317a53f1",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9234,
+          "p_supported": 0.9234,
+          "accepted": true,
+          "alt_p_supported": 0.9251
+        }
+      ],
+      "final": {
+        "text": "In source code vulnerability detection, large language models utilize prompt design, parameter fine-tuning, and program-context information to judge whether code contains vulnerabilities and provide suspicious locations.",
+        "paper_id": "s2:df710b69e6143d5d57a1fcb4870f6fe2317a53f1",
+        "label": "SUPPORTED",
+        "confidence": 0.9234
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C2",
+      "sub_question": "S1",
+      "original": {
+        "text": "Context enhancement, program-analysis guidance, retrieval augmentation, specification-guided reasoning, and collaborative decision-making yield stable improvements in recall, F1 score, and explanatory utility for software vulnerability detection using large language models.",
+        "paper_id": "s2:dc05563faf1897e4b91d2c50147542209dec0596"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Context enhancement, program-analysis guidance, retrieval augmentation, specification-guided reasoning, and collaborative decision-making yield stable improvements in recall, F1 score, and explanatory utility for software vulnerability detection using large language models.",
+          "paper_id": "s2:dc05563faf1897e4b91d2c50147542209dec0596",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9371,
+          "p_supported": 0.9371,
+          "accepted": true,
+          "alt_p_supported": 0.9058
+        }
+      ],
+      "final": {
+        "text": "Context enhancement, program-analysis guidance, retrieval augmentation, specification-guided reasoning, and collaborative decision-making yield stable improvements in recall, F1 score, and explanatory utility for software vulnerability detection using large language models.",
+        "paper_id": "s2:dc05563faf1897e4b91d2c50147542209dec0596",
+        "label": "SUPPORTED",
+        "confidence": 0.9371
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C3",
+      "sub_question": "S2",
+      "original": {
+        "text": "One study utilizes the MegaVul benchmark to evaluate an LLM-powered framework for constructing reliable vulnerability datasets.",
+        "paper_id": "arxiv:2506.03651"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study utilizes the MegaVul benchmark to evaluate an LLM-powered framework for constructing reliable vulnerability datasets.",
+          "paper_id": "arxiv:2506.03651",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.8992,
+          "p_supported": 0.8992,
+          "accepted": true,
+          "alt_p_supported": 0.8507
+        }
+      ],
+      "final": {
+        "text": "One study utilizes the MegaVul benchmark to evaluate an LLM-powered framework for constructing reliable vulnerability datasets.",
+        "paper_id": "arxiv:2506.03651",
+        "label": "SUPPORTED",
+        "confidence": 0.8992
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C4",
+      "sub_question": "S2",
+      "original": {
+        "text": "One study evaluates source code vulnerability identification models using the Software Assurance Reference Dataset (SARD) and the National Vulnerability Database (NVD) with metrics including accuracy, precision, recall, and F1-score.",
+        "paper_id": "s2:76bc9d9f938788a035a10c97516b4c37ff9f4e5e"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study evaluates source code vulnerability identification models using the Software Assurance Reference Dataset (SARD) and the National Vulnerability Database (NVD) with metrics including accuracy, precision, recall, and F1-score.",
+          "paper_id": "s2:76bc9d9f938788a035a10c97516b4c37ff9f4e5e",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9216,
+          "p_supported": 0.9216,
+          "accepted": true,
+          "alt_p_supported": 0.8749
+        }
+      ],
+      "final": {
+        "text": "One study evaluates source code vulnerability identification models using the Software Assurance Reference Dataset (SARD) and the National Vulnerability Database (NVD) with metrics including accuracy, precision, recall, and F1-score.",
+        "paper_id": "s2:76bc9d9f938788a035a10c97516b4c37ff9f4e5e",
+        "label": "SUPPORTED",
+        "confidence": 0.9216
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C5",
+      "sub_question": "S3",
+      "original": {
+        "text": "One study found a significant performance gap between LLMs and popular static analysis tools in detecting software vulnerabilities, primarily due to the high false positive rates of LLMs.",
+        "paper_id": "s2:7e8f442a1a8e7969bf943036c4870c4a1bdb9632"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "One study found a significant performance gap between LLMs and popular static analysis tools in detecting software vulnerabilities, primarily due to the high false positive rates of LLMs.",
+          "paper_id": "s2:7e8f442a1a8e7969bf943036c4870c4a1bdb9632",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9313,
+          "p_supported": 0.9313,
+          "accepted": true,
+          "alt_p_supported": 0.8947
+        }
+      ],
+      "final": {
+        "text": "One study found a significant performance gap between LLMs and popular static analysis tools in detecting software vulnerabilities, primarily due to the high false positive rates of LLMs.",
+        "paper_id": "s2:7e8f442a1a8e7969bf943036c4870c4a1bdb9632",
+        "label": "SUPPORTED",
+        "confidence": 0.9313
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C6",
+      "sub_question": "S3",
+      "original": {
+        "text": "The proposed LLM-VDM model attained 91.2% accuracy, 90.0% F1-score, and 0.94 AUC, demonstrating superiority over baseline and deep learning competitors including SonarQube, Devign, CodeBERT, and CodeT5.",
+        "paper_id": "s2:e535bd62e0d1f9739fd4f1da6f0b7acc9633b715"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "The proposed LLM-VDM model attained 91.2% accuracy, 90.0% F1-score, and 0.94 AUC, demonstrating superiority over baseline and deep learning competitors including SonarQube, Devign, CodeBERT, and CodeT5.",
+          "paper_id": "s2:e535bd62e0d1f9739fd4f1da6f0b7acc9633b715",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9533,
+          "p_supported": 0.9533,
+          "accepted": true,
+          "alt_p_supported": 0.9277
+        }
+      ],
+      "final": {
+        "text": "The proposed LLM-VDM model attained 91.2% accuracy, 90.0% F1-score, and 0.94 AUC, demonstrating superiority over baseline and deep learning competitors including SonarQube, Devign, CodeBERT, and CodeT5.",
+        "paper_id": "s2:e535bd62e0d1f9739fd4f1da6f0b7acc9633b715",
+        "label": "SUPPORTED",
+        "confidence": 0.9533
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C7",
+      "sub_question": "S4",
+      "original": {
+        "text": "Current approaches using LLMs to automate vulnerability analysis rely heavily on online API-based services, requiring users to disclose source code during development.",
+        "paper_id": "arxiv:2512.20062"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "Current approaches using LLMs to automate vulnerability analysis rely heavily on online API-based services, requiring users to disclose source code during development.",
+          "paper_id": "arxiv:2512.20062",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9484,
+          "p_supported": 0.9484,
+          "accepted": true,
+          "alt_p_supported": 0.9277
+        }
+      ],
+      "final": {
+        "text": "Current approaches using LLMs to automate vulnerability analysis rely heavily on online API-based services, requiring users to disclose source code during development.",
+        "paper_id": "arxiv:2512.20062",
+        "label": "SUPPORTED",
+        "confidence": 0.9484
+      },
+      "status": "verified"
+    },
+    {
+      "id": "C8",
+      "sub_question": "S4",
+      "original": {
+        "text": "ChatGPT exhibits a constrained ability to process long code contexts in security-related tasks.",
+        "paper_id": "arxiv:2312.05275"
+      },
+      "attempts": [
+        {
+          "action": "initial",
+          "text": "ChatGPT exhibits a constrained ability to process long code contexts in security-related tasks.",
+          "paper_id": "arxiv:2312.05275",
+          "label": "SUPPORTED",
+          "raw_label": "SUPPORTED",
+          "confidence": 0.9066,
+          "p_supported": 0.9066,
+          "accepted": true,
+          "alt_p_supported": 0.9136
+        }
+      ],
+      "final": {
+        "text": "ChatGPT exhibits a constrained ability to process long code contexts in security-related tasks.",
+        "paper_id": "arxiv:2312.05275",
+        "label": "SUPPORTED",
+        "confidence": 0.9066
+      },
+      "status": "verified"
+    }
+  ],
+  "references": [
+    {
+      "n": 1,
+      "paper_id": "s2:df710b69e6143d5d57a1fcb4870f6fe2317a53f1",
+      "citation": "Le Qin (2026). A Review of Source Code Vulnerability Detection Methods Based on Large Language Models: Models, Techniques, and Evaluation. Computers and artificial intelligence. https://doi.org/10.70267/cai.v3n5.122137"
+    },
+    {
+      "n": 2,
+      "paper_id": "s2:dc05563faf1897e4b91d2c50147542209dec0596",
+      "citation": "Canpeng Li, Yanghui Tan, Jie Zheng (2026). Large Language Models for Software Vulnerability Detection: A Survey of Methods, Evaluation, and Future Trends. 2026 International Conference on Generative Artificial Intelligence and Information Security (GAIIS). https://doi.org/10.1109/GAIIS69281.2026.11519183"
+    },
+    {
+      "n": 3,
+      "paper_id": "arxiv:2506.03651",
+      "citation": "Zeyu Gao, Junlin Zhou, Bolun Zhang et al. (2025). Mono: Is Your \"Clean\" Vulnerability Dataset Really Solvable? Exposing and Trapping Undecidable Patches and Beyond. arXiv. https://arxiv.org/abs/2506.03651"
+    },
+    {
+      "n": 4,
+      "paper_id": "s2:76bc9d9f938788a035a10c97516b4c37ff9f4e5e",
+      "citation": "Utoda Reuben, Innocent Okpong Tom, Jerry Ogar (2026). Source code vulnerability identification using machine learning models. World Journal of Advanced Research and Reviews. https://doi.org/10.30574/wjarr.2026.30.3.1713"
+    },
+    {
+      "n": 5,
+      "paper_id": "s2:7e8f442a1a8e7969bf943036c4870c4a1bdb9632",
+      "citation": "Moumita Das Purba, A. Ghosh, Benjamin J. Radford et al. (2023). Software Vulnerability Detection using Large Language Models. 2023 IEEE 34th International Symposium on Software Reliability Engineering Workshops (ISSREW). https://doi.org/10.1109/ISSREW60843.2023.00058"
+    },
+    {
+      "n": 6,
+      "paper_id": "s2:e535bd62e0d1f9739fd4f1da6f0b7acc9633b715",
+      "citation": "Mohsin Sami, Kashif Nasr, S. Gillani et al. (2025). Improving Software Security Through an LLM-Based Vulnerability Detection Model. International Journal of Innovative Science & Technology. https://doi.org/10.33411/ijist/1623"
+    },
+    {
+      "n": 7,
+      "paper_id": "arxiv:2512.20062",
+      "citation": "Sangryu Park, Gihyuk Ko, Homook Cho (2025). On the Effectiveness of Instruction-Tuning Local LLMs for Identifying Software Vulnerabilities. arXiv. https://arxiv.org/abs/2512.20062"
+    },
+    {
+      "n": 8,
+      "paper_id": "arxiv:2312.05275",
+      "citation": "Fangzhou Wu, Qingzhao Zhang, Ati Priya Bajaj et al. (2023). Exploring the Limits of ChatGPT in Software Security Applications. arXiv. https://arxiv.org/abs/2312.05275"
+    }
+  ],
+  "evidence_gaps": [],
+  "review": "Large language models (LLMs) are utilized for automated vulnerability detection in source code by employing prompt design, parameter fine-tuning, and program-context information to determine whether code contains vulnerabilities and to highlight suspicious locations [1]. To improve recall, F1 score, and explanatory utility, methods such as context enhancement, program-analysis guidance, retrieval augmentation, specification-guided reasoning, and collaborative decision-making are applied [2]. \n\nTo assess these models, benchmark datasets and evaluation metrics are necessary. Evaluations leverage frameworks built with benchmarks like MegaVul [3], as well as the Software Assurance Reference Dataset (SARD) and the National Vulnerability Database (NVD), utilizing metrics including accuracy, precision, recall, and F1-score [4]. \n\nMixed results have been reported regarding the effectiveness of LLMs compared to traditional tools. While one study highlights a significant performance gap between LLMs and popular static analysis tools due to high false positive rates in LLMs [5], another study demonstrates that the proposed LLM-VDM model achieved 91.2% accuracy, a 90.0% F1-score, and a 0.94 AUC, outperforming baseline and deep learning competitors such as SonarQube, Devign, CodeBERT, and CodeT5 [6]. \n\nDespite these advancements, applying LLMs to software vulnerability discovery presents primary limitations, challenges, and security risks. Current approaches rely heavily on online API-based services, which requires users to disclose their source code during development [7]. Additionally, ChatGPT exhibits a constrained ability to process long code contexts when performing security-related tasks [8].",
+  "stats": {
+    "claims": 8,
+    "verified": 8,
+    "unverified": 0,
+    "unchecked": 0,
+    "verified_first_try": 8,
+    "claims_retried": 0,
+    "retry_successes": 0,
+    "total_retries": 0,
+    "sub_questions_covered": 4,
+    "sub_questions": 4,
+    "invalid_citations_in_review": [],
+    "llm_requests": 5,
+    "llm_cache_hits": 1,
+    "search_requests": {
+      "s2": 13,
+      "arxiv": 0
+    },
+    "seconds": 107.9
+  },
+  "papers": {
+    "s2:df710b69e6143d5d57a1fcb4870f6fe2317a53f1": {
+      "paper_id": "s2:df710b69e6143d5d57a1fcb4870f6fe2317a53f1",
+      "title": "A Review of Source Code Vulnerability Detection Methods Based on Large Language Models: Models, Techniques, and Evaluation",
+      "abstract": "In source code vulnerability detection, large language models (LLMs) are no longer used only as substitutes for traditional fixed classifiers. With prompt design, parameter fine-tuning, and program-context information, they can judge whether code contains vulnerabilities and can also provide suspicious locations and explanatory evidence. This paper takes lightweight code Transformers and large-scale language models as two main lines of discussion. It reviews methods for input construction, task adaptation, the use of program-analysis information, and multi-model collaboration, and compares them in terms of datasets, evaluation metrics, and deployment conditions. Existing studies show that code pretraining, prompt engineering, supervised fine-tuning, and structural-information enhancement can improve detection or explanation results on specific benchmarks. However, such improvements are easily affected by duplicate samples, label noise, random splits, temporal leakage, and changes in model versions, which may lead to overestimated performance. Therefore, model evaluation should not rely on a single metric alone. It should also report the data source, detection granularity, temporal or project-level isolation, false-positive cost, and whether generated explanations can be verified by program evidence. On this basis, this paper further discusses an application approach centered on data governance, strict data splitting, uncertainty calibration, and SAST-LLM-human collaboration. The discussion is limited to source-code-level vulnerability detection, localization, and classification, and does not cover network intrusion detection, malware analysis, smart-contract-specific detection, vulnerability generation, or automatic repair.",
+      "year": 2026,
+      "authors": [
+        "Le Qin"
+      ],
+      "url": "https://doi.org/10.70267/cai.v3n5.122137",
+      "venue": "Computers and artificial intelligence",
+      "source": "semantic_scholar"
+    },
+    "s2:5b241b0f9d70b84dbd2ae77cb6e405c245504814": {
+      "paper_id": "s2:5b241b0f9d70b84dbd2ae77cb6e405c245504814",
+      "title": "Analysis of software code preprocessing methods to improve the effectiveness of using large language models in vulnerability detection tasks",
+      "abstract": "As software systems grow in scale and complexity, the need for intelligent methods of vulnerability detection increases. One such method involves the use of large language models trained on source code, which are capable of analyzing and classifying vulnerable code segments at early stages of development. The effectiveness of these models depends on how the code is represented and how the input data is prepared. Preprocessing methods can significantly impact the accuracy and robustness of the model. The purpose of the study: to analyze the impact of various code preprocessing methods on the accuracy and robustness of large language models (CodeBERT, GraphCodeBERT, UniXcoder) in vulnerability detection tasks. The analysis is conducted using source code changes extracted from commits associated with vulnerabilities documented in the CVE database. The research methodology is an experimental analysis based on evaluation of the effectiveness and robustness of CodeBERT, GraphCodeBERT, and UniXcoder in the task of vulnerability classification. The models are assessed based on their performance using Accuracy and F1 score metrics. Research results: estimates of the effectiveness of different code preprocessing methods when applying large language models to vulnerability classification tasks.",
+      "year": 2025,
+      "authors": [
+        "Valery V. Charugin",
+        "Valentin V. Charugin",
+        "A. Stavtsev",
+        "A. Chesalin"
+      ],
+      "url": "https://doi.org/10.33693/2313-223x-2025-12-3-67-79",
+      "venue": "Computational nanotechnology",
+      "source": "semantic_scholar"
+    },
+    "s2:dc05563faf1897e4b91d2c50147542209dec0596": {
+      "paper_id": "s2:dc05563faf1897e4b91d2c50147542209dec0596",
+      "title": "Large Language Models for Software Vulnerability Detection: A Survey of Methods, Evaluation, and Future Trends",
+      "abstract": "Large language models (LLMs) have recently achieved rapid progress and are being increasingly adopted across a wide range of software engineering tasks. Owing to their strong capabilities in code understanding, natural-language alignment, and generative reasoning, they have emerged as a promising development for software vulnerability detection. Based on the current research landscape and 32 representative studies, this article mainly elaborates from four perspectives: research evolution, methodological design, evaluation practice, and future directions, aiming to advance technological innovation and deliver forward-looking insights. Existing evidence suggests that direct prompting enables fast transfer to vulnerability detection, but its effectiveness remains constrained by benchmark quality, insufficient context, prompt sensitivity, and limited robustness. In contrast, context enhancement, program-analysis guidance, retrieval augmentation, specification-guided reasoning, and collaborative decision-making generally yield more stable improvements in recall, F1 score, and explanatory utility. Overall, the development of software vulnerability detection in the next stage is unlikely to be driven by model scaling alone. Instead, it will depend on the integration of high-quality datasets, structured program evidence, explicit security constraints, and verifiable reasoning pipelines.",
+      "year": 2026,
+      "authors": [
+        "Canpeng Li",
+        "Yanghui Tan",
+        "Jie Zheng"
+      ],
+      "url": "https://doi.org/10.1109/GAIIS69281.2026.11519183",
+      "venue": "2026 International Conference on Generative Artificial Intelligence and Information Security (GAIIS)",
+      "source": "semantic_scholar"
+    },
+    "s2:03df9ea5e3768b749fea5b42a3e56d691294ca7c": {
+      "paper_id": "s2:03df9ea5e3768b749fea5b42a3e56d691294ca7c",
+      "title": "A Preliminary Study of Large Language Models for Multilingual Vulnerability Detection",
+      "abstract": "Deep learning-based approaches, particularly those leveraging pre-trained language models (PLMs), have shown promise in automated software vulnerability detection. However, existing methods are predominantly limited to specific programming languages, restricting their applicability in multilingual settings. Recent advancements in large language models (LLMs) offer language-agnostic capabilities and enhanced semantic understanding, presenting a potential solution to this limitation. While existing studies have explored LLMs for vulnerability detection, their detection performance remains unknown for multilingual vulnerabilities. To address this gap, we conducted a preliminary study to evaluate the effectiveness of PLMs and state-of-the-art LLMs across seven popular programming languages. Our findings reveal that the PLM CodeT5P achieves the best performance in multilingual vulnerability detection, particularly in identifying the most critical vulnerabilities. Based on these results, we further discuss the potential of LLMs in advancing real-world multilingual vulnerability detection. This work represents an initial step toward exploring PLMs and LLMs for cross-language vulnerability detection, offering key insights for future research and practical deployment.",
+      "year": 2025,
+      "authors": [
+        "Jun-Ji Yu",
+        "Hong-Lin Shu",
+        "Michael Fu",
+        "Dong Wang",
+        "C. Tantithamthavorn",
+        "Y. Kamei",
+        "Jun-Jie Chen"
+      ],
+      "url": "https://doi.org/10.1145/3713081.3731746",
+      "venue": "ISSTA Companion",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2401.15468": {
+      "paper_id": "arxiv:2401.15468",
+      "title": "Large Language Model for Vulnerability Detection: Emerging Results and Future Directions",
+      "abstract": "Previous learning-based vulnerability detection methods relied on either medium-sized pre-trained models or smaller neural networks from scratch. Recent advancements in Large Pre-Trained Language Models (LLMs) have showcased remarkable few-shot learning capabilities in various tasks. However, the effectiveness of LLMs in detecting software vulnerabilities is largely unexplored. This paper aims to bridge this gap by exploring how LLMs perform with various prompts, particularly focusing on two state-of-the-art LLMs: GPT-3.5 and GPT-4. Our experimental results showed that GPT-3.5 achieves competitive performance with the prior state-of-the-art vulnerability detection approach and GPT-4 consistently outperformed the state-of-the-art.",
+      "year": 2024,
+      "authors": [
+        "Xin Zhou",
+        "Ting Zhang",
+        "David Lo"
+      ],
+      "url": "https://arxiv.org/abs/2401.15468",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:b9596c8dd6a1a3be56df2fec9d4bbdce895ddb69": {
+      "paper_id": "s2:b9596c8dd6a1a3be56df2fec9d4bbdce895ddb69",
+      "title": "Quantifying Memorization Advantage in Code LLMs",
+      "abstract": "The lack of transparency regarding the code datasets used during LLM training creates substantial challenges in detecting, evaluating, and mitigating data leakage. This paper applies a perturbation-based approach to quantify the “memorization advantage” of LLMs across various coding tasks by measuring the performance gap between a model’s handling of data it has likely encountered during training versus novel inputs. Our comprehensive analysis examines 8 open-source code LLMs across 19 benchmark datasets spanning four distinct categories: standard code generation, code understanding, security vulnerability detection, and bug identification. The results reveal significant variations in sensitivity patterns, with models like StarCoder exhibiting substantially higher sensitivity scores (up to 0.8) on certain benchmarks like APPS compared to models like QwenCoder, which maintained consistently lower values (< 0.4) across most benchmarks, suggesting fundamental differences in their generalization process and their learned knowledge. Different task categories also showed distinct patterns, with code summarization demonstrating low sensitivity (< 0.3) and test generation tasks exhibiting significantly higher values (0.4-0.7, p < 0.001). Interestingly, our analysis of the widely-used CVEFixes and Defects4J benchmarks, frequently suspected of data leakage in the research community, reveals unexpectedly low memorization advantage scores across all models. Defects4J demonstrated significantly lower sensitivity (0.2-0.4, p < 0.01) compared to other program repair benchmarks (0.5-0.8), while CVEFixes showed consistently low values below 0.1. These findings challenge prevailing concerns about these datasets’ validity for evaluating code LLMs and suggest that models may be effectively generalizing from this data rather than merely memorizing it. Our findings provide critical insights into the generalization capabilities of code LLMs and emphasize the need for more robust evaluation frameworks, particularly in security-related domains where the widest range of sensitivity distributions (from < 0.1 to > 0.8) indicates variable generalization challenges.",
+      "year": 2026,
+      "authors": [
+        "Albérick Euraste Djiré",
+        "A. Kaboré",
+        "Jordan Samhi",
+        "E. Barr",
+        "Jacques Klein",
+        "T. Bissyandé"
+      ],
+      "url": "https://doi.org/10.1145/3744916.3764554",
+      "venue": "Proceedings of the 2026 IEEE/ACM 48th International Conference on Software Engineering",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2506.03651": {
+      "paper_id": "arxiv:2506.03651",
+      "title": "Mono: Is Your \"Clean\" Vulnerability Dataset Really Solvable? Exposing and Trapping Undecidable Patches and Beyond",
+      "abstract": "The quantity and quality of vulnerability datasets are essential for developing deep learning solutions to vulnerability-related tasks. Due to the limited availability of vulnerabilities, a common approach to building such datasets is analyzing security patches in source code. However, existing security patches often suffer from inaccurate labels, insufficient contextual information, and undecidable patches that fail to clearly represent the root causes of vulnerabilities or their fixes. These issues introduce noise into the dataset, which can mislead detection models and undermine their effectiveness. To address these issues, we present mono, a novel LLM-powered framework that simulates human experts' reasoning process to construct reliable vulnerability datasets. mono introduces three key components to improve security patch datasets: (i) semantic-aware patch classification for precise vulnerability labeling, (ii) iterative contextual analysis for comprehensive code understanding, and (iii) systematic root cause analysis to identify and filter undecidable patches. Our comprehensive evaluation on the MegaVul benchmark demonstrates that mono can correct 31.0% of labeling errors, recover 89% of inter-procedural vulnerabilities, and reveals that 16.7% of CVEs contain undecidable patches. Furthermore, mono's enriched context representation improves existing models' vulnerability detection accuracy by 15%. We open source the framework mono and the dataset MonoLens in https://github.com/vul337/mono.",
+      "year": 2025,
+      "authors": [
+        "Zeyu Gao",
+        "Junlin Zhou",
+        "Bolun Zhang",
+        "Yi He",
+        "Chao Zhang",
+        "Yuxin Cui",
+        "Hao Wang"
+      ],
+      "url": "https://arxiv.org/abs/2506.03651",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:8404296da27a0a83ebb0ca07ea87ea7ec5777092": {
+      "paper_id": "s2:8404296da27a0a83ebb0ca07ea87ea7ec5777092",
+      "title": "Llama-Based Source Code Vulnerability Detection: Prompt Engineering vs Fine Tuning",
+      "abstract": "The significant increase in software production, driven by the acceleration of development cycles over the past two decades, has led to a steady rise in software vulnerabilities, as shown by statistics published yearly by the CVE program. The automation of the source code vulnerability detection (CVD) process has thus become essential, and several methods have been proposed ranging from the well established program analysis techniques to the more recent AI-based methods. Our research investigates Large Language Models (LLMs), which are considered among the most performant AI models to date, for the CVD task. The objective is to study their performance and apply different state-of-the-art techniques to enhance their effectiveness for this task. We explore various fine-tuning and prompt engineering settings. We particularly suggest one novel approach for fine-tuning LLMs which we call Double Fine-tuning, and also test the understudied Test-Time fine-tuning approach. We leverage the recent open-source Llama-3.1 8B, with source code samples extracted from BigVul and PrimeVul datasets. Our conclusions highlight the importance of fine-tuning to resolve the task, the performance of Double tuning, as well as the potential of Llama models for CVD. Though prompting proved ineffective, Retrieval augmented generation (RAG) performed relatively well as an example selection technique. Overall, some of our research questions have been answered, and many are still on hold, which leaves us many future work perspectives. Code repository is available here: https://github.com/DynaSoumhaneOuchebara/Llama-based-vulnerability-detection.",
+      "year": 2025,
+      "authors": [
+        "Dyna Soumhane Ouchebara",
+        "Stéphane Dupont"
+      ],
+      "url": "https://doi.org/10.1007/978-3-032-07884-1_15",
+      "venue": "European Symposium on Research in Computer Security",
+      "source": "semantic_scholar"
+    },
+    "s2:76bc9d9f938788a035a10c97516b4c37ff9f4e5e": {
+      "paper_id": "s2:76bc9d9f938788a035a10c97516b4c37ff9f4e5e",
+      "title": "Source code vulnerability identification using machine learning models",
+      "abstract": "Software vulnerabilities remain a major challenge in modern software development, frequently leading to security breaches, unauthorized access, service disruption, and financial losses. Although traditional vulnerability detection methods such as static and dynamic analysis are widely used, they often generate excessive false positives and struggle to capture complex patterns within source code. Recent advances in machine learning provide an opportunity to improve vulnerability detection by automatically learning relationships that are difficult to identify using rule-based approaches. This study presents a machine learning framework for automated source code vulnerability identification using benchmark datasets obtained from the Software Assurance Reference Dataset (SARD) and the National Vulnerability Database (NVD). The framework includes source code preprocessing, feature extraction, model training, hyperparameter optimization, and performance evaluation. Four models Decision Tree, Random Forest, Support Vector Machine, and Long Short-Term Memory (LSTM) were implemented and evaluated using accuracy, precision, recall, and F1-score. Experimental results show that LSTM achieved the best overall performance with an accuracy of 93.4%, followed by Random Forest at 91.2%. These findings indicate that models capable of learning contextual and sequential information are particularly effective for vulnerability detection. The proposed framework demonstrates how machine learning can support secure software development by reducing manual analysis effort and enabling scalable vulnerability assessment. Its potential application extends to continuous security monitoring and integration within modern software development pipelines.",
+      "year": 2026,
+      "authors": [
+        "Utoda Reuben",
+        "Innocent Okpong Tom",
+        "Jerry Ogar"
+      ],
+      "url": "https://doi.org/10.30574/wjarr.2026.30.3.1713",
+      "venue": "World Journal of Advanced Research and Reviews",
+      "source": "semantic_scholar"
+    },
+    "s2:68bc2da992a093ad5023b3c781554ff889cd007d": {
+      "paper_id": "s2:68bc2da992a093ad5023b3c781554ff889cd007d",
+      "title": "Source code vulnerability detection based on deep learning: a review",
+      "abstract": "Source code vulnerability detection is a crucial aspect of software security development, and the current use of Large Language Models (LLMs) accelerates not only software development but also the generation and propagation of code vulnerabilities. Traditional code vulnerability detection techniques have limited detection efficiency and accuracy. Deep learning techniques have recently gained distinct advantages in multidimensional feature extraction and large-scale data processing, and their application in code vulnerability detection is evolving from simple classification to multimodal approaches. This paper primarily systematizes and summarises deep learning-based source code vulnerability detection, as well as analyzes and anticipates current challenges and future research directions in this area. The distinction between this review and the preceding reviews: This study investigates the literature of the last four years; Not only does it contain datasets, but also includes model-related research and an analysis of multiple different application scenarios. It’s more current and comprehensive than most previous reviews of this type.",
+      "year": 2026,
+      "authors": [
+        "Hua-Ding Su",
+        "Zhen Xu",
+        "Yan Zhang",
+        "Qian Tan"
+      ],
+      "url": "https://doi.org/10.1186/s42400-025-00518-7",
+      "venue": "Cybersecurity",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2606.21397": {
+      "paper_id": "arxiv:2606.21397",
+      "title": "Evaluating LLMs for Real-World Web Vulnerability Detection",
+      "abstract": "Large Language Models (LLMs) have emerged as a promising tool for automated vulnerability detection, yet their effectiveness on web-specific vulnerabilities remains to be explored. This work benchmarks six frontier (Claude Opus 4.6, Codex GPT-5.4, Gemini 3.1-pro-preview) and open-weight models (Qwen 3.5, Qwen 3 Coder Next, MiniMax M2.5) on their ability to detect real-world web vulnerabilities using static analysis in WordPress plugins, including SQL injection, stored cross-site scripting, path traversal, and remote code execution. Using five prompt designs of varying structure, scope, and complexity across three experiment iterations, we aim to answer how model and prompt choice affects vulnerability detection. Our results show that all models are capable of detecting valid security issues, but the detection rate varies depending on the model and prompt. For example, Claude Opus 4.6 achieved the highest web vulnerability detection rate (63%), while open-weight MiniMax M2.5 performs on par with other frontier models (48%), and self-hosted Qwen 3.5 only achieved 35%. We show that scoped prompts that narrow the vulnerability scope outperform open-ended ones, whereas the prompt complexity has little impact. Surprisingly, no model achieved full reporting consistency across three experiment iterations, with some as low as 50%. Our experiments demonstrate the opportunities and limits of LLM-based vulnerability detection, as no model correctly identified one baseline vulnerability in one of the plugins. Additionally, we derive practical lessons learned for security practitioners and publish all code and data to support future research.",
+      "year": 2026,
+      "authors": [
+        "Sebastian Neef",
+        "Luca Jungnickel",
+        "Antonio Benjamin Buchholz",
+        "Valene Spence",
+        "Vicente Birke Gonzalez"
+      ],
+      "url": "https://arxiv.org/abs/2606.21397",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "s2:7e8f442a1a8e7969bf943036c4870c4a1bdb9632": {
+      "paper_id": "s2:7e8f442a1a8e7969bf943036c4870c4a1bdb9632",
+      "title": "Software Vulnerability Detection using Large Language Models",
+      "abstract": "Software development is among the first demonstrations of using Large Language Models (LLMs) to enhance human productivity. Such a co-pilot paradigm envisions LLM working side-by-side with human developers to assist in programming tasks. Ensuring the security of software products is a critical factor for the success of such a paradigm. There have been various anecdotal reports on the success of using LLMs to detect vulnerabilities in programs. This paper reports a set of experiments applying four well-known LLMs to two widely referenced public datasets to evaluate the performance of LLMs in detecting software vulnerabilities. Our results show a significant performance gap between these LLMs and those from popular static analysis tools, primarily due to their high false positive rates. However, LLMs show great promise in identifying subtle patterns commonly associated with software vulnerabilities. This observation suggests a possible path forward by combining LLMs and other program analysis techniques to achieve better software vulnerability detection.",
+      "year": 2023,
+      "authors": [
+        "Moumita Das Purba",
+        "A. Ghosh",
+        "Benjamin J. Radford",
+        "Bill Chu"
+      ],
+      "url": "https://doi.org/10.1109/ISSREW60843.2023.00058",
+      "venue": "2023 IEEE 34th International Symposium on Software Reliability Engineering Workshops (ISSREW)",
+      "source": "semantic_scholar"
+    },
+    "s2:e535bd62e0d1f9739fd4f1da6f0b7acc9633b715": {
+      "paper_id": "s2:e535bd62e0d1f9739fd4f1da6f0b7acc9633b715",
+      "title": "Improving Software Security Through an LLM-Based Vulnerability Detection Model",
+      "abstract": "The risks to modern digital infrastructures posed by software vulnerabilities are critical and include data breaches, unauthorized access, and losses in revenue. Although traditional static and dynamic analysis tools are effective in discovering vulnerability patterns, they are not able to recognize complex, context-dependent, logic-based, and security-embedded flaws that evolve within software systems. This research offers a Large Language Model-based Vulnerability Detection Model (LLM-VDM) focused on enhancing software security with intelligent, context-aware code analysis. Leveraging transformer-based architecture adapted to the Juliet, Big-Vul, and Devign benchmark datasets to assess the performance and integration of code semantic and code contextualization methods, the proposed model was evaluated. Experimental results demonstrated LLM-VDM’s superiority to both baseline and deep learning competitors SonarQube, Devign, CodeBERT, and CodeT5, attaining 91.2% accuracy, 90.0% F1-score, and 0.94 AUC. Furthermore, the integrated explainability module improves explainability by pinpointing vulnerable code and outlining remediation strategies. The findings showed LLM-based technology provides software developers with more secure, adaptive, explainable, and scalable systems, meeting the needs of contemporary software development.",
+      "year": 2025,
+      "authors": [
+        "Mohsin Sami",
+        "Kashif Nasr",
+        "S. Gillani",
+        "R. Tehseen"
+      ],
+      "url": "https://doi.org/10.33411/ijist/1623",
+      "venue": "International Journal of Innovative Science & Technology",
+      "source": "semantic_scholar"
+    },
+    "s2:14b8597f9297d9a4bc50fb8eddcf4f3bc76e50f0": {
+      "paper_id": "s2:14b8597f9297d9a4bc50fb8eddcf4f3bc76e50f0",
+      "title": "Impact of Identifier Normalization on Vulnerability Detection Techniques",
+      "abstract": "This study examines the impact of identifier normalization on software vulnerability detection using three approaches: static application security testing (SAST), specialized machine learning (ML) models, and Large Language Models (LLM). Using the BigVul dataset of vulnerabilities in C/C++ projects, the research evaluates the performance of these methods under normalized (generalized variables / functions names) and their original conditions. SAST tools such as Flawfinder and CppCheck exhibit limited effectiveness (F1 ∼ scores 0.1) and are unaffected by normalization. Specialized ML models, such as LineVul, achieve high F1 scores on nonnormalized data (F1 ∼ 0.9) but suffer significant performance drops when tested on normalized inputs, highlighting their lack of generalizability. In contrast, LLMs such as Llama3, although underperforming in their pre-trained state, show substantial improvement after fine-tuning, achieving robust and consistent results across both normalized and non-normalized datasets. The findings suggest that while SAST tools are less effective, fine-tuned LLMs hold strong potential for scalable and generalized vulnerability detection. The study recommends further exploration of hybrid approaches that combine ML models, LLMs, and traditional tools to enhance accuracy and adaptability in diverse scenarios.",
+      "year": 2025,
+      "authors": [
+        "Torge Hinrichs",
+        "Tim Diercks",
+        "R. Scandariato"
+      ],
+      "url": "https://doi.org/10.1109/SANER-C66551.2025.00017",
+      "venue": "IEEE International Conference on Software Analysis, Evolution, and Reengineering",
+      "source": "semantic_scholar"
+    },
+    "arxiv:2408.16400": {
+      "paper_id": "arxiv:2408.16400",
+      "title": "Outside the Comfort Zone: Analysing LLM Capabilities in Software Vulnerability Detection",
+      "abstract": "The significant increase in software production driven by automation and faster development lifecycles has resulted in a corresponding surge in software vulnerabilities. In parallel, the evolving landscape of software vulnerability detection, highlighting the shift from traditional methods to machine learning and large language models (LLMs), provides massive opportunities at the cost of resource-demanding computations. This paper thoroughly analyses LLMs' capabilities in detecting vulnerabilities within source code by testing models beyond their usual applications to study their potential in cybersecurity tasks. We evaluate the performance of six open-source models that are specifically trained for vulnerability detection against six general-purpose LLMs, three of which were further fine-tuned on a dataset that we compiled. Our dataset, alongside five state-of-the-art benchmark datasets, were used to create a pipeline to leverage a binary classification task, namely classifying code into vulnerable and non-vulnerable. The findings highlight significant variations in classification accuracy across benchmarks, revealing the critical influence of fine-tuning in enhancing the detection capabilities of small LLMs over their larger counterparts, yet only in the specific scenarios in which they were trained. Further experiments and analysis also underscore the issues with current benchmark datasets, particularly around mislabeling and their impact on model training and performance, which raises concerns about the current state of practice. We also discuss the road ahead in the field suggesting strategies for improved model training and dataset curation.",
+      "year": 2024,
+      "authors": [
+        "Yuejun Guo",
+        "Constantinos Patsakis",
+        "Qiang Hu",
+        "Qiang Tang",
+        "Fran Casino"
+      ],
+      "url": "https://arxiv.org/abs/2408.16400",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2512.20062": {
+      "paper_id": "arxiv:2512.20062",
+      "title": "On the Effectiveness of Instruction-Tuning Local LLMs for Identifying Software Vulnerabilities",
+      "abstract": "Large Language Models (LLMs) show significant promise in automating software vulnerability analysis, a critical task given the impact of security failure of modern software systems. However, current approaches in using LLMs to automate vulnerability analysis mostly rely on using online API-based LLM services, requiring the user to disclose the source code in development. Moreover, they predominantly frame the task as a binary classification(vulnerable or not vulnerable), limiting potential practical utility. This paper addresses these limitations by reformulating the problem as Software Vulnerability Identification (SVI), where LLMs are asked to output the type of weakness in Common Weakness Enumeration (CWE) IDs rather than simply indicating the presence or absence of a vulnerability. We also tackle the reliance on large, API-based LLMs by demonstrating that instruction-tuning smaller, locally deployable LLMs can achieve superior identification performance. In our analysis, instruct-tuning a local LLM showed better overall performance and cost trade-off than online API-based LLMs. Our findings indicate that instruct-tuned local models represent a more effective, secure, and practical approach for leveraging LLMs in real-world vulnerability management workflows.",
+      "year": 2025,
+      "authors": [
+        "Sangryu Park",
+        "Gihyuk Ko",
+        "Homook Cho"
+      ],
+      "url": "https://arxiv.org/abs/2512.20062",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2312.05275": {
+      "paper_id": "arxiv:2312.05275",
+      "title": "Exploring the Limits of ChatGPT in Software Security Applications",
+      "abstract": "Large language models (LLMs) have undergone rapid evolution and achieved remarkable results in recent times. OpenAI's ChatGPT, backed by GPT-3.5 or GPT-4, has gained instant popularity due to its strong capability across a wide range of tasks, including natural language tasks, coding, mathematics, and engaging conversations. However, the impacts and limits of such LLMs in system security domain are less explored. In this paper, we delve into the limits of LLMs (i.e., ChatGPT) in seven software security applications including vulnerability detection/repair, debugging, debloating, decompilation, patching, root cause analysis, symbolic execution, and fuzzing. Our exploration reveals that ChatGPT not only excels at generating code, which is the conventional application of language models, but also demonstrates strong capability in understanding user-provided commands in natural languages, reasoning about control and data flows within programs, generating complex data structures, and even decompiling assembly code. Notably, GPT-4 showcases significant improvements over GPT-3.5 in most security tasks. Also, certain limitations of ChatGPT in security-related tasks are identified, such as its constrained ability to process long code contexts.",
+      "year": 2023,
+      "authors": [
+        "Fangzhou Wu",
+        "Qingzhao Zhang",
+        "Ati Priya Bajaj",
+        "Tiffany Bao",
+        "Ning Zhang",
+        "Ruoyu \"Fish\" Wang",
+        "Chaowei Xiao"
+      ],
+      "url": "https://arxiv.org/abs/2312.05275",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2604.20211": {
+      "paper_id": "arxiv:2604.20211",
+      "title": "Towards Secure Logging: Characterizing and Benchmarking Logging Code Security Issues with LLMs",
+      "abstract": "Logging code plays an important role in software systems by recording key events and behaviors, which are essential for debugging and monitoring. However, insecure logging practices can inadvertently expose sensitive information or enable attacks such as log injection, posing serious threats to system security and privacy. Prior research has examined general defects in logging code, but systematic analysis of logging code security issues remains limited, particularly in leveraging LLMs for detection and repair. In this paper, we derive a comprehensive taxonomy of logging code security issues, encompassing four common issue categories and 10 corresponding patterns. We further construct a benchmark dataset with 101 real-world logging security issue reports that have been manually reviewed and annotated. We then propose an automated framework that incorporates various contextual knowledge to evaluate LLMs' capabilities in detecting and repairing logging security issues. Our experimental results reveal a notable disparity in performance: while LLMs are moderately effective at detecting security issues (e.g., the accuracy ranges from 12.9% to 52.5% on average), they face noticeable challenges in reliably generating correct code repairs. We also find that the issue description alone improves the LLMs' detection accuracy more than the security pattern explanation or a combination of both. Overall, our findings provide actionable insights for practitioners and highlight the potential and limitations of current LLMs for secure logging.",
+      "year": 2026,
+      "authors": [
+        "He Yang Yuan",
+        "Xin Wang",
+        "Kundi Yao",
+        "An Ran Chen",
+        "Zishuo Ding",
+        "Zhenhao Li"
+      ],
+      "url": "https://arxiv.org/abs/2604.20211",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2603.10969": {
+      "paper_id": "arxiv:2603.10969",
+      "title": "TOSSS: a CVE-based Software Security Benchmark for Large Language Models",
+      "abstract": "With their increasing capabilities, Large Language Models (LLMs) are now used across many industries. They have become useful tools for software engineers and support a wide range of development tasks. As LLMs are increasingly used in software development workflows, a critical question arises: are LLMs good at software security? At the same time, organizations worldwide invest heavily in cybersecurity to reduce exposure to disruptive attacks. The integration of LLMs into software engineering workflows may introduce new vulnerabilities and weaken existing security efforts. We introduce TOSSS (Two-Option Secure Snippet Selection), a benchmark that measures the ability of LLMs to choose between secure and vulnerable code snippets. Existing security benchmarks for LLMs cover only a limited range of vulnerabilities. In contrast, TOSSS relies on the CVE database and provides an extensible framework that can integrate newly disclosed vulnerabilities over time. Our benchmark gives each model a security score between 0 and 1 based on its behavior; a score of 1 indicates that the model always selects the secure snippet, while a score of 0 indicates that it always selects the vulnerable one. We evaluate 14 widely used open-source and closed-source models on C/C++ and Java code and observe scores ranging from 0.48 to 0.89. LLM providers already publish many benchmark scores for their models, and TOSSS could become a complementary security-focused score to include in these reports.",
+      "year": 2026,
+      "authors": [
+        "Marc Damie",
+        "Murat Bilgehan Ertan",
+        "Domenico Essoussi",
+        "Angela Makhanu",
+        "Gaëtan Peter",
+        "Roos Wensveen"
+      ],
+      "url": "https://arxiv.org/abs/2603.10969",
+      "venue": "arXiv",
+      "source": "arxiv"
+    },
+    "arxiv:2503.05012": {
+      "paper_id": "arxiv:2503.05012",
+      "title": "LLMs' Reshaping of People, Processes, Products, and Society in Software Development: A Comprehensive Exploration with Early Adopters",
+      "abstract": "Large language models (LLMs) are rapidly reshaping software development, but their impact across the software development lifecycle is underexplored. Existing work focuses on isolated activities such as code generation or testing, leaving open questions about how LLMs affect developers, processes, products, and the software ecosystem. We address this gap through semi-structured interviews with sixteen early-adopter software professionals who integrated LLM-based tools into their day-to-day work in early to mid-2023. We treat these interviews as early empirical evidence and compare participants' accounts with recent work on LLMs in software engineering, noting which early patterns persist or shift. Using thematic analysis, we organize findings around four dimensions: people, process, product, and society. Developers reported substantial productivity gains from reducing routine tasks, streamlining search, and accelerating debugging, but also described a productivity-quality paradox: they often discarded generated code and shifted effort from writing to critically evaluating and integrating it. LLM use was highly phase-dependent, with strong uptake in implementation and debugging but limited influence on requirements gathering and other collaborative work. Participants developed new competencies to use LLMs effectively, including prompt engineering strategies, layered verification, and secure integration to protect proprietary data. They anticipated changes in hiring expectations, team practices, and computing education, while emphasizing that human judgment and foundational software engineering skills remain essential. Our findings, later echoed in large-scale quantitative studies, offer actionable implications for developers, organizations, educators, and tool designers seeking to integrate LLMs responsibly into software practice today.",
+      "year": 2025,
+      "authors": [
+        "Benyamin Tabarsi",
+        "Heidi Reichert",
+        "Sam Gilson",
+        "Ally Limke",
+        "Sandeep Kuttal",
+        "Tiffany Barnes"
+      ],
+      "url": "https://arxiv.org/abs/2503.05012",
+      "venue": "arXiv",
+      "source": "arxiv"
+    }
+  },
+  "question_id": "Q20",
+  "area": "Cybersecurity"
+}
