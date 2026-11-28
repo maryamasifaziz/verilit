@@ -1,0 +1,52 @@
+{
+  "items": 195,
+  "items_labeled": 195,
+  "agreement": {
+    "shared_rows": 30,
+    "labeled_by_both": 30,
+    "raw_agreement": 1.0,
+    "cohen_kappa": 1.0
+  },
+  "systems": {
+    "baseline": {
+      "presented_claims_labeled": 190,
+      "unsupported_claim_rate": 0.02631578947368421,
+      "contradicted_rate": 0.005263157894736842,
+      "citation_correctness": 0.9736842105263158,
+      "evidence_coverage": 1.0
+    },
+    "verilit": {
+      "presented_claims_labeled": 186,
+      "unsupported_claim_rate": 0.043010752688172046,
+      "contradicted_rate": 0.005376344086021506,
+      "citation_correctness": 0.956989247311828,
+      "evidence_coverage": 0.9895833333333334
+    }
+  },
+  "feedback_loop": {
+    "claims_retried": 9,
+    "retry_success_rate": 0.5555555555555556,
+    "retry_successes_confirmed_by_labels": 0.4,
+    "avg_retries_per_review": 0.6
+  },
+  "verifier_vs_humans": {
+    "n": 190,
+    "three_way_accuracy": 0.9263157894736842,
+    "three_way_macro_f1": 0.3205828779599271,
+    "accept_vs_supported_abstract": {
+      "n": 190,
+      "accuracy": 0.9263157894736842,
+      "precision": 0.9723756906077348,
+      "recall": 0.9513513513513514,
+      "f1": 0.9617486338797814
+    },
+    "accept_vs_supported_passages": {
+      "n": 190,
+      "accuracy": 0.9578947368421052,
+      "precision": 0.9732620320855615,
+      "recall": 0.9837837837837838,
+      "f1": 0.978494623655914
+    }
+  },
+  "threshold": 0.7
+}

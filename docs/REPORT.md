@@ -1,14 +1,12 @@
 # VeriLit: Self-Verifying Multi-Agent Research Assistant
 
-Project report · Maryam Asif (23k-0505), Nimra Ashraf (23k-0867) · Nov 27, 2026
-
-> Draft. Section 7 (full-system evaluation) is filled in once the hand labels are scored.
+Project report · Maryam Asif (23k-0505), Nimra Ashraf (23k-0867) · Nov 28, 2026
 
 ## Abstract
 
 LLM research assistants often state claims their cited papers do not support. VeriLit is a five-agent research assistant that checks every generated claim against the abstract of the paper it cites before the claim reaches the literature review. A Planner splits the question into sub-questions, a Retriever finds papers on Semantic Scholar and arXiv, a Claim Generator writes atomic claims with one citation each, a Verifier labels each claim Supported, Contradicted or Insufficient Evidence with a calibrated confidence, and a Synthesizer writes the review from verified claims only. Unsupported claims go through a feedback loop of re-retrieval or revision, up to two retries.
 
-The Verifier is a DeBERTa-v3-small NLI model fine-tuned on SciFact. On the SciFact dev split it raises macro-F1 from 0.431 (off the shelf) to 0.738, and temperature scaling lowers its expected calibration error from 0.161 to 0.062. For retrieval, semantic search finds 86.6% of gold evidence abstracts in the top 5, against 82.8% for BM25. The full system is compared with a no-verification baseline on 25 research questions across AI, ML, NLP and cybersecurity, with claims labeled by hand (results in Section 7).
+The Verifier is a DeBERTa-v3-small NLI model fine-tuned on SciFact. On the SciFact dev split it raises macro-F1 from 0.431 (off the shelf) to 0.738, and temperature scaling lowers its expected calibration error from 0.161 to 0.062. For retrieval, semantic search finds 86.6% of gold evidence abstracts in the top 5, against 82.8% for BM25. The full system is compared with a no-verification baseline on 25 research questions across AI, ML, NLP and cybersecurity, with 195 claims labeled by two annotators (Cohen's kappa 1.0 on 30 shared items). The generated claims were already faithful (97.4% supported), and verification did not reduce unsupported claims: VeriLit presented 4.3% unsupported against the baseline's 2.6%. The Verifier accepted all 5 unsupported claims, and its 9 false rejections sent supported claims into a feedback loop that moved 3 of them to papers that do not support them. We report this negative result and what it implies for verification stages.
 
 ## 1. Introduction
 
@@ -117,43 +115,53 @@ This is a harder test than VeriLit's real use: in the pipeline the ranker choose
 
 ## 7. Full-system evaluation
 
-*Results pending: this section is filled from `results/custom_eval.json` once both label sheets are complete and `python scripts/score_eval.py` has been run.*
-
-**Setup.** VeriLit and the no-verification baseline share the same LLM, papers and generated claims; the baseline presents every original claim, while VeriLit presents only the claims it verified, in their final form. The hand labels judge each presented claim against its cited abstract.
+**Setup.** VeriLit and the no-verification baseline share the same LLM, papers and generated claims; the baseline presents every original claim, while VeriLit presents only the claims it verified, in their final form. Each of the 25 questions produced 6 to 8 claims (190 in total). Two annotators labeled each claim against the abstract of its cited paper (Supported, Contradicted or Insufficient), plus the final form of the 5 claims the feedback loop changed, so 195 items; 30 items were labeled by both. Results are in `results/custom_eval.json`.
 
 | Metric | Definition | VeriLit | Baseline |
 | --- | --- | ---: | ---: |
-| Unsupported-claim rate | Share of presented claims labeled Contradicted or Insufficient | | |
-| Contradicted rate | Share of presented claims labeled Contradicted | | |
-| Citation correctness | Share of citations whose paper supports the claim (each claim cites one paper, so 1 − unsupported rate) | | |
-| Evidence coverage | Share of sub-questions with at least one presented claim labeled Supported, so dropping claims cannot score well | | |
+| Claims presented | | 186 | 190 |
+| Unsupported-claim rate | Share of presented claims labeled Contradicted or Insufficient | 4.3% (8) | 2.6% (5) |
+| Contradicted rate | Share of presented claims labeled Contradicted | 0.5% (1) | 0.5% (1) |
+| Citation correctness | Share of citations whose paper supports the claim (each claim cites one paper, so 1 − unsupported rate) | 95.7% | 97.4% |
+| Evidence coverage | Share of the 96 sub-questions with at least one presented claim labeled Supported, so dropping claims cannot score well | 99.0% | 100% |
 
-**Feedback loop.** Claims retried: —. Retry success rate (retried claims that end verified): —, of which confirmed by the hand labels: —. Average retries per review: —.
+**The main result is negative.** The generated claims were already faithful: 185 of the 190 original claims (97.4%) are Supported by their cited abstract. Verification did not lower the unsupported-claim rate; VeriLit presented 8 unsupported claims against the baseline's 5. The counts are small (a difference of 3 claims), so the honest reading is that verification made no measurable improvement on this test set, rather than that it made things worse. The reasons are in the two tables below.
 
-**Annotator agreement.** Raw agreement and Cohen's kappa on the 30 shared rows: —. Disagreements were settled by discussion before scoring; kappa is computed from the labels as first given.
+**The Verifier on AI-domain papers.** Agreement with the hand labels on the 190 original claims (threshold 0.7):
 
-**Verifier on AI-domain papers.** The Verifier's agreement with the hand labels on the original claims, against its SciFact dev results (Section 5):
+| Evidence | Precision (accepted → labeled Supported) | Recall (labeled Supported → accepted) | F1 | Unsupported claims caught |
+| --- | ---: | ---: | ---: | ---: |
+| Full abstract (used) | 0.972 | 0.951 | 0.962 | 0 of 5 |
+| Best passage | 0.973 | 0.984 | 0.978 | 0 of 5 |
 
-| Evidence | Precision (accepted → labeled Supported) | Recall (labeled Supported → accepted) | F1 |
-| --- | ---: | ---: | ---: |
-| Full abstract (used) | | | |
-| Best passage | | | |
+The Verifier made two kinds of error:
 
-**Examples.** One claim the feedback loop repaired and one it correctly rejected, with its verification trail from the demo.
+- **It missed every unsupported claim.** All 5 were accepted with P(Supported) between 0.88 and 0.95. They are subtle: each claim is close to its abstract and differs in one detail, such as dropping a condition ("when the conditional probability is Gaussian"), attributing a result to the wrong variant, naming a dataset the abstract does not name, or (the one Contradicted claim) calling a taxonomy of ante-hoc methods post-hoc. A sentence-pair NLI model trained on SciFact does not separate these from paraphrases.
+- **It rejected 9 Supported claims.** All 9 claims that entered the feedback loop were already supported by their first paper. Most were stated in long abstracts; one claim describing the SAFE factuality evaluator, taken almost word for word from its paper's abstract, scored 0.10. Passage scoring would have accepted 7 of these 9 (Section 5 found the same trade-off on SciFact).
 
-- Open question: does the baseline already produce few unsupported claims? In the pipeline runs the Verifier accepted almost every claim on the first try, so the labels will show whether that reflects faithful generation or a lenient Verifier.
+**Feedback loop.** 9 claims were retried (0.6 retries per question). 5 ended verified (55.6%), but the hand labels confirm only 2 of those 5 (40%):
+
+- **Revision worked twice.** For example, "Another study evaluates image classification performance using four benchmark datasets: MNIST, FashionMNIST, CIFAR10, and CIFAR100" scored 0.56; the revised claim names the method ("The SNNL-augmented Mixture-of-Experts approach is evaluated across four benchmark image classification datasets…") and scored 0.93, and both annotators agree it is Supported.
+- **Re-retrieval moved 3 claims to worse papers.** Each claim kept its text but was re-cited to a new paper that the Verifier scored highly (0.86 to 0.96) and the annotators did not. For example, "Chain-of-thought prompting … encourages a large language model to think step by step to improve performance on reasoning tasks" was moved from a paper on chain-of-thought prompting (0.49) to one on chain-of-thought optimization for ranking (0.94); the new abstract does not say chain-of-thought improves reasoning performance. These 3 claims account for VeriLit's extra unsupported claims.
+- **4 Supported claims were dropped** after two failed retries, which removed one sub-question's only supported claim (coverage 99.0%).
+
+**Annotator agreement.** The annotators agreed on all 30 shared items (raw agreement 1.000, Cohen's kappa 1.000), so no disagreements needed settling. Because 29 of the 30 were labeled Supported by both, this is weak evidence of agreement on the rare Insufficient and Contradicted labels; the shared sample contained only one such item.
+
+**What this means.** With a generator constrained to abstract-stated claims, unsupported claims are rare (2.6%) and subtle, and the fine-tuned Verifier is not precise enough to catch them: its errors fall on supported claims (false rejections), which the feedback loop then sometimes "repairs" into unsupported ones. Verification would need a much more precise Verifier to pay off here; Sections 8 and 10 discuss how.
 
 ## 8. Discussion and limitations
 
-The Verifier is the component VeriLit depends on most, and its main risk is domain shift: it is trained on biomedical claims and applied to AI, ML, NLP and cybersecurity papers. An early example shows the failure mode. A claim stated word for word in a long AI abstract ("applying DPO to a Qwen2.5-0.5B generator reduces its hallucination rate from 85.5% to 37.7%") scored P(Supported) = 0.36 against the full abstract, below the threshold, but 0.89 against its best 3-sentence passage. On SciFact, passage scoring did not help overall (Section 5); the custom test set measures whether it helps on AI papers.
+The Verifier is the component VeriLit depends on most, and its main risk is domain shift: it is trained on biomedical claims and applied to AI, ML, NLP and cybersecurity papers. An early example shows the failure mode. A claim stated word for word in a long AI abstract ("applying DPO to a Qwen2.5-0.5B generator reduces its hallucination rate from 85.5% to 37.7%") scored P(Supported) = 0.36 against the full abstract, below the threshold, but 0.89 against its best 3-sentence passage. On SciFact, passage scoring did not help overall (Section 5), but on the AI test set it would have avoided 7 of the 9 false rejections with no loss of precision (Section 7). Domain shift shows up in a second way too: the unsupported claims on AI papers are near-paraphrases that differ in one detail, which the Verifier accepted with high confidence.
 
 Limitations:
 
+- **Verifier precision.** The Verifier caught none of the 5 unsupported claims, so on this test set verification acted as a filter on good claims rather than bad ones. A claim-level check that compares specific details (numbers, conditions, names) would be needed.
+- **Re-retrieval trusts the Verifier.** The feedback loop moves a claim to whichever paper scores highest, so a Verifier error becomes a wrong citation. Re-retrieval should require a clearly higher score, or be dropped in favour of revision.
 - **Abstracts only.** Claims are checked against abstracts, so a claim correctly taken from a paper's body is marked Insufficient.
 - **Faithfulness, not truth.** VeriLit checks that a claim matches its source, not that the paper's findings are correct.
 - **Generator already constrained.** The Claim Generator is told to write only claims stated in an abstract, which lowers the baseline's error rate and therefore the visible gain from verification. This is a fair comparison, since both systems use the same prompt, but it means verification acts mainly as a safety net.
-- **Small evaluation.** The validation set has only 47 Supported pairs, the custom test set has about 200 claims, and the Verifier was trained with one seed (a second run differed by 0.02 macro-F1).
-- **Free-tier limits.** Semantic Scholar's rate limits meant some searches fell back to arXiv only, so the paper pool varies between sub-questions. Gemini's free tier allows a few hundred requests a day, enough for about 70 questions.
+- **Small evaluation.** The validation set has only 47 Supported pairs, the custom test set has 195 labeled claims with only 9 unsupported ones (so the difference between systems rests on a few claims), the 30 shared items included only one non-Supported item, and the Verifier was trained with one seed (a second run differed by 0.02 macro-F1).
+- **Free-tier limits.** Semantic Scholar's rate limits meant 24 of the 96 sub-questions were searched on arXiv only, so the paper pool varies between sub-questions. Gemini's free tier allows a few hundred requests a day, enough for about 70 questions.
 - **LLM variation.** The LLM runs at temperature 0 and every reply is cached, so results are reproducible from the cache, but a fresh run with a newer model version could produce different claims.
 
 ## 9. Changes from the proposal
@@ -171,11 +179,12 @@ As the proposal stated, no numeric targets were set before measuring the baselin
 
 ## 10. Conclusion and future work
 
-VeriLit shows that a small fine-tuned NLI model can act as a verification stage for an LLM research assistant: fine-tuning on SciFact lifts macro-F1 from 0.431 to 0.738, calibration makes its confidence meaningful (ECE 0.062), and the feedback loop repairs or filters claims before they reach the review. Because reference numbers come from code and every claim cites one paper, each statement in the review can be traced to a checked source.
+VeriLit shows that a small fine-tuned NLI model can act as a verification stage for an LLM research assistant: fine-tuning on SciFact lifts macro-F1 from 0.431 to 0.738, and calibration makes its confidence meaningful (ECE 0.062). On a hand-labeled AI test set, however, verification did not reduce unsupported claims (4.3% against 2.6% without it): generation was already faithful, the Verifier missed the few subtle errors, and the feedback loop turned some false rejections into wrong citations. The result shows where a verification stage has to improve before it pays off. Because reference numbers come from code and every claim cites one paper, each statement in the review can be traced to a checked source.
 
 Future work:
 
-- Fine-tune the Verifier on claims from AI and computer-science papers, using the hand-labeled test set as a start, to close the domain gap.
+- Fine-tune the Verifier on claims from AI and computer-science papers, including near-miss negatives (dropped conditions, swapped methods or numbers) like the ones it missed here, using the hand-labeled test set as a start.
+- Use passage scoring on long abstracts, and only switch papers in the feedback loop when the new paper scores clearly higher.
 - Verify against full text (open-access PDFs) rather than abstracts only.
 - Larger evaluations with more questions, several training seeds and a third annotator.
 - Let the Synthesizer's own sentences be verified too, not only the claims it is given.

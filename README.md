@@ -280,9 +280,9 @@ scripts/
   calibrate_verifier.py
   eval_retrieval.py
   run_pipeline.py     run VeriLit on one question
-app.py                the demo server (python app.py); the page itself is in web/
   run_eval_set.py     run the custom test set and build the labeling sheets
   score_eval.py       score the custom test set from the hand labels
+app.py                the demo server (python app.py); the page itself is in web/
 eval/                 questions.csv, LABELING.md, runs/ (one record per question), labels/
 results/              metrics, training log, calibration, retrieval (predictions.jsonl is git-ignored)
 data/, models/        git-ignored; re-create with the scripts above
@@ -309,6 +309,20 @@ settings (seed 42); a GPU run gives slightly different numbers. During training,
 from 0.065 after epoch 1 to 0.148 after epoch 5 (the model gets more over-confident as it
 trains). Calibration fixes most of that without changing any prediction. CONTRADICTED is the
 weakest label (F1 0.623 vs. 0.79–0.80 for the other two); `--balanced` is worth trying for it.
+
+**Custom test set** (`results/custom_eval.json`; 195 hand-labeled claims, kappa 1.0 on the 30 shared rows):
+
+| | claims presented | unsupported | citation correctness | evidence coverage |
+|---|---:|---:|---:|---:|
+| No-verification baseline | 190 | 2.6% (5) | 97.4% | 100% |
+| VeriLit | 186 | 4.3% (8) | 95.7% | 99.0% |
+
+The generated claims were already faithful, and verification did not reduce unsupported claims.
+The Verifier accepted all 5 unsupported originals (near-paraphrases differing in one detail) and
+rejected 9 supported ones; the feedback loop verified 5 of those 9, but re-retrieval moved 3 to
+papers that do not support them. Against the hand labels, accept-vs-Supported F1 is 0.962 with
+the full abstract and 0.978 with the best passage (which would have avoided 7 of the 9 false
+rejections). See [the report](docs/REPORT.md), Section 7.
 
 ## Data sources
 
